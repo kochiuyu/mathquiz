@@ -18,7 +18,8 @@ const nosound = document.getElementById("noaudio");
 const levelreportDiv = document.getElementById("levelreport");	
 const scorereportDiv = document.getElementById("scorereport");	
 	
-	
+yessound.load();
+nosound.load();	
 // create some variables
 
 //const lastQuestion = questions.length - 1;
