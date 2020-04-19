@@ -106,6 +106,7 @@ body{
     top:0;
 	background-color: #FFDD3C;
 	margin: 20px 0px 0px 20px;
+	user-select: none;
 }
 #question p{
     margin : 30px 30px 30px 20px;
@@ -139,6 +140,7 @@ body{
 	margin-right:100%;
     text-align: left;
     cursor: pointer;
+	user-select: none;
 }
 .choice:hover{
     font-weight: bold;
