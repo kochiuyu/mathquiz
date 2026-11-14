@@ -15,6 +15,18 @@ const families = [
     const known=i%9+1,missing=Math.floor(i/9)+1,total=known+missing;
     return {...numeric([`The whole has ${total} counters. One part has ${known} counter${known===1?"":"s"}. How many counters are in the other part?`,`整體有${total}粒圓片，其中一部分有${known}粒。另一部分有多少粒？`],[missing===1?"counter":"counters","粒"],missing,[`${known} and ${missing} make ${total}.`,`${known}和${missing}合起來是${total}。`]),figure:{kind:"parts",total,known}};
   }},
+  {id:"pictureadd1",grade:1,code:"1N2",label:["Addition sentence from a picture","看圖寫加法算式"],count:81,make(i){
+    const a=i%9+1,b=Math.floor(i/9)+1,total=a+b;
+    return {prompt:["Write an addition sentence for the red and blue counters.","看圖中的紅色和藍色圓片，寫出一道加法算式。"],fields:[["",""]],answer:[`${a} + ${b} = ${total}`],why:[`${a} red and ${b} blue make ${total} counters.`,`${a}粒紅色圓片和${b}粒藍色圓片，合起來是${total}粒。`],equation:{a,b,total},figure:{kind:"twoGroups",a,b}};
+  }},
+  {id:"storyadd1",grade:1,code:"1N2",label:["Addition story","加法情境題"],count:81,make(i){
+    const a=i%9+1,b=Math.floor(i/9)+1,total=a+b;
+    return {...numeric([`There ${a===1?"is":"are"} ${a} red counter${a===1?"":"s"}. Then ${b} blue counter${b===1?" is":"s are"} added. How many counters are there now?`,`原有${a}粒紅色圓片，再加上${b}粒藍色圓片。現在共有多少粒？`],["counters","粒"],total,[`${a} + ${b} = ${total}.`,`${a} + ${b} = ${total}，共有${total}粒。`]),figure:{kind:"twoGroups",a,b,story:true}};
+  }},
+  {id:"otherway1",grade:1,code:"1N1",label:["Another way to make a total","另一種組合方法"],count:11,make(i){
+    const total=i+6,a=Math.max(1,total-9),b=total-a,other=[a+1,b-1];
+    return {prompt:[`The picture shows one way to make ${total}. Show another way to make ${total} with two groups.`,`圖中顯示${total}的一種組合方法。用兩組圓片表示${total}的另一種組合方法。`],fields:[["",""],["",""]],answer:other,marks:1,why:[`Example: ${other[0]} + ${other[1]} = ${total}. Any different pair of positive one-digit parts that makes ${total} is correct. Swapping the pictured groups alone does not count.`,`例如：${other[0]} + ${other[1]} = ${total}。只要另一組正整數個位數的兩部分合起來是${total}，即屬正確。只交換圖中兩組的次序不算另一種方法。`],otherWay:{total,shown:[a,b]},figure:{kind:"twoGroups",a,b}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
@@ -76,5 +88,6 @@ function renderBuilder(year,selected){
 function printLinks(ids,year){
   return ["paper","key"].map(v=>'<a href="'+customLink(ids,v,year)+'">'+(v==="paper"?t("Print pupil paper / PDF","列印學生試卷／PDF"):t("Print worked key / PDF","列印解答／PDF"))+'</a>').join("");
 }
+
 
 
