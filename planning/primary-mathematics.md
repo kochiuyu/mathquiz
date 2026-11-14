@@ -166,8 +166,8 @@ The online result does not by itself establish why a pupil chose an answer. Disc
 |---|---|---|
 | [6N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=50) | Decimals (IV) | Solve a decimal division problem |
 | [6N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=52) | Decimals (V) | Compare fractions by converting them to decimals |
-| [6N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=53) | Percentages (I) | Express a part as a percentage |
-| [6N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=54) | Percentages (II) | Calculate a discounted price |
+| [6N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=53) | Percentages (I) | Convert a decimal such as 0.2 to 20% |
+| [6N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=54) | Percentages (II) | Find what percentage 30 is of 50 |
 | [6A1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=55) | Simple equations (II) | Set up an equation from a short story |
 | [6M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=56) | Angle (degree) | Measure an angle on a protractor |
 | [6M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=58) | Volume (II) | Relate capacity and volume |
@@ -181,6 +181,18 @@ The online result does not by itself establish why a pupil chose an answer. Disc
 | [6D4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=68) | Uses and abuses of statistics | Explain how a graph can mislead |
 | [6F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=69) | Inquiry and investigation | Compare two valid strategies and justify a choice |
 
+
+#### Live P6 family to objective map
+
+Source check: **15 November 2026**. The EDB [2020 Key Stage 2 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf), listed on the [curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html), give numbered objectives and examples for percentages and averages. The match below is this project's interpretation of the released generator, not EDB endorsement or teacher validation. All **31** generated P6 variants were enumerated on the public site; prompts, displayed units and answers matched independent calculations. The fixed v1 P6 questions are separate from the generated-family count.
+
+| Live family (variants) | EDB objective and source | Assessed task | Released scope, prerequisite and limit |
+|---|---|---|---|
+| `pct1` (15) | [6N4 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=54): solve percentage problems, including “what percentage of 50 is 30”; builds on [6N3 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=53), the concept of percentages | Given the total number of pupils and the number choosing badminton, calculate what percentage chose badminton. | Totals **20, 40 or 50** pupils; part counts **2–25**; answers **10%, 20%, 30%, 40% or 50%**, using `part ÷ whole × 100`. The `%` unit is shown beside the answer field. This is one repeated part-of-whole context with whole-number results. It does not directly test 6N3 objectives 2–3 (percentage conversions), other 6N4 problem types or percentage changes. **The live item still displays `6N3`, which is a curriculum-label mismatch.** |
+| `mean1` (16) | [6D1 objectives 2–3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=65): find the average of a group of data and solve problems | Find the mean number of books lent per day over three successive days in a short library story. | Daily counts are `a`, `a+7`, `a+2`, with `a` from **10–25**; data values **10–32**, answers **13–28 books per day**, calculated as the sum divided by 3. Requires adding and dividing whole numbers. Every variant uses the same three-value pattern and an exact whole-number mean. It does not directly test estimating averages from charts, finding a missing datum or data sets of other sizes. |
+
+**Label to resolve.** The fixed v1 P6 percentage question also displays `6N3` for a “what percentage?” problem. The [6N4 notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=54) explicitly give this problem form, while 6N3 covers the concept of percentages and interconversion with decimals and fractions. Preserve released questions and links while correcting the curriculum label in future output. The catalogue's draft 6N4 example was also changed from a discount problem: the EDB notes say discount problems are not required at this stage.
+
 ## Three prototype quizzes
 
 The following are original English and Traditional Chinese item briefs. Use the pupil's selected language throughout each output. Keep each diagram beside its question in both formats.
@@ -193,7 +205,7 @@ The following are original English and Traditional Chinese item briefs. Use the 
 | 4N3 | Circle every factor of 36 in this list. | 圈出以下所有36的因數。 | Options 4, 6, 8, 12. Accept exactly **4, 6, 12** in any order. Each divides 36 with no remainder. |
 | 4M1 | A rectangular noticeboard is 90 cm long and 60 cm wide. How much tape goes around it once? | 一塊長方形壁報板長90厘米、闊60厘米。沿四邊貼一圈需要多少厘米膠帶？ | Label adjacent sides. 90 + 60 + 90 + 60 = **300 cm**. Supply the unit beside the answer box. |
 | 4D1 | How many more books did Class A borrow than Class C? | A班比C班多借了多少本書？ | Draw bars A = 25, B = 20, C = 15 with a zero baseline and ticks every 5 books. 25 − 15 = **10 books**. |
-| 6N3 | A club has 40 members. Sixteen cycle to school. What percentage cycle to school? | 一個學會有40名會員，其中16人踏單車上學。踏單車上學的會員佔百分之幾？ | 16 ÷ 40 × 100% = **40%**. Supply % beside the field. |
+| 6N4 (live v1 label: 6N3) | A club has 40 members. Sixteen cycle to school. What percentage cycle to school? | 一個學會有40名會員，其中16人踏單車上學。踏單車上學的會員佔百分之幾？ | 16 ÷ 40 × 100% = **40%**. Supply % beside the field. |
 | 6M4 | A ferry travels 18 km in 45 minutes. Find its average speed in km/h. | 一艘渡輪在45分鐘內航行了18公里。它的平均速率是多少公里每小時？ | Ask for hours and speed in separate boxes. 45 ÷ 60 = **0.75 h**. 18 ÷ 0.75 = **24 km/h**. Accept 3/4 as well as 0.75. |
 | 6D1 | A pupil read 12, 18 and 15 pages over three days. How many pages per day on average? | 一名學生在三天內分別閱讀了12、18和15頁。平均每天閱讀多少頁？ | (12 + 18 + 15) ÷ 3 = **15 pages**. Include working space. |
 
