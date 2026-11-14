@@ -1,6 +1,6 @@
 # P1 six-question exit ticket · item brief
 
-Status: all six question types and the ordered editable builder preset are implemented. Homepage exposure, full release checks and teacher review are the next work.
+Status: all six question types, the ordered editable builder preset, homepage links and bilingual paper/phone release checks are live. A P1 teacher reviewed the paper and reported a small pupil trial; see the [README checkpoint](../README.md#resume-work-here). The [live P1 objective map](primary-mathematics.md#live-p1-family-to-objective-map) records source-checked curriculum scope. Further classroom trials remain useful.
 
 [Pupil example](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-70.otherway1-3) · [A4 paper](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-70.otherway1-3&view=paper) · [Worked key](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-70.otherway1-3&view=key). The six permanent IDs appear in the intended order in every view. Switch to Traditional Chinese with the page link.
 
