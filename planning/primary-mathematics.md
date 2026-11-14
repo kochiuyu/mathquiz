@@ -1,0 +1,145 @@
+# Hong Kong primary mathematics quiz plan
+
+Teachers choose a year, unit and skill, preview the exact questions, replace individual items, then download a pupil paper and a worked key or distribute an online quiz. Pupils can also practise a single skill without an account.
+
+## Curriculum map
+
+Each code opens the EDB page containing the official objectives and teaching notes. The third column proposes one quiz task per unit. Authors should check the linked objective, permitted operations, number ranges and exclusions before releasing a template. Teachers can mix units in their own teaching order. The 2017 curriculum supplement is the baseline. [Primary curriculum supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) · [EDB curriculum updates](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html)
+
+### Primary 1
+
+| EDB objectives | Learning unit | Proposed quiz task |
+|---|---|---|
+| [1N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=7) | Numbers to 20 | Count a pictured collection |
+| [1N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=9) | Basic addition and subtraction | Match a joining story to a sum |
+| [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | Compare two quantities up to 100 |
+| [1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) | Addition and subtraction (I) | Solve a short addition story |
+| [1M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=15) | Length and distance (I) | Compare two strips directly |
+| [1M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16) | Money (I) | Choose coins for a stated amount |
+| [1M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=17) | Length and distance (II) | Measure a strip in centimetres |
+| [1M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=18) | Time (I) | Read a clock face |
+| [1S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=20) | 3-D shapes (I) | Identify a familiar solid |
+| [1S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=21) | 2-D shapes | Pick a triangle among rotated shapes |
+| [1S3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=23) | Directions and positions (I) | Describe an object’s position |
+| [1F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=24) | Inquiry and investigation | Explain a pattern with counters |
+
+### Primary 2
+
+| EDB objectives | Learning unit | Proposed quiz task |
+|---|---|---|
+| [2N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=25) | 3-digit numbers | Represent a number with hundreds, tens and ones |
+| [2N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=26) | Addition and subtraction (II) | Calculate a sum and check it |
+| [2N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28) | Basic multiplication | Write a product for equal groups |
+| [2N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=30) | 4-digit numbers | Read a four-digit numeral |
+| [2N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=31) | Addition and subtraction (III) | Find the missing quantity in a subtraction story |
+| [2N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) | Basic division | Share objects equally |
+| [2M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=35) | Length and distance (III) | Read a ruler in centimetres |
+| [2M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=37) | Time (II) | Read a clock and record the time |
+| [2M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=39) | Money (II) | Find change in a purchase |
+| [2S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=41) | 3-D shapes (II) | Identify a face on a solid |
+| [2S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=42) | Angles | Pick a right angle |
+| [2S3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=44) | Directions and positions (II) | Read a simple compass diagram |
+| [2S4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=45) | Quadrilaterals (I) | Identify a rectangle |
+| [2D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) | Pictograms | Read a count from a picture graph |
+| [2F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=48) | Inquiry and investigation | Describe a second way to group objects |
+
+### Primary 3
+
+| EDB objectives | Learning unit | Proposed quiz task |
+|---|---|---|
+| [3N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=49) | 5-digit numbers | Compare five-digit numbers |
+| [3N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=50) | Multiplication (I) | Multiply to find a total |
+| [3N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=51) | Division (I) | Interpret the remainder in a sharing problem |
+| [3N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=52) | Four arithmetic operations (I) | Choose operations for a two-step story |
+| [3N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=54) | Fractions (I) | Label the shaded fraction of equal parts |
+| [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | Select a suitable length unit |
+| [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | Compare two time intervals in seconds |
+| [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) | Capacity | Read the scale on a measuring jug |
+| [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | Express an afternoon time using the 24-hour clock |
+| [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | Read a mass from a scale |
+| [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | Classify a pictured quadrilateral |
+| [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | Sort triangles by their properties |
+| [3D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=68) | Bar charts (I) | Read a bar height |
+| [3F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=69) | Inquiry and investigation | Explain a numerical pattern |
+
+### Primary 4
+
+| EDB objectives | Learning unit | Proposed quiz task |
+|---|---|---|
+| [4N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=7) | Multiplication (II) | Multiply quantities in a packing problem |
+| [4N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=9) | Division (II) | Divide a quantity into batches |
+| [4N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=11) | Multiples and factors | Identify all listed factors of a number |
+| [4N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=13) | Common multiples and common factors | Find a common multiple |
+| [4N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=14) | Four arithmetic operations (II) | Evaluate a mixed-operation expression |
+| [4N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=16) | Fractions (II) | Compare two fractions |
+| [4N7](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=18) | Decimals (I) | Read the place value of a decimal digit |
+| [4N8](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=20) | Decimals (II) | Calculate a decimal sum |
+| [4M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=21) | Perimeter (I) | Find the border length of a rectangle |
+| [4M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=23) | Area (I) | Measure area by counting squares |
+| [4S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=25) | Quadrilaterals (III) | Classify a rhombus |
+| [4S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=26) | Dissecting and forming shapes | Reassemble pieces into a target figure |
+| [4S3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=27) | Directions and positions (III) | Locate a point using compass directions |
+| [4D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=28) | Bar charts (II) | Interpret a scaled bar chart |
+| [4F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=29) | Inquiry and investigation | Explain two solutions to a design problem |
+
+### Primary 5
+
+| EDB objectives | Learning unit | Proposed quiz task |
+|---|---|---|
+| [5N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=30) | Multi-digit numbers | Read and compare large whole numbers |
+| [5N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=31) | Fractions (III) | Add fractions with different denominators |
+| [5N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=33) | Fractions (IV) | Represent multiplication of fractions |
+| [5N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=34) | Decimals (III) | Multiply decimals |
+| [5N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=36) | Fractions (V) | Solve a fraction division problem |
+| [5A1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=38) | Elementary algebra | Translate a description into an expression |
+| [5A2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) | Simple equations (I) | Solve a simple equation and check it |
+| [5M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=41) | Area (II) | Find the area of a triangle |
+| [5M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=43) | Volume (I) | Count cubes in a rectangular prism |
+| [5S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45) | Circles | Identify a radius |
+| [5S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=46) | 3-D shapes (III) | Identify edges and vertices |
+| [5D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=48) | Bar charts (III) | Compare groups in a compound bar chart |
+| [5F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=49) | Inquiry and investigation | Explain how changing a dimension changes area |
+
+### Primary 6
+
+| EDB objectives | Learning unit | Proposed quiz task |
+|---|---|---|
+| [6N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=50) | Decimals (IV) | Solve a decimal division problem |
+| [6N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=52) | Decimals (V) | Compare fractions by converting them to decimals |
+| [6N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=53) | Percentages (I) | Express a part as a percentage |
+| [6N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=54) | Percentages (II) | Calculate a discounted price |
+| [6A1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=55) | Simple equations (II) | Set up an equation from a short story |
+| [6M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=56) | Angle (degree) | Measure an angle on a protractor |
+| [6M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=58) | Volume (II) | Relate capacity and volume |
+| [6M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=59) | Perimeter (II) | Find the circumference of a circle |
+| [6M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=60) | Speed | Find speed from distance and time |
+| [6M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=62) | Area (III) | Find the area of a circle |
+| [6S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=64) | Symmetry | Draw the other half of a symmetrical figure |
+| [6D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=65) | Averages | Find the mean of a data set |
+| [6D2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=66) | Broken line graphs | Interpret change on a line graph |
+| [6D3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=67) | Pie charts | Read a sector as a proportion |
+| [6D4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=68) | Uses and abuses of statistics | Explain how a graph can mislead |
+| [6F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=69) | Inquiry and investigation | Compare two valid strategies and justify a choice |
+
+## Three prototype quizzes
+
+The following are original English and Traditional Chinese item briefs. Use the pupil's selected language throughout each output. Keep each diagram beside its question in both formats.
+
+| Unit | English prompt | 繁體中文題目 | Worked answer or display requirement |
+|---|---|---|---|
+| 1N1 | How many stars are there? | 圖中有多少顆星星？ | Show five stars in one row and two beneath. Circle or tap 6, 7 or 8. Five and two make **7**. |
+| 1N2 | Wai has 4 pencils. Mum gives Wai 3 more. How many pencils does Wai have now? | 小慧有4枝鉛筆，媽媽再給她3枝。小慧現在有多少枝鉛筆？ | 4 + 3 = **7**. Provide large numeral choices. |
+| 1S2 | Which shape is a triangle? | 哪個圖形是三角形？ | Draw a square, a rotated triangle and a circle. Choose the second shape. It has three straight sides. |
+| 4N3 | Circle every factor of 36 in this list. | 圈出以下所有36的因數。 | Options 4, 6, 8, 12. Accept exactly **4, 6, 12** in any order. Each divides 36 with no remainder. |
+| 4M1 | A rectangular noticeboard is 90 cm long and 60 cm wide. How much tape goes around it once? | 一塊長方形壁報板長90厘米、闊60厘米。沿四邊貼一圈需要多少厘米膠帶？ | Label adjacent sides. 90 + 60 + 90 + 60 = **300 cm**. Supply the unit beside the answer box. |
+| 4D1 | How many more books did Class A borrow than Class C? | A班比C班多借了多少本書？ | Draw bars A = 25, B = 20, C = 15 with a zero baseline and ticks every 5 books. 25 − 15 = **10 books**. |
+| 6N3 | A club has 40 members. Sixteen cycle to school. What percentage cycle to school? | 一個學會有40名會員，其中16人踏單車上學。踏單車上學的會員佔百分之幾？ | 16 ÷ 40 × 100% = **40%**. Supply % beside the field. |
+| 6M4 | A ferry travels 18 km in 45 minutes. Find its average speed in km/h. | 一艘渡輪在45分鐘內航行了18公里。它的平均速率是多少公里每小時？ | Ask for hours and speed in separate boxes. 45 ÷ 60 = **0.75 h**. 18 ÷ 0.75 = **24 km/h**. Accept 3/4 as well as 0.75. |
+| 6D1 | A pupil read 12, 18 and 15 pages over three days. How many pages per day on average? | 一名學生在三天內分別閱讀了12、18和15頁。平均每天閱讀多少頁？ | (12 + 18 + 15) ÷ 3 = **15 pages**. Include working space. |
+
+## From plan to release
+
+1. Build the nine fixed examples first. Store each quiz as an ordered set of versioned questions containing language, values, diagrams, answer rules, marks and worked steps. Reopening a quiz must reproduce it exactly.
+2. Generate a separate downloadable A4 question paper and answer key from the same record. Check Chinese glyphs, grayscale diagrams, space for working and page breaks. Give P1 pupils large targets online. Offer keyboard input and labelled controls for selection and numeric answers.
+3. Add a teacher preview with single-item replacement, then shareable links. Practise mode gives feedback after each item. An assigned quiz shows solutions after submission. The first release assumes account-free self-marking. Explanations and open-ended investigations require a rubric or teacher review.
+4. Turn reviewed examples into generators. Test boundary values, equivalent answers, unique choices, unit conventions and agreement between each diagram and solution. Only enable a skill in the builder once it has a reviewed bilingual template and passes print and mobile checks.
