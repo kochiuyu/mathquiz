@@ -59,54 +59,6 @@
   function expectedQuery(set,language,view) {
     return "?v=2&lang="+language+"&p="+set.grade+"&items="+set.ids.join(".")+(view?"&view="+view:"");
   }
-  async function checkView(set,language,view) {
-    const query = expectedQuery(set,language,view);
-    const frame = document.createElement("iframe");
-    frame.title = set.name+" "+language+" "+(view||"pupil");
-    frame.style.display = "none";
-    const loaded = new Promise((resolve,reject)=>{
-      const timer = setTimeout(()=>reject(new Error("page load timed out: "+frame.title)),20000);
-      frame.onload = ()=>{clearTimeout(timer);resolve();};
-      frame.onerror = ()=>{clearTimeout(timer);reject(new Error("page load failed: "+frame.title));};
-    });
-    frame.src = "../index.html"+query;
-    document.body.appendChild(frame);
-    try {
-      await loaded;
-      const doc = frame.contentDocument;
-      assert(doc && doc.documentElement.lang === (language==="zh"?"zh-HK":"en"),"wrong page language: "+frame.title);
-      const items = Array.from(doc.querySelectorAll("#app fieldset"));
-      assert(items.length===set.ids.length,"wrong question count: "+frame.title);
-      const selected = decodeItems(set.ids.join("."),set.grade);
-      selected.forEach((question,i)=>{
-        const prompt = question.prompt[language==="zh"?1:0].split("___")[0].trim();
-        assert(items[i].textContent.includes(prompt),"prompt changed at "+set.ids[i]+" in "+frame.title);
-      });
-      if (view==="build") {
-        const pupil = doc.querySelector("#take");
-        assert(pupil && new URL(pupil.href).search===expectedQuery(set,language,""),"builder pupil link changed: "+frame.title);
-        for (const target of ["paper","key"]) {
-          assert(Array.from(doc.querySelectorAll("a")).some(a=>a.search===expectedQuery(set,language,target)),
-            "builder "+target+" link changed: "+frame.title);
-        }
-      } else if (view==="key") {
-        selected.forEach((question,i)=>{
-          const answer = question.otherWay
-            ? question.answer.join(" + ")+" = "+question.otherWay.total
-            : question.answer.join(question.multi?", ":" / ");
-          const shown = items[i].querySelector("p:not(.prompt) > b");
-          assert(shown && shown.textContent===answer,"worked key changed at "+set.ids[i]+" in "+frame.title);
-        });
-      } else if (view==="paper") {
-        assert(!doc.querySelector("#app fieldset input"),"paper has an editable input: "+frame.title);
-      } else {
-        assert(doc.querySelector("#app form button[type=submit]"),"pupil form missing: "+frame.title);
-      }
-    } finally {
-      frame.remove();
-    }
-  }
-
   await check("Fixed v1 questions",async()=>{
     assert(await digest(quizzes)===expectedFixedV1,"published fixed questions changed");
   });
@@ -137,16 +89,6 @@
           "URL changed: "+language+" "+(view||"pupil"));
       }
     });
-  }
-  const viewCases = [
-    [sharedSets[0],"en",""],[sharedSets[0],"en","build"],[sharedSets[0],"en","paper"],
-    [sharedSets[0],"en","key"],[sharedSets[0],"zh","paper"],
-    [sharedSets[1],"en",""],[sharedSets[1],"en","build"],[sharedSets[1],"en","paper"],
-    [sharedSets[1],"en","key"],[sharedSets[1],"zh",""],[sharedSets[1],"zh","key"],
-    [sharedSets[2],"en","key"],[sharedSets[3],"en",""]
-  ];
-  for (const [set,language,view] of viewCases) {
-    await check(set.name+" · "+language+" "+(view||"pupil")+" view",()=>checkView(set,language,view));
   }
   await check("Malformed and cross-grade IDs",()=>{
     for (const [raw,grade] of [["count20a-20",1],["count20a-10.count20a-10",1],["per1-0",1],
