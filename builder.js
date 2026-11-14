@@ -68,26 +68,38 @@ function customLink(ids,view,year,language=lang){
   if(view)p.set("view",view);
   return "?"+p;
 }
+const exitTicketP1=["count20a-12","next1-10","pictureadd1-38","parts18a-58","storyadd1-70","otherway1-3"];
+const builderUndoKey="mathquiz-builder-undo-v1";
+function readBuilderUndo(year,ids){
+  try{
+    const undo=JSON.parse(sessionStorage.getItem(builderUndoKey));
+    return undo?.year===year && undo.after===ids.slice().sort().join(".") && ids.includes(undo.replacement) && !ids.includes(undo.previous) ? undo : null;
+  }catch{return null}
+}
+function clearBuilderUndo(){try{sessionStorage.removeItem(builderUndoKey)}catch{}}
 function renderBuilder(year,selected){
   const list=families.filter(f=>f.grade===year);
   const ids=selected.map(q=>q.id);
+  const undo=readBuilderUndo(year,ids);
   const title=t("Create a quiz","建立小測");
   document.title=title+" | MathQuiz";
-  app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+title+'</h1><nav class="downloads">'+[1,4,6].map(n=>'<a href="'+customLink([],"build",n)+'">'+level(n)+'</a>').join("")+'</nav><h2>'+level(year)+'</h2><form id="mix">'+list.map(f=>'<label class="field">'+local(f.label)+' <select name="'+f.id+'">'+[0,1,2,3,4,5].map(n=>'<option '+(n===(ids.length?selected.filter(q=>q.f===f).length:1)?"selected":"")+'>'+n+'</option>').join("")+'</select></label>').join("")+'<p><button>'+t("Generate quiz","產生小測")+'</button></p><p role="status" id="notice"></p></form>';
+  app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+title+'</h1><nav class="downloads">'+[1,4,6].map(n=>'<a href="'+customLink([],"build",n)+'">'+level(n)+'</a>').join("")+'</nav><h2>'+level(year)+'</h2>'+(year===1?'<p class="builder-preset"><button type="button" id="exit-preset">'+t("Use six-question exit ticket","使用六題離堂小測")+'</button> <span>'+t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。")+'</span></p>':'')+'<form id="mix">'+list.map(f=>'<label class="field">'+local(f.label)+' <select name="'+f.id+'">'+[0,1,2,3,4,5].map(n=>'<option '+(n===(ids.length?selected.filter(q=>q.f===f).length:1)?"selected":"")+'>'+n+'</option>').join("")+'</select></label>').join("")+'<p><button>'+t("Generate quiz","產生小測")+'</button></p><p role="status" id="notice"></p></form>';
+  if(year===1)app.querySelector("#exit-preset").onclick=()=>{clearBuilderUndo();location.assign(customLink(exitTicketP1,"build",year))};
   app.querySelector("#mix").onsubmit=e=>{
     e.preventDefault();const data=new FormData(e.target),fresh=[];
     for(const f of list)for(let i=0;i<Number(data.get(f.id));i++)fresh.push(pick(f,fresh));
     if(!fresh.length){document.querySelector("#notice").textContent=t("Choose at least one question.","請選擇最少一題。");return}
+    clearBuilderUndo();
     location.assign(customLink(fresh,"build",year));
   };
   if(!ids.length)return;
-  app.insertAdjacentHTML("beforeend",'<h2>'+t("Quiz preview","預覽小測")+'</h2><div class="downloads"><a id="take" href="'+customLink(ids,"",year)+'">'+t("Open pupil quiz","開啟學生小測")+'</a><button id="copy">'+t("Copy pupil link","複製學生連結")+'</button>'+printLinks(ids,year)+'</div><p id="copied" role="status"></p>'+selected.map((q,i)=>item(q,i,true,false)+'<button data-replace="'+i+'">'+t("Replace question ","更換第 ")+(i+1)+t(""," 題")+'</button>').join(""));
+  const marks=selected.reduce((sum,q)=>sum+(q.marks ?? q.fields?.length ?? 1),0);
+  app.insertAdjacentHTML("beforeend",'<h2>'+t("Quiz preview","預覽小測")+'</h2><p class="builder-totals" role="status">'+ids.length+t(ids.length===1?" question":" questions"," 題")+' · '+marks+t(marks===1?" mark":" marks"," 分")+'</p>'+(undo?'<p><button type="button" id="undo-replace">'+t("Undo replacement","復原更換題目")+'</button></p>':'')+'<div class="downloads"><a id="take" href="'+customLink(ids,"",year)+'">'+t("Open pupil quiz","開啟學生小測")+'</a><button id="copy" type="button">'+t("Copy pupil link","複製學生連結")+'</button>'+printLinks(ids,year)+'</div><p id="copied" role="status"></p>'+selected.map((q,i)=>item(q,i,true,false)+'<div class="builder-actions"><button type="button" data-move="'+i+'" data-direction="-1" '+(i===0?'disabled':'')+'>'+t("Move up","上移")+'</button><button type="button" data-move="'+i+'" data-direction="1" '+(i===ids.length-1?'disabled':'')+'>'+t("Move down","下移")+'</button><button type="button" data-replace="'+i+'" '+(ids.filter(id=>id.startsWith(q.f.id+"-")).length===q.f.count?'disabled':'')+'>'+t("Replace question ","更換第 ")+(i+1)+t(""," 題")+'</button></div>').join(""));
+  if(undo)app.querySelector("#undo-replace").onclick=()=>{const at=ids.indexOf(undo.replacement);ids[at]=undo.previous;clearBuilderUndo();location.assign(customLink(ids,"build",year))};
   app.querySelector("#copy").onclick=async()=>{const url=app.querySelector("#take").href;try{await navigator.clipboard.writeText(url);app.querySelector("#copied").textContent=t("Pupil link copied.","已複製學生連結。")}catch{app.querySelector("#copied").textContent=url}};
-  app.querySelectorAll("[data-replace]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.replace);ids[i]=pick(selected[i].f,ids);location.assign(customLink(ids,"build",year))});
+  app.querySelectorAll("[data-move]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.move),j=i+Number(b.dataset.direction);[ids[i],ids[j]]=[ids[j],ids[i]];location.assign(customLink(ids,"build",year))});
+  app.querySelectorAll("[data-replace]").forEach(b=>b.onclick=()=>{const i=Number(b.dataset.replace),previous=ids[i],replacement=pick(selected[i].f,ids);if(!replacement)return;ids[i]=replacement;try{sessionStorage.setItem(builderUndoKey,JSON.stringify({year,after:ids.slice().sort().join("."),previous,replacement}))}catch{}location.assign(customLink(ids,"build",year))});
 }
 function printLinks(ids,year){
   return ["paper","key"].map(v=>'<a href="'+customLink(ids,v,year)+'">'+(v==="paper"?t("Print pupil paper / PDF","列印學生試卷／PDF"):t("Print worked key / PDF","列印解答／PDF"))+'</a>').join("");
 }
-
-
-
