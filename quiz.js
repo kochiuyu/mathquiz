@@ -23,6 +23,12 @@ function figure(type) {
     const label=t(`Whole ${type.total}; one part ${type.known}; other part unknown.`,`整體${type.total}；其中一部分${type.known}；另一部分未知。`);
     return '<svg class="figure" viewBox="0 0 240 142" role="img" aria-label="'+label+'"><g fill="none" stroke="#678c78" stroke-width="3"><path d="M120 50v21M54 71h132M54 71v15M186 71v15"/><rect x="76" y="8" width="88" height="42" rx="8"/><rect x="10" y="86" width="88" height="42" rx="8"/><rect x="142" y="86" width="88" height="42" rx="8"/></g><g text-anchor="middle" font-size="24"><text x="120" y="37">'+type.total+'</text><text x="54" y="115">'+type.known+'</text><text x="186" y="115">?</text></g></svg>';
   }
+  if (typeof type === "object" && type.kind === "twoGroups") {
+    const titleA=type.story?t("At first","原有"):t("Red","紅色"),titleB=type.story?t("Added","加上"):t("Blue","藍色");
+    const dots=(n,x,colour)=>Array.from({length:n},(_,i)=>'<circle cx="'+(x+20+i%5*27)+'" cy="'+(46+Math.floor(i/5)*31)+'" r="9" fill="'+colour+'"/>').join("");
+    const label=titleA+": "+Array(type.a).fill(t("red counter","紅色圓片")).join(", ")+". "+titleB+": "+Array(type.b).fill(t("blue counter","藍色圓片")).join(", ");
+    return '<svg class="figure two-groups" viewBox="0 0 320 102" role="img" aria-label="'+label+'"><g fill="#f8faf7" stroke="#9bb9a5"><rect x="4" y="22" width="152" height="74" rx="8"/><rect x="164" y="22" width="152" height="74" rx="8"/></g><g text-anchor="middle"><text x="80" y="17">'+titleA+'</text><text x="240" y="17">'+titleB+'</text></g>'+dots(type.a,4,"#a5541f")+dots(type.b,164,"#316a93")+'</svg>';
+  }
   const unit=t("cm","厘米");
   const figures = {
     stars: [t("Two rows of stars: five above, two below.","兩排星星，上排五顆，下排兩顆。"),"0 0 245 76",'<g fill="#a5541f">'+[0,1,2,3,4,5,6].map(i=>'<path transform="translate('+((i%5)*46+4)+' '+(i<5?2:40)+')" d="M17 0l5 11 12 2-9 8 2 12-10-6-11 6 2-12-8-8 12-2z"/>').join("")+'</g>'],
@@ -33,16 +39,18 @@ function figure(type) {
   const [label,box,body]=figures[type];
   return '<svg class="figure" viewBox="'+box+'" role="img" aria-label="'+label+'">'+body+'</svg>';
 }
-function points(q){return q.fields?.length || 1}
+function points(q){return q.marks ?? q.fields?.length ?? 1}
 function controls(q,i,paper) {
   if(q.choices) return q.choices.map(v=> paper ? '<span class="option">□ '+v+'</span>' : '<label class="option"><input type="'+(q.multi?'checkbox':'radio')+'" name="q'+i+'" value="'+v+'"> '+v+'</label>').join("");
+  if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
+  if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
   if(q.inlineAnswer)return "";
   return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("");
 }
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? '<p><b>'+q.answer.join(q.multi?", ":" / ")+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? '<p><b>'+(q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function number(s) {
@@ -61,6 +69,14 @@ function mark(form) {
     }
     const values=q.fields.map((_,j)=>String(form.get("q"+i+"f"+j)||"").trim());
     if(values.some(v=>!v))return null;
+    if(q.equation){
+      const m=values[0].normalize("NFKC").replace(/\s/g,"").match(/^([1-9])\+([1-9])=(\d{1,2})$/);
+      return Number(!!m && +m[3]===q.equation.total && ((+m[1]===q.equation.a && +m[2]===q.equation.b) || (+m[1]===q.equation.b && +m[2]===q.equation.a)));
+    }
+    if(q.otherWay){
+      const pair=values.map(v=>v.normalize("NFKC"));
+      return Number(pair.every(v=>/^[1-9]$/.test(v)) && +pair[0]+ +pair[1]===q.otherWay.total && [Number(pair[0]),Number(pair[1])].sort((a,b)=>a-b).join(",")!==[...q.otherWay.shown].sort((a,b)=>a-b).join(","));
+    }
     return values.reduce((sum,v,j)=>sum+Number(number(v)===q.answer[j]),0);
   });
   const status=document.getElementById("status");
@@ -101,6 +117,7 @@ if(custom && (!grade || (params.get("items") && !selected.length) || (!selected.
   }
   if(!paper) app.querySelector("form").onsubmit=e=>{e.preventDefault();mark(new FormData(e.target))};
 }
+
 
 
 
