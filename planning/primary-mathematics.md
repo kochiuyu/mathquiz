@@ -128,6 +128,20 @@ Source check: **15 November 2026**. The EDB [curriculum documents page](https://
 
 The [4M1 notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=21) also cover measuring and comparing perimeters and shapes formed by squares and rectangles. The [4N3 notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=11) call for finding all factors of a number. These two families cover narrower tasks and do not establish mastery of either full learning unit.
 
+
+#### Live P4 authoring and marking notes
+
+Code check: **15 November 2026**. These notes cover the two generated P4 families; the fixed v1 P4 quiz is separate. The [objective and scope map above](#live-p4-family-to-objective-map) supplies the EDB sources and parameter bounds. The misconception in each row is a **design hypothesis to probe**, not an observed pupil error; no P4 pupil responses were available.
+
+**Shared online rule.** Each generated P4 item is worth one mark. A blank perimeter field or a factor item with no checkbox selected stops submission and asks the pupil to complete it. The paper is for teacher marking. `v=2` and `v=3` links use the same P4 answer rules.
+
+| Family | Assessment purpose | One-mark answer rule | Misconception to probe (hypothesis) |
+|---|---|---|---|
+| `per1` | **Calculate:** use the stated length and width to find the boundary length of a rectangle. | The submitted value must equal `2 × (length + width)`. The unit `cm` is already shown beside the field. The marker normalises full-width characters, trims outer spaces and accepts a signed numeral, decimal or fraction with the correct value. For the 12 cm by 5 cm item, `34`, `34.0` and `68/2` score; `34 cm` and `60` do not. | Multiply length by width, finding the area instead of the perimeter; for 12 cm by 5 cm, enter 60 instead of 34. |
+| `factor1` | **Identify:** decide which of four listed numbers divide the target exactly. | Select **all and only** the listed factors. The two correct selections together earn one mark; one missing factor or an extra non-factor earns zero, with no partial credit. For 16 and choices 2, 3, 4, 5, select exactly 2 and 4. On paper, use the same all-and-only-listed-factors rule. | Treat a small candidate as a factor without checking exact divisibility; for example, select 3 as a factor of 16. |
+
+The online result does not by itself establish why a pupil chose an answer. Discuss an error with a teacher or collect anonymised item-level responses before treating either hypothesis as an observed misconception.
+
 ### Primary 5
 
 | EDB objectives | Learning unit | Proposed quiz task |
