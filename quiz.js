@@ -12,6 +12,17 @@ for (const language of ["en","zh"]) document.getElementById(language).href = hre
 const app = document.getElementById("app");
 function figure(type) {
   if (!type) return "";
+  if (typeof type === "object" && type.kind === "counters") {
+    const rows=Math.ceil(type.count/5);
+    const boxes=Array.from({length:rows},(_,r)=>'<rect x="4" y="'+(r*38+2)+'" width="190" height="34" rx="8" fill="#f2f6f3" stroke="#9bb9a5"/>').join("");
+    const dots=Array.from({length:type.count},(_,i)=>'<circle cx="'+(24+i%5*37)+'" cy="'+(19+Math.floor(i/5)*38)+'" r="10" fill="#2d735a"/>').join("");
+    const label=t("Counter rows. ","一行行圓片。")+Array(type.count).fill(t("counter","圓片")).join(", ");
+    return '<svg class="figure" viewBox="0 0 198 '+(rows*38+2)+'" role="img" aria-label="'+label+'">'+boxes+dots+'</svg>';
+  }
+  if (typeof type === "object" && type.kind === "parts") {
+    const label=t(`Whole ${type.total}; one part ${type.known}; other part unknown.`,`整體${type.total}；其中一部分${type.known}；另一部分未知。`);
+    return '<svg class="figure" viewBox="0 0 240 142" role="img" aria-label="'+label+'"><g fill="none" stroke="#678c78" stroke-width="3"><path d="M120 50v21M54 71h132M54 71v15M186 71v15"/><rect x="76" y="8" width="88" height="42" rx="8"/><rect x="10" y="86" width="88" height="42" rx="8"/><rect x="142" y="86" width="88" height="42" rx="8"/></g><g text-anchor="middle" font-size="24"><text x="120" y="37">'+type.total+'</text><text x="54" y="115">'+type.known+'</text><text x="186" y="115">?</text></g></svg>';
+  }
   const unit=t("cm","厘米");
   const figures = {
     stars: [t("Two rows of stars: five above, two below.","兩排星星，上排五顆，下排兩顆。"),"0 0 245 76",'<g fill="#a5541f">'+[0,1,2,3,4,5,6].map(i=>'<path transform="translate('+((i%5)*46+4)+' '+(i<5?2:40)+')" d="M17 0l5 11 12 2-9 8 2 12-10-6-11 6 2-12-8-8 12-2z"/>').join("")+'</g>'],
@@ -90,5 +101,6 @@ if(custom && (!grade || (params.get("items") && !selected.length) || (!selected.
   }
   if(!paper) app.querySelector("form").onsubmit=e=>{e.preventDefault();mark(new FormData(e.target))};
 }
+
 
 
