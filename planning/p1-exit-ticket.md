@@ -1,6 +1,6 @@
 # P1 six-question exit ticket · item brief
 
-Status: all six question types are implemented and an ordered example is available. The editable builder preset and teacher review are the next work.
+Status: all six question types and the ordered editable builder preset are implemented. Homepage exposure, full release checks and teacher review are the next work.
 
 [Pupil example](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-70.otherway1-3) · [A4 paper](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-70.otherway1-3&view=paper) · [Worked key](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-70.otherway1-3&view=key). The six permanent IDs appear in the intended order in every view. Switch to Traditional Chinese with the page link.
 
@@ -33,4 +33,3 @@ Each item is one mark unless a later teacher review changes the rubric. Do not c
 - Grouped-counter picture: one filled circle per counter, no numeral giving away the count. `count20a-0` has one circle; `count20a-19` has four complete rows of five. The accessible description repeats “counter” once per object so a pupil using a screen reader can count without hearing the total.
 - Two-part diagram: top box is the whole, bottom left the known part, bottom right a question mark. `parts18a-0` shows 2 over 1 and ?, answer 1. `parts18a-80` shows 18 over 9 and ?, answer 9. The accessible description identifies the known quantities and leaves the other part unknown.
 - For every variant, the diagram values, prompt values, answer and explanation must come from the same parameters. Review the smallest and largest variants in English and Chinese on screen, paper and key.
-
