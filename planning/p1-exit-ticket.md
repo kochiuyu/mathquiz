@@ -11,6 +11,8 @@ Status: all six question types, the ordered editable builder preset, homepage li
 
 Each item is one mark unless a later teacher review changes the rubric. Do not change the meaning of released `add1` and `next1` IDs. New families use their own IDs.
 
+**Online numeric format:** New `v=3` P1 links mark the counting, sequence, missing-part and story answers as whole-number numerals made of digits only. Full-width digits are accepted. Equivalent fractions, decimals, signs, units and words do not earn the mark. Older `v=2` links keep their original value-based marking, so previously shared links remain usable with the same scoring. This version rule also applies to the older `add1` numeric family; it does not change the pictured-equation or alternative-pair rubrics below. Printed responses remain for teacher marking.
+
 ## Ordered item briefs
 
 | Item and skill | English pupil prompt | 繁體中文題目 | Values, working and marking |
@@ -33,3 +35,4 @@ Each item is one mark unless a later teacher review changes the rubric. Do not c
 - Grouped-counter picture: one filled circle per counter, no numeral giving away the count. `count20a-0` has one circle; `count20a-19` has four complete rows of five. The accessible description repeats “counter” once per object so a pupil using a screen reader can count without hearing the total.
 - Two-part diagram: top box is the whole, bottom left the known part, bottom right a question mark. `parts18a-0` shows 2 over 1 and ?, answer 1. `parts18a-80` shows 18 over 9 and ?, answer 9. The accessible description identifies the known quantities and leaves the other part unknown.
 - For every variant, the diagram values, prompt values, answer and explanation must come from the same parameters. Review the smallest and largest variants in English and Chinese on screen, paper and key.
+
