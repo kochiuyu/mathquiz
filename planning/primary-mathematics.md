@@ -39,6 +39,24 @@ Source check: **15 November 2026**. The EDB [curriculum documents page](https://
 
 These families do **not** cover every objective in 1N1 or 1N2: for example, they do not assess odd/even numbers, subtraction, zero or the addition–subtraction relationship as distinct skills. The source match records curriculum scope, not evidence of pupil mastery.
 
+#### Live P1 authoring and marking notes
+
+Code check: **15 November 2026**. The purpose labels describe the decision each item asks a pupil to make. The misconceptions are **hypotheses to probe**, not observed pupil errors; the small teacher-reported trials did not include item-level responses. The [objective and scope map above](#live-p1-family-to-objective-map) supplies EDB sources and parameter bounds for the same seven live families.
+
+**Shared online rule.** Every P1 generated item is worth one mark. A blank field stops submission and asks the pupil to complete that question. For the five numeric families (`add1`, `next1`, `count20a`, `parts18a`, `storyadd1`), the current marker normalises full-width characters, trims outer spaces, parses signed whole numbers, decimals or fractions as numbers, and awards the mark when the resulting value equals the stored integer answer. Thus `22/2` currently scores for a count of 11. This is the implemented rule, even though the [P1 exit-ticket brief](p1-exit-ticket.md#ordered-item-briefs) specifies a whole-number response. Printed numeric answers require teacher marking; the site does not score paper.
+
+| Family | Assessment purpose | One-mark answer rule | Misconception to probe (hypothesis) |
+|---|---|---|---|
+| `add1` | **Apply:** combine the red and blue bead quantities in a short joining story. | Numeric rule above; the value must equal the sum of the two stated groups. | Give only the second group's count rather than the total. |
+| `next1` | **Identify:** continue a consecutive sequence by one. | Numeric rule above; enter the next value in the sequence's inline blank. | Repeat the last shown number instead of moving on one. |
+| `count20a` | **Identify:** find the cardinal quantity of a pictured collection. | Numeric rule above; the value must equal the number of drawn counters. | Count a counter twice when moving to a new row. |
+| `parts18a` | **Calculate:** recover an unknown one-digit part from the whole and known part. | Numeric rule above; the value must equal `whole − known part`. | Enter the known part or whole instead of the missing part. |
+| `pictureadd1` | **Represent:** translate two pictured groups into a horizontal addition sentence. | Online: after full-width normalisation and removal of whitespace, accept only `a+b=total` or `b+a=total` using the pictured one-digit addends and correct total. Another pair with the same total is wrong. The online total is compared numerically, so `08` is accepted for 8. On paper, accept either pictured addend order. | Write an equation with the correct total but addends that do not match the picture. |
+| `storyadd1` | **Apply:** find the combined quantity after a group is added. | Numeric rule above; the value must equal the starting group plus the added group. The response does not have to show working. | Report only the newly added group. |
+| `otherway1` | **Represent:** construct a different two-part composition of the same whole. | Online: two fields must each contain a positive one-digit whole number; their sum must equal the shown total, and their unordered pair must differ from the pictured pair. Either order of a new pair is accepted. On paper, a readable labelled drawing or horizontal equation meeting the same conditions earns one mark; see the [full rubric](p1-exit-ticket.md#marking-the-two-open-response-items). | Reverse the pictured pair and call it a different composition. |
+
+**Response-policy gap.** The broad numeric parser accepts equivalent fractions and decimals for the five P1 numeric families, while the exit-ticket brief asks for whole-number responses. Keep the current behaviour documented for existing links until the answer policy is reviewed; any scoring change needs a deliberate compatibility check. The purpose labels and misconception hypotheses should be revisited with item-level classroom evidence.
+
 ### Primary 2
 
 | EDB objectives | Learning unit | Proposed quiz task |
