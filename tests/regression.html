@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MathQuiz regression checks</title>
+  <style>
+    body{font:16px/1.5 system-ui,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem;color:#20392f}
+    h1{font-size:1.8rem}li{margin:.35rem 0}.pass{color:#12613e}.fail{color:#a1271b}
+    #summary{font-weight:700;padding:.8rem;background:#eef4ef}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>MathQuiz regression checks</h1>
+    <p>Released question families, fixed quizzes, shared links and their English and Chinese views.</p>
+    <p id="summary" role="status">Running checks…</p>
+    <ol id="results"></ol>
+  </main>
+  <script src="../questions.js"></script>
+  <script src="../builder.js"></script>
+  <script src="regression.js"></script>
+</body>
+</html>
