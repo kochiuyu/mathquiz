@@ -56,8 +56,8 @@
     results.appendChild(row);
     summary.textContent = passed+" passed, "+failed+" failed";
   }
-  function expectedQuery(set,language,view) {
-    return "?v=2&lang="+language+"&p="+set.grade+"&items="+set.ids.join(".")+(view?"&view="+view:"");
+  function expectedQuery(set,language,view,version) {
+    return "?v="+version+"&lang="+language+"&p="+set.grade+"&items="+set.ids.join(".")+(view?"&view="+view:"");
   }
   await check("Fixed v1 questions",async()=>{
     assert(await digest(quizzes)===expectedFixedV1,"published fixed questions changed");
@@ -85,8 +85,12 @@
       assert(selected.map(q=>q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer[0]).join("|")===set.answers.join("|"),
         "published answers changed");
       for (const language of ["en","zh"]) for (const view of ["","build","paper","key"]) {
-        assert(customLink(set.ids,view,set.grade,language)===expectedQuery(set,language,view),
-          "URL changed: "+language+" "+(view||"pupil"));
+        assert(customLink(set.ids,view,set.grade,language,"2")===expectedQuery(set,language,view,"2"),
+          "v2 URL changed: "+language+" "+(view||"pupil"));
+        assert(customLink(set.ids,view,set.grade,language,"3")===expectedQuery(set,language,view,"3"),
+          "v3 URL changed: "+language+" "+(view||"pupil"));
+        assert(customLink(set.ids,view,set.grade,language)===expectedQuery(set,language,view,"3"),
+          "new-link default changed: "+language+" "+(view||"pupil"));
       }
     });
   }
@@ -96,7 +100,17 @@
       assert(decodeItems(raw,grade).length===0,"invalid link accepted: "+raw);
     }
   });
+  await check("Numeric answer formats · legacy and whole-number",()=>{
+    for(const input of ["11"," 11 ","１１","11.0","22/2","+11"])
+      assert(numericAnswer(input,11),"v2 should accept "+input);
+    for(const input of ["11"," 11 ","１１"])
+      assert(numericAnswer(input,11,true),"v3 P1 should accept "+input);
+    for(const input of ["11.0","22/2","+11","11 counters","12",""])
+      assert(!numericAnswer(input,11,true),"v3 P1 should reject "+input);
+    assert(numericAnswer("22/2",11,false),"P4/P6 legacy numeric rule changed");
+  });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
 })();
+
