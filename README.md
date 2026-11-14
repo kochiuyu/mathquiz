@@ -6,12 +6,13 @@ Teachers can create a bilingual quiz, replace individual questions, share an onl
 
 ## Resume work here
 
-**Checkpoint · 14 November 2026.** The bilingual P1/P4/P6 pilot, custom builder and printable underscore answer spaces are live. **The next implementation batch is the P1 six-question exit ticket.** Classroom testing is pending. Use this README as the working plan and update its checkpoint and task boxes after each verified release.
+**Checkpoint · 14 November 2026.** The bilingual P1/P4/P6 pilot and custom builder are live. The P1 paper fix is [deployed](https://github.com/kochiuyu/mathquiz/commit/2a8375551ab99b1234e80205f70533452fde37f6): the saved four-question example has one answer space inside question 4's sequence, and generated English bead counts use singular or plural wording as needed. The local English and Chinese A4 papers fit on one page; the live paper and online answer placement were checked in both languages, and online marking accepted the sequence answer. **Next: author the P1 six-question exit-ticket set (step 2).** Classroom testing is pending. Use this README as the working plan and update its checkpoint and task boxes after each verified release.
 
 - [x] Map 85 P1–P6 learning units and link the EDB objectives. [Curriculum map and original quiz briefs](planning/primary-mathematics.md)
 - [x] Publish the fixed bilingual pilot and worked keys. [Pull request #1](https://github.com/kochiuyu/mathquiz/pull/1)
 - [x] Publish the custom builder with preview, replacement, sharing and printing. [Pull request #2](https://github.com/kochiuyu/mathquiz/pull/2)
 - [x] Use underscores for written answers on custom papers. [Published change](https://github.com/kochiuyu/mathquiz/commit/361bd9fb6a8d59e0adb9987307e8a05e6538bea8)
+- [x] Put the P1 sequence answer in place and correct generated bead wording. [Published change](https://github.com/kochiuyu/mathquiz/commit/2a8375551ab99b1234e80205f70533452fde37f6)
 - [x] Record the detailed roadmap and execution checklist here.
 - [ ] Complete the P1 batch below and record the release and teacher feedback.
 
@@ -19,7 +20,7 @@ Teachers can create a bilingual quiz, replace individual questions, share an onl
 
 | Step | Work | How to verify |
 |---|---|---|
-| 1. Reproduce the P1 paper issue | Open the saved four-question example. At question 4, put the writing space inside the sequence and remove the redundant answer line. Check singular and plural wording on generated problems. | One place to answer each question, one unit where needed, on screen and on A4 in both languages. [Example paper](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=add1-3.add1-2.add1-5.next1-10&view=paper) |
+| 1. Done — fix the P1 paper issue | In the saved four-question example, the writing space is inside question 4's sequence with no redundant answer line. Generated bead counts use singular and plural wording. | Verified on the live English and Chinese paper and online quiz, and on local A4 output. [Example paper](https://kochiuyu.github.io/mathquiz/?v=2&lang=en&p=1&items=add1-3.add1-2.add1-5.next1-10&view=paper) |
 | 2. Author the P1 set | Check 1N1 and 1N2 in the curriculum map. Write bilingual prompts, permitted values, steps and marking rules. Add grouped counters and a two-part diagram. | The diagram, solution and answer agree for the smallest and largest variants. A teacher can identify the skill tested. |
 | 3. Assemble six questions | In order, count grouped counters, continue a sequence, write an addition sentence from two pictured groups, find a missing addend, solve an addition story, and show another way to make the same total. | Accept mathematically valid alternatives in the last item. Supply a rubric for drawings on paper and specify the response format online. |
 | 4. Improve the builder | Add an editable exit-ticket preset. Show question and mark totals. Provide move up/down and undo replacement. Preserve the teacher’s draft on return from the paper or key. | Replace or move one item in a six-question set, undo the replacement, switch languages and reopen the pupil link. Check the intended values and order at each step. |
@@ -139,3 +140,4 @@ Start with a small proposed pilot of three to five teachers spanning lower and u
 | Usefulness of generated questions | Log why a teacher replaces or edits questions. Distinguish awkward wording, level mismatch, repetition and layout. Use this evidence to prioritise the next pack. |
 | Print readiness | Require legible grayscale diagrams, correct Chinese text, paired paper/key identifiers and adequate working space on the pilot sheets. |
 | Demand for accounts | Ask what decision a teacher would make with collected results. Scope named submissions, sign-in, retention and access only if the pilot establishes a concrete need. |
+
