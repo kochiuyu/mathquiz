@@ -58,17 +58,33 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
-if(!grade){
+const custom=params.get("v")==="2";
+const selected=custom?decodeItems(params.get("items"),grade):[];
+const ids=selected.map(q=>q.id);
+const view=params.get("view")||"";
+if(custom && grade){
+  for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
+  if(selected.length)quizzes[grade]=selected;
+}
+if(custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build"))){
+  app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
+}else if(custom && view==="build"){
+  renderBuilder(grade,selected);
+}else if(!grade){
   document.title=t("MathQuiz · Primary mathematics","MathQuiz · 小學數學");
-  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
+  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section><p><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Create a quiz","建立小測")+' →</a></p>';
 }else{
-  const paper=params.get("sheet");
+  const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   const key=paper==="key";
-  const title=level(grade)+" · "+local(topics[grade]);
+  const title=level(grade)+" · "+(custom?t("Custom quiz","自訂小測"):local(topics[grade]));
   document.title=title+" | MathQuiz";
   const file="papers/p"+grade+"-"+lang+"-";
-  const links='<div class="downloads"><a download href="'+file+'paper.pdf">'+t("Student paper (PDF)","學生試卷 (PDF)")+'</a><a download href="'+file+'key.pdf">'+t("Worked answers (PDF)","解題步驟 (PDF)")+'</a></div>';
-  app.innerHTML=(paper?'':'<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a>')+'<h1>'+title+'</h1>'+(paper?'<h2>'+(key?t("Worked answers","解題步驟"):t("Student paper","學生試卷"))+'</h2>'+(key?'':'<p>'+t("Name","姓名")+' __________________　'+t("Class","班別")+' ______　'+t("Date","日期")+' __________</p>'):links)+'<form>'+quizzes[grade].map((q,i)=>item(q,i,paper,key)).join("")+(paper?'':'<button type="submit">'+t("Mark my quiz","提交及核對答案")+'</button><a id="retry" hidden href="'+href(grade)+'">'+t("Try again","重新作答")+'</a><p id="status" tabindex="-1" role="status"></p>')+'</form>';
+  const links=custom?'': '<div class="downloads"><a download href="'+file+'paper.pdf">'+t("Student paper (PDF)","學生試卷 (PDF)")+'</a><a download href="'+file+'key.pdf">'+t("Worked answers (PDF)","解題步驟 (PDF)")+'</a></div>';
+  app.innerHTML=(paper?'':'<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a>')+'<h1>'+title+'</h1>'+(paper?'<h2>'+(key?t("Worked answers","解題步驟"):t("Student paper","學生試卷"))+'</h2>'+(key?'':'<p>'+t("Name","姓名")+' __________________　'+t("Class","班別")+' ______　'+t("Date","日期")+' __________</p>'):links)+'<form>'+quizzes[grade].map((q,i)=>item(q,i,paper,key)).join("")+(paper?'':'<button type="submit">'+t("Mark my quiz","提交及核對答案")+'</button><a id="retry" hidden href="'+(custom?customLink(ids,"",grade):href(grade))+'" >'+t("Try again","重新作答")+'</a><p id="status" tabindex="-1" role="status"></p>')+'</form>';
+  if(custom && paper){
+    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+customLink(ids,"build",grade)+'">← '+t("Preview","預覽")+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button></div>');
+    document.getElementById("print").onclick=()=>window.print();
+  }
   if(!paper) app.querySelector("form").onsubmit=e=>{e.preventDefault();mark(new FormData(e.target))};
 }
 
