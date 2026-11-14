@@ -116,6 +116,18 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 | [4D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=28) | Bar charts (II) | Interpret a scaled bar chart |
 | [4F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=29) | Inquiry and investigation | Explain two solutions to a design problem |
 
+
+#### Live P4 family to objective map
+
+Source check: **15 November 2026**. The EDB [curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) lists the [2020 Key Stage 2 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf), which give the numbered objectives and teaching scope for 4N3 and 4M1. The objective match below is this project's interpretation of the released generator, not EDB endorsement or a teacher review. The fixed v1 P4 questions are separate. All **28** generated P4 variants were enumerated on the public site and their prompts, answer values, units and factor choices were checked against independent calculations.
+
+| Live family (variants) | EDB objective and source | Assessed task | Released scope, prerequisite and limit |
+|---|---|---|---|
+| `per1` (16) | [4M1 objective 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=21): recognise and use formulae for the perimeters of squares and rectangles | Calculate the perimeter of a rectangular book cover from stated length and width; enter the number of centimetres. | Length **12–27 cm**, width **5–10 cm**; answers **34–70 cm**, calculated as `2 × (length + width)`. Requires earlier understanding of length, centimetres and rectangles. The item supplies dimensions in words, with no shape to measure or compare. It uses only rectangles, so it does not directly test 4M1 objectives 1–2, square perimeters or composite shapes. |
+| `factor1` (12) | [4N3 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=11): understand the concept of factors | Select every factor shown in a four-number list for a given positive integer. | Targets **12, 16, 18, 20, 24, 27, 28, 30, 32, 36, 40, 42**. Each list has four distinct choices from **2–9**, exactly two factors and two non-factors; the correct choices are selected by divisibility. The list never contains 1 or the target itself. This checks recognition among supplied choices, not the EDB notes' broader task of finding *all* factors of the target. It does not directly test multiples (objective 1), the factor–multiple relation (objective 3) or prime/composite numbers (objective 4). |
+
+The [4M1 notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=21) also cover measuring and comparing perimeters and shapes formed by squares and rectangles. The [4N3 notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=11) call for finding all factors of a number. These two families cover narrower tasks and do not establish mastery of either full learning unit.
+
 ### Primary 5
 
 | EDB objectives | Learning unit | Proposed quiz task |
