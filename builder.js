@@ -63,8 +63,9 @@ function pick(f,used){
   const pool=Array.from({length:f.count},(_,i)=>f.id+"-"+i).filter(x=>!used.includes(x));
   return pool[Math.floor(Math.random()*pool.length)];
 }
-function customLink(ids,view,year,language=lang){
-  const p=new URLSearchParams({v:"2",lang:language,p:year,items:ids.join(".")});
+const linkVersion=new URLSearchParams(location.search).get("v")==="2"?"2":"3";
+function customLink(ids,view,year,language=lang,version=linkVersion){
+  const p=new URLSearchParams({v:version,lang:language,p:year,items:ids.join(".")});
   if(view)p.set("view",view);
   return "?"+p;
 }
@@ -107,3 +108,4 @@ function renderBuilder(year,selected){
 function printLinks(ids,year){
   return ["paper","key"].map(v=>'<a href="'+customLink(ids,v,year)+'">'+(v==="paper"?t("Print pupil paper / PDF","列印學生試卷／PDF"):t("Print worked key / PDF","列印解答／PDF"))+'</a>').join("");
 }
+
