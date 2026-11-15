@@ -366,6 +366,77 @@
         "Chinese worked step or full-width numeral failed");
     }finally{frame.remove();}
   });
+  await check("P4 perimeter practice · area hint, worked sides and follow-ups",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("perimeter practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("perimeter practice failed to load"));};
+        frame.src=new URL("../?lang=en&p=4&view=practice&skill=per1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const prompt=()=>doc.querySelector("legend").textContent.trim();
+      const submit=value=>{doc.getElementById("practice-answer").value=value;doc.getElementById("practice-form").requestSubmit();};
+      const seen=new Set([prompt()]);
+      assert(prompt().includes("18 cm long") && prompt().includes("5 cm wide"),"opening perimeter item changed");
+      assert(doc.querySelector(".figure")?.getAttribute("aria-label").includes("opposite sides"),
+        "four-sided perimeter diagram missing");
+      submit("90");
+      assert(/area inside the rectangle/.test(doc.getElementById("practice-feedback").textContent) &&
+        !doc.getElementById("practice-answer").disabled,"area misconception hint missing");
+      submit("46");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /18 \+ 5 \+ 18 \+ 5 = 46 cm/.test(doc.getElementById("practice-feedback").textContent),
+        "worked four-side sum missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"second perimeter question repeated");seen.add(prompt());
+      const dimensions=prompt().match(/(\d+) cm long and (\d+) cm wide/);
+      assert(dimensions,"follow-up dimensions missing");
+      submit(String(2*(+dimensions[1]+ +dimensions[2]))+".0");
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),
+        "P4 numeric marking changed");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"third perimeter question repeated");
+      submit("0");submit("0");
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),
+        "perimeter answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),
+        "perimeter first tries were not counted separately");
+      assert(doc.querySelector('main a[href*="skill=per1"]'),"repeat link loses perimeter skill");
+    }finally{frame.remove();}
+  });
+  await check("P4 perimeter practice · Chinese two-side hint",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese perimeter practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=4&view=practice&skill=per1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習長方形周界",
+        "Chinese perimeter title missing");
+      assert(doc.querySelector("legend").textContent.includes("長18厘米、闊5厘米"),
+        "Chinese perimeter prompt missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("p=4&view=practice&skill=per1"),
+        "language switch loses perimeter skill");
+      doc.getElementById("practice-answer").value="23";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/只加了兩條邊/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese two-side hint missing");
+      doc.getElementById("practice-answer").value="46";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent) &&
+        /18 \+ 5 \+ 18 \+ 5 = 46/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese worked step missing");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
@@ -392,6 +463,10 @@
       const missingPart=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise missing parts"));
       assert(missingPart && missingPart.href.includes("skill=parts18a"),"home missing-part entry missing");
+      const perimeter=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise perimeter"));
+      assert(perimeter && perimeter.href.includes("p=4") && perimeter.href.includes("skill=per1"),
+        "home perimeter entry missing");
     }finally{frame.remove();}
   });
   async function checkPrintLayout(language,sheet) {
