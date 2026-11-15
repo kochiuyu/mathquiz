@@ -68,7 +68,7 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 | [2N3 objectives 1 and 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=27) | Basic multiplication | [Complete a multiplication sentence from pictured equal groups](p2-equal-groups.md) |
 | [2N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=30) | 4-digit numbers | Read a four-digit numeral |
 | [2N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=31) | Addition and subtraction (III) | Find the missing quantity in a subtraction story |
-| [2N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) | Basic division | Share objects equally |
+| [2N6 objectives 1–2 and 4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) | Basic division | [Share counters equally and record each share and remainder](p2-equal-sharing.md) |
 | [2M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=35) | Length and distance (III) | Read a ruler in centimetres |
 | [2M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=37) | Time (II) | Read a clock and record the time |
 | [2M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=39) | Money (II) | Find change in a purchase |
@@ -90,6 +90,10 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N3 objectives 1 a
 #### Live P2 pictogram family
 
 Source check: **15 November 2026**. The [2017 EDB supplement, 2D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=40) covers interpreting pictograms. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) require one-to-one symbols and horizontal and vertical forms. The [bilingual item brief](p2-pictograms.md) records the released picture-count question, answer rule, accessible chart and release checks. Twelve `pict2a` variants are live. They do not assess construction or the whole 2D1 unit.
+
+#### Planned P2 equal-sharing division family
+
+Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1–2 and 4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) covers the basic division concept, calculation and problems. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) describe equal sharing and require cases with and without remainders. The [bilingual item brief](p2-equal-sharing.md) proposes a bounded pictured-sharing task, two-field answer rule, worked key, access and release checks. The family is **planned, not live**; it does not cover grouping or the full 2N6 unit.
 
 ### Primary 3
 
