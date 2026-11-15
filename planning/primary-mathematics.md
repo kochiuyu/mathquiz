@@ -103,7 +103,7 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1â€
 | [3N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=50) | Multiplication (I) | Multiply to find a total |
 | [3N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=51) | Division (I) | Interpret the remainder in a sharing problem |
 | [3N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=52) | Four arithmetic operations (I) | Choose operations for a two-step story |
-| [3N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=54) | Fractions (I) | Label the shaded fraction of equal parts |
+| [3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) | Fractions (I) | [Write the shaded-part count over the equal-part count for one whole](p3-shaded-fractions.md) |
 | [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | Select a suitable length unit |
 | [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | Compare two time intervals in seconds |
 | [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) | Capacity | Read the scale on a measuring jug |
@@ -113,6 +113,10 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1â€
 | [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | Sort triangles by their properties |
 | [3D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=68) | Bar charts (I) | Read a bar height |
 | [3F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=69) | Inquiry and investigation | Explain a numerical pattern |
+
+#### Planned P3 shaded-fraction family
+
+Source check: **15 November 2026**. [EDB 3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) covers fractions as parts of one whole object or a set. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=54) emphasise equal parts and reading and writing numerator and denominator, with fractions no greater than 1. The [bilingual item brief](p3-shaded-fractions.md) proposes a shaded rectangular-whole task, including zero and full cases. It is **planned, not live**; it does not cover fractions of a set or the full 3N5 unit.
 
 ### Primary 4
 
