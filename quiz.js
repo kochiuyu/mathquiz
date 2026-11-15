@@ -16,6 +16,14 @@ const app = document.getElementById("app");
 if(fixedP6V4)quizzes[6]=fixedQuiz(6,"4");
 function figure(type) {
   if (!type) return "";
+  if (typeof type === "object" && type.kind === "triangleArea") {
+    const x=type.apex,alt=t(`Triangle. The base is ${type.base} cm. A dashed perpendicular from the top vertex to the base is the height, ${type.height} cm.`,`三角形。底邊長${type.base}厘米。由頂點向底邊畫出的虛線垂直高是${type.height}厘米。`);
+    return '<svg class="figure triangle-area" viewBox="0 0 300 220" role="img" aria-label="'+alt+'"><path d="M30 170 L'+x+' 40 L270 170 Z" fill="#ecf3ed" stroke="#20392f" stroke-width="3"/><path d="M'+x+' 40 V170" fill="none" stroke="#a5541f" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M'+x+' 157 h13 v13" fill="none" stroke="#20392f" stroke-width="2"/><text x="150" y="202" text-anchor="middle">'+t("base ","底邊 ")+type.base+' cm</text><text x="'+(x+17)+'" y="108">'+t("height ","高 ")+type.height+' cm</text></svg>';
+  }
+  if (typeof type === "object" && type.kind === "cuboidVolume") {
+    const alt=t(`Cuboid. Length ${type.length} cm, width ${type.width} cm and height ${type.height} cm.`,`長方體。長${type.length}厘米、闊${type.width}厘米、高${type.height}厘米。`);
+    return '<svg class="figure cuboid-volume" viewBox="0 0 330 235" role="img" aria-label="'+alt+'"><path d="M55 65 L100 30 H270 L225 65 Z" fill="#e8f0ea" stroke="#20392f" stroke-width="2.5"/><path d="M225 65 L270 30 V150 L225 185 Z" fill="#d5e5da" stroke="#20392f" stroke-width="2.5"/><path d="M55 65 H225 V185 H55 Z" fill="#f5faf5" stroke="#20392f" stroke-width="2.5"/><text x="140" y="212" text-anchor="middle">'+t("length ","長 ")+type.length+' cm</text><text x="10" y="132">'+t("height ","高 ")+type.height+' cm</text><text x="54" y="36">'+t("width ","闊 ")+type.width+' cm</text></svg>';
+  }
   if (typeof type === "object" && type.kind === "pictogram") {
     const horizontal=type.orientation==="horizontal",names=type.categories.map(local);
     const symbol=(x,y)=>'<g class="pict-symbol" transform="translate('+x+' '+y+')" fill="none" stroke="#20392f" stroke-width="2"><circle cx="9" cy="6" r="4"/><path d="M2 23v-7q0-5 7-5t7 5v7M2 23h14"/></g>';
@@ -164,6 +172,7 @@ function mark(form) {
     if(q.fractionBar)return Number(fractionBarAnswer(values,q.fractionBar));
     if(q.fractionAddition)return Number(fractionAdditionAnswer(values,q.fractionAddition));
     if(q.simpleEquation)return Number(simpleEquationAnswer(values[0],q.answer[0]));
+    if(q.triangleArea || q.cuboidVolume)return Number(measureAnswer(values[0],q.answer[0]));
     if(q.measuringCup)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.barChart)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
@@ -750,6 +759,44 @@ function renderP5Practice(skill){
   }
   show();
 }
+function renderP5MeasurePractice(skill){
+  const area=skill==="triarea5a",family=families.find(f=>f.id===skill),variants=area?[0,4,9]:[0,5,10];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=5&view=practice&skill="+skill;
+  document.title=area?t("Triangle area · Practice | MathQuiz","三角形面積 · 練習 | MathQuiz"):t("Cuboid volume · Practice | MathQuiz","長方體體積 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t(area?"Practise triangle area":"Practise cuboid volume",area?"練習三角形面積":"練習長方體體積")+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(area?"Area in square centimetres":"Volume in cubic centimetres",area?"面積（平方厘米）":"體積（立方厘米）")+'"> '+local(q.fields[0])+'</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const input=document.getElementById("practice-answer"),value=input.value.trim(),feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Write a whole-number answer.","請寫出整數答案。");input.focus();return;}
+      attempts++;
+      const correct=measureAnswer(value,q.answer[0]);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+q.answer[0]+" "+local(q.fields[0])+". ")+local(q.why);
+        input.disabled=true;e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const numeral=value.normalize("NFKC"),valid=/^(?:0|[1-9][0-9]*)$/.test(numeral);
+        feedback.textContent=!valid?t("Use whole-number digits only; the unit is already printed.","只寫整數數字；單位已印在旁邊。")
+          :area?Number(numeral)===q.triangleArea.base*q.triangleArea.height?t("You found the matching rectangle's area. A triangle has half that area, so divide by 2.","你算出對應長方形的面積。三角形只有一半，還要除以2。")
+            :t("Use the base and its perpendicular height, not a sloping side. Multiply, then divide by 2.","用底邊和對應的垂直高，不要用斜邊；相乘後再除以2。")
+          :Number(numeral)===q.cuboidVolume.length*q.cuboidVolume.width?t("That is one layer. Multiply by the number of layers, the height.","這只是一層，還要乘層數（高）。")
+            :t("Multiply length by width to find one layer, then multiply by height.","先用長乘闊求一層，再乘高。");
+        input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 const custom=["2","3"].includes(params.get("v"));
 const strictP1=custom && grade===1 && params.get("v")==="3";
 const selected=custom?decodeItems(params.get("items"),grade):[];
@@ -759,7 +806,7 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a","bar3a"].includes(params.get("skill")))) || (grade===5 && !custom && (view!=="practice" || !["fracadd5a","equation5a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a","bar3a"].includes(params.get("skill")))) || (grade===5 && !custom && (view!=="practice" || !["fracadd5a","equation5a","triarea5a","volume5a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
@@ -780,7 +827,8 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
 }else if(grade===3 && view==="practice" && params.get("skill")==="bar3a"){
   renderBarChartPractice();
 }else if(grade===5 && view==="practice"){
-  renderP5Practice(params.get("skill"));
+  if(["triarea5a","volume5a"].includes(params.get("skill")))renderP5MeasurePractice(params.get("skill"));
+  else renderP5Practice(params.get("skill"));
 }else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
   renderMeanPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
@@ -797,7 +845,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 3, 4, 5 or 6.","選擇小一、小二、小三、小四、小五或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; P5 fractions and equations; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；小五分數加法和簡易方程；或小六百分比和平均數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; P5 fractions, equations, triangle area and cuboid volume; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；小五分數加法、簡易方程、三角形面積和長方體體積；或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
@@ -818,6 +866,8 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=bar3a">'+t("Practise bar charts","練習棒形圖")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=fracadd5a">'+t("Practise adding fractions","練習分數加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=equation5a">'+t("Practise simple equations","練習簡易方程")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=triarea5a">'+t("Practise triangle area","練習三角形面積")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=volume5a">'+t("Practise cuboid volume","練習長方體體積")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

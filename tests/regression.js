@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, fracadd5a and equation5a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, fracadd5a, equation5a, triarea5a and volume5a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -26,7 +26,9 @@
     ["cup3a",3,12,"5ac30486d8d127f49b72ee37ea92c57a5fe3853d623a22353f1a8eb5547a736b"],
     ["bar3a",3,12,"ef6534c060e1ace0626224c42ceee848ebfec97550d2898bd47e750aaf5e61d5"],
     ["fracadd5a",5,12,"c8d89b1ea481650d2c2bb24e32cfd76f18cf403550075745adc17c430d4afef8"],
-    ["equation5a",5,12,"851b768bf0b2b458fca07031b335ee2b836661f2f92ec32b7b4a2140f511340f"]
+    ["equation5a",5,12,"851b768bf0b2b458fca07031b335ee2b836661f2f92ec32b7b4a2140f511340f"],
+    ["triarea5a",5,12,"1f2cd92defd0a62de0e87bf651d1839adb1e4404befa560499d95250ec32063c"],
+    ["volume5a",5,12,"1e88938772a12cdd9a6055713aceb6af8352fd59d3deae4b98f2eaec10b2e050"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -83,7 +85,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===488,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===512,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -1642,6 +1644,59 @@
       const blob=await paper.contentWindow.mathQuizPdf.generate();const raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
       assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"P5 PDF lacks A4/selectable text");
     }finally{frames.forEach(frame=>frame.remove());}
+  });
+  await check("P5 triangle areas · twelve perpendicular-base products",()=>{
+    const family=families.find(f=>f.id==="triarea5a"),seen=new Set();
+    assert(family && family.grade===5 && family.code==="5M1" && family.count===12,"triangle-area family missing");
+    for(let i=0;i<12;i++){
+      const q=family.make(i),v=q.triangleArea;
+      assert(q.figure.kind==="triangleArea" && v.base*v.height/2===q.answer[0] && Number.isInteger(q.answer[0]),"triangle-area arithmetic disagrees");
+      assert(q.prompt[0].includes("perpendicular height") && q.prompt[1].includes("垂直高") && q.why.every(s=>s.includes(String(q.answer[0]))),"triangle-area bilingual text missing");
+      seen.add(v.base+","+v.height);
+    }
+    assert(seen.size===12 && measureAnswer(" ２０ ",20) && !measureAnswer("20 cm²",20) && !measureAnswer("20.0",20),"triangle-area marking rule failed");
+    assert(decodeItems("triarea5a-0",5).length===1 && !decodeItems("triarea5a-0",3).length,"triangle-area link guard failed");
+  });
+  await check("P5 cuboid volumes · twelve three-dimension products",()=>{
+    const family=families.find(f=>f.id==="volume5a"),seen=new Set();
+    assert(family && family.grade===5 && family.code==="5M2" && family.count===12,"cuboid-volume family missing");
+    for(let i=0;i<12;i++){
+      const q=family.make(i),v=q.cuboidVolume;
+      assert(q.figure.kind==="cuboidVolume" && v.length*v.width*v.height===q.answer[0],"cuboid-volume arithmetic disagrees");
+      assert(q.prompt[0].includes("cuboid") && q.prompt[1].includes("長方體") && q.why.every(s=>s.includes(String(q.answer[0]))),"cuboid-volume bilingual text missing");
+      seen.add([v.length,v.width,v.height].join(","));
+    }
+    assert(seen.size===12 && measureAnswer("２４",24) && !measureAnswer("24 cm³",24) && !measureAnswer("4×3×2",24),"volume marking rule failed");
+    assert(decodeItems("volume5a-0",5).length===1 && !decodeItems("volume5a-0",3).length,"volume link guard failed");
+  });
+  await check("P5 area and volume · bilingual paper, key, practice and PDF",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const builder=await open("?v=3&lang=en&p=5&view=build");
+      assert(builder.querySelector('select[name="triarea5a"]') && builder.querySelector('select[name="volume5a"]'),"P5 measure builder choices missing");
+      const query="?v=3&lang=zh&p=5&items=triarea5a-0.volume5a-0";
+      const pupil=await open(query);
+      assert(pupil.querySelector(".triangle-area[aria-label*='垂直高']") && pupil.querySelector(".cuboid-volume[aria-label*='長方體']"),"accessible P5 diagrams missing");
+      pupil.querySelector('input[name="q0f0"]').value="２０";pupil.querySelector('input[name="q1f0"]').value="２４";pupil.querySelector("form").requestSubmit();
+      assert(/得分 2 \/ 2/.test(pupil.getElementById("status").textContent),"P5 measure full-width marking failed");
+      const key=await open(query+"&view=key"),paper=await open(query+"&view=paper");
+      assert(key.querySelectorAll("fieldset").length===2 && key.querySelector("fieldset").textContent.includes("20 平方厘米") && key.querySelectorAll("fieldset")[1].textContent.includes("24立方厘米"),"P5 worked key missing");
+      assert(paper.querySelector(".triangle-area") && paper.querySelector(".cuboid-volume") && paper.querySelector(".paper-code").textContent===key.querySelector(".paper-code").textContent,"P5 paper/diagram/code mismatch");
+      const paperFrame=frames[frames.length-1];paperFrame.style.width="360px";
+      assert(paper.documentElement.scrollWidth<=360,"P5 measure phone paper overflows");
+      for(const [skill,wrong,answer,hint] of [["triarea5a","40","20","一半"],["volume5a","12","24","一層"]]){
+        const doc=await open("?lang=zh&p=5&view=practice&skill="+skill),input=doc.getElementById("practice-answer");
+        assert(input && doc.querySelector("svg.figure"),skill+" practice missing");
+        input.value=wrong;doc.getElementById("practice-form").requestSubmit();
+        assert(doc.getElementById("practice-feedback").textContent.includes(hint),skill+" targeted hint missing");
+        input.value=answer;doc.getElementById("practice-form").requestSubmit();
+        assert(!doc.getElementById("practice-next").hidden,skill+" retry failed");
+      }
+      const blob=await paperFrame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
+      const pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
+      assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && pages>=1 && pages<=2,"P5 measure PDF missing A4/selectable text");
+    }finally{frames.forEach(f=>f.remove());}
   });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";

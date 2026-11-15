@@ -48,3 +48,7 @@ function simpleEquationAnswer(value,expected){
   const numeral=String(value).normalize("NFKC").trim();
   return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
 }
+function measureAnswer(value,expected){
+  const numeral=String(value).normalize("NFKC").trim();
+  return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
+}

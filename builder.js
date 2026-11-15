@@ -112,6 +112,18 @@ const families = [
     return {prompt:[`Solve x ${sign} ${b} = ${c}. Write the value of x.`,`解方程 x ${sign} ${b} = ${c}，寫出 x 的值。`],fields:[["x =","x ="]],answer:[x],marks:1,
       why:[`Apply the same operation to both sides: x = ${c} ${inverse} ${b} = ${x}. Check: ${x} ${sign} ${b} = ${c}.`,`等號兩邊同時進行相同運算：x = ${c} ${inverse} ${b} = ${x}。驗算：${x} ${sign} ${b} = ${c}。`],simpleEquation:{x,b,c,subtract}};
   }},
+  {id:"triarea5a",grade:5,code:"5M1",label:["Area of a triangle","三角形面積"],count:12,make(i){
+    const cases=[[8,5],[6,4],[10,3],[12,7],[14,5],[16,4],[9,6],[7,8],[11,4],[13,6],[5,8],[15,4]];
+    const [base,height]=cases[i],area=base*height/2,triangle={base,height,apex:[120,95,150,135][i%4]};
+    return {prompt:[`Find the area of this triangle. Its base is ${base} cm and its perpendicular height is ${height} cm. The drawing is not to scale.`,`求這個三角形的面積。底邊長${base}厘米，對應的垂直高是${height}厘米。圖形不依比例繪畫。`],fields:[["cm²","平方厘米"]],answer:[area],marks:1,
+      why:[`Use the base and its perpendicular height: ${base} × ${height} ÷ 2 = ${area} cm².`,`用底邊和對應的垂直高：${base} × ${height} ÷ 2 = ${area} 平方厘米。`],triangleArea:triangle,figure:{kind:"triangleArea",...triangle}};
+  }},
+  {id:"volume5a",grade:5,code:"5M2",label:["Volume of a cuboid","長方體體積"],count:12,make(i){
+    const cases=[[4,3,2],[5,2,3],[6,4,2],[3,3,4],[5,4,3],[7,2,4],[8,3,2],[4,4,5],[6,5,3],[9,2,3],[5,5,4],[7,3,5]];
+    const [length,width,height]=cases[i],volume=length*width*height,cuboid={length,width,height};
+    return {prompt:[`Find the volume of this cuboid. Its length is ${length} cm, width ${width} cm and height ${height} cm. The drawing is not to scale.`,`求這個長方體的體積。長${length}厘米、闊${width}厘米、高${height}厘米。圖形不依比例繪畫。`],fields:[["cm³","立方厘米"]],answer:[volume],marks:1,
+      why:[`One layer has ${length} × ${width} = ${length*width} cubic centimetres. There are ${height} layers, so ${length} × ${width} × ${height} = ${volume} cm³.`,`每層有${length} × ${width} = ${length*width}個立方厘米，共${height}層，所以${length} × ${width} × ${height} = ${volume}立方厘米。`],cuboidVolume:cuboid,figure:{kind:"cuboidVolume",...cuboid}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
