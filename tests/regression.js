@@ -178,6 +178,63 @@
       assert(/再試一次/.test(doc.getElementById("practice-feedback").textContent),"Chinese hint missing");
     }finally{frame.remove();}
   });
+  await check("P1 counting-forwards practice · hint, retry and distinct follow-ups",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("sequence practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("sequence practice failed to load"));};
+        frame.src=new URL("../?lang=en&p=1&view=practice&skill=next1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const prompt=()=>doc.querySelector("legend").textContent.trim();
+      const answer=()=>Number(prompt().match(/(\d+),\s*$/)?.[1])+1;
+      const submit=value=>{doc.getElementById("practice-answer").value=value;doc.getElementById("practice-form").requestSubmit();};
+      const seen=new Set([prompt()]);
+      assert(prompt().includes("7, 8, 9") && answer()===10,"opening sequence changed");
+      assert(doc.querySelector("legend #practice-answer"),"answer field is outside the sequence");
+      submit("9");
+      assert(/Look at the last number/.test(doc.getElementById("practice-feedback").textContent),"sequence hint missing");
+      assert(!doc.getElementById("practice-answer").disabled,"sequence retry blocked");
+      submit("10");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /9 \+ 1 = 10/.test(doc.getElementById("practice-feedback").textContent),"worked step missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"second sequence repeated");seen.add(prompt());
+      submit("");
+      assert(/Enter the next number/.test(doc.getElementById("practice-feedback").textContent),"blank sequence was not prompted");
+      submit(String(answer()));
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"third sequence repeated");
+      submit("0");submit("0");
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),"answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),"first tries were not recorded separately");
+      assert(doc.querySelector('a[href*="skill=next1"]'),"repeat link loses the skill");
+    }finally{frame.remove();}
+  });
+  await check("P1 counting-forwards practice · Chinese prompt and hint",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese sequence practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=1&view=practice&skill=next1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習順數","Chinese sequence title missing");
+      assert(doc.querySelector("legend").textContent.includes("7、8、9"),"Chinese sequence prompt missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("skill=next1"),"language switch loses sequence skill");
+      doc.getElementById("practice-answer").value="9";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/順數一個/.test(doc.getElementById("practice-feedback").textContent),"Chinese sequence hint missing");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const response=await fetch(new URL("../?lang=en",location.href));
     assert(response.ok,"home page unavailable");
@@ -193,6 +250,9 @@
       const link=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise counting"));
       assert(link && link.href.includes("p=1") && link.href.includes("view=practice"),"home practice entry missing");
+      const sequences=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise counting forwards"));
+      assert(sequences && sequences.href.includes("skill=next1"),"home sequence entry missing");
     }finally{frame.remove();}
   });
   async function checkPrintLayout(language,sheet) {
