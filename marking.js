@@ -22,3 +22,9 @@ function equalGroupsAnswer(values,groups){
   const [first,second,total]=digits.map(Number);
   return total===groups.total && ((first===groups.boxes && second===groups.each) || (first===groups.each && second===groups.boxes));
 }
+function equalSharingAnswer(values,sharing){
+  if(values.length!==2)return false;
+  const digits=values.map(v=>String(v).normalize("NFKC").trim());
+  if(!digits.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)))return false;
+  return Number(digits[0])===sharing.each && Number(digits[1])===sharing.left;
+}

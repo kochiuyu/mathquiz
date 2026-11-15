@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a and pict2a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a and share2a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -20,7 +20,8 @@
     ["triangle1",1,9,"ef63e3281f937f151ad0e4bb64171801b845ceefaa574f0d397ae9a395fffe18"],
     ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"],
     ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"],
-    ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"]
+    ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"],
+    ["share2a",2,12,"49c221cb465ec7651156d6423c5473a5f2717dcbbfe7c9dde2ad69707145f0a5"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -77,7 +78,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===416,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===428,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -158,6 +159,25 @@
     assert(pictogramAnswer('２',2) && pictogramAnswer(' 2 ',2) && pictogramAnswer('0',0),"valid numeral rejected");
     for(const value of ['2.0','1+1','02','3',''])assert(!pictogramAnswer(value,2),"invalid numeral accepted: "+value);
     assert(decodeItems('pict2a-0',2).length===1 && !decodeItems('pict2a-0',1).length,"pictogram link or cross-grade guard failed");
+  });
+  await check("P2 equal sharing · counts, remainders and numeral rule",()=>{
+    const family=families.find(f=>f.id==='share2a'),exact=[],remainders=[],divisors=new Set();
+    assert(family && family.grade===2 && family.code==='2N6' && family.count===12,"sharing family metadata changed");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),s=q.equalSharing;
+      assert(s.children>=2 && s.children<=5 && s.each>=2 && s.each<=6 && s.total<=30,"sharing counts outside scope at "+i);
+      assert(s.left>=0 && s.left<s.children && s.total===s.children*s.each+s.left,"division identity fails at "+i);
+      assert(q.figure.kind==='equalSharing' && q.figure.total===s.total && q.figure.children===s.children,"picture disagrees at "+i);
+      assert(q.answer.join(',')===[s.each,s.left].join(',') && q.fields.length===2 && q.marks===1,"answer record disagrees at "+i);
+      assert(q.prompt[0].includes(String(s.total)) && q.prompt[1].includes(String(s.children)) && q.why.every(x=>x.includes(String(s.total)) && x.includes(String(s.left))),"bilingual prompt or key mismatch at "+i);
+      assert(equalSharingAnswer([s.each,s.left],s),"correct sharing answer rejected at "+i);
+      if(s.children!==s.each)assert(!equalSharingAnswer([s.children,s.left],s),"divisor mistaken for quotient at "+i);
+      (s.left?remainders:exact).push(s.left);divisors.add(s.children);
+    }
+    assert(exact.length>=4 && remainders.length>=4 && remainders.includes(1) && remainders.some(n=>n>1) && divisors.size===4,"case coverage incomplete");
+    assert(equalSharingAnswer(['４','０'],family.make(0).equalSharing) && equalSharingAnswer([' 4 ',' 0 '],family.make(0).equalSharing),"valid numeral rejected");
+    for(const pair of [['4',''],['4.0','0'],['12/3','0'],['04','0'],['4','3'],['3','0']])assert(!equalSharingAnswer(pair,family.make(0).equalSharing),"invalid numeral accepted: "+pair);
+    assert(decodeItems('share2a-0',2).length===1 && !decodeItems('share2a-0',1).length,"sharing link or cross-grade guard failed");
   });
   for (const set of sharedSets) {
     await check(set.name+" · IDs, answers and URL",()=>{
@@ -995,6 +1015,70 @@
       const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
       assert(/^P2-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"pictogram PDF or code missing");
       assert(raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"pictogram PDF text or A4 page missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P2 equal sharing · builder, pupil, paper and key",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const query='?v=3&lang=en&p=2&items=share2a-0.share2a-1';
+      const builder=await open(query+'&view=build');
+      assert(builder.querySelector('select[name="share2a"]') && builder.querySelectorAll('.equal-sharing').length===2,"sharing family missing from builder");
+      const pupil=await open(query),figures=[...pupil.querySelectorAll('.equal-sharing')];
+      assert(figures.length===2 && figures[0].querySelectorAll('circle').length===12 && figures[1].querySelectorAll('circle').length===13,"starting counters wrong");
+      assert(figures[0].querySelectorAll('rect').length===4 && figures[1].querySelectorAll('rect').length===5,"empty trays wrong");
+      assert(figures.every(svg=>svg.getAttribute('aria-label').includes('empty trays') && !svg.getAttribute('aria-label').includes('left over')),"accessible start picture reveals answer");
+      assert(pupil.querySelectorAll('fieldset:first-of-type input').length===2 && pupil.querySelector('input[name="q0f0"]').getAttribute('aria-label')==='Each child gets' && pupil.querySelector('input[name="q0f1"]').getAttribute('aria-label')==='Left over',"sharing fields missing labels");
+      pupil.querySelector('form').requestSubmit();
+      assert(/Please complete question 1/.test(pupil.getElementById('status').textContent),"blank sharing fields accepted");
+      pupil.querySelector('input[name="q0f0"]').value='4';pupil.querySelector('form').requestSubmit();
+      assert(/Please complete question 1/.test(pupil.getElementById('status').textContent),"blank remainder accepted");
+      pupil.querySelector('input[name="q0f1"]').value='0';pupil.querySelector('input[name="q1f0"]').value='3';pupil.querySelector('input[name="q1f1"]').value='1';pupil.querySelector('form').requestSubmit();
+      assert(/Score 2 \/ 2/.test(pupil.getElementById('status').textContent),"exact and remainder answers did not score");
+      const wrong=await open('?v=3&lang=en&p=2&items=share2a-1');
+      wrong.querySelector('input[name="q0f0"]').value='4';wrong.querySelector('input[name="q0f1"]').value='1';wrong.querySelector('form').requestSubmit();
+      assert(/Score 0 \/ 1/.test(wrong.getElementById('status').textContent),"wrong quotient scored");
+      const paper=await open(query+'&view=paper'),key=await open(query+'&view=key');
+      assert(paper.querySelectorAll('.sharing-blank').length===4 && key.querySelectorAll('.equal-sharing').length===2,"paper or key missing sharing items");
+      assert(key.querySelectorAll('fieldset')[0].textContent.includes('3 × 4 + 0 = 12') && key.querySelectorAll('fieldset')[1].textContent.includes('4 × 3 + 1 = 13'),"worked division checks missing");
+      assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,"sharing paper/key codes differ");
+      const chinese=await open('?v=3&lang=zh&p=2&items=share2a-1&view=key');
+      assert(chinese.querySelector('.equal-sharing[aria-label*="空盤子"]') && chinese.querySelector('fieldset').textContent.includes('餘數1'),"Chinese sharing key missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P2 equal sharing practice · hint, retry and distinct follow-ups",async()=>{
+    const frame=await shapeFrame('?lang=en&p=2&view=practice&skill=share2a');
+    try{
+      const doc=frame.contentDocument,submit=(a,b)=>{doc.getElementById('practice-answer-0').value=a;doc.getElementById('practice-answer-1').value=b;doc.getElementById('practice-form').requestSubmit();};
+      const count=()=>doc.querySelector('.equal-sharing').querySelectorAll('circle').length;
+      assert(count()===12 && doc.querySelectorAll('.sharing-response input').length===2,"opening sharing practice changed");
+      submit('4','');assert(/Complete both boxes/.test(doc.getElementById('practice-feedback').textContent),"blank remainder used an attempt");
+      submit('3','0');assert(/Give one counter to each child/.test(doc.getElementById('practice-feedback').textContent) && !doc.getElementById('practice-answer-0').disabled,"sharing hint blocked retry");
+      submit('4','0');assert(/Correct after a hint/.test(doc.getElementById('practice-feedback').textContent) && doc.getElementById('practice-feedback').textContent.includes('3 × 4 + 0 = 12'),"worked retry feedback missing");
+      doc.getElementById('practice-next').click();assert(count()===13,"first remainder follow-up missing");
+      submit('３','１');assert(/Correct on the first try/.test(doc.getElementById('practice-feedback').textContent),"full-width remainder answer rejected");
+      doc.getElementById('practice-next').click();assert(count()===23,"second distinct remainder follow-up missing");
+      submit('0','0');submit('0','0');assert(/The answer is/.test(doc.getElementById('practice-feedback').textContent),"worked result after second try missing");
+      doc.getElementById('practice-next').click();assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector('main').textContent),"first tries not tracked separately");
+    }finally{frame.remove();}
+  });
+  await check("P2 equal sharing · Chinese practice, phone width and direct PDF",async()=>{
+    const frames=[];
+    try{
+      const practice=await shapeFrame('?lang=zh&p=2&view=practice&skill=share2a');frames.push(practice);
+      const doc=practice.contentDocument;
+      assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習平均分配' && doc.getElementById('en').getAttribute('href').includes('share2a'),"Chinese sharing practice missing");
+      doc.getElementById('practice-answer-0').value='3';doc.getElementById('practice-answer-1').value='0';doc.getElementById('practice-form').requestSubmit();
+      assert(/輪流給每人一粒/.test(doc.getElementById('practice-feedback').textContent),"Chinese sharing hint missing");
+      const home=await shapeFrame('?lang=en');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise equal sharing') && a.href.includes('skill=share2a')),"sharing home link missing");
+      const paper=await shapeFrame('?v=3&lang=zh&p=2&items=share2a-0.share2a-1&view=paper');frames.push(paper);
+      paper.style.width='360px';
+      assert(paper.contentDocument.documentElement.scrollWidth<=360,"sharing phone paper overflows");
+      const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
+      const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
+      assert(/^P2-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"sharing PDF or code missing");
+      assert(raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"sharing PDF text or A4 page missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P1 counting practice is linked from the home page",async()=>{

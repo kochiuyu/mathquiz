@@ -60,6 +60,15 @@ const families = [
       pictogram:{orientation,categories,counts,target,title:["Favourite fruit in our class","本班最喜愛的水果"],key:["Each pupil picture stands for 1 pupil.","每個學生圖案代表1名學生。"]},
       figure:{kind:"pictogram",orientation,categories,counts,target,title:["Favourite fruit in our class","本班最喜愛的水果"],key:["Each pupil picture stands for 1 pupil.","每個學生圖案代表1名學生。"]}};
   }},
+  {id:"share2a",grade:2,code:"2N6",label:["Division by equal sharing","平均分配除法"],count:12,make(i){
+    const cases=[[12,3],[13,4],[10,2],[16,5],[14,3],[20,4],[17,5],[18,3],[11,2],[22,4],[23,5],[24,4]];
+    const [total,children]=cases[i],each=Math.floor(total/children),left=total%children;
+    return {prompt:[`Share ${total} counters equally among ${children} children. How many does each child get? How many are left over?`,`把${total}粒圓片平均分給${children}名小朋友。每人分得多少粒？剩下多少粒？`],
+      fields:[["each","每人"],["left","剩下"]],answer:[each,left],marks:1,
+      why:[`Put ${each} counters in each of ${children} trays; ${left} ${left===1?"counter is":"counters are"} left over. ${total} ÷ ${children} = ${each} remainder ${left}. Check: ${children} × ${each} + ${left} = ${total}.`,
+        `${children}個盤子各放${each}粒，剩下${left}粒。${total} ÷ ${children} = ${each}，餘數${left}。驗算：${children} × ${each} + ${left} = ${total}。`],
+      equalSharing:{total,children,each,left},figure:{kind:"equalSharing",total,children}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
