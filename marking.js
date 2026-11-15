@@ -7,3 +7,7 @@ function numericAnswer(value,expected,wholeNumberOnly=false) {
   if(parts.length>2 || parts.some(p=>!/^[-+]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(p.trim()))) return false;
   return Number(parts[0])/(parts.length===2?Number(parts[1]):1)===expected;
 }
+function threeDigitAnswer(value,expected){
+  const numeral=String(value).normalize("NFKC").trim();
+  return /^[1-9][0-9]{2}$/.test(numeral) && Number(numeral)===expected;
+}

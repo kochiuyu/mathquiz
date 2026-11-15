@@ -1,5 +1,5 @@
 const params = new URLSearchParams(location.search);
-const grade = [1,4,6].find(n => String(n) === params.get("p"));
+const grade = [1,2,4,6].find(n => String(n) === params.get("p"));
 const fixedP6V4=grade===6 && params.get("v")==="4" && !params.has("items");
 const legacyFixedP6=grade===6 && (params.get("v")==="1" || !params.has("v"));
 const invalidV4=params.get("v")==="4" && !fixedP6V4;
@@ -33,6 +33,22 @@ function figure(type) {
     const label=titleA+": "+Array(type.a).fill(t("red counter","紅色圓片")).join(", ")+". "+titleB+": "+Array(type.b).fill(t("blue counter","藍色圓片")).join(", ");
     return '<svg class="figure two-groups" viewBox="0 0 320 102" role="img" aria-label="'+label+'"><g fill="#f8faf7" stroke="#9bb9a5"><rect x="4" y="22" width="152" height="74" rx="8"/><rect x="164" y="22" width="152" height="74" rx="8"/></g><g text-anchor="middle"><text x="80" y="17">'+titleA+'</text><text x="240" y="17">'+titleB+'</text></g>'+dots(type.a,4,"#a5541f")+dots(type.b,164,"#316a93")+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "placeValue") {
+    const counts=[type.hundreds,type.tens,type.ones];
+    const labels=ch?["百位","十位","個位"]:["Hundreds","Tens","Ones"];
+    const alt=ch?`${counts[0]}個百、${counts[1]}個十、${counts[2]}個一。`:`${counts[0]} hundred plates, ${counts[1]} ten rods, ${counts[2]} unit squares.`;
+    const shapes=counts.map((count,j)=>{
+      const x=10+j*148;
+      if(!count)return '<text x="'+(x+69)+'" y="85" text-anchor="middle">0</text>';
+      return Array.from({length:count},(_,k)=>{
+        const col=k%3,row=Math.floor(k/3);
+        if(j===0)return '<rect x="'+(x+32+col*27)+'" y="'+(39+row*27)+'" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"/><path d="M'+(x+39+col*27)+' '+(39+row*27)+'v22m7-22v22m-14-15h22m-22 7h22" fill="none" stroke="currentColor" stroke-width=".7"/>';
+        if(j===1)return '<rect x="'+(x+38+col*23)+'" y="'+(39+row*27)+'" width="10" height="22" fill="none" stroke="currentColor" stroke-width="2"/>';
+        return '<rect x="'+(x+49+col*15)+'" y="'+(46+row*18)+'" width="9" height="9" fill="none" stroke="currentColor" stroke-width="2"/>';
+      }).join("");
+    }).join("");
+    return '<svg class="figure place-value" viewBox="0 0 450 157" role="img" aria-label="'+alt+'"><g fill="none" stroke="#769184">'+[0,1,2].map(j=>'<rect x="'+(10+j*148)+'" y="5" width="138" height="119" rx="7"/>').join("")+'</g><g text-anchor="middle">'+labels.map((label,j)=>'<text x="'+(79+j*148)+'" y="27">'+label+'</text>').join("")+'</g><g stroke="#20392f">'+shapes+'</g><g text-anchor="middle">'+[t("plate = 100","百板 = 100"),t("rod = 10","十棒 = 10"),t("square = 1","方格 = 1")].map((label,j)=>'<text x="'+(79+j*148)+'" y="147">'+label+'</text>').join("")+'</g></svg>';
+  }
   const unit=t("cm","厘米");
   const figures = {
     stars: [t("Two rows of stars: five above, two below.","兩排星星，上排五顆，下排兩顆。"),"0 0 245 76",'<g fill="#a5541f">'+[0,1,2,3,4,5,6].map(i=>'<path transform="translate('+((i%5)*46+4)+' '+(i<5?2:40)+')" d="M17 0l5 11 12 2-9 8 2 12-10-6-11 6 2-12-8-8 12-2z"/>').join("")+'</g>'],
@@ -60,7 +76,7 @@ function controls(q,i,paper) {
   if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
   if(q.inlineAnswer)return "";
-  return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':"");
+  return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1 || q.placeValue?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':q.placeValue && !paper?'<small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small>':"");
 }
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
@@ -86,6 +102,7 @@ function mark(form) {
       const pair=values.map(v=>v.normalize("NFKC"));
       return Number(pair.every(v=>/^[1-9]$/.test(v)) && +pair[0]+ +pair[1]===q.otherWay.total && [Number(pair[0]),Number(pair[1])].sort((a,b)=>a-b).join(",")!==[...q.otherWay.shown].sort((a,b)=>a-b).join(","));
     }
+    if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
     return values.reduce((sum,v,j)=>sum+Number(numericAnswer(v,q.answer[j],strictP1)),0);
   });
   const status=document.getElementById("status");
@@ -135,6 +152,47 @@ function renderTrianglePractice(){
       position++;attempts=0;
       if(position<variants.length){show();app.querySelector('input[type="radio"]').focus();return;}
       app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t("You can try another set of triangle questions.","你可以再做一組三角形題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderPlaceValuePractice(){
+  const family=families.find(f=>f.id==="place3a");
+  const pool=Array.from({length:family.count-1},(_,i)=>i+1);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const variants=[0,...pool.slice(0,2)];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=2&view=practice&skill=place3a";
+  document.title=t("Place value · Practice | MathQuiz","位值 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]),{hundreds,tens,ones}=q.figure;
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise three-digit place value","練習三位數位值")+'</h1><p>'+t("Read the hundreds, tens and ones blocks. Try three questions at your own pace.","看百板、十棒和個位方格，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Three-digit number","三位數")+'"></label><small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const input=document.getElementById("practice-answer"),value=input.value.trim(),feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Write the three-digit number.","請寫出這個三位數。");input.focus();return;}
+      attempts++;
+      const correct=threeDigitAnswer(value,q.answer[0]);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The answer is ","答案是 ")+q.answer[0]+". ")+local(q.why);
+        input.disabled=true;e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const numeral=value.normalize("NFKC");
+        feedback.textContent=!/^[1-9][0-9]{2}$/.test(numeral)
+          ?t("Use exactly three digits, starting with a nonzero digit.","請用三個數字，第一個數字不能是0。")
+          :tens===0?t("There are no tens. Put 0 in the middle place.","沒有十，十位要填0。")
+          :ones===0?t("There are no ones. Put 0 in the ones place.","沒有一，個位要填0。")
+          :t("Read the columns from hundreds to tens to ones.","由百位、十位到個位逐欄讀出。 ");
+        input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
     };
   }
   show();
@@ -388,12 +446,14 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || (grade===2 && !custom && (view!=="practice" || params.get("skill")!=="place3a")) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
 }else if(grade===1 && view==="practice" && params.get("skill")==="triangle1"){
   renderTrianglePractice();
+}else if(grade===2 && view==="practice" && params.get("skill")==="place3a"){
+  renderPlaceValuePractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
   renderMeanPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
@@ -408,9 +468,9 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
     {ids:warmUpP1,title:t("P1 five-minute warm-up","小一五分鐘熱身題"),description:t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。"),edit:t("Edit warm-up","編輯熱身題"),pupil:t("Try warm-up","試做熱身題")},
     {ids:exitTicketP1,title:t("Six-question P1 exit ticket","小一六題離堂小測"),description:t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。"),edit:t("Edit exit ticket","編輯離堂小測"),pupil:t("Try exit ticket","試做離堂小測")}
   ];
-  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
+  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 4 or 6.","選擇小一、小二、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes, P4 perimeter and factors, or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形，小四周界和因數，或小六百分比和平均數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes, P2 place value, P4 perimeter and factors, or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形、小二位值、小四周界和因數，或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
@@ -419,6 +479,8 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=factor1">'+t("Practise factors","練習因數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=pct2">'+t("Practise percentages","練習百分比")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=mean1">'+t("Practise averages","練習平均數")+' →</a>');
+  app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",2)+'">'+t("Create a P2 quiz","建立小二小測")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=place3a">'+t("Practise place value","練習位值")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

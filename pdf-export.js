@@ -10,7 +10,7 @@
   async function paperCode() {
     const params=new URLSearchParams(location.search);
     const grade=params.get("p"),version=params.get("v"),ids=params.get("items");
-    if(!/^[146]$/.test(grade) || !/^[23]$/.test(version) || !ids)
+    if(!/^[1246]$/.test(grade) || !/^[23]$/.test(version) || !ids)
       throw new Error("This paper has no valid identifying code.");
     const digest=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(ids)));
     const short=Array.from(digest.slice(0,5),n=>n.toString(16).padStart(2,"0")).join("").toUpperCase();
