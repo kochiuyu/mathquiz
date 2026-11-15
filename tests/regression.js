@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a and cup3a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a and bar3a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -23,7 +23,8 @@
     ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"],
     ["share2a",2,12,"49c221cb465ec7651156d6423c5473a5f2717dcbbfe7c9dde2ad69707145f0a5"],
     ["frac3a",3,12,"b982b6c4eafc70ccdbbf03a93badc41d5c2e510d46d6ef6516093a214fba4bca"],
-    ["cup3a",3,12,"5ac30486d8d127f49b72ee37ea92c57a5fe3853d623a22353f1a8eb5547a736b"]
+    ["cup3a",3,12,"5ac30486d8d127f49b72ee37ea92c57a5fe3853d623a22353f1a8eb5547a736b"],
+    ["bar3a",3,12,"ef6534c060e1ace0626224c42ceee848ebfec97550d2898bd47e750aaf5e61d5"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -80,7 +81,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===452,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===464,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -217,6 +218,21 @@
     assert(measuringCupAnswer('２５０',250) && measuringCupAnswer(' 250 ',250),"valid cup numeral rejected");
     for(const value of ['','250 mL','250.0','500/2','0250','200'])assert(!measuringCupAnswer(value,250),"invalid cup numeral accepted: "+value);
     assert(decodeItems('cup3a-0',3).length===1 && !decodeItems('cup3a-0',2).length,"cup link or cross-grade guard failed");
+  });
+  await check("P3 bar charts · scales, orientations and target values",()=>{
+    const family=families.find(f=>f.id==='bar3a'),scales=new Set(),orientations=new Set(),targets=new Set();
+    assert(family && family.grade===3 && family.code==='3D1' && family.count===12,"bar-chart metadata changed");
+    for(let i=0;i<12;i++){
+      const q=family.make(i),b=q.barChart;
+      assert([1,2,5].includes(b.scale) && ['horizontal','vertical'].includes(b.orientation),"chart scale or orientation outside scope at "+i);
+      assert(b.steps.length===3 && b.steps.every(n=>Number.isInteger(n) && n>=0 && n<=6) && b.target>=0 && b.target<3,"chart bar bounds changed at "+i);
+      assert(q.answer[0]===b.steps[b.target]*b.scale && q.figure.kind==='barChart' && q.figure.steps.join(',')===b.steps.join(','),"bar answer/figure mismatch at "+i);
+      assert(q.prompt[0].includes(b.categories[b.target][0].toLowerCase()) && q.prompt[1].includes(b.categories[b.target][1]) && q.why.every(x=>x.includes(q.answer[0])),"bilingual chart text missing at "+i);
+      scales.add(b.scale);orientations.add(b.scale+':'+b.orientation);targets.add(b.target);
+    }
+    assert(scales.size===3 && orientations.size===6 && targets.size===3 && family.make(0).answer[0]===8 && family.make(0).barChart.orientation==='horizontal',"chart coverage or first practice item missing");
+    assert(measuringCupAnswer('８',8) && !measuringCupAnswer('4',8) && !measuringCupAnswer('8 pupils',8),"chart numeral marking rule changed");
+    assert(decodeItems('bar3a-0',3).length===1 && !decodeItems('bar3a-0',2).length,"bar-chart link or cross-grade guard failed");
   });
   for (const set of sharedSets) {
     await check(set.name+" · IDs, answers and URL",()=>{
@@ -1243,6 +1259,62 @@
       const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer()),pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
       assert(/^P3-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"cup PDF or code missing");
       assert(raw.includes('/ToUnicode') && pages>=1 && pages<=2,"cup PDF text or A4 pages missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P3 bar charts · builder, pupil, paper, key and marking",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const query='?v=3&lang=en&p=3&items=bar3a-0.bar3a-9';
+      const builder=await open(query+'&view=build');
+      assert(builder.querySelector('select[name="bar3a"]') && builder.querySelectorAll('.bar-chart').length===2,"bar-chart family missing from builder");
+      const pupil=await open(query),charts=[...pupil.querySelectorAll('.bar-chart')];
+      assert(charts.length===2 && charts[0].querySelectorAll('.bar-mark').length===3 && charts[1].querySelectorAll('.bar-mark').length===3,"chart bars missing");
+      assert(charts[0].getAttribute('aria-label').includes('counts pupils by 2') && charts[1].getAttribute('aria-label').includes('Vertical'),"chart accessible scale/orientation missing");
+      assert(pupil.querySelector('input[name="q0f0"]')?.getAttribute('aria-label')==='Number of pupils',"chart field label missing");
+      pupil.querySelector('form').requestSubmit();assert(/Please complete question 1/.test(pupil.getElementById('status').textContent),"blank bar answer accepted");
+      pupil.querySelector('input[name="q0f0"]').value='８';pupil.querySelector('input[name="q1f0"]').value='5';pupil.querySelector('form').requestSubmit();
+      assert(/Score 2 \/ 2/.test(pupil.getElementById('status').textContent),"bar values did not score");
+      const wrong=await open('?v=3&lang=en&p=3&items=bar3a-0');wrong.querySelector('input[name="q0f0"]').value='4';wrong.querySelector('form').requestSubmit();
+      assert(/Score 0 \/ 1/.test(wrong.getElementById('status').textContent),"bare step count scored as pupils");
+      const paper=await open(query+'&view=paper'),key=await open(query+'&view=key');
+      assert(paper.querySelectorAll('.bar-chart').length===2 && paper.querySelectorAll('.bar-response .blank').length===2,"bar-chart paper blank missing");
+      assert(key.querySelectorAll('fieldset')[0].querySelector('p b')?.textContent==='8 pupils' && key.querySelectorAll('fieldset')[1].querySelector('p b')?.textContent==='5 pupils',"bar-chart key missing");
+      assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,"bar-chart paper/key code differs");
+      const chinese=await open('?v=3&lang=zh&p=3&items=bar3a-2.bar3a-11&view=key');
+      assert(chinese.querySelectorAll('fieldset')[0].textContent.includes('0 名學生') && chinese.querySelector('.bar-chart[aria-label*="棒形圖"]'),"Chinese chart key or zero case missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P3 bar-chart practice · hint, three scales and first tries",async()=>{
+    const frame=await shapeFrame('?lang=en&p=3&view=practice&skill=bar3a');
+    try{
+      const doc=frame.contentDocument,submit=value=>{doc.getElementById('practice-answer').value=value;doc.getElementById('practice-form').requestSubmit();};
+      assert(doc.querySelector('h1').textContent==='Practise reading bar charts' && doc.querySelector('.bar-chart[aria-label*="counts pupils by 2"]'),"opening bar practice missing");
+      submit('');assert(/Write the number of pupils/.test(doc.getElementById('practice-feedback').textContent),"blank bar used attempt");
+      submit('4');assert(/Check what one axis step represents/.test(doc.getElementById('practice-feedback').textContent),"bar scale hint missing");
+      submit('8');assert(/Correct after a hint/.test(doc.getElementById('practice-feedback').textContent),"bar retry missing");
+      doc.getElementById('practice-next').click();assert(doc.querySelector('.bar-chart[aria-label*="counts pupils by 1"]'),"scale-one follow-up missing");
+      submit('2');assert(/Correct on the first try/.test(doc.getElementById('practice-feedback').textContent),"bar scale-one answer rejected");
+      doc.getElementById('practice-next').click();assert(doc.querySelector('.bar-chart[aria-label*="Vertical"][aria-label*="counts pupils by 5"]'),"vertical scale-five follow-up missing");
+      submit('５');doc.getElementById('practice-next').click();
+      assert(/Correct on the first try: 2 \/ 3/.test(doc.querySelector('main').textContent),"bar first tries not separate");
+    }finally{frame.remove();}
+  });
+  await check("P3 bar charts · Chinese practice, home link and PDF",async()=>{
+    const frames=[];
+    try{
+      const practice=await shapeFrame('?lang=zh&p=3&view=practice&skill=bar3a');frames.push(practice);
+      const doc=practice.contentDocument;
+      assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習閱讀棒形圖' && doc.getElementById('en').getAttribute('href').includes('bar3a'),"Chinese bar practice missing");
+      doc.getElementById('practice-answer').value='4';doc.getElementById('practice-form').requestSubmit();assert(/找出題目指定的棒形/.test(doc.getElementById('practice-feedback').textContent),"Chinese bar hint missing");
+      const home=await shapeFrame('?lang=en');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise bar charts') && a.href.includes('skill=bar3a')),"bar home link missing");
+      const paper=await shapeFrame('?v=3&lang=zh&p=3&items=bar3a-0.bar3a-9&view=paper');frames.push(paper);
+      paper.style.width='360px';assert(paper.contentDocument.documentElement.scrollWidth<=360,"bar phone paper overflows");
+      const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
+      const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer()),pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
+      assert(/^P3-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"bar PDF or code missing");
+      assert(raw.includes('/ToUnicode') && pages>=1 && pages<=2,"bar PDF text or A4 pages missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P1 counting practice is linked from the home page",async()=>{

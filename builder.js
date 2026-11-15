@@ -89,6 +89,18 @@ const families = [
       fields:[["mL","mL"]],answer:[amount],marks:1,why:reading,
       measuringCup:cup,figure:{kind:"measuringCup",...cup}};
   }},
+  {id:"bar3a",grade:3,code:"3D1",label:["Read a bar chart","閱讀棒形圖"],count:12,make(i){
+    const cases=[
+      [2,"horizontal",[4,2,3],0],[2,"vertical",[1,5,3],2],[2,"horizontal",[0,2,4],0],[2,"vertical",[3,1,5],1],
+      [1,"horizontal",[4,2,3],1],[1,"vertical",[0,3,5],0],[1,"horizontal",[6,2,4],2],[1,"vertical",[2,5,1],1],
+      [5,"horizontal",[2,4,3],1],[5,"vertical",[1,3,5],0],[5,"horizontal",[0,5,2],2],[5,"vertical",[4,2,6],2]
+    ];
+    const [scale,orientation,steps,target]=cases[i],categories=[["Walking","步行"],["Bus","巴士"],["Train","港鐵"]],value=steps[target]*scale;
+    const chart={scale,orientation,steps,target,categories,title:["How our class travels to school","本班上學方式"]};
+    return {prompt:[`How many pupils chose ${categories[target][0].toLowerCase()}? Read that bar and write the number.`,`有多少名學生選擇${categories[target][1]}？讀取該棒形，寫出人數。`],fields:[["pupils","名學生"]],answer:[value],marks:1,
+      why:[`The ${categories[target][0].toLowerCase()} bar reaches ${steps[target]} step${steps[target]===1?"":"s"} from zero. Each step represents ${scale} pupil${scale===1?"":"s"}, so ${steps[target]} × ${scale} = ${value} pupils.`,`「${categories[target][1]}」的棒形由零起到第${steps[target]}格。每格代表${scale}人，所以${steps[target]} × ${scale} = ${value}人。`],
+      barChart:chart,figure:{kind:"barChart",...chart}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);

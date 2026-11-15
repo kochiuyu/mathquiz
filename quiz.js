@@ -73,6 +73,18 @@ function figure(type) {
     const index=type.amount/type.step,alt=t(`Measuring cup scale in mL, labelled every ${type.major} from 0 to ${type.max}. The water line meets tick number ${index} above zero.`,`量杯刻度以 mL 表示，每${type.major} mL標示數字，由0至${type.max}。水面對着由零起第${index}個刻度。`);
     return '<svg class="figure measuring-cup" viewBox="0 0 420 250" role="img" aria-label="'+alt+'"><text x="296" y="20">mL</text><path d="M140 28v202h130V28" fill="none" stroke="#20392f" stroke-width="3"/><rect x="143" y="'+waterY+'" width="124" height="'+(bottom-waterY)+'" fill="#b6ced3"/><path d="M143 '+waterY+'h145" stroke="#20392f" stroke-width="3"/>'+ticks+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "barChart") {
+    const names=type.categories.map(local),horizontal=type.orientation==="horizontal";
+    const alt=t(`${horizontal?"Horizontal":"Vertical"} bar chart, ${local(type.title)}. Axis counts pupils by ${type.scale}. `,`${horizontal?"橫向":"直向"}棒形圖，${local(type.title)}。人數數軸每格代表${type.scale}人。`)
+      +names.map((name,j)=>name+t(" ends at step ","到第")+type.steps[j]+t(" from zero","格")).join(t("; ","；"))+".";
+    const grid=Array.from({length:7},(_,n)=>horizontal
+      ?'<path d="M'+(140+n*40)+' 48v158"/><text x="'+(140+n*40)+'" y="235" text-anchor="middle">'+(n*type.scale)+'</text>'
+      :'<path d="M58 '+(210-n*26)+'h350"/><text x="45" y="'+(215-n*26)+'" text-anchor="end">'+(n*type.scale)+'</text>').join("");
+    const bars=type.steps.map((steps,j)=>horizontal
+      ?'<text x="8" y="'+(86+j*48)+'">'+names[j]+'</text><rect class="bar-mark" x="140" y="'+(65+j*48)+'" width="'+(steps*40)+'" height="30"/>'
+      :'<rect class="bar-mark" x="'+(100+j*104)+'" y="'+(210-steps*26)+'" width="50" height="'+(steps*26)+'"/><text x="'+(125+j*104)+'" y="239" text-anchor="middle">'+names[j]+'</text>').join("");
+    return '<svg class="figure bar-chart" viewBox="0 0 420 255" role="img" aria-label="'+alt+'"><text x="8" y="22" class="chart-title">'+local(type.title)+'</text><g class="chart-grid">'+grid+'</g>'+bars+'<text x="350" y="251" text-anchor="end">'+t("pupils","名學生")+'</text></svg>';
+  }
   if (typeof type === "object" && type.kind === "placeValue") {
     const counts=[type.hundreds,type.tens,type.ones];
     const labels=ch?["百位","十位","個位"]:["Hundreds","Tens","Ones"];
@@ -119,13 +131,14 @@ function controls(q,i,paper) {
   if(q.equalSharing)return '<div class="sharing-response">'+[0,1].map(j=>'<label>'+t(["Each child gets","Left over"][j],["每人分得","剩下"][j])+' '+(paper?'<span class="sharing-blank">_______</span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["Each child gets","Left over"][j],["每人分得","剩下"][j])+'" name="q'+i+'f'+j+'">')+' '+t("counters","粒圓片")+'</label>').join("")+'</div>'+(paper?'':'<small class="response-help">'+t("Enter a whole-number numeral in each box, including 0 when none are left over.","兩格都請輸入整數數字；沒有剩餘也要填0。")+'</small>');
   if(q.fractionBar)return '<div class="fraction-response"><div class="fraction-stack">'+[0,1].map(j=>(j?'<span class="fraction-rule" aria-hidden="true"></span>':'')+(paper?'<span class="fraction-blank">_______</span>':'<label><span class="sr-only">'+t(["Shaded parts (numerator)","Equal parts shown (denominator)"][j],["塗色部分（分子）","圖中所有等分（分母）"][j])+'</span><input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["Shaded parts (numerator)","Equal parts shown (denominator)"][j],["塗色部分（分子）","圖中所有等分（分母）"][j])+'" name="q'+i+'f'+j+'"></label>')).join("")+'</div><span>'+t("Top: shaded parts; bottom: equal parts shown.","上方：塗色部分；下方：圖中所有等分。")+'</span></div>';
   if(q.measuringCup)return '<label class="field measuring-response"><span class="sr-only">'+t("Amount of water in millilitres","水量（毫升）")+'</span>'+(paper?'<span class="blank"></span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Amount of water in millilitres","水量（毫升）")+'" name="q'+i+'f0">')+' mL</label>';
+  if(q.barChart)return '<label class="field bar-response"><span class="sr-only">'+t("Number of pupils","學生人數")+'</span>'+(paper?'<span class="blank"></span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Number of pupils","學生人數")+'" name="q'+i+'f0">')+' '+t("pupils","名學生")+'</label>';
   if(q.inlineAnswer)return "";
   return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1 || q.placeValue || q.pictogram?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':q.placeValue && !paper?'<small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small>':q.pictogram && !paper?'<small class="response-help">'+t("Count one pupil for each picture.","每個圖案代表一名學生。")+'</small>':"");
 }
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.measuringCup?q.answer[0]+" mL":q.fractionBar?q.answer.join("/"):q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar?q.answer.join("/"):q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -150,6 +163,7 @@ function mark(form) {
     if(q.equalSharing)return Number(equalSharingAnswer(values,q.equalSharing));
     if(q.fractionBar)return Number(fractionBarAnswer(values,q.fractionBar));
     if(q.measuringCup)return Number(measuringCupAnswer(values[0],q.answer[0]));
+    if(q.barChart)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
     if(q.pictogram)return Number(pictogramAnswer(values[0],q.answer[0]));
     return values.reduce((sum,v,j)=>sum+Number(numericAnswer(v,q.answer[j],strictP1)),0);
@@ -335,6 +349,40 @@ function renderMeasuringCupPractice(){
       }else{
         feedback.textContent=!/^(?:0|[1-9][0-9]*)$/.test(value.normalize("NFKC"))?t("Write the whole-number digits only; mL is already printed.","只寫整數數字；mL 已印在旁邊。")
           :t("Start at a labelled mark. Count each equally spaced tick up to the water line. Check that you read the line at its height.","從有數字的刻度開始，逐格數到水面。留意要看與水面同一高度的刻度。");
+        input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderBarChartPractice(){
+  const family=families.find(f=>f.id==="bar3a"),variants=[0,4,9];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=3&view=practice&skill=bar3a";
+  document.title=t("Bar charts · Practice | MathQuiz","棒形圖 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise reading bar charts","練習閱讀棒形圖")+'</h1><p>'+t("Read the named bar against the axis. Try three questions at your own pace.","對照數軸讀取指定的棒形，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<label class="field bar-response"><span class="sr-only">'+t("Number of pupils","學生人數")+'</span><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Number of pupils","學生人數")+'"> '+t("pupils","名學生")+'</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const input=document.getElementById("practice-answer"),value=input.value.trim(),feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Write the number of pupils.","請寫出學生人數。");input.focus();return;}
+      attempts++;
+      const correct=measuringCupAnswer(value,q.answer[0]);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The answer is ","答案是 ")+q.answer[0]+t(" pupils. ","人。"))+local(q.why);
+        input.disabled=true;e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        feedback.textContent=!/^(?:0|[1-9][0-9]*)$/.test(value.normalize("NFKC"))?t("Write whole-number digits only; pupils is already printed.","只寫整數數字；人數單位已印在旁邊。")
+          :t("Find the named bar. Check what one axis step represents, then count the steps from zero to its end.","找出題目指定的棒形。先看數軸每格代表多少，再由零數到棒形末端。");
         input.select();
       }
     };
@@ -670,7 +718,7 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a","bar3a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
@@ -688,6 +736,8 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   renderFractionPractice();
 }else if(grade===3 && view==="practice" && params.get("skill")==="cup3a"){
   renderMeasuringCupPractice();
+}else if(grade===3 && view==="practice" && params.get("skill")==="bar3a"){
+  renderBarChartPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
   renderMeanPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
@@ -704,7 +754,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 3, 4 or 6.","選擇小一、小二、小三、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions and measuring cups; P4 perimeter and factors; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數和量杯刻度；小四周界和因數；或小六百分比和平均數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
@@ -721,6 +771,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=share2a">'+t("Practise equal sharing","練習平均分配")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=frac3a">'+t("Practise fractions","練習分數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=cup3a">'+t("Practise measuring cups","練習量杯刻度")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=bar3a">'+t("Practise bar charts","練習棒形圖")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);
