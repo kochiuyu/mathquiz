@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a and groups2a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a and pict2a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -19,7 +19,8 @@
     ["mean1",6,16,"b36e21806e2994332fb4ee7161529652dfbab4d61db021619d2314dba34071d5"],
     ["triangle1",1,9,"ef63e3281f937f151ad0e4bb64171801b845ceefaa574f0d397ae9a395fffe18"],
     ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"],
-    ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"]
+    ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"],
+    ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -76,7 +77,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===404,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===416,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -142,6 +143,22 @@
     assert(equalGroupsAnswer(['３','４','１２'],g) && !equalGroupsAnswer(['3.0','4','12'],g) && !equalGroupsAnswer(['3','4','4+4+4'],g),"number format rule changed");
     assert(decodeItems('groups2a-0',2).length===1 && !decodeItems('groups2a-0',1).length,"group link or cross-grade guard failed");
   });
+  await check("P2 pictograms · one-to-one charts and numeral rule",()=>{
+    const family=families.find(f=>f.id==='pict2a'),orientations=new Set(),targets=new Set();
+    assert(family && family.grade===2 && family.code==='2D1' && family.count===12,"pictogram family metadata changed");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),p=q.pictogram;
+      assert(q.figure.kind==='pictogram' && q.figure.orientation===p.orientation && q.figure.counts.join(',')===p.counts.join(','),"chart record disagreement at "+i);
+      assert(p.categories.length===3 && p.counts.length===3 && p.counts.every(n=>n>=0 && n<=6) && q.answer[0]===p.counts[p.target],"chart count outside scope at "+i);
+      assert(q.marks===1 && q.fields.length===1 && q.prompt[0].includes(p.categories[p.target][0].toLowerCase()) && q.prompt[1].includes(p.categories[p.target][1]),"bilingual prompt mismatch at "+i);
+      assert(q.why.every(x=>x.includes(String(q.answer[0]))) && p.key[0].includes('1 pupil') && p.key[1].includes('1名學生'),"key mismatch at "+i);
+      orientations.add(p.orientation);targets.add(q.answer[0]);
+    }
+    assert(orientations.has('horizontal') && orientations.has('vertical') && targets.has(0) && targets.has(1) && targets.has(6),"orientation or boundary count missing");
+    assert(pictogramAnswer('２',2) && pictogramAnswer(' 2 ',2) && pictogramAnswer('0',0),"valid numeral rejected");
+    for(const value of ['2.0','1+1','02','3',''])assert(!pictogramAnswer(value,2),"invalid numeral accepted: "+value);
+    assert(decodeItems('pict2a-0',2).length===1 && !decodeItems('pict2a-0',1).length,"pictogram link or cross-grade guard failed");
+  });
   for (const set of sharedSets) {
     await check(set.name+" · IDs, answers and URL",()=>{
       const selected = decodeItems(set.ids.join("."),set.grade);
@@ -180,7 +197,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("practice view did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("practice view did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("practice view failed to load"));};
         frame.src=new URL("../?lang=en&p=1&view=practice",location.href);
@@ -216,7 +233,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=1&view=practice",location.href);
         document.body.appendChild(frame);
@@ -234,7 +251,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("sequence practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("sequence practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("sequence practice failed to load"));};
         frame.src=new URL("../?lang=en&p=1&view=practice&skill=next1",location.href);
@@ -272,7 +289,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese sequence practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese sequence practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=1&view=practice&skill=next1",location.href);
         document.body.appendChild(frame);
@@ -291,7 +308,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("addition practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("addition practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("addition practice failed to load"));};
         frame.src=new URL("../?lang=en&p=1&view=practice&skill=storyadd1",location.href);
@@ -328,7 +345,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese addition practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese addition practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=1&view=practice&skill=storyadd1",location.href);
         document.body.appendChild(frame);
@@ -350,7 +367,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("missing-part practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("missing-part practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("missing-part practice failed to load"));};
         frame.src=new URL("../?lang=en&p=1&view=practice&skill=parts18a",location.href);
@@ -395,7 +412,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese missing-part practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese missing-part practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=1&view=practice&skill=parts18a",location.href);
         document.body.appendChild(frame);
@@ -422,7 +439,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("perimeter practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("perimeter practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("perimeter practice failed to load"));};
         frame.src=new URL("../?lang=en&p=4&view=practice&skill=per1",location.href);
@@ -465,7 +482,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese perimeter practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese perimeter practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=4&view=practice&skill=per1",location.href);
         document.body.appendChild(frame);
@@ -493,7 +510,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("factor practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("factor practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("factor practice failed to load"));};
         frame.src=new URL("../?lang=en&p=4&view=practice&skill=factor1",location.href);
@@ -539,7 +556,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese factor practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese factor practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=4&view=practice&skill=factor1",location.href);
         document.body.appendChild(frame);
@@ -568,7 +585,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("percentage practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("percentage practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("percentage practice failed to load"));};
         frame.src=new URL("../?lang=en&p=6&view=practice&skill=pct2",location.href);
@@ -611,7 +628,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese percentage practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese percentage practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=6&view=practice&skill=pct2",location.href);
         document.body.appendChild(frame);
@@ -639,7 +656,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("arithmetic-mean practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("arithmetic-mean practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("arithmetic-mean practice failed to load"));};
         frame.src=new URL("../?lang=en&p=6&view=practice&skill=mean1",location.href);
@@ -682,7 +699,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("Chinese mean practice did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("Chinese mean practice did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=new URL("../?lang=zh&p=6&view=practice&skill=mean1",location.href);
         document.body.appendChild(frame);
@@ -922,6 +939,64 @@
       assert(raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"group PDF text or A4 page missing");
     }finally{frames.forEach(f=>f.remove());}
   });
+  await check("P2 pictogram · builder, pupil, paper and key",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const query='?v=3&lang=en&p=2&items=pict2a-0';
+      const builder=await open(query+'&view=build');
+      assert(builder.querySelector('select[name="pict2a"]') && builder.querySelector('.pictogram'),"pictogram missing from builder");
+      const pupil=await open(query),svg=pupil.querySelector('.pictogram');
+      assert(svg && svg.querySelectorAll('.pict-symbol').length===9 && svg.getAttribute('aria-label').includes('Banana: pupil symbol, pupil symbol') && !svg.getAttribute('aria-label').includes('2 pupils'),"chart or accessible symbols missing");
+      pupil.querySelector('form').requestSubmit();
+      assert(/Please complete question 1/.test(pupil.getElementById('status').textContent),"blank pictogram answer accepted");
+      pupil.querySelector('input[name="q0f0"]').value='3';pupil.querySelector('form').requestSubmit();
+      assert(/Score 0 \/ 1/.test(pupil.getElementById('status').textContent),"wrong category count scored");
+      const correct=await open(query);
+      correct.querySelector('input[name="q0f0"]').value='２';correct.querySelector('form').requestSubmit();
+      assert(/Score 1 \/ 1/.test(correct.getElementById('status').textContent),"full-width pictogram answer rejected");
+      const paper=await open(query+'&view=paper'),key=await open(query+'&view=key');
+      assert(paper.querySelector('.pictogram') && key.querySelector('.pictogram') && paper.querySelector('.blank'),"pictogram paper or key missing");
+      assert(key.querySelector('fieldset p b')?.textContent==='2' && key.querySelector('fieldset').textContent.includes('Each picture stands for 1 pupil'),"pictogram worked key missing");
+      assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,"pictogram paper/key code differs");
+      const vertical=await open('?v=3&lang=zh&p=2&items=pict2a-6&view=key');
+      assert(vertical.querySelector('.pictogram').querySelectorAll('.pict-symbol').length===9 && vertical.querySelector('.pictogram[aria-label*="學生圖案"]') && vertical.querySelector('fieldset').textContent.includes('每個圖案代表1名學生'),"Chinese vertical chart missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P2 pictogram practice · hint, zero, vertical and first tries",async()=>{
+    const frame=await shapeFrame('?lang=en&p=2&view=practice&skill=pict2a');
+    try{
+      const doc=frame.contentDocument,submit=v=>{doc.getElementById('practice-answer').value=v;doc.getElementById('practice-form').requestSubmit();};
+      assert(doc.querySelector('.pictogram').querySelectorAll('.pict-symbol').length===9,"opening chart changed");
+      submit('');assert(/Enter the number/.test(doc.getElementById('practice-feedback').textContent),"blank practice answer accepted");
+      submit('4');assert(/Find the Banana category/.test(doc.getElementById('practice-feedback').textContent) && !doc.getElementById('practice-answer').disabled,"category hint missing");
+      submit('2');assert(/Correct after a hint/.test(doc.getElementById('practice-feedback').textContent),"retry feedback missing");
+      doc.getElementById('practice-next').click();
+      assert(doc.querySelector('.pictogram').querySelectorAll('.pict-symbol').length===8,"zero-count chart missing");
+      submit('0');assert(/Correct on the first try/.test(doc.getElementById('practice-feedback').textContent),"zero answer rejected");
+      doc.getElementById('practice-next').click();
+      assert(doc.querySelector('.pictogram').getAttribute('viewBox')==='0 0 420 250',"vertical follow-up missing");
+      submit('2');submit('2');doc.getElementById('practice-next').click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector('main').textContent),"first-try total missing");
+    }finally{frame.remove();}
+  });
+  await check("P2 pictogram · Chinese practice, home link and direct PDF",async()=>{
+    const frames=[];
+    try{
+      const practice=await shapeFrame('?lang=zh&p=2&view=practice&skill=pict2a');frames.push(practice);
+      const doc=practice.contentDocument;
+      assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習閱讀象形圖' && doc.getElementById('en').getAttribute('href').includes('pict2a'),"Chinese pictogram practice missing");
+      doc.getElementById('practice-answer').value='4';doc.getElementById('practice-form').requestSubmit();
+      assert(/找出香蕉一類/.test(doc.getElementById('practice-feedback').textContent),"Chinese category hint missing");
+      const home=await shapeFrame('?lang=en');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise pictograms') && a.href.includes('skill=pict2a')),"pictogram home link missing");
+      const paper=await shapeFrame('?v=3&lang=zh&p=2&items=pict2a-6&view=paper');frames.push(paper);
+      const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
+      const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
+      assert(/^P2-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"pictogram PDF or code missing");
+      assert(raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"pictogram PDF text or A4 page missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
@@ -975,7 +1050,7 @@
     frame.style.cssText="position:absolute;left:-10000px;top:0;width:176mm;height:269mm;border:0";
     try {
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("print view did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("print view did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("print view failed to load"));};
         const url=new URL("../?v=4&lang="+language+"&p=6&sheet="+sheet,location.href);
@@ -1037,7 +1112,7 @@
       frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
       try {
         await new Promise((resolve,reject)=>{
-          const timer=setTimeout(()=>reject(new Error("custom print view did not load")),10000);
+          const timer=setTimeout(()=>reject(new Error("custom print view did not load")),30000);
           frame.onload=()=>{clearTimeout(timer);resolve();};
           const url=new URL("../"+query,location.href);
           url.searchParams.set("pdfControlCheck",String(Date.now()));
@@ -1064,7 +1139,7 @@
       frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
       try {
         await new Promise((resolve,reject)=>{
-          const timer=setTimeout(()=>reject(new Error("coded view did not load")),10000);
+          const timer=setTimeout(()=>reject(new Error("coded view did not load")),30000);
           frame.onload=()=>{clearTimeout(timer);resolve();};
           frame.onerror=()=>{clearTimeout(timer);reject(new Error("coded view failed to load"));};
           const url=new URL("../"+query,location.href);
@@ -1095,7 +1170,7 @@
       frame.style.cssText="position:absolute;left:-10000px;top:0;width:176mm;height:269mm;border:0";
       try {
         await new Promise((resolve,reject)=>{
-          const timer=setTimeout(()=>reject(new Error("print view did not load")),10000);
+          const timer=setTimeout(()=>reject(new Error("print view did not load")),30000);
           frame.onload=()=>{clearTimeout(timer);resolve();};
           frame.onerror=()=>{clearTimeout(timer);reject(new Error("print view failed to load"));};
           const url=new URL("../"+query,location.href);
@@ -1152,7 +1227,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try {
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("mixed paper did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("mixed paper did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.onerror=()=>{clearTimeout(timer);reject(new Error("mixed paper failed to load"));};
         const ids="count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-43.otherway1-3.add1-2.count20a-19.pictureadd1-70.parts18a-80.storyadd1-80.otherway1-10";

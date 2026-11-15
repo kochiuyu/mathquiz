@@ -11,6 +11,10 @@ function threeDigitAnswer(value,expected){
   const numeral=String(value).normalize("NFKC").trim();
   return /^[1-9][0-9]{2}$/.test(numeral) && Number(numeral)===expected;
 }
+function pictogramAnswer(value,expected){
+  const numeral=String(value).normalize("NFKC").trim();
+  return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
+}
 function equalGroupsAnswer(values,groups){
   if(values.length!==3)return false;
   const digits=values.map(v=>String(v).normalize("NFKC").trim());

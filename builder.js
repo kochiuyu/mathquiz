@@ -48,6 +48,18 @@ const families = [
     const addition=Array(boxes).fill(each).join(" + ");
     return {prompt:[`Each box has ${each} counters. There are ${boxes} boxes. Complete the multiplication sentence for all the counters.`,`每個盒子有${each}粒圓片，共有${boxes}個盒子。完成表示圓片總數的乘法算式。`],fields:[["",""],["",""],["",""]],answer:[boxes,each,total],marks:1,why:[`${addition} = ${total}, so ${boxes} × ${each} = ${total} or ${each} × ${boxes} = ${total}.`,`${addition} = ${total}，所以${boxes} × ${each} = ${total}或${each} × ${boxes} = ${total}。`],equalGroups:{boxes,each,total},figure:{kind:"equalGroups",boxes,each}};
   }},
+  {id:"pict2a",grade:2,code:"2D1",label:["Read a pictogram","閱讀象形圖"],count:12,make(i){
+    const charts=[
+      [[4,2,3],1],[[0,3,5],0],[[6,2,4],0],[[2,2,5],1],[[1,4,3],0],[[5,0,2],2],
+      [[3,1,5],1],[[2,6,4],1],[[0,4,2],0],[[5,5,1],2],[[4,2,6],2],[[1,3,0],0]
+    ];
+    const [counts,target]=charts[i],categories=[["Apple","蘋果"],["Banana","香蕉"],["Pear","梨"]],answer=counts[target];
+    const fruit=categories[target],orientation=i<6?"horizontal":"vertical";
+    return {prompt:[`How many pupils chose ${fruit[0].toLowerCase()}s?`,`有多少名學生選擇${fruit[1]}？`],fields:[["pupils","名學生"]],answer:[answer],marks:1,
+      why:[`${fruit[0]} has ${answer} pupil picture${answer===1?"":"s"}. Each picture stands for 1 pupil, so ${answer} pupil${answer===1?"":"s"} chose ${fruit[0].toLowerCase()}s.`,`${fruit[1]}一類有${answer}個學生圖案。每個圖案代表1名學生，所以有${answer}名學生選擇${fruit[1]}。`],
+      pictogram:{orientation,categories,counts,target,title:["Favourite fruit in our class","本班最喜愛的水果"],key:["Each pupil picture stands for 1 pupil.","每個學生圖案代表1名學生。"]},
+      figure:{kind:"pictogram",orientation,categories,counts,target,title:["Favourite fruit in our class","本班最喜愛的水果"],key:["Each pupil picture stands for 1 pupil.","每個學生圖案代表1名學生。"]}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
