@@ -237,6 +237,54 @@
     assert(codes[0]!==codes[2],"link version is absent from the code");
     assert(codes[0]!==codes[3],"question order is absent from the code");
   });
+  await check("Browser-print paper and key show the shared code",async()=>{
+    const cases=[
+      ["?v=3&lang=en&p=1&items=count20a-12.next1-10&view=paper","P1-V3-"],
+      ["?v=3&lang=zh&p=1&items=count20a-12.next1-10&view=key","P1-V3-"],
+      ["?v=3&lang=en&p=4&items=per1-0.factor1-0&view=key","P4-V3-"],
+      ["?v=3&lang=zh&p=6&items=pct2-0.mean1-0&view=paper","P6-V3-"]
+    ];
+    const codes=[];
+    for(const [query,prefix] of cases) {
+      const frame=document.createElement("iframe");
+      frame.style.cssText="position:absolute;left:-10000px;top:0;width:176mm;height:269mm;border:0";
+      try {
+        await new Promise((resolve,reject)=>{
+          const timer=setTimeout(()=>reject(new Error("print view did not load")),10000);
+          frame.onload=()=>{clearTimeout(timer);resolve();};
+          frame.onerror=()=>{clearTimeout(timer);reject(new Error("print view failed to load"));};
+          const url=new URL("../"+query,location.href);
+          url.searchParams.set("paperCodePrintCheck",String(Date.now()));
+          frame.src=url;
+          document.body.appendChild(frame);
+        });
+        const doc=frame.contentDocument;
+        const code=await frame.contentWindow.mathQuizPdf.codeReady;
+        const label=doc.querySelector("#paper-code");
+        assert(code && code.startsWith(prefix) && label?.textContent.includes(code),"print code is missing");
+        assert(label.closest("h2"),"print code is outside the paper heading");
+        codes.push(code);
+        await doc.fonts.ready;
+        const rules=[];
+        for(const sheet of doc.styleSheets)for(const rule of sheet.cssRules)
+          if(rule.type===frame.contentWindow.CSSRule.MEDIA_RULE && rule.conditionText.trim()==="print")
+            rules.push(...Array.from(rule.cssRules,inner=>inner.cssText));
+        assert(rules.length,"print styles are missing");
+        const style=doc.createElement("style");
+        style.textContent=rules.join("\n");
+        doc.head.appendChild(style);
+        const box=label.getBoundingClientRect();
+        assert(box.width>0 && box.left>=-1 && box.right<=doc.documentElement.clientWidth+1,
+          "printed code is clipped horizontally");
+        assert(frame.contentWindow.getComputedStyle(label).display!=="none","printed code is hidden");
+        assert(frame.contentWindow.getComputedStyle(doc.querySelector(".print-tools")).display==="none",
+          "print controls remain visible");
+      } finally {
+        frame.remove();
+      }
+    }
+    assert(codes[0]===codes[1],"paper and key print different codes");
+  });
   await check("12-question mixed Chinese PDF · A4 selectable text",async()=>{
     const frame=document.createElement("iframe");
     frame.setAttribute("aria-hidden","true");

@@ -17,6 +17,14 @@
     return "P"+grade+"-V"+version+"-"+short;
   }
 
+  async function showPaperCode() {
+    const target=document.getElementById("paper-code");
+    if(!target)return null;
+    const code=await paperCode();
+    target.textContent=(document.documentElement.lang.startsWith("zh")?"卷號 ":"Paper code ")+code;
+    return code;
+  }
+
   function waitForFrame(frame) {
     return new Promise((resolve,reject)=>{
       const timeout=setTimeout(()=>reject(new Error("The PDF view did not load.")),15000);
@@ -189,6 +197,7 @@
       await waitForFrame(frame);
       const doc=frame.contentDocument;
       if(!doc || !doc.querySelector("main form"))throw new Error("The PDF view is unavailable.");
+      await frame.contentWindow.mathQuizPdf.codeReady;
       await doc.fonts.ready;
       applyPrintStyles(doc);
       await rasterizeDiagrams(doc);
@@ -248,5 +257,6 @@
     }
   }
 
-  window.mathQuizPdf={generate,download,paperCode};
+  const codeReady=showPaperCode();
+  window.mathQuizPdf={generate,download,paperCode,codeReady};
 })();
