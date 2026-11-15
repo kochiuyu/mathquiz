@@ -1,6 +1,6 @@
 # P2 three-digit place-value family · item brief
 
-Status: **draft for implementation**. This family is not yet available in the builder or pupil site. Classroom and hands-on accessibility checking remain deferred at the user's request.
+Status: **live**. Twelve `place3a` variants are available in the P2 builder, pupil quiz, paper, worked key and [three-question practice](https://kochiuyu.github.io/mathquiz/?lang=en&p=2&view=practice&skill=place3a). Classroom and hands-on accessibility checking remain deferred at the user's request.
 
 ## Curriculum match
 
@@ -19,9 +19,11 @@ Status: **draft for implementation**. This family is not yet available in the bu
 
 Display three labelled columns in that order. One hundred plate represents 100, one ten rod represents 10, and one unit square or cube represents 1. Give a small bilingual legend beside the diagram; keep the symbolic blocks visibly different in size, not only colour. Use the same drawn block counts in online quiz, paper, worked key and practice. A zero column shows an explicit empty space or “0” count under that column, so the absence is visible. Do not display the target numeral beside the pupil diagram.
 
+**Released variants:** Permanent IDs `place3a-0` through `place3a-11` encode the values 304, 230, 500, 426, 242, 100, 999, 507, 680, 909, 115 and 370 in that order. Each record stores the digit counts, the answer and bilingual worked steps. Existing item IDs are unchanged.
+
 **Parameter bounds:** The hundreds digit is 1–9; tens and ones digits are 0–9. The target is always 100–999, with no more than nine blocks of any type. Include zero tens (for example 304), zero ones (for example 230), both zeros (for example 500), and nonzero digits throughout (for example 426). Also include a repeated-digit case (for example 242) so a pupil must attend to column value. Do not generate a tenth rod or ten unit blocks; exchanging ten of one kind for one of the next is teaching context, not the answer to this first task. Avoid using an unlabelled pile whose pieces overlap or become hard to count.
 
-**Item record:** Store the three digits or counts and the target value together, with a permanent item ID once variants are chosen. Build the diagram and worked key from those counts, and freeze the released records so an old share link reproduces its original question. Do not reuse or change existing IDs. The first released family should contain distinct digit patterns rather than many cosmetic variants of one number.
+**Item record:** The question stores the three digit counts and target value together. The diagram and worked key derive from those counts, and released item IDs are frozen so old share links reproduce their original question.
 
 ## Marking, access and release checks
 
@@ -29,6 +31,8 @@ Display three labelled columns in that order. One hundred plate represents 100, 
 - **Paper and key:** leave room for one three-digit response. The key gives the count in each column and the composition, for example `3 × 100 + 0 × 10 + 4 = 304`. The worked text must match the blocks and the displayed answer.
 - **Practice:** start with a zero-column item, give one targeted hint after a wrong first answer, allow one retry, then show the composition. Follow-ups should use different digit patterns and values; count first-try success separately.
 - **Keyboard and screen reader:** label the answer field and each column. Give a text alternative with block counts (“3 hundred plates, 0 ten rods, 4 unit cubes”) but no completed numeral; the pupil should still make the place-value decision. Preserve visible keyboard focus and readable grayscale A4 diagrams.
-- **Automated release checks:** enumerate every permanent ID; compare counts, diagram, target, key and bilingual prompt; test zero tens, zero ones, both zeros, repeated digits, 100 and 999 if those bounds are released; check accepted and rejected formats, blank submission, practice hint/retry, phone width, paper/key layout and old links. Classroom and hands-on screen-reader checks are deferred and must not be marked complete.
+- **Automated release checks:** enumerate every permanent ID; compare counts, diagram, target, key and bilingual prompt; test zero tens, zero ones, both zeros, repeated digits, 100 and 999 if those bounds are released; check accepted and rejected formats, blank submission, practice hint/retry, phone width, paper/key layout and old links. The local and public browser regression runners passed **62/62** checks, including every P2 variant, builder, pupil marking, paper, key, practice, Chinese text, direct PDF and older links. The local Chinese PDF was one A4 page with a selectable text layer; the 375-pixel phone paper had no horizontal overflow. Classroom and hands-on screen-reader checks are deferred and must not be marked complete.
 
 **Scope limit:** This picture-to-numeral family does not directly assess counting forwards/backwards, odd/even, comparison symbols, group counting, estimation, or exchanging physical blocks. The worked composition supports understanding; a single correct numeral does not prove a pupil can explain the value of the hundreds digit.
+
+[Release commit](https://github.com/kochiuyu/mathquiz/commit/00ca9feb26a366889b2ea66d113cc208803ad305).
