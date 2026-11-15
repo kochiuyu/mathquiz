@@ -77,6 +77,18 @@ const families = [
       why:[`There are ${parts} equal parts and ${shaded} ${shaded===1?"is":"are"} shaded. The fraction shown is ${shaded}/${parts}. ${note[0]}`,`共有${parts}個等分，其中${shaded}個塗了顏色。圖中的分數是${shaded}/${parts}。${note[1]}`],
       fractionBar:fraction,figure:{kind:"fractionBar",...fraction}};
   }},
+  {id:"cup3a",grade:3,code:"3M3",label:["Read a measuring cup","讀取量杯刻度"],count:12,make(i){
+    const amounts=[50,100,150,250,350,500,100,200,300,500,700,1000];
+    const max=i<6?500:1000,step=i<6?50:100,major=step*2,amount=amounts[i];
+    const lower=Math.floor(amount/major)*major,upper=lower===amount?amount:lower+major;
+    const reading=lower===amount
+      ?[`The water line meets the ${amount} mL mark.`,`水面對着${amount} mL的刻度。`]
+      :[`The labelled marks are ${lower} and ${upper} mL. The water line meets the tick halfway between them, so it shows ${amount} mL.`,`有數字的刻度是${lower}和${upper} mL。水面對着中間刻度，所以讀數是${amount} mL。`];
+    const cup={max,step,major,amount};
+    return {prompt:["How much water is in the measuring cup? Read the scale and write the number. The unit mL is printed for you.","量杯裏有多少水？讀取刻度，寫出數字。單位 mL 已印在旁邊。"],
+      fields:[["mL","mL"]],answer:[amount],marks:1,why:reading,
+      measuringCup:cup,figure:{kind:"measuringCup",...cup}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);

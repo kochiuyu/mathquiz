@@ -34,3 +34,7 @@ function fractionBarAnswer(values,fraction){
   if(!digits.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)))return false;
   return Number(digits[0])===fraction.shaded && Number(digits[1])===fraction.parts;
 }
+function measuringCupAnswer(value,expected){
+  const numeral=String(value).normalize("NFKC").trim();
+  return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
+}

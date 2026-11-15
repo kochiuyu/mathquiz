@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a and frac3a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a and cup3a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -22,7 +22,8 @@
     ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"],
     ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"],
     ["share2a",2,12,"49c221cb465ec7651156d6423c5473a5f2717dcbbfe7c9dde2ad69707145f0a5"],
-    ["frac3a",3,12,"b982b6c4eafc70ccdbbf03a93badc41d5c2e510d46d6ef6516093a214fba4bca"]
+    ["frac3a",3,12,"b982b6c4eafc70ccdbbf03a93badc41d5c2e510d46d6ef6516093a214fba4bca"],
+    ["cup3a",3,12,"5ac30486d8d127f49b72ee37ea92c57a5fe3853d623a22353f1a8eb5547a736b"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -79,7 +80,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===440,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===452,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -198,6 +199,24 @@
     for(const pair of [['','4'],['1',''],['1.0','4'],['1','2+2'],['01','4'],['4','1'],['2','4']])assert(!fractionBarAnswer(pair,first),"invalid fraction accepted: "+pair);
     assert(!fractionBarAnswer(['1','2'],reducible),"equivalent form with different pictured counts scored");
     assert(decodeItems('frac3a-0',3).length===1 && !decodeItems('frac3a-0',2).length,"P3 link or cross-grade guard failed");
+  });
+  await check("P3 measuring cups · graduations, readings and numeral rule",()=>{
+    const family=families.find(f=>f.id==='cup3a');
+    assert(family && family.grade===3 && family.code==='3M3' && family.count===12,"measuring-cup metadata changed");
+    const readings=new Set();
+    for(let i=0;i<12;i++){
+      const q=family.make(i),c=q.measuringCup;
+      assert(c.max===(i<6?500:1000) && c.step===(i<6?50:100) && c.major===2*c.step,"cup scale changed at "+i);
+      assert(c.amount>0 && c.amount<=c.max && c.amount%c.step===0,"water line misses a tick at "+i);
+      assert(q.figure.kind==='measuringCup' && q.figure.amount===c.amount && q.answer[0]===c.amount && q.fields[0][0]==='mL',"cup diagram/answer disagreement at "+i);
+      assert(q.prompt[0].includes('mL') && q.prompt[1].includes('量杯') && q.why.every(x=>x.includes(c.amount+" mL")),"bilingual cup text missing at "+i);
+      assert(measuringCupAnswer(String(c.amount),c.amount),"correct cup reading rejected at "+i);
+      readings.add(c.max+':'+c.amount);
+    }
+    assert(readings.size===12 && family.make(3).answer[0]===250 && family.make(5).answer[0]===500 && family.make(11).answer[0]===1000,"cup cases missing");
+    assert(measuringCupAnswer('２５０',250) && measuringCupAnswer(' 250 ',250),"valid cup numeral rejected");
+    for(const value of ['','250 mL','250.0','500/2','0250','200'])assert(!measuringCupAnswer(value,250),"invalid cup numeral accepted: "+value);
+    assert(decodeItems('cup3a-0',3).length===1 && !decodeItems('cup3a-0',2).length,"cup link or cross-grade guard failed");
   });
   for (const set of sharedSets) {
     await check(set.name+" · IDs, answers and URL",()=>{
@@ -1167,6 +1186,63 @@
       assert(/^P3-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"P3 fraction PDF or code missing");
       const pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
       assert(raw.includes('/ToUnicode') && pages>=1 && pages<=2,"P3 fraction PDF text or A4 pages missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P3 measuring cups · builder, pupil, paper and key",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const query='?v=3&lang=en&p=3&items=cup3a-3.cup3a-8';
+      const builder=await open(query+'&view=build');
+      assert(builder.querySelector('select[name="cup3a"]') && builder.querySelectorAll('.measuring-cup').length===2,"cup family missing from builder");
+      const pupil=await open(query),cups=[...pupil.querySelectorAll('.measuring-cup')];
+      assert(cups.length===2 && cups[0].querySelectorAll('text').length>=7 && cups[1].querySelectorAll('text').length>=7,"cup scale labels missing");
+      assert(cups[0].getAttribute('aria-label').includes('tick number') && !cups[0].getAttribute('aria-label').includes('250 mL'),"cup accessible scale reveals answer");
+      assert(pupil.querySelector('input[name="q0f0"]')?.getAttribute('aria-label')==='Amount of water in millilitres',"cup field label missing");
+      pupil.querySelector('form').requestSubmit();assert(/Please complete question 1/.test(pupil.getElementById('status').textContent),"blank cup answer accepted");
+      pupil.querySelector('input[name="q0f0"]').value='250';pupil.querySelector('input[name="q1f0"]').value='３００';pupil.querySelector('form').requestSubmit();
+      assert(/Score 2 \/ 2/.test(pupil.getElementById('status').textContent),"cup readings did not score");
+      const wrong=await open('?v=3&lang=en&p=3&items=cup3a-3');wrong.querySelector('input[name="q0f0"]').value='250 mL';wrong.querySelector('form').requestSubmit();
+      assert(/Score 0 \/ 1/.test(wrong.getElementById('status').textContent),"typed unit scored");
+      const paper=await open(query+'&view=paper'),key=await open(query+'&view=key');
+      assert(paper.querySelectorAll('.measuring-cup').length===2 && paper.querySelectorAll('.measuring-response .blank').length===2,"cup paper blank missing");
+      assert(key.querySelectorAll('fieldset')[0].querySelector('p b')?.textContent==='250 mL' && key.querySelectorAll('fieldset')[1].querySelector('p b')?.textContent==='300 mL',"cup worked key missing");
+      assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,"cup paper/key code differs");
+      const chinese=await open('?v=3&lang=zh&p=3&items=cup3a-5.cup3a-11&view=key');
+      assert(chinese.querySelectorAll('fieldset')[0].textContent.includes('500 mL') && chinese.querySelectorAll('fieldset')[1].textContent.includes('1000 mL') && chinese.querySelector('.measuring-cup[aria-label*="量杯"]'),"Chinese full-scale cup key missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P3 measuring-cup practice · hint, retry and first tries",async()=>{
+    const frame=await shapeFrame('?lang=en&p=3&view=practice&skill=cup3a');
+    try{
+      const doc=frame.contentDocument,submit=value=>{doc.getElementById('practice-answer').value=value;doc.getElementById('practice-form').requestSubmit();};
+      assert(doc.querySelector('.measuring-cup') && doc.querySelector('h1').textContent==='Practise reading a measuring cup',"cup practice missing");
+      submit('');assert(/Write the water amount/.test(doc.getElementById('practice-feedback').textContent),"blank cup used attempt");
+      submit('300');assert(/Count each equally spaced tick/.test(doc.getElementById('practice-feedback').textContent) && !doc.getElementById('practice-answer').disabled,"cup hint blocked retry");
+      submit('250');assert(/Correct after a hint/.test(doc.getElementById('practice-feedback').textContent),"cup worked retry missing");
+      doc.getElementById('practice-next').click();assert(doc.querySelector('.measuring-cup').getAttribute('aria-label').includes('500'),"cup first follow-up missing");
+      submit('１００');assert(/Correct on the first try/.test(doc.getElementById('practice-feedback').textContent),"full-width cup practice rejected");
+      doc.getElementById('practice-next').click();assert(doc.querySelector('.measuring-cup').getAttribute('aria-label').includes('1000'),"cup second follow-up missing");
+      submit('300');doc.getElementById('practice-next').click();
+      assert(/Correct on the first try: 2 \/ 3/.test(doc.querySelector('main').textContent),"cup first tries not separate");
+    }finally{frame.remove();}
+  });
+  await check("P3 measuring cups · Chinese practice, home link and PDF",async()=>{
+    const frames=[];
+    try{
+      const practice=await shapeFrame('?lang=zh&p=3&view=practice&skill=cup3a');frames.push(practice);
+      const doc=practice.contentDocument;
+      assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習讀取量杯刻度' && doc.getElementById('en').getAttribute('href').includes('cup3a'),"Chinese cup practice missing");
+      doc.getElementById('practice-answer').value='300';doc.getElementById('practice-form').requestSubmit();
+      assert(/從有數字的刻度開始/.test(doc.getElementById('practice-feedback').textContent),"Chinese cup hint missing");
+      const home=await shapeFrame('?lang=en');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise measuring cups') && a.href.includes('skill=cup3a')),"cup home link missing");
+      const paper=await shapeFrame('?v=3&lang=zh&p=3&items=cup3a-3.cup3a-8&view=paper');frames.push(paper);
+      paper.style.width='360px';assert(paper.contentDocument.documentElement.scrollWidth<=360,"cup phone paper overflows");
+      const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
+      const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer()),pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
+      assert(/^P3-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"cup PDF or code missing");
+      assert(raw.includes('/ToUnicode') && pages>=1 && pages<=2,"cup PDF text or A4 pages missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P1 counting practice is linked from the home page",async()=>{
