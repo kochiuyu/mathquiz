@@ -86,6 +86,59 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
+function renderPercentagePractice(){
+  const family=families.find(f=>f.id==="pct2");
+  const pool=Array.from({length:family.count},(_,i)=>i).filter(i=>i!==7);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const variants=[7,...pool.slice(0,2)];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=6&view=practice&skill=pct2";
+  document.title=t("Percentages · Practice | MathQuiz","百分比 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])
+    document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    const [total,part]=q.prompt[0].match(/\d+/g).map(Number);
+    const answer=q.answer[0];
+    const explanation=t("Divide the part by the whole, then multiply by 100: "+part+" ÷ "+total+" × 100 = "+answer+"%.","用部分除以整體，再乘100："+part+" ÷ "+total+" × 100 = "+answer+"%。");
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise percentages","練習百分比")+'</h1><p>'+t("Find what percentage of the group chose badminton. Try three questions at your own pace.","求出選擇羽毛球的學生佔全組的百分之幾，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend><label class="field"><input id="practice-answer" type="text" inputmode="decimal" autocomplete="off" aria-label="'+t("Percentage of pupils","學生百分比")+'"> %</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const input=document.getElementById("practice-answer");
+      const value=input.value.trim();
+      const feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Enter the percentage.","請輸入百分比。");input.focus();return;}
+      attempts++;
+      const correct=numericAnswer(value,answer,false);
+      if(attempts===1 && correct)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=correct
+          ?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。")+explanation
+          :t("The answer is ","答案是 ")+answer+"%. "+explanation;
+        input.disabled=true;
+        e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        feedback.textContent=numericAnswer(value,part,false)
+          ?t("That is the number of pupils who chose badminton. To find a percentage, divide by "+total+" and multiply by 100.","這是選擇羽毛球的學生人數。求百分比要除以"+total+"，再乘100。")
+          :numericAnswer(value,part/total,false)
+            ?t("That is the proportion as a decimal. Multiply it by 100 to give a percentage.","這是小數形式的比例。再乘100，便得到百分比。")
+            :numericAnswer(value,total,false)
+              ?t("That is the whole group. Use the part, "+part+", divided by the whole, "+total+", then multiply by 100.","這是整體人數。用部分的"+part+"人除以整體的"+total+"人，再乘100。")
+              :!Number.isFinite(Number(value.normalize("NFKC")))
+                ?t("Enter a number only; % is already shown beside the answer box.","只需輸入數字；答案欄旁已顯示%。")
+                :t("Start with part ÷ whole: "+part+" ÷ "+total+". Then multiply by 100.","先計算部分除以整體："+part+" ÷ "+total+"，再乘100。");
+        input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t("You can try another set of percentage questions.","你可以再做一組百分比題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 function renderFactorPractice(){
   const family=families.find(f=>f.id==="factor1");
   const pool=Array.from({length:family.count-1},(_,i)=>i+1);
@@ -232,6 +285,8 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
+}else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
+  renderPercentagePractice();
 }else if(grade===4 && view==="practice" && params.get("skill")==="factor1"){
   renderFactorPractice();
 }else if((grade===1 || (grade===4 && params.get("skill")==="per1")) && view==="practice"){
@@ -244,12 +299,13 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, counting forwards, addition or missing parts, or P4 perimeter and factors. Get a hint and try again.","選擇小一點算、順數、加法、找出另一部分，或小四周界和因數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting and addition skills, P4 perimeter and factors, or P6 percentages. Get a hint and try again.","選擇小一點算術、小四周界和因數，或小六百分比練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=per1">'+t("Practise perimeter","練習周界")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=factor1">'+t("Practise factors","練習因數")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=pct2">'+t("Practise percentages","練習百分比")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

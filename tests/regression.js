@@ -512,6 +512,77 @@
         "Chinese worked factor pair missing");
     }finally{frame.remove();}
   });
+  await check("P6 percentage practice · pupil-count hint, worked step and follow-ups",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("percentage practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("percentage practice failed to load"));};
+        frame.src=new URL("../?lang=en&p=6&view=practice&skill=pct2",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const prompt=()=>doc.querySelector("legend").textContent.trim();
+      const submit=value=>{doc.getElementById("practice-answer").value=value;doc.getElementById("practice-form").requestSubmit();};
+      const seen=new Set([prompt()]);
+      assert(prompt().includes("Of 40 pupils, 12 chose badminton"),"opening percentage question changed");
+      submit("");
+      assert(/Enter the percentage/.test(doc.getElementById("practice-feedback").textContent),
+        "blank percentage answer was accepted");
+      submit("12");
+      assert(/number of pupils/.test(doc.getElementById("practice-feedback").textContent) &&
+        !doc.getElementById("practice-answer").disabled,"pupil-count hint blocked retry");
+      submit("30");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /12 ÷ 40 × 100 = 30%/.test(doc.getElementById("practice-feedback").textContent),
+        "percentage worked step missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"second percentage question repeated");seen.add(prompt());
+      const [total,part]=prompt().match(/\d+/g).map(Number);
+      submit(String(Math.round(part/total*100))+".0");
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),
+        "P6 numeric marking changed");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"third percentage question repeated");
+      submit("0");submit("0");
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),
+        "percentage answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),
+        "percentage first tries were not counted separately");
+      assert(doc.querySelector('main a[href*="skill=pct2"]'),"repeat link loses percentage skill");
+    }finally{frame.remove();}
+  });
+  await check("P6 percentage practice · Chinese decimal-proportion hint",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese percentage practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=6&view=practice&skill=pct2",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習百分比",
+        "Chinese percentage title missing");
+      assert(doc.querySelector("legend").textContent.includes("40名學生中有12人"),
+        "Chinese percentage prompt missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("p=6&view=practice&skill=pct2"),
+        "language switch loses percentage skill");
+      doc.getElementById("practice-answer").value="0.3";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/小數形式的比例/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese proportion hint missing");
+      doc.getElementById("practice-answer").value="30";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent) &&
+        /12 ÷ 40 × 100 = 30%/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese worked percentage step missing");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
@@ -546,6 +617,10 @@
         .find(a=>a.textContent.includes("Practise factors"));
       assert(factors && factors.href.includes("p=4") && factors.href.includes("skill=factor1"),
         "home factor entry missing");
+      const percentages=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise percentages"));
+      assert(percentages && percentages.href.includes("p=6") && percentages.href.includes("skill=pct2"),
+        "home percentage entry missing");
     }finally{frame.remove();}
   });
   async function checkPrintLayout(language,sheet) {
