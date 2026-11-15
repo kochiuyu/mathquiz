@@ -63,7 +63,7 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 
 | EDB objectives | Learning unit | Proposed quiz task |
 |---|---|---|
-| [2N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=25) | 3-digit numbers | Represent a number with hundreds, tens and ones |
+| [2N1 objectives 1–2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=24) | 3-digit numbers | [Read hundreds, tens and ones blocks as a three-digit numeral](p2-three-digit-place-value.md) |
 | [2N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=26) | Addition and subtraction (II) | Calculate a sum and check it |
 | [2N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28) | Basic multiplication | Write a product for equal groups |
 | [2N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=30) | 4-digit numbers | Read a four-digit numeral |
@@ -78,6 +78,10 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 | [2S4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=45) | Quadrilaterals (I) | Identify a rectangle |
 | [2D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) | Pictograms | Read a count from a picture graph |
 | [2F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=48) | Inquiry and investigation | Describe a second way to group objects |
+
+#### Planned P2 place-value family
+
+Source check: **15 November 2026**. The [2017 EDB supplement, 2N1 objectives 1–2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=24) and [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=25) support reading a three-digit number from hundred plates, ten rods and unit blocks. The [bilingual item brief](p2-three-digit-place-value.md) defines zero-place examples, the answer rule and release checks. This is planned work, not a live family or a claim of full 2N1 coverage.
 
 ### Primary 3
 
