@@ -87,9 +87,9 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N1 objectives 1â€
 
 Source check: **15 November 2026**. The [2017 EDB supplement, 2N3 objectives 1 and 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=27) and [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28) support a pictured equal-groups multiplication sentence and repeated-addition explanation. The [bilingual item brief](p2-equal-groups.md) accepts either order of the two pictured factors and defines answer, practice and release checks. Sixteen `groups2a` variants are live. They cover pictured equal-group sentences, not the full 2N3 unit or pupil mastery.
 
-#### Planned P2 pictogram family
+#### Live P2 pictogram family
 
-Source check: **15 November 2026**. The [2017 EDB supplement, 2D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=40) covers interpreting pictograms. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) require one-to-one symbols and horizontal and vertical forms. The [bilingual item brief](p2-pictograms.md) proposes a bounded picture-count question, answer rule, accessible chart and release checks. This family is **planned, not live**; it does not assess construction or the whole 2D1 unit.
+Source check: **15 November 2026**. The [2017 EDB supplement, 2D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=40) covers interpreting pictograms. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) require one-to-one symbols and horizontal and vertical forms. The [bilingual item brief](p2-pictograms.md) records the released picture-count question, answer rule, accessible chart and release checks. Twelve `pict2a` variants are live. They do not assess construction or the whole 2D1 unit.
 
 ### Primary 3
 
