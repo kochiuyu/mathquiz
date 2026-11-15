@@ -1670,9 +1670,9 @@
     assert(decodeItems("volume5a-0",5).length===1 && !decodeItems("volume5a-0",3).length,"volume link guard failed");
   });
   await check("P5 area and volume · bilingual paper, key, practice and PDF",async()=>{
-    const frames=[];
+    const frames=[];let run=0;
     try{
-      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const open=async query=>{const f=await shapeFrame(query+"&regressionRun="+Date.now()+"-"+(++run));frames.push(f);return f.contentDocument;};
       const builder=await open("?v=3&lang=en&p=5&view=build");
       assert(builder.querySelector('select[name="triarea5a"]') && builder.querySelector('select[name="volume5a"]'),"P5 measure builder choices missing");
       const query="?v=3&lang=zh&p=5&items=triarea5a-0.volume5a-0";
