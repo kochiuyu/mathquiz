@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, 352 legacy variants, and corrected pct2 variants.
+// Baseline from released v1 questions, legacy variants, corrected pct2, and triangle1.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -16,7 +16,8 @@
     ["factor1",4,12,"9e9a57b5731a52b4fd6bc7f36acd725669d22f690b6aef6df0692a3001c84bd0"],
     ["pct1",6,15,"b44b70e6ead240f97995e1e49c3d8149b19dc16a4646c9f3488366803b068efa"],
     ["pct2",6,15,"ba21d27c40ec9c4406e8bccb7cc887ac52bab3a994080c44f3eae22168948a95"],
-    ["mean1",6,16,"b36e21806e2994332fb4ee7161529652dfbab4d61db021619d2314dba34071d5"]
+    ["mean1",6,16,"b36e21806e2994332fb4ee7161529652dfbab4d61db021619d2314dba34071d5"],
+    ["triangle1",1,9,"ef63e3281f937f151ad0e4bb64171801b845ceefaa574f0d397ae9a395fffe18"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -73,7 +74,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===367,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===376,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -90,6 +91,21 @@
     assert(legacy.retired && legacy.code==="6N3" && !current.retired && current.code==="6N4","P6 family labels changed");
     assert(families.filter(f=>f.grade===6 && !f.retired).map(f=>f.id).join(",")==="pct2,mean1","new P6 builder selection changed");
     for(let i=0;i<15;i++)assert(stable(legacy.make(i))===stable(current.make(i)),"percentage mathematics changed at "+i);
+  });
+  await check("P1 triangle family · unique three-sided answer and varied orientation",()=>{
+    const family=families.find(f=>f.id==="triangle1");
+    assert(family && family.grade===1 && family.code==="1S2" && family.count===9,"triangle family metadata changed");
+    const rotations=new Set(),positions=new Set();
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i);
+      assert(q.choices.join("")==="ABC" && q.shapes.length===3,"shape choices missing");
+      const triangles=q.shapes.map((s,j)=>s.kind==="triangle"?j:-1).filter(j=>j>=0);
+      assert(triangles.length===1 && q.answer.join("")===q.choices[triangles[0]],"ambiguous triangle answer at "+i);
+      assert(new Set(q.shapes.map(s=>s.kind)).size===3,"shape distractors repeat at "+i);
+      assert(q.prompt[0].includes("triangle") && q.prompt[1].includes("三角形") && q.why.every(x=>x.includes(q.answer[0])),"bilingual item mismatch at "+i);
+      rotations.add(q.shapes[triangles[0]].rotation);positions.add(triangles[0]);
+    }
+    assert(rotations.size>=5 && rotations.has(0) && positions.size===3,"orientation or answer position lacks variety");
   });
   for (const set of sharedSets) {
     await check(set.name+" · IDs, answers and URL",()=>{
@@ -654,6 +670,86 @@
         "Chinese worked mean step missing");
     }finally{frame.remove();}
   });
+  async function shapeFrame(query){
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    await new Promise((resolve,reject)=>{
+      const timer=setTimeout(()=>reject(new Error("shape view did not load")),30000);
+      frame.onload=()=>{clearTimeout(timer);resolve();};
+      frame.onerror=()=>{clearTimeout(timer);reject(new Error("shape view failed to load"));};
+      frame.src=new URL("../"+query,location.href);
+      document.body.appendChild(frame);
+    });
+    return frame;
+  }
+  await check("P1 triangle · builder, pupil marking, paper and key",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const query="?v=3&lang=en&p=1&items=triangle1-1";
+      const builder=await open(query+"&view=build");
+      assert(builder.querySelector('select[name="triangle1"]') && builder.querySelectorAll('.shape-options svg').length===3,
+        "triangle family missing from builder preview");
+      const pupil=await open(query);
+      assert(pupil.querySelectorAll('.shape-options input[type="radio"]').length===3,"pupil choices missing");
+      assert([...pupil.querySelectorAll('.shape-options svg')].every(x=>!x.getAttribute("aria-label").includes("triangle")),
+        "accessible drawing names the answer");
+      pupil.querySelector('form').requestSubmit();
+      assert(/Please complete question 1/.test(pupil.getElementById("status").textContent),"blank shape was accepted");
+      pupil.querySelector('input[value="B"]').checked=true;pupil.querySelector('form').requestSubmit();
+      assert(/Score 1 \/ 1/.test(pupil.getElementById("status").textContent),"triangle answer did not score");
+      const paper=await open(query+"&view=paper");
+      const key=await open(query+"&view=key");
+      assert(paper.querySelectorAll('.shape-options svg').length===3 && key.querySelectorAll('.shape-options svg').length===3,
+        "paper and key do not show the same shapes");
+      assert(key.querySelector('fieldset p b')?.textContent==="B" && key.querySelector('fieldset').textContent.includes("three straight sides"),
+        "worked key missing triangle answer");
+      assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,
+        "shape paper and key codes differ");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P1 triangle practice · hint, retry, distinct follow-ups",async()=>{
+    const frame=await shapeFrame("?lang=en&p=1&view=practice&skill=triangle1");
+    try{
+      const doc=frame.contentDocument,seen=new Set();
+      const signature=()=>[...doc.querySelectorAll('.shape-options svg')].map(x=>x.outerHTML).join("");
+      const submit=letter=>{if(letter)doc.querySelector('input[value="'+letter+'"]').checked=true;doc.getElementById("practice-form").requestSubmit();};
+      seen.add(signature());
+      submit();
+      assert(/Choose one shape/.test(doc.getElementById("practice-feedback").textContent),"blank shape used an attempt");
+      submit("C");
+      assert(/four straight sides/.test(doc.getElementById("practice-feedback").textContent) && !doc.querySelector('input[value="B"]').disabled,
+        "four-side hint blocked retry");
+      submit("B");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /three straight sides/.test(doc.getElementById("practice-feedback").textContent),"worked shape feedback missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(signature()),"second shape repeated");seen.add(signature());
+      const letter=doc.querySelector('.shape-option svg[aria-label*="three straight sides"]').parentElement.querySelector('input').value;
+      submit(letter);
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),"first-try shape success missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(signature()),"third shape repeated");
+      const wrong=doc.querySelector('.shape-option svg[aria-label*="four straight sides"]').parentElement.querySelector('input').value;
+      submit(wrong);submit(wrong);
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),"shape worked answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector('main').textContent),"shape first tries not separate");
+    }finally{frame.remove();}
+  });
+  await check("P1 triangle practice · Chinese curved-outline hint",async()=>{
+    const frame=await shapeFrame("?lang=zh&p=1&view=practice&skill=triangle1");
+    try{
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector('h1').textContent==="練習辨認三角形","Chinese shape title missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("skill=triangle1"),"language link loses shape skill");
+      doc.querySelector('input[value="A"]').checked=true;doc.getElementById("practice-form").requestSubmit();
+      assert(/彎曲的/.test(doc.getElementById("practice-feedback").textContent),"Chinese curved hint missing");
+      doc.querySelector('input[value="B"]').checked=true;doc.getElementById("practice-form").requestSubmit();
+      assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent) &&
+        /三條直邊/.test(doc.getElementById("practice-feedback").textContent),"Chinese worked shape step missing");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
@@ -663,7 +759,7 @@
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     try{
       await new Promise((resolve,reject)=>{
-        const timer=setTimeout(()=>reject(new Error("home page did not load")),10000);
+        const timer=setTimeout(()=>reject(new Error("home page did not load")),30000);
         frame.onload=()=>{clearTimeout(timer);resolve();};
         frame.src=home;
         document.body.appendChild(frame);
@@ -680,6 +776,9 @@
       const missingPart=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise missing parts"));
       assert(missingPart && missingPart.href.includes("skill=parts18a"),"home missing-part entry missing");
+      const triangles=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise triangles"));
+      assert(triangles && triangles.href.includes("skill=triangle1"),"home triangle entry missing");
       const perimeter=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise perimeter"));
       assert(perimeter && perimeter.href.includes("p=4") && perimeter.href.includes("skill=per1"),
