@@ -124,6 +124,57 @@
       assert(!numericAnswer(input,11,true),"v3 P1 should reject "+input);
     assert(numericAnswer("22/2",11,false),"P4/P6 legacy numeric rule changed");
   });
+  async function checkPrintLayout(language,sheet) {
+    const frame=document.createElement("iframe");
+    frame.setAttribute("aria-hidden","true");
+    frame.style.cssText="position:absolute;left:-10000px;top:0;width:176mm;height:269mm;border:0";
+    try {
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("print view did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("print view failed to load"));};
+        const url=new URL("../?v=4&lang="+language+"&p=6&sheet="+sheet,location.href);
+        url.searchParams.set("layoutCheck",String(Date.now()));
+        frame.src=url;
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc && doc.querySelector("main"),"print view did not render");
+      await doc.fonts.ready;
+      const printRules=[];
+      let hasA4=false;
+      for(const styleSheet of doc.styleSheets) {
+        for(const rule of styleSheet.cssRules) {
+          if(rule.type===frame.contentWindow.CSSRule.PAGE_RULE && /size:\s*a4/i.test(rule.cssText))hasA4=true;
+          if(rule.type===frame.contentWindow.CSSRule.MEDIA_RULE && rule.conditionText.trim()==="print")
+            printRules.push(...Array.from(rule.cssRules,inner=>inner.cssText));
+        }
+      }
+      assert(hasA4 && printRules.length,"A4 print styles are missing");
+      const printStyle=doc.createElement("style");
+      printStyle.textContent=printRules.join("\n");
+      doc.head.appendChild(printStyle);
+      const fields=Array.from(doc.querySelectorAll("fieldset"));
+      assert(fields.length===3,"expected three printed questions");
+      assert(fields.map(field=>field.textContent.match(/6(?:N4|M4|D1)/)?.[0]).join(",")==="6N4,6M4,6D1",
+        "printed curriculum labels changed");
+      assert(frame.contentWindow.getComputedStyle(doc.querySelector(".print-tools")).display==="none",
+        "print controls remain visible");
+      const page=doc.documentElement;
+      assert(page.scrollWidth<=page.clientWidth+1,"content exceeds A4 printable width");
+      assert(page.scrollHeight<=page.clientHeight+1,"content exceeds one A4 printable page");
+      const last=fields[fields.length-1].getBoundingClientRect();
+      assert(last.bottom<=page.clientHeight+1,"last question is clipped");
+      for(const field of fields) {
+        const box=field.getBoundingClientRect();
+        assert(box.left>=-1 && box.right<=page.clientWidth+1,"a question exceeds the printable width");
+      }
+    } finally {
+      frame.remove();
+    }
+  }
+  for(const language of ["en","zh"])for(const sheet of ["paper","key"])
+    await check("P6 "+language+" "+sheet+" · A4 print layout",()=>checkPrintLayout(language,sheet));
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
