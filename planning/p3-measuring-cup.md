@@ -1,6 +1,6 @@
 # P3 reading a measuring cup · item brief
 
-Status: **brief drafted 15 November 2026; family not yet implemented.** Manual pupil and hands-on screen-reader checks are deferred at the user's request.
+Status: **live since 15 November 2026** as `cup3a`. The twelve permanent variants, one-field marking rule, paper, key and practice follow this brief. Manual pupil and hands-on screen-reader checks remain deferred.
 
 ## Curriculum match
 
@@ -8,7 +8,7 @@ Status: **brief drafted 15 November 2026; family not yet implemented.** Manual p
 - The [2018 Key Stage 1 explanatory notes, 3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) specifically discuss reading a measuring cup with the sightline near the water level. They also state that `1000 mL = 1 L`, and put decimal recording in P4. The first family therefore uses whole millilitres and avoids decimal readings or unit conversion.
 - **Interpretation and limit:** The question asks for the amount of water at a marked line, not the maximum capacity of a partly filled container. Reading a drawn scale does not establish skill with a physical measuring tool, eye-level positioning, estimating, comparing containers, converting units, or the full 3M3 unit. The curriculum match is this project's interpretation of EDB sources, not EDB approval or evidence of pupil mastery.
 
-## Proposed item
+## Released item
 
 Show an upright transparent measuring cup with a horizontal water level exactly aligned to a graduation. Label the scale `mL` and print the unit after the response blank. The prompt asks for the amount of water shown. Avoid a perspective drawing or curved water surface that could make the reading ambiguous.
 
@@ -21,7 +21,7 @@ Show an upright transparent measuring cup with a horizontal water level exactly 
 
 **Diagram and access contract:** The cup outline, water fill, water line and tick marks must remain distinct in grayscale. Major graduation numbers sit next to their ticks; intermediate ticks are shorter but legible on a 360-pixel phone and A4 paper. The water line touches the scale at one exact tick. Provide a concise accessible description of the cup, the labelled marks and the water-line position without giving the answer; use the same description in the pupil quiz, paper and practice where available. Label the response “Amount of water in millilitres” / “水量（毫升）”, with `mL` visibly outside the input. Paper, key and practice derive from the same permanent item record.
 
-**Proposed variants:** Twelve stable `cup3a-0` through `cup3a-11` records. Six use a 500 mL scale, labelled every 100 mL with 50 mL intermediate ticks, with water at 50, 100, 150, 250, 350 or 500 mL. Six use a 1000 mL scale, labelled every 200 mL with 100 mL intermediate ticks, with water at 100, 200, 300, 500, 700 or 1000 mL. Include both labelled and intermediate readings, and two full-scale readings. Keep the level at a tick, not between ticks. Each record stores the scale maximum, graduation step, labelled interval, water amount and bilingual prompt/key data; old IDs and links remain unchanged.
+**Released variants:** Twelve stable `cup3a-0` through `cup3a-11` records. Six use a 500 mL scale, labelled every 100 mL with 50 mL intermediate ticks, with water at 50, 100, 150, 250, 350 or 500 mL. Six use a 1000 mL scale, labelled every 200 mL with 100 mL intermediate ticks, with water at 100, 200, 300, 500, 700 or 1000 mL. Include both labelled and intermediate readings, and two full-scale readings. Keep the level at a tick, not between ticks. Each record stores the scale maximum, graduation step, labelled interval, water amount and bilingual prompt/key data; old IDs and links remain unchanged.
 
 ## Marking, practice and release checks
 

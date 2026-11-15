@@ -1317,6 +1317,20 @@
       assert(raw.includes('/ToUnicode') && pages>=1 && pages<=2,"bar PDF text or A4 pages missing");
     }finally{frames.forEach(f=>f.remove());}
   });
+  await check("P3 mixed pack · fraction, capacity and chart on one paper",async()=>{
+    const frames=[];
+    try{
+      const query='?v=3&lang=zh&p=3&items=frac3a-0.cup3a-3.bar3a-0';
+      const paper=await shapeFrame(query+'&view=paper');frames.push(paper);
+      const key=await shapeFrame(query+'&view=key');frames.push(key);
+      assert(paper.contentDocument.querySelectorAll('fieldset').length===3 && paper.contentDocument.querySelector('.fraction-bar') && paper.contentDocument.querySelector('.measuring-cup') && paper.contentDocument.querySelector('.bar-chart'),"mixed P3 paper missing a family");
+      assert(key.contentDocument.querySelectorAll('fieldset').length===3 && key.contentDocument.querySelectorAll('fieldset')[1].textContent.includes('250 mL') && key.contentDocument.querySelectorAll('fieldset')[2].textContent.includes('8 名學生'),"mixed P3 key missing worked answers");
+      assert(paper.contentDocument.querySelector('.paper-code')?.textContent===key.contentDocument.querySelector('.paper-code')?.textContent,"mixed P3 paper and key codes differ");
+      paper.style.width='360px';assert(paper.contentDocument.documentElement.scrollWidth<=360,"mixed P3 phone paper overflows");
+      const blob=await paper.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer()),pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
+      assert(raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && pages>=1 && pages<=3,"mixed P3 A4/PDF or selectable text missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));

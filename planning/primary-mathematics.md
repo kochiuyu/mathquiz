@@ -111,16 +111,20 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1�
 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | Read a mass from a scale |
 | [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | Classify a pictured quadrilateral |
 | [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | Sort triangles by their properties |
-| [3D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=68) | Bar charts (I) | Read a bar height |
+| [3D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=57) | Bar charts (I) | [Read a named bar on a chart with a scale of 1, 2 or 5](p3-bar-charts.md) |
 | [3F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=69) | Inquiry and investigation | Explain a numerical pattern |
 
 #### Live P3 shaded-fraction family
 
 Source check: **15 November 2026**. [EDB 3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) covers fractions as parts of one whole object or a set. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=54) emphasise equal parts and reading and writing numerator and denominator, with fractions no greater than 1. The [bilingual item brief](p3-shaded-fractions.md) records the released shaded rectangular-whole task, including zero and full cases. Twelve `frac3a` variants are live. They do not cover fractions of a set or the full 3N5 unit; manual pupil and hands-on screen-reader checks are deferred.
 
-#### Planned P3 measuring-cup family
+#### Live P3 measuring-cup family
 
-Source check: **15 November 2026**. [EDB 3M3 objectives 6–7](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) cover measuring and comparing capacities in litres and millilitres and recording with an appropriate unit. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) discuss reading marks on a measuring cup at the water level. The [bilingual item brief](p3-measuring-cup.md) proposes twelve whole-millilitre scale readings from a pictured cup. It does not assess physical measurement, comparison or the full 3M3 unit. This family is not yet implemented; manual pupil and hands-on screen-reader checks are deferred.
+Source check: **15 November 2026**. [EDB 3M3 objectives 6–7](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) cover measuring and comparing capacities in litres and millilitres and recording with an appropriate unit. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) discuss reading marks on a measuring cup at the water level. The [bilingual item brief](p3-measuring-cup.md) records twelve released whole-millilitre scale readings from a pictured cup. Twelve `cup3a` variants are live. They do not assess physical measurement, comparison or the full 3M3 unit; manual pupil and hands-on screen-reader checks are deferred.
+
+#### Live P3 bar-chart family
+
+Source check: **15 November 2026**. [EDB 3D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=57) covers interpreting bar charts. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=68) require horizontal and vertical forms with one-to-one, one-to-two or one-to-five scales. The [bilingual item brief](p3-bar-charts.md) records twelve released named-bar readings with those scales and orientations. Twelve `bar3a` variants are live. They do not assess constructing charts or the full 3D1 unit; manual pupil and hands-on screen-reader checks are deferred.
 
 ### Primary 4
 
