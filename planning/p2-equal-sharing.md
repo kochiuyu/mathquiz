@@ -1,6 +1,6 @@
 # P2 equal-sharing division family · item brief
 
-Status: **draft, not live**. This brief defines a bilingual equal-sharing family for the next implementation step. Manual pupil and hands-on screen-reader checks remain deferred at the user's request.
+Status: **live since 15 November 2026** as `share2a`. The twelve permanent variants, two-field marking rule, paper, key and practice follow this brief. The local and public browser regression suites passed 77/77. Manual pupil and hands-on screen-reader checks remain deferred at the user's request.
 
 ## Curriculum match
 
@@ -8,7 +8,7 @@ Status: **draft, not live**. This brief defines a bilingual equal-sharing family
 - The [2018 Key Stage 1 explanatory notes, 2N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) distinguish sharing from grouping and require examples **with and without remainders**. They recommend concrete distribution situations, diagrams and symbols, within the 0–10 multiplication table. The [2017 supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) explicitly includes remainders. This first family must include both outcomes and keep each remainder smaller than the number of recipients.
 - **Prerequisites:** P1 counting and P2 equal-groups multiplication (2N3) for checking (divisor × quotient + remainder = dividend). This is a project interpretation of EDB sources, not EDB approval or evidence of pupil mastery.
 
-## Proposed item
+## Released item
 
 Use a familiar sharing situation and separate the quotient and remainder into two response fields. The first example has 12 counters and 3 children. A second example has 13 counters and 4 children.
 
@@ -22,7 +22,7 @@ Use a familiar sharing situation and separate the quotient and remainder into tw
 
 **Diagram contract:** Show the entire starting set as countable counters and exactly the stated number of empty, labelled trays or child positions. Do not pre-fill trays in the pupil diagram: that would disclose the quotient. Paper, key and practice use the same starting set and tray count. The worked key may add an after-sharing diagram with equal filled trays and a separate remainder. Distinguish trays by borders and position, not colour alone. A text alternative states the starting count and number of empty trays without the quotient or remainder. Keep diagram, prompt and two answer fields together on A4.
 
-**Variant plan:** Freeze permanent IDs before release. Begin with 12 deterministic variants, including 12 ÷ 3 = 4 remainder 0 and 13 ÷ 4 = 3 remainder 1. Use 2–5 recipients, quotients 2–6 and a remainder from 0 up to one less than the divisor; keep totals within 4–30 and use only multiplication facts within the 0–10 table. Include at least four exact-division and four remainder cases, remainders of 1 and greater than 1, different divisors, and a case where a child count could be confused with the answer. Each record stores dividend, divisor, quotient, remainder, bilingual prompt, worked step and diagram parameters; all views derive from that record. Existing IDs and shared links must remain unchanged.
+**Released variants:** `share2a-0` through `share2a-11` are deterministic, beginning with 12 ÷ 3 = 4 remainder 0 and 13 ÷ 4 = 3 remainder 1. They use 2–5 recipients, quotients 2–6, totals 10–24 and remainders smaller than the divisor. Five cases divide exactly and seven leave a remainder, including 1, 2 and 3. Each record stores the total, recipient count, quotient, remainder, bilingual prompt, worked step and diagram parameters; all views derive from that record. Existing IDs and shared links remain unchanged.
 
 ## Marking, access and release checks
 

@@ -91,9 +91,9 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N3 objectives 1 a
 
 Source check: **15 November 2026**. The [2017 EDB supplement, 2D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=40) covers interpreting pictograms. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) require one-to-one symbols and horizontal and vertical forms. The [bilingual item brief](p2-pictograms.md) records the released picture-count question, answer rule, accessible chart and release checks. Twelve `pict2a` variants are live. They do not assess construction or the whole 2D1 unit.
 
-#### Planned P2 equal-sharing division family
+#### Live P2 equal-sharing division family
 
-Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1–2 and 4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) covers the basic division concept, calculation and problems. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) describe equal sharing and require cases with and without remainders. The [bilingual item brief](p2-equal-sharing.md) proposes a bounded pictured-sharing task, two-field answer rule, worked key, access and release checks. The family is **planned, not live**; it does not cover grouping or the full 2N6 unit.
+Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1–2 and 4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) covers the basic division concept, calculation and problems. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) describe equal sharing and require cases with and without remainders. The [bilingual item brief](p2-equal-sharing.md) records the released pictured-sharing task, two-field answer rule, worked key, access and release checks. Twelve `share2a` variants are live. They do not cover grouping or the full 2N6 unit; manual pupil and hands-on screen-reader checks are deferred.
 
 ### Primary 3
 
