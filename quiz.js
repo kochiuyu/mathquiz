@@ -86,6 +86,55 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
+function renderFactorPractice(){
+  const family=families.find(f=>f.id==="factor1");
+  const pool=Array.from({length:family.count-1},(_,i)=>i+1);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const variants=[0,...pool.slice(0,2)];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=4&view=practice&skill=factor1";
+  document.title=t("Factors · Practice | MathQuiz","因數 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])
+    document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    const target=Number(local(q.prompt).match(/\d+/)[0]);
+    const worked=q.answer.map(factor=>factor+" × "+(target/Number(factor))+" = "+target).join("; ");
+    const explanation=t("The selected factors divide "+target+" exactly: "+worked+".","選出的因數可以整除"+target+"："+worked+"。");
+    const choices=q.choices.map(choice=>'<label class="option"><input type="checkbox" name="factor" value="'+choice+'"> '+choice+'</label>').join("");
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise identifying factors","練習辨認因數")+'</h1><p>'+t("Select every listed factor. Try three questions at your own pace.","選出列出的所有因數，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+choices+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const selected=Array.from(e.currentTarget.querySelectorAll('input[name="factor"]:checked'),input=>input.value);
+      const feedback=document.getElementById("practice-feedback");
+      if(!selected.length){feedback.textContent=t("Select at least one number.","請最少選出一個數。") ;e.currentTarget.querySelector('input[name="factor"]').focus();return;}
+      attempts++;
+      const correct=selected.length===q.answer.length && selected.every(value=>q.answer.includes(value));
+      if(attempts===1 && correct)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=correct
+          ?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。")+explanation
+          :t("The factors in this list are ","這列數中的因數是 ")+q.answer.join(t(" and ","和"))+". "+explanation;
+        e.currentTarget.querySelectorAll('input[name="factor"]').forEach(input=>input.disabled=true);
+        e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const extra=selected.find(value=>!q.answer.includes(value));
+        const missing=q.answer.find(value=>!selected.includes(value));
+        feedback.textContent=extra
+          ?t(extra+" is not a factor of "+target+". Try dividing "+target+" by "+extra+"; a factor leaves no remainder. Try again.",extra+"不是"+target+"的因數。試用"+target+"除以"+extra+"；因數能整除而沒有餘數。再試一次。")
+          :missing?t("You found a factor, but there is another one in the list. Check which other number divides "+target+" exactly.","你找出了一個因數，但列中還有另一個。看看哪個數也能整除"+target+"。")
+          :t("Check each selected number by dividing "+target+" by it.","用"+target+"逐一除以選出的數，檢查答案。");
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.querySelector('input[name="factor"]').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t("You can try another set of factor questions.","你可以再做一組因數題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 function renderPractice(){
   const sequence=params.get("skill")==="next1";
   const addition=params.get("skill")==="storyadd1";
@@ -183,6 +232,8 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
+}else if(grade===4 && view==="practice" && params.get("skill")==="factor1"){
+  renderFactorPractice();
 }else if((grade===1 || (grade===4 && params.get("skill")==="per1")) && view==="practice"){
   renderPractice();
 }else if(!grade){
@@ -193,11 +244,12 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, counting forwards, addition or missing parts, or P4 perimeter. Get a hint and try again.","選擇小一點算、順數、加法、找出另一部分，或小四周界練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, counting forwards, addition or missing parts, or P4 perimeter and factors. Get a hint and try again.","選擇小一點算、順數、加法、找出另一部分，或小四周界和因數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=per1">'+t("Practise perimeter","練習周界")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=factor1">'+t("Practise factors","練習因數")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

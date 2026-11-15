@@ -437,6 +437,81 @@
         "Chinese worked step missing");
     }finally{frame.remove();}
   });
+  await check("P4 factor practice · missing factor, worked pairs and follow-ups",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("factor practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("factor practice failed to load"));};
+        frame.src=new URL("../?lang=en&p=4&view=practice&skill=factor1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const prompt=()=>doc.querySelector("legend").textContent.trim();
+      const boxes=()=>Array.from(doc.querySelectorAll('input[name="factor"]'));
+      const submit=()=>doc.getElementById("practice-form").requestSubmit();
+      const seen=new Set([prompt()]);
+      assert(prompt()==="Select every factor of 12 in the list.","opening factor question changed");
+      assert(boxes().map(input=>input.value).join(",")==="2,3,5,7","opening factor choices changed");
+      submit();
+      assert(/Select at least one/.test(doc.getElementById("practice-feedback").textContent),
+        "blank factor selection was accepted");
+      boxes()[0].checked=true;submit();
+      assert(/another one in the list/.test(doc.getElementById("practice-feedback").textContent) &&
+        !boxes()[0].disabled,"missing-factor hint blocked retry");
+      boxes()[1].checked=true;submit();
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /2 × 6 = 12; 3 × 4 = 12/.test(doc.getElementById("practice-feedback").textContent),
+        "factor worked pairs missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"second factor question repeated");seen.add(prompt());
+      const target=Number(prompt().match(/\d+/)[0]);
+      boxes().filter(input=>target%Number(input.value)===0).forEach(input=>input.checked=true);
+      submit();
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),
+        "first-try factor success missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"third factor question repeated");
+      boxes()[0].checked=true;submit();submit();
+      assert(/The factors in this list are/.test(doc.getElementById("practice-feedback").textContent),
+        "factor answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),
+        "factor first tries were not counted separately");
+      assert(doc.querySelector('main a[href*="skill=factor1"]'),"repeat link loses factor skill");
+    }finally{frame.remove();}
+  });
+  await check("P4 factor practice · Chinese nonfactor hint",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese factor practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=4&view=practice&skill=factor1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習辨認因數",
+        "Chinese factor title missing");
+      assert(doc.querySelector("legend").textContent.includes("12的因數"),"Chinese factor prompt missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("p=4&view=practice&skill=factor1"),
+        "language switch loses factor skill");
+      const boxes=Array.from(doc.querySelectorAll('input[name="factor"]'));
+      boxes.find(input=>input.value==="5").checked=true;
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/5不是12的因數/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese nonfactor hint missing");
+      boxes.find(input=>input.value==="5").checked=false;
+      boxes.filter(input=>["2","3"].includes(input.value)).forEach(input=>input.checked=true);
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent) &&
+        /2 × 6 = 12/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese worked factor pair missing");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
@@ -467,6 +542,10 @@
         .find(a=>a.textContent.includes("Practise perimeter"));
       assert(perimeter && perimeter.href.includes("p=4") && perimeter.href.includes("skill=per1"),
         "home perimeter entry missing");
+      const factors=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise factors"));
+      assert(factors && factors.href.includes("p=4") && factors.href.includes("skill=factor1"),
+        "home factor entry missing");
     }finally{frame.remove();}
   });
   async function checkPrintLayout(language,sheet) {
