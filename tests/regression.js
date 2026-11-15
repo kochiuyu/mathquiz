@@ -235,6 +235,65 @@
       assert(/順數一個/.test(doc.getElementById("practice-feedback").textContent),"Chinese sequence hint missing");
     }finally{frame.remove();}
   });
+  await check("P1 addition practice · one-group hint, worked step and follow-ups",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("addition practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("addition practice failed to load"));};
+        frame.src=new URL("../?lang=en&p=1&view=practice&skill=storyadd1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const prompt=()=>doc.querySelector("legend").textContent.trim();
+      const answer=()=>doc.querySelectorAll(".figure circle").length;
+      const submit=value=>{doc.getElementById("practice-answer").value=value;doc.getElementById("practice-form").requestSubmit();};
+      const seen=new Set([prompt()]);
+      assert(prompt().includes("4 red counters") && prompt().includes("5 blue counters") && answer()===9,
+        "opening addition story changed");
+      submit("4");
+      assert(/only one group/.test(doc.getElementById("practice-feedback").textContent),"one-group misconception hint missing");
+      assert(!doc.getElementById("practice-answer").disabled,"hint blocked retry");
+      submit("9");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /4 \+ 5 = 9/.test(doc.getElementById("practice-feedback").textContent),"addition worked step missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"second addition story repeated");seen.add(prompt());
+      submit(String(answer()));
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),"first-try addition success missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"third addition story repeated");
+      submit("0");submit("0");
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),"addition answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),"first tries were not counted separately");
+      assert(doc.querySelector('main a[href*="skill=storyadd1"]'),"repeat link loses addition skill");
+    }finally{frame.remove();}
+  });
+  await check("P1 addition practice · Chinese hint and numeric format",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese addition practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=1&view=practice&skill=storyadd1",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習加法情境題","Chinese addition title missing");
+      assert(doc.querySelector("legend").textContent.includes("4粒紅色圓片"),"Chinese addition prompt missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("skill=storyadd1"),"language switch loses addition skill");
+      doc.getElementById("practice-answer").value="9.0";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/只用數字輸入整數/.test(doc.getElementById("practice-feedback").textContent),"numeric-format hint missing");
+      doc.getElementById("practice-answer").value="９";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent),"full-width correct numeral rejected");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const response=await fetch(new URL("../?lang=en",location.href));
     assert(response.ok,"home page unavailable");
@@ -253,6 +312,9 @@
       const sequences=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise counting forwards"));
       assert(sequences && sequences.href.includes("skill=next1"),"home sequence entry missing");
+      const addition=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise addition"));
+      assert(addition && addition.href.includes("skill=storyadd1"),"home addition entry missing");
     }finally{frame.remove();}
   });
   async function checkPrintLayout(language,sheet) {
