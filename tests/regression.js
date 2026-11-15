@@ -194,7 +194,9 @@
         await new Promise((resolve,reject)=>{
           const timer=setTimeout(()=>reject(new Error("custom print view did not load")),10000);
           frame.onload=()=>{clearTimeout(timer);resolve();};
-          frame.src=new URL("../"+query,location.href);
+          const url=new URL("../"+query,location.href);
+          url.searchParams.set("pdfControlCheck",String(Date.now()));
+          frame.src=url;
           document.body.appendChild(frame);
         });
         assert(frame.contentDocument.querySelector("#download-pdf"),"edited set has no PDF control");
