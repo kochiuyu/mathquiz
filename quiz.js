@@ -89,33 +89,38 @@ function mark(form) {
 function renderPractice(){
   const sequence=params.get("skill")==="next1";
   const addition=params.get("skill")==="storyadd1";
-  const family=families.find(f=>f.id===(sequence?"next1":addition?"storyadd1":"count20a"));
-  const first=sequence?6:addition?39:10;
-  const pool=(sequence?Array.from({length:12},(_,i)=>i):addition?Array.from({length:81},(_,i)=>i):Array.from({length:15},(_,i)=>i+5)).filter(i=>i!==first);
+  const missingPart=params.get("skill")==="parts18a";
+  const family=families.find(f=>f.id===(sequence?"next1":addition?"storyadd1":missingPart?"parts18a":"count20a"));
+  const first=sequence?6:addition?39:missingPart?58:10;
+  const pool=(sequence?Array.from({length:12},(_,i)=>i):addition||missingPart?Array.from({length:81},(_,i)=>i):Array.from({length:15},(_,i)=>i+5)).filter(i=>i!==first);
   for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[first,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
-  const practiceUrl=language=>"?lang="+language+"&p=1&view=practice"+(sequence?"&skill=next1":addition?"&skill=storyadd1":"");
-  document.title=sequence?t("Counting forwards · Practice | MathQuiz","順數 · 練習 | MathQuiz"):addition?t("Addition stories · Practice | MathQuiz","加法情境題 · 練習 | MathQuiz"):t("Count pictured counters · Practice | MathQuiz","點算圖中圓片 · 練習 | MathQuiz");
+  const practiceUrl=language=>"?lang="+language+"&p=1&view=practice"+(sequence?"&skill=next1":addition?"&skill=storyadd1":missingPart?"&skill=parts18a":"");
+  document.title=sequence?t("Counting forwards · Practice | MathQuiz","順數 · 練習 | MathQuiz"):addition?t("Addition stories · Practice | MathQuiz","加法情境題 · 練習 | MathQuiz"):missingPart?t("Find the other part · Practice | MathQuiz","找出另一部分 · 練習 | MathQuiz"):t("Count pictured counters · Practice | MathQuiz","點算圖中圓片 · 練習 | MathQuiz");
   for(const language of ["en","zh"])
     document.getElementById(language).href=practiceUrl(language);
   function show(){
     const q=family.make(variants[position]);
     const count=q.answer[0],rows=Math.floor(count/5),extra=count%5;
     const groupA=q.figure?.a,groupB=q.figure?.b;
+    const whole=q.figure?.total,known=q.figure?.known;
     const explanation=sequence
       ?t("The last number is "+(count-1)+". Count one more: "+(count-1)+" + 1 = "+count+".","最後一個數是"+(count-1)+"。再順數一個："+(count-1)+" + 1 = "+count+"。")
       :addition?t("Combine "+groupA+" red and "+groupB+" blue counters: "+groupA+" + "+groupB+" = "+count+".","把"+groupA+"粒紅色圓片和"+groupB+"粒藍色圓片合起來："+groupA+" + "+groupB+" = "+count+"。")
+      :missingPart?t("Take the known part from the whole: "+whole+" - "+known+" = "+count+". Check: "+known+" + "+count+" = "+whole+".","從整體減去已知部分："+whole+" - "+known+" = "+count+"。檢查："+known+" + "+count+" = "+whole+"。")
       :t("Count "+rows+" complete "+(rows===1?"row":"rows")+" of five ("+(rows*5)+")"+(extra?" and "+extra+" more":"")+". Total: "+count+".","數出"+rows+"行完整的五粒圓片（"+(rows*5)+"粒）"+(extra?"，再加"+extra+"粒":"")+"，共有"+count+"粒。");
     const prompt=sequence?local(q.prompt).replace("___",'<input id="practice-answer" class="inline-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Next number","下一個數")+'">'):local(q.prompt);
-    const answerField=sequence?"":'<label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(addition?"Total number of counters":"Number of counters",addition?"圓片總數":"圓片數量")+'"> '+local(q.fields[0])+'</label>';
-    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t(sequence?"Practise counting forwards":addition?"Practise addition stories":"Practise counting counters",sequence?"練習順數":addition?"練習加法情境題":"練習點算圓片")+'</h1><p>'+t(sequence?"Find the next number in each sequence. Try three questions at your own pace.":addition?"Combine the two groups of counters. Try three questions at your own pace.":"Count each counter once. Try three questions at your own pace.",sequence?"找出每組順數題的下一個數，按自己的步伐完成三題。":addition?"把兩組圓片合起來，按自己的步伐完成三題。":"每粒圓片只數一次，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+prompt+'</legend>'+figure(q.figure)+answerField+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const answerField=sequence?"":'<label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(addition?"Total number of counters":missingPart?"Counters in the other part":"Number of counters",addition?"圓片總數":missingPart?"另一部分的圓片數量":"圓片數量")+'"> '+local(q.fields[0])+'</label>';
+    const heading=t(sequence?"Practise counting forwards":addition?"Practise addition stories":missingPart?"Practise finding the other part":"Practise counting counters",sequence?"練習順數":addition?"練習加法情境題":missingPart?"練習找出另一部分":"練習點算圓片");
+    const intro=t(sequence?"Find the next number in each sequence. Try three questions at your own pace.":addition?"Combine the two groups of counters. Try three questions at your own pace.":missingPart?"Find the missing part of each whole. Try three questions at your own pace.":"Count each counter once. Try three questions at your own pace.",sequence?"找出每組順數題的下一個數，按自己的步伐完成三題。":addition?"把兩組圓片合起來，按自己的步伐完成三題。":missingPart?"找出每個整體中缺少的部分，按自己的步伐完成三題。":"每粒圓片只數一次，按自己的步伐完成三題。");
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+heading+'</h1><p>'+intro+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+prompt+'</legend>'+figure(q.figure)+answerField+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
     document.getElementById("practice-form").onsubmit=e=>{
       e.preventDefault();
       const input=document.getElementById("practice-answer");
       const value=input.value.trim();
       const feedback=document.getElementById("practice-feedback");
-      if(!value){feedback.textContent=t(sequence?"Enter the next number.":addition?"Enter the total number of counters.":"Enter the number of counters.",sequence?"請輸入下一個數。":addition?"請輸入圓片總數。":"請輸入圓片的數量。");input.focus();return;}
+      if(!value){feedback.textContent=t(sequence?"Enter the next number.":addition?"Enter the total number of counters.":missingPart?"Enter the number of counters in the other part.":"Enter the number of counters.",sequence?"請輸入下一個數。":addition?"請輸入圓片總數。":missingPart?"請輸入另一部分的圓片數量。":"請輸入圓片的數量。");input.focus();return;}
       attempts++;
       const correct=numericAnswer(value,q.answer[0],true);
       if(attempts===1 && correct)firstTry++;
@@ -135,14 +140,21 @@ function renderPractice(){
             :Math.abs(entered-count)===1
               ?t("You are one counter away. Start with the red group and count each blue counter once.","只差一粒圓片。先數紅色的一組，再逐一數藍色圓片。")
               :t("Add the red and blue groups together. Count on from the red group, one blue counter at a time.","把紅色和藍色兩組合起來。從紅色圓片數起，再逐一數藍色圓片。");
-        feedback.textContent=sequence?t("Not yet. Look at the last number and count on one. Try again.","再試一次：看看最後一個數，再順數一個。"):addition?additionHint:t("Not yet. Count each full row of five, then the counters in the last row. Try again.","再試一次：先數每行五粒的完整行，再數最後一行的圓片。");
+        const missingPartHint=!/^\d+$/.test(normalized)
+          ?t("Enter a whole-number numeral using digits only, then find the other part.","請只用數字輸入整數，再找出另一部分。")
+          :entered===whole || entered===known
+            ?t("That is the whole or the part already shown. Count on from "+known+" to "+whole+"; how many counters did you add? Try again.","這是整體或已顯示的部分。從"+known+"數到"+whole+"，加了多少粒圓片？再試一次。")
+            :Math.abs(entered-count)===1
+              ?t("You are one counter away. Count on from "+known+" to "+whole+" one step at a time. Try again.","只差一粒圓片。從"+known+"逐一數到"+whole+"，再試一次。")
+              :t("Start at the known part, "+known+". Count on until you reach the whole, "+whole+". How many did you add?", "從已知的"+known+"粒數起，數到整體的"+whole+"粒。加了多少粒？");
+        feedback.textContent=sequence?t("Not yet. Look at the last number and count on one. Try again.","再試一次：看看最後一個數，再順數一個。"):addition?additionHint:missingPart?missingPartHint:t("Not yet. Count each full row of five, then the counters in the last row. Try again.","再試一次：先數每行五粒的完整行，再數最後一行的圓片。");
         input.select();
       }
     };
     document.getElementById("practice-next").onclick=()=>{
       position++;attempts=0;
       if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
-      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t(sequence?"You can try another set of counting-forwards questions.":addition?"You can try another set of addition stories.":"You can try another set of counting questions.",sequence?"你可以再做一組順數題。":addition?"你可以再做一組加法情境題。":"你可以再做一組點算題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t(sequence?"You can try another set of counting-forwards questions.":addition?"You can try another set of addition stories.":missingPart?"You can try another set of missing-part questions.":"You can try another set of counting questions.",sequence?"你可以再做一組順數題。":addition?"你可以再做一組加法情境題。":missingPart?"你可以再做一組找出另一部分的題目。":"你可以再做一組點算題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
     };
   }
   show();
@@ -170,9 +182,10 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, counting forwards or addition. Get a hint and try again.","選擇小一點算、順數或加法練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, counting forwards, addition or missing parts. Get a hint and try again.","選擇小一點算、順數、加法或找出另一部分的練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

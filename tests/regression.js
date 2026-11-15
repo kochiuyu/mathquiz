@@ -294,6 +294,78 @@
       assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent),"full-width correct numeral rejected");
     }finally{frame.remove();}
   });
+  await check("P1 missing-part practice · targeted hint, worked step and follow-ups",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("missing-part practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("missing-part practice failed to load"));};
+        frame.src=new URL("../?lang=en&p=1&view=practice&skill=parts18a",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const prompt=()=>doc.querySelector("legend").textContent.trim();
+      const submit=value=>{doc.getElementById("practice-answer").value=value;doc.getElementById("practice-form").requestSubmit();};
+      const seen=new Set([prompt()]);
+      assert(prompt().includes("whole has 12 counters") && prompt().includes("part has 5 counters"),
+        "opening missing-part question changed");
+      assert(doc.querySelector(".figure")?.getAttribute("aria-label").includes("other part unknown"),
+        "missing-part diagram is absent");
+      submit("");
+      assert(/Enter the number of counters in the other part/.test(doc.getElementById("practice-feedback").textContent),
+        "blank missing-part answer was accepted");
+      submit("12");
+      assert(/whole or the part already shown/.test(doc.getElementById("practice-feedback").textContent) &&
+        !doc.getElementById("practice-answer").disabled,"whole/part misconception hint missing");
+      submit("7");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) &&
+        /12 - 5 = 7/.test(doc.getElementById("practice-feedback").textContent),"missing-part worked step missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"second missing-part question repeated");seen.add(prompt());
+      const numbers=prompt().match(/\d+/g).map(Number);
+      submit(String(numbers[0]-numbers[1]));
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),
+        "first-try missing-part success missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(prompt()),"third missing-part question repeated");
+      submit("0");submit("0");
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),
+        "missing-part answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),
+        "missing-part first tries were not counted separately");
+      assert(doc.querySelector('main a[href*="skill=parts18a"]'),"repeat link loses missing-part skill");
+    }finally{frame.remove();}
+  });
+  await check("P1 missing-part practice · Chinese hint and numeral",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese missing-part practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=1&view=practice&skill=parts18a",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習找出另一部分",
+        "Chinese missing-part title missing");
+      assert(doc.querySelector("legend").textContent.includes("整體有12粒圓片"),"Chinese missing-part prompt missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("skill=parts18a"),
+        "language switch loses missing-part skill");
+      doc.getElementById("practice-answer").value="5";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/已顯示的部分/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese known-part hint missing");
+      doc.getElementById("practice-answer").value="７";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/看提示後答對/.test(doc.getElementById("practice-feedback").textContent) &&
+        /12 - 5 = 7/.test(doc.getElementById("practice-feedback").textContent),
+        "Chinese worked step or full-width numeral failed");
+    }finally{frame.remove();}
+  });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
@@ -317,6 +389,9 @@
       const addition=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise addition"));
       assert(addition && addition.href.includes("skill=storyadd1"),"home addition entry missing");
+      const missingPart=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise missing parts"));
+      assert(missingPart && missingPart.href.includes("skill=parts18a"),"home missing-part entry missing");
     }finally{frame.remove();}
   });
   async function checkPrintLayout(language,sheet) {
