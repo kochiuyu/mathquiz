@@ -1,15 +1,19 @@
 const params = new URLSearchParams(location.search);
 const grade = [1,4,6].find(n => String(n) === params.get("p"));
+const fixedP6V4=grade===6 && params.get("v")==="4" && !params.has("items");
+const legacyFixedP6=grade===6 && (params.get("v")==="1" || !params.has("v"));
+const invalidV4=params.get("v")==="4" && !fixedP6V4;
 const lang = params.get("lang") === "zh" ? "zh" : "en";
 const ch = lang === "zh";
 const t = (en,zh) => ch ? zh : en;
 const local = pair => pair[ch ? 1 : 0];
 const level = n => t("Primary " + n, "小" + ["","一","二","三","四","五","六"][n]);
 const topics = {1:["Counting, addition and shapes","數數、加法與圖形"],4:["Factors, perimeter and bar charts","因數、周界與棒形圖"],6:["Percentages, speed and averages","百分數、速率與平均數"]};
-const href = (n,language=lang) => "?v=1&lang="+language+(n?"&p="+n:"");
+const href = (n,language=lang,sheet="") => "?v="+(n===6 && !legacyFixedP6?"4":"1")+"&lang="+language+(n?"&p="+n:"")+(sheet?"&sheet="+sheet:"");
 document.documentElement.lang = ch ? "zh-HK" : "en";
 for (const language of ["en","zh"]) document.getElementById(language).href = href(grade,language);
 const app = document.getElementById("app");
+if(fixedP6V4)quizzes[6]=fixedQuiz(6,"4");
 function figure(type) {
   if (!type) return "";
   if (typeof type === "object" && type.kind === "counters") {
@@ -91,7 +95,7 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build"))){
+if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
@@ -104,17 +108,20 @@ if(custom && (!grade || (params.get("items") && !selected.length) || (!selected.
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
+  if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);
   const key=paper==="key";
   const warmUp=custom && ids.join(".")===warmUpP1.join(".");
   const title=level(grade)+" · "+(custom?(warmUp?t("Five-minute warm-up","五分鐘熱身題"):t("Custom quiz","自訂小測")):local(topics[grade]));
   document.title=title+" | MathQuiz";
   const file="papers/p"+grade+"-"+lang+"-";
-  const links=custom?'': '<div class="downloads"><a download href="'+file+'paper.pdf">'+t("Student paper (PDF)","學生試卷 (PDF)")+'</a><a download href="'+file+'key.pdf">'+t("Worked answers (PDF)","解題步驟 (PDF)")+'</a></div>';
+  const links=custom?'':fixedP6V4?'<div class="downloads"><a href="'+href(grade,lang,"paper")+'">'+t("Print student paper / PDF","列印學生試卷／PDF")+'</a><a href="'+href(grade,lang,"key")+'">'+t("Print worked key / PDF","列印解答／PDF")+'</a></div>':'<div class="downloads"><a download href="'+file+'paper.pdf">'+t("Student paper (PDF)","學生試卷 (PDF)")+'</a><a download href="'+file+'key.pdf">'+t("Worked answers (PDF)","解題步驟 (PDF)")+'</a></div>';
   app.innerHTML=(paper?'':'<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a>')+'<h1>'+title+'</h1>'+(paper?'<h2>'+(key?t("Worked answers","解題步驟"):t("Student paper","學生試卷"))+'</h2>'+(key?'':'<p>'+t("Name","姓名")+' __________________　'+t("Class","班別")+' ______　'+t("Date","日期")+' __________</p>'):links)+'<form>'+quizzes[grade].map((q,i)=>item(q,i,paper,key)).join("")+(paper?'':'<button type="submit">'+t("Mark my quiz","提交及核對答案")+'</button><a id="retry" hidden href="'+(custom?customLink(ids,"",grade):href(grade))+'" >'+t("Try again","重新作答")+'</a><p id="status" tabindex="-1" role="status"></p>')+'</form>';
-  if(custom && paper){
-    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+customLink(ids,"build",grade)+'">← '+t("Preview","預覽")+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button></div>');
+  if((custom || fixedP6V4) && paper){
+    const back=custom?customLink(ids,"build",grade):href(grade);
+    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+back+'">← '+(custom?t("Preview","預覽"):t("Quiz","小測"))+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button></div>');
     document.getElementById("print").onclick=()=>window.print();
   }
   if(!paper) app.querySelector("form").onsubmit=e=>{e.preventDefault();mark(new FormData(e.target))};
 }
+
 
