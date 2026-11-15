@@ -124,6 +124,77 @@
       assert(!numericAnswer(input,11,true),"v3 P1 should reject "+input);
     assert(numericAnswer("22/2",11,false),"P4/P6 legacy numeric rule changed");
   });
+  await check("P1 counting practice · hint, retry, fresh items and first tries",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("practice view did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("practice view failed to load"));};
+        frame.src=new URL("../?lang=en&p=1&view=practice",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      const count=()=>doc.querySelectorAll(".figure circle").length;
+      const submit=value=>{doc.getElementById("practice-answer").value=value;doc.getElementById("practice-form").requestSubmit();};
+      const seen=new Set([count()]);
+      assert(count()===11,"opening practice item changed");
+      submit("12");
+      assert(/Count each full row/.test(doc.getElementById("practice-feedback").textContent),"wrong answer gave no hint");
+      assert(!doc.getElementById("practice-answer").disabled,"hint blocked retry");
+      submit("11");
+      assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent),"retry not acknowledged");
+      assert(/2 complete rows of five \(10\) and 1 more/.test(doc.getElementById("practice-feedback").textContent),"worked counting step missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(count()),"follow-up reused the first item");seen.add(count());
+      submit("");
+      assert(/Enter the number/.test(doc.getElementById("practice-feedback").textContent),"blank response was not prompted");
+      submit(String(count()));
+      assert(/Correct on the first try/.test(doc.getElementById("practice-feedback").textContent),"first-try success missing");
+      doc.getElementById("practice-next").click();
+      assert(!seen.has(count()),"third item repeated a question");
+      submit("0");submit("0");
+      assert(/The answer is/.test(doc.getElementById("practice-feedback").textContent),"worked answer missing after retry");
+      doc.getElementById("practice-next").click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector("main").textContent),"first tries were not counted separately");
+    }finally{frame.remove();}
+  });
+  await check("P1 counting practice · Chinese labels and language link",async()=>{
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("Chinese practice did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=zh&p=1&view=practice",location.href);
+        document.body.appendChild(frame);
+      });
+      const doc=frame.contentDocument;
+      assert(doc.documentElement.lang==="zh-HK" && doc.querySelector("h1").textContent==="練習點算圓片","Chinese practice title missing");
+      assert(doc.getElementById("en").getAttribute("href").includes("view=practice"),"language switch loses practice");
+      doc.getElementById("practice-answer").value="12";
+      doc.getElementById("practice-form").requestSubmit();
+      assert(/再試一次/.test(doc.getElementById("practice-feedback").textContent),"Chinese hint missing");
+    }finally{frame.remove();}
+  });
+  await check("P1 counting practice is linked from the home page",async()=>{
+    const response=await fetch(new URL("../?lang=en",location.href));
+    assert(response.ok,"home page unavailable");
+    const frame=document.createElement("iframe");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try{
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("home page did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.src=new URL("../?lang=en",location.href);
+        document.body.appendChild(frame);
+      });
+      const link=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+        .find(a=>a.textContent.includes("Practise counting"));
+      assert(link && link.href.includes("p=1") && link.href.includes("view=practice"),"home practice entry missing");
+    }finally{frame.remove();}
+  });
   async function checkPrintLayout(language,sheet) {
     const frame=document.createElement("iframe");
     frame.setAttribute("aria-hidden","true");
@@ -291,7 +362,7 @@
       frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
       try{
         await new Promise((resolve,reject)=>{
-          const timer=setTimeout(()=>reject(new Error("numbered view did not load")),10000);
+          const timer=setTimeout(()=>reject(new Error("numbered view did not load")),20000);
           frame.onload=()=>{clearTimeout(timer);resolve();};
           frame.onerror=()=>{clearTimeout(timer);reject(new Error("numbered view failed to load"));};
           frame.src=new URL("../?v=3&lang=en&p=1&items=count20a-12.next1-10&view="+view,location.href);

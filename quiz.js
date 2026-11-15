@@ -86,6 +86,49 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
+function renderPractice(){
+  const family=families.find(f=>f.id==="count20a");
+  const pool=Array.from({length:15},(_,i)=>i+5).filter(i=>i!==10);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const variants=[10,...pool.slice(0,2)];
+  let position=0,attempts=0,firstTry=0;
+  document.title=t("Count pictured counters · Practice | MathQuiz","點算圖中圓片 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])
+    document.getElementById(language).href="?lang="+language+"&p=1&view=practice";
+  function show(){
+    const q=family.make(variants[position]);
+    const count=q.answer[0],rows=Math.floor(count/5),extra=count%5;
+    const explanation=t("Count "+rows+" complete "+(rows===1?"row":"rows")+" of five ("+(rows*5)+")"+(extra?" and "+extra+" more":"")+". Total: "+count+".","數出"+rows+"行完整的五粒圓片（"+(rows*5)+"粒）"+(extra?"，再加"+extra+"粒":"")+"，共有"+count+"粒。");
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise counting counters","練習點算圓片")+'</h1><p>'+t("Count each counter once. Try three questions at your own pace.","每粒圓片只數一次，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Number of counters","圓片數量")+'"> '+local(q.fields[0])+'</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const input=document.getElementById("practice-answer");
+      const value=input.value.trim();
+      const feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Enter the number of counters.","請輸入圓片的數量。");input.focus();return;}
+      attempts++;
+      const correct=numericAnswer(value,q.answer[0],true);
+      if(attempts===1 && correct)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=correct
+          ?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。")+explanation
+          :t("The answer is ","答案是 ")+q.answer[0]+". "+explanation;
+        input.disabled=true;
+        e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        feedback.textContent=t("Not yet. Count each full row of five, then the counters in the last row. Try again.","再試一次：先數每行五粒的完整行，再數最後一行的圓片。");
+        input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t("You can try another set of counting questions.","你可以再做一組點算題。")+'</p><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 const custom=["2","3"].includes(params.get("v"));
 const strictP1=custom && grade===1 && params.get("v")==="3";
 const selected=custom?decodeItems(params.get("items"),grade):[];
@@ -99,13 +142,15 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
+}else if(grade===1 && view==="practice"){
+  renderPractice();
 }else if(!grade){
   document.title=t("MathQuiz · Primary mathematics","MathQuiz · 小學數學");
   const presets=[
     {ids:warmUpP1,title:t("P1 five-minute warm-up","小一五分鐘熱身題"),description:t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。"),edit:t("Edit warm-up","編輯熱身題"),pupil:t("Try warm-up","試做熱身題")},
     {ids:exitTicketP1,title:t("Six-question P1 exit ticket","小一六題離堂小測"),description:t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。"),edit:t("Edit exit ticket","編輯離堂小測"),pupil:t("Try exit ticket","試做離堂小測")}
   ];
-  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
+  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);
