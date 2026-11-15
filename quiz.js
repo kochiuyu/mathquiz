@@ -86,6 +86,60 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
+function renderMeanPractice(){
+  const family=families.find(f=>f.id==="mean1");
+  const pool=Array.from({length:family.count-1},(_,i)=>i+1);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const variants=[0,...pool.slice(0,2)];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=6&view=practice&skill=mean1";
+  document.title=t("Arithmetic mean · Practice | MathQuiz","算術平均數 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])
+    document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    const [a,b,c]=q.prompt[0].match(/\d+/g).map(Number);
+    const sum=a+b+c,answer=q.answer[0];
+    const explanation=t("Add all three days, then divide by 3: "+a+" + "+b+" + "+c+" = "+sum+"; "+sum+" ÷ 3 = "+answer+" books per day.",
+      "先把三天的數量相加，再除以3："+a+" + "+b+" + "+c+" = "+sum+"；"+sum+" ÷ 3 = "+answer+"本書（平均每天）。");
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise arithmetic means","練習算術平均數")+'</h1><p>'+t("Find the average number of books lent per day. Try three questions at your own pace.","求出平均每天借出的圖書數量，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend><label class="field"><input id="practice-answer" type="text" inputmode="decimal" autocomplete="off" aria-label="'+t("Average books per day","平均每天的圖書數量")+'"> '+local(q.fields[0])+'</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const input=document.getElementById("practice-answer");
+      const value=input.value.trim();
+      const feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Enter the average number of books per day.","請輸入平均每天借出的圖書數量。");input.focus();return;}
+      attempts++;
+      const correct=numericAnswer(value,answer,false);
+      if(attempts===1 && correct)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=correct
+          ?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。")+explanation
+          :t("The answer is ","答案是 ")+answer+" "+local(q.fields[0])+". "+explanation;
+        input.disabled=true;
+        e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        feedback.textContent=numericAnswer(value,sum,false)
+          ?t("That is the total for three days. Divide it by 3 to find the average per day.","這是三天借出的總數。除以3才是平均每天的數量。")
+          :[a,b,c].some(day=>numericAnswer(value,day,false))
+            ?t("That is the number for one day. Add all three days, then divide by 3.","這是其中一天的數量。先把三天的數量相加，再除以3。")
+            :numericAnswer(value,sum/2,false)
+              ?t("There are three days, not two. Divide the total by 3.","題目共有三天，不是兩天。把總數除以3。")
+              :!Number.isFinite(Number(value.normalize("NFKC"))) && !/^[-+]?\d+(?:\.\d+)?\s*\/\s*[-+]?\d+(?:\.\d+)?$/.test(value.normalize("NFKC"))
+                ?t("Enter a number only; the unit is already beside the answer box.","只需輸入數字；答案欄旁已顯示單位。")
+                :t("Find the total for all three days, then divide by the number of days: 3.","先求出三天的總數，再除以天數3。");
+        input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t("You can try another set of arithmetic-mean questions.","你可以再做一組算術平均數題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 function renderPercentagePractice(){
   const family=families.find(f=>f.id==="pct2");
   const pool=Array.from({length:family.count},(_,i)=>i).filter(i=>i!==7);
@@ -285,6 +339,8 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
+}else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
+  renderMeanPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
   renderPercentagePractice();
 }else if(grade===4 && view==="practice" && params.get("skill")==="factor1"){
@@ -299,13 +355,14 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 4 or 6.","選擇小一、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting and addition skills, P4 perimeter and factors, or P6 percentages. Get a hint and try again.","選擇小一點算術、小四周界和因數，或小六百分比練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting and addition skills, P4 perimeter and factors, or P6 percentages and averages. Get a hint and try again.","選擇小一點算術、小四周界和因數，或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=per1">'+t("Practise perimeter","練習周界")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=factor1">'+t("Practise factors","練習因數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=pct2">'+t("Practise percentages","練習百分比")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=mean1">'+t("Practise averages","練習平均數")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);
