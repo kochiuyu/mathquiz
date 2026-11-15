@@ -65,7 +65,7 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 |---|---|---|
 | [2N1 objectives 1–2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=24) | 3-digit numbers | [Read hundreds, tens and ones blocks as a three-digit numeral](p2-three-digit-place-value.md) |
 | [2N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=26) | Addition and subtraction (II) | Calculate a sum and check it |
-| [2N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28) | Basic multiplication | Write a product for equal groups |
+| [2N3 objectives 1 and 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=27) | Basic multiplication | [Complete a multiplication sentence from pictured equal groups](p2-equal-groups.md) |
 | [2N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=30) | 4-digit numbers | Read a four-digit numeral |
 | [2N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=31) | Addition and subtraction (III) | Find the missing quantity in a subtraction story |
 | [2N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) | Basic division | Share objects equally |
@@ -82,6 +82,10 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 #### Live P2 place-value family
 
 Source check: **15 November 2026**. The [2017 EDB supplement, 2N1 objectives 1–2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=24) and [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=25) support reading a three-digit number from hundred plates, ten rods and unit blocks. The [bilingual item brief](p2-three-digit-place-value.md) defines zero-place examples, the answer rule and release checks. Twelve `place3a` variants are live. They cover picture-to-numeral recognition and do not establish full 2N1 coverage or pupil mastery.
+
+#### Planned P2 equal-groups family
+
+Source check: **15 November 2026**. The [2017 EDB supplement, 2N3 objectives 1 and 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=27) and [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28) support a pictured equal-groups multiplication sentence and repeated-addition explanation. The [bilingual item brief](p2-equal-groups.md) accepts either order of the two pictured factors and defines answer, practice and release checks. This is planned work, not a live family or a claim of full 2N3 coverage.
 
 ### Primary 3
 
