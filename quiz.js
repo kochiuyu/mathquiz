@@ -118,7 +118,9 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
   app.innerHTML=(paper?'':'<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a>')+'<h1>'+title+'</h1>'+(paper?'<h2>'+(key?t("Worked answers","解題步驟"):t("Student paper","學生試卷"))+'</h2>'+(key?'':'<p>'+t("Name","姓名")+' __________________　'+t("Class","班別")+' ______　'+t("Date","日期")+' __________</p>'):links)+'<form>'+quizzes[grade].map((q,i)=>item(q,i,paper,key)).join("")+(paper?'':'<button type="submit">'+t("Mark my quiz","提交及核對答案")+'</button><a id="retry" hidden href="'+(custom?customLink(ids,"",grade):href(grade))+'" >'+t("Try again","重新作答")+'</a><p id="status" tabindex="-1" role="status"></p>')+'</form>';
   if((custom || fixedP6V4) && paper){
     const back=custom?customLink(ids,"build",grade):href(grade);
-    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+back+'">← '+(custom?t("Preview","預覽"):t("Quiz","小測"))+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button></div>');
+    const samplePdf=custom && ids.join(".")===exitTicketP1.join(".")
+      ? '<a download href="papers/p1-exit-ticket-'+lang+'-'+paper+'.pdf">'+t("Download sample PDF","下載示例 PDF")+'</a>' : '';
+    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+back+'">← '+(custom?t("Preview","預覽"):t("Quiz","小測"))+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button>'+samplePdf+'</div>');
     document.getElementById("print").onclick=()=>window.print();
   }
   if(!paper) app.querySelector("form").onsubmit=e=>{e.preventDefault();mark(new FormData(e.target))};

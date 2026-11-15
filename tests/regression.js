@@ -175,6 +175,14 @@
   }
   for(const language of ["en","zh"])for(const sheet of ["paper","key"])
     await check("P6 "+language+" "+sheet+" · A4 print layout",()=>checkPrintLayout(language,sheet));
+  await check("P1 exit-ticket PDF downloads",async()=>{
+    for(const language of ["en","zh"])for(const view of ["paper","key"]){
+      const url=new URL("../papers/p1-exit-ticket-"+language+"-"+view+".pdf",location.href);
+      const response=await fetch(url,{method:"HEAD"});
+      assert(response.ok && response.headers.get("content-type")?.includes("application/pdf"),
+        "PDF unavailable: "+language+" "+view);
+    }
+  });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
