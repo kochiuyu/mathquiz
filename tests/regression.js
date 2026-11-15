@@ -206,6 +206,33 @@
       }
     }
   });
+  await check("12-question mixed Chinese PDF · A4 selectable text",async()=>{
+    const frame=document.createElement("iframe");
+    frame.setAttribute("aria-hidden","true");
+    frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+    try {
+      await new Promise((resolve,reject)=>{
+        const timer=setTimeout(()=>reject(new Error("mixed paper did not load")),10000);
+        frame.onload=()=>{clearTimeout(timer);resolve();};
+        frame.onerror=()=>{clearTimeout(timer);reject(new Error("mixed paper failed to load"));};
+        const ids="count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-43.otherway1-3.add1-2.count20a-19.pictureadd1-70.parts18a-80.storyadd1-80.otherway1-10";
+        const url=new URL("../?v=3&lang=zh&p=1&items="+ids+"&view=paper",location.href);
+        url.searchParams.set("mixedPdfCheck",String(Date.now()));
+        frame.src=url;
+        document.body.appendChild(frame);
+      });
+      assert(frame.contentDocument.querySelectorAll("main fieldset").length===12,"mixed paper lost questions");
+      const blob=await frame.contentWindow.mathQuizPdf.generate();
+      const bytes=new Uint8Array(await blob.arrayBuffer());
+      const raw=new TextDecoder("latin1").decode(bytes);
+      assert(raw.startsWith("%PDF-"),"mixed paper is not a PDF");
+      const pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
+      assert(pages>=3 && pages<=5,"mixed paper has an unexpected page count: "+pages);
+      assert(raw.includes("/ToUnicode") && raw.includes("/FontFile2"),"mixed PDF lacks embedded selectable text");
+    } finally {
+      frame.remove();
+    }
+  });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";

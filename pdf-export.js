@@ -1,9 +1,11 @@
-// Browser-only PDF export for a custom paper or key. The print button remains
-// available for native, selectable-text output.
+// Browser-only PDF export for a custom paper or key. The image pages preserve
+// the print layout; an invisible font-backed layer makes their wording usable
+// for selection, copy, and search.
 (function () {
   "use strict";
   const libraryUrl="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
   const libraryIntegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==";
+  const fontUrl="fonts/mathquiz-text.ttf";
 
   function waitForFrame(frame) {
     return new Promise((resolve,reject)=>{
@@ -86,6 +88,73 @@
     }
   }
 
+  function collectTextRuns(doc,container,pageHeight) {
+    const origin=container.getBoundingClientRect();
+    const runs=[];
+    const walker=doc.createTreeWalker(container,NodeFilter.SHOW_TEXT);
+    let node;
+    while((node=walker.nextNode())) {
+      if(!node.textContent.trim())continue;
+      const parent=node.parentElement;
+      if(!parent || parent.closest("script,style,template"))continue;
+      const style=doc.defaultView.getComputedStyle(parent);
+      if(style.display==="none" || style.visibility==="hidden")continue;
+      const size=parseFloat(style.fontSize);
+      const range=doc.createRange();
+      let offset=0,run=null;
+      for(const character of node.textContent) {
+        range.setStart(node,offset);
+        offset+=character.length;
+        range.setEnd(node,offset);
+        const rect=range.getBoundingClientRect();
+        if(rect.width<0.01 || rect.height<0.01)continue;
+        const top=rect.top-origin.top;
+        const page=Math.floor(top/pageHeight);
+        if(page<0 || Math.floor((rect.bottom-origin.top-0.1)/pageHeight)!==page)continue;
+        if(run && run.page===page && Math.abs(run.top-top)<1 && rect.left-run.right<3) {
+          run.text+=character;
+          run.right=rect.right;
+        } else {
+          if(run && run.text.trim())runs.push(run);
+          run={text:character,left:rect.left-origin.left,right:rect.right,top,height:rect.height,size,page};
+        }
+      }
+      if(run && run.text.trim())runs.push(run);
+      range.detach();
+    }
+    if(!runs.length)throw new Error("The PDF has no selectable text.");
+    return runs;
+  }
+
+  async function addTextLayer(pdf,runs,pageSize) {
+    const response=await fetch(fontUrl);
+    if(!response.ok)throw new Error("The PDF text font is unavailable.");
+    const bytes=new Uint8Array(await response.arrayBuffer());
+    let binary="";
+    for(let i=0;i<bytes.length;i+=8192)
+      binary+=String.fromCharCode(...bytes.subarray(i,i+8192));
+    pdf.addFileToVFS("mathquiz-text.ttf",binary);
+    pdf.addFont("mathquiz-text.ttf","MathQuizText","normal");
+    pdf.setFont("MathQuizText","normal");
+    const pageHeight=pageSize.inner.px.height;
+    const width=pageSize.inner.width;
+    const xScale=width/pageSize.inner.px.width;
+    const yScale=pageSize.inner.height/pageHeight;
+    const hidden=new pdf.GState({opacity:0});
+    for(const run of runs) {
+      if(run.page>=pdf.getNumberOfPages())continue;
+      const x=17+run.left*xScale;
+      const y=14+(run.top-run.page*pageHeight+run.height*0.8)*yScale;
+      if(x<17 || x>193 || y<14 || y>283)continue;
+      pdf.setPage(run.page+1);
+      pdf.saveGraphicsState();
+      pdf.setGState(hidden);
+      pdf.setFontSize(run.size*72/96);
+      pdf.text(run.text,x,y);
+      pdf.restoreGraphicsState();
+    }
+  }
+
   async function generate() {
     const frame=document.createElement("iframe");
     frame.setAttribute("aria-hidden","true");
@@ -105,7 +174,19 @@
         jsPDF:{unit:"mm",format:"a4",orientation:"portrait"},
         pagebreak:{mode:["css","legacy"],avoid:"fieldset"}
       }));
-      const blob=await frame.contentWindow.html2pdf().set(options).from(doc.body).outputPdf("blob");
+      const worker=frame.contentWindow.html2pdf().set(options).from(doc.body).toContainer();
+      const container=await worker.get("container");
+      const pageSize=await worker.get("pageSize");
+      const textRuns=collectTextRuns(doc,container,pageSize.inner.px.height);
+      await worker.toPdf();
+      const pdf=await worker.get("pdf");
+      // html2pdf can leave a blank final image page after padding a fieldset.
+      // Every real page in a paper or key has a printed question label.
+      const lastTextPage=Math.max(...textRuns.map(run=>run.page))+1;
+      while(pdf.getNumberOfPages()>lastTextPage)
+        pdf.deletePage(pdf.getNumberOfPages());
+      await addTextLayer(pdf,textRuns,pageSize);
+      const blob=pdf.output("blob");
       const signature=new TextDecoder("ascii").decode(await blob.slice(0,5).arrayBuffer());
       if(signature!=="%PDF-" || blob.size<1000)throw new Error("The PDF could not be created.");
       return new Blob([await blob.arrayBuffer()],{type:"application/pdf"});
