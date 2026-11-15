@@ -120,8 +120,10 @@ if(invalidV4 || (custom && (!grade || (params.get("items") && !selected.length) 
     const back=custom?customLink(ids,"build",grade):href(grade);
     const samplePdf=custom && ids.join(".")===exitTicketP1.join(".")
       ? '<a download href="papers/p1-exit-ticket-'+lang+'-'+paper+'.pdf">'+t("Download sample PDF","下載示例 PDF")+'</a>' : '';
-    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+back+'">← '+(custom?t("Preview","預覽"):t("Quiz","小測"))+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button>'+samplePdf+'</div>');
+    const directPdf=custom?'<button id="download-pdf" type="button">'+t("Download this PDF (beta)","下載本卷 PDF（測試版）")+'</button><span id="pdf-status" role="status"></span>':'';
+    app.insertAdjacentHTML("afterbegin",'<div class="print-tools"><a href="'+back+'">← '+(custom?t("Preview","預覽"):t("Quiz","小測"))+'</a> <button id="print">'+t("Print or save as PDF","列印或另存為 PDF")+'</button>'+directPdf+samplePdf+'</div>');
     document.getElementById("print").onclick=()=>window.print();
+    if(custom)document.getElementById("download-pdf").onclick=e=>window.mathQuizPdf.download(e.currentTarget);
   }
   if(!paper) app.querySelector("form").onsubmit=e=>{e.preventDefault();mark(new FormData(e.target))};
 }
