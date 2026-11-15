@@ -183,6 +183,27 @@
         "PDF unavailable: "+language+" "+view);
     }
   });
+  await check("On-demand PDF controls on edited custom sets",async()=>{
+    for(const query of [
+      "?v=3&lang=en&p=1&items=count20a-12.next1-10.pictureadd1-38.parts18a-58.storyadd1-43.otherway1-3&view=key",
+      "?v=3&lang=zh&p=6&items=pct2-0.mean1-0&view=paper"
+    ]) {
+      const frame=document.createElement("iframe");
+      frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+      try {
+        await new Promise((resolve,reject)=>{
+          const timer=setTimeout(()=>reject(new Error("custom print view did not load")),10000);
+          frame.onload=()=>{clearTimeout(timer);resolve();};
+          frame.src=new URL("../"+query,location.href);
+          document.body.appendChild(frame);
+        });
+        assert(frame.contentDocument.querySelector("#download-pdf"),"edited set has no PDF control");
+        assert(typeof frame.contentWindow.mathQuizPdf?.generate==="function","PDF generator unavailable");
+      } finally {
+        frame.remove();
+      }
+    }
+  });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
