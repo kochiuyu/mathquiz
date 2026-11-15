@@ -101,6 +101,17 @@ const families = [
       why:[`The ${categories[target][0].toLowerCase()} bar reaches ${steps[target]} step${steps[target]===1?"":"s"} from zero. Each step represents ${scale} pupil${scale===1?"":"s"}, so ${steps[target]} × ${scale} = ${value} pupils.`,`「${categories[target][1]}」的棒形由零起到第${steps[target]}格。每格代表${scale}人，所以${steps[target]} × ${scale} = ${value}人。`],
       barChart:chart,figure:{kind:"barChart",...chart}};
   }},
+  {id:"fracadd5a",grade:5,code:"5N2",label:["Add unlike fractions","異分母分數加法"],count:12,make(i){
+    const cases=[[1,2,1,4],[1,3,1,6],[1,4,1,8],[1,2,1,3],[1,3,1,4],[2,5,1,10],[1,6,1,3],[3,8,1,4],[1,2,1,6],[2,3,1,6],[1,5,3,10],[3,4,1,8]];
+    const [a,b,c,d]=cases[i],gcd=(x,y)=>y?gcd(y,x%y):x,l=b*d/gcd(b,d),left=a*l/b,right=c*l/d,sum=left+right,reduce=gcd(sum,l),n=sum/reduce,den=l/reduce;
+    return {prompt:[`Calculate ${a}/${b} + ${c}/${d}. Write the answer in simplest form.`,`計算 ${a}/${b} + ${c}/${d}。把答案寫成最簡分數。`],fields:[["numerator","分子"],["denominator","分母"]],answer:[n,den],marks:1,
+      why:[`${a}/${b} = ${left}/${l} and ${c}/${d} = ${right}/${l}. Add: ${left}/${l} + ${right}/${l} = ${sum}/${l}${reduce>1?`; reduce to ${n}/${den}`:""}.`,`把兩個分數通分：${a}/${b} = ${left}/${l}，${c}/${d} = ${right}/${l}。相加得 ${sum}/${l}${reduce>1?`，約簡為 ${n}/${den}`:""}。`],fractionAddition:{a,b,c,d,n,den}};
+  }},
+  {id:"equation5a",grade:5,code:"5A2",label:["Solve a simple equation","解簡易方程"],count:12,make(i){
+    const solutions=[12,8,17,6,15,9,14,7,18,11,16,10],offsets=[7,4,8,3,6,5,9,2,7,6,4,8],x=solutions[i],b=offsets[i],subtract=i>=6,c=subtract?x-b:x+b,sign=subtract?"−":"+",inverse=subtract?"+":"−";
+    return {prompt:[`Solve x ${sign} ${b} = ${c}. Write the value of x.`,`解方程 x ${sign} ${b} = ${c}，寫出 x 的值。`],fields:[["x =","x ="]],answer:[x],marks:1,
+      why:[`Apply the same operation to both sides: x = ${c} ${inverse} ${b} = ${x}. Check: ${x} ${sign} ${b} = ${c}.`,`等號兩邊同時進行相同運算：x = ${c} ${inverse} ${b} = ${x}。驗算：${x} ${sign} ${b} = ${c}。`],simpleEquation:{x,b,c,subtract}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
@@ -157,7 +168,7 @@ function renderBuilder(year,selected){
   const undo=readBuilderUndo(year,ids);
   const title=t("Create a quiz","建立小測");
   document.title=title+" | MathQuiz";
-  app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+title+'</h1><nav class="downloads">'+[1,2,3,4,6].map(n=>'<a href="'+customLink([],"build",n)+'">'+level(n)+'</a>').join("")+'</nav><h2>'+level(year)+'</h2>'+(year===1?'<div class="builder-presets"><p class="builder-preset"><button type="button" id="warmup-preset">'+t("Use five-minute warm-up","使用五分鐘熱身題")+'</button> <span>'+t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。")+'</span></p><p class="builder-preset"><button type="button" id="exit-preset">'+t("Use six-question exit ticket","使用六題離堂小測")+'</button> <span>'+t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。")+'</span></p></div>':'')+'<form id="mix">'+list.map(f=>'<label class="field">'+local(f.label)+' <select name="'+f.id+'">'+[0,1,2,3,4,5].map(n=>'<option '+(n===(ids.length?selected.filter(q=>q.f===f).length:1)?"selected":"")+'>'+n+'</option>').join("")+'</select></label>').join("")+'<p><button>'+t("Generate quiz","產生小測")+'</button></p><p role="status" id="notice"></p></form>';
+  app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+title+'</h1><nav class="downloads">'+[1,2,3,4,5,6].map(n=>'<a href="'+customLink([],"build",n)+'">'+level(n)+'</a>').join("")+'</nav><h2>'+level(year)+'</h2>'+(year===1?'<div class="builder-presets"><p class="builder-preset"><button type="button" id="warmup-preset">'+t("Use five-minute warm-up","使用五分鐘熱身題")+'</button> <span>'+t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。")+'</span></p><p class="builder-preset"><button type="button" id="exit-preset">'+t("Use six-question exit ticket","使用六題離堂小測")+'</button> <span>'+t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。")+'</span></p></div>':'')+'<form id="mix">'+list.map(f=>'<label class="field">'+local(f.label)+' <select name="'+f.id+'">'+[0,1,2,3,4,5].map(n=>'<option '+(n===(ids.length?selected.filter(q=>q.f===f).length:1)?"selected":"")+'>'+n+'</option>').join("")+'</select></label>').join("")+'<p><button>'+t("Generate quiz","產生小測")+'</button></p><p role="status" id="notice"></p></form>';
   if(year===1){
     app.querySelector("#warmup-preset").onclick=()=>{clearBuilderUndo();location.assign(customLink(warmUpP1,"build",year))};
     app.querySelector("#exit-preset").onclick=()=>{clearBuilderUndo();location.assign(customLink(exitTicketP1,"build",year))};

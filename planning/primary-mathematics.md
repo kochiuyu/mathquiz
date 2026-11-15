@@ -177,18 +177,22 @@ The online result does not by itself establish why a pupil chose an answer. Disc
 | EDB objectives | Learning unit | Proposed quiz task |
 |---|---|---|
 | [5N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=30) | Multi-digit numbers | Read and compare large whole numbers |
-| [5N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=31) | Fractions (III) | Add fractions with different denominators |
+| [5N2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=31) | Fractions (III) | [Add two proper fractions with different denominators](p5-fraction-addition.md) |
 | [5N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=33) | Fractions (IV) | Represent multiplication of fractions |
 | [5N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=34) | Decimals (III) | Multiply decimals |
 | [5N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=36) | Fractions (V) | Solve a fraction division problem |
 | [5A1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=38) | Elementary algebra | Translate a description into an expression |
-| [5A2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) | Simple equations (I) | Solve a simple equation and check it |
+| [5A2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) | Simple equations (I) | [Solve a one-step equation and check it](p5-simple-equations.md) |
 | [5M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=41) | Area (II) | Find the area of a triangle |
 | [5M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=43) | Volume (I) | Count cubes in a rectangular prism |
 | [5S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45) | Circles | Identify a radius |
 | [5S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=46) | 3-D shapes (III) | Identify edges and vertices |
 | [5D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=48) | Bar charts (III) | Compare groups in a compound bar chart |
 | [5F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=49) | Inquiry and investigation | Explain how changing a dimension changes area |
+
+#### Live P5 fraction-addition and simple-equation families
+
+Source check: **16 November 2026**. [EDB 5N2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=76) supports unlike-denominator addition; [5A2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=82) supports solving simple equations. The [fraction brief](p5-fraction-addition.md) covers twelve two-addend proper-fraction cases and lowest-terms marking. The [equation brief](p5-simple-equations.md) covers twelve whole-number `x + b = c` and `x − b = c` cases with substitution checks. These are samples of the objectives, not full-unit coverage. Manual pupil and hands-on screen-reader checks are deferred.
 
 ### Primary 6
 

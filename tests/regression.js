@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a and bar3a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, fracadd5a and equation5a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -24,7 +24,9 @@
     ["share2a",2,12,"49c221cb465ec7651156d6423c5473a5f2717dcbbfe7c9dde2ad69707145f0a5"],
     ["frac3a",3,12,"b982b6c4eafc70ccdbbf03a93badc41d5c2e510d46d6ef6516093a214fba4bca"],
     ["cup3a",3,12,"5ac30486d8d127f49b72ee37ea92c57a5fe3853d623a22353f1a8eb5547a736b"],
-    ["bar3a",3,12,"ef6534c060e1ace0626224c42ceee848ebfec97550d2898bd47e750aaf5e61d5"]
+    ["bar3a",3,12,"ef6534c060e1ace0626224c42ceee848ebfec97550d2898bd47e750aaf5e61d5"],
+    ["fracadd5a",5,12,"c8d89b1ea481650d2c2bb24e32cfd76f18cf403550075745adc17c430d4afef8"],
+    ["equation5a",5,12,"851b768bf0b2b458fca07031b335ee2b836661f2f92ec32b7b4a2140f511340f"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -81,7 +83,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===464,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===488,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -801,7 +803,7 @@
     const frame=document.createElement("iframe");
     frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
     await new Promise((resolve,reject)=>{
-      const timer=setTimeout(()=>reject(new Error("shape view did not load")),30000);
+      const timer=setTimeout(()=>{frame.remove();reject(new Error("shape view did not load: "+query));},60000);
       frame.onload=()=>{clearTimeout(timer);resolve();};
       frame.onerror=()=>{clearTimeout(timer);reject(new Error("shape view failed to load"));};
       frame.src=new URL("../"+query,location.href);
@@ -1583,6 +1585,63 @@
     } finally {
       frame.remove();
     }
+  });
+  await check("P5 fraction addition · twelve exact simplest answers",()=>{
+    const family=families.find(f=>f.id==="fracadd5a");
+    assert(family && family.count===12,"fraction family missing");
+    for(let i=0;i<12;i++){
+      const q=family.make(i),f=q.fractionAddition;
+      assert(f.b!==f.d && f.a*f.d*f.den+f.c*f.b*f.den===f.n*f.b*f.d,"fraction sum is wrong");
+      assert(f.n<=f.den && fractionAdditionAnswer(q.answer,f) && fractionAdditionAnswer(q.answer.map(String),f),"fraction answer rejected");
+      assert(!fractionAdditionAnswer([f.n*2,f.den*2],f) && !fractionAdditionAnswer(["1.0",f.den],f),"unsimplified or decimal fraction accepted");
+      assert(q.prompt[0] && q.prompt[1] && q.why[0] && q.why[1],"bilingual fraction text missing");
+    }
+    assert(decodeItems("fracadd5a-0",5).length===1 && !decodeItems("fracadd5a-0",3).length,"fraction link guard failed");
+  });
+  await check("P5 equations · twelve balanced whole-number answers",()=>{
+    const family=families.find(f=>f.id==="equation5a");
+    assert(family && family.count===12,"equation family missing");
+    for(let i=0;i<12;i++){
+      const q=family.make(i),e=q.simpleEquation;
+      assert((e.subtract?e.x-e.b:e.x+e.b)===e.c && q.answer[0]===e.x,"equation answer is wrong");
+      assert(simpleEquationAnswer(String(e.x),e.x) && simpleEquationAnswer(String(e.x).replace(/[0-9]/g,c=>"０１２３４５６７８９"[+c]),e.x),"equation answer rejected");
+      assert(!simpleEquationAnswer(e.x+".0",e.x) && !simpleEquationAnswer("x = "+e.x,e.x),"equation format accepted");
+      assert(q.prompt[0] && q.prompt[1] && q.why[0] && q.why[1],"bilingual equation text missing");
+    }
+    assert(decodeItems("equation5a-0",5).length===1 && !decodeItems("equation5a-0",3).length,"equation link guard failed");
+  });
+  await check("P5 mixed builder, pupil, key, practice and PDF",async()=>{
+    const frames=[];
+    try{
+      const builder=await shapeFrame("?v=3&lang=en&p=5&view=build");frames.push(builder);
+      assert(builder.contentDocument.querySelector('select[name="fracadd5a"]') && builder.contentDocument.querySelector('select[name="equation5a"]'),"P5 builder missing families");
+      const query="?v=3&lang=zh&p=5&items=fracadd5a-0.equation5a-0";
+      const pupil=await shapeFrame(query);frames.push(pupil);
+      assert(pupil.contentDocument.querySelectorAll("fieldset").length===2,"P5 pupil quiz missing questions");
+      const key=await shapeFrame(query+"&view=key");frames.push(key);
+      assert(key.contentDocument.querySelector("fieldset").textContent.includes("3/4") && key.contentDocument.querySelectorAll("fieldset")[1].textContent.includes("x = 12"),"P5 key missing worked answers");
+      const paper=await shapeFrame(query+"&view=paper");frames.push(paper);
+      assert(paper.contentDocument.querySelectorAll("fieldset").length===2 && paper.contentDocument.querySelector(".paper-code").textContent===key.contentDocument.querySelector(".paper-code").textContent,"P5 paper/key mismatch");
+      paper.style.width="360px";assert(paper.contentDocument.documentElement.scrollWidth<=360,"P5 phone paper overflows");
+      for(const skill of ["fracadd5a","equation5a"]){
+        const practice=await shapeFrame("?lang=en&p=5&view=practice&skill="+skill);frames.push(practice);
+        const doc=practice.contentDocument,answer=doc.querySelector("#practice-answer-0");
+        assert(answer && doc.querySelector("#practice-next"),skill+" practice missing");
+        if(skill==="fracadd5a"){
+          answer.value="6";doc.querySelector("#practice-answer-1").value="8";doc.getElementById("practice-form").requestSubmit();
+          assert(/Reduce it to lowest terms/.test(doc.getElementById("practice-feedback").textContent),"fraction reduction hint missing");
+          answer.value="3";doc.querySelector("#practice-answer-1").value="4";
+        }else{
+          answer.value="7";doc.getElementById("practice-form").requestSubmit();
+          assert(/Subtract the same number/.test(doc.getElementById("practice-feedback").textContent),"equation inverse hint missing");
+          answer.value="１２";
+        }
+        doc.getElementById("practice-form").requestSubmit();
+        assert(!doc.getElementById("practice-next").hidden && /Correct after a hint/.test(doc.getElementById("practice-feedback").textContent),skill+" retry failed");
+      }
+      const blob=await paper.contentWindow.mathQuizPdf.generate();const raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
+      assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"P5 PDF lacks A4/selectable text");
+    }finally{frames.forEach(frame=>frame.remove());}
   });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";

@@ -38,3 +38,13 @@ function measuringCupAnswer(value,expected){
   const numeral=String(value).normalize("NFKC").trim();
   return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
 }
+function fractionAdditionAnswer(values,fraction){
+  if(values.length!==2)return false;
+  const digits=values.map(v=>String(v).normalize("NFKC").trim());
+  if(!digits.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)))return false;
+  return Number(digits[0])===fraction.n && Number(digits[1])===fraction.den;
+}
+function simpleEquationAnswer(value,expected){
+  const numeral=String(value).normalize("NFKC").trim();
+  return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
+}
