@@ -11,3 +11,10 @@ function threeDigitAnswer(value,expected){
   const numeral=String(value).normalize("NFKC").trim();
   return /^[1-9][0-9]{2}$/.test(numeral) && Number(numeral)===expected;
 }
+function equalGroupsAnswer(values,groups){
+  if(values.length!==3)return false;
+  const digits=values.map(v=>String(v).normalize("NFKC").trim());
+  if(!digits.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)))return false;
+  const [first,second,total]=digits.map(Number);
+  return total===groups.total && ((first===groups.boxes && second===groups.each) || (first===groups.each && second===groups.boxes));
+}

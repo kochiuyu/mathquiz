@@ -33,6 +33,13 @@ function figure(type) {
     const label=titleA+": "+Array(type.a).fill(t("red counter","紅色圓片")).join(", ")+". "+titleB+": "+Array(type.b).fill(t("blue counter","藍色圓片")).join(", ");
     return '<svg class="figure two-groups" viewBox="0 0 320 102" role="img" aria-label="'+label+'"><g fill="#f8faf7" stroke="#9bb9a5"><rect x="4" y="22" width="152" height="74" rx="8"/><rect x="164" y="22" width="152" height="74" rx="8"/></g><g text-anchor="middle"><text x="80" y="17">'+titleA+'</text><text x="240" y="17">'+titleB+'</text></g>'+dots(type.a,4,"#a5541f")+dots(type.b,164,"#316a93")+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "equalGroups") {
+    const width=type.boxes*106+4;
+    const boxes=Array.from({length:type.boxes},(_,i)=>'<rect x="'+(4+i*106)+'" y="8" width="98" height="70" rx="7" fill="#fffefa" stroke="#526f61" stroke-width="2"/>').join("");
+    const dots=Array.from({length:type.boxes},(_,i)=>Array.from({length:type.each},(_,j)=>'<circle cx="'+(22+i*106+j*16)+'" cy="43" r="6" fill="#375d50"/>').join("")).join("");
+    const alt=t(`${type.boxes} boxes, ${type.each} counters in each box.`,`${type.boxes}個盒子，每盒${type.each}粒圓片。`);
+    return '<svg class="figure equal-groups" viewBox="0 0 '+width+' 86" role="img" aria-label="'+alt+'">'+boxes+dots+'</svg>';
+  }
   if (typeof type === "object" && type.kind === "placeValue") {
     const counts=[type.hundreds,type.tens,type.ones];
     const labels=ch?["百位","十位","個位"]:["Hundreds","Tens","Ones"];
@@ -75,13 +82,14 @@ function controls(q,i,paper) {
   if(q.choices) return q.choices.map(v=> paper ? '<span class="option">□ '+v+'</span>' : '<label class="option"><input type="'+(q.multi?'checkbox':'radio')+'" name="q'+i+'" value="'+v+'"> '+v+'</label>').join("");
   if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
+  if(q.equalGroups)return '<div class="group-equation">'+[0,1,2].map(j=>(j?'<span aria-hidden="true">'+(j===1?'×':'=')+'</span>':'')+(paper?'<span class="group-blank">_______</span>':'<label><span class="sr-only">'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'</span><input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'" name="q'+i+'f'+j+'"></label>')).join("")+'</div>';
   if(q.inlineAnswer)return "";
   return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1 || q.placeValue?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':q.placeValue && !paper?'<small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small>':"");
 }
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -102,6 +110,7 @@ function mark(form) {
       const pair=values.map(v=>v.normalize("NFKC"));
       return Number(pair.every(v=>/^[1-9]$/.test(v)) && +pair[0]+ +pair[1]===q.otherWay.total && [Number(pair[0]),Number(pair[1])].sort((a,b)=>a-b).join(",")!==[...q.otherWay.shown].sort((a,b)=>a-b).join(","));
     }
+    if(q.equalGroups)return Number(equalGroupsAnswer(values,q.equalGroups));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
     return values.reduce((sum,v,j)=>sum+Number(numericAnswer(v,q.answer[j],strictP1)),0);
   });
@@ -152,6 +161,42 @@ function renderTrianglePractice(){
       position++;attempts=0;
       if(position<variants.length){show();app.querySelector('input[type="radio"]').focus();return;}
       app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><p>'+t("You can try another set of triangle questions.","你可以再做一組三角形題。")+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderEqualGroupsPractice(){
+  const family=families.find(f=>f.id==="groups2a"),pool=Array.from({length:family.count-1},(_,i)=>i+1);
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  const variants=[0,...pool.slice(0,2)];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=2&view=practice&skill=groups2a";
+  document.title=t("Equal groups · Practice | MathQuiz","等量分組 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise equal groups","練習等量分組")+'</h1><p>'+t("Complete the multiplication sentence. Try three questions at your own pace.","完成乘法算式，按自己的步伐做三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<div class="group-equation">'+[0,1,2].map(j=>(j?'<span aria-hidden="true">'+(j===1?'×':'=')+'</span>':'')+'<label><span class="sr-only">'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'</span><input id="practice-answer-'+j+'" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'"></label>').join("")+'</div></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const inputs=[0,1,2].map(j=>document.getElementById("practice-answer-"+j));
+      const values=inputs.map(input=>input.value.trim()),feedback=document.getElementById("practice-feedback");
+      if(values.some(v=>!v)){feedback.textContent=t("Complete all three boxes.","請填妥三個空格。 ");inputs[values.findIndex(v=>!v)].focus();return;}
+      attempts++;
+      const correct=equalGroupsAnswer(values,q.equalGroups);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The answer is ","答案是 ")+q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]+". ")+local(q.why);
+        inputs.forEach(input=>input.disabled=true);e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        feedback.textContent=t("Count the equal boxes, then the counters in one box. Add that number once for each box.","先數盒子，再數每盒的圓片。每個盒子都加上相同的數量。");
+        inputs[0].focus();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer-0").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
     };
   }
   show();
@@ -446,7 +491,7 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (grade===2 && !custom && (view!=="practice" || params.get("skill")!=="place3a")) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
@@ -454,6 +499,8 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || params.get("skill
   renderTrianglePractice();
 }else if(grade===2 && view==="practice" && params.get("skill")==="place3a"){
   renderPlaceValuePractice();
+}else if(grade===2 && view==="practice" && params.get("skill")==="groups2a"){
+  renderEqualGroupsPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
   renderMeanPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
@@ -470,7 +517,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || params.get("skill
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 4 or 6.","選擇小一、小二、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes, P2 place value, P4 perimeter and factors, or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形、小二位值、小四周界和因數，或小六百分比和平均數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes, P2 place value and equal groups, P4 perimeter and factors, or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形、小二位值和等量分組、小四周界和因數，或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
@@ -481,6 +528,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || params.get("skill
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=mean1">'+t("Practise averages","練習平均數")+' →</a>');
   app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",2)+'">'+t("Create a P2 quiz","建立小二小測")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=place3a">'+t("Practise place value","練習位值")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=groups2a">'+t("Practise equal groups","練習等量分組")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

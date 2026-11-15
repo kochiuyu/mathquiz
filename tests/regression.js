@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1 and place3a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a and groups2a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -18,7 +18,8 @@
     ["pct2",6,15,"ba21d27c40ec9c4406e8bccb7cc887ac52bab3a994080c44f3eae22168948a95"],
     ["mean1",6,16,"b36e21806e2994332fb4ee7161529652dfbab4d61db021619d2314dba34071d5"],
     ["triangle1",1,9,"ef63e3281f937f151ad0e4bb64171801b845ceefaa574f0d397ae9a395fffe18"],
-    ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"]
+    ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"],
+    ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -75,7 +76,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===388,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===404,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -122,6 +123,24 @@
     for(const input of ["304"," 304 ","３０４"])assert(threeDigitAnswer(input,304),"valid numeral rejected: "+input);
     for(const input of ["0304","304.0","300+4","608/2","+304","305",""])assert(!threeDigitAnswer(input,304),"invalid numeral accepted: "+input);
     assert(decodeItems("place3a-0",2).length===1 && !decodeItems("place3a-0",1).length,"P2 link or cross-grade guard failed");
+  });
+  await check("P2 equal groups · pictures, products and both factor orders",()=>{
+    const family=families.find(f=>f.id==="groups2a"),pairs=new Set();
+    assert(family && family.grade===2 && family.code==="2N3" && family.count===16,"equal-groups family metadata changed");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),g=q.equalGroups;
+      assert(g.boxes>=2 && g.boxes<=5 && g.each>=2 && g.each<=5 && g.total===g.boxes*g.each,"group counts outside scope at "+i);
+      assert(q.figure.kind==="equalGroups" && q.figure.boxes===g.boxes && q.figure.each===g.each,"picture disagrees at "+i);
+      assert(q.marks===1 && q.fields.length===3 && q.answer.join(',')===[g.boxes,g.each,g.total].join(','),"marking data disagrees at "+i);
+      assert(q.why[0].includes(Array(g.boxes).fill(g.each).join(' + ')) && q.why[1].includes('所以'),"bilingual key disagrees at "+i);
+      assert(equalGroupsAnswer([g.boxes,g.each,g.total],g) && equalGroupsAnswer([g.each,g.boxes,g.total],g),"factor order rejected at "+i);
+      assert(!equalGroupsAnswer([g.boxes,g.each,g.total+1],g) && !equalGroupsAnswer([1,g.total,g.total],g),"wrong product or factors accepted at "+i);
+      pairs.add(g.boxes+','+g.each);
+    }
+    assert(pairs.size===16 && pairs.has('3,4') && pairs.has('4,3'),"equal-groups pair coverage changed");
+    const g=family.make(0).equalGroups;
+    assert(equalGroupsAnswer(['３','４','１２'],g) && !equalGroupsAnswer(['3.0','4','12'],g) && !equalGroupsAnswer(['3','4','4+4+4'],g),"number format rule changed");
+    assert(decodeItems('groups2a-0',2).length===1 && !decodeItems('groups2a-0',1).length,"group link or cross-grade guard failed");
   });
   for (const set of sharedSets) {
     await check(set.name+" · IDs, answers and URL",()=>{
@@ -825,6 +844,7 @@
       const home=await open('?lang=en');
       assert([...home.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Create a P2 quiz') && a.href.includes('p=2')),"P2 builder home link missing");
       assert([...home.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise place value') && a.href.includes('skill=place3a')),"P2 practice home link missing");
+      assert([...home.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise equal groups') && a.href.includes('skill=groups2a')),"P2 group practice home link missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P2 place value · Chinese direct PDF",async()=>{
@@ -838,6 +858,69 @@
       assert(raw.includes('/ToUnicode') && raw.includes('/FontFile2'),"P2 PDF selectable text missing");
       assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"P2 paper does not fit one A4 page");
     }finally{frame.remove();}
+  });
+  await check("P2 equal groups · builder, pupil marking, paper and key",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const query='?v=3&lang=en&p=2&items=groups2a-0';
+      const builder=await open(query+'&view=build');
+      assert(builder.querySelector('select[name="groups2a"]') && builder.querySelector('.equal-groups'),"group family missing from builder");
+      const pupil=await open(query);
+      const fields=()=>[...pupil.querySelectorAll('.group-equation input')];
+      assert(fields().length===3 && pupil.querySelector('.equal-groups[aria-label="3 boxes, 4 counters in each box."]'),"group picture or answer fields missing");
+      pupil.querySelector('form').requestSubmit();
+      assert(/Please complete question 1/.test(pupil.getElementById('status').textContent),"blank group answer accepted");
+      [3,4,13].forEach((v,j)=>fields()[j].value=String(v));pupil.querySelector('form').requestSubmit();
+      assert(/Score 0 \/ 1/.test(pupil.getElementById('status').textContent),"wrong group product scored");
+      const reverse=await open(query);
+      [4,3,12].forEach((v,j)=>reverse.querySelectorAll('.group-equation input')[j].value=String(v));reverse.querySelector('form').requestSubmit();
+      assert(/Score 1 \/ 1/.test(reverse.getElementById('status').textContent),"reversed factor order rejected");
+      const paper=await open(query+'&view=paper'),key=await open(query+'&view=key');
+      assert(paper.querySelector('.equal-groups') && key.querySelector('.equal-groups') && paper.querySelectorAll('.group-blank').length===3,"group paper or key missing");
+      assert(key.querySelector('fieldset p b')?.textContent==='3 × 4 = 12' && key.querySelector('fieldset').textContent.includes('4 + 4 + 4 = 12'),"group worked key missing");
+      assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,"group paper and key codes differ");
+      const chinese=await open('?v=3&lang=zh&p=2&items=groups2a-0&view=key');
+      assert(chinese.querySelector('.equal-groups[aria-label*="每盒4粒圓片"]') && chinese.querySelector('fieldset').textContent.includes('所以'),"Chinese group key missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P2 equal-groups practice · hint, retry and follow-ups",async()=>{
+    const frame=await shapeFrame('?lang=en&p=2&view=practice&skill=groups2a');
+    try{
+      const doc=frame.contentDocument,seen=new Set(),signature=()=>doc.querySelector('.equal-groups').outerHTML;
+      const submit=values=>{values.forEach((v,j)=>doc.getElementById('practice-answer-'+j).value=String(v));doc.getElementById('practice-form').requestSubmit();};
+      seen.add(signature());submit([3,'',12]);
+      assert(/Complete all three boxes/.test(doc.getElementById('practice-feedback').textContent),"blank group field accepted");
+      submit([3,4,13]);
+      assert(/Count the equal boxes/.test(doc.getElementById('practice-feedback').textContent) && !doc.getElementById('practice-answer-0').disabled,"group hint or retry missing");
+      submit([4,3,12]);
+      assert(/Correct after a hint/.test(doc.getElementById('practice-feedback').textContent) && doc.getElementById('practice-feedback').textContent.includes('4 + 4 + 4 = 12'),"group worked retry missing");
+      doc.getElementById('practice-next').click();
+      assert(!seen.has(signature()),"group follow-up repeated");seen.add(signature());
+      const counts=doc.querySelector('.equal-groups').getAttribute('aria-label').match(/\d+/g).map(Number);
+      submit([counts[0],counts[1],counts[0]*counts[1]]);
+      assert(/Correct on the first try/.test(doc.getElementById('practice-feedback').textContent),"group first try missing");
+      doc.getElementById('practice-next').click();
+      assert(!seen.has(signature()),"third group picture repeated");
+      submit([1,1,1]);submit([1,1,1]);doc.getElementById('practice-next').click();
+      assert(/Correct on the first try: 1 \/ 3/.test(doc.querySelector('main').textContent),"group first-try count missing");
+    }finally{frame.remove();}
+  });
+  await check("P2 equal groups · Chinese practice and direct PDF",async()=>{
+    const frames=[];
+    try{
+      const practice=await shapeFrame('?lang=zh&p=2&view=practice&skill=groups2a');frames.push(practice);
+      const doc=practice.contentDocument;
+      assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習等量分組' && doc.getElementById('en').getAttribute('href').includes('groups2a'),"Chinese group practice missing");
+      [3,4,13].forEach((v,j)=>doc.getElementById('practice-answer-'+j).value=String(v));doc.getElementById('practice-form').requestSubmit();
+      assert(/先數盒子/.test(doc.getElementById('practice-feedback').textContent),"Chinese group hint missing");
+      const paper=await shapeFrame('?v=3&lang=zh&p=2&items=groups2a-0&view=paper');frames.push(paper);
+      const code=await paper.contentWindow.mathQuizPdf.paperCode();
+      const blob=await paper.contentWindow.mathQuizPdf.generate();
+      const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
+      assert(/^P2-V3-[0-9A-F]{10}$/.test(code) && raw.startsWith('%PDF-') && raw.includes(code),"group PDF or code missing");
+      assert(raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"group PDF text or A4 page missing");
+    }finally{frames.forEach(f=>f.remove());}
   });
   await check("P1 counting practice is linked from the home page",async()=>{
     const home=new URL("../?lang=en",location.href);
