@@ -19,7 +19,7 @@ Each code opens the EDB page containing the official objectives and teaching not
 | [1M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=17) | Length and distance (II) | Measure a strip in centimetres |
 | [1M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=18) | Time (I) | Read a clock face |
 | [1S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=20) | 3-D shapes (I) | Identify a familiar solid |
-| [1S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=21) | 2-D shapes | Pick a triangle among rotated shapes |
+| [1S2 objective 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=21) | 2-D shapes | [Identify a rotated triangle by its three straight sides](p1-flat-shapes.md) |
 | [1S3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=23) | Directions and positions (I) | Describe an object’s position |
 | [1F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=24) | Inquiry and investigation | Explain a pattern with counters |
 
