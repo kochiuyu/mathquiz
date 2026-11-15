@@ -69,6 +69,14 @@ const families = [
         `${children}個盤子各放${each}粒，剩下${left}粒。${total} ÷ ${children} = ${each}，餘數${left}。驗算：${children} × ${each} + ${left} = ${total}。`],
       equalSharing:{total,children,each,left},figure:{kind:"equalSharing",total,children}};
   }},
+  {id:"frac3a",grade:3,code:"3N5",label:["Read a shaded fraction","閱讀塗色分數"],count:12,make(i){
+    const cases=[[4,1,0],[3,2,1],[2,1,0],[4,2,1],[5,3,2],[6,4,1],[8,3,2],[5,0,0],[6,6,0],[8,5,1],[3,1,2],[4,3,1]];
+    const [parts,shaded,start]=cases[i],fraction={parts,shaded,start};
+    const note=shaded===0?["None are shaded, so the fraction is 0.","沒有塗色，所以分數的值是0。"]:shaded===parts?["The whole is shaded, so this fraction equals 1.","整個長條都塗色，所以這個分數等於1。"]:shaded===2 && parts===4?["The same amount is also 1/2, but 2/4 records the parts shown.","相同的份量也可寫成1/2，但2/4記錄了圖中的等分數目。"]:["The top number counts shaded parts; the bottom number counts all equal parts.","上方的數字表示塗色的等分數目；下方表示所有等分的總數。"];
+    return {prompt:["What fraction of this whole bar is shaded? Put the number of shaded parts above the line and the number of equal parts shown below it.","這條完整長條有幾分之幾塗了顏色？把塗色部分的數目寫在分數線上方，把圖中等分的總數寫在下方。"],fields:[["shaded","塗色"],["all parts","所有等分"]],answer:[shaded,parts],marks:1,
+      why:[`There are ${parts} equal parts and ${shaded} ${shaded===1?"is":"are"} shaded. The fraction shown is ${shaded}/${parts}. ${note[0]}`,`共有${parts}個等分，其中${shaded}個塗了顏色。圖中的分數是${shaded}/${parts}。${note[1]}`],
+      fractionBar:fraction,figure:{kind:"fractionBar",...fraction}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
@@ -125,7 +133,7 @@ function renderBuilder(year,selected){
   const undo=readBuilderUndo(year,ids);
   const title=t("Create a quiz","建立小測");
   document.title=title+" | MathQuiz";
-  app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+title+'</h1><nav class="downloads">'+[1,2,4,6].map(n=>'<a href="'+customLink([],"build",n)+'">'+level(n)+'</a>').join("")+'</nav><h2>'+level(year)+'</h2>'+(year===1?'<div class="builder-presets"><p class="builder-preset"><button type="button" id="warmup-preset">'+t("Use five-minute warm-up","使用五分鐘熱身題")+'</button> <span>'+t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。")+'</span></p><p class="builder-preset"><button type="button" id="exit-preset">'+t("Use six-question exit ticket","使用六題離堂小測")+'</button> <span>'+t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。")+'</span></p></div>':'')+'<form id="mix">'+list.map(f=>'<label class="field">'+local(f.label)+' <select name="'+f.id+'">'+[0,1,2,3,4,5].map(n=>'<option '+(n===(ids.length?selected.filter(q=>q.f===f).length:1)?"selected":"")+'>'+n+'</option>').join("")+'</select></label>').join("")+'<p><button>'+t("Generate quiz","產生小測")+'</button></p><p role="status" id="notice"></p></form>';
+  app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+title+'</h1><nav class="downloads">'+[1,2,3,4,6].map(n=>'<a href="'+customLink([],"build",n)+'">'+level(n)+'</a>').join("")+'</nav><h2>'+level(year)+'</h2>'+(year===1?'<div class="builder-presets"><p class="builder-preset"><button type="button" id="warmup-preset">'+t("Use five-minute warm-up","使用五分鐘熱身題")+'</button> <span>'+t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。")+'</span></p><p class="builder-preset"><button type="button" id="exit-preset">'+t("Use six-question exit ticket","使用六題離堂小測")+'</button> <span>'+t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。")+'</span></p></div>':'')+'<form id="mix">'+list.map(f=>'<label class="field">'+local(f.label)+' <select name="'+f.id+'">'+[0,1,2,3,4,5].map(n=>'<option '+(n===(ids.length?selected.filter(q=>q.f===f).length:1)?"selected":"")+'>'+n+'</option>').join("")+'</select></label>').join("")+'<p><button>'+t("Generate quiz","產生小測")+'</button></p><p role="status" id="notice"></p></form>';
   if(year===1){
     app.querySelector("#warmup-preset").onclick=()=>{clearBuilderUndo();location.assign(customLink(warmUpP1,"build",year))};
     app.querySelector("#exit-preset").onclick=()=>{clearBuilderUndo();location.assign(customLink(exitTicketP1,"build",year))};

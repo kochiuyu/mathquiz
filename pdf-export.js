@@ -5,12 +5,12 @@
   "use strict";
   const libraryUrl="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js";
   const libraryIntegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==";
-  const fontUrl="fonts/mathquiz-text.ttf?v=5";
+  const fontUrl="fonts/mathquiz-text.ttf?v=6";
 
   async function paperCode() {
     const params=new URLSearchParams(location.search);
     const grade=params.get("p"),version=params.get("v"),ids=params.get("items");
-    if(!/^[1246]$/.test(grade) || !/^[23]$/.test(version) || !ids)
+    if(!/^[12346]$/.test(grade) || !/^[23]$/.test(version) || !ids)
       throw new Error("This paper has no valid identifying code.");
     const digest=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(ids)));
     const short=Array.from(digest.slice(0,5),n=>n.toString(16).padStart(2,"0")).join("").toUpperCase();

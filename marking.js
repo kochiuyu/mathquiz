@@ -28,3 +28,9 @@ function equalSharingAnswer(values,sharing){
   if(!digits.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)))return false;
   return Number(digits[0])===sharing.each && Number(digits[1])===sharing.left;
 }
+function fractionBarAnswer(values,fraction){
+  if(values.length!==2)return false;
+  const digits=values.map(v=>String(v).normalize("NFKC").trim());
+  if(!digits.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)))return false;
+  return Number(digits[0])===fraction.shaded && Number(digits[1])===fraction.parts;
+}

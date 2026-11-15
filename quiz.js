@@ -1,5 +1,5 @@
 const params = new URLSearchParams(location.search);
-const grade = [1,2,4,6].find(n => String(n) === params.get("p"));
+const grade = [1,2,3,4,6].find(n => String(n) === params.get("p"));
 const fixedP6V4=grade===6 && params.get("v")==="4" && !params.has("items");
 const legacyFixedP6=grade===6 && (params.get("v")==="1" || !params.has("v"));
 const invalidV4=params.get("v")==="4" && !fixedP6V4;
@@ -58,6 +58,12 @@ function figure(type) {
     }).join("");
     return '<svg class="figure equal-sharing" viewBox="0 0 540 240" role="img" aria-label="'+alt+'"><text x="8" y="21">'+t("Counters to share","待分配的圓片")+'</text><text x="283" y="21">'+t("Empty trays","空盤子")+'</text><rect x="8" y="30" width="244" height="181" rx="8" fill="#f2f6f3" stroke="#526f61" stroke-width="2"/>'+dots+trays+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "fractionBar") {
+    const shaded=i=>(i-type.start+type.parts)%type.parts<type.shaded;
+    const cells=Array.from({length:type.parts},(_,i)=>'<rect x="'+(16+i*408/type.parts)+'" y="34" width="'+(408/type.parts)+'" height="68" fill="'+(shaded(i)?'#365f50':'#fffefa')+'" stroke="#20392f" stroke-width="2" data-shaded="'+shaded(i)+'"/>').join("");
+    const alt=t(`One whole bar in ${type.parts} equal parts: `,`一條完整長條分為${type.parts}個等分：`)+Array.from({length:type.parts},(_,i)=>shaded(i)?t("shaded","塗色"):t("not shaded","沒有塗色")).join(t(", ","、"))+".";
+    return '<svg class="figure fraction-bar" viewBox="0 0 440 116" role="img" aria-label="'+alt+'"><text x="16" y="23">'+t("One whole","一個整體")+'</text>'+cells+'</svg>';
+  }
   if (typeof type === "object" && type.kind === "placeValue") {
     const counts=[type.hundreds,type.tens,type.ones];
     const labels=ch?["百位","十位","個位"]:["Hundreds","Tens","Ones"];
@@ -102,13 +108,14 @@ function controls(q,i,paper) {
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
   if(q.equalGroups)return '<div class="group-equation">'+[0,1,2].map(j=>(j?'<span aria-hidden="true">'+(j===1?'×':'=')+'</span>':'')+(paper?'<span class="group-blank">_______</span>':'<label><span class="sr-only">'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'</span><input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'" name="q'+i+'f'+j+'"></label>')).join("")+'</div>';
   if(q.equalSharing)return '<div class="sharing-response">'+[0,1].map(j=>'<label>'+t(["Each child gets","Left over"][j],["每人分得","剩下"][j])+' '+(paper?'<span class="sharing-blank">_______</span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["Each child gets","Left over"][j],["每人分得","剩下"][j])+'" name="q'+i+'f'+j+'">')+' '+t("counters","粒圓片")+'</label>').join("")+'</div>'+(paper?'':'<small class="response-help">'+t("Enter a whole-number numeral in each box, including 0 when none are left over.","兩格都請輸入整數數字；沒有剩餘也要填0。")+'</small>');
+  if(q.fractionBar)return '<div class="fraction-response"><div class="fraction-stack">'+[0,1].map(j=>(j?'<span class="fraction-rule" aria-hidden="true"></span>':'')+(paper?'<span class="fraction-blank">_______</span>':'<label><span class="sr-only">'+t(["Shaded parts (numerator)","Equal parts shown (denominator)"][j],["塗色部分（分子）","圖中所有等分（分母）"][j])+'</span><input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["Shaded parts (numerator)","Equal parts shown (denominator)"][j],["塗色部分（分子）","圖中所有等分（分母）"][j])+'" name="q'+i+'f'+j+'"></label>')).join("")+'</div><span>'+t("Top: shaded parts; bottom: equal parts shown.","上方：塗色部分；下方：圖中所有等分。")+'</span></div>';
   if(q.inlineAnswer)return "";
   return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1 || q.placeValue || q.pictogram?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':q.placeValue && !paper?'<small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small>':q.pictogram && !paper?'<small class="response-help">'+t("Count one pupil for each picture.","每個圖案代表一名學生。")+'</small>':"");
 }
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.fractionBar?q.answer.join("/"):q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -131,6 +138,7 @@ function mark(form) {
     }
     if(q.equalGroups)return Number(equalGroupsAnswer(values,q.equalGroups));
     if(q.equalSharing)return Number(equalSharingAnswer(values,q.equalSharing));
+    if(q.fractionBar)return Number(fractionBarAnswer(values,q.fractionBar));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
     if(q.pictogram)return Number(pictogramAnswer(values[0],q.answer[0]));
     return values.reduce((sum,v,j)=>sum+Number(numericAnswer(v,q.answer[j],strictP1)),0);
@@ -245,6 +253,43 @@ function renderEqualSharingPractice(){
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
       }else{
         feedback.textContent=t("Give one counter to each child in turn. Stop when there are not enough to give everyone another counter. Count one tray and the counters left.","輪流給每人一粒圓片；不足以再每人分一粒時就停下來。數一數每盤有多少粒，以及剩下多少粒。");
+        inputs[0].focus();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.getElementById("practice-answer-0").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderFractionPractice(){
+  const family=families.find(f=>f.id==="frac3a"),variants=[0,1,3];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=3&view=practice&skill=frac3a";
+  document.title=t("Shaded fractions · Practice | MathQuiz","塗色分數 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise shaded fractions","練習塗色分數")+'</h1><p>'+t("Count the equal parts in one whole bar. Try three questions at your own pace.","數一數完整長條中的等分，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<div class="fraction-response"><div class="fraction-stack">'+[0,1].map(j=>(j?'<span class="fraction-rule" aria-hidden="true"></span>':'')+'<label><span class="sr-only">'+t(["Shaded parts (numerator)","Equal parts shown (denominator)"][j],["塗色部分（分子）","圖中所有等分（分母）"][j])+'</span><input id="practice-answer-'+j+'" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["Shaded parts (numerator)","Equal parts shown (denominator)"][j],["塗色部分（分子）","圖中所有等分（分母）"][j])+'"></label>').join("")+'</div><span>'+t("Top: shaded parts; bottom: equal parts shown.","上方：塗色部分；下方：圖中所有等分。")+'</span></div></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const inputs=[0,1].map(j=>document.getElementById("practice-answer-"+j));
+      const values=inputs.map(input=>input.value.trim()),feedback=document.getElementById("practice-feedback");
+      if(values.some(v=>!v)){feedback.textContent=t("Complete both fraction boxes, including 0 when none are shaded.","請填妥分數的兩格；沒有塗色也要填0。");inputs[values.findIndex(v=>!v)].focus();return;}
+      attempts++;
+      const correct=fractionBarAnswer(values,q.fractionBar);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The pictured counts give ","圖中的數目是 ")+q.answer.join("/")+". ")+local(q.why);
+        inputs.forEach(input=>input.disabled=true);e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const pair=values.map(v=>String(v).normalize("NFKC"));
+        const equivalent=pair.every(v=>/^(?:0|[1-9][0-9]*)$/.test(v)) && Number(pair[1])>0 && Number(pair[0])*q.fractionBar.parts===Number(pair[1])*q.fractionBar.shaded;
+        feedback.textContent=equivalent?t("That fraction has the same value, but this question asks for the counts in the picture. Count the shaded parts for the top and all equal parts for the bottom.","這個分數的值相同，但這題要記錄圖中的數目。上方填塗色的等分數目，下方填所有等分的總數。")
+          :t("Count all the equal parts for the number below the line. Then count only the shaded parts for the number above it.","先數所有等分，把總數寫在分數線下方；再數塗色的等分，把數目寫在上方。");
         inputs[0].focus();
       }
     };
@@ -580,7 +625,7 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || params.get("skill")!=="frac3a")) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
@@ -594,6 +639,8 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   renderPictogramPractice();
 }else if(grade===2 && view==="practice" && params.get("skill")==="share2a"){
   renderEqualSharingPractice();
+}else if(grade===3 && view==="practice" && params.get("skill")==="frac3a"){
+  renderFractionPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
   renderMeanPractice();
 }else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
@@ -608,9 +655,9 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
     {ids:warmUpP1,title:t("P1 five-minute warm-up","小一五分鐘熱身題"),description:t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。"),edit:t("Edit warm-up","編輯熱身題"),pupil:t("Try warm-up","試做熱身題")},
     {ids:exitTicketP1,title:t("Six-question P1 exit ticket","小一六題離堂小測"),description:t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。"),edit:t("Edit exit ticket","編輯離堂小測"),pupil:t("Try exit ticket","試做離堂小測")}
   ];
-  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 4 or 6.","選擇小一、小二、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
+  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 3, 4 or 6.","選擇小一、小二、小三、小四或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes, P2 place value, equal groups, pictograms and equal sharing, P4 perimeter and factors, or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形、小二位值、等量分組、象形圖和平均分配、小四周界和因數，或小六百分比和平均數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions; P4 perimeter and factors; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數；小四周界和因數；或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
@@ -620,10 +667,12 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=pct2">'+t("Practise percentages","練習百分比")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=mean1">'+t("Practise averages","練習平均數")+' →</a>');
   app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",2)+'">'+t("Create a P2 quiz","建立小二小測")+' →</a>');
+  app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",3)+'">'+t("Create a P3 quiz","建立小三小測")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=place3a">'+t("Practise place value","練習位值")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=groups2a">'+t("Practise equal groups","練習等量分組")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=pict2a">'+t("Practise pictograms","練習象形圖")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=share2a">'+t("Practise equal sharing","練習平均分配")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=frac3a">'+t("Practise fractions","練習分數")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);
