@@ -206,6 +206,37 @@
       }
     }
   });
+  await check("Paper and key share a versioned identifying code",async()=>{
+    const codes=[];
+    const ids="count20a-12.next1-10";
+    for(const query of [
+      "?v=3&lang=en&p=1&items="+ids+"&view=paper",
+      "?v=3&lang=zh&p=1&items="+ids+"&view=key",
+      "?v=2&lang=en&p=1&items="+ids+"&view=key",
+      "?v=3&lang=en&p=1&items=next1-10.count20a-12&view=paper"
+    ]) {
+      const frame=document.createElement("iframe");
+      frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+      try {
+        await new Promise((resolve,reject)=>{
+          const timer=setTimeout(()=>reject(new Error("coded view did not load")),10000);
+          frame.onload=()=>{clearTimeout(timer);resolve();};
+          frame.onerror=()=>{clearTimeout(timer);reject(new Error("coded view failed to load"));};
+          const url=new URL("../"+query,location.href);
+          url.searchParams.set("paperCodeCheck",String(Date.now()));
+          frame.src=url;
+          document.body.appendChild(frame);
+        });
+        codes.push(await frame.contentWindow.mathQuizPdf.paperCode());
+      } finally {
+        frame.remove();
+      }
+    }
+    assert(/^P1-V3-[0-9A-F]{10}$/.test(codes[0]),"invalid paper code format");
+    assert(codes[0]===codes[1],"paper and key codes differ across languages");
+    assert(codes[0]!==codes[2],"link version is absent from the code");
+    assert(codes[0]!==codes[3],"question order is absent from the code");
+  });
   await check("12-question mixed Chinese PDF · A4 selectable text",async()=>{
     const frame=document.createElement("iframe");
     frame.setAttribute("aria-hidden","true");
@@ -222,6 +253,7 @@
         document.body.appendChild(frame);
       });
       assert(frame.contentDocument.querySelectorAll("main fieldset").length===12,"mixed paper lost questions");
+      const code=await frame.contentWindow.mathQuizPdf.paperCode();
       const blob=await frame.contentWindow.mathQuizPdf.generate();
       const bytes=new Uint8Array(await blob.arrayBuffer());
       const raw=new TextDecoder("latin1").decode(bytes);
@@ -229,6 +261,7 @@
       const pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
       assert(pages>=3 && pages<=5,"mixed paper has an unexpected page count: "+pages);
       assert(raw.includes("/ToUnicode") && raw.includes("/FontFile2"),"mixed PDF lacks embedded selectable text");
+      assert(raw.includes(code),"mixed PDF metadata lacks its paper code");
     } finally {
       frame.remove();
     }

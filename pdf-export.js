@@ -7,6 +7,16 @@
   const libraryIntegrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==";
   const fontUrl="fonts/mathquiz-text.ttf";
 
+  async function paperCode() {
+    const params=new URLSearchParams(location.search);
+    const grade=params.get("p"),version=params.get("v"),ids=params.get("items");
+    if(!/^[146]$/.test(grade) || !/^[23]$/.test(version) || !ids)
+      throw new Error("This paper has no valid identifying code.");
+    const digest=new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(ids)));
+    const short=Array.from(digest.slice(0,5),n=>n.toString(16).padStart(2,"0")).join("").toUpperCase();
+    return "P"+grade+"-V"+version+"-"+short;
+  }
+
   function waitForFrame(frame) {
     return new Promise((resolve,reject)=>{
       const timeout=setTimeout(()=>reject(new Error("The PDF view did not load.")),15000);
@@ -155,6 +165,22 @@
     }
   }
 
+  function addFooters(pdf,code,chinese) {
+    const total=pdf.getNumberOfPages();
+    pdf.setProperties({title:"MathQuiz "+code});
+    for(let page=1;page<=total;page++) {
+      pdf.setPage(page);
+      pdf.setFont("MathQuizText","normal");
+      pdf.setFontSize(8);
+      pdf.setTextColor(60,70,65);
+      pdf.setDrawColor(178,190,180);
+      pdf.setLineWidth(0.2);
+      pdf.line(17,285,193,285);
+      pdf.text((chinese?"卷號 ":"Paper code ")+code,17,289);
+      pdf.text(chinese?"第 "+page+" / "+total+" 頁":"Page "+page+" of "+total,193,289,{align:"right"});
+    }
+  }
+
   async function generate() {
     const frame=document.createElement("iframe");
     frame.setAttribute("aria-hidden","true");
@@ -186,6 +212,7 @@
       while(pdf.getNumberOfPages()>lastTextPage)
         pdf.deletePage(pdf.getNumberOfPages());
       await addTextLayer(pdf,textRuns,pageSize);
+      addFooters(pdf,await paperCode(),document.documentElement.lang.startsWith("zh"));
       const blob=pdf.output("blob");
       const signature=new TextDecoder("ascii").decode(await blob.slice(0,5).arrayBuffer());
       if(signature!=="%PDF-" || blob.size<1000)throw new Error("The PDF could not be created.");
@@ -204,9 +231,7 @@
       const blob=await generate();
       const params=new URLSearchParams(location.search);
       const view=params.get("view")==="key"?"key":"paper";
-      const ids=params.get("items") || "";
-      const hash=Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(ids)))).slice(0,4).map(n=>n.toString(16).padStart(2,"0")).join("");
-      const filename="mathquiz-p"+params.get("p")+"-"+(chinese?"zh":"en")+"-"+view+"-"+hash+".pdf";
+      const filename="mathquiz-"+(await paperCode()).toLowerCase()+"-"+(chinese?"zh":"en")+"-"+view+".pdf";
       const url=URL.createObjectURL(blob);
       const link=document.createElement("a");
       link.href=url;
@@ -223,5 +248,5 @@
     }
   }
 
-  window.mathQuizPdf={generate,download};
+  window.mathQuizPdf={generate,download,paperCode};
 })();
