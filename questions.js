@@ -16,3 +16,10 @@ const quizzes = {
     {code:"6D1", prompt:["A pupil read 12, 18 and 15 pages over three days. How many pages per day on average?","一名學生在三天內分別閱讀了12、18和15頁。平均每天閱讀多少頁？"], fields:[["pages","頁"]], answer:[15], why:["(12 + 18 + 15) ÷ 3 = 45 ÷ 3 = 15 pages per day.","(12 + 18 + 15) ÷ 3 = 45 ÷ 3 = 15（頁）。"]}
   ]
 };
+// Version 4 corrects the P6 percentage curriculum label in new fixed output.
+// The released version 1 questions and their paper/key files remain unchanged.
+function fixedQuiz(year,version="1"){
+  const items=quizzes[year]||[];
+  return year===6 && version==="4" ? items.map((q,i)=>i===0?{...q,code:"6N4"}:q) : items;
+}
+
