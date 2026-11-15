@@ -1,6 +1,6 @@
 # P3 shaded fractions of one whole · item brief
 
-Status: **draft, not live**. This brief defines the first bilingual P3 fractions family. Manual pupil and hands-on screen-reader checks remain deferred at the user's request.
+Status: **live since 15 November 2026** as `frac3a`. The twelve permanent variants, two-field marking rule, paper, key and practice follow this brief. Manual pupil and hands-on screen-reader checks remain deferred at the user's request.
 
 ## Curriculum match
 
@@ -8,7 +8,7 @@ Status: **draft, not live**. This brief defines the first bilingual P3 fractions
 - The [2018 Key Stage 1 explanatory notes, 3N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=54) emphasise equal parts and reading/writing the numerator, denominator and fraction line. Fractions are at most 1; the notes include 0 and 1 as boundary values. Equivalent fractions, comparison, and same-denominator addition/subtraction are separate objectives. This family's worked feedback may note equivalence but does not separately test those objectives.
 - **Prerequisites:** Counting up to eight and distinguishing a part from the whole. The curriculum match is this project's interpretation of EDB sources, not EDB approval or evidence of pupil mastery.
 
-## Proposed item
+## Released item
 
 The picture shows one rectangular bar divided into equal parts. Some are shaded. Ask for the number shaded over the total number of equal parts **as drawn**. This instruction makes the requested response unambiguous when a mathematically equivalent fraction uses different counts.
 
@@ -21,7 +21,7 @@ The picture shows one rectangular bar divided into equal parts. Some are shaded.
 
 **Diagram contract:** Draw one outlined whole bar partitioned into equal-width, bordered cells, with shaded cells dark enough in grayscale. Vary the shaded cells' positions so the pupil cannot rely on “the first few cells”. Paper, key and practice derive from the same stored record. The alt text describes the one whole, number of equal cells and an ordered sequence of “shaded” and “not shaded” cells, without announcing the fraction. Keep the diagram and stacked numerator/denominator response together on A4; keyboard order is numerator then denominator.
 
-**Variant plan:** Freeze twelve permanent IDs before release. Use denominators 2, 3, 4, 5, 6 and 8, with numerator from 0 to denominator. Include `1/4`, `2/3`, `2/4`, `0/5` and `6/6`, and more than one shading arrangement. Each record stores part count, shaded count, shaded positions, bilingual prompt, worked step and diagram data. Older IDs and shared links must remain unchanged.
+**Released variants:** `frac3a-0` through `frac3a-11` are deterministic. They use denominators 2, 3, 4, 5, 6 and 8, with numerator from 0 to denominator. They include `1/4`, `2/3`, `2/4`, `0/5` and `6/6`, with varied shaded positions. Each record stores part count, shaded count, shading position, bilingual prompt, worked step and diagram data. Older IDs and shared links remain unchanged.
 
 ## Marking, practice and release checks
 
