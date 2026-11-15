@@ -1,4 +1,8 @@
 // Shared links use permanent template and variant IDs. Add new versions under new IDs.
+function percentageQuestion(i){
+  const total=[20,40,50][i%3],pct=10+10*Math.floor(i/3),n=total*pct/100;
+  return numeric([`Of ${total} pupils, ${n} chose badminton. What percentage chose badminton?`,`${total}名學生中有${n}人選擇羽毛球。選擇羽毛球的學生佔百分之幾？`],["%","%"],pct,`${n} ÷ ${total} × 100% = ${pct}%`);
+}
 const families = [
   {id:"add1", grade:1, code:"1N2", label:["Addition to 10","10以內的加法"], count:7, make(i){
     const a=i+1,b=1+(i*3 % (10-a));
@@ -36,10 +40,8 @@ const families = [
     const options=Array.from({length:8},(_,j)=>j+2), good=options.filter(x=>n%x===0).slice(0,2),bad=options.filter(x=>n%x!==0).slice(0,2);
     return {prompt:[`Select every factor of ${n} in the list.`,`選出下列所有${n}的因數。`],multi:true,choices:[...good,...bad].sort((a,b)=>a-b).map(String),answer:good.map(String),why:[good.map(x=>`${x} × ${n/x} = ${n}`).join(", "),good.map(x=>`${x} × ${n/x} = ${n}`).join("；")]};
   }},
-  {id:"pct1",grade:6,code:"6N3",label:["Finding a percentage","求百分比"],count:15,make(i){
-    const total=[20,40,50][i%3], pct=10+10*Math.floor(i/3),n=total*pct/100;
-    return numeric([`Of ${total} pupils, ${n} chose badminton. What percentage chose badminton?`,`${total}名學生中有${n}人選擇羽毛球。選擇羽毛球的學生佔百分之幾？`],["%","%"],pct,`${n} ÷ ${total} × 100% = ${pct}%`);
-  }},
+  {id:"pct1",grade:6,code:"6N3",label:["Finding a percentage","求百分比"],count:15,retired:true,make(i){return percentageQuestion(i)}},
+  {id:"pct2",grade:6,code:"6N4",label:["Finding a percentage","求百分比"],count:15,make(i){return percentageQuestion(i)}},
   {id:"mean1",grade:6,code:"6D1",label:["Arithmetic mean","算術平均數"],count:16,make(i){
     const a=10+i,b=a+7,c=a+2;
     return numeric([`A library lent ${a}, ${b} and ${c} books on three successive days. How many books did it lend per day on average?`,`圖書館連續三天分別借出${a}、${b}和${c}本書。平均每天借出多少本書？`],["books","本"],a+3,`(${a} + ${b} + ${c}) ÷ 3 = ${a+3}`);
@@ -80,7 +82,7 @@ function readBuilderUndo(year,ids){
 }
 function clearBuilderUndo(){try{sessionStorage.removeItem(builderUndoKey)}catch{}}
 function renderBuilder(year,selected){
-  const list=families.filter(f=>f.grade===year);
+  const list=families.filter(f=>f.grade===year && !f.retired);
   const ids=selected.map(q=>q.id);
   const undo=readBuilderUndo(year,ids);
   const title=t("Create a quiz","建立小測");
@@ -108,4 +110,5 @@ function renderBuilder(year,selected){
 function printLinks(ids,year){
   return ["paper","key"].map(v=>'<a href="'+customLink(ids,v,year)+'">'+(v==="paper"?t("Print pupil paper / PDF","列印學生試卷／PDF"):t("Print worked key / PDF","列印解答／PDF"))+'</a>').join("");
 }
+
 
