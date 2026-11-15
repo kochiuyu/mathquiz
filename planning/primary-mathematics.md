@@ -76,7 +76,7 @@ Code check: **15 November 2026**. The purpose labels describe the decision each 
 | [2S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=42) | Angles | Pick a right angle |
 | [2S3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=44) | Directions and positions (II) | Read a simple compass diagram |
 | [2S4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=45) | Quadrilaterals (I) | Identify a rectangle |
-| [2D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) | Pictograms | Read a count from a picture graph |
+| [2D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=40) | Pictograms | [Read one category's count from a one-to-one pictogram](p2-pictograms.md) |
 | [2F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=48) | Inquiry and investigation | Describe a second way to group objects |
 
 #### Live P2 place-value family
@@ -86,6 +86,10 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N1 objectives 1â€
 #### Live P2 equal-groups family
 
 Source check: **15 November 2026**. The [2017 EDB supplement, 2N3 objectives 1 and 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=27) and [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28) support a pictured equal-groups multiplication sentence and repeated-addition explanation. The [bilingual item brief](p2-equal-groups.md) accepts either order of the two pictured factors and defines answer, practice and release checks. Sixteen `groups2a` variants are live. They cover pictured equal-group sentences, not the full 2N3 unit or pupil mastery.
+
+#### Planned P2 pictogram family
+
+Source check: **15 November 2026**. The [2017 EDB supplement, 2D1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=40) covers interpreting pictograms. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47) require one-to-one symbols and horizontal and vertical forms. The [bilingual item brief](p2-pictograms.md) proposes a bounded picture-count question, answer rule, accessible chart and release checks. This family is **planned, not live**; it does not assess construction or the whole 2D1 unit.
 
 ### Primary 3
 
