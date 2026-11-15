@@ -285,6 +285,29 @@
     }
     assert(codes[0]===codes[1],"paper and key print different codes");
   });
+  await check("Browser-print paper and key use numbered A4 pages",async()=>{
+    for(const view of ["paper","key"]){
+      const frame=document.createElement("iframe");
+      frame.style.cssText="position:absolute;left:-10000px;width:640px;height:480px;border:0";
+      try{
+        await new Promise((resolve,reject)=>{
+          const timer=setTimeout(()=>reject(new Error("numbered view did not load")),10000);
+          frame.onload=()=>{clearTimeout(timer);resolve();};
+          frame.onerror=()=>{clearTimeout(timer);reject(new Error("numbered view failed to load"));};
+          frame.src=new URL("../?v=3&lang=en&p=1&items=count20a-12.next1-10&view="+view,location.href);
+          document.body.appendChild(frame);
+        });
+        const rules=Array.from(frame.contentDocument.styleSheets).flatMap(sheet=>Array.from(sheet.cssRules));
+        const page=rules.find(rule=>rule.type===frame.contentWindow.CSSRule.PAGE_RULE && rule.selectorText==="quiz-sheet");
+        assert(page && /size:\s*a4/i.test(page.cssText),"numbered A4 page is missing");
+        assert(/@bottom-right\s*\{[^}]*counter\(page\)[^}]*counter\(pages\)/i.test(page.cssText),
+          "page and total counters are missing from the footer");
+        assert(rules.some(rule=>rule.type===frame.contentWindow.CSSRule.MEDIA_RULE && rule.conditionText.trim()==="print" &&
+          Array.from(rule.cssRules).some(inner=>inner.selectorText==="body:has(.print-tools)" &&
+            inner.style.page==="quiz-sheet")),"numbered pages are not scoped to print views");
+      }finally{frame.remove();}
+    }
+  });
   await check("12-question mixed Chinese PDF · A4 selectable text",async()=>{
     const frame=document.createElement("iframe");
     frame.setAttribute("aria-hidden","true");
