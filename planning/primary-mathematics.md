@@ -106,7 +106,7 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1â€
 | [3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) | Fractions (I) | [Write the shaded-part count over the equal-part count for one whole](p3-shaded-fractions.md) |
 | [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | Select a suitable length unit |
 | [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | Compare two time intervals in seconds |
-| [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) | Capacity | Read the scale on a measuring jug |
+| [3M3 objectives 6â€“7](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) | Capacity | [Read the water level on a marked measuring cup in mL](p3-measuring-cup.md) |
 | [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | Express an afternoon time using the 24-hour clock |
 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | Read a mass from a scale |
 | [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | Classify a pictured quadrilateral |
@@ -117,6 +117,10 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1â€
 #### Live P3 shaded-fraction family
 
 Source check: **15 November 2026**. [EDB 3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) covers fractions as parts of one whole object or a set. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=54) emphasise equal parts and reading and writing numerator and denominator, with fractions no greater than 1. The [bilingual item brief](p3-shaded-fractions.md) records the released shaded rectangular-whole task, including zero and full cases. Twelve `frac3a` variants are live. They do not cover fractions of a set or the full 3N5 unit; manual pupil and hands-on screen-reader checks are deferred.
+
+#### Planned P3 measuring-cup family
+
+Source check: **15 November 2026**. [EDB 3M3 objectives 6â€“7](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) cover measuring and comparing capacities in litres and millilitres and recording with an appropriate unit. The [2018 KS1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=59) discuss reading marks on a measuring cup at the water level. The [bilingual item brief](p3-measuring-cup.md) proposes twelve whole-millilitre scale readings from a pictured cup. It does not assess physical measurement, comparison or the full 3M3 unit. This family is not yet implemented; manual pupil and hands-on screen-reader checks are deferred.
 
 ### Primary 4
 
