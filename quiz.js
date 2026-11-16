@@ -16,6 +16,20 @@ const app = document.getElementById("app");
 if(fixedP6V4)quizzes[6]=fixedQuiz(6,"4");
 function figure(type) {
   if (!type) return "";
+  if (typeof type === "object" && type.kind === "measureCompare") {
+    const distance=type.subject==="distance",x=48,scale=32;
+    const rows=[type.a,type.b].map((count,j)=>{
+      const y=j?115:50,label="AB"[j],end=x+count*scale;
+      if(distance){
+        const segments=type.units?Array.from({length:count},(_,k)=>'<ellipse cx="'+(x+k*scale+16)+'" cy="'+(y-12)+'" rx="9" ry="4" fill="none" stroke="#526f61" stroke-width="1.5"/><path d="M'+(x+k*scale)+' '+(y-5)+'v10" stroke="#526f61"/>').join(''):'';
+        return '<path d="M'+x+' '+y+'H'+end+'" stroke="#32755e" stroke-width="3"/><circle cx="'+x+'" cy="'+y+'" r="4" fill="#20392f"/><circle cx="'+end+'" cy="'+y+'" r="5" fill="#a5541f"/><text x="'+(end+12)+'" y="'+(y+5)+'">'+label+'</text>'+segments;
+      }
+      const blocks=type.units?Array.from({length:count},(_,k)=>'<rect x="'+(x+k*scale)+'" y="'+(y-13)+'" width="'+scale+'" height="26" fill="'+(j?'#d9e9e2':'#e8ded0')+'" stroke="#526f61"/><ellipse cx="'+(x+k*scale+16)+'" cy="'+y+'" rx="9" ry="5" fill="none" stroke="#526f61" stroke-width="1.5"/>').join(''):'<rect x="'+x+'" y="'+(y-13)+'" width="'+(count*scale)+'" height="26" fill="'+(j?'#d9e9e2':'#e8ded0')+'" stroke="#526f61" stroke-width="2"/>';
+      return '<text x="20" y="'+(y+5)+'">'+label+'</text>'+blocks;
+    }).join('');
+    const alt=distance?t("Two straight distances from the same Start point to A and B.","由同一起點沿直線至A點和B點的兩段距離。") :t("Two ribbons labelled A and B with their starting ends aligned.","標示A和B的兩條絲帶，起點已對齊。");
+    return '<svg class="figure measure-compare" viewBox="0 0 360 160" role="img" aria-label="'+alt+'">'+(distance?'<text x="48" y="22" text-anchor="middle">'+t("Start","起點")+'</text>':'<path d="M48 23v126" stroke="#20392f" stroke-width="2"/>')+rows+(type.units?'<text x="48" y="151">'+t("One segment = one paperclip length","每段 = 一個回形針長")+'</text>':'')+'</svg>';
+  }
   if (typeof type === "object" && type.kind === "missingSide") {
     const horizontal=type.missing==="length",top=horizontal?"?":type.length,side=horizontal?type.width:"?";
     const alt=t(`Rectangle with perimeter ${type.perimeter} cm. The ${horizontal?"short":"long"} side is ${type.known} cm; find the other side marked question mark.`,`長方形周界為${type.perimeter}厘米。已知${horizontal?"短":"長"}邊長${type.known}厘米，求問號所示的另一邊。`);
@@ -293,8 +307,8 @@ function renderNumber100Practice(skill){
   show();
 }
 function renderChoice100Practice(skill){
-  const family=families.find(f=>f.id===skill),variants=skill==="oddeven100a"?[0,1,8]:[0,5,9];
-  const title=skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
+  const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,variants=measure?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
+  const title=measure?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(title)+" · "+t("Practice","練習")+" | MathQuiz";
@@ -311,7 +325,8 @@ function renderChoice100Practice(skill){
         feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0])+". ")+local(q.why);
         form.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
-      }else feedback.textContent=skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
+      }else feedback.textContent=measure?t(measure.units?"Count the equal paperclip lengths from the same starting point.":measure.subject==="distance"?"Compare the straight lines from Start to the two points.":"Line up the starting ends and compare where the ribbons end.",measure.units?"由同一起點數一數等長的回形針單位。":measure.subject==="distance"?"比較由起點至兩點的直線距離。":"把絲帶的起點對齊，再比較終點的位置。")
+        :skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
         :t("Use the box of 10 as a reference. Think in tens, without counting each counter.","以10粒一盒作參考，想想大約有幾個十，不用逐粒點算。");
     };
     document.getElementById("practice-next").onclick=()=>{
@@ -1275,6 +1290,10 @@ const practiceCatalogue=[
   {grade:1,skill:"columnsub1a",label:["Practise subtraction columns","練習減法直式"],render:()=>renderColumnPractice("columnsub1a")},
   {grade:1,skill:"storyadd1a",label:["Practise addition stories","練習加法文字題"],render:()=>renderNumber100Practice("storyadd1a")},
   {grade:1,skill:"storysub1a",label:["Practise subtraction stories","練習減法文字題"],render:()=>renderNumber100Practice("storysub1a")},
+  {grade:1,skill:"lengthdirect1a",label:["Practise comparing lengths","練習比較長度"],render:()=>renderChoice100Practice("lengthdirect1a")},
+  {grade:1,skill:"distancedirect1a",label:["Practise comparing distances","練習比較距離"],render:()=>renderChoice100Practice("distancedirect1a")},
+  {grade:1,skill:"lengthunits1a",label:["Practise lengths in paperclip units","練習用回形針單位比較長度"],render:()=>renderChoice100Practice("lengthunits1a")},
+  {grade:1,skill:"distanceunits1a",label:["Practise distances in paperclip units","練習用回形針單位比較距離"],render:()=>renderChoice100Practice("distanceunits1a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},

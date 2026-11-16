@@ -3,6 +3,17 @@ function percentageQuestion(i){
   const total=[20,40,50][i%3],pct=10+10*Math.floor(i/3),n=total*pct/100;
   return numeric([`Of ${total} pupils, ${n} chose badminton. What percentage chose badminton?`,`${total}名學生中有${n}人選擇羽毛球。選擇羽毛球的學生佔百分之幾？`],["%","%"],pct,`${n} ÷ ${total} × 100% = ${pct}%`);
 }
+function measureCompareQuestion(i,subject,units){
+  const pairs=[[3,7],[8,5],[6,2],[4,8],[7,3],[2,6],[5,8],[8,4],[3,6],[7,4],[5,2],[2,7]];
+  const [a,b]=pairs[i],answer=a>b?"A":"B",distance=subject==="distance";
+  const prompt=distance
+    ?[units?"Each equal segment is one paperclip length. Which point is farther from Start by straight distance, A or B?":"Which point is farther from Start by straight distance, A or B?",units?"每段等長的線代表一個回形針的長度。由起點沿直線量度，A點還是B點較遠？":"由起點沿直線量度，A點還是B點較遠？"]
+    :[units?"Each equal block is one paperclip length. Which ribbon is longer, A or B?":"The two ribbons start at the same line. Which ribbon is longer, A or B?",units?"每個等長的方格代表一個回形針的長度。A絲帶還是B絲帶較長？":"兩條絲帶的起點對齊。A絲帶還是B絲帶較長？"];
+  const why=units
+    ?[`${answer} has ${Math.max(a,b)} paperclip lengths; the other has ${Math.min(a,b)}. ${answer} is ${distance?"farther from Start":"longer"}.`,`${answer}有${Math.max(a,b)}個回形針長，另一個有${Math.min(a,b)}個。${answer}${distance?"離起點較遠":"較長"}。`]
+    :[`${answer} ends farther from the shared starting line. ${distance?"Compare straight distances between points.":"Align the ribbon ends before comparing."}`,`${answer}的終點離共同起點較遠。${distance?"比較兩點之間的直線距離。":"比較絲帶前要把起點對齊。"}`];
+  return {prompt,choices:["A","B"],answer:[answer],marks:1,why,figure:{kind:"measureCompare",a,b,subject,units},measureCompare:{a,b,subject,units,answer}};
+}
 const families = [
   {id:"add1", grade:1, code:"1N2", label:["Addition to 10","10以內的加法"], count:7, make(i){
     const a=i+1,b=1+(i*3 % (10-a));
@@ -138,6 +149,10 @@ const families = [
     const units=[["pencils","枝鉛筆"],["apples","個蘋果"],["picture books","本圖畫書"],["pupils","名學生"]];
     return {...numeric(prompts[scenario],units[scenario],result,[`${a} − ${b} = ${result}. Check: ${result} + ${b} = ${a}.`,`計算${a} − ${b} = ${result}。驗算：${result} + ${b} = ${a}。`]),numberTo100:true,wordProblem:{a,b,operation:"subtract",result,scenario}};
   }},
+  {id:"lengthdirect1a",grade:1,code:"1M1",label:["Compare aligned ribbon lengths","比較對齊的絲帶長度"],count:12,make(i){return measureCompareQuestion(i,"length",false)}},
+  {id:"distancedirect1a",grade:1,code:"1M1",label:["Compare straight distances","比較直線距離"],count:12,make(i){return measureCompareQuestion(i,"distance",false)}},
+  {id:"lengthunits1a",grade:1,code:"1M1",label:["Compare ribbon lengths in paperclip units","用回形針作單位比較絲帶長度"],count:12,make(i){return measureCompareQuestion(i,"length",true)}},
+  {id:"distanceunits1a",grade:1,code:"1M1",label:["Compare distances in paperclip units","用回形針作單位比較距離"],count:12,make(i){return measureCompareQuestion(i,"distance",true)}},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;

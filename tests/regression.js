@@ -38,6 +38,10 @@
     ["columnsub1a",1,12,"fc7bb15611db807259f94eed6a4a8e9ec8ad03ee20780577c8502cfcc7206cca"],
     ["storyadd1a",1,12,"1d8567cf174391023964f9b9bd4334329fee219a20525ba960d4f3e7124dea5a"],
     ["storysub1a",1,12,"ce3598aa5cdc9e522b7223304f2b2a2be64ae0b34abc51f3ba01e8316002dcbe"],
+    ["lengthdirect1a",1,12,"97f7ba465ba22419fb66e2f10a8545ba3859e6492b85e6e307662cedbcb866c1"],
+    ["distancedirect1a",1,12,"b6deb77fa3a1bc700780bd070758155b309c87df16922041f281ce6ad18a1a1e"],
+    ["lengthunits1a",1,12,"cffe4025a3790ab309a99f173c15934923b35b34a96242ab18dcd5fbd9b464a4"],
+    ["distanceunits1a",1,12,"ebe622214cbc013b28b30d21489a9efd6758d760207be3170312360f2f614664"],
     ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"],
     ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"],
     ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"],
@@ -108,9 +112,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===785,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===833,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 785 variants",()=>{
+  await check("Released bilingual and response contracts · 833 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -245,6 +249,20 @@
       pairs.add(pair);triples.add([a,b,c].join(","));
     }
     assert(pairs.size===2 && triples.size===12,"concrete grouping needs both pair positions and distinct triples");
+  });
+  await check("P1 length and distance I · direct and improvised-unit comparisons",()=>{
+    for(const id of ["lengthdirect1a","distancedirect1a","lengthunits1a","distanceunits1a"]){
+      const f=families.find(x=>x.id===id),distance=id.startsWith("distance"),units=id.includes("units"),positions=new Set();
+      assert(f?.grade===1 && f.code==="1M1" && f.count===12,"1M1 family metadata missing "+id);
+      for(let i=0;i<12;i++){
+        const q=f.make(i),m=q.measureCompare;
+        assert(m.a>=2 && m.b>=2 && m.a<=8 && m.b<=8 && Math.abs(m.a-m.b)>=2 && m.subject===(distance?"distance":"length") && m.units===units,"1M1 diagram data wrong "+id+"-"+i);
+        assert(q.figure.kind==="measureCompare" && q.figure.a===m.a && q.figure.b===m.b && q.answer[0]===(m.a>m.b?"A":"B") && q.choices.join("")==="AB","1M1 answer wrong "+id+"-"+i);
+        assert(q.prompt.every(s=>s.trim()) && q.why.every(s=>s.includes(q.answer[0])) && decodeItems(id+"-"+i,1).length===1 && !decodeItems(id+"-"+i,2).length,"1M1 bilingual link wrong "+id+"-"+i);
+        positions.add(q.answer[0]);
+      }
+      assert(positions.size===2,"1M1 answer position does not vary "+id);
+    }
   });
   await check("P1 column forms · carrying addition and no-borrow subtraction",()=>{
     const add=families.find(f=>f.id==="columnadd1a"),sub=families.find(f=>f.id==="columnsub1a");
@@ -1236,6 +1254,25 @@
         inputs.forEach((el,j)=>el.value=String(q.answer[j]));practice.getElementById('practice-form').requestSubmit();assert(/Correct after a hint/.test(practice.getElementById('practice-feedback').textContent),"column retry missing "+id);
         practice.getElementById('practice-next').click();assert(practice.querySelector('.practice-progress').textContent.includes('2'),"column follow-up missing "+id);
       }
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P1 length and distance I · builder, quiz, paper, key, PDF and practice",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      for(const id of ["lengthdirect1a","distancedirect1a","lengthunits1a","distanceunits1a"]){
+        const q=families.find(f=>f.id===id).make(0),base="?v=3&lang=en&p=1&items="+id+"-0";
+        const builder=await open(base+"&view=build");assert(builder.querySelector('select[name="'+id+'"]') && builder.querySelector('.measure-compare'),"1M1 builder missing "+id);
+        const blank=await open(base);blank.querySelector('form').requestSubmit();assert(/Please complete question 1/.test(blank.getElementById('status').textContent),"1M1 blank accepted "+id);
+        const wrong=await open(base);wrong.querySelector('input[value="'+(q.answer[0]==="A"?"B":"A")+'"]').checked=true;wrong.querySelector('form').requestSubmit();assert(/Score 0 \/ 1/.test(wrong.getElementById('status').textContent),"1M1 wrong choice accepted "+id);
+        const pupil=await open(base);pupil.querySelector('input[value="'+q.answer[0]+'"]').checked=true;pupil.querySelector('form').requestSubmit();assert(/Score 1 \/ 1/.test(pupil.getElementById('status').textContent),"1M1 correct choice rejected "+id);
+        const paper=await open(base+"&view=paper"),key=await open(base+"&view=key");assert(paper.querySelector('.measure-compare') && paper.querySelectorAll('fieldset .option').length===2 && key.querySelector('fieldset').textContent.includes(q.why[0]),"1M1 paper/key mismatch "+id);
+        const practice=await open("?lang=en&p=1&view=practice&skill="+id),choice=practice.querySelector('input[value="'+(q.answer[0]==="A"?"B":"A")+'"]');assert(choice && practice.querySelector('.measure-compare') && practice.getElementById('zh').href.includes(id),"1M1 practice missing "+id);
+        choice.checked=true;practice.getElementById('practice-form').requestSubmit();assert(practice.getElementById('practice-feedback').textContent.length>15,"1M1 hint missing "+id);
+        practice.querySelector('input[value="'+q.answer[0]+'"]').checked=true;practice.getElementById('practice-form').requestSubmit();assert(practice.getElementById('practice-feedback').textContent.includes('Correct after a hint'),"1M1 retry missing "+id);
+      }
+      const zh=await open("?v=3&lang=zh&p=1&items=distanceunits1a-0&view=key");assert(zh.documentElement.lang==="zh-HK" && zh.querySelector('fieldset').textContent.includes('回形針'),"Chinese 1M1 key missing");
+      const pdf=await frames.at(-1).contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await pdf.arrayBuffer());assert(raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"Chinese 1M1 PDF text or page missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P2 place value · builder, pupil, paper and key",async()=>{
@@ -2329,18 +2366,23 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===46,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===50,"grade coverage counts wrong");
+      assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
+      const activity=await shapeFrame("activities/p1-length-distance-i.html?lang=en");frames.push(activity);
+      assert(!activity.contentDocument.getElementById('en').hidden && activity.contentDocument.getElementById('zh').hidden && activity.contentDocument.body.textContent.includes('Teacher observation'),"English practical activity missing");
+      const activityZh=await shapeFrame("activities/p1-length-distance-i.html?lang=zh");frames.push(activityZh);
+      assert(activityZh.contentDocument.documentElement.lang==='zh-HK' && activityZh.contentDocument.getElementById('en').hidden && !activityZh.contentDocument.getElementById('zh').hidden && activityZh.contentDocument.body.textContent.includes('教師觀察'),"Chinese practical activity missing");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 46 distinct live home links",async()=>{
+  await check("Practice catalogue · 50 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===46 && new Set(links.map(a=>a.href)).size===46,"practice links missing or repeated");
+      assert(links.length===50 && new Set(links.map(a=>a.href)).size===50,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

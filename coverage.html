@@ -1,28 +1,28 @@
 <!doctype html>
-<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grade coverage | MathQuiz</title><link rel="stylesheet" href="quiz.css?v=22">
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grade coverage | MathQuiz</title><link rel="stylesheet" href="quiz.css?v=23">
 <body><header><strong>MathQuiz</strong><nav aria-label="Language"><a id="en" href="coverage.html?lang=en">English</a> · <a id="zh" href="coverage.html?lang=zh" lang="zh-HK">繁體中文</a></nav></header><main id="coverage"></main>
-<script src="questions.js?v=4"></script><script src="builder.js?v=29"></script>
+<script src="questions.js?v=4"></script><script src="builder.js?v=30"></script>
 <script>
 (() => {
   const lang=new URLSearchParams(location.search).get("lang")==="zh"?1:0;
   document.documentElement.lang=lang?"zh-HK":"en";
   const t=(en,zh)=>lang?zh:en;
   const planned={
-    1:["Solve a two-number word problem","解答兩個數的文字題"],
+    1:["Recognise Hong Kong coins","辨認香港硬幣"],
     2:["Explain what a pictogram symbol represents","解釋象形圖中一個圖案代表甚麼"],
     3:["Compare shaded fractions using equal-sized wholes","比較相同大小整體的塗色分數"],
     4:["Find all factors of a number","找出一個數的所有因數"],
     5:["Compare groups in a compound bar chart","比較複合棒形圖中的不同組別"],
     6:["Read a travel graph to find speed","從行程圖讀取速率"]
   };
-  const types={add1:"apply",next1:"identify",count20a:"identify",parts18a:"calculate",pictureadd1:"represent",storyadd1:"apply",otherway1:"represent",triangle1:"identify",compare100a:"identify",tensones1a:"represent",countgroups1a:"identify",sequence100a:"identify",oddeven100a:"identify",ordernums100a:"represent",numberwords100a:"represent",estimate100a:"estimate",carryadd1a:"calculate",noborrow1a:"calculate",threeadd1a:"calculate",groupadd1a:"represent",group10p1a:"represent",columnadd1a:"calculate",columnsub1a:"calculate",storyadd1a:"apply",storysub1a:"apply",place3a:"identify",groups2a:"represent",pict2a:"identify",share2a:"calculate",frac3a:"represent",cup3a:"identify",bar3a:"identify",per1:"calculate",permissing4a:"calculate",factor1:"identify",factorpair4a:"represent",bar4a:"identify",fracadd5a:"calculate",equation5a:"calculate",purchasestory5a:"represent",triarea5a:"calculate",volume5a:"calculate",circle5a:"identify",pct2:"calculate",speed6a:"calculate",mean1:"calculate"};
+const types={add1:"apply",next1:"identify",count20a:"identify",parts18a:"calculate",pictureadd1:"represent",storyadd1:"apply",otherway1:"represent",triangle1:"identify",compare100a:"identify",tensones1a:"represent",countgroups1a:"identify",sequence100a:"identify",oddeven100a:"identify",ordernums100a:"represent",numberwords100a:"represent",estimate100a:"estimate",carryadd1a:"calculate",noborrow1a:"calculate",threeadd1a:"calculate",groupadd1a:"represent",group10p1a:"represent",columnadd1a:"calculate",columnsub1a:"calculate",storyadd1a:"apply",storysub1a:"apply",lengthdirect1a:"identify",distancedirect1a:"identify",lengthunits1a:"identify",distanceunits1a:"identify",place3a:"identify",groups2a:"represent",pict2a:"identify",share2a:"calculate",frac3a:"represent",cup3a:"identify",bar3a:"identify",per1:"calculate",permissing4a:"calculate",factor1:"identify",factorpair4a:"represent",bar4a:"identify",fracadd5a:"calculate",equation5a:"calculate",purchasestory5a:"represent",triarea5a:"calculate",volume5a:"calculate",circle5a:"identify",pct2:"calculate",speed6a:"calculate",mean1:"calculate"};
   const typeNames={apply:"應用",identify:"辨認",calculate:"計算",represent:"表示",estimate:"估計",other:"其他"};
   const live=families.filter(f=>!f.retired);
   const escaped=s=>String(s).replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   const cards=[1,2,3,4,5,6].map(grade=>{
     const set=live.filter(f=>f.grade===grade),units=new Set(set.map(f=>f.code)),forms=new Set(set.map(f=>types[f.id]||"other"));
     const rows=set.map(f=>'<li><a href="./?v=3&lang='+(lang?"zh":"en")+'&p='+grade+'&items='+f.id+'-0&view=build">'+escaped(f.label[lang])+'</a> <small>('+f.code+' · '+f.count+' '+t("variants","個版本")+' · '+escaped(lang?typeNames[types[f.id]||"other"]:types[f.id]||"other")+')</small></li>').join("");
-    return '<section class="card" style="display:block;margin:20px 0"><h2>'+t("Primary "+grade,"小"+["一","二","三","四","五","六"][grade-1])+'</h2><p>'+set.length+' '+t("live task families","個已上線題目系列")+' · '+units.size+' '+t("units touched","個涉及單元")+' · '+forms.size+' '+t(forms.size===1?"task type":"task types","種題目類型")+'</p><ul>'+rows+'</ul><p><b>'+t("Planned example: ","計劃中的例子：")+'</b>'+escaped(planned[grade][lang])+'</p></section>';
+return '<section class="card" style="display:block;margin:20px 0"><h2>'+t("Primary "+grade,"小"+["一","二","三","四","五","六"][grade-1])+'</h2><p>'+set.length+' '+t("live task families","個已上線題目系列")+' · '+units.size+' '+t("units touched","個涉及單元")+' · '+forms.size+' '+t(forms.size===1?"task type":"task types","種題目類型")+'</p><ul>'+rows+'</ul>'+(grade===1?'<p><a href="activities/p1-length-distance-i.html?lang='+(lang?'zh':'en')+'">'+t('Teacher-led length and distance activity','長度和距離教師帶領活動')+'</a></p>':'')+'<p><b>'+t("Planned example: ","計劃中的例子：")+'</b>'+escaped(planned[grade][lang])+'</p></section>';
   }).join("");
   document.getElementById("coverage").innerHTML='<a href="./?lang='+(lang?"zh":"en")+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Grade coverage","各年級題目涵蓋範圍")+'</h1><p>'+t("These are released question families, not complete coverage of any EDB unit. A unit count shows where at least one task is live; the linked curriculum map records the precise reviewed objectives. Planned examples are not live.","以下列出已上線的題目系列，並不代表已涵蓋教育局任何單元的全部內容。單元數量表示至少有一道題目已上線；課程對照表記錄已核對的具體目標。計劃中的例子尚未上線。")+'</p><p><a href="planning/primary-mathematics.md">'+t("Curriculum and objective map","課程及學習目標對照表")+'</a> · <a href="planning/live-family-audit.md">'+t("Live family audit","已上線題目系列記錄")+'</a> · <a href="planning/full-curriculum-plan.md">'+t("Full 85-unit development plan","85個單元完整開發計劃")+'</a></p>'+cards;
 })();
