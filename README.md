@@ -205,6 +205,14 @@ The site uses static HTML, CSS and JavaScript. From the repository root, run `py
 | [papers/](papers/) | Downloadable papers and worked keys for the fixed pilot |
 | [planning/](planning/) | Curriculum sources, original briefs and the dated development roadmap |
 
+### Adding a family without changing released links
+
+1. Check the relevant EDB objective and remarks. Write a bilingual brief with the intended task, prerequisite, parameter bounds, excluded cases, answer rule, worked step and a misconception to probe. Record its scope in the [curriculum map](planning/primary-mathematics.md) and [live family ledger](planning/live-family-audit.md). A draft is not live coverage.
+2. Add a **new** permanent ID to `families` in [builder.js](builder.js). Keep old `make(i)` outputs and IDs unchanged. Implement any new figure or response form in [quiz.js](quiz.js) and [marking.js](marking.js). If the skill has a three-question practice session, add its route and bilingual home label once in `practiceCatalogue` in `quiz.js`.
+3. Add finite-variant, response-boundary, bilingual, paper/key and practice checks to [tests/regression.js](tests/regression.js). Record the new family's digest only after checking its mathematics and diagram meaning; never replace an old digest to suppress a failure. Update the fixture total and cache query numbers in `index.html` and `tests/regression.html` for changed scripts or styles.
+4. If new PDF wording introduces glyphs, run `python tools/build-pdf-font.py` to rebuild `fonts/mathquiz-text.ttf`. The source font downloaded by that script is a local build input, not a site asset. Custom papers and keys are generated on demand by [pdf-export.js](pdf-export.js); fixed pilot PDFs in `papers/` are separate artifacts.
+5. Run `python -m http.server 8000` from the repository root and open the [local regression page](http://localhost:8000/tests/regression.html). Require zero failures, including old link fixtures. After publishing, run the [public regression page](https://kochiuyu.github.io/mathquiz/tests/regression.html) against the deployed scripts and record the result and next open item here. Manual classroom and printer checks stay separately marked as deferred.
+
 ### Decisions to carry forward
 
 Use Hong Kong EDB objectives and terminology for curriculum alignment. Khan Academy is a design reference for practice. Write original questions and explanations in both languages. Preserve released question IDs and their mathematical meaning so a teacher can reopen the exact paper they distributed. Keep the core workflow account-free. Evaluate named submissions after teachers identify a concrete use for collected results.
@@ -217,10 +225,10 @@ The next batch delivers the first part of Release 1. The five releases below des
 
 | Original milestone | Evidence | Outstanding work |
 |---|---|---|
-| Map the curriculum | The project indexes 85 EDB learning units across P1–P6, with links and one proposed task per unit. | Extend objective-level mapping beyond the seven live P1 families. A proposed example does not establish full unit coverage. |
+| Map the curriculum | The project indexes 85 EDB learning units across P1–P6 and records source, scope and answer policy for [25 versioned family IDs](planning/live-family-audit.md), including one legacy family. | Review objectives for remaining planned units. A released task does not establish full unit coverage. |
 | Prove paper and screen can share questions | Nine fixed questions across P1, P4 and P6. English and Traditional Chinese versions. Twelve downloadable A4 files comprising papers and keys. | Broaden classroom trials beyond the teacher-reported P1 samples and independently observe use on paper and phones. |
-| Build teacher preview and sharing | Eleven generator families: seven in P1 and two each in P4 and P6, with 352 selectable variants altogether. Teachers select 0–5 questions per family or start with the P1 warm-up or exit-ticket preset, preview, replace or move an item, undo replacement, copy a pupil link and print the paper or key. | Check a long mixed paper on a physical grayscale printer and broaden classroom trials beyond the teacher-reported P1 samples. |
-| Build practice and scale | Submitted quizzes show scores and worked feedback. Published links encode an ordered set of variant IDs. | Independent practice with hints and fresh attempts, coverage for P2/P3/P5, richer diagrams and ongoing review of generated items. |
+| Build teacher preview and sharing | Twenty-four families with 506 variants are selectable for new papers; 15 legacy `pct1` variants remain decodable in old links. Teachers select 0–5 questions per family or start with a P1 preset, preview, replace or move an item, undo replacement, copy a pupil link and print the paper or key. | Check a long mixed paper on a physical grayscale printer and broaden classroom trials beyond the teacher-reported P1 samples. |
+| Build practice and scale | Twenty-one single-skill practice routes across P1–P6 give hints, retries, worked steps and distinct follow-ups. Submitted quizzes retain worked feedback; links encode permanent variant IDs. | `add1`, `pictureadd1` and `otherway1` have no separate practice route. Add more task representations where source-checked objectives support them; manual pupil review remains deferred. |
 
 Custom paper and key views offer both a direct PDF download with selectable text and the browser’s **Print / Save as PDF**. The original fixed `v=1` quizzes have direct PDF files; the corrected fixed P6 `v=4` example uses a browser-print paper and key so its curriculum label matches the screen. A versioned link recreates a quiz through its generator, so preserving old generator behaviour is essential.
 
@@ -252,6 +260,8 @@ Custom paper and key views offer both a direct PDF download with selectable text
 | Explanations | Write one explanation that identifies the mathematical step in words, with a diagram when it earns its space. Multi-step items specify how marks are allocated. Give open explanations and constructions a rubric for teacher or pupil review. |
 | Verification | Enumerate every variant in small finite families, including all 352 released variants. Independently recompute answers, test boundary values, and check for repeated choices, ambiguous diagrams and malformed share links. |
 | Maintenance | Separate the grade catalogue, question generation, scoring and rendering sufficiently to add a skill without editing multiple hard-coded grade lists. Preserve existing share links and fixed PDFs. Update the README with how to run, add questions, regenerate outputs and verify a release. |
+
+**Current authoring audit · 16 November 2026.** The [live family ledger](planning/live-family-audit.md) records purpose, released variation, answer policy, worked step and a misconception hypothesis for every versioned family. The regression runner checks bilingual field structure and stable links across all 521 variants. The practice route catalogue now supplies both routing and home links. Manual language, pupil, printer and screen-reader review remains deferred.
 
 **Release check.** A second contributor can add one reviewed bilingual family from an example, run its tests, and see it in the teacher builder, pupil quiz, paper and key. Deliberately changing an old variant’s answer fails a regression test.
 

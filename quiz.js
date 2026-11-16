@@ -846,47 +846,47 @@ function renderCirclePractice(){
   }
   show();
 }
+// One entry supplies a practice route and its home-page link. The default P1
+// counting link omits skill to preserve already-shared URLs.
+const practiceCatalogue=[
+  {grade:1,skill:null,label:["Practise counting","練習點算"],render:renderPractice},
+  {grade:1,skill:"next1",label:["Practise counting forwards","練習順數"],render:renderPractice},
+  {grade:1,skill:"storyadd1",label:["Practise addition","練習加法"],render:renderPractice},
+  {grade:1,skill:"parts18a",label:["Practise missing parts","練習找出另一部分"],render:renderPractice},
+  {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
+  {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
+  {grade:4,skill:"factor1",label:["Practise factors","練習因數"],render:renderFactorPractice},
+  {grade:6,skill:"pct2",label:["Practise percentages","練習百分比"],render:renderPercentagePractice},
+  {grade:6,skill:"mean1",label:["Practise averages","練習平均數"],render:renderMeanPractice},
+  {grade:2,skill:"place3a",label:["Practise place value","練習位值"],render:renderPlaceValuePractice},
+  {grade:2,skill:"groups2a",label:["Practise equal groups","練習等量分組"],render:renderEqualGroupsPractice},
+  {grade:2,skill:"pict2a",label:["Practise pictograms","練習象形圖"],render:renderPictogramPractice},
+  {grade:2,skill:"share2a",label:["Practise equal sharing","練習平均分配"],render:renderEqualSharingPractice},
+  {grade:3,skill:"frac3a",label:["Practise fractions","練習分數"],render:renderFractionPractice},
+  {grade:3,skill:"cup3a",label:["Practise measuring cups","練習量杯刻度"],render:renderMeasuringCupPractice},
+  {grade:3,skill:"bar3a",label:["Practise bar charts","練習棒形圖"],render:renderBarChartPractice},
+  {grade:5,skill:"fracadd5a",label:["Practise adding fractions","練習分數加法"],render:()=>renderP5Practice("fracadd5a")},
+  {grade:5,skill:"equation5a",label:["Practise simple equations","練習簡易方程"],render:()=>renderP5Practice("equation5a")},
+  {grade:5,skill:"triarea5a",label:["Practise triangle area","練習三角形面積"],render:()=>renderP5MeasurePractice("triarea5a")},
+  {grade:5,skill:"volume5a",label:["Practise cuboid volume","練習長方體體積"],render:()=>renderP5MeasurePractice("volume5a")},
+  {grade:5,skill:"circle5a",label:["Practise circle parts","練習辨認圓的各部分"],render:renderCirclePractice}
+];
 const custom=["2","3"].includes(params.get("v"));
 const strictP1=custom && grade===1 && params.get("v")==="3";
 const selected=custom?decodeItems(params.get("items"),grade):[];
 const ids=selected.map(q=>q.id);
 const view=params.get("view")||"";
+const practiceEntry=view==="practice"?(practiceCatalogue.find(entry=>entry.grade===grade && entry.skill===params.get("skill")) || (grade===1?practiceCatalogue[0]:null)):null;
 if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a","bar3a"].includes(params.get("skill")))) || (grade===5 && !custom && (view!=="practice" || !["fracadd5a","equation5a","triarea5a","volume5a","circle5a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || ([2,3,5].includes(grade) && !custom && !practiceEntry) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
-}else if(grade===1 && view==="practice" && params.get("skill")==="triangle1"){
-  renderTrianglePractice();
-}else if(grade===2 && view==="practice" && params.get("skill")==="place3a"){
-  renderPlaceValuePractice();
-}else if(grade===2 && view==="practice" && params.get("skill")==="groups2a"){
-  renderEqualGroupsPractice();
-}else if(grade===2 && view==="practice" && params.get("skill")==="pict2a"){
-  renderPictogramPractice();
-}else if(grade===2 && view==="practice" && params.get("skill")==="share2a"){
-  renderEqualSharingPractice();
-}else if(grade===3 && view==="practice" && params.get("skill")==="frac3a"){
-  renderFractionPractice();
-}else if(grade===3 && view==="practice" && params.get("skill")==="cup3a"){
-  renderMeasuringCupPractice();
-}else if(grade===3 && view==="practice" && params.get("skill")==="bar3a"){
-  renderBarChartPractice();
-}else if(grade===5 && view==="practice"){
-  if(params.get("skill")==="circle5a")renderCirclePractice();
-  else if(["triarea5a","volume5a"].includes(params.get("skill")))renderP5MeasurePractice(params.get("skill"));
-  else renderP5Practice(params.get("skill"));
-}else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
-  renderMeanPractice();
-}else if(grade===6 && view==="practice" && params.get("skill")==="pct2"){
-  renderPercentagePractice();
-}else if(grade===4 && view==="practice" && params.get("skill")==="factor1"){
-  renderFactorPractice();
-}else if((grade===1 || (grade===4 && params.get("skill")==="per1")) && view==="practice"){
-  renderPractice();
+}else if(practiceEntry){
+  practiceEntry.render();
 }else if(!grade){
   document.title=t("MathQuiz · Primary mathematics","MathQuiz · 小學數學");
   const presets=[
@@ -896,29 +896,10 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 3, 4, 5 or 6.","選擇小一、小二、小三、小四、小五或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
   practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; P5 fractions, equations, triangle area, cuboid volume and circle parts; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；小五分數加法、簡易方程、三角形面積、長方體體積和圓的各部分；或小六百分比和平均數練習，遇到困難可看提示再試。");
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=triangle1">'+t("Practise triangles","練習三角形")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=per1">'+t("Practise perimeter","練習周界")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=4&view=practice&skill=factor1">'+t("Practise factors","練習因數")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=pct2">'+t("Practise percentages","練習百分比")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=6&view=practice&skill=mean1">'+t("Practise averages","練習平均數")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",practiceCatalogue.filter(entry=>entry.skill).map(entry=>'<a href="?lang='+lang+'&p='+entry.grade+'&view=practice&skill='+entry.skill+'">'+local(entry.label)+' →</a>').join(""));
   app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",2)+'">'+t("Create a P2 quiz","建立小二小測")+' →</a>');
   app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",3)+'">'+t("Create a P3 quiz","建立小三小測")+' →</a>');
   app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",5)+'">'+t("Create a P5 quiz","建立小五小測")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=place3a">'+t("Practise place value","練習位值")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=groups2a">'+t("Practise equal groups","練習等量分組")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=pict2a">'+t("Practise pictograms","練習象形圖")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=2&view=practice&skill=share2a">'+t("Practise equal sharing","練習平均分配")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=frac3a">'+t("Practise fractions","練習分數")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=cup3a">'+t("Practise measuring cups","練習量杯刻度")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=3&view=practice&skill=bar3a">'+t("Practise bar charts","練習棒形圖")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=fracadd5a">'+t("Practise adding fractions","練習分數加法")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=equation5a">'+t("Practise simple equations","練習簡易方程")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=triarea5a">'+t("Practise triangle area","練習三角形面積")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=volume5a">'+t("Practise cuboid volume","練習長方體體積")+' →</a>');
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=circle5a">'+t("Practise circle parts","練習辨認圓的各部分")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

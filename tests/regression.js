@@ -88,6 +88,20 @@
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
     assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===521,"fixture count changed");
   });
+  await check("Released bilingual and response contracts · 521 variants",()=>{
+    for(const family of families){
+      assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
+      for(let i=0;i<family.count;i++){
+        const q=family.make(i),id=family.id+"-"+i,decoded=decodeItems(id,family.grade);
+        assert(q.prompt?.length===2 && q.prompt.every(s=>typeof s==="string" && s.trim()),"bilingual prompt missing: "+id);
+        assert(q.why?.length===2 && q.why.every(s=>typeof s==="string" && s.trim()),"bilingual worked step missing: "+id);
+        assert(Array.isArray(q.answer) && q.answer.length>0 && q.answer.every(v=>typeof v==="number"?Number.isFinite(v):typeof v==="string" && v.trim()),"answer missing: "+id);
+        if(q.fields)assert(q.fields.length===q.answer.length && q.fields.every(pair=>Array.isArray(pair) && pair.length===2),"field structure changed: "+id);
+        if(q.choices)assert(new Set(q.choices).size===q.choices.length && q.answer.every(v=>q.choices.includes(v)),"choices or key ambiguous: "+id);
+        assert(decoded.length===1 && decoded[0].id===id && decoded[0].code===family.code && stable(decoded[0].answer)===stable(q.answer),"stable link mismatch: "+id);
+      }
+    }
+  });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
       const family = families.find(f=>f.id===id);
@@ -1750,6 +1764,17 @@
       const blob=await paperFrame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
       assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"circle PDF lacks page or selectable text");
     }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("Practice catalogue · 21 distinct live home links",async()=>{
+    const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
+    try{
+      const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
+      assert(links.length===21 && new Set(links.map(a=>a.href)).size===21,"practice links missing or repeated");
+      for(const link of links){
+        const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
+        assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);
+      }
+    }finally{frame.remove();}
   });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
