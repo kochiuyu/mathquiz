@@ -12,7 +12,7 @@ For each unit: (1) review every objective, boundaries and exclusions in the EDB 
 |---|---|---|---|---|
 | P1 | [1N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=7) | Numbers to 20 | `next1`, `count20a`, `parts18a`, `otherway1` | Task live; objective audit needed |
 | P1 | [1N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=9) | Basic addition and subtraction | `pictureadd1`, `storyadd1` | Task live; objective audit needed |
-| P1 | [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | `compare100a` | Task live; objective audit needed |
+| P1 | [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | `compare100a`, `tensones1a`, `countgroups1a`, `sequence100a` | Task live; odd/even, ordering and estimation remain |
 | P1 | [1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) | Addition and subtraction (I) | — | No task |
 | P1 | [1M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=15) | Length and distance (I) | — | No task |
 | P1 | [1M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16) | Money (I) | — | No task |
@@ -98,9 +98,9 @@ For each unit: (1) review every objective, boundaries and exclusions in the EDB 
 
 ## Immediate sequence
 
-1. Complete the remaining objectives in P1 units 1N1 and 1N2, then 1N3 onward; a released family addresses only its mapped objective.
+1. Finish the open 1N3 objectives, then complete the remaining P1 objectives and units; a released family addresses only its mapped objective.
 2. Continue P1–P6 unit by unit, preserving permanent question IDs and existing shared links.
 3. Add teacher-marked printable activities for units that require drawing, hands-on measurement, investigation or open explanation.
 4. After each release, update this inventory, the curriculum map, live family ledger, bilingual coverage page and README checkpoint.
 
-**Current first new task:** `compare100a` addresses 1N3 objective 3 only. Next within 1N3: numeral reading/writing (objective 1), tens and units (objective 2), counting in 2s, 5s and 10s (objective 4), and estimation under 100 (objective 5).
+**Next within 1N3:** odd/even recognition and spoken numeral writing (objective 1), ordering three or more numbers (objective 3), and estimation under 100 (objective 5). Four live families now cover other parts of 1N3; the unit is still partial.

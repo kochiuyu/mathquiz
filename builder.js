@@ -45,6 +45,20 @@ const families = [
       :[`Compare the tens first: ${a} has ${Math.floor(a/10)} tens and ${b} has ${Math.floor(b/10)} tens. ${larger} is larger.`,`先比較十位：${a}有${Math.floor(a/10)}個十，${b}有${Math.floor(b/10)}個十。${larger}較大。`];
     return {prompt:[`Which number is larger, ${a} or ${b}? Choose the number.`,`哪個數較大：${a}還是${b}？選出該數。`],choices:[String(a),String(b)],answer:[String(larger)],marks:1,why:step,numberComparison:{a,b,larger}};
   }},
+  {id:"tensones1a",grade:1,code:"1N3",label:["Build numbers with tens and ones","用十位和個位組成數字"],count:12,make(i){
+    const values=[21,34,40,57,69,72,80,93,26,51,88,99],value=values[i],tens=Math.floor(value/10),ones=value%10;
+    return {prompt:["These bundles of ten and loose counters show a number. Write the number.","這些十粒一捆的圓片和單粒圓片表示一個數。寫出這個數。"],fields:[["",""]],answer:[value],marks:1,why:[`${tens} tens make ${tens*10}; add ${ones} ones to get ${value}.`,`${tens}個十是${tens*10}；加上${ones}個一，得到${value}。`],figure:{kind:"tensOnes",tens,ones},numberTo100:true};
+  }},
+  {id:"countgroups1a",grade:1,code:"1N3",label:["Count groups of 2, 5 or 10","按2、5或10粒一組點算"],count:12,make(i){
+    const cases=[[2,7],[2,9],[2,10],[2,8],[5,4],[5,7],[5,9],[5,6],[10,3],[10,5],[10,8],[10,6]];
+    const [size,groups]=cases[i],total=size*groups;
+    return {prompt:[`Each box has ${size} counters. Count the counters in groups of ${size}. How many are there altogether?`,`每盒有${size}粒圓片。每${size}粒一組點算，圖中共有多少粒圓片？`],fields:[["counters","粒圓片"]],answer:[total],marks:1,why:[`Count ${groups} groups of ${size}: ${Array.from({length:groups},(_,j)=>(j+1)*size).join(", ")}. There are ${total} counters.`,`按每組${size}粒順數${groups}組：${Array.from({length:groups},(_,j)=>(j+1)*size).join("、")}。共有${total}粒圓片。`],figure:{kind:"countGroups",size,groups},numberTo100:true};
+  }},
+  {id:"sequence100a",grade:1,code:"1N3",label:["Count forwards and backwards to 100","100以內順數和倒數"],count:12,make(i){
+    const cases=[[37,1],[48,1],[68,1],[97,1],[74,1],[24,1],[51,-1],[80,-1],[34,-1],[70,-1],[24,-1],[99,-1]];
+    const [start,step]=cases[i],a=start,b=a+step,c=b+step,answer=c+step,dir=step===1?["forwards","順數"]:["backwards","倒數"];
+    return {...numeric([`Count ${dir[0]} by 1: ${a}, ${b}, ${c}, ___`,`每次${dir[1]}一個數：${a}、${b}、${c}、___。`],["",""],answer,[`Count one ${step===1?"more":"less"} than ${c}: ${c} ${step===1?"+":"−"} 1 = ${answer}.`,`從${c}${step===1?"順數":"倒數"}一個數：${c} ${step===1?"+":"−"} 1 = ${answer}。`]),inlineAnswer:true,numberTo100:true,numberSequence:{start,step}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;
