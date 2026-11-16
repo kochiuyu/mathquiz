@@ -147,6 +147,14 @@ const families = [
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
   }},
+  {id:"permissing4a",grade:4,code:"4M1",label:["Find a missing rectangle side","求長方形未知邊長"],count:12,make(i){
+    const pairs=[[18,5],[16,7],[20,8],[14,6],[21,9],[17,8],[24,7],[19,6],[15,9],[22,10],[25,11],[23,8]];
+    const [length,width]=pairs[i],missing=i%2===0?"width":"length",known=missing==="width"?length:width;
+    const answer=missing==="width"?width:length,perimeter=2*(length+width);
+    return {prompt:[`A rectangle has a perimeter of ${perimeter} cm. One ${missing==="width"?"long":"short"} side is ${known} cm. What is the length of the missing ${missing==="width"?"short":"long"} side? Use the diagram.`,`一個長方形的周界是${perimeter}厘米。一條${missing==="width"?"長":"短"}邊長${known}厘米。根據圖示，求未知的${missing==="width"?"短":"長"}邊長。`],fields:[["cm","厘米"]],answer:[answer],marks:1,
+      why:[`Half the perimeter is ${perimeter} ÷ 2 = ${length+width} cm. Subtract the known side: ${length+width} − ${known} = ${answer} cm.`,`周界的一半是${perimeter} ÷ 2 = ${length+width}厘米。減去已知邊長：${length+width} − ${known} = ${answer}厘米。`],
+      missingSide:{length,width,missing,known,perimeter},figure:{kind:"missingSide",length,width,missing,known,perimeter}};
+  }},
   {id:"factor1",grade:4,code:"4N3",label:["Identifying factors","辨認因數"],count:12,make(i){
     const n=[12,16,18,20,24,27,28,30,32,36,40,42][i];
     const options=Array.from({length:8},(_,j)=>j+2), good=options.filter(x=>n%x===0).slice(0,2),bad=options.filter(x=>n%x!==0).slice(0,2);

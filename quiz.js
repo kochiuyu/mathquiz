@@ -16,6 +16,11 @@ const app = document.getElementById("app");
 if(fixedP6V4)quizzes[6]=fixedQuiz(6,"4");
 function figure(type) {
   if (!type) return "";
+  if (typeof type === "object" && type.kind === "missingSide") {
+    const horizontal=type.missing==="length",top=horizontal?"?":type.length,side=horizontal?type.width:"?";
+    const alt=t(`Rectangle with perimeter ${type.perimeter} cm. The ${horizontal?"short":"long"} side is ${type.known} cm; find the other side marked question mark.`,`長方形周界為${type.perimeter}厘米。已知${horizontal?"短":"長"}邊長${type.known}厘米，求問號所示的另一邊。`);
+    return '<svg class="figure missing-side" viewBox="0 0 320 180" role="img" aria-label="'+alt+'"><rect x="65" y="38" width="190" height="96" fill="#f2f6f3" stroke="#32755e" stroke-width="3"/><g text-anchor="middle"><text x="160" y="24">'+top+' cm</text><text x="160" y="160">'+top+' cm</text><text x="33" y="90">'+side+' cm</text><text x="286" y="90">'+side+' cm</text></g></svg>';
+  }
   if (typeof type === "object" && type.kind === "triangleArea") {
     const x=type.apex,alt=t(`Triangle. The base is ${type.base} cm. A dashed perpendicular from the top vertex to the base is the height, ${type.height} cm.`,`三角形。底邊長${type.base}厘米。由頂點向底邊畫出的虛線垂直高是${type.height}厘米。`);
     return '<svg class="figure triangle-area" viewBox="0 0 300 220" role="img" aria-label="'+alt+'"><path d="M30 170 L'+x+' 40 L270 170 Z" fill="#ecf3ed" stroke="#20392f" stroke-width="3"/><path d="M'+x+' 40 V170" fill="none" stroke="#a5541f" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M'+x+' 157 h13 v13" fill="none" stroke="#20392f" stroke-width="2"/><text x="150" y="202" text-anchor="middle">'+t("base ","底邊 ")+type.base+' cm</text><text x="'+(x+17)+'" y="108">'+t("height ","高 ")+type.height+' cm</text></svg>';
@@ -185,7 +190,7 @@ function mark(form) {
     if(q.fractionBar)return Number(fractionBarAnswer(values,q.fractionBar));
     if(q.fractionAddition)return Number(fractionAdditionAnswer(values,q.fractionAddition));
     if(q.simpleEquation)return Number(simpleEquationAnswer(values[0],q.answer[0]));
-    if(q.triangleArea || q.cuboidVolume)return Number(measureAnswer(values[0],q.answer[0]));
+    if(q.triangleArea || q.cuboidVolume || q.missingSide)return Number(measureAnswer(values[0],q.answer[0]));
     if(q.measuringCup)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.barChart)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
@@ -415,6 +420,34 @@ function renderBarChartPractice(skill="bar3a"){
       if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
       app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
     };
+  }
+  show();
+}
+function renderMissingSidePractice(){
+  const family=families.find(f=>f.id==="permissing4a"),variants=[0,1,4];
+  const practiceUrl=language=>"?lang="+language+"&p=4&view=practice&skill=permissing4a";
+  let position=0,attempts=0,firstTry=0;
+  document.title=t("Missing rectangle side · Practice | MathQuiz","長方形未知邊長 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]),s=q.missingSide;
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise finding a missing side","練習求未知邊長")+'</h1><p>'+t("Use the perimeter and one known side. Try three questions.","利用周界和一條已知邊長，完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+'<label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Missing side in centimetres","未知邊長（厘米）")+'"> '+t("cm","厘米")+'</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();const input=document.getElementById("practice-answer"),value=input.value.trim(),feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Enter the missing side.","請輸入未知邊長。");input.focus();return;}
+      attempts++;const correct=measureAnswer(value,q.answer[0]);if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The answer is ","答案是 ")+q.answer[0]+t(" cm. ","厘米。"))+local(q.why);
+        input.disabled=true;e.currentTarget.querySelector('button[type="submit"]').hidden=true;const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const entered=Number(value.normalize("NFKC"));
+        feedback.textContent=!/^(?:0|[1-9][0-9]*)$/.test(value.normalize("NFKC"))?t("Write whole-number digits only; cm is printed beside the box.","只寫整數數字；厘米單位已印在旁邊。")
+          :entered===s.perimeter/2?t("You found half the perimeter. Now subtract the known side.","你已求出周界的一半，現在減去已知邊長。")
+          :entered===s.perimeter-s.known?t("The perimeter includes two of each side. First divide it by two.","周界包括每種邊各兩條，先把周界除以二。")
+          :t("A long side and a short side make half the perimeter. Divide by two, then subtract the known side.","一長一短兩條邊合起來是周界的一半。先除以二，再減去已知邊長。");input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{position++;attempts=0;if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';};
   }
   show();
 }
@@ -905,6 +938,7 @@ const practiceCatalogue=[
   {grade:1,skill:"parts18a",label:["Practise missing parts","練習找出另一部分"],render:renderPractice},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
+  {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},
   {grade:4,skill:"factor1",label:["Practise factors","練習因數"],render:renderFactorPractice},
   {grade:6,skill:"pct2",label:["Practise percentages","練習百分比"],render:renderPercentagePractice},
   {grade:6,skill:"mean1",label:["Practise averages","練習平均數"],render:renderMeanPractice},
