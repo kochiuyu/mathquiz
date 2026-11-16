@@ -32,3 +32,7 @@ Draw three clearly separated, identical boxes, each with exactly four counters i
 **Scope limit:** One pictured equal-groups sentence does not establish mastery of the full 0–10 multiplication table, word problems without pictures, the commutative property as a named concept, or the whole 2N3 unit. The key's repeated addition makes the intended relationship visible; a correct response alone does not show how a pupil reasoned.
 
 [Release commit](https://github.com/kochiuyu/mathquiz/commit/f73a43c16fc07126900b79d7f46103bd1eaab75b).
+
+## Current full-unit review
+
+This historical family brief remains unchanged in scope. See the [current full-unit source audit and resource checkpoint](p2-basic-multiplication.md) for objective-wide evidence and the verified 41891f6 / 242-check release. A single family does not establish the whole unit on its own.

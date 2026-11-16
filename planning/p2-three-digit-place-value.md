@@ -36,3 +36,7 @@ Display three labelled columns in that order. One hundred plate represents 100, 
 **Scope limit:** This picture-to-numeral family does not directly assess counting forwards/backwards, odd/even, comparison symbols, group counting, estimation, or exchanging physical blocks. The worked composition supports understanding; a single correct numeral does not prove a pupil can explain the value of the hundreds digit.
 
 [Release commit](https://github.com/kochiuyu/mathquiz/commit/00ca9feb26a366889b2ea66d113cc208803ad305).
+
+## Current full-unit review
+
+This historical family brief remains unchanged in scope. See the [current full-unit source audit and resource checkpoint](p2-3digit-numbers.md) for objective-wide evidence and the verified 41891f6 / 242-check release. A single family does not establish the whole unit on its own.

@@ -265,7 +265,7 @@ function controls(q,i,paper,key=false) {
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):(q.number2N1 && q.fields)||q.arithmetic2N2||q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answerUnitLabels?q.answerUnitLabels.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.numberOrder?q.answer.join(" → "):(q.number2N1 && q.fields)||q.arithmetic2N2||q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -311,7 +311,7 @@ function mark(form) {
   status.focus();
 }
 function renderNumber2Practice(skill){
-  const family=families.find(f=>f.id===skill),variants=[0,6,11];
+  const family=families.find(f=>f.id===skill),samples={divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]},variants=samples[skill]||[0,6,11];
   const practiceUrl=language=>'?lang='+language+'&p=2&view=practice&skill='+skill;
   for(const language of ['en','zh'])document.getElementById(language).href=practiceUrl(language);
   document.title=local(family.label)+' · '+t('Practice','練習')+' | MathQuiz';
@@ -332,7 +332,7 @@ function renderNumber2Practice(skill){
         const answers=q.choices?(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0]):q.fields.map((field,j)=>local(field)+': '+q.answer[j]).join('; ');
         feedback.textContent=(correct?t(attempts===1?'Correct on the first try. ':'Correct after a hint. ',attempts===1?'第一次答對。':'看提示後答對。'):t('Answers: ','答案：')+answers+'. ')+t('Fields correct: ','答對欄數：')+earned+' / '+scores.length+'. '+local(q.why);
         inputs.forEach(input=>input.disabled=true);form.querySelector('button[type="submit"]').hidden=true;const next=document.getElementById('practice-next');next.hidden=false;next.focus();
-      }else{feedback.textContent=local(q.number2N1.hint);inputs[q.choices?0:scores.indexOf(0)].focus();}
+      }else{feedback.textContent=local(q.practiceHint || (q.division2N6?q.division2N6.hint:q.number2N1.hint));inputs[q.choices?0:scores.indexOf(0)].focus();}
     };
     document.getElementById('practice-next').onclick=()=>{
       if(!finished)return;finished=false;position++;attempts=0;
@@ -1390,6 +1390,7 @@ function renderAdditionalP1Practice(skill){
 // counting link omits skill to preserve already-shared URLs.
 const practiceCatalogue=[
   {grade:1,skill:null,label:["Practise counting","練習點算"],render:renderPractice},
+  ...[...fourDigitFamilies2,...moneyFamilies2,...arithmetic3Families2,...divisionFamilies2].map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderNumber2Practice(f.id)})),
   ...multiplicationFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderArithmetic2Practice(f.id)})),
   ...numberFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderNumber2Practice(f.id)})),
   ...arithmeticFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderArithmetic2Practice(f.id)})),

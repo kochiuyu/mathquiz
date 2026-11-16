@@ -5,6 +5,23 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["thousandvalue2a", 2, 12, "cdfb57969322ea5122a4629be0b2b5a6d4681a79cb6b66396714c7dc78c383a3"],
+    ["cross1000seq2a", 2, 12, "ba858a295635243b7f81692e518e0d8e2f63d4ed8f3d77104a24cb539e417c97"],
+    ["parity4digit2a", 2, 12, "4a641f342ff2f1c0243a0dcf24930e8e0824c7ce2b22fcaeeeea175c104c6cd0"],
+    ["compare4digit2a", 2, 12, "66b5b994c8a5919202577c58ff9f79ea49366e89f16689062af6209bd31df312"],
+    ["groupcount4digit2a", 2, 12, "a29d6863fd42547ccfcf7ddb5b8b3c1cfcefd61c96a6f9c2bd56beb79a43dca1"],
+    ["price1000read2a", 2, 12, "20069d8eded756b958adfbaab82c5b20e962e8c3dcca4d6521e4151f34124998"],
+    ["moneycount1000a", 2, 12, "48796598c69f556b8f41a34b846921af1a7f490555542687ec69544dbc9ba6cb"],
+    ["noteexchange2a", 2, 12, "dfda9150c4053c7a11257f02509da13ccf4e5cfcc19a9a2554cecde3d950ba71"],
+    ["sub3borrow2a", 2, 12, "180baee40cecd1e14b219711d97031121ab750e2501ce0142adfdb51ba25feaf"],
+    ["mixed3steps2a", 2, 24, "0f9671b695514d300e0839842862fbf64fd280d4badd9684d3e22a54327c668e"],
+    ["mixedstory3digit2a", 2, 12, "3d1ccaa8f04ef90909e42774f38021e2917a7513bb6af49867f888e32a2d850e"],
+    ["moneychange2a", 2, 12, "899659940e58054c5bbc1c70df21c5701594416ebcf243fcbdfd0b7a93a01d2a"],
+    ["divfact2a", 2, 110, "80d2d3dca44b5727e2422589bfc47de38d85be14de89089918cf40e8be5b2d8c"],
+    ["divremain2a", 2, 12, "dd5232e86554bdc352c6b6d7b3077019b366c660a67d1d8ef5df1b96b1e133cd"],
+    ["divgroup2a", 2, 12, "c0ae9af7f455cd19d6334592a42d61c18ce6074745caa832a8d415d1b1ffeb6a"],
+    ["divcheck2a", 2, 12, "2c7aa56210343886c174d800de2aa6cc9c976c9873c4d0b6598940b103c045ef"],
+
     ["multfact2a",2,121,"885057eb535f67d040d3f4ce0db453cf9d1017a09c8a76bb8d66387502a2d8a9"],
     ["multstory2a",2,30,"682e9bb6c2f4990d84bf01eca6170aa8a3f2db24753f0fcc371f9690a0a672ec"],
     ["digitvalue2a",2,12,"eed20ff8983d839fb5603bb3101919c27f80791ede062c18d97d2562563ab4da"],
@@ -140,9 +157,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===1227,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===1529,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 1227 variants",()=>{
+  await check("Released bilingual and response contracts · 1529 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -333,27 +350,28 @@
         if(q.choices)[...d.querySelectorAll('input[type="radio"]')].find(x=>x.value===q.answer[0]).checked=true;
         else q.answer.forEach((answer,j)=>d.querySelector('[name="q0f'+j+'"]').value=(answer*2)+'/2');
         d.querySelector('form').requestSubmit();assert(d.getElementById('status').textContent.includes(q.marks+' / '+q.marks),'P2 score '+id);
-        if(id==='order999a'){
+        if(q.fields && q.fields.length>1){
           const partial=await shapeFrame(query);frames.push(partial);const pd=partial.contentDocument;
           q.answer.forEach((a,j)=>pd.querySelector('[name="q0f'+j+'"]').value=String(j===1?a+1:a));pd.querySelector('form').requestSubmit();
-          assert(pd.getElementById('status').textContent.includes('2 / 3'),'order partial field score');
+          assert(pd.getElementById('status').textContent.includes((q.marks-1)+' / '+q.marks),'P2 partial field score');
         }
         const key=await shapeFrame(query+'&view=key');frames.push(key);const kd=key.contentDocument;
-        if(q.number2N1 && q.fields)q.fields.forEach((label,j)=>assert(kd.querySelector('fieldset p b').textContent.includes(label[l]+': '+q.answer[j]),'P2 labelled key '+id));
+        if(q.answerUnitLabels || (q.number2N1 && q.fields))(q.answerUnitLabels||q.fields).forEach((label,j)=>assert(kd.querySelector('fieldset p b').textContent.includes(label[l]+': '+q.answer[j]),'P2 labelled key '+id));
         else if(q.choiceLabels)assert(kd.querySelector('fieldset p b').textContent===q.choiceLabels[q.answer[0]][l],'P2 localized choice key');
         const practice=await shapeFrame('?lang='+language+'&p=2&view=practice&skill='+id);frames.push(practice);const pr=practice.contentDocument;
-        const variants=id==='multfact2a'?[0,51,120]:id==='multstory2a'?[0,12,29]:[0,6,11];
+        const samples={divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
+        const variants=samples[id]||(id==='multfact2a'?[0,51,120]:id==='multstory2a'?[0,12,29]:[0,6,11]);
         for(const variant of variants){
           const item=f.make(variant),inputs=[...pr.querySelectorAll('#practice-form input')];
           pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-next').hidden,'blank practice advanced');
           if(item.choices){assert(inputs.length===item.choices.length,'choice count');inputs.find(x=>x.value!==item.answer[0]).checked=true;}
           else inputs.forEach((input,j)=>input.value=String(item.answer[j]+1));
-          pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent.includes((item.practiceHint||item.number2N1.hint)[l]),'P2 targeted hint');
+          pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent.includes((item.practiceHint||(item.division2N6?item.division2N6.hint:item.number2N1.hint))[l]),'P2 targeted hint');
           if(item.choices)inputs.find(x=>x.value===item.answer[0]).checked=true;else inputs.forEach((input,j)=>input.value=item.answer[j]+'.0');
           pr.querySelector('form').requestSubmit();assert(!pr.getElementById('practice-next').hidden && pr.getElementById('practice-feedback').textContent.includes(item.why[l]),'P2 retry feedback');
-          pr.querySelector('form').requestSubmit();pr.getElementById('practice-next').click();
+          const completedFeedback=pr.getElementById('practice-feedback').textContent;pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent===completedFeedback,'repeated submission changed completed feedback');pr.getElementById('practice-next').click();
         }
-        assert(pr.querySelector('h1').textContent===(l?'練習完成':'Practice complete') && pr.body.textContent.includes('0 / 3'),'P2 fullflow completion');
+        assert(pr.querySelector('h1').textContent===(l?'練習完成':'Practice complete') && pr.body.textContent.includes('0 / '+variants.length),'P2 fullflow completion');
         if(id.startsWith('mult'))assert(pr.body.textContent.includes(l?'不能評估整張乘法表':'does not assess recall'),'sample recall caveat');
         for(const frame of [builder,pupil,key,practice]){frame.style.width='360px';await new Promise(r=>setTimeout(r,70));assert(frame.contentDocument.documentElement.scrollWidth<=frame.contentDocument.documentElement.clientWidth+1,'P2 phone '+id);}
       }
@@ -375,6 +393,53 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
+  const release6Ids=['thousandvalue2a','cross1000seq2a','parity4digit2a','compare4digit2a','groupcount4digit2a','price1000read2a','moneycount1000a','noteexchange2a','sub3borrow2a','mixed3steps2a','mixedstory3digit2a','moneychange2a','divfact2a','divremain2a','divgroup2a','divcheck2a'];
+  for(const id of release6Ids)await check('P2 new range/money/division · bilingual full routes '+id,()=>checkP2NewRoutes([id]));
+  await check('P2 2N4 · all 60 source-range arithmetic oracles',()=>{
+    const sizes=new Set(),steps=new Set();
+    for(const id of release6Ids.slice(0,5)){const f=families.find(f=>f.id===id);for(let i=0;i<f.count;i++){const q=f.make(i);
+      if(q.thousandsValue)assert(q.answer[0]===Math.floor(q.thousandsValue.value/1000)*1000,'thousands value');
+      if(q.boundarySequence){const m=q.boundarySequence,a=[0,1,2,3].map(k=>m.start+k*m.step);steps.add(m.step);assert(q.answer[0]===a[3] && Math.min(...a)<1000 && Math.max(...a)>=1000,'boundary');}
+      if(q.parity4)assert(q.answer[0]===(q.parity4.value%2?'odd':'even'),'parity');
+      if(q.compare4){const {a,b}=q.compare4;assert(q.answer[0]===(a===b?'=':a>b?'>':'<'),'comparison');}
+      if(q.groupCount4){const m=q.groupCount4;sizes.add(m.size);let sum=0;for(let k=0;k<m.groups;k++)sum+=m.size;assert(q.answer[0]===sum,'group total');}
+    }}assert(sizes.size===4 && steps.size===4,'missing source categories');
+  });
+  await check('P2 2M3 · all 36 price, count and permitted exchange oracles',()=>{
+    for(const id of ['price1000read2a','moneycount1000a','noteexchange2a']){const f=families.find(f=>f.id===id);for(let i=0;i<f.count;i++){const q=f.make(i);
+      if(q.priceRead2){const m=q.priceRead2;assert(m.cents<=100000 && m.optionCents[q.choices.indexOf(q.answer[0])]===m.cents,'price');}
+      if(q.moneyCount2){const m=q.moneyCount2,sum=m.pieces.reduce((n,p)=>n+p[0],0);assert(sum<=100000 && q.answer[0]*100+q.answer[1]===sum && q.answer[1]<100,'count');assert(q.marks===2 && q.answerUnitLabels.length===2,'count field marks');}
+      if(q.noteExchange2){const m=q.noteExchange2,allowed=m.group===0?[1000,2000,5000,10000]:[10000,50000,100000];assert([m.from,m.to,...m.fixed].every(x=>allowed.includes(x)),'exchange group');assert(m.to*q.answer[0]+m.fixed.reduce((a,b)=>a+b,0)===m.from,'exchange conservation');}
+    }}
+  });
+  await check('P2 2N5 · all 60 intermediate and money conservation oracles',()=>{
+    const patterns=new Set();for(const id of ['sub3borrow2a','mixed3steps2a','mixedstory3digit2a','moneychange2a']){const f=families.find(f=>f.id===id);for(let i=0;i<f.count;i++){const q=f.make(i);assert(q.marks===q.fields.length,'per-field marks');
+      if(q.subtract3)assert(q.answer[0]+q.subtract3.b===q.subtract3.a,'inverse subtraction');
+      const m=q.mixed3||q.mixedStory3;if(m){let a=BigInt(m.v[0]);for(let k=0;k<2;k++){a=m.ops[k]==='+'?a+BigInt(m.v[k+1]):a-BigInt(m.v[k+1]);assert(a>=0n && a<=999n && Number(a)===q.answer[k],'mixed intermediate');}if(q.mixed3)patterns.add(m.ops.join(''));}
+      if(q.moneyChange2){const m=q.moneyChange2;assert(q.answer[0]*100+q.answer[1]+m.cost===m.paid && q.answer[1]>=0 && q.answer[1]<100,'change units');}
+    }}assert(patterns.size===4,'mixed patterns');
+  });
+  await check('P2 2N6 · all 146 repeated-subtraction and distractor oracles',()=>{
+    const facts=new Set();for(const id of ['divfact2a','divremain2a','divgroup2a','divcheck2a']){const f=families.find(f=>f.id===id);for(let i=0;i<f.count;i++){const q=f.make(i),m=q.division2N6;assert(Number.isInteger(m.divisor)&&m.divisor>=1&&m.divisor<=10,'unsafe divisor');let r=m.dividend,n=0;while(r>=m.divisor){r-=m.divisor;n++;}assert(n===m.quotient && r===m.remainder && n<=10 && r<m.divisor,'division oracle');
+      if(q.fields){assert(q.answer[0]===n && q.marks===q.fields.length,'division marks');if(q.fields.length===2)assert(q.answer[1]===r && stable(q.answerUnitLabels)===stable(q.fields),'remainder labels');}
+      if(q.choices){let matches=0;for(const choice of q.choices){const text=q.choiceLabels[choice][0],parts=text.match(/^(\d+) × (\d+) = (\d+)$/);assert(parts,'choice format');const [a,b,c]=parts.slice(1).map(Number);assert(a>=0&&a<=10&&b>=0&&b<=10&&a*b===c,'distractor out of table');if(c===m.divisor*n){matches++;assert(choice===q.answer[0],'wrong multiplication key');}}assert(matches===1,'ambiguous product choice');}
+      if(m.kind==='fact')facts.add(m.divisor+':'+n);
+    }}assert(facts.size===110,'table facts');
+  });
+  await check('P2 high-index division links · live 100 and 109, rejected 110',async()=>{
+    for(const i of [0,99,100,109])assert(decodeItems('divfact2a-'+i,2).length===1,'valid division index');
+    for(const suffix of ['110','0100','-1','1e2','100.0'])assert(decodeItems('divfact2a-'+suffix,2).length===0,'bad division index');
+    const frames=[];try{for(const language of ['en','zh'])for(const i of [100,109]){const frame=await shapeFrame('?v=3&lang='+language+'&p=2&items=divfact2a-'+i);frames.push(frame);const d=frame.contentDocument,q=families.find(f=>f.id==='divfact2a').make(i);assert(d.querySelectorAll('fieldset').length===1,'high-index unavailable');d.querySelector('[name="q0f0"]').value=String(q.answer[0]);d.querySelector('form').requestSubmit();assert(d.getElementById('status').textContent.includes('1 / 1'),'high-index score');}}finally{frames.forEach(f=>f.remove())}
+  });
+  await check('P2 range, money and division · bilingual mixed paper/key PDF',async()=>{
+    const frames=[];
+    try{for(const batch of [release6Ids.slice(0,8),release6Ids.slice(8)])for(const language of ['en','zh'])for(const view of ['paper','key']){const ids=batch.map(id=>id+'-'+(id==='divfact2a'?109:0));const frame=await shapeFrame('?v=3&lang='+language+'&p=2&items='+ids.join('.')+'&view='+view);frames.push(frame);const d=frame.contentDocument,l=language==='zh'?1:0;
+      assert(d.querySelectorAll('fieldset').length===batch.length,'mixed paper count');if(view==='paper')assert(!d.querySelector('input'),'paper live input');
+      if(view==='key')batch.forEach((id,i)=>{const q=families.find(f=>f.id===id).make(id==='divfact2a'?109:0);if(q.answerUnitLabels){const text=d.querySelectorAll('fieldset')[i].querySelector('p b').textContent;q.answerUnitLabels.forEach((label,j)=>assert(text.includes(label[l]+': '+q.answer[j]),'money/quotient key units'));}});
+      const blob=await frame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && raw.includes('/Subtype /Image'),'mixed PDF payload');assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'PDF pages');
+    }}finally{frames.forEach(f=>f.remove())}
+  });
+
   await check("P6 percentage family succession",()=>{
     const legacy=families.find(f=>f.id==="pct1"),current=families.find(f=>f.id==="pct2");
     assert(legacy.retired && legacy.code==="6N3" && !current.retired && current.code==="6N4","P6 family labels changed");
@@ -2659,7 +2724,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===72,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===88,"grade coverage counts wrong");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
@@ -2701,7 +2766,7 @@
   await check("P1 teacher activity routes, keys and phone layout",async()=>{
     const frames=[];
     try{
-      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication'])for(const language of ['en','zh']){
+      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication','p2-4digit-numbers','p2-money','p2-addition-subtraction-iii','p2-basic-division'])for(const language of ['en','zh']){
         const frame=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(frame);
         const d=frame.contentDocument,w=frame.contentWindow,section=d.getElementById(language);
         assert(section && !section.hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language');
@@ -2724,11 +2789,11 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 72 distinct live home links",async()=>{
+  await check("Practice catalogue · 88 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===72 && new Set(links.map(a=>a.href)).size===72,"practice links missing or repeated");
+      assert(links.length===88 && new Set(links.map(a=>a.href)).size===88,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

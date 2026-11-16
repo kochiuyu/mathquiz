@@ -6,27 +6,29 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** As of 16 November 2026, 28 units have at least one selectable task, 57 have none, and 15 have been verified resource complete. The builder offers 72 question families and 1,212 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the release-6 candidate, 31 units have at least one selectable task, 54 have none, and 15 have been verified resource complete. The candidate builder offers 88 question families and 1,514 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
-| P2 | 15 | 5 | 10 | 3 |
+| P2 | 15 | 8 | 7 | 3 |
 | P3 | 14 | 3 | 11 | 0 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **28** | **57** | **15** |
+| **Total** | **85** | **31** | **54** | **15** |
 
-**Released resource inventory:** 31 units have digital tasks or linked teacher-led activities; 28 have selectable tasks. All 12 P1 units and P2 units 2N1,2N2,2N3 are verified resource complete. The other 16 touched units remain open. Whole-curriculum objective totals and percentages are not yet claimed.
+**Release-6 candidate resource inventory:** 34 units have digital tasks or linked teacher-led activities; 31 have selectable tasks. All 12 P1 units and P2 units 2N1,2N2,2N3 are verified resource complete. The other 19 touched units remain open. Whole-curriculum objective totals and percentages are not yet claimed.
 
 **Verified resource-complete checkpoint: 15/85 units.** Source audits and independent mathematics review cover 59 numbered objectives plus 1F1’s integrated inquiry statement. Live `41891f6` passed **242/242** browser checks. P1 retains its earlier targeted visual evidence; P2 includes bilingual marking/partial-credit, builder, practice, paper/key/PDF and teacher/phone route checks, plus manual bilingual arithmetic and high-index multiplication-key inspection. This is usable assessment-resource coverage, not pupil mastery or inquiry hours. Manual downloaded-PDF visual inspection, teacher print-preview/pagination, classroom, independent translation, physical-printer and screen-reader validation remain unperformed.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
-**Current release · P2 first three units resource complete:** 73 permanent families /1,227 variants;72 families /1,212 variants selectable. Three-digit number, addition/subtraction and multiplication activities supply oral, concrete, strategy, estimation and explanation evidence that numeric totals cannot establish. Shared links now support valid three-digit variant indices without accepting malformed or out-of-range IDs. The full live suite is242/242. The next four P2 units are locally prepared but not yet counted as released or complete.
+**Last verified release · P2 first three units resource complete:** 73 permanent families /1,227 variants;72 families /1,212 variants selectable. Three-digit number, addition/subtraction and multiplication activities supply oral, concrete, strategy, estimation and explanation evidence that numeric totals cannot establish. Shared links now support valid three-digit variant indices without accepting malformed or out-of-range IDs. The full live suite is242/242. The next four P2 units remain pending live verification and are not counted complete.
 
-**P2 marking:** `smartadd2a` and `subchain2a` award one mark per correct field, up to two; `order999a` awards up to three. Other new items award one. These new per-field partial-credit contracts do not change any previously released item. P2 numeric fields retain equivalent-number acceptance; choosing a comparison/parity option requires the exact correct choice. Sampled multiplication practice does not establish whole-table recall.
+**Release-6 candidate:** 89 permanent families / 1,529 variants; 88 families / 1,514 variants selectable. Four reviewed activities: [4-digit numbers (2N4)](activities/p2-4digit-numbers.html), [Money (II) (2M3)](activities/p2-money.html), [Addition and subtraction (III) (2N5)](activities/p2-addition-subtraction-iii.html), and [Basic division (2N6)](activities/p2-basic-division.html). Follow **2N4 → 2M3 → 2N5**. The 16 new families add 302 variants; all previous 1,227 payloads are preserved. **280 browser checks are authored, not yet passed for this candidate.** Run `node tests/static.cjs` successfully before publication, then verify the deployed browser suite and targeted routes. Later P2 measurement, time, shapes, directions and inquiry drafts are excluded from these counts and this release.
+
+**P2 marking:** `smartadd2a` and `subchain2a` award one mark per correct field, up to two; `order999a` awards up to three. The candidate `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a` and `divgroup2a` award two marks, one per correct labelled field. Other new items award one; legacy `share2a` remains all-or-none. These new per-field partial-credit contracts do not change any previously released item. P2 numeric fields retain equivalent-number acceptance; all choice responses require the exact correct choice. Money and division keys label dollars/cents and quotient/remainder rather than using ambiguous slash notation. Sampled multiplication practice does not establish whole-table recall.
 
 [Immediate priorities](#next-three-deliverables) · [Priority rules](#how-to-choose-the-next-release) · [P1–P6 delivery plan](#grade-by-grade-delivery-plan) · [Milestones](#milestones-and-handoff) · [Release procedure](#author-verify-and-hand-off-a-release)
 

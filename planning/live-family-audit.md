@@ -2,7 +2,7 @@
 
 Code and documentation check: **16 November 2026**. This is a release ledger for the generated families. The [curriculum map](primary-mathematics.md) and linked family briefs carry the EDB objective, prerequisites, exclusions and source-check date for each skill. Those are project mappings, not EDB endorsement or evidence of pupil mastery. The misconception column records a **design hypothesis**, not an observed error.
 
-Release-5 candidate counts (new P2 families await live verification): **73 permanent family IDs and 1,227 versioned variants**. `pct1` (15 variants) is legacy and still decodes in old links; **72 families and 1,212 variants** are selectable for new papers. The home page links **72 practice routes**. All previously released items keep their one-mark/all-or-nothing contracts. New `smartadd2a` and `subchain2a` award up to two marks, and `order999a` up to three, one per correct field; all other new P2 items award one. P2 numeric-equivalence rules remain unchanged; choices are exact. Fixed pilot questions and downloadable fixed PDFs are separate from these counts.
+Release-6 candidate counts: **89 permanent family IDs and 1,529 versioned variants**; **88 families and 1,514 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 88 practice routes. Fifteen units remain verified resource complete; new 2N4/2M3/2N5/2N6 await deployed QA. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
 
 | Family | Objective record and status | Purpose and released variation | Answer rule; worked step | Error hypothesis to probe |
 |---|---|---|---|---|
@@ -68,7 +68,7 @@ Release-5 candidate counts (new P2 families await live verification): **73 perma
 
 - `v=3` P1 numeric items require a whole-number numeral. Old `v=2` links retain equivalent numeric values. P2, P3 and the new P5 numeric families use their exact numeral or fraction-field policies. P4 `per1` and P6 numeric fields retain equivalent decimal and fraction values; new P4 `permissing4a` and `factorpair4a` require whole-number numerals. Full-width digits are normalised where the relevant marker accepts them. Typed units are not accepted when printed beside the field. No item asks for rounding.
 - English and Traditional Chinese family labels, prompts and worked steps are present for every released variant. The regression checks their structure, response fields, choice uniqueness and share-link decoding; they cannot establish that a translation is natural or that every hint works for a child. Manual language, pupil and screen-reader review remains deferred.
-- Released IDs and question records are frozen by SHA-256 fixtures in `tests/regression.js`. New mathematics, diagram meaning or answer policy needs a new family ID. The runner also checks representative arithmetic, diagrams, answer boundaries, paper/key agreement, direct PDF text and older links. All generated items currently give one mark, so no partial-mark allocation is needed. The only open construction rubric is the [P1 other-way paper item](p1-exit-ticket.md#marking-the-two-open-response-items).
+- Released IDs and question records are frozen by SHA-256 fixtures in `tests/regression.js`. New mathematics, diagram meaning or answer policy needs a new family ID. The runner also checks representative arithmetic, diagrams, answer boundaries, paper/key agreement, direct PDF text and older links. Per-field partial credit applies only to the listed numeric families; other existing contracts remain unchanged. Teacher activities provide separate construction, manipulation and explanation rubrics.
 - Practice covers 58 routes, with a hint, retry, worked answer and distinct follow-ups. Every selectable family has a dedicated route. The live families mostly vary numbers or diagram orientation within a single task form. Missing-side perimeter, factor-pair explanation and purchase-story equation formation provide second representations of 4M1, 4N3 and 5A2 under separate, source-checked IDs.
 
 ## P1 money (1M2)
@@ -106,3 +106,26 @@ Candidate tests: 241 authored checks, browser run pending. Prior 944 payloads pr
 ## Verified P2 first-three checkpoint
 
 2N1,2N2 and 2N3 are resource complete after source/maths review and live 41891f6 PASS242/242. Their 14 numbered objectives bring the verified total to 15 units / 59 numbered objectives plus 1F1 integrated inquiry. Earlier candidate notes above are historical. All 1,227 payloads remain reproducible; three-digit variant links and exact pupil-prompt checks now pass. Manual PDF visuals, teacher print-preview/pagination, classroom, independent translation, physical printer and screen-reader checks remain unperformed.
+
+## Release-6 candidate additions
+
+Sixteen families / 302 variants added; all prior 1,227 payloads preserved. There are 280 authored browser checks, not a passed browser result for this candidate. `node tests/static.cjs` is required before publication; deployed browser and targeted checks follow. Source sequence: **2N4 → 2M3 → 2N5**. Counts include only these four new reviewed activities, not later P2 drafts. Source limits and physical/oral evidence remain in the linked briefs.
+
+| Family | Unit / source map | Assessed action | Marking / limits | Error hypothesis |
+|---|---|---|---|---|
+| `thousandvalue2a` (12) | [2N4](p2-4digit-numbers.md), candidate | Identify thousands digit value | One numeric value | Report digit rather than value |
+| `cross1000seq2a` (12) | [2N4](p2-4digit-numbers.md), candidate | Continue sequences across 1000 | One numeric answer; practice ±1 and ±100 | Miss boundary or reverse step |
+| `parity4digit2a` (12) | [2N4](p2-4digit-numbers.md), candidate | Identify four-digit parity | Exact localized choice | Use thousands digit |
+| `compare4digit2a` (12) | [2N4](p2-4digit-numbers.md), candidate | Compare four-digit magnitude | Exact comparison symbol | Compare units first |
+| `groupcount4digit2a` (12) | [2N4](p2-4digit-numbers.md), candidate | Continue 200/250/500/1000 group totals | One numeric total; physical counting assessed separately | Count groups rather than items |
+| `price1000read2a` (12) | [2M3](p2-money.md), candidate | Read labelled prices through $1000 | Exact localized choice; no decimal arithmetic | Read .50 as five cents |
+| `moneycount1000a` (12) | [2M3](p2-money.md), candidate | Count listed notes and coins | Dollars/cents fields, two marks; not authentic recognition | Confuse count of pieces with value |
+| `noteexchange2a` (12) | [2M3](p2-money.md), candidate | Exchange within permitted note groups | One count; value conserved, groups not crossed | Ignore fixed notes |
+| `sub3borrow2a` (12) | [2N5](p2-addition-subtraction-iii.md), candidate | Subtract three-digit numbers with borrowing | One difference; includes zero regrouping | Borrow across zero incorrectly |
+| `mixed3steps2a` (24) | [2N5](p2-addition-subtraction-iii.md), candidate | Record left-to-right first/final results | Two marks; all four sign patterns, intermediates≤999 | Perform addition first |
+| `mixedstory3digit2a` (12) | [2N5](p2-addition-subtraction-iii.md), candidate | Apply sequential-change operations | Two labelled fields/marks; explanation offline | Reverse event order |
+| `moneychange2a` (12) | [2N5](p2-addition-subtraction-iii.md), candidate | Find change without decimal operations | Dollars/cents fields, two marks | Treat cents as dollars |
+| `divfact2a` (110) | [2N6](p2-basic-division.md), candidate | Calculate all nonzero-divisor facts from 0–10 table | One quotient; IDs include100–109 | Treat zero dividend as divisor |
+| `divremain2a` (12) | [2N6](p2-basic-division.md), candidate | Find quotient and remainder | Two labelled fields/marks; remainder<divisor | Leave another whole group in remainder |
+| `divgroup2a` (12) | [2N6](p2-basic-division.md), candidate | Find full packs and unpacked pencils | Two contextual fields/marks; interpretation offline | Confuse group size and group count |
+| `divcheck2a` (12) | [2N6](p2-basic-division.md), candidate | Use multiplication to check full groups | Exact localized choice; all option factors0–10 | Multiply by wrong quotient |
