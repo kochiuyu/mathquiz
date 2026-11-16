@@ -48,6 +48,10 @@ function solidFigure1(f,zh=false){
 }
 
 function figure(type) {
+  if(type && ['fractionsEvidence3','millimetreRuler3'].includes(type.kind)){
+    const svg=type.kind==='fractionsEvidence3'?fractionsEvidenceSvg3(type):rulerMillimetresSvg3(type);
+    return '<div class="figure p3-evidence">'+svg.replace(/ style="width:100%;height:auto"/g,'').replace(/<svg /g,'<svg style="width:100%;height:auto" ')+'</div>';
+  }
   if(type && ['baseOutline2','angleOpening2','anglePair2','directionMap2','quadrilateralProperties2'].includes(type.kind)){
     const svg=type.kind==='baseOutline2'?baseOutlineSvg2(type):type.kind==='directionMap2'?directionMapSvg2(type):type.kind==='quadrilateralProperties2'?quadrilateralSvg2(type):angleFiguresSvg2(type);
     return '<div class="figure p2-geometry">'+svg.replace(/ style="width:100%;height:auto"/g,'').replace(/<svg /g,'<svg style="width:100%;height:auto" ')+'</div>';
@@ -316,7 +320,7 @@ function mark(form) {
 }
 function renderNumber2Practice(skill){return renderNumberPractice(skill);}
 function renderNumberPractice(skill){
-  const family=families.find(f=>f.id===skill),samples={compose5digit3a:[0,2,4],tenthousandsvalue3a:[0,2,4],sequence5digit3a:[0,2,4,6,9,10],parity5digit3a:[0,1,4],compare5digit3a:[0,1,2],multdigit3a:[0,6,12,18],multthree3a:[0,3,11],multstory3a:[0,6,9],dividecolumns3a:[0,3,6,7,8],dividechain3a:[0,1,11],divisionstory3a:[0,1,2,4],metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]},variants=samples[skill]||[0,6,11];
+  const family=families.find(f=>f.id===skill),samples={addsub4digit3a:[0, 1, 2, 3, 11],mixedmultiply3a:[0, 2, 7, 11],bracketorder3a:[0, 1, 2, 8],comparetotal3a:[0, 5, 6, 11],fractionset3a:[0, 3, 4, 10],fractionequivalent3a:[0, 3, 4, 6, 9, 10],fractioncompare3a:[0, 1, 2, 3, 4, 5],fractionoperation3a:[0, 1, 2, 4, 5, 7],cmtomm3a:[0, 3, 8, 11],comparekm3a:[0, 1, 2],rulermm3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],startminutes3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],starthours3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],compose5digit3a:[0,2,4],tenthousandsvalue3a:[0,2,4],sequence5digit3a:[0,2,4,6,9,10],parity5digit3a:[0,1,4],compare5digit3a:[0,1,2],multdigit3a:[0,6,12,18],multthree3a:[0,3,11],multstory3a:[0,6,9],dividecolumns3a:[0,3,6,7,8],dividechain3a:[0,1,11],divisionstory3a:[0,1,2,4],metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]},variants=samples[skill]||[0,6,11];
   const practiceUrl=language=>'?lang='+language+'&p='+family.grade+'&view=practice&skill='+skill;
   for(const language of ['en','zh'])document.getElementById(language).href=practiceUrl(language);
   document.title=local(family.label)+' · '+t('Practice','練習')+' | MathQuiz';
@@ -337,7 +341,7 @@ function renderNumberPractice(skill){
         const answers=q.choices?(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0]):q.fields.map((field,j)=>local(field)+': '+q.answer[j]).join('; ');
         feedback.textContent=(correct?t(attempts===1?'Correct on the first try. ':'Correct after a hint. ',attempts===1?'第一次答對。':'看提示後答對。'):t('Answers: ','答案：')+answers+'. ')+t('Fields correct: ','答對欄數：')+earned+' / '+scores.length+'. '+local(q.why);
         inputs.forEach(input=>input.disabled=true);form.querySelector('button[type="submit"]').hidden=true;const next=document.getElementById('practice-next');next.hidden=false;next.focus();
-      }else{feedback.textContent=local(q.practiceHint || (q.division2N6||q.number2N1||q.length2M1||q.time2M2||q.solid2S1||q.angle2S2||q.direction2S3||q.quadrilateral2S4||q.multiplication3N2).hint);inputs[q.choices?0:scores.indexOf(0)].focus();}
+      }else{feedback.textContent=local(q.practiceHint || (q.division2N6||q.number2N1||q.length2M1||q.time2M2||q.solid2S1||q.angle2S2||q.direction2S3||q.quadrilateral2S4||q.multiplication3N2||q.operations3N4||q.time3M2).hint);inputs[q.choices?0:scores.indexOf(0)].focus();}
     };
     document.getElementById('practice-next').onclick=()=>{
       if(!finished)return;finished=false;position++;attempts=0;
@@ -1396,7 +1400,7 @@ function renderAdditionalP1Practice(skill){
 const practiceCatalogue=[
   {grade:1,skill:null,label:["Practise counting","練習點算"],render:renderPractice},
   ...[...fourDigitFamilies2,...moneyFamilies2,...arithmetic3Families2,...divisionFamilies2,...lengthFamilies2,...timeFamilies2,...solidFamilies2,...angleFamilies2,...directionFamilies2,...quadrilateralFamilies2].map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderNumber2Practice(f.id)})),
-  ...[...numberFamilies3,...multiplicationFamilies3,...divisionFamilies3].map(f=>({grade:3,skill:f.id,label:f.label,render:()=>renderNumberPractice(f.id)})),
+  ...[...operationsFamilies3,...fractionFamilies3,...lengthFamilies3,...timeFamilies3,...numberFamilies3,...multiplicationFamilies3,...divisionFamilies3].map(f=>({grade:3,skill:f.id,label:f.label,render:()=>renderNumberPractice(f.id)})),
   ...multiplicationFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderArithmetic2Practice(f.id)})),
   ...numberFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderNumber2Practice(f.id)})),
   ...arithmeticFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderArithmetic2Practice(f.id)})),

@@ -13,7 +13,7 @@ const contractsOnly=process.argv.includes('--contracts-only');
 assert(new Set(families.map(f=>f.id)).size===families.length,'duplicate family ID');
 if(!contractsOnly)assert(fixtures.length===families.length,'fixture catalogue does not match current families');
 const legacyP2=new Set(['place3a','groups2a','share2a','pict2a']);
-const newP3=new Set(['compose5digit3a','tenthousandsvalue3a','sequence5digit3a','parity5digit3a','compare5digit3a','multdigit3a','multthree3a','multstory3a','dividecolumns3a','dividechain3a','divisionstory3a']);
+const newP3=new Set(["addsub4digit3a", "mixedmultiply3a", "bracketorder3a", "comparetotal3a", "fractionset3a", "fractionequivalent3a", "fractioncompare3a", "fractionoperation3a", "cmtomm3a", "comparekm3a", "rulermm3a", "startminutes3a", "starthours3a",'compose5digit3a','tenthousandsvalue3a','sequence5digit3a','parity5digit3a','compare5digit3a','multdigit3a','multthree3a','multstory3a','dividecolumns3a','dividechain3a','divisionstory3a']);
 let count=0;
 for(const family of families){
   const fixture=fixtures.find(([id])=>id===family.id),variants=[];

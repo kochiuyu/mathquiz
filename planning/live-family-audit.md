@@ -1,12 +1,14 @@
 # Live family authoring audit
 
-**Verified resource-complete checkpoint: 30/85 units.** All P1/P2 units and 3N1–3N3 have source-reviewed assessment resources, covering 113 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `741d1b6` passed **326/326** browser checks with zero failures, including all 1,785 variant contracts. All 1,641 previous payloads remain unchanged. The three static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 30/85 units.** All P1/P2 units and 3N1–3N3 have source-reviewed assessment resources, covering 113 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `741d1b6` passed **326/326** browser checks with zero failures, including all 1,785 variant contracts. All 1,641 previous payloads remain unchanged. The three static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed. Checkpoint documentation deployed as `9d6b319`.
 
-Earlier release notes below retain their original dated status as historical evidence; they do not override this checkpoint.
+**R9 next-four publication candidate:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families /156 variants cover 3N4,3N5,3M1,3M2; all 1,785 earlier payloads are unchanged. The original frozen R9 passed 359/359 private browser checks. This publication candidate retains that runtime and adds the independently reviewed framefix2 readiness helper; it requires a fresh 359-check live run before any of these four units can be resource complete. Four static gates pass. No later P3/P4/P5 draft is included.
+
+Earlier draft/candidate notes retain historical status and do not override this current checkpoint or the required next-four live QA.
 
 Code and documentation check: **16 November 2026**. This is a release ledger for the generated families. The [curriculum map](primary-mathematics.md) and linked family briefs carry the EDB objective, prerequisites, exclusions and source-check date for each skill. Those are project mappings, not EDB endorsement or evidence of pupil mastery. The misconception column records a **design hypothesis**, not an observed error.
 
-Published P3 first-three release counts: **108 permanent family IDs and 1,785 versioned variants**; **107 families and 1,770 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 107 practice routes. Thirty units are verified resource complete (all P1/P2 and 3N1–3N3), following public 741d1b6 PASS 326/326. Subsequent candidate and earlier checkpoint notes below are historical; the current checkpoint takes precedence. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a`, `timefinish2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
+Local P3 next-four candidate counts: **121 permanent family IDs and 1,941 versioned variants**; **120 families and 1,926 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 120 practice routes. Thirty units are publicly resource complete (all P1/P2 and3N1–3N3); the four additional P3 units await their fresh live QA. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a`, `timefinish2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
 
 | Family | Objective record and status | Purpose and released variation | Answer rule; worked step | Error hypothesis to probe |
 |---|---|---|---|---|
@@ -166,3 +168,14 @@ Eleven new families / 144 variants; all prior 1,641 payloads preserved. Totals 1
 ## All-P2 verified resource checkpoint
 
 Live10848e8 / Pages43930855933 passed299/299, including the original quadrilateral immutable digest and deterministic-coordinate guard. All27 P1/P2 units are now resource complete (104 numbered objectives plus1F1/2F1 integrated statements). This supersedes earlier pending-P2 wording, not the pending326-check P3 candidate. Manual visual, PDF/print, classroom, independent translation and accessibility checks remain outstanding.
+
+## Local P3 next-four candidate (pending deployed QA)
+
+Thirteen families /156 variants added; all1,785 prior payloads preserved. Snapshot totals121/1,941 permanent and120/1,926 selectable;43 selectable units and47 resource units. All27 P1/P2 checkpoints remain verified at live10848e8 299/299. First-three P3 live326 and next-four live359 remain pending; authored tests are not pass results. All four static gates pass, including poisoned-transcendental equality. Later P3 drafts are excluded. All new items are single-response/one-mark; numeric aliases, labelled units, exact choices, legacy frac3a and existing partial marking remain unchanged.
+
+| Unit | New families | Reviewed evidence |
+|---|---|---|
+| 3N4 | `addsub4digit3a`, `mixedmultiply3a`, `bracketorder3a`, `comparetotal3a` | [Source map](p3-four-operations-i.md) · [Teacher activity](../activities/p3-four-operations-i.html) |
+| 3N5 | `fractionset3a`, `fractionequivalent3a`, `fractioncompare3a`, `fractionoperation3a` | [Source map](p3-fractions-i.md) · [Teacher activity](../activities/p3-fractions-i.html) |
+| 3M1 | `cmtomm3a`, `comparekm3a`, `rulermm3a` | [Source map](p3-length-distance-iv.md) · [Teacher activity](../activities/p3-length-distance-iv.html) |
+| 3M2 | `startminutes3a`, `starthours3a` | [Source map](p3-time-iii.md) · [Teacher activity](../activities/p3-time-iii.html) |

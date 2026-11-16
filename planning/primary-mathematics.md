@@ -1,8 +1,10 @@
 # Hong Kong primary mathematics quiz plan
 
-**Verified resource-complete checkpoint: 30/85 units.** All P1/P2 units and 3N1–3N3 have source-reviewed assessment resources, covering 113 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `741d1b6` passed **326/326** browser checks with zero failures, including all 1,785 variant contracts. All 1,641 previous payloads remain unchanged. The three static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 30/85 units.** All P1/P2 units and 3N1–3N3 have source-reviewed assessment resources, covering 113 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `741d1b6` passed **326/326** browser checks with zero failures, including all 1,785 variant contracts. All 1,641 previous payloads remain unchanged. The three static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed. Checkpoint documentation deployed as `9d6b319`.
 
-Earlier release notes below retain their original dated status as historical evidence; they do not override this checkpoint.
+**R9 next-four publication candidate:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families /156 variants cover 3N4,3N5,3M1,3M2; all 1,785 earlier payloads are unchanged. The original frozen R9 passed 359/359 private browser checks. This publication candidate retains that runtime and adds the independently reviewed framefix2 readiness helper; it requires a fresh 359-check live run before any of these four units can be resource complete. Four static gates pass. No later P3/P4/P5 draft is included.
+
+Earlier draft/candidate notes retain historical status and do not override this current checkpoint or the required next-four live QA.
 
 Teachers choose a year, unit and skill, preview the exact questions, replace individual items, then download a pupil paper and a worked key or distribute an online quiz. Pupils can also practise a single skill without an account.
 
@@ -108,10 +110,10 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1�
 | [3N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=49) | 5-digit numbers | [Represent, count, read and compare five-digit numbers](p3-5digit-numbers.md) |
 | [3N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=50) | Multiplication (I) | [Multiply, explain column methods and regroup three factors](p3-multiplication-i.md) |
 | [3N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=51) | Division (I) | [Divide, explain regrouping and interpret remainders](p3-division-i.md) |
-| [3N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=52) | Four arithmetic operations (I) | Choose operations for a two-step story |
-| [3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) | Fractions (I) | [Write the shaded-part count over the equal-part count for one whole](p3-shaded-fractions.md) |
-| [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | Select a suitable length unit |
-| [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | Compare two time intervals in seconds |
+| [3N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=52) | Four arithmetic operations (I) | [Explain brackets, operation order and contextual steps](p3-four-operations-i.md) |
+| [3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) | Fractions (I) | [Represent, compare and operate on fraction diagrams](p3-fractions-i.md) |
+| [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | [Use millimetres, centimetres and kilometre references](p3-length-distance-iv.md) |
+| [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | [Measure seconds and solve missing-start-time stories](p3-time-iii.md) |
 | [3M3 objectives 6–7](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) | Capacity | [Read the water level on a marked measuring cup in mL](p3-measuring-cup.md) |
 | [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | Express an afternoon time using the 24-hour clock |
 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | Read a mass from a scale |
