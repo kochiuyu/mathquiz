@@ -323,7 +323,7 @@ function renderNumber100Practice(skill){
 }
 function renderChoice100Practice(skill){
   const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,cm=family.make(0).centimetre?.items,variants=measure||cm?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
-  const title=measure||cm?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
+  const title=measure||cm||skill==="checksub1a"?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(title)+" · "+t("Practice","練習")+" | MathQuiz";
@@ -342,6 +342,7 @@ function renderChoice100Practice(skill){
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
       }else feedback.textContent=cm?t("Read both ruler marks for A and B. Count the centimetre spaces between each pair of ends, then compare.","讀取A和B各自的起點及終點刻度。數出兩端之間的厘米間隔，再作比較。")
         :measure?t(measure.units?"Count the equal paperclip lengths from the same starting point.":measure.subject==="distance"?"Compare the straight lines from Start to the two points.":"Line up the starting ends and compare where the ribbons end.",measure.units?"由同一起點數一數等長的回形針單位。":measure.subject==="distance"?"比較由起點至兩點的直線距離。":"把絲帶的起點對齊，再比較終點的位置。")
+        :skill==="checksub1a"?t("Add the difference to the number taken away. The sum should equal the starting number.","把差加上減去的數，所得的和應等於原來的數。")
         :skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
         :t("Use the box of 10 as a reference. Think in tens, without counting each counter.","以10粒一盒作參考，想想大約有幾個十，不用逐粒點算。");
     };
@@ -1299,6 +1300,7 @@ const practiceCatalogue=[
   {grade:1,skill:"estimate100a",label:["Practise estimating counters","練習估計圓片數目"],render:()=>renderChoice100Practice("estimate100a")},
   {grade:1,skill:"carryadd1a",label:["Practise addition with carrying","練習進位加法"],render:()=>renderNumber100Practice("carryadd1a")},
   {grade:1,skill:"noborrow1a",label:["Practise subtraction without borrowing","練習不退位減法"],render:()=>renderNumber100Practice("noborrow1a")},
+  {grade:1,skill:"checksub1a",label:["Practise checking subtraction","練習驗算減法"],render:()=>renderChoice100Practice("checksub1a")},
   {grade:1,skill:"threeadd1a",label:["Practise adding three numbers","練習三個數相加"],render:()=>renderNumber100Practice("threeadd1a")},
   {grade:1,skill:"groupadd1a",label:["Practise grouping three addends","練習組合三個加數"],render:renderGroupedAdditionPractice},
   {grade:1,skill:"group10p1a",label:["Practise grouping to make tens","練習組合湊成整十"],render:()=>renderGroupedAdditionPractice("group10p1a")},

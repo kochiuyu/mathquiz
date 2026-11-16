@@ -267,3 +267,7 @@ The following are original English and Traditional Chinese item briefs. Use the 
 3. Add a teacher preview with single-item replacement, then shareable links. Practise mode gives feedback after each item. An assigned quiz shows solutions after submission. The first release assumes account-free self-marking. Explanations and open-ended investigations require a rubric or teacher review.
 4. Turn reviewed examples into generators. Test boundary values, equivalent answers, unique choices, unit conventions and agreement between each diagram and solution. Only enable a skill in the builder once it has a reviewed bilingual template and passes print and mobile checks.
 
+
+## 1N4 inverse-operation evidence update
+
+`checksub1a` adds a pupil action absent from the older worked keys: choose the addition sentence checking a displayed subtraction. Twelve pairs stay below 100 and need no borrowing. The [unit brief](p1-addition-subtraction-i.md) records the objective review, including teacher-scored intermediate working and column alignment.

@@ -5,6 +5,7 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["checksub1a",1,12,"92f6d00eef3b97830a8da905f2bbc8a78476f23911e45a5ac6c42ce1dd9773cb"],
     ["add1",1,7,"a11713e8ba9b9b0435cbadc2269edd2f3adc56ef876c853426a998bf56336018"],
     ["next1",1,12,"03c40866a510fc3f2a61da716663cde4405c765d7bd079d9c2eb0c2c3aab60a0"],
     ["count20a",1,20,"4ec80ce4e7b1a331f37a371df100aa411bbd7e50280640141afcc29765086979"],
@@ -116,9 +117,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===881,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===893,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 881 variants",()=>{
+  await check("Released bilingual and response contracts · 893 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -142,6 +143,17 @@
       assert(await digest(variants)===hash,"released prompt, answer, diagram or marking data changed");
     });
   }
+  await check("P1 subtraction checks · inverse operation and balanced choice positions",()=>{
+    const f=families.find(f=>f.id==='checksub1a'),positions=[0,0,0];
+    for(let i=0;i<f.count;i++){
+      const q=f.make(i),{a,b,difference}=q.subtractionCheck;
+      assert(a-b===difference && a<100 && a%10>=b%10,'subtraction range or borrowing');
+      assert(q.answer[0]===difference+' + '+b+' = '+a,'inverse check key');
+      assert(q.choices.filter(v=>{const [x,y,z]=v.match(/\d+/g).map(Number);return x+y===z}).length===1,'ambiguous addition choices');
+      positions[q.choices.indexOf(q.answer[0])]++;
+    }
+    assert(positions.every(n=>n===4),'choice positions not balanced');
+  });
   await check("P6 percentage family succession",()=>{
     const legacy=families.find(f=>f.id==="pct1"),current=families.find(f=>f.id==="pct2");
     assert(legacy.retired && legacy.code==="6N3" && !current.retired && current.code==="6N4","P6 family labels changed");
@@ -2426,7 +2438,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===54,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===55,"grade coverage counts wrong");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
@@ -2443,11 +2455,32 @@
       assert(cmActivityZh.contentDocument.documentElement.lang==='zh-HK' && cmActivityZh.contentDocument.getElementById('en').hidden && !cmActivityZh.contentDocument.getElementById('zh').hidden && cmActivityZh.contentDocument.body.textContent.includes('教師觀察'),"Chinese centimetre activity missing");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 54 distinct live home links",async()=>{
+  await check("P1 subtraction-check routes and bilingual teacher activities",async()=>{
+    const frames=[];
+    try{
+      for(const language of ['en','zh']){
+        const frame=await shapeFrame('?v=3&lang='+language+'&p=1&view=practice&skill=checksub1a');frames.push(frame);
+        const doc=frame.contentDocument,radios=[...doc.querySelectorAll('input[type="radio"]')];
+        assert(radios.length===3,'check practice needs three choices');
+        radios.find(r=>r.value!=='34 + 24 = 58').click();
+        doc.querySelector('button[type="submit"]').click();
+        assert(doc.getElementById('practice-feedback').textContent.includes(language==='en'?'difference':'差'),'targeted inverse hint absent');
+        radios.find(r=>r.value==='34 + 24 = 58').click();doc.querySelector('button[type="submit"]').click();
+        assert(!doc.getElementById('practice-next').hidden && radios.every(r=>r.disabled),'retry state incorrect');
+        for(const file of ['p1-numbers-oral','p1-addition-subtraction-review']){
+          const activity=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(activity);
+          const d=activity.contentDocument;
+          assert(d.documentElement.lang===(language==='zh'?'zh-HK':'en'),'activity document language');
+          assert(!d.getElementById(language).hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language visibility');
+        }
+      }
+    }finally{frames.forEach(frame=>frame.remove());}
+  });
+  await check("Practice catalogue · 55 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===54 && new Set(links.map(a=>a.href)).size===54,"practice links missing or repeated");
+      assert(links.length===55 && new Set(links.map(a=>a.href)).size===55,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

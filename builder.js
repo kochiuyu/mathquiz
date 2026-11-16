@@ -115,6 +115,14 @@ const families = [
     const [a,b]=pairs[i],difference=a-b;
     return {...numeric([`Subtract ${a} − ${b}. Write the difference.`,`計算${a} − ${b}，寫出差。`],["",""],difference,[`Ones: ${a%10} − ${b%10} = ${a%10-b%10}. Tens: ${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(a/10)-Math.floor(b/10)}. So ${a} − ${b} = ${difference}. Check: ${difference} + ${b} = ${a}.`,`個位：${a%10} − ${b%10} = ${a%10-b%10}。十位：${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(a/10)-Math.floor(b/10)}。所以${a} − ${b} = ${difference}。驗算：${difference} + ${b} = ${a}。`]),numberTo100:true,noBorrowSubtraction:{a,b,difference}};
   }},
+  {id:"checksub1a",grade:1,code:"1N4",label:["Check subtraction by addition","用加法驗算減法"],count:12,make(i){
+    const pairs=[[58,24],[76,35],[49,27],[83,42],[65,13],[92,51],[70,30],[57,25],[88,66],[64,34],[95,73],[61,21]];
+    const [a,b]=pairs[i],difference=a-b,correct=`${difference} + ${b} = ${a}`;
+    const options=[correct,`${a} + ${b} = ${difference}`,`${difference} + ${a} = ${b}`];
+    const choices=options.map((_,j)=>options[(j+i)%3]);
+    return {prompt:[`The subtraction is ${a} − ${b} = ${difference}. Which addition sentence checks this answer?`,`減法算式是${a} − ${b} = ${difference}。哪道加法算式可以驗算這個答案？`],choices,answer:[correct],marks:1,
+      why:[`Add the difference to the number taken away: ${difference} + ${b} = ${a}. This recovers the starting number, so the subtraction answer is correct.`,`把差加上減去的數：${difference} + ${b} = ${a}。結果等於原來的數，所以減法的答案正確。`],subtractionCheck:{a,b,difference}};
+  }},
   {id:"threeadd1a",grade:1,code:"1N4",label:["Add three numbers from left to right","由左至右計算三個數的加法"],count:12,make(i){
     const triples=[[10,6,2],[18,12,5],[24,15,8],[36,14,7],[17,23,19],[28,11,6],[45,12,9],[19,21,15],[32,18,14],[27,16,12],[38,24,7],[41,19,13]];
     const [a,b,c]=triples[i],first=a+b,total=first+c;

@@ -1,4 +1,4 @@
-# P1 addition and subtraction (I): first released forms
+# P1 addition and subtraction (I): objective evidence review
 
 **Source check:** 16 November 2026. The [EDB 2017 supplement, 1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=14) and [2018 Key Stage 1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) specify two-digit addition including carrying, two-digit subtraction without borrowing, addition results below 100, and checking subtraction by addition. The same unit also includes three-addend addition, the grouping property of addition, column forms and simple word problems.
 
@@ -20,4 +20,32 @@
 
 All nine families have one-mark, exact-numeral online scoring, with full-width digits accepted and decimals, calculations, typed units and leading zeros rejected. The teacher builder, pupil quiz, paper, worked key and three-question practice share the same IDs. Practice has a targeted first-error hint, one retry, a worked step and a first-try count. The written prompt does **not** assess independently drawn layouts or spoken explanations.
 
-**Still open in 1N4:** an objective-by-objective review before any full-unit claim, including whether the released forms cover the required understanding beyond their fixed examples. Manual classroom, translation, physical printer and screen-reader checking remains deferred at the user's request.
+## Objective-by-objective evidence map
+
+Reviewed against all six numbered objectives on 16 November 2026. The new [supplementary pupil sheet](../activities/p1-addition-subtraction-review.html?lang=en) and [Traditional Chinese sheet](../activities/p1-addition-subtraction-review.html?lang=zh) include a separate, initially hidden teacher key. Use **Show teacher key** for the answer rubric; printing with the key hidden gives the pupil sheet only. These are authored assessment materials, not records of pupil attainment.
+
+| Objective | Pupil action and evidence | Limits and review decision |
+|---|---|---|
+| 1 · Add two numbers | `carryadd1a` calculates carrying additions; `storyadd1a` includes no-carry additions. Exact sum is marked. | Addends have at most two digits; all totals below 100. Existing evidence retained; final release-route verification pending. |
+| 2 · Add three numbers | `threeadd1a` supplies final-sum practice. Supplementary sheet task 1 requires the first subtotal and final sum for 18 + 12 + 5 and 27 + 16 + 12. | The sheet makes left-to-right working observable; a final sum alone does not establish order. Each addend is at most two digits and both totals are below 100. New sheet validation pending. |
+| 3 · Recognise regrouping of addends | `groupadd1a` asks for two adjacent subtotals and the common total; `group10p1a` asks pupils to select a useful pair from pictured groups. | Concrete grouping evidence, without brackets or requiring the term “associative property”. No claim of measured speed gain. Existing evidence retained; final route verification pending. |
+| 4 · Subtract two numbers and recognise an addition check | `noborrow1a` assesses differences. New `checksub1a` asks the pupil to choose an addition sentence that checks a given subtraction answer. | Operands at most two digits; no borrowing. A check shown only in feedback is not pupil evidence. New digital family is in development and is not yet claimed live or verified. |
+| 5 · Recognise column forms | `columnadd1a` and `columnsub1a` assess aligned calculation. Supplementary task 2 distinguishes 36 + 7 from an incorrectly aligned layout and asks what the 7 represents. Task 3 asks pupils to write 48 − 6 in columns and calculate. | Units must align with units. Accept spoken/pointing/counter evidence for the value of 7; no written explanation or mandatory carrying notation. New sheet validation pending. |
+| 6 · Solve simple problems | `storyadd1a` and `storysub1a` assess two-number stories. Supplementary task 4 adds a comparison story, separately recording the operation choice and difference. | Only two-number addition/subtraction stories; no three-number stories or required explanatory sentences. New sheet validation pending. |
+
+## Assessment and completion status
+
+The supplement has 10 local evidence points, with separate marks for intermediate results, alignment, operation choice and arithmetic. Its key describes support and prompting records; this is not an EDB-mandated score or mastery threshold. All values in the new sheet were arithmetically checked: first subtotals 30 and 43; totals 35 and 55; 48 − 6 = 42; 48 − 26 = 22.
+
+**Unit status: review and release verification pending.** Do not increment the verified-unit count until the new digital family and printable sheet pass the application's required bilingual routes, marking, regression and publication checks. Once those materials are verified, distinguish deliverable completeness from subsequent classroom validation; an unperformed classroom trial is not evidence of a missing pupil task, and publishing a rubric does not claim that pupils have passed it.
+
+**Manual checks still deferred:** classroom use, independent translation review, physical printer and screen-reader checks. No result for those checks is claimed.
+
+## Continuity checkpoint
+
+- **Last verified release:** existing nine digital families as documented above; new supplementary sheet and `checksub1a` are not yet verified live.
+- **Objectives closed:** none newly certified in this review; the table identifies concrete evidence for all six, subject to release checks.
+- **Remaining gap:** verify new subtraction-check family and both language versions of the sheet/key through the release procedure.
+- **Next pupil task:** choose a valid addition check, show the first subtotal, and place a one-digit operand in the units column.
+- **Where to verify:** `checksub1a` in builder/quiz/practice/paper/key and `activities/p1-addition-subtraction-review.html?lang=en` or `?lang=zh`; toggle the teacher key and check printing separately.
+

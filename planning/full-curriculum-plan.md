@@ -4,7 +4,7 @@ This plan tracks all 85 EDB learning units. A **task live** status means one or 
 
 ## Release standard
 
-For each unit: (1) review every objective, boundaries and exclusions in the EDB supplement and explanatory notes; (2) map each objective to a distinct identify, represent, calculate, apply or explain task when screen assessment is appropriate; (3) use a printable rubric for construction, inquiry and physical measurement; (4) provide English and Traditional Chinese prompts, answers, worked feedback and three-question practice; (5) verify every finite variant, marking boundaries, builder, pupil link, paper, key, PDF and old links locally and after deployment. Mark a unit complete only after every objective has a live task or an explicit documented reason it requires teacher-led assessment.
+For each unit: (1) review every objective, boundaries and exclusions in the EDB supplement and explanatory notes; (2) map each objective to a distinct identify, represent, calculate, apply or explain task when screen assessment is appropriate; (3) use a printable rubric for construction, inquiry and physical measurement; (4) provide English and Traditional Chinese prompts, answers, worked feedback and three-question practice; (5) verify every finite variant, marking boundaries, builder, pupil link, paper, key, PDF and old links locally and after deployment. Mark a unit complete only after every objective has a live task or a linked usable teacher-led pupil activity with materials, scripts where needed, and an observable marking rubric.
 
 ## Unit inventory
 
