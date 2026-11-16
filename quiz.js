@@ -237,8 +237,8 @@ function mark(form) {
   status.focus();
 }
 function renderNumber100Practice(skill){
-  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11],threeadd1a:[0,4,11]},variants=sets[skill];
-  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"],threeadd1a:["Practise adding three numbers","練習三個數相加"]};
+  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11],threeadd1a:[0,4,11],storyadd1a:[0,5,10],storysub1a:[0,5,10]},variants=sets[skill];
+  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"],threeadd1a:["Practise adding three numbers","練習三個數相加"],storyadd1a:["Practise addition stories","練習加法文字題"],storysub1a:["Practise subtraction stories","練習減法文字題"]};
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(titles[skill])+" · "+t("Practice","練習")+" | MathQuiz";
@@ -266,6 +266,8 @@ function renderNumber100Practice(skill){
           :skill==="carryadd1a"?t("Add the ones first. Ten ones make one extra ten.","先加個位；10個一換成1個十。")
           :skill==="noborrow1a"?t("Subtract the ones first, then the tens. No borrowing is needed.","先減個位，再減十位；這題不用退位。")
           :skill==="threeadd1a"?t("Add the first two numbers. Then add the third number to that sum.","先把前兩個數相加，再把第三個數加到所得的和。")
+          :skill==="storyadd1a"?t("The two groups come together. Add their numbers.","把兩組合起來，將兩個數相加。")
+          :skill==="storysub1a"?t("Some are taken away or leave. Subtract that number from the starting number.","拿走或離開了一部分，從原來的數目減去這個數。")
           :q.numberSequence.step===1?t("The numbers go up by one each time.","每次順數一個數。")
           :t("The numbers go down by one each time.","每次倒數一個數。");
         input.focus();
@@ -1259,6 +1261,8 @@ const practiceCatalogue=[
   {grade:1,skill:"groupadd1a",label:["Practise grouping three addends","練習組合三個加數"],render:renderGroupedAdditionPractice},
   {grade:1,skill:"columnadd1a",label:["Practise addition columns","練習加法直式"],render:()=>renderColumnPractice("columnadd1a")},
   {grade:1,skill:"columnsub1a",label:["Practise subtraction columns","練習減法直式"],render:()=>renderColumnPractice("columnsub1a")},
+  {grade:1,skill:"storyadd1a",label:["Practise addition stories","練習加法文字題"],render:()=>renderNumber100Practice("storyadd1a")},
+  {grade:1,skill:"storysub1a",label:["Practise subtraction stories","練習減法文字題"],render:()=>renderNumber100Practice("storysub1a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},

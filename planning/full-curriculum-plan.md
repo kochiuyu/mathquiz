@@ -13,7 +13,7 @@ For each unit: (1) review every objective, boundaries and exclusions in the EDB 
 | P1 | [1N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=7) | Numbers to 20 | `next1`, `count20a`, `parts18a`, `otherway1` | Task live; objective audit needed |
 | P1 | [1N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=9) | Basic addition and subtraction | `pictureadd1`, `storyadd1` | Task live; objective audit needed |
 | P1 | [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | `compare100a`, `tensones1a`, `countgroups1a`, `sequence100a`, `oddeven100a`, `ordernums100a`, `numberwords100a`, `estimate100a` | Task live; oral/listening work and objective audit remain |
-| P1 | [1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) | Addition and subtraction (I) | `carryadd1a`, `noborrow1a`, `threeadd1a`, `groupadd1a`, `columnadd1a`, `columnsub1a` | Task live; two-number word problems and concrete grouping examples remain |
+| P1 | [1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) | Addition and subtraction (I) | `carryadd1a`, `noborrow1a`, `threeadd1a`, `groupadd1a`, `columnadd1a`, `columnsub1a`, `storyadd1a`, `storysub1a` | Task live; concrete grouping examples and objective audit remain |
 | P1 | [1M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=15) | Length and distance (I) | — | No task |
 | P1 | [1M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16) | Money (I) | — | No task |
 | P1 | [1M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=17) | Length and distance (II) | — | No task |
@@ -98,9 +98,9 @@ For each unit: (1) review every objective, boundaries and exclusions in the EDB 
 
 ## Immediate sequence
 
-1. Audit the remaining oral/listening work in 1N3 and finish the open 1N4 objectives, then continue the remaining P1 units; a released family addresses only its mapped objective.
+1. Audit the remaining oral/listening work in 1N3 and finish the open 1N4 work, then continue the remaining P1 units; a released family addresses only its mapped objective.
 2. Continue P1–P6 unit by unit, preserving permanent question IDs and existing shared links.
 3. Add teacher-marked printable activities for units that require drawing, hands-on measurement, investigation or open explanation.
 4. After each release, update this inventory, the curriculum map, live family ledger, bilingual coverage page and README checkpoint.
 
-**Next:** finish 1N4 two-number word problems and add concrete grouping examples; audit the remaining oral and listening aspects of 1N3; then develop other P1 units. Eight live families cover fixed written and pictured parts of 1N3, but that unit is still partial.
+**Next:** add concrete 1N4 grouping examples and review its objectives; audit the remaining oral and listening aspects of 1N3; then develop other P1 units. Eight live families cover fixed written and pictured parts of 1N3, but that unit is still partial.

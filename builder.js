@@ -108,6 +108,30 @@ const families = [
     const [a,b]=pairs[i],result=a-b;
     return {prompt:["Complete the subtraction in columns. Write one digit in each answer box.","完成減法直式。每個答案格填一個數字。"],fields:[["Tens","十位"],["Ones","個位"]],answer:[Math.floor(result/10),result%10],marks:1,why:[`Ones: ${a%10} − ${b%10} = ${result%10}. Tens: ${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(result/10)}. So ${a} − ${b} = ${result}. Check: ${result} + ${b} = ${a}.`,`個位：${a%10} − ${b%10} = ${result%10}。十位：${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(result/10)}。所以${a} − ${b} = ${result}。驗算：${result} + ${b} = ${a}。`],columnForm:{a,b,operation:"subtract",result}};
   }},
+  {id:"storyadd1a",grade:1,code:"1N4",label:["Solve a two-number addition story","解答兩個數相加的文字題"],count:12,make(i){
+    const pairs=[[24,13],[28,15],[35,22],[37,26],[41,18],[46,17],[52,24],[55,28],[63,15],[64,19],[21,37],[39,24]];
+    const [a,b]=pairs[i],result=a+b,scenario=i%4;
+    const prompts=[
+      [`A shelf has ${a} storybooks. A teacher puts ${b} more storybooks on it. How many storybooks are on the shelf now?`,`書架上原有${a}本故事書，老師再放上${b}本。現在書架上有多少本故事書？`],
+      [`There are ${a} red balloons and ${b} blue balloons at a party. How many balloons are there altogether?`,`派對上有${a}個紅色氣球和${b}個藍色氣球。共有多少個氣球？`],
+      [`A garden has ${a} yellow flowers and ${b} purple flowers. How many flowers are there altogether?`,`花園裏有${a}朵黃色花和${b}朵紫色花。共有多少朵花？`],
+      [`There are ${a} pupils on a bus. Another ${b} pupils get on. How many pupils are on the bus now?`,`巴士上原有${a}名學生，再有${b}名學生上車。現在巴士上有多少名學生？`]
+    ];
+    const units=[["storybooks","本故事書"],["balloons","個氣球"],["flowers","朵花"],["pupils","名學生"]];
+    return {...numeric(prompts[scenario],units[scenario],result,[`${a} + ${b} = ${result}.`,`計算${a} + ${b} = ${result}。`]),numberTo100:true,wordProblem:{a,b,operation:"add",result,scenario}};
+  }},
+  {id:"storysub1a",grade:1,code:"1N4",label:["Solve a two-number subtraction story","解答兩個數相減的文字題"],count:12,make(i){
+    const pairs=[[58,23],[74,31],[69,26],[85,42],[96,54],[67,25],[48,16],[79,37],[93,51],[56,14],[88,36],[65,22]];
+    const [a,b]=pairs[i],result=a-b,scenario=i%4;
+    const prompts=[
+      [`A shop has ${a} pencils. It sells ${b} pencils. How many pencils are left?`,`商店原有${a}枝鉛筆，賣出${b}枝。還剩多少枝鉛筆？`],
+      [`There are ${a} apples in a basket. ${b} apples are taken out. How many apples remain?`,`籃裏原有${a}個蘋果，拿走${b}個。還剩多少個蘋果？`],
+      [`A library has ${a} picture books. ${b} are borrowed. How many picture books remain?`,`圖書館原有${a}本圖畫書，借出${b}本。還剩多少本圖畫書？`],
+      [`There are ${a} pupils in a hall. ${b} pupils leave. How many pupils remain in the hall?`,`禮堂裏原有${a}名學生，${b}名學生離開。禮堂裏還有多少名學生？`]
+    ];
+    const units=[["pencils","枝鉛筆"],["apples","個蘋果"],["picture books","本圖畫書"],["pupils","名學生"]];
+    return {...numeric(prompts[scenario],units[scenario],result,[`${a} − ${b} = ${result}. Check: ${result} + ${b} = ${a}.`,`計算${a} − ${b} = ${result}。驗算：${result} + ${b} = ${a}。`]),numberTo100:true,wordProblem:{a,b,operation:"subtract",result,scenario}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;
