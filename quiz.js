@@ -231,8 +231,8 @@ function mark(form) {
   status.focus();
 }
 function renderNumber100Practice(skill){
-  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11]},variants=sets[skill];
-  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"]};
+  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11],threeadd1a:[0,4,11]},variants=sets[skill];
+  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"],threeadd1a:["Practise adding three numbers","練習三個數相加"]};
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(titles[skill])+" · "+t("Practice","練習")+" | MathQuiz";
@@ -259,6 +259,7 @@ function renderNumber100Practice(skill){
           :skill==="numberwords100a"?t("Find the tens word first, then the ones word.","先找出數詞中的十位，再找個位。")
           :skill==="carryadd1a"?t("Add the ones first. Ten ones make one extra ten.","先加個位；10個一換成1個十。")
           :skill==="noborrow1a"?t("Subtract the ones first, then the tens. No borrowing is needed.","先減個位，再減十位；這題不用退位。")
+          :skill==="threeadd1a"?t("Add the first two numbers. Then add the third number to that sum.","先把前兩個數相加，再把第三個數加到所得的和。")
           :q.numberSequence.step===1?t("The numbers go up by one each time.","每次順數一個數。")
           :t("The numbers go down by one each time.","每次倒數一個數。");
         input.focus();
@@ -1192,6 +1193,7 @@ const practiceCatalogue=[
   {grade:1,skill:"estimate100a",label:["Practise estimating counters","練習估計圓片數目"],render:()=>renderChoice100Practice("estimate100a")},
   {grade:1,skill:"carryadd1a",label:["Practise addition with carrying","練習進位加法"],render:()=>renderNumber100Practice("carryadd1a")},
   {grade:1,skill:"noborrow1a",label:["Practise subtraction without borrowing","練習不退位減法"],render:()=>renderNumber100Practice("noborrow1a")},
+  {grade:1,skill:"threeadd1a",label:["Practise adding three numbers","練習三個數相加"],render:()=>renderNumber100Practice("threeadd1a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},

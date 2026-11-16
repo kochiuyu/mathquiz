@@ -31,6 +31,7 @@
     ["estimate100a",1,12,"2a17f7f5f22982fdc00e99a06c8ba0d457f43f211debaee19538004d41321d46"],
     ["carryadd1a",1,12,"44f62bbf8b4dfad2eb03b085488282287e63946730fe1e31d33bf0138606603f"],
     ["noborrow1a",1,12,"6e7a63855fbbc79090ea685f174ceea7ef4e30d86765315cb9824c3b66198292"],
+    ["threeadd1a",1,12,"c18e93923c6df5f2668e71d8d3270fabe02c169757f9f4955bc714f8334ac744"],
     ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"],
     ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"],
     ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"],
@@ -101,9 +102,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===701,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===713,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 701 variants",()=>{
+  await check("Released bilingual and response contracts · 713 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -203,6 +204,16 @@
       for(const f of [add,subtract])assert(decodeItems(f.id+"-"+i,1).length===1 && !decodeItems(f.id+"-"+i,2).length,"1N4 link guard failed "+f.id);
     }
     assert(pictogramAnswer("４２",42) && !pictogramAnswer("042",42) && !pictogramAnswer("42.0",42),"1N4 answer rule changed");
+  });
+  await check("P1 three-addend addition · left-to-right results",()=>{
+    const family=families.find(f=>f.id==="threeadd1a");
+    assert(family?.grade===1 && family.code==="1N4" && family.count===12,"three-addend metadata missing");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),{a,b,c,first,total}=q.threeAddition;
+      assert([a,b,c].every(n=>n>0 && n<100) && a+b===first && first+c===total && total<100 && q.answer[0]===total,"three-addend sum wrong "+i);
+      assert(q.why[0].includes(`${a} + ${b} = ${first}`) && q.why[1].includes(`${first} + ${c} = ${total}`),"three-addend worked step wrong "+i);
+      assert(decodeItems("threeadd1a-"+i,1).length===1 && !decodeItems("threeadd1a-"+i,2).length,"three-addend link guard failed "+i);
+    }
   });
   await check("P2 place value · digits, zero columns and answer formats",()=>{
     const family=families.find(f=>f.id==="place3a"),values=[];
@@ -1068,7 +1079,7 @@
     const frames=[];
     try{
       const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
-      for(const id of ["carryadd1a","noborrow1a"]){
+      for(const id of ["carryadd1a","noborrow1a","threeadd1a"]){
         const q=families.find(f=>f.id===id).make(0),base="?v=3&lang=en&p=1&items="+id+"-0";
         const builder=await open(base+"&view=build");assert(builder.querySelector('select[name="'+id+'"]'),"1N4 builder missing "+id);
         const blank=await open(base);blank.querySelector('form').requestSubmit();assert(/Please complete question 1/.test(blank.getElementById('status').textContent),"blank accepted "+id);
@@ -2178,18 +2189,18 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===39,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===40,"grade coverage counts wrong");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 39 distinct live home links",async()=>{
+  await check("Practice catalogue · 40 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===39 && new Set(links.map(a=>a.href)).size===39,"practice links missing or repeated");
+      assert(links.length===40 && new Set(links.map(a=>a.href)).size===40,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

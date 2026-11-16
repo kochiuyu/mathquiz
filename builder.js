@@ -88,6 +88,11 @@ const families = [
     const [a,b]=pairs[i],difference=a-b;
     return {...numeric([`Subtract ${a} − ${b}. Write the difference.`,`計算${a} − ${b}，寫出差。`],["",""],difference,[`Ones: ${a%10} − ${b%10} = ${a%10-b%10}. Tens: ${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(a/10)-Math.floor(b/10)}. So ${a} − ${b} = ${difference}. Check: ${difference} + ${b} = ${a}.`,`個位：${a%10} − ${b%10} = ${a%10-b%10}。十位：${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(a/10)-Math.floor(b/10)}。所以${a} − ${b} = ${difference}。驗算：${difference} + ${b} = ${a}。`]),numberTo100:true,noBorrowSubtraction:{a,b,difference}};
   }},
+  {id:"threeadd1a",grade:1,code:"1N4",label:["Add three numbers from left to right","由左至右計算三個數的加法"],count:12,make(i){
+    const triples=[[10,6,2],[18,12,5],[24,15,8],[36,14,7],[17,23,19],[28,11,6],[45,12,9],[19,21,15],[32,18,14],[27,16,12],[38,24,7],[41,19,13]];
+    const [a,b,c]=triples[i],first=a+b,total=first+c;
+    return {...numeric([`Add ${a} + ${b} + ${c} from left to right. Write the sum.`,`由左至右計算${a} + ${b} + ${c}，寫出和。`],["",""],total,[`First ${a} + ${b} = ${first}. Then ${first} + ${c} = ${total}.`,`先算${a} + ${b} = ${first}，再算${first} + ${c} = ${total}。`]),numberTo100:true,threeAddition:{a,b,c,first,total}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;
