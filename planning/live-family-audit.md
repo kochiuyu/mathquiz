@@ -2,7 +2,7 @@
 
 Code and documentation check: **16 November 2026**. This is a release ledger for the generated families. The [curriculum map](primary-mathematics.md) and linked family briefs carry the EDB objective, prerequisites, exclusions and source-check date for each skill. Those are project mappings, not EDB endorsement or evidence of pupil mastery. The misconception column records a **design hypothesis**, not an observed error.
 
-There are **59 permanent family IDs and 929 versioned variants**. `pct1` (15 variants) is legacy and still decodes in old links; **58 families and 914 variants** are selectable for new papers. The home page links **58 practice routes**. All generated items award one mark; there is no partial credit for multi-field responses. Fixed pilot questions and downloadable fixed PDFs are separate from these counts.
+Release-candidate counts (new solid family not yet live-verified): **60 permanent family IDs and 944 versioned variants**. `pct1` (15 variants) is legacy and still decodes in old links; **59 families and 929 variants** are selectable for new papers. The home page links **59 practice routes**. All generated items award one mark; there is no partial credit for multi-field responses. Fixed pilot questions and downloadable fixed PDFs are separate from these counts.
 
 | Family | Objective record and status | Purpose and released variation | Answer rule; worked step | Error hypothesis to probe |
 |---|---|---|---|---|
@@ -13,6 +13,7 @@ There are **59 permanent family IDs and 929 versioned variants**. `pct1` (15 var
 | `pictureadd1` (81) | [1N2](primary-mathematics.md#live-p1-family-to-objective-map), live | **Represent** two pictured groups as a sentence; addends 1–9. Counts vary. | Either pictured addend order and the correct total; the key names both groups. | Write the right total with addends absent from the picture. |
 | `storyadd1` (81) | [1N2](primary-mathematics.md#live-p1-family-to-objective-map), live | **Apply** addition in a pictured before-and-added story; addends 1–9. Counts vary. | Whole-number total; the key joins the two quantities. | Report only what was added. |
 | `otherway1` (11) | [1N1](primary-mathematics.md#live-p1-family-to-objective-map), live | **Represent** a different two-part composition; totals 6–16. Whole and pictured pair vary. | Two positive one-digit parts summing to the whole, different from the pictured unordered pair. The [paper rubric](p1-exit-ticket.md#marking-the-two-open-response-items) accepts a labelled drawing or equation. | Merely reverse the pictured pair. |
+| `solidname1a` (15) | [1S1](p1-3d-shapes.md), release candidate; live QA pending | **Identify** one of five broad pictured solid types; three orientations, five localized options. | Exact internal type; bilingual key/hint. Five-question practice includes all types. | Classify only the outer silhouette, ignoring depth. |
 | `triangle1` (9) | [1S2](p1-flat-shapes.md), live | **Identify** the triangle among three outlines; rotations and answer positions vary. | Exactly its letter; the key cites three straight joined sides. | Choose a tilted four-sided outline. |
 | `compare100a` (12) | [1N3 objective 3](p1-numbers-to-100.md), live | **Identify** the larger of two numerals from 21–100; same-tens and tens-boundary cases. | Select the larger displayed numeral; the key compares tens then units. | Compare only the units digits. |
 | `tensones1a` (12) | [1N3 objectives 1–2](p1-numbers-to-100.md), live | **Represent** pictured bundles of ten and loose counters as a two-digit numeral. | Exact whole-number numeral; the key counts tens, then units. | Omit a zero in the units place. |
@@ -73,3 +74,7 @@ There are **59 permanent family IDs and 929 versioned variants**. `pct1` (15 var
 ## P1 money (1M2)
 
 Three12-variant choice families: `coinvalue1a` reads labelled denomination diagrams, `priceword1a` matches marked prices to monetary readings, and `coincount1a` counts labelled coin values. Internal integer-cent keys are never shown as pupil answers; paper keys and practice use bilingual spoken-value labels. All totals are at most HK$10. [Real-coin observation and exchanges](../activities/p1-money.html) are teacher assessed. Full release/route verification pending.
+
+## Verified resource checkpoint
+
+Only 1N3, 1N4 and 1M2 are verified resource complete (14 numbered objectives): source audits, independent maths review, live49ffb20 PASS181/181 and targeted English/Chinese teacher screen/key and money paper/key checks. This is not pupil mastery or release4 verification. Manual downloaded-PDF visual inspection and teacher print-preview/pagination remain unperformed; classroom, independent translation, physical-printer and screen-reader validation are deferred.

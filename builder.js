@@ -75,7 +75,14 @@ const moneyFamilies=[
   }}
 ];
 
+const solidNames1={prism:['Prism','角柱體'],cylinder:['Cylinder','圓柱體'],pyramid:['Pyramid','角錐體'],cone:['Cone','圓錐體'],sphere:['Sphere','球體']};
+const solidFamilies1=[{id:'solidname1a',grade:1,code:'1S1',label:['Name a pictured 3-D shape','辨認圖中的立體'],count:15,make(i){
+ const kinds=Object.keys(solidNames1),solid=kinds[i%5],rotation=[0,25,90][Math.floor(i/5)],shift=(Math.floor(i/5)*2)%5,choices=kinds.slice(shift).concat(kinds.slice(0,shift));
+ return {prompt:['Which broad 3-D shape family does this model belong to? Choose one.','這個模型屬於哪一類立體？選一個。'],choices,choiceLabels:solidNames1,answer:[solid],marks:1,figure:{kind:'solid1',solid,rotation},solidRecognition:{solid,rotation,hint:['Look at the whole solid, not just its outline. Compare it with a model you have handled.','觀察整個立體，不要只看外框。想想你曾拿過的模型。']},why:[`This is a ${solidNames1[solid][0].toLowerCase()}. Turning the model does not change its shape family.`,`這是${solidNames1[solid][1]}。轉動模型不會改變它所屬的立體類別。`]};
+}}];
+
 const families = [
+  ...solidFamilies1,
   ...moneyFamilies,
   {id:"add1", grade:1, code:"1N2", label:["Addition to 10","10以內的加法"], count:7, make(i){
     const a=i+1,b=1+(i*3 % (10-a));

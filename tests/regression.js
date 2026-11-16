@@ -5,6 +5,7 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["solidname1a",1,15,"6e9c97486be4f178a58d6c000e84d2015e1e61202ebb78b89e650b8b704bfff3"],
     ["coincount1a",1,12,"1ac0c2eeb70330bba087314e13b9dfe6138b28ebb2fa2d0fe330c9b25b5694c5"],
     ["priceword1a",1,12,"b987bcfc5a687ebfa13d6418e6bd2ab6999b00e7295911743f5198bffbe81652"],
     ["coinvalue1a",1,12,"200eba28ea3d5caa12ba66878397a202a23e8099c6e86b414fa2b52733d03a50"],
@@ -120,9 +121,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===929,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===944,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 929 variants",()=>{
+  await check("Released bilingual and response contracts · 944 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -207,6 +208,65 @@
         assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode'),'P1 PDF missing content/text layer');
         assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'P1 PDF missing page');
         assert(raw.includes('/Subtype /Image'),'P1 PDF lacks rendered page image');
+      }
+    }finally{frames.forEach(f=>f.remove())}
+  });
+  await check("P1 solids · all fifteen variants and five localized choices",()=>{
+    const f=families.find(f=>f.id==='solidname1a'),positions=[0,0,0,0,0],types=new Set();
+    assert(f.count===15 && f.code==='1S1','solid metadata');
+    for(let i=0;i<f.count;i++){
+      const q=f.make(i);types.add(q.answer[0]);
+      assert(q.choices.length===5 && new Set(q.choices).size===5,'solid choices');
+      assert(q.answer[0]===q.figure.solid && q.solidRecognition.solid===q.figure.solid,'solid key');
+      assert(q.choices.every(k=>q.choiceLabels[k].length===2 && q.choiceLabels[k].every(Boolean)),'solid localization');
+      positions[q.choices.indexOf(q.answer[0])]++;
+    }
+    assert(types.size===5 && positions.every(n=>n===3),'solid balance');
+  });
+  await check("P1 solids · bilingual pupil, builder and full five-question practice",async()=>{
+    const frames=[];
+    try{
+      for(const language of ['en','zh']){
+        const l=language==='zh'?1:0,f=families.find(f=>f.id==='solidname1a');
+        const frame=await shapeFrame('?lang='+language+'&p=1&view=practice&skill=solidname1a');frames.push(frame);
+        const d=frame.contentDocument;
+        for(let i=0;i<5;i++){
+          const q=f.make(i),inputs=[...d.querySelectorAll('input[type="radio"]')];
+          assert(inputs.length===5 && d.querySelector('svg.solid-figure'),'solid practice figure/choices');
+          for(const input of inputs)assert(input.parentElement.textContent.includes(q.choiceLabels[input.value][l]),'localized choice label');
+          inputs.find(x=>x.value!==q.answer[0]).click();d.querySelector('button[type="submit"]').click();
+          assert(d.getElementById('practice-feedback').textContent===q.solidRecognition.hint[l],'solid wrong hint');
+          inputs.find(x=>x.value===q.answer[0]).click();d.querySelector('button[type="submit"]').click();
+          assert(d.getElementById('practice-feedback').textContent.includes(q.why[l]),'solid worked retry');
+          assert(!d.getElementById('practice-next').hidden,'solid next hidden');d.getElementById('practice-next').click();
+        }
+        assert(d.querySelector('h1').textContent===(l?'練習完成':'Practice complete') && d.body.textContent.includes('0 / 5'),'solid completion');
+        const ids=Array.from({length:5},(_,i)=>'solidname1a-'+i).join('.');
+        const pupil=await shapeFrame('?v=3&lang='+language+'&p=1&items='+ids);frames.push(pupil);
+        const pd=pupil.contentDocument;assert(pd.querySelectorAll('svg.solid-figure').length===5,'pupil solid figures');
+        for(let i=0;i<5;i++)pd.querySelector('input[name="q'+i+'"][value="'+f.make(i).answer[0]+'"]').checked=true;
+        pd.querySelector('form').requestSubmit();assert(pd.getElementById('status').textContent.includes('5 / 5'),'solid pupil marking');
+        const builder=await shapeFrame('?v=3&lang='+language+'&p=1&items=solidname1a-0&view=build');frames.push(builder);
+        assert(builder.contentDocument.querySelector('select[name="solidname1a"]'),'solid builder selector');
+      }
+    }finally{frames.forEach(f=>f.remove())}
+  });
+  await check("P1 solids · bilingual paper, localized key and PDF",async()=>{
+    const frames=[];
+    try{
+      const ids=Array.from({length:5},(_,i)=>'solidname1a-'+i).join('.'),family=families.find(f=>f.id==='solidname1a');
+      for(const language of ['en','zh'])for(const view of ['paper','key']){
+        const frame=await shapeFrame('?v=3&lang='+language+'&p=1&items='+ids+'&view='+view);frames.push(frame);
+        const d=frame.contentDocument,fields=[...d.querySelectorAll('fieldset')];
+        assert(fields.length===5 && d.querySelectorAll('svg.solid-figure').length===5,'solid print figures');
+        fields.forEach((field,i)=>{
+          const q=family.make(i);
+          if(view==='key')assert(field.querySelector('p b').textContent===q.choiceLabels[q.answer[0]][language==='zh'?1:0],'solid localized key');
+          else assert(field.querySelectorAll('.option').length===5,'solid paper choices');
+        });
+        const blob=await frame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
+        assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && raw.includes('/Subtype /Image'),'solid PDF content/font/image');
+        assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'solid PDF pages');
       }
     }finally{frames.forEach(f=>f.remove())}
   });
@@ -2494,9 +2554,10 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===58,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===59,"grade coverage counts wrong");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
+      for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
@@ -2532,10 +2593,10 @@
       }
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("P1 early-number and time activity routes, keys and phone layout",async()=>{
+  await check("P1 teacher activity routes, keys and phone layout",async()=>{
     const frames=[];
     try{
-      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii'])for(const language of ['en','zh']){
+      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry'])for(const language of ['en','zh']){
         const frame=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(frame);
         const d=frame.contentDocument,w=frame.contentWindow,section=d.getElementById(language);
         assert(section && !section.hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language');
@@ -2558,11 +2619,11 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 58 distinct live home links",async()=>{
+  await check("Practice catalogue · 59 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===58 && new Set(links.map(a=>a.href)).size===58,"practice links missing or repeated");
+      assert(links.length===59 && new Set(links.map(a=>a.href)).size===59,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

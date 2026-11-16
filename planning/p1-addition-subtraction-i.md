@@ -18,7 +18,7 @@
 
 `storyadd1a` and `storysub1a` each have twelve permanent two-number word problems in four everyday contexts. Addition stories include joining and combining groups, with both carrying and no-carry pairs; every total is below 100. Subtraction stories involve taking away or leaving, use no borrowing and include an addition check in the key. The question asks only for the resulting count, with the unit printed beside one answer field. No three-number problem or written explanation is required. Choosing the operation from the context, rather than a displayed equation, is the assessed difference from the calculation families. The current stories do not test comparison-language subtraction or all possible problem structures.
 
-All nine families have one-mark, exact-numeral online scoring, with full-width digits accepted and decimals, calculations, typed units and leading zeros rejected. The teacher builder, pupil quiz, paper, worked key and three-question practice share the same IDs. Practice has a targeted first-error hint, one retry, a worked step and a first-try count. The written prompt does **not** assess independently drawn layouts or spoken explanations.
+The original nine families have one-mark, exact-numeral online scoring, with full-width digits accepted and decimals, calculations, typed units and leading zeros rejected. The teacher builder, pupil quiz, paper, worked key and three-question practice share the same IDs. Practice has a targeted first-error hint, one retry, a worked step and a first-try count. The written prompt does **not** assess independently drawn layouts or spoken explanations.
 
 ## Objective-by-objective evidence map
 
@@ -26,26 +26,40 @@ Reviewed against all six numbered objectives on 16 November 2026. The new [suppl
 
 | Objective | Pupil action and evidence | Limits and review decision |
 |---|---|---|
-| 1 · Add two numbers | `carryadd1a` calculates carrying additions; `storyadd1a` includes no-carry additions. Exact sum is marked. | Addends have at most two digits; all totals below 100. Existing evidence retained; final release-route verification pending. |
-| 2 · Add three numbers | `threeadd1a` supplies final-sum practice. Supplementary sheet task 1 requires the first subtotal and final sum for 18 + 12 + 5 and 27 + 16 + 12. | The sheet makes left-to-right working observable; a final sum alone does not establish order. Each addend is at most two digits and both totals are below 100. New sheet validation pending. |
-| 3 · Recognise regrouping of addends | `groupadd1a` asks for two adjacent subtotals and the common total; `group10p1a` asks pupils to select a useful pair from pictured groups. | Concrete grouping evidence, without brackets or requiring the term “associative property”. No claim of measured speed gain. Existing evidence retained; final route verification pending. |
-| 4 · Subtract two numbers and recognise an addition check | `noborrow1a` assesses differences. New `checksub1a` asks the pupil to choose an addition sentence that checks a given subtraction answer. | Operands at most two digits; no borrowing. A check shown only in feedback is not pupil evidence. New digital family is in development and is not yet claimed live or verified. |
-| 5 · Recognise column forms | `columnadd1a` and `columnsub1a` assess aligned calculation. Supplementary task 2 distinguishes 36 + 7 from an incorrectly aligned layout and asks what the 7 represents. Task 3 asks pupils to write 48 − 6 in columns and calculate. | Units must align with units. Accept spoken/pointing/counter evidence for the value of 7; no written explanation or mandatory carrying notation. New sheet validation pending. |
-| 6 · Solve simple problems | `storyadd1a` and `storysub1a` assess two-number stories. Supplementary task 4 adds a comparison story, separately recording the operation choice and difference. | Only two-number addition/subtraction stories; no three-number stories or required explanatory sentences. New sheet validation pending. |
+| 1 · Add two numbers | `carryadd1a` calculates carrying additions; `storyadd1a` includes no-carry additions. Exact sum is marked. | Addends have at most two digits; all totals below 100. Existing evidence retained; verified in the release below. |
+| 2 · Add three numbers | `threeadd1a` supplies final-sum practice. Supplementary sheet task 1 requires the first subtotal and final sum for 18 + 12 + 5 and 27 + 16 + 12. | The sheet makes left-to-right working observable; a final sum alone does not establish order. Each addend is at most two digits and both totals are below 100. Sheet routes and key visibility verified; print-preview remains unperformed. |
+| 3 · Recognise regrouping of addends | `groupadd1a` asks for two adjacent subtotals and the common total; `group10p1a` asks pupils to select a useful pair from pictured groups. | Concrete grouping evidence, without brackets or requiring the term “associative property”. No claim of measured speed gain. Existing evidence retained; verified in the release below. |
+| 4 · Subtract two numbers and recognise an addition check | `noborrow1a` assesses differences. New `checksub1a` asks the pupil to choose an addition sentence that checks a given subtraction answer. | Operands at most two digits; no borrowing. A check shown only in feedback is not pupil evidence. New digital family is released and verified by the checkpoint below. |
+| 5 · Recognise column forms | `columnadd1a` and `columnsub1a` assess aligned calculation. Supplementary task 2 distinguishes 36 + 7 from an incorrectly aligned layout and asks what the 7 represents. Task 3 asks pupils to write 48 − 6 in columns and calculate. | Units must align with units. Accept spoken/pointing/counter evidence for the value of 7; no written explanation or mandatory carrying notation. Sheet routes and key visibility verified; print-preview remains unperformed. |
+| 6 · Solve simple problems | `storyadd1a` and `storysub1a` assess two-number stories. Supplementary task 4 adds a comparison story, separately recording the operation choice and difference. | Only two-number addition/subtraction stories; no three-number stories or required explanatory sentences. Sheet routes and key visibility verified; print-preview remains unperformed. |
 
 ## Assessment and completion status
 
 The supplement has 10 local evidence points, with separate marks for intermediate results, alignment, operation choice and arithmetic. Its key describes support and prompting records; this is not an EDB-mandated score or mastery threshold. All values in the new sheet were arithmetically checked: first subtotals 30 and 43; totals 35 and 55; 48 − 6 = 42; 48 − 26 = 22.
 
-**Unit status: review and release verification pending.** Do not increment the verified-unit count until the new digital family and printable sheet pass the application's required bilingual routes, marking, regression and publication checks. Once those materials are verified, distinguish deliverable completeness from subsequent classroom validation; an unperformed classroom trial is not evidence of a missing pupil task, and publishing a rubric does not claim that pupils have passed it.
+**Original release gate (now satisfied for resource coverage):** Do not increment the verified-unit count until the new digital family and printable sheet pass the application's required bilingual routes, marking, regression and publication checks. Once those materials are verified, distinguish deliverable completeness from subsequent classroom validation; an unperformed classroom trial is not evidence of a missing pupil task, and publishing a rubric does not claim that pupils have passed it.
 
 **Manual checks still deferred:** classroom use, independent translation review, physical printer and screen-reader checks. No result for those checks is claimed.
 
 ## Continuity checkpoint
 
-- **Last verified release:** existing nine digital families as documented above; new supplementary sheet and `checksub1a` are not yet verified live.
-- **Objectives closed:** none newly certified in this review; the table identifies concrete evidence for all six, subject to release checks.
-- **Remaining gap:** verify new subtraction-check family and both language versions of the sheet/key through the release procedure.
+- **Last verified release:** see the completed checkpoint below.
+- **Objectives closed:** all six for assessment-resource coverage.
+- **Remaining gap:** none in the objective evidence; deferred validation is listed below.
 - **Next pupil task:** choose a valid addition check, show the first subtotal, and place a one-digit operand in the units column.
 - **Where to verify:** `checksub1a` in builder/quiz/practice/paper/key and `activities/p1-addition-subtraction-review.html?lang=en` or `?lang=zh`; toggle the teacher key and check printing separately.
 
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**Resource complete.** Every numbered objective and applicable remark has linked released digital evidence or a usable bilingual teacher-led pupil task with materials, script and observable criteria. This describes assessment-resource coverage, not pupil attainment.
+
+**Last verified release:** `49ffb20d5deec81619e3cf66d69a6b38b77f7c45`; GitHub Pages run `43902703454` succeeded. The public browser regression passed **181/181**, including immutable historical variants, bilingual routes, key isolation, phone layout and explicit mixed-money/inverse-check EN/ZH paper/key PDF generation with page images and selectable text. Independent source and mathematics review passed.
+
+**Manual evidence:** EN/ZH number-sense and addition/subtraction pupil sheets and teacher-key toggles were inspected; Chinese column alignment was legible. Money pupil paper and EN/ZH worked keys were inspected with spoken-value labels and matching codes.
+
+**Not performed:** teacher-sheet print-preview/pagination and manual visual inspection of downloaded PDFs. Classroom trials, independent translation review, physical printing and screen-reader testing remain deferred. These are not represented as passed or as evidence of pupil mastery.
+
+**Remaining objective gap:** none identified in the source-to-task audit. Continue layout/accessibility validation and classroom feedback separately; retain permanent task IDs.
+
+**Objectives closed:** 6. Evidence: ten digital families (120 variants) plus the subtotal, alignment, column construction and comparison-story tasks.

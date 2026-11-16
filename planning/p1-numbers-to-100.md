@@ -20,7 +20,7 @@ The key compares tens first; when tens match, it compares units. The practice hi
 
 Each family uses one exact whole-number numeral for one mark, including full-width digits, with a three-question practice route, a targeted hint, one retry and a worked step. The picture descriptions name visible groups without giving their total. Misconceptions such as ignoring a zero in the units place or counting boxes rather than counters are hypotheses, not observed errors.
 
-**Next objective slices:** the first release left odd/even recognition, ordering groups of numerals, estimation and number-word writing open. The release below addresses fixed written and pictured forms of those slices. A full-unit claim still requires objective-by-objective review and suitable tasks or a teacher-led rubric for each objective.
+**Next objective slices:** the first release left odd/even recognition, ordering groups of numerals, estimation and number-word writing open. The release below addresses fixed written and pictured forms of those slices. At that earlier stage a full-unit claim still required objective-by-objective review and suitable tasks or a teacher-led rubric for each objective.
 
 ## Four further released task forms · 16 November 2026
 
@@ -31,7 +31,7 @@ The [2017 supplement](https://www.edb.gov.hk/attachment/en/curriculum-developmen
 - `numberwords100a` asks pupils to convert printed English or Chinese number words into numerals, including tens with zero units and 100. It assesses reading words and writing numerals. It does **not** test hearing spoken numbers, pronunciation or listening accuracy; those remain outside the automated task.
 - `estimate100a` shows a labelled reference box of ten counters beside an unlabelled collection of 18–84 counters. Pupils choose the nearest ten among three estimates; answer position varies. This provides a finite, reproducible estimation task. As with any multiple-choice estimate, it does not prove that a child used the reference rather than counted the dots. The picture's accessibility description describes the reference and target without giving the target count.
 
-All four use permanent IDs, bilingual builder, pupil, paper and key views, and three-question practice with a hint, retry and first-try count. The unit remains **partially covered** pending full objective-by-objective review. The oral and listening activity below supplies teacher-assessed tasks beyond these fixed written representations; it does not claim observed pupil mastery. Manual classroom, translation, physical printer and screen-reader checking remains deferred at the user's request.
+All four use permanent IDs, bilingual builder, pupil, paper and key views, and three-question practice with a hint, retry and first-try count. At that earlier release the unit remained partially covered; the complete source audit and verified checkpoint below supersede that status. The oral and listening activity below supplies teacher-assessed tasks beyond these fixed written representations; it does not claim observed pupil mastery. Manual classroom, translation, physical printer and screen-reader checking remains deferred at the user's request.
 
 ## Release checks
 
@@ -60,8 +60,22 @@ The [EDB supplement, PDF pp. 13–14](https://www.edb.gov.hk/attachment/en/curri
 
 This release closes the **missing oral/listening material** in the README queue, subject to publication verification. It does not by itself close 1N3. A full-unit review must still reconcile all five numbered objectives, including the meaning of digits in tens and units, odd/even including zero, comparison and ordering, and estimation using reference quantities, with the exact existing family evidence and any further teacher tasks needed. A worked explanation alone cannot establish the pupil action.
 
-**Handoff:** Last verified online evidence remains the existing eight families; the new activity is prepared locally for release. Oral reading, counting, quantity selection and heard-number writing now have explicit tasks and rubrics. Next: publish and check both language/print routes, then complete the five-row whole-unit audit. Classroom use, independent translation, physical printing and screen-reader validation remain outstanding; none is claimed by this material review.
+**Earlier handoff (superseded by the verified checkpoint below):** Last verified online evidence then comprised the existing eight families; the activity was prepared locally for release. Oral reading, counting, quantity selection and heard-number writing now have explicit tasks and rubrics. Next: publish and check both language/print routes, then complete the five-row whole-unit audit. Classroom use, independent translation, physical printing and screen-reader validation remain outstanding; none is claimed by this material review.
 
 ## Complete objective audit and supplementary number sense
 
-The [machine-readable five-objective audit](1n3-objectives.json) maps11 requirement rows to actual pupil actions. The [bilingual number-sense sheet](../activities/p1-number-sense-review.html) adds digit-value interpretation, even/odd zero and100 cases, and an estimate recorded before checking. These were genuine gaps in scored actions, not requirements to repeat every existing example. All five objectives now have authored evidence; independent review and final live checks remain pending.
+The [machine-readable five-objective audit](1n3-objectives.json) maps11 requirement rows to actual pupil actions. The [bilingual number-sense sheet](../activities/p1-number-sense-review.html) adds digit-value interpretation, even/odd zero and100 cases, and an estimate recorded before checking. These were genuine gaps in scored actions, not requirements to repeat every existing example. All five objectives now have released evidence; independent review and final live checks passed as recorded below.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**Resource complete.** Every numbered objective and applicable remark has linked released digital evidence or a usable bilingual teacher-led pupil task with materials, script and observable criteria. This describes assessment-resource coverage, not pupil attainment.
+
+**Last verified release:** `49ffb20d5deec81619e3cf66d69a6b38b77f7c45`; GitHub Pages run `43902703454` succeeded. The public browser regression passed **181/181**, including immutable historical variants, bilingual routes, key isolation, phone layout and explicit mixed-money/inverse-check EN/ZH paper/key PDF generation with page images and selectable text. Independent source and mathematics review passed.
+
+**Manual evidence:** EN/ZH number-sense and addition/subtraction pupil sheets and teacher-key toggles were inspected; Chinese column alignment was legible. Money pupil paper and EN/ZH worked keys were inspected with spoken-value labels and matching codes.
+
+**Not performed:** teacher-sheet print-preview/pagination and manual visual inspection of downloaded PDFs. Classroom trials, independent translation review, physical printing and screen-reader testing remain deferred. These are not represented as passed or as evidence of pupil mastery.
+
+**Remaining objective gap:** none identified in the source-to-task audit. Continue layout/accessibility validation and classroom feedback separately; retain permanent task IDs.
+
+**Objectives closed:** 5 (11 mapped requirements in `1n3-objectives.json`). Evidence: eight digital families (96 variants), oral/counting/dictation activity, digit-meaning and zero-even tasks, and estimate-before-count reference tasks.

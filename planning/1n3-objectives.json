@@ -13,8 +13,8 @@
       "pages": "PDF11–12; printed5–6"
     }
   ],
-  "reviewStatus": "authored-pending-independent-review-and-live-verification",
-  "verifiedComplete": false,
+  "reviewStatus": "verified-resource-complete",
+  "verifiedComplete": true,
   "newActivity": "activities/p1-number-sense-review.html",
   "languages": [
     "en",
@@ -24,13 +24,14 @@
     "classroom trial",
     "independent translation review",
     "physical printer",
-    "screen reader"
+    "screen reader",
+    "teacher print-preview/pagination",
+    "manual downloaded-PDF visual inspection"
   ],
   "notes": [
     "An existing online family supplies only the pupil action it actually scores, not every claim in its feedback.",
     "Concrete construction is our assessment design for digit meaning, not a separate compulsory EDB objective.",
-    "Zero-as-even is guidance in the explanatory notes, addressed here without turning an illustrative strategy into a new numbered objective.",
-    "No new global inventory or unit-closure claim made."
+    "Zero-as-even is guidance in the explanatory notes, addressed here without turning an illustrative strategy into a new numbered objective."
   ],
   "objectives": [
     {
@@ -55,7 +56,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "Oral teacher activity labels its activities by headings, not URL anchors; use the activity page and named section.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         },
         {
           "id": "1N3.1.read",
@@ -69,7 +70,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         },
         {
           "id": "1N3.1.write",
@@ -88,7 +89,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "Dictation is an assessment mode, not another numbered objective.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         },
         {
           "id": "1N3.1.sequence",
@@ -107,7 +108,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         },
         {
           "id": "1N3.1.parity",
@@ -126,7 +127,7 @@
           ],
           "identifiedGapBeforeSupplement": "Existing family has neither 0 nor 100, and only feedback explains the units rule.",
           "reviewNote": "Pupil demonstrates zero-even and gives a basis for two-digit decisions; teacher key accepts multiple representations.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         }
       ],
       "status": "pending-release-review"
@@ -153,7 +154,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         },
         {
           "id": "1N3.2.digitvalue",
@@ -167,7 +168,7 @@
           ],
           "identifiedGapBeforeSupplement": "Existing family asks for total only; the meaning of the digit occurs in its worked key.",
           "reviewNote": "No need to use term place value; building is one means of showing understanding, not compulsory terminology.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         }
       ],
       "status": "pending-release-review"
@@ -189,7 +190,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         },
         {
           "id": "1N3.3.order",
@@ -203,7 +204,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "No inequality symbols; both directions included across 12 fixed cases.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         }
       ],
       "status": "pending-release-review"
@@ -230,7 +231,7 @@
           ],
           "identifiedGapBeforeSupplement": "",
           "reviewNote": "Oral evidence makes the process observable; use this section when assessing the objective, even though it is labelled optional on the general oral sheet.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         }
       ],
       "status": "pending-release-review"
@@ -257,7 +258,7 @@
           ],
           "identifiedGapBeforeSupplement": "Persistent digital dots permit exact counting; the answer alone does not establish estimation process.",
           "reviewNote": "Teacher records method and timing before counting; no invented EDB tolerance or nearest-ten requirement.",
-          "status": "pending-release-review"
+          "status": "verified-resource-evidence"
         }
       ],
       "status": "pending-release-review"
@@ -277,5 +278,10 @@
     "Printing without key leakage or clipping",
     "Check linked existing families and oral-sheet routes are live",
     "Update objective inventory from actual reviewed evidence, leaving manual validation separately recorded"
-  ]
+  ],
+  "lastVerifiedRelease": "49ffb20d5deec81619e3cf66d69a6b38b77f7c45",
+  "browserRegression": {
+    "passed": 181,
+    "failed": 0
+  }
 }

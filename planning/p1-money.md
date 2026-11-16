@@ -1,6 +1,6 @@
 # P1 money (I): objective evidence and release plan
 
-**Status:** teacher activity authored; digital families and release verification pending. No complete-unit or live-task claim is made by this document.
+**Status:** all three objectives are resource complete. Published digital and teacher-led evidence, verification results and remaining validation caveats are recorded in the checkpoint below.
 
 ## Source verification
 
@@ -44,7 +44,7 @@ Do not treat these planned families as released. Record their final IDs, variant
 
 ## Release gates and continuity
 
-**Last verified release:** none for 1M2. **Objectives newly closed:** none, pending publication and verification. **Next pupil task:** physically identify a coin and read its value, then read a price tag and count an amount.
+**Last verified release:** see checkpoint below. **Objectives newly closed:** all three for assessment-resource coverage. **Next pupil task:** physically identify a coin and read its value, then read a price tag and count an amount.
 
 Before sign-off, verify EN/ZH pupil and key routes, key hiding/toggling, keyboard operation, printing without answer leakage, readable grayscale layout and complete instructions. For digital families, check every finite variant, expected answer, marking boundary, practice, builder, pupil quiz, paper/key and existing-link regression. The parent release process must update global counts and ledgers only after the relevant evidence is actually available.
 
@@ -52,4 +52,18 @@ Teacher observation criteria are ready for review; actual classroom use, indepen
 
 ## Integrated digital tasks
 
-`coinvalue1a`, `priceword1a` and `coincount1a` each contain12 variants. They are integrated in builder, quiz, practice and paper/key with bilingual labels and integer-cent exact choices. The real-coin teacher activity supplies physical recognition, spoken reading and exchanges. Authored evidence exists for all three objectives, but publication, independent review and route verification are still pending.
+`coinvalue1a`, `priceword1a` and `coincount1a` each contain12 variants. They are integrated in builder, quiz, practice and paper/key with bilingual labels and integer-cent exact choices. The real-coin teacher activity supplies physical recognition, spoken reading and exchanges. Authored evidence exists for all three objectives, with publication, independent review and route verification now recorded below.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**Resource complete.** Every numbered objective and applicable remark has linked released digital evidence or a usable bilingual teacher-led pupil task with materials, script and observable criteria. This describes assessment-resource coverage, not pupil attainment.
+
+**Last verified release:** `49ffb20d5deec81619e3cf66d69a6b38b77f7c45`; GitHub Pages run `43902703454` succeeded. The public browser regression passed **181/181**, including immutable historical variants, bilingual routes, key isolation, phone layout and explicit mixed-money/inverse-check EN/ZH paper/key PDF generation with page images and selectable text. Independent source and mathematics review passed.
+
+**Manual evidence:** EN/ZH number-sense and addition/subtraction pupil sheets and teacher-key toggles were inspected; Chinese column alignment was legible. Money pupil paper and EN/ZH worked keys were inspected with spoken-value labels and matching codes.
+
+**Not performed:** teacher-sheet print-preview/pagination and manual visual inspection of downloaded PDFs. Classroom trials, independent translation review, physical printing and screen-reader testing remain deferred. These are not represented as passed or as evidence of pupil mastery.
+
+**Remaining objective gap:** none identified in the source-to-task audit. Continue layout/accessibility validation and classroom feedback separately; retain permanent task IDs.
+
+**Objectives closed:** 3. Evidence: three digital families (36 variants), genuine recognition of all seven Hong Kong coins, spoken price/total readings and exchanges within permitted denomination groups. Labelled digital schematics are not treated as proof of real-coin recognition.

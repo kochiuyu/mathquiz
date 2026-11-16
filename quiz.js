@@ -35,7 +35,20 @@ function moneyFigure1(type){
   return '';
 }
 
+function solidFigure1(f,zh=false){
+ if(!f||f.kind!=='solid1'||!solidNames1[f.solid])return '';
+ const paths={
+ prism:'<path d="M50 55 L112 55 L140 35 L78 35 Z" fill="#e4e4e4"/><path d="M112 55 L140 35 L140 120 L112 140 Z" fill="#ccc"/><path d="M50 55 H112 V140 H50 Z" fill="#f7f7f7"/>',
+ cylinder:'<path d="M48 48 V132 A42 15 0 0 0 132 132 V48" fill="#eee"/><path d="M48 132 A42 15 0 0 1 132 132" fill="none" stroke-dasharray="4 4"/><ellipse cx="90" cy="48" rx="42" ry="15" fill="#fafafa"/>',
+ pyramid:'<path d="M90 28 L140 120 L90 149 L40 120 Z" fill="#eee"/><path d="M90 28 L90 149 L140 120 Z" fill="#ccc"/><path d="M40 120 L90 96 L140 120 M90 28 V96" fill="none" stroke-dasharray="4 4"/>',
+ cone:'<path d="M90 28 L46 132 A44 16 0 0 0 134 132 Z" fill="#eee"/><path d="M46 132 A44 16 0 0 1 134 132" fill="none" stroke-dasharray="4 4"/>',
+ sphere:'<circle cx="90" cy="90" r="58" fill="#eee"/><path d="M32 90 A58 17 0 0 0 148 90" fill="none"/><path d="M32 90 A58 17 0 0 1 148 90" fill="none" stroke-dasharray="4 4"/><path d="M90 32 C55 45 55 135 90 148" fill="none" stroke="#888"/>'};
+ // Labels are neutral, not the tested name; tactile equivalent needed for nonvisual access.
+ return `<svg class="figure solid-figure" viewBox="0 0 180 180" role="img" aria-label="${zh?'立體模型示意圖；可請教師提供相應實物':'Drawing of a solid model; ask a teacher for a corresponding real model if needed'}"><g transform="rotate(${f.rotation||0} 90 90)" stroke="#222" stroke-width="2" stroke-linejoin="round">${paths[f.solid]}</g></svg>`;
+}
+
 function figure(type) {
+  const solidSvg=solidFigure1(type,ch);if(solidSvg)return solidSvg;
   const moneySvg=moneyFigure1(type);if(moneySvg)return moneySvg;
   if (!type) return "";
   if (typeof type === "object" && type.kind === "measureCompare") {
@@ -344,8 +357,8 @@ function renderNumber100Practice(skill){
   show();
 }
 function renderChoice100Practice(skill){
-  const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,cm=family.make(0).centimetre?.items,variants=measure||cm?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
-  const title=family.make(0).money||measure||cm||skill==="checksub1a"?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
+  const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,cm=family.make(0).centimetre?.items,variants=skill==="solidname1a"?[0,1,2,3,4]:measure||cm?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
+  const title=family.make(0).solidRecognition||family.make(0).money||measure||cm||skill==="checksub1a"?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(title)+" · "+t("Practice","練習")+" | MathQuiz";
@@ -362,7 +375,7 @@ function renderChoice100Practice(skill){
         feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0])+". ")+local(q.why);
         form.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
-      }else feedback.textContent=q.money?local(q.money.hint):cm?t("Read both ruler marks for A and B. Count the centimetre spaces between each pair of ends, then compare.","讀取A和B各自的起點及終點刻度。數出兩端之間的厘米間隔，再作比較。")
+      }else feedback.textContent=q.solidRecognition?local(q.solidRecognition.hint):q.money?local(q.money.hint):cm?t("Read both ruler marks for A and B. Count the centimetre spaces between each pair of ends, then compare.","讀取A和B各自的起點及終點刻度。數出兩端之間的厘米間隔，再作比較。")
         :measure?t(measure.units?"Count the equal paperclip lengths from the same starting point.":measure.subject==="distance"?"Compare the straight lines from Start to the two points.":"Line up the starting ends and compare where the ribbons end.",measure.units?"由同一起點數一數等長的回形針單位。":measure.subject==="distance"?"比較由起點至兩點的直線距離。":"把絲帶的起點對齊，再比較終點的位置。")
         :skill==="checksub1a"?t("Add the difference to the number taken away. The sum should equal the starting number.","把差加上減去的數，所得的和應等於原來的數。")
         :skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
@@ -1306,6 +1319,7 @@ function renderAdditionalP1Practice(skill){
 // counting link omits skill to preserve already-shared URLs.
 const practiceCatalogue=[
   {grade:1,skill:null,label:["Practise counting","練習點算"],render:renderPractice},
+  ...solidFamilies1.map(f=>({grade:1,skill:f.id,label:f.label,render:()=>renderChoice100Practice(f.id)})),
   ...moneyFamilies.map(f=>({grade:1,skill:f.id,label:f.label,render:()=>renderChoice100Practice(f.id)})),
   {grade:1,skill:"next1",label:["Practise counting forwards","練習順數"],render:renderPractice},
   {grade:1,skill:"add1",label:["Practise addition to 10","練習10以內的加法"],render:()=>renderAdditionalP1Practice("add1")},

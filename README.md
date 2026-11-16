@@ -6,23 +6,25 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** On 16 November 2026, 26 units have at least one selectable task, 59 have none, and 0 have been verified complete. The builder offers 58 question families and 914 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the 16 November 2026 release candidate, 27 units have at least one selectable task, 58 have none, and 3 have been verified resource complete. The candidate builder offers 59 question families and 929 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
-| P1 | 12 | 8 | 4 | 0 |
+| P1 | 12 | 9 | 3 | 3 |
 | P2 | 15 | 4 | 11 | 0 |
 | P3 | 14 | 3 | 11 | 0 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **26** | **59** | **0** |
+| **Total** | **85** | **27** | **58** | **3** |
 
-**Usable-resource inventory:** 27 units have a digital task or a linked teacher-led pupil activity; 26 of those have selectable digital tasks. Eight P1 units have been audited against 38 numbered objectives. Objective closure remains pending final release checks; the whole-curriculum objective total and percentage are not yet claimed.
+**Release-candidate resource inventory:** 30 units have a digital task or linked teacher-led pupil activity; 27 have selectable digital tasks. All 12 P1 units now have resources and objective/source mappings; 9 have selectable digital tasks. Time, directions and inquiry are teacher-led. These counts include the unpublished release candidate, not a claim of verified completion. Whole-curriculum objective totals and percentages are not yet claimed.
+
+**Verified resource-complete checkpoint: 3/85 units.** Only 1N3 (Numbers to 100), 1N4 (Addition and subtraction I) and 1M2 (Money I) are verified resource complete, covering 14 numbered objectives. Evidence: source audits, independent mathematical review, live commit `49ffb20` passing **181/181** regression checks, targeted English/Chinese teacher screen/key routes and money paper/key verification. This means usable assessment resources, not pupil mastery. Manual downloaded-PDF visual inspection and teacher print-preview/pagination checks are unperformed; classroom, independent translation, physical-printer and screen-reader validation remain deferred. The remaining nine P1 units, including release-4 additions, await their own release verification. 1F1 has an integrated inquiry statement, so no combined P1 numbered-objective total is asserted.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
-**Current release · P1 assessment evidence:** P1 addition/subtraction now includes a digital inverse-check task and a teacher sheet for intermediate working and column alignment. Numbers to100 has oral/listening tasks and a supplementary number-sense review. Money (1M2) adds36 digital variants for reading denominations, prices and coin totals, plus a real-coin activity for recognition and permitted exchanges. Schematics do not substitute for real-coin recognition. The release also fixes narrow-screen equation-writing space. These materials require final public regression and bilingual route verification before the verified-unit count changes; classroom, independent translation, physical-printer and screen-reader checks remain separate.
+**Release 4 candidate · P1 shapes, positions and inquiry:** 15 new `solidname1a` variants cover pictured recognition of five broad solid types, with bilingual five-question practice. Four teacher packets add real-solid exploration, flat-shape drawing/making, observer-based positional descriptions and investigations. Earlier number, operation, measurement, money and time packets remain linked. All 60 permanent families / 944 variants pass static digest checks. The expanded browser suite is expected to contain 185 checks (181 existing plus four new), not yet run for this candidate; browser regression, bilingual PDF, print and exact live-release verification remain pending. New release-4 units remain unverified; the three earlier resource-complete checkpoints below are retained. Classroom, independent translation, physical-printer and screen-reader checks remain separate.
 
 [Immediate priorities](#next-three-deliverables) · [Priority rules](#how-to-choose-the-next-release) · [P1–P6 delivery plan](#grade-by-grade-delivery-plan) · [Milestones](#milestones-and-handoff) · [Release procedure](#author-verify-and-hand-off-a-release)
 
