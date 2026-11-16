@@ -1,4 +1,4 @@
-// Baseline from released v1 questions and every permanent generated family, including factorpair4a.
+// Baseline from released v1 questions and every permanent generated family, including purchasestory5a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -30,6 +30,7 @@
     ["bar4a",4,12,"7d13e98587598a68c3dbce5c8ae6c2870bd5c1da006956abf6235d2af5d7d337"],
     ["fracadd5a",5,12,"c8d89b1ea481650d2c2bb24e32cfd76f18cf403550075745adc17c430d4afef8"],
     ["equation5a",5,12,"851b768bf0b2b458fca07031b335ee2b836661f2f92ec32b7b4a2140f511340f"],
+    ["purchasestory5a",5,12,"58af485106107a5dcfac149bf16dc9d05789b5042283a1ecfb163aec201518e9"],
     ["triarea5a",5,12,"1f2cd92defd0a62de0e87bf651d1839adb1e4404befa560499d95250ec32063c"],
     ["volume5a",5,12,"1e88938772a12cdd9a6055713aceb6af8352fd59d3deae4b98f2eaec10b2e050"],
     ["circle5a",5,9,"6167eb9000a7018a5cd5a3f1bed2a1ff32a0444ddc3708cfad264d061bd29e97"]
@@ -89,9 +90,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===557,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===569,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 557 variants",()=>{
+  await check("Released bilingual and response contracts · 569 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -1911,6 +1912,49 @@
       const zh=await open("?lang=zh&p=4&view=practice&skill=factorpair4a");assert(zh.querySelector("h1").textContent.includes("因數配對"),"Chinese factor-pair practice missing");
     }finally{frames.forEach(frame=>frame.remove());}
   });
+  await check("P5 purchase stories · twelve direct equations and answer boundaries",()=>{
+    const family=families.find(f=>f.id==="purchasestory5a"),seen=new Set();
+    assert(family && family.grade===5 && family.code==="5A2" && family.count===12,"purchase family metadata wrong");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),s=q.purchaseEquation;
+      assert(s && s.b>0 && s.c>0 && s.x>0 && s.subtract===(i>=6),"purchase amounts or operation wrong: "+i);
+      assert((s.subtract?s.x-s.b:s.x+s.b)===s.c && q.answer[0]===`x ${s.subtract?"−":"+"} ${s.b} = ${s.c}`,"purchase equation disagrees with story: "+i);
+      assert(q.prompt[0].includes(String(s.b)) && q.prompt[0].includes(String(s.c)) && q.prompt[1].includes(String(s.b)) && q.prompt[1].includes(String(s.c)) && q.why.every(v=>v.includes(String(s.x))),"bilingual purchase prompt or check wrong: "+i);
+      assert(purchaseEquationAnswer(q.answer[0],s) && purchaseEquationAnswer(`${s.c} = x ${s.subtract?"−":"+"} ${s.b}`,s),"valid equation rejected: "+i);
+      seen.add(q.answer[0]);
+    }
+    assert(seen.size===12 && decodeItems("purchasestory5a-0",5).length===1 && !decodeItems("purchasestory5a-0",4).length,"purchase variation or share link wrong");
+    const add=family.make(0).purchaseEquation,sub=family.make(6).purchaseEquation;
+    assert(purchaseEquationAnswer("ｘ＋７＝１９",add) && purchaseEquationAnswer("7+x=19",add),"equivalent addition rejected");
+    for(const wrong of ["x=19-7","x-7=19","x+7=20","x+7","x+07=19","12+7=19"])
+      assert(!purchaseEquationAnswer(wrong,add),"invalid equation accepted: "+wrong);
+    assert(purchaseEquationAnswer(`x-${sub.b}=${sub.c}`,sub) && !purchaseEquationAnswer(`x=${sub.b}+${sub.c}`,sub) && !purchaseEquationAnswer(`${sub.b}-x=${sub.c}`,sub),"subtraction boundary wrong");
+  });
+  await check("P5 purchase stories · builder, marking, paper, PDF and practice",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const frame=await shapeFrame(query);frames.push(frame);return frame.contentDocument;};
+      const builder=await open("?v=3&lang=en&p=5&view=build");
+      assert(builder.querySelector('select[name="purchasestory5a"]'),"purchase family missing from builder");
+      const blank=await open("?v=3&lang=en&p=5&items=purchasestory5a-0");
+      blank.querySelector("form").requestSubmit();assert(blank.getElementById("status").textContent.includes("Please complete question 1"),"blank purchase equation accepted");
+      blank.querySelector('input[name="q0f0"]').value="x=19-7";blank.querySelector("form").requestSubmit();assert(blank.getElementById("status").textContent.includes("Score 0 / 1"),"solved form scored");
+      const correct=await open("?v=3&lang=en&p=5&items=purchasestory5a-0");correct.querySelector('input[name="q0f0"]').value="ｘ＋７＝１９";correct.querySelector("form").requestSubmit();assert(correct.getElementById("status").textContent.includes("Score 1 / 1"),"purchase full-width equation rejected");
+      const paper=await open("?v=3&lang=zh&p=5&items=purchasestory5a-0.purchasestory5a-6&view=paper"),paperFrame=frames[frames.length-1];
+      const key=await open("?v=3&lang=zh&p=5&items=purchasestory5a-0.purchasestory5a-6&view=key");
+      assert(paper.querySelectorAll(".equation-space").length===2 && key.body.textContent.includes("x + 7 = 19") && key.body.textContent.includes("x − 8 = 15"),"Chinese purchase paper or key missing");
+      assert(paper.querySelector(".paper-code").textContent===key.querySelector(".paper-code").textContent,"purchase paper/key code mismatch");
+      paperFrame.style.width="360px";assert(paper.documentElement.scrollWidth<=360,"purchase phone paper overflows");
+      const pdf=await paperFrame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await pdf.arrayBuffer());
+      assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"purchase Chinese PDF lacks page or text layer");
+      const practice=await open("?lang=en&p=5&view=practice&skill=purchasestory5a"),input=practice.getElementById("practice-answer"),form=practice.getElementById("practice-form");
+      assert(input && practice.getElementById("zh").href.includes("purchasestory5a"),"purchase practice route missing");
+      input.value="x=12";form.requestSubmit();assert(practice.getElementById("practice-feedback").textContent.includes("calculates x"),"purchase modelling hint missing");
+      input.value="x+7=19";form.requestSubmit();assert(practice.getElementById("practice-feedback").textContent.includes("Correct after a hint") && !practice.getElementById("practice-next").hidden,"purchase practice retry failed");
+      practice.getElementById("practice-next").click();assert(practice.querySelector(".practice-progress").textContent.includes("2 of 3") && practice.querySelector("legend").textContent.includes("before buying"),"purchase subtraction follow-up missing");
+      const zh=await open("?lang=zh&p=5&view=practice&skill=purchasestory5a");assert(zh.querySelector("h1").textContent.includes("購物方程"),"Chinese purchase practice missing");
+    }finally{frames.forEach(frame=>frame.remove());}
+  });
   await check("Coverage page · live counts, planned work and home link",async()=>{
     const frames=[];
     try{
@@ -1918,18 +1962,18 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===27,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===28,"grade coverage counts wrong");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 27 distinct live home links",async()=>{
+  await check("Practice catalogue · 28 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===27 && new Set(links.map(a=>a.href)).size===27,"practice links missing or repeated");
+      assert(links.length===28 && new Set(links.map(a=>a.href)).size===28,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

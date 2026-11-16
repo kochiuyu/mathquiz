@@ -189,6 +189,7 @@ The online result does not by itself establish why a pupil chose an answer. Disc
 | [5N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=36) | Fractions (V) | Solve a fraction division problem |
 | [5A1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=38) | Elementary algebra | Translate a description into an expression |
 | [5A2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) | Simple equations (I) | [Solve a one-step equation and check it](p5-simple-equations.md) |
+| [5A2 objective 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) | Simple equations (I) | [Write a purchase-story equation before solving](p5-purchase-equations.md) |
 | [5M1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=41) | Area (II) | [Find the area of a triangle from its base and perpendicular height](p5-triangle-area.md) |
 | [5M2 objective 6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=43) | Volume (I) | [Find the volume of a labelled cuboid](p5-cuboid-volume.md) |
 | [5S1 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45) | Circles | [Identify a pictured radius](p5-circles.md) |
@@ -198,7 +199,7 @@ The online result does not by itself establish why a pupil chose an answer. Disc
 
 #### Live P5 fraction-addition and simple-equation families
 
-Source check: **16 November 2026**. [EDB 5N2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=76) supports unlike-denominator addition; [5A2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=82) supports solving simple equations. The [fraction brief](p5-fraction-addition.md) covers twelve two-addend proper-fraction cases and lowest-terms marking. The [equation brief](p5-simple-equations.md) covers twelve whole-number `x + b = c` and `x − b = c` cases with substitution checks. These are samples of the objectives, not full-unit coverage. Manual pupil and hands-on screen-reader checks are deferred.
+Source check: **16 November 2026**. [EDB 5N2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=76) supports unlike-denominator addition; [5A2 objectives 2–3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) support solving simple equations and using them in problems. The [fraction brief](p5-fraction-addition.md) covers twelve two-addend proper-fraction cases and lowest-terms marking. The [equation brief](p5-simple-equations.md) covers twelve whole-number `x + b = c` and `x − b = c` cases with substitution checks. The [purchase-story brief](p5-purchase-equations.md) covers twelve one-unknown money contexts in which pupils write an equation before solving, a second representation of 5A2. These are samples of the objectives, not full-unit coverage. Manual pupil and hands-on screen-reader checks are deferred.
 
 #### Live P5 triangle-area and cuboid-volume families
 

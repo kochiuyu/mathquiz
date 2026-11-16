@@ -124,6 +124,18 @@ const families = [
     return {prompt:[`Solve x ${sign} ${b} = ${c}. Write the value of x.`,`解方程 x ${sign} ${b} = ${c}，寫出 x 的值。`],fields:[["x =","x ="]],answer:[x],marks:1,
       why:[`Apply the same operation to both sides: x = ${c} ${inverse} ${b} = ${x}. Check: ${x} ${sign} ${b} = ${c}.`,`等號兩邊同時進行相同運算：x = ${c} ${inverse} ${b} = ${x}。驗算：${x} ${sign} ${b} = ${c}。`],simpleEquation:{x,b,c,subtract}};
   }},
+  {id:"purchasestory5a",grade:5,code:"5A2",label:["Write an equation for a purchase","根據購物情境列方程"],count:12,make(i){
+    const cases=[[7,19],[5,23],[9,32],[12,40],[6,18],[14,50],[8,15],[11,24],[6,19],[15,27],[9,31],[13,38]];
+    const [b,c]=cases[i],subtract=i>=6,x=subtract?b+c:c-b,sign=subtract?"−":"+",equation=`x ${sign} ${b} = ${c}`;
+    const prompt=subtract
+      ?[`After buying a book for $${b}, a pupil has $${c} left. Let x be the dollars the pupil had before buying the book. Write an equation using x. Do not solve it.`,`一名學生買了一本售價${b}元的書後，還剩${c}元。設 x 是買書前有的元數。用 x 列出方程，不用求解。`]
+      :[`A notebook and a pen cost $${c} altogether. The pen costs $${b}. Let x be the notebook's price in dollars. Write an equation using x. Do not solve it.`,`一本筆記簿和一枝筆共售${c}元，筆售${b}元。設 x 是筆記簿的價錢（元）。用 x 列出方程，不用求解。`];
+    return {prompt,fields:[["Equation","方程"]],answer:[equation],marks:1,
+      why:subtract
+        ?[`Starting money minus the book's $${b} cost equals the $${c} left: ${equation}. Check with x = ${x}: ${x} − ${b} = ${c}.`,`原有的錢減去書價${b}元，等於剩下的${c}元：${equation}。代入 x = ${x} 驗算：${x} − ${b} = ${c}。`]
+        :[`Notebook price plus pen price equals the total: ${equation}. Check with x = ${x}: ${x} + ${b} = ${c}.`,`筆記簿價錢加筆價等於總價：${equation}。代入 x = ${x} 驗算：${x} + ${b} = ${c}。`],
+      purchaseEquation:{b,c,x,subtract}};
+  }},
   {id:"triarea5a",grade:5,code:"5M1",label:["Area of a triangle","三角形面積"],count:12,make(i){
     const cases=[[8,5],[6,4],[10,3],[12,7],[14,5],[16,4],[9,6],[7,8],[11,4],[13,6],[5,8],[15,4]];
     const [base,height]=cases[i],area=base*height/2,triangle={base,height,apex:[120,95,150,135][i%4]};

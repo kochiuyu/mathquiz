@@ -151,6 +151,7 @@ function shapeOptions(q,i,paper,key=false){
 function controls(q,i,paper) {
   if(q.shapes)return shapeOptions(q,i,paper);
   if(q.choices) return q.choices.map(v=> paper ? '<span class="option">□ '+v+'</span>' : '<label class="option"><input type="'+(q.multi?'checkbox':'radio')+'" name="q'+i+'" value="'+v+'"> '+v+'</label>').join("");
+  if(q.purchaseEquation)return paper?'<div class="equation-space">________________________</div>':'<label class="field">'+t("Equation","方程")+' <input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Equation for the purchase story","購物情境的方程")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Use x, + or −, and =. Write the relationship before solving.","用 x、+ 或 − 及 = 表示數量關係，先不用求解。")+'</small>';
   if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
   if(q.equalGroups)return '<div class="group-equation">'+[0,1,2].map(j=>(j?'<span aria-hidden="true">'+(j===1?'×':'=')+'</span>':'')+(paper?'<span class="group-blank">_______</span>':'<label><span class="sr-only">'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'</span><input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'" name="q'+i+'f'+j+'"></label>')).join("")+'</div>';
@@ -189,6 +190,7 @@ function mark(form) {
     if(q.equalSharing)return Number(equalSharingAnswer(values,q.equalSharing));
     if(q.fractionBar)return Number(fractionBarAnswer(values,q.fractionBar));
     if(q.fractionAddition)return Number(fractionAdditionAnswer(values,q.fractionAddition));
+    if(q.purchaseEquation)return Number(purchaseEquationAnswer(values[0],q.purchaseEquation));
     if(q.simpleEquation)return Number(simpleEquationAnswer(values[0],q.answer[0]));
     if(q.triangleArea || q.cuboidVolume || q.missingSide || q.factorPair)return Number(measureAnswer(values[0],q.answer[0]));
     if(q.measuringCup)return Number(measuringCupAnswer(values[0],q.answer[0]));
@@ -795,6 +797,36 @@ function renderPractice(){
   }
   show();
 }
+function renderPurchaseStoryPractice(){
+  const family=families.find(f=>f.id==="purchasestory5a"),variants=[0,6,4];
+  const practiceUrl=language=>"?lang="+language+"&p=5&view=practice&skill=purchasestory5a";
+  let position=0,attempts=0,firstTry=0;
+  document.title=t("Purchase equations · Practice | MathQuiz","購物方程 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]),story=q.purchaseEquation;
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise purchase equations","練習購物方程")+'</h1><p>'+t("Use x to write an equation for each story. Try three questions.","用 x 為每個情境列方程，試做三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend><label class="field">'+t("Equation","方程")+' <input id="practice-answer" class="equation-input" type="text" autocomplete="off" aria-label="'+t("Equation for the purchase story","購物情境的方程")+'"></label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById("practice-form"),input=document.getElementById("practice-answer"),feedback=document.getElementById("practice-feedback");
+    form.onsubmit=e=>{
+      e.preventDefault();const value=input.value.trim();
+      if(!value){feedback.textContent=t("Write an equation first.","請先列出方程。");input.focus();return;}
+      attempts++;const correct=purchaseEquationAnswer(value,story);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("A matching equation is ","符合情境的方程是 ")+q.answer[0]+". ")+local(q.why);
+        input.disabled=true;form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const written=value.normalize("NFKC").replace(/\s/g,"").replace(/[−–]/g,"-").toLowerCase();
+        feedback.textContent=/^x=/.test(written)?t("That calculates x. First show how the amounts in the story relate using x.","這是在計算 x。請先用 x 列出情境中各個金額的關係。")
+          :story.subtract?t("Start with the money before the purchase. Subtract the book's cost to get the amount left.","從買書前的金額開始，減去書價，就等於剩下的金額。")
+          :t("Add the notebook price x and the pen price. Their sum is the total paid.","把筆記簿價錢 x 和筆價相加，便等於總價。");input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{position++;attempts=0;if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';};
+  }
+  show();
+}
 function renderP5Practice(skill){
   const family=families.find(f=>f.id===skill),fraction=skill==="fracadd5a",variants=[0,4,9];
   const name=fraction?t("adding fractions","異分母分數加法"):t("solving equations","解簡易方程");
@@ -982,6 +1014,7 @@ const practiceCatalogue=[
   {grade:4,skill:"bar4a",label:["Practise scaled bar charts","練習大數量棒形圖"],render:()=>renderBarChartPractice("bar4a")},
   {grade:5,skill:"fracadd5a",label:["Practise adding fractions","練習分數加法"],render:()=>renderP5Practice("fracadd5a")},
   {grade:5,skill:"equation5a",label:["Practise simple equations","練習簡易方程"],render:()=>renderP5Practice("equation5a")},
+  {grade:5,skill:"purchasestory5a",label:["Practise purchase equations","練習購物方程"],render:renderPurchaseStoryPractice},
   {grade:5,skill:"triarea5a",label:["Practise triangle area","練習三角形面積"],render:()=>renderP5MeasurePractice("triarea5a")},
   {grade:5,skill:"volume5a",label:["Practise cuboid volume","練習長方體體積"],render:()=>renderP5MeasurePractice("volume5a")},
   {grade:5,skill:"circle5a",label:["Practise circle parts","練習辨認圓的各部分"],render:renderCirclePractice}

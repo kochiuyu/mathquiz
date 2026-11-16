@@ -48,6 +48,14 @@ function simpleEquationAnswer(value,expected){
   const numeral=String(value).normalize("NFKC").trim();
   return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
 }
+function purchaseEquationAnswer(value,story){
+  const written=String(value).normalize("NFKC").replace(/\s/g,"").replace(/[−–]/g,"-").toLowerCase();
+  const canonical=`x${story.subtract?"-":"+"}${story.b}=${story.c}`;
+  const reversed=`${story.c}=x${story.subtract?"-":"+"}${story.b}`;
+  if(story.subtract)return written===canonical || written===reversed;
+  const swapped=`${story.b}+x=${story.c}`;
+  return written===canonical || written===reversed || written===swapped || written===`${story.c}=${story.b}+x`;
+}
 function measureAnswer(value,expected){
   const numeral=String(value).normalize("NFKC").trim();
   return /^(?:0|[1-9][0-9]*)$/.test(numeral) && Number(numeral)===expected;
