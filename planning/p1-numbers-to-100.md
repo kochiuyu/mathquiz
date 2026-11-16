@@ -20,7 +20,18 @@ The key compares tens first; when tens match, it compares units. The practice hi
 
 Each family uses one exact whole-number numeral for one mark, including full-width digits, with a three-question practice route, a targeted hint, one retry and a worked step. The picture descriptions name visible groups without giving their total. Misconceptions such as ignoring a zero in the units place or counting boxes rather than counters are hypotheses, not observed errors.
 
-**Still open in 1N3:** odd/even recognition to 100 (objective 1 remarks); ordering three or more numerals (objective 3 notes); estimation against a reference quantity below 100 (objective 5); and a spoken-number-to-numeral task. No full-unit coverage claim is made. A full-unit claim requires objective-by-objective review and suitable tasks or a teacher-led rubric for each objective.
+**Next objective slices:** the first release left odd/even recognition, ordering groups of numerals, estimation and number-word writing open. The release below addresses fixed written and pictured forms of those slices. A full-unit claim still requires objective-by-objective review and suitable tasks or a teacher-led rubric for each objective.
+
+## Four further released task forms · 16 November 2026
+
+The [2017 supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=13) and [2018 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) support these four additional twelve-variant families.
+
+- `oddeven100a` asks pupils to classify a displayed two-digit numeral as odd or even. The worked step inspects the units digit; both endings 0 and 9 occur. The bilingual choices show words rather than English-only code values.
+- `ordernums100a` asks pupils to **write** three distinct numerals in ascending or descending order, one per field. A complete correct order earns one mark. Same-tens cases and 100 are included; inequality symbols are not used.
+- `numberwords100a` asks pupils to convert printed English or Chinese number words into numerals, including tens with zero units and 100. It assesses reading words and writing numerals. It does **not** test hearing spoken numbers, pronunciation or listening accuracy; those remain outside the automated task.
+- `estimate100a` shows a labelled reference box of ten counters beside an unlabelled collection of 18–84 counters. Pupils choose the nearest ten among three estimates; answer position varies. This provides a finite, reproducible estimation task. As with any multiple-choice estimate, it does not prove that a child used the reference rather than counted the dots. The picture's accessibility description describes the reference and target without giving the target count.
+
+All four use permanent IDs, bilingual builder, pupil, paper and key views, and three-question practice with a hint, retry and first-try count. The unit remains **partially covered** pending objective-by-objective review, especially oral counting, spoken-number listening and performance beyond these fixed representations. Manual classroom, translation, physical printer and screen-reader checking remains deferred at the user's request.
 
 ## Release checks
 

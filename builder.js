@@ -59,6 +59,25 @@ const families = [
     const [start,step]=cases[i],a=start,b=a+step,c=b+step,answer=c+step,dir=step===1?["forwards","順數"]:["backwards","倒數"];
     return {...numeric([`Count ${dir[0]} by 1: ${a}, ${b}, ${c}, ___`,`每次${dir[1]}一個數：${a}、${b}、${c}、___。`],["",""],answer,[`Count one ${step===1?"more":"less"} than ${c}: ${c} ${step===1?"+":"−"} 1 = ${answer}.`,`從${c}${step===1?"順數":"倒數"}一個數：${c} ${step===1?"+":"−"} 1 = ${answer}。`]),inlineAnswer:true,numberTo100:true,numberSequence:{start,step}};
   }},
+  {id:"oddeven100a",grade:1,code:"1N3",label:["Odd or even to 100","辨認100以內的單數和雙數"],count:12,make(i){
+    const values=[21,34,47,50,63,78,85,92,99,40,56,73],value=values[i],even=value%2===0,unit=value%10;
+    return {prompt:[`Is ${value} odd or even? Choose one.`,`數字${value}是單數還是雙數？選一個。`],choices:["odd","even"],choiceLabels:{odd:["Odd","單數"],even:["Even","雙數"]},answer:[even?"even":"odd"],marks:1,why:[`The units digit is ${unit}. ${unit} is ${even?"even":"odd"}, so ${value} is ${even?"even":"odd"}.`,`個位數字是${unit}。${unit}是${even?"雙數":"單數"}，所以${value}是${even?"雙數":"單數"}。`],oddEven100:{value}};
+  }},
+  {id:"ordernums100a",grade:1,code:"1N3",label:["Order three numbers to 100","排列三個100以內的數"],count:12,make(i){
+    const cases=[[[42,37,59],1],[[58,53,81],-1],[[29,92,64],1],[[71,67,100],-1],[[84,89,80],1],[[100,90,99],-1],[[46,64,44],1],[[33,39,36],-1],[[78,72,75],1],[[95,59,85],-1],[[61,60,69],1],[[24,27,21],-1]];
+    const [shown,direction]=cases[i],ordered=[...shown].sort((a,b)=>direction*(a-b)),up=direction===1;
+    return {prompt:[`Put ${shown.join(", ")} in ${up?"ascending (smallest to largest)":"descending (largest to smallest)"} order. Write one number in each box.`,`把${shown.join("、")}按${up?"由小至大":"由大至小"}的次序排列。每格寫一個數。`],fields:[["first","第一個"],["second","第二個"],["third","第三個"]],answer:ordered,marks:1,why:[`Compare tens first, then units: ${ordered.join(" → ")}.`,`先比較十位，再比較個位：${ordered.join(" → ")}。`],numberOrder:{shown,direction}};
+  }},
+  {id:"numberwords100a",grade:1,code:"1N3",label:["Write numerals from number words","看數詞寫數字"],count:12,make(i){
+    const cases=[[21,"twenty-one","二十一"],[30,"thirty","三十"],[47,"forty-seven","四十七"],[58,"fifty-eight","五十八"],[60,"sixty","六十"],[73,"seventy-three","七十三"],[86,"eighty-six","八十六"],[99,"ninety-nine","九十九"],[100,"one hundred","一百"],[42,"forty-two","四十二"],[65,"sixty-five","六十五"],[90,"ninety","九十"]];
+    const [value,en,zh]=cases[i];
+    return {prompt:[`Write “${en}” using digits.`,`把「${zh}」寫成數字。`],fields:[["",""]],answer:[value],marks:1,why:[`“${en}” is written ${value}.`,`「${zh}」寫成${value}。`],numberTo100:true,numberWords:{value,en,zh}};
+  }},
+  {id:"estimate100a",grade:1,code:"1N3",label:["Estimate counters using a group of ten","參考十粒一組估計圓片"],count:12,make(i){
+    const amounts=[18,27,34,42,49,56,63,71,78,84,37,66],count=amounts[i],nearest=Math.round(count/10)*10;
+    const options=nearest===20?[10,20,40]:[nearest-20,nearest,nearest+20],choices=options.map((_,j)=>options[(j+i)%3]);
+    return {prompt:["The small box shows 10 counters. About how many counters are in the large box? Choose the best estimate without counting each one.","小盒有10粒圓片。大盒大約有多少粒圓片？不用逐粒點算，選出最合適的估計數目。"],choices:choices.map(String),answer:[String(nearest)],marks:1,why:[`Compare the large box with the reference group of 10. It has ${count} counters, so about ${nearest} is the closest estimate.`,`把大盒與10粒圓片的參考組比較。大盒有${count}粒，最接近的估計數目是約${nearest}粒。`],figure:{kind:"estimateCounters",count},estimateCount:{count,nearest}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;

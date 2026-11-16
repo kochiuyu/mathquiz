@@ -126,6 +126,11 @@ function figure(type) {
     const alt=t(`${type.groups} separate boxes, each showing ${type.size} counters.`,`${type.groups}個盒子，每盒有${type.size}粒圓片。`);
     return '<svg class="figure count-groups" viewBox="0 0 420 '+(Math.ceil(type.groups/3)*84+5)+'" role="img" aria-label="'+alt+'">'+boxes+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "estimateCounters") {
+    const reference=Array.from({length:10},(_,i)=>'<circle cx="'+(30+i%5*25)+'" cy="'+(48+Math.floor(i/5)*25)+'" r="7" fill="#375d50"/>').join("");
+    const target=Array.from({length:type.count},(_,i)=>'<circle cx="'+(185+i%9*24+(Math.floor(i/9)%2)*7)+'" cy="'+(32+Math.floor(i/9)*23)+'" r="6" fill="#375d50"/>').join("");
+    return '<svg class="figure estimate-counters" viewBox="0 0 420 270" role="img" aria-label="'+t("Reference box: 10 counters. Large box: an unlabelled collection to estimate.","參考小盒：10粒圓片。大盒：一組未標示數量的圓片，請估計數目。")+'"><text x="14" y="19">'+t("10 counters","10粒圓片")+'</text><rect x="10" y="25" width="148" height="76" rx="7" fill="none" stroke="#526f61" stroke-width="2"/>'+reference+'<text x="176" y="19">'+t("About how many?","大約有多少？")+'</text><rect x="172" y="25" width="238" height="239" rx="7" fill="none" stroke="#526f61" stroke-width="2"/>'+target+'</svg>';
+  }
   if (typeof type === "object" && type.kind === "placeValue") {
     const counts=[type.hundreds,type.tens,type.ones];
     const labels=ch?["百位","十位","個位"]:["Hundreds","Tens","Ones"];
@@ -165,7 +170,7 @@ function shapeOptions(q,i,paper,key=false){
 }
 function controls(q,i,paper) {
   if(q.shapes)return shapeOptions(q,i,paper);
-  if(q.choices) return q.choices.map(v=> paper ? '<span class="option">□ '+v+'</span>' : '<label class="option"><input type="'+(q.multi?'checkbox':'radio')+'" name="q'+i+'" value="'+v+'"> '+v+'</label>').join("");
+  if(q.choices) return q.choices.map(v=> paper ? '<span class="option">□ '+(q.choiceLabels?local(q.choiceLabels[v]):v)+'</span>' : '<label class="option"><input type="'+(q.multi?'checkbox':'radio')+'" name="q'+i+'" value="'+v+'"> '+(q.choiceLabels?local(q.choiceLabels[v]):v)+'</label>').join("");
   if(q.purchaseEquation)return paper?'<div class="equation-space">________________________</div>':'<label class="field">'+t("Equation","方程")+' <input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Equation for the purchase story","購物情境的方程")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Use x, + or −, and =. Write the relationship before solving.","用 x、+ 或 − 及 = 表示數量關係，先不用求解。")+'</small>';
   if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
@@ -180,7 +185,7 @@ function controls(q,i,paper) {
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.oddEven100?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -193,6 +198,7 @@ function mark(form) {
     }
     const values=q.fields.map((_,j)=>String(form.get("q"+i+"f"+j)||"").trim());
     if(values.some(v=>!v))return null;
+    if(q.numberOrder)return Number(values.every((v,j)=>pictogramAnswer(v,q.answer[j])));
     if(q.equation){
       const m=values[0].normalize("NFKC").replace(/\s/g,"").match(/^([1-9])\+([1-9])=(\d{1,2})$/);
       return Number(!!m && +m[3]===q.equation.total && ((+m[1]===q.equation.a && +m[2]===q.equation.b) || (+m[1]===q.equation.b && +m[2]===q.equation.a)));
@@ -225,8 +231,8 @@ function mark(form) {
   status.focus();
 }
 function renderNumber100Practice(skill){
-  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3]},variants=sets[skill];
-  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"]};
+  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8]},variants=sets[skill];
+  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"]};
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(titles[skill])+" · "+t("Practice","練習")+" | MathQuiz";
@@ -250,6 +256,7 @@ function renderNumber100Practice(skill){
       }else{
         feedback.textContent=skill==="tensones1a"?t("Count the bundles of ten first. Then count the loose counters.","先數十粒一捆的圓片，再數單粒圓片。")
           :skill==="countgroups1a"?t("Count on by the number of counters in each box, one box at a time.","按每盒的圓片數目順數，每次數一盒。")
+          :skill==="numberwords100a"?t("Find the tens word first, then the ones word.","先找出數詞中的十位，再找個位。")
           :q.numberSequence.step===1?t("The numbers go up by one each time.","每次順數一個數。")
           :t("The numbers go down by one each time.","每次倒數一個數。");
         input.focus();
@@ -258,6 +265,64 @@ function renderNumber100Practice(skill){
     document.getElementById("practice-next").onclick=()=>{
       position++;attempts=0;
       if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderChoice100Practice(skill){
+  const family=families.find(f=>f.id===skill),variants=skill==="oddeven100a"?[0,1,8]:[0,5,9];
+  const title=skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
+  const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  document.title=local(title)+" · "+t("Practice","練習")+" | MathQuiz";
+  let position=0,attempts=0,firstTry=0;
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+local(title)+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById("practice-form"),feedback=document.getElementById("practice-feedback");
+    form.onsubmit=e=>{
+      e.preventDefault();const choice=new FormData(form).get("q0");
+      if(!choice){feedback.textContent=t("Choose one answer.","請選擇一個答案。");form.querySelector('input[type="radio"]').focus();return;}
+      attempts++;const correct=choice===q.answer[0];if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0])+". ")+local(q.why);
+        form.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else feedback.textContent=skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
+        :t("Use the box of 10 as a reference. Think in tens, without counting each counter.","以10粒一盒作參考，想想大約有幾個十，不用逐粒點算。");
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();app.querySelector('input[type="radio"]').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderOrder100Practice(){
+  const skill="ordernums100a",family=families.find(f=>f.id===skill),variants=[0,1,3];
+  const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  document.title=t("Ordering numbers · Practice | MathQuiz","排列數字 · 練習 | MathQuiz");
+  let position=0,attempts=0,firstTry=0;
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise ordering three numbers","練習排列三個數")+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById("practice-form"),feedback=document.getElementById("practice-feedback"),inputs=[...form.querySelectorAll('input')];
+    form.onsubmit=e=>{
+      e.preventDefault();const values=inputs.map(el=>el.value.trim());
+      if(values.some(v=>!v)){feedback.textContent=t("Fill all three boxes.","請填好三格。");inputs[values.findIndex(v=>!v)].focus();return;}
+      attempts++;const correct=values.every((v,j)=>pictogramAnswer(v,q.answer[j]));if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The order is ","正確次序是 ")+q.answer.join(" → ")+". ")+local(q.why);
+        inputs.forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else feedback.textContent=t("Check the tens first; when tens match, compare the ones.","先比較十位；十位相同時，再比較個位。");
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();app.querySelector('input').focus();return;}
       app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
     };
   }
@@ -1119,6 +1184,10 @@ const practiceCatalogue=[
   {grade:1,skill:"tensones1a",label:["Practise tens and ones","練習十位和個位"],render:()=>renderNumber100Practice("tensones1a")},
   {grade:1,skill:"countgroups1a",label:["Practise counting in groups","練習分組點算"],render:()=>renderNumber100Practice("countgroups1a")},
   {grade:1,skill:"sequence100a",label:["Practise counting to 100","練習100以內順數和倒數"],render:()=>renderNumber100Practice("sequence100a")},
+  {grade:1,skill:"oddeven100a",label:["Practise odd and even numbers","練習單數和雙數"],render:()=>renderChoice100Practice("oddeven100a")},
+  {grade:1,skill:"ordernums100a",label:["Practise ordering numbers","練習排列數字"],render:renderOrder100Practice},
+  {grade:1,skill:"numberwords100a",label:["Practise writing numerals","練習看數詞寫數字"],render:()=>renderNumber100Practice("numberwords100a")},
+  {grade:1,skill:"estimate100a",label:["Practise estimating counters","練習估計圓片數目"],render:()=>renderChoice100Practice("estimate100a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},

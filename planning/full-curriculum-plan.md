@@ -12,7 +12,7 @@ For each unit: (1) review every objective, boundaries and exclusions in the EDB 
 |---|---|---|---|---|
 | P1 | [1N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=7) | Numbers to 20 | `next1`, `count20a`, `parts18a`, `otherway1` | Task live; objective audit needed |
 | P1 | [1N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=9) | Basic addition and subtraction | `pictureadd1`, `storyadd1` | Task live; objective audit needed |
-| P1 | [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | `compare100a`, `tensones1a`, `countgroups1a`, `sequence100a` | Task live; odd/even, ordering and estimation remain |
+| P1 | [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | `compare100a`, `tensones1a`, `countgroups1a`, `sequence100a`, `oddeven100a`, `ordernums100a`, `numberwords100a`, `estimate100a` | Task live; oral/listening work and objective audit remain |
 | P1 | [1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) | Addition and subtraction (I) | — | No task |
 | P1 | [1M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=15) | Length and distance (I) | — | No task |
 | P1 | [1M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16) | Money (I) | — | No task |
@@ -103,4 +103,4 @@ For each unit: (1) review every objective, boundaries and exclusions in the EDB 
 3. Add teacher-marked printable activities for units that require drawing, hands-on measurement, investigation or open explanation.
 4. After each release, update this inventory, the curriculum map, live family ledger, bilingual coverage page and README checkpoint.
 
-**Next within 1N3:** odd/even recognition and spoken numeral writing (objective 1), ordering three or more numbers (objective 3), and estimation under 100 (objective 5). Four live families now cover other parts of 1N3; the unit is still partial.
+**Next:** audit the remaining oral and listening aspects of 1N3; then develop 1N4 and other P1 units. Eight live families cover fixed written and pictured parts of 1N3, but the unit is still partial.

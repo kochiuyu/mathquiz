@@ -25,6 +25,10 @@
     ["tensones1a",1,12,"eb072f1bf72e46fc55e10c404b65983df9f920d134580b761dd910d108d86986"],
     ["countgroups1a",1,12,"0df8e478d01f1f7bdac6118d5921c2cdfb397900940e8f3d1ca3dc7dfdd1b083"],
     ["sequence100a",1,12,"eb4a51b5e065a724ded0f824b3c09fadded1e862d51e255a09093242000acb53"],
+    ["oddeven100a",1,12,"1292cd98c7e299879e994f03fd6ad0767a5ed2f622efa994bff8cc1e30dbbccd"],
+    ["ordernums100a",1,12,"76e527337f2a631e559a827e941ffacdb0cae50fcc577c5cb4540bfe65b891c7"],
+    ["numberwords100a",1,12,"4c230e0e5865d4b01fa0ef80c5e773bb7be4dedb9c1217af430d90f5b475fefd"],
+    ["estimate100a",1,12,"2a17f7f5f22982fdc00e99a06c8ba0d457f43f211debaee19538004d41321d46"],
     ["place3a",2,12,"52863f8ed182b051c8284b003bb0214d2a32a1b8e47e1151fc08c1ae5566746b"],
     ["groups2a",2,16,"0c96f3b94c632a47e75e0850a9999a2b3071536535c3e9687a9ae8dcb60fd369"],
     ["pict2a",2,12,"73dbf17844de056af1ff924197bebb6e2b29d5af0b97aa0da8915806fd60fbbb"],
@@ -95,9 +99,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===629,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===677,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 629 variants",()=>{
+  await check("Released bilingual and response contracts · 677 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -171,6 +175,20 @@
     assert(sequences.make(3).answer[0]===100 && sequences.make(10).answer[0]===21 && sequences.make(6).numberSequence.step===-1,"sequence boundaries missing");
     for(const id of [tens.id,groups.id,sequences.id])assert(decodeItems(id+"-0",1).length===1 && !decodeItems(id+"-0",2).length,"1N3 link or grade guard failed: "+id);
     assert(pictogramAnswer("２１",21) && !pictogramAnswer("21.0",21) && !pictogramAnswer("021",21),"1N3 number response boundary wrong");
+  });
+  await check("P1 numbers to 100 · parity, order, words and estimation",()=>{
+    const odd=families.find(f=>f.id==="oddeven100a"),order=families.find(f=>f.id==="ordernums100a"),words=families.find(f=>f.id==="numberwords100a"),estimate=families.find(f=>f.id==="estimate100a");
+    assert([odd,order,words,estimate].every(f=>f?.count===12 && f.code==="1N3"),"new 1N3 metadata missing");
+    for(let i=0;i<12;i++){
+      const a=odd.make(i),b=order.make(i),c=words.make(i),d=estimate.make(i);
+      assert(a.answer[0]===(a.oddEven100.value%2?"odd":"even") && a.choiceLabels[a.answer[0]][1],"odd/even mismatch "+i);
+      assert(b.answer.join(",")===[...b.numberOrder.shown].sort((x,y)=>b.numberOrder.direction*(x-y)).join(",") && b.answer.length===3,"order mismatch "+i);
+      assert(c.answer[0]===c.numberWords.value && c.prompt[0].includes(c.numberWords.en) && c.prompt[1].includes(c.numberWords.zh),"number-word mismatch "+i);
+      assert(d.estimateCount.count<100 && d.answer[0]===String(Math.round(d.estimateCount.count/10)*10) && d.choices.includes(d.answer[0]),"estimate mismatch "+i);
+      for(const f of [odd,order,words,estimate])assert(decodeItems(f.id+"-"+i,1).length===1 && !decodeItems(f.id+"-"+i,2).length,"new 1N3 link guard failed "+f.id);
+    }
+    assert(odd.make(3).oddEven100.value===50 && order.make(3).answer[0]===100 && words.make(8).answer[0]===100,"new 1N3 boundaries missing");
+    assert(pictogramAnswer("１００",100) && !pictogramAnswer("100.0",100),"new 1N3 numeral rule changed");
   });
   await check("P2 place value · digits, zero columns and answer formats",()=>{
     const family=families.find(f=>f.id==="place3a"),values=[];
@@ -993,6 +1011,43 @@
       assert(f,"Chinese grouped-count PDF frame missing");
       const pdf=await f.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await pdf.arrayBuffer());
       assert(raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length<=2,"grouped-count PDF text or pages missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P1 numbers to 100 · four new families in builder, quiz, print and practice",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      for(const id of ["oddeven100a","ordernums100a","numberwords100a","estimate100a"]){
+        const q=families.find(f=>f.id===id).make(0),base="?v=3&lang=en&p=1&items="+id+"-0";
+        const builder=await open(base+"&view=build");assert(builder.querySelector('select[name="'+id+'"]'),"builder missing "+id);
+        const blank=await open(base);blank.querySelector('form').requestSubmit();assert(/Please complete question 1/.test(blank.getElementById('status').textContent),"blank accepted "+id);
+        const pupil=await open(base);
+        if(q.choices)pupil.querySelector('input[value="'+q.answer[0]+'"]').checked=true;
+        else pupil.querySelectorAll('input[name^="q0f"]').forEach((el,j)=>el.value=String(q.answer[j]));
+        pupil.querySelector('form').requestSubmit();assert(/Score 1 \/ 1/.test(pupil.getElementById('status').textContent),"correct answer rejected "+id);
+        const paper=await open(base+"&view=paper"),key=await open(base+"&view=key");
+        assert(paper.querySelector('.paper-code')?.textContent===key.querySelector('.paper-code')?.textContent,"paper/key mismatch "+id);
+        const zh=await open("?v=3&lang=zh&p=1&items="+id+"-0&view=key");assert(zh.documentElement.lang==="zh-HK" && zh.querySelector('fieldset').textContent.includes(q.why[1]),"Chinese key missing "+id);
+        const practice=await open("?lang=en&p=1&view=practice&skill="+id);
+        assert(practice.getElementById('zh').getAttribute('href').includes(id) && practice.getElementById('practice-form'),"practice route missing "+id);
+        if(q.choices){
+          practice.querySelector('input[value="'+q.choices.find(x=>x!==q.answer[0])+'"]').checked=true;
+          practice.getElementById('practice-form').requestSubmit();
+          assert(practice.getElementById('practice-feedback').textContent.length>20,"choice hint missing "+id);
+          practice.querySelector('input[value="'+q.answer[0]+'"]').checked=true;
+        }else{
+          practice.querySelectorAll('input').forEach(el=>el.value="1");practice.getElementById('practice-form').requestSubmit();
+          assert(practice.getElementById('practice-feedback').textContent.length>20,"number hint missing "+id);
+          practice.querySelectorAll('input').forEach((el,j)=>el.value=String(q.answer[j]));
+        }
+        practice.getElementById('practice-form').requestSubmit();
+        assert(practice.getElementById('practice-feedback').textContent.includes('Correct after a hint'),"retry missing "+id);
+        practice.getElementById('practice-next').click();assert(practice.querySelector('.practice-progress').textContent.includes('2'),"follow-up missing "+id);
+        if(id==="estimate100a")assert(paper.querySelectorAll('.estimate-counters circle').length===10+q.figure.count,"estimate reference or target dot count wrong");
+      }
+      const f=frames.find(f=>f.contentDocument?.querySelector('.estimate-counters') && f.contentDocument?.documentElement.lang==="zh-HK");
+      const pdf=await f.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await pdf.arrayBuffer());
+      assert(raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"Chinese estimate PDF text or page missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P2 place value · builder, pupil, paper and key",async()=>{
@@ -2086,18 +2141,18 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===33,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===37,"grade coverage counts wrong");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 33 distinct live home links",async()=>{
+  await check("Practice catalogue · 37 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===33 && new Set(links.map(a=>a.href)).size===33,"practice links missing or repeated");
+      assert(links.length===37 && new Set(links.map(a=>a.href)).size===37,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);
