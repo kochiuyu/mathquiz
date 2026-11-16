@@ -195,6 +195,21 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
+  await check("P1 money and subtraction check · bilingual paper/key PDF export",async()=>{
+    const frames=[];
+    try{
+      for(const language of ['en','zh'])for(const view of ['paper','key']){
+        const frame=await shapeFrame('?v=3&lang='+language+'&p=1&items=coinvalue1a-0.priceword1a-0.coincount1a-0.checksub1a-0&view='+view);frames.push(frame);
+        const d=frame.contentDocument;
+        assert(d.querySelectorAll('fieldset').length===4,'mixed P1 paper needs four items');
+        assert(d.querySelectorAll('svg.money-coins,svg.money-price').length===3,'money figures missing');
+        const blob=await frame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
+        assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode'),'P1 PDF missing content/text layer');
+        assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'P1 PDF missing page');
+        assert(raw.includes('/Subtype /Image'),'P1 PDF lacks rendered page image');
+      }
+    }finally{frames.forEach(f=>f.remove())}
+  });
   await check("P6 percentage family succession",()=>{
     const legacy=families.find(f=>f.id==="pct1"),current=families.find(f=>f.id==="pct2");
     assert(legacy.retired && legacy.code==="6N3" && !current.retired && current.code==="6N4","P6 family labels changed");
