@@ -6,21 +6,21 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** On 16 November 2026, 24 units have at least one selectable task, 61 have none, and 0 have been verified complete. The builder offers 50 question families and 818 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** On 16 November 2026, 25 units have at least one selectable task, 60 have none, and 0 have been verified complete. The builder offers 54 question families and 866 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
-| P1 | 12 | 6 | 6 | 0 |
+| P1 | 12 | 7 | 5 | 0 |
 | P2 | 15 | 4 | 11 | 0 |
 | P3 | 14 | 3 | 11 | 0 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **24** | **61** | **0** |
+| **Total** | **85** | **25** | **60** | **0** |
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
-**Latest release · P1 length and distance (1M1):** Four pictured question families compare aligned lengths and straight distances, directly and with equal improvised units (48 variants). The [bilingual printable activity](activities/p1-length-distance-i.html) supplies real-object tasks and an observation rubric; the [unit brief](planning/p1-length-distance-i.md) maps evidence and remaining teacher checks. The [public regression suite](tests/regression.html) passed 165/165 after the [final diagram and cache correction `6db281f`](https://github.com/kochiuyu/mathquiz/commit/6db281fd15cc47376af7b102030841b09fdad70f). Classroom observation is outstanding, so 1M1 is not marked complete.
+**Latest release · P1 length and distance (1M3):** Four pictured question families measure and compare ribbons and straight distances against centimetre rulers, including nonzero starts (48 variants). The [bilingual printable activity](activities/p1-length-distance-ii.html) covers recognising 1 cm on a real ruler, choosing a tool, and estimating with a familiar body measure before checking. The [unit brief](planning/p1-length-distance-ii.md) maps the three objectives and remaining teacher observations. The [public regression suite](tests/regression.html) passed 171/171 after [release `ae8b968`](https://github.com/kochiuyu/mathquiz/commit/ae8b968ca5193ed181530637c8bc492ded95209e). Classroom observation is outstanding, so 1M3 is not marked complete.
 
 [Immediate priorities](#next-three-deliverables) · [Priority rules](#how-to-choose-the-next-release) · [P1–P6 delivery plan](#grade-by-grade-delivery-plan) · [Milestones](#milestones-and-handoff) · [Release procedure](#author-verify-and-hand-off-a-release)
 
@@ -28,7 +28,7 @@ The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, 
 
 1. **Audit P1 addition and subtraction (1N4).** Map its nine released families to all six numbered objectives in the [unit brief](planning/p1-addition-subtraction-i.md). The table below gives the starting evidence. For each row, record what the pupil actually does, which EDB remarks apply and any missing evidence. For example, the subtraction key demonstrates an addition check. See whether any task asks the pupil to recognise a valid check. Build the smallest task needed for an identified gap, then record the closure decision.
 2. **Finish the oral and listening review for numbers to 100 (1N3).** Its eight families already cover written and pictured work. For the spoken objectives, prepare an English and a Traditional Chinese teacher script, pupil instructions and observable marking criteria. Link these beside the digital tasks in the [unit brief](planning/p1-numbers-to-100.md). A pupil reading printed number words demonstrates a different skill from a pupil writing a number heard aloud.
-3. **Continue measurement with centimetres (1M3).** Build ruler-reading tasks that place the object beside a clear scale and include nonzero starting marks. Add a real-object activity for estimating, choosing a suitable tool and measuring to the nearest centimetre. Map pupil evidence against the [1M3 objectives](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=17); carry forward the teacher observation still needed for 1M1.
+3. **Open money (1M2).** Add tasks for recognising Hong Kong coins, reading marked prices up to HK$10 and counting coin groups within that limit. Test only the exchanges in the [1M2 remarks](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16); giving change belongs to a later unit. Prepare a real-coin observation activity alongside the digital questions.
 
 | 1N4 objective | Released evidence to review |
 |---|---|
@@ -145,4 +145,4 @@ Mark a unit complete when every objective has linked evidence and all applicable
 5. Serve the repository with `python -m http.server 8000`. Run the [local regression page](http://localhost:8000/tests/regression.html), including old shared-link fixtures. After deploying changed application files, run the [public regression page](https://kochiuyu.github.io/mathquiz/tests/regression.html) and open the released material.
 6. Update the unit brief, inventory, curriculum map, family ledger and [coverage page](coverage.html) as applicable. Refresh this README's counts and replace the finished next action. Keep detailed change notes in the release commit. Record automated verification separately from manual classroom, translation, physical-printer and screen-reader checks, which remain deferred.
 
-The account-free pilot, teacher workflow, sample papers, technical file guide and earlier release results are preserved in the [previous README](https://github.com/kochiuyu/mathquiz/blob/7ab981853d1977f258202241416a0c76b227f971/README.md). The last recorded application regression was **159/159** locally and on the public site. The [five-minute P1 warm-up](https://kochiuyu.github.io/mathquiz/?v=3&lang=en&p=1&items=count20a-10.next1-5.pictureadd1-21&view=build) is a short starting point for trying the existing workflow.
+The account-free pilot, teacher workflow, sample papers, technical file guide and earlier release results are preserved in the [previous README](https://github.com/kochiuyu/mathquiz/blob/7ab981853d1977f258202241416a0c76b227f971/README.md). That earlier release recorded **159/159** regression checks; the current result is above. The [five-minute P1 warm-up](https://kochiuyu.github.io/mathquiz/?v=3&lang=en&p=1&items=count20a-10.next1-5.pictureadd1-21&view=build) is a short starting point for trying the existing workflow.
