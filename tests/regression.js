@@ -5,6 +5,14 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["metrestocm2a",2,12,"3f4b0cbca2b50a14b4f3cc503353969162942e4f1d7029a51531f9abdb294923"],
+    ["timefinish2a",2,12,"91fbc36008d373b24a9a9c28d20e5a6aa5a782a35f72252f09e53f8790958018"],
+    ["timeelapsed2a",2,12,"f5eb4dcbece07f5363bc571539ba2af497eb8ca8e87e7aab85c48e84852b6585"],
+    ["solidbasename2a",2,16,"77a14375dc87202620db634eb0adb7c96d606ef268d1203563d19905c8342710"],
+    ["anglekind2a",2,12,"e06d2f628684a87093c754cf215d0d63d13ecf32d4b76a54ec1f9aec70c6ede0"],
+    ["anglecompare2a",2,12,"20b84ec2cd7fc247df31866748a7ce2acf8c94fdc99ceec33a16b14801cfb673"],
+    ["directionmap2a",2,12,"08e0f29f7b8f32f44ef2972b9d229c9d594e78748582a2fae97f7e73c54c7736"],
+    ["quadproperties2a",2,24,"c87ce1ac5698c7492912e05869059580b8092e15ef0652944d90a9e3dd8c2fd2"],
     ["thousandvalue2a", 2, 12, "cdfb57969322ea5122a4629be0b2b5a6d4681a79cb6b66396714c7dc78c383a3"],
     ["cross1000seq2a", 2, 12, "ba858a295635243b7f81692e518e0d8e2f63d4ed8f3d77104a24cb539e417c97"],
     ["parity4digit2a", 2, 12, "4a641f342ff2f1c0243a0dcf24930e8e0824c7ce2b22fcaeeeea175c104c6cd0"],
@@ -157,9 +165,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===1529,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===1641,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 1529 variants",()=>{
+  await check("Released bilingual and response contracts · 1641 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -359,14 +367,15 @@
         if(q.answerUnitLabels || (q.number2N1 && q.fields))(q.answerUnitLabels||q.fields).forEach((label,j)=>assert(kd.querySelector('fieldset p b').textContent.includes(label[l]+': '+q.answer[j]),'P2 labelled key '+id));
         else if(q.choiceLabels)assert(kd.querySelector('fieldset p b').textContent===q.choiceLabels[q.answer[0]][l],'P2 localized choice key');
         const practice=await shapeFrame('?lang='+language+'&p=2&view=practice&skill='+id);frames.push(practice);const pr=practice.contentDocument;
-        const samples={divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
+        const samples={metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
         const variants=samples[id]||(id==='multfact2a'?[0,51,120]:id==='multstory2a'?[0,12,29]:[0,6,11]);
         for(const variant of variants){
           const item=f.make(variant),inputs=[...pr.querySelectorAll('#practice-form input')];
+          if(item.figure && ['baseOutline2','angleOpening2','anglePair2','directionMap2','quadrilateralProperties2'].includes(item.figure.kind)){assert(pr.querySelectorAll('.p2-geometry svg').length===(item.figure.kind==='anglePair2'?2:1),'practice figure missing');for(const svg of pr.querySelectorAll('.p2-geometry svg'))assert(svg.getBoundingClientRect().width>20,'practice figure collapsed');}
           pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-next').hidden,'blank practice advanced');
           if(item.choices){assert(inputs.length===item.choices.length,'choice count');inputs.find(x=>x.value!==item.answer[0]).checked=true;}
           else inputs.forEach((input,j)=>input.value=String(item.answer[j]+1));
-          pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent.includes((item.practiceHint||(item.division2N6?item.division2N6.hint:item.number2N1.hint))[l]),'P2 targeted hint');
+          pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent.includes((item.practiceHint||(item.division2N6||item.number2N1||item.length2M1||item.time2M2||item.solid2S1||item.angle2S2||item.direction2S3||item.quadrilateral2S4).hint)[l]),'P2 targeted hint');
           if(item.choices)inputs.find(x=>x.value===item.answer[0]).checked=true;else inputs.forEach((input,j)=>input.value=item.answer[j]+'.0');
           pr.querySelector('form').requestSubmit();assert(!pr.getElementById('practice-next').hidden && pr.getElementById('practice-feedback').textContent.includes(item.why[l]),'P2 retry feedback');
           const completedFeedback=pr.getElementById('practice-feedback').textContent;pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent===completedFeedback,'repeated submission changed completed feedback');pr.getElementById('practice-next').click();
@@ -437,6 +446,21 @@
       assert(d.querySelectorAll('fieldset').length===batch.length,'mixed paper count');if(view==='paper')assert(!d.querySelector('input'),'paper live input');
       if(view==='key')batch.forEach((id,i)=>{const q=families.find(f=>f.id===id).make(id==='divfact2a'?109:0);if(q.answerUnitLabels){const text=d.querySelectorAll('fieldset')[i].querySelector('p b').textContent;q.answerUnitLabels.forEach((label,j)=>assert(text.includes(label[l]+': '+q.answer[j]),'money/quotient key units'));}});
       const blob=await frame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && raw.includes('/Subtype /Image'),'mixed PDF payload');assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'PDF pages');
+    }}finally{frames.forEach(f=>f.remove())}
+  });
+
+  const laterP2Ids=['metrestocm2a','timefinish2a','timeelapsed2a','solidbasename2a','anglekind2a','anglecompare2a','directionmap2a','quadproperties2a'];
+  for(const id of laterP2Ids)await check('P2 later measurement/geometry · bilingual routes '+id,()=>checkP2NewRoutes([id]));
+  await check('P2 finishing time · either field earns one mark',async()=>{
+    const frames=[];try{for(const language of ['en','zh'])for(const correctField of [0,1]){const frame=await shapeFrame('?v=3&lang='+language+'&p=2&items=timefinish2a-1');frames.push(frame);const d=frame.contentDocument,q=families.find(f=>f.id==='timefinish2a').make(1);q.answer.forEach((a,j)=>d.querySelector('[name="q0f'+j+'"]').value=String(j===correctField?a:a+1));d.querySelector('form').requestSubmit();assert(d.getElementById('status').textContent.includes('1 / 2'),'time partial fields');}}finally{frames.forEach(f=>f.remove())}
+  });
+  await check('P2 later units · bilingual paper/key geometry PDF',async()=>{
+    const frames=[],ids=laterP2Ids.map(id=>id+'-0');try{for(const language of ['en','zh'])for(const view of ['paper','key']){const f=await shapeFrame('?v=3&lang='+language+'&p=2&items='+ids.join('.')+'&view='+view);frames.push(f);const d=f.contentDocument,l=language==='zh'?1:0;
+      assert(d.querySelectorAll('fieldset').length===8,'later paper count');assert(d.querySelectorAll('.p2-geometry svg').length===6,'later geometry SVG count');
+      if(view==='paper')assert(!d.querySelector('input'),'later paper input');
+      if(view==='key'){const q=families.find(f=>f.id==='timefinish2a').make(0),text=d.querySelectorAll('fieldset')[1].querySelector('p b').textContent;q.answerUnitLabels.forEach((label,j)=>assert(text.includes(label[l]+': '+q.answer[j]),'hour/minute key labels'));}
+      f.style.width='360px';await new Promise(r=>setTimeout(r,80));assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'later paper/key phone');
+      const blob=await f.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode'),'later PDF');assert(raw.includes('/Subtype /Image'),'rasterized PDF pages missing');
     }}finally{frames.forEach(f=>f.remove())}
   });
 
@@ -2724,7 +2748,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===88,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===96,"grade coverage counts wrong");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
@@ -2766,7 +2790,7 @@
   await check("P1 teacher activity routes, keys and phone layout",async()=>{
     const frames=[];
     try{
-      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication','p2-4digit-numbers','p2-money','p2-addition-subtraction-iii','p2-basic-division'])for(const language of ['en','zh']){
+      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication','p2-4digit-numbers','p2-money','p2-addition-subtraction-iii','p2-basic-division','p2-length-distance-iii','p2-time-ii','p2-3d-shapes-ii','p2-angles','p2-directions-ii','p2-quadrilaterals-i','p2-pictograms','p2-inquiry'])for(const language of ['en','zh']){
         const frame=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(frame);
         const d=frame.contentDocument,w=frame.contentWindow,section=d.getElementById(language);
         assert(section && !section.hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language');
@@ -2789,11 +2813,11 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 88 distinct live home links",async()=>{
+  await check("Practice catalogue · 96 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===88 && new Set(links.map(a=>a.href)).size===88,"practice links missing or repeated");
+      assert(links.length===96 && new Set(links.map(a=>a.href)).size===96,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

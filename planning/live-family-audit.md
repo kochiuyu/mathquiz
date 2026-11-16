@@ -2,7 +2,7 @@
 
 Code and documentation check: **16 November 2026**. This is a release ledger for the generated families. The [curriculum map](primary-mathematics.md) and linked family briefs carry the EDB objective, prerequisites, exclusions and source-check date for each skill. Those are project mappings, not EDB endorsement or evidence of pupil mastery. The misconception column records a **design hypothesis**, not an observed error.
 
-Release-6 candidate counts: **89 permanent family IDs and 1,529 versioned variants**; **88 families and 1,514 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 88 practice routes. Fifteen units remain verified resource complete; new 2N4/2M3/2N5/2N6 await deployed QA. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
+Later-P2 candidate counts: **97 permanent family IDs and 1,641 versioned variants**; **96 families and 1,626 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 96 practice routes. Nineteen units are verified resource complete (all P1,2N1–2N6,2M3); the eight later P2 additions await deployed QA. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a`, `timefinish2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
 
 | Family | Objective record and status | Purpose and released variation | Answer rule; worked step | Error hypothesis to probe |
 |---|---|---|---|---|
@@ -129,3 +129,22 @@ Sixteen families / 302 variants added; all prior 1,227 payloads preserved. There
 | `divremain2a` (12) | [2N6](p2-basic-division.md), candidate | Find quotient and remainder | Two labelled fields/marks; remainder<divisor | Leave another whole group in remainder |
 | `divgroup2a` (12) | [2N6](p2-basic-division.md), candidate | Find full packs and unpacked pencils | Two contextual fields/marks; interpretation offline | Confuse group size and group count |
 | `divcheck2a` (12) | [2N6](p2-basic-division.md), candidate | Use multiplication to check full groups | Exact localized choice; all option factors0–10 | Multiply by wrong quotient |
+
+## Later-P2 candidate additions
+
+Eight new families / 112 variants; all prior 1,529 payloads unchanged. Candidate totals97/1,641 permanent and96/1,626 selectable. Fifteen verified units remain unchanged. Both static gates are required; 298 browser checks are authored, not passed. New timefinish2a has two independently scored hour/minute fields and labelled keys; other additions have one mark. Diagrams are supplementary to real tools and making; 2D1/2F1 activities add no new family.
+
+| Family | Source map | Assessed action / limit |
+|---|---|---|
+| `metrestocm2a` | [2M1](p2-length-distance-iii.md), candidate | Mixed metres/cm to cm; not real measurement |
+| `timefinish2a` | [2M2](p2-time-ii.md), candidate | Finishing hour/minute; same afternoon, ≤60 minutes |
+| `timeelapsed2a` | [2M2](p2-time-ii.md), candidate | Elapsed minutes; not real timing/calendar observation |
+| `solidbasename2a` | [2S1](p2-3d-shapes-ii.md), candidate | Base-outline naming, not full-solid face identification |
+| `anglekind2a` | [2S2](p2-angles.md), candidate | Classify openings, no degrees shown |
+| `anglecompare2a` | [2S2](p2-angles.md), candidate | Compare openings despite lengths/rotations |
+| `directionmap2a` | [2S3](p2-directions-ii.md), candidate | Rotated north/reference maps, not compass use |
+| `quadproperties2a` | [2S4](p2-quadrilaterals-i.md), candidate | Explicit property criteria, no exclusive taxonomy |
+
+## Verified release-6 resource checkpoint
+
+Live a288a7c passed280/280 for1,529 variants; Pages43917886662 succeeded. 2N4/2M3/2N5/2N6 are resource complete with all14 numbered objectives mapped. Historical candidate wording above is superseded only for these four units. The later eight-unit candidate remains unverified; its298 checks are authored only. Unit briefs retain practical, manual PDF/print, translation and accessibility limitations.

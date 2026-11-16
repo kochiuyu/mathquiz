@@ -36,3 +36,29 @@ Use a chart of favourite fruit in a class. The category labels are Apple, Banana
 **Scope limit:** Reading one category's count from a supplied chart does not test constructing a pictogram, collecting data, comparing categories, or mastery of all three 2D1 objectives. Those are separate future item designs.
 
 [Release commit](https://github.com/kochiuyu/mathquiz/commit/b342a7a7a9423b09f258db776742ba5e9f492afa).
+
+## Full-unit source audit and local supplementary activity · 16 November 2026
+
+The released-family evidence above remains historical evidence for `pict2a`, not a claim that all 2D1 objectives were complete. The new supplement is **local-only, pending independent review and browser/print QA**. No global registration or publication is authorised by this addition.
+
+Rechecked official supplement PDF **40–41**, printed 37–38, and KS1 explanatory notes PDF **47**, printed 41. Three objectives: (1) recognise pictograms, (2) interpret pictograms, (3) construct pictograms. Both horizontal and vertical forms and **one-to-one representation only** are required. Concrete examples should establish why organising and representing data helps; familiar contexts, few categories and small datasets are recommended. A survey or personal-data collection is not independently mandated. Sorting/counting the supplied card collection supplies actual source-data actions without inventing such a requirement.
+
+[English activity](../activities/p2-pictograms.html?lang=en) · [Chinese activity](../activities/p2-pictograms.html?lang=zh) · [English teacher key](../activities/p2-pictograms.html?lang=en&key=1) · [Chinese teacher key](../activities/p2-pictograms.html?lang=zh&key=1)
+
+| Requirement | Existing evidence and supplementary pupil action |
+|---|---|
+| 1 · recognise; organisation and representation | Existing charts expose titles/keys/categories but do not demand explanation. Task 1 compares an unorganised 12-card collection with sorted categories; Task 3 explicitly identifies title, categories and key. |
+| 2 · interpret | Existing `pict2a` has 12 fixed single-category count items (six per orientation), with zeros and counts up to six. Tasks 3/5 add most/fewest, difference by matching, reading the same data in both forms, and explaining orientation invariance. |
+| 3 · construct | Tasks 2/4 require the pupil to draw horizontal AND vertical pictograms from sorted cards, label/title each and check every card against one symbol. No correct digital response substitutes for drawing. |
+| Both orientations | Horizontal left-to-right rows and vertical bottom-up columns on a common baseline, each with six available symbol cells per category. |
+| One-to-one and small familiar data | Five pencil, three book and four ball cards. One complete circle represents one card; printed empty cells are construction guides, not symbols. No half-symbols/scaled keys. |
+| Representation assumptions | Title identifies model card collection, not a fictitious class survey. Same data reused across orientations, not double-counted observations. Task 5 keeps an empty category label and questions symbols that violate the key. |
+
+The original source cards deliberately display object names rather than a finished pictogram. Adult cutting or word-reading assistance is recorded; objects can substitute only with matching titles/key. Teacher rubric distinguishes data organisation, recognition, reading, both constructions and checking/explanation. It records independent/prompted/not-yet/not-observed rather than auto-awarding mastery.
+
+No additional digital family is proposed at this stage: single-category reading is already permanent `pict2a`, while the genuine missing actions are construction, sorting and explanation. The supplement adds these without duplicating released IDs. Finite verification confirms raw card counts 5/3/4, total 12, comparison difference 2 and grid capacities; independent source review, native translation, rendered mobile/print and classroom trials remain pending. Existing released-family QA above does not cover this new activity.
+
+
+## Later-P2 integrated candidate checkpoint
+
+The linked full-unit activity is registered locally and independently source/mathematics reviewed. Existing pict2a payloads are unchanged. Live bilingual activity, responsive layout and key-toggle QA remain pending in the 298-check candidate suite. No unit closure yet; classroom, independent translation, physical print, screen-reader, print-preview pagination and manual downloaded-PDF visual checks remain unperformed.

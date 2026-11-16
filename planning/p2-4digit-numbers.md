@@ -1,6 +1,6 @@
 # P2 · 2N4 Four-digit numbers
 
-**Status:** integrated release candidate, independently reviewed for source scope and finite mathematics. Publication and live browser verification pending; no completed-unit or pupil-mastery claim.
+**Status:** resource complete, verified 16 November 2026. All 4 numbered objectives and applicable remarks have linked assessment resources. This is not a pupil-mastery claim.
 
 ## Official scope and numbering
 
@@ -70,3 +70,13 @@ The proposal sections above retain the original design and review history. This 
 The full repository static gate (`node tests/static.cjs`) passes all 89 permanent families and 1,529 variants, including stable-link round trips and frozen-payload checks. The browser suite contains 280 authored checks; those new checks have **not yet been run live**. Independent source and finite-mathematics review is complete, not independent translation certification.
 
 Exact deployment, browser marking/practice/layout/PDF checks remain pending. Classroom observation, independent translation, physical printing, teacher print-preview pagination/key isolation, screen-reader use and manual downloaded-PDF visual inspection remain unverified. Resource completeness will be recorded only after the agreed live gates; it does not certify pupil mastery or completion of practical activities.
+
+## Verified resource-complete checkpoint
+
+**2N4 · 4-digit numbers: resource complete.** Five families / 60 variants: thousands values, boundary counting, parity, comparisons and grouped counting; teacher-mediated reading, dictation and concrete place-value work.
+
+**Verified live release:** `a288a7c95064baa86f6b617a7989abd20e09bed6`; Pages run `43917886662` succeeded. The independent live suite passed **280/280**, covering all 1,529 permanent variants, stable high-index links, bilingual marking/partial credit, practice hints/retries/completion, paper/key/PDF exports, teacher-key routes and phone layouts. Source and finite mathematics reviews passed.
+
+Manual live checks confirmed the Chinese change key ($6.20), division key (7÷3 gives quotient 2 and remainder 1), and English zero-dividend practice (0÷1=0). No broader manual visual coverage is implied.
+
+**Remaining objective gap:** none identified. Teacher print-preview pagination/key isolation, manual downloaded-PDF visual inspection, classroom trials, independent translation certification, physical printing and screen-reader use remain unperformed. Practical/oral evidence still requires actual pupil participation. Earlier candidate sections above are retained as review history; this checkpoint supersedes their pending-live status.

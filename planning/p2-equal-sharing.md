@@ -2,10 +2,14 @@
 
 Status: **live since 15 November 2026** as `share2a`. The twelve permanent variants, two-field marking rule, paper, key and practice follow this brief. The local and public browser regression suites passed 77/77. Manual pupil and hands-on screen-reader checks remain deferred at the user's request.
 
+## Full-unit continuation
+
+The historical `share2a` family and scoring remain unchanged. The full 2N6 source audit, additional exact/grouping/check families, and bilingual practical assessment are recorded in [Basic division](p2-basic-division.md). Refer there for current release evidence; this earlier family alone never established full-unit coverage.
+
 ## Curriculum match
 
-- **Year and unit:** Primary 2, 2N6 “Basic division”. The [2017 EDB primary supplement, 2N6 objectives 1–2 and 4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) covers the concept and performance of basic division and solving problems. A pictured equal-sharing task directly probes the concept and calculation; its short story touches problem solving. A correct response to one story does not establish mastery of objective 4. Objective 3, the multiplication–division relationship, can appear in the worked key but is not independently assessed.
-- The [2018 Key Stage 1 explanatory notes, 2N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) distinguish sharing from grouping and require examples **with and without remainders**. They recommend concrete distribution situations, diagrams and symbols, within the 0–10 multiplication table. The [2017 supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=30) explicitly includes remainders. This first family must include both outcomes and keep each remainder smaller than the number of recipients.
+- **Year and unit:** Primary 2, 2N6 “Basic division”. The [2017 EDB primary supplement, 2N6 objectives 1–2 and 4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=31) covers the concept and performance of basic division and solving problems. A pictured equal-sharing task directly probes the concept and calculation; its short story touches problem solving. A correct response to one story does not establish mastery of objective 4. Objective 3, the multiplication–division relationship, can appear in the worked key but is not independently assessed.
+- The [2018 Key Stage 1 explanatory notes, 2N6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=33) distinguish sharing from grouping and require examples **with and without remainders**. They recommend concrete distribution situations, diagrams and symbols, within the 0–10 multiplication table. The [2017 supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=31) explicitly includes remainders. This first family must include both outcomes and keep each remainder smaller than the number of recipients.
 - **Prerequisites:** P1 counting and P2 equal-groups multiplication (2N3) for checking (divisor × quotient + remainder = dividend). This is a project interpretation of EDB sources, not EDB approval or evidence of pupil mastery.
 
 ## Released item
