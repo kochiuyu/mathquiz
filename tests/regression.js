@@ -132,6 +132,11 @@
     assert(quizzes[6][0].code==="6N3" && corrected[0].code==="6N4","old or new P6 label changed");
     assert(stable(corrected.map((q,i)=>i===0?{...q,code:"6N3"}:q))===stable(quizzes[6]),"v4 changed more than the label");
   });
+  await check("Variant links · three-digit indices and canonical boundaries",()=>{
+    for(const i of [0,99,100,120])assert(decodeItems('multfact2a-'+i,2).length===1,'valid high index rejected '+i);
+    for(const suffix of ['121','0100','-1','1e2','100.0','Infinity','9007199254740993'])assert(decodeItems('multfact2a-'+suffix,2).length===0,'invalid index accepted '+suffix);
+    assert(decodeItems('multfact2a-120',1).length===0,'wrong grade accepted');
+  });
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");

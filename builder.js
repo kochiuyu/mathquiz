@@ -444,7 +444,7 @@ function decodeItems(raw,year){
   for(const id of ids){
     const [name,index,...extra]=id.split("-");
     const f=families.find(f=>f.id===name && f.grade===year);
-    if(!f || extra.length || !/^(0|[1-9]\d?)$/.test(index) || +index>=f.count)return [];
+    if(!f || extra.length || !/^(0|[1-9]\d*)$/.test(index) || +index>=f.count)return [];
     result.push({...f.make(+index),code:f.code,id,f});
   }
   return result;
