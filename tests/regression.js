@@ -2487,13 +2487,13 @@
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
       const activity=await shapeFrame("activities/p1-length-distance-i.html?lang=en");frames.push(activity);
-      assert(!activity.contentDocument.getElementById('en').hidden && activity.contentDocument.getElementById('zh').hidden && activity.contentDocument.body.textContent.includes('Teacher observation'),"English practical activity missing");
+      assert(!activity.contentDocument.getElementById('en').hidden && activity.contentDocument.getElementById('zh').hidden && activity.contentDocument.querySelector('#en .key'),"English practical activity missing");
       const activityZh=await shapeFrame("activities/p1-length-distance-i.html?lang=zh");frames.push(activityZh);
-      assert(activityZh.contentDocument.documentElement.lang==='zh-HK' && activityZh.contentDocument.getElementById('en').hidden && !activityZh.contentDocument.getElementById('zh').hidden && activityZh.contentDocument.body.textContent.includes('教師觀察'),"Chinese practical activity missing");
+      assert(activityZh.contentDocument.documentElement.lang==='zh-HK' && activityZh.contentDocument.getElementById('en').hidden && !activityZh.contentDocument.getElementById('zh').hidden && activityZh.contentDocument.querySelector('#zh .key'),"Chinese practical activity missing");
       const cmActivity=await shapeFrame("activities/p1-length-distance-ii.html?lang=en");frames.push(cmActivity);
-      assert(!cmActivity.contentDocument.getElementById('en').hidden && cmActivity.contentDocument.getElementById('zh').hidden && cmActivity.contentDocument.body.textContent.includes('Estimate before measuring'),"English centimetre activity missing");
+      assert(!cmActivity.contentDocument.getElementById('en').hidden && cmActivity.contentDocument.getElementById('zh').hidden && cmActivity.contentDocument.querySelector('#en .key'),"English centimetre activity missing");
       const cmActivityZh=await shapeFrame("activities/p1-length-distance-ii.html?lang=zh");frames.push(cmActivityZh);
-      assert(cmActivityZh.contentDocument.documentElement.lang==='zh-HK' && cmActivityZh.contentDocument.getElementById('en').hidden && !cmActivityZh.contentDocument.getElementById('zh').hidden && cmActivityZh.contentDocument.body.textContent.includes('教師觀察'),"Chinese centimetre activity missing");
+      assert(cmActivityZh.contentDocument.documentElement.lang==='zh-HK' && cmActivityZh.contentDocument.getElementById('en').hidden && !cmActivityZh.contentDocument.getElementById('zh').hidden && cmActivityZh.contentDocument.querySelector('#zh .key'),"Chinese centimetre activity missing");
     }finally{frames.forEach(frame=>frame.remove());}
   });
   await check("P1 subtraction-check routes and bilingual teacher activities",async()=>{
@@ -2516,6 +2516,32 @@
         }
       }
     }finally{frames.forEach(frame=>frame.remove());}
+  });
+  await check("P1 early-number and time activity routes, keys and phone layout",async()=>{
+    const frames=[];
+    try{
+      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii'])for(const language of ['en','zh']){
+        const frame=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(frame);
+        const d=frame.contentDocument,w=frame.contentWindow,section=d.getElementById(language);
+        assert(section && !section.hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language');
+        const keys=[...d.querySelectorAll('.key')],button=d.getElementById('key-toggle');
+        assert(keys.length===2 && keys.every(k=>k.hidden),'teacher key leaks by default');
+        button.click();assert(keys.every(k=>!k.hidden) && button.getAttribute('aria-expanded')==='true','key reveal');
+        button.click();assert(keys.every(k=>k.hidden) && button.getAttribute('aria-expanded')==='false','key re-hide');
+        frame.style.width='360px';await new Promise(r=>setTimeout(r,80));
+        assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,file+' phone overflow');
+        button.click();await new Promise(r=>setTimeout(r,80));
+        assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,file+' phone key overflow');
+        button.click();
+        if(file==='p1-time'){
+          assert(section.querySelectorAll('.clock svg').length===4,'four clocks missing');
+          assert(section.querySelectorAll('.calendar tbody td').length>=30,'calendar missing');
+          assert(w.getComputedStyle(section.querySelector('.clocks')).display==='grid','phone clocks not two-column');
+        }
+        const keyed=await shapeFrame('activities/'+file+'.html?lang='+language+'&key=1');frames.push(keyed);
+        assert([...keyed.contentDocument.querySelectorAll('.key')].every(k=>!k.hidden),'direct key route');
+      }
+    }finally{frames.forEach(f=>f.remove())}
   });
   await check("Practice catalogue · 58 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");

@@ -12,4 +12,16 @@
 
 The four families are selectable in the bilingual builder. Their pupils' quizzes, A4 paper, worked keys and three-question practice use the same permanent item IDs; practice provides a targeted hint, retry and first-try count. The diagrams keep the scale beside each ribbon or straight segment, so a resized page does not change the mathematical answer. Ruler marks are one diagram unit apart; labels, rather than screen or print millimetres, establish the centimetre values.
 
-**Still open:** teacher observation of actual ruler placement, tool choice and ever-ready estimation; classroom, translation, physical printer and screen-reader review. The unit remains **task live; objective audit needed**, not verified complete.
+## Independent audit and strengthened teacher evidence
+
+Rechecked both official sources on 16 November 2026. Digital families provide suitable scale-reading/comparison samples and remain unchanged. The revised [activity](../activities/p1-length-distance-ii.html) supplies separate pupil tasks and a hidden teacher preparation/answer rubric. **All revised evidence is pending independent review, browser/print QA and live verification.**
+
+| Objective / explanatory-note detail | Revised pupil action | Teacher evidence |
+| --- | --- | --- |
+| 1. Recognise centimetre, including why standard units help | A: measure the same strip using two sizes of repeated tile, then two centimetre rulers; explain differing counts and common-unit agreement; show 0–1 interval and name cm | A 12 cm strip uses six 2 cm tiles or four 3 cm tiles, but remains 12 cm on both rulers. Teacher records explanation separately from interval recognition. |
+| 2. Measure/compare lengths and distances; choose tools | B: select a suitable real cm ruler/tape, align zero (not ruler edge), keep straight, read endpoints and compare both pairs | Suggested strips 8/14 cm and straight distances 20/40 cm. Process rubric records tool, placement and reading as well as both comparisons. Different suitable tools accepted. |
+| 3. Estimate with an ever-ready ruler after measurement experience | C after B: calibrate own thumb width/hand span, use it to estimate an object and a straight distance before measuring, then check/revise | Suggested targets 18/30 cm remain hidden until estimation recorded. Record actual body reference, method, consistent pose, end-to-end repeats and prior estimate separately from checked measurement. |
+
+The earlier activity did not elicit the need for a standard unit, and its body-reference instructions did not explicitly assess precautions. A/C now supply these actions. Body references are personal and approximate, not a universal thumb size. If needed, the teacher supplies an approximate whole-centimetre reference; this is an estimation convention, not an added rounding objective. B uses whole-centimetre teacher-prepared endpoints, replacing the previous blanket nearest-whole-centimetre instruction. No prescribed error percentage, multiplication or millimetre calculation is required.
+
+This remains a prepared assessment, not a claim of observed physical mastery. Independent/supported/not-yet/unassessed records replace answer-only inference. Browser responsiveness, language switching, hidden-key controls, pupil/key print layouts, keyboard operation and exact-release live checks are pending for this revision. Classroom, independent translation, physical-printer and screen-reader checks remain separate pending validations. No unit-completion claim is made.
