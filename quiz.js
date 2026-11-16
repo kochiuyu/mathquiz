@@ -160,7 +160,7 @@ function controls(q,i,paper) {
   if(q.measuringCup)return '<label class="field measuring-response"><span class="sr-only">'+t("Amount of water in millilitres","水量（毫升）")+'</span>'+(paper?'<span class="blank"></span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Amount of water in millilitres","水量（毫升）")+'" name="q'+i+'f0">')+' mL</label>';
   if(q.barChart)return '<label class="field bar-response"><span class="sr-only">'+t("Number of pupils","學生人數")+'</span>'+(paper?'<span class="blank"></span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Number of pupils","學生人數")+'" name="q'+i+'f0">')+' '+t("pupils","名學生")+'</label>';
   if(q.inlineAnswer)return "";
-  return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1 || q.placeValue || q.pictogram?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':q.placeValue && !paper?'<small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small>':q.pictogram && !paper?'<small class="response-help">'+t("Count one pupil for each picture.","每個圖案代表一名學生。")+'</small>':"");
+  return q.fields.map((f,j)=>'<label class="field">'+(paper?'<span class="blank"></span>':'<input type="text" '+(strictP1 || q.placeValue || q.pictogram || q.speedTime?'inputmode="numeric" ':'')+'autocomplete="off" aria-label="'+local(q.prompt)+' ('+local(f)+')" name="q'+i+'f'+j+'">')+' '+local(f)+'</label>').join("")+(strictP1 && !paper?'<small class="response-help">'+t("Enter a whole number using digits only.","請只用數字輸入整數。")+'</small>':q.placeValue && !paper?'<small class="response-help">'+t("Write a three-digit numeral.","請寫出三位數字。")+'</small>':q.pictogram && !paper?'<small class="response-help">'+t("Count one pupil for each picture.","每個圖案代表一名學生。")+'</small>':q.speedTime && !paper?'<small class="response-help">'+t("Enter the speed as a whole-number numeral; km/h is already shown.","只輸入速率的整數數字；公里／小時已顯示在旁邊。")+'</small>':"");
 }
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
@@ -192,7 +192,7 @@ function mark(form) {
     if(q.fractionAddition)return Number(fractionAdditionAnswer(values,q.fractionAddition));
     if(q.purchaseEquation)return Number(purchaseEquationAnswer(values[0],q.purchaseEquation));
     if(q.simpleEquation)return Number(simpleEquationAnswer(values[0],q.answer[0]));
-    if(q.triangleArea || q.cuboidVolume || q.missingSide || q.factorPair)return Number(measureAnswer(values[0],q.answer[0]));
+    if(q.triangleArea || q.cuboidVolume || q.missingSide || q.factorPair || q.speedTime)return Number(measureAnswer(values[0],q.answer[0]));
     if(q.measuringCup)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.barChart)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
@@ -525,6 +525,35 @@ function renderPlaceValuePractice(){
       if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}
       app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
     };
+  }
+  show();
+}
+function renderSpeedPractice(){
+  const family=families.find(f=>f.id==="speed6a"),variants=[0,2,8];
+  const practiceUrl=language=>"?lang="+language+"&p=6&view=practice&skill=speed6a";
+  let position=0,attempts=0,firstTry=0;
+  document.title=t("Speed · Practice | MathQuiz","速率 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]),s=q.speedTime;
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise speed with minutes","練習先換算分鐘再求速率")+'</h1><p>'+t("Convert minutes to hours, then divide distance by time. Try three questions.","先把分鐘換算為小時，再用距離除以時間，試做三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend><label class="field"><input id="practice-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Speed in kilometres per hour","速率（公里／小時）")+'"> '+local(q.fields[0])+'</label></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById("practice-form"),input=document.getElementById("practice-answer"),feedback=document.getElementById("practice-feedback");
+    form.onsubmit=e=>{
+      e.preventDefault();const value=input.value.trim();
+      if(!value){feedback.textContent=t("Enter the speed.","請輸入速率。");input.focus();return;}
+      attempts++;const correct=measureAnswer(value,s.speed);if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The speed is ","速率是 ")+s.speed+" "+local(q.fields[0])+". ")+local(q.why);
+        input.disabled=true;form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        feedback.textContent=numericAnswer(value,s.distance/s.minutes)?t("That divides by minutes. Divide "+s.minutes+" by 60 to get hours, then divide "+s.distance+" km by that time.","這是用分鐘作除數。先把"+s.minutes+"分鐘除以60換算為小時，再用"+s.distance+"公里除以所得時間。")
+          :numericAnswer(value,s.distance)?t("That is the distance. Convert the time to hours and divide distance by time.","這是距離。先把時間換算為小時，再用距離除以時間。")
+          :!(/^(?:0|[1-9][0-9]*)$/.test(value.normalize("NFKC")))?t("Enter a whole-number numeral only; km/h is already beside the box.","只輸入整數數字；公里／小時已顯示在答案格旁邊。")
+          :t("Convert "+s.minutes+" minutes to hours first: divide by 60. Then divide the distance by the hours.","先把"+s.minutes+"分鐘除以60換算為小時，再用距離除以所得的小時數。");input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{position++;attempts=0;if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';};
   }
   show();
 }
@@ -1003,6 +1032,7 @@ const practiceCatalogue=[
   {grade:4,skill:"factor1",label:["Practise factors","練習因數"],render:renderFactorPractice},
   {grade:4,skill:"factorpair4a",label:["Practise factor pairs","練習因數配對"],render:renderFactorPairPractice},
   {grade:6,skill:"pct2",label:["Practise percentages","練習百分比"],render:renderPercentagePractice},
+  {grade:6,skill:"speed6a",label:["Practise speed with minutes","練習先換算分鐘再求速率"],render:renderSpeedPractice},
   {grade:6,skill:"mean1",label:["Practise averages","練習平均數"],render:renderMeanPractice},
   {grade:2,skill:"place3a",label:["Practise place value","練習位值"],render:renderPlaceValuePractice},
   {grade:2,skill:"groups2a",label:["Practise equal groups","練習等量分組"],render:renderEqualGroupsPractice},

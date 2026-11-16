@@ -180,6 +180,12 @@ const families = [
   }},
   {id:"pct1",grade:6,code:"6N3",label:["Finding a percentage","求百分比"],count:15,retired:true,make(i){return percentageQuestion(i)}},
   {id:"pct2",grade:6,code:"6N4",label:["Finding a percentage","求百分比"],count:15,make(i){return percentageQuestion(i)}},
+  {id:"speed6a",grade:6,code:"6M4",label:["Speed after converting minutes","先換算分鐘再求速率"],count:12,make(i){
+    const cases=[[30,24],[45,36],[90,90],[120,140],[150,150],[180,210],[15,12],[75,75],[105,126],[135,162],[90,72],[180,144]];
+    const [minutes,distance]=cases[i],hours=minutes/60,speed=distance/hours;
+    return {prompt:[`A vehicle travels ${distance} km in ${minutes} minutes at a constant speed. What is its speed in km/h? Convert the time to hours first.`,`一輛車以固定速率在${minutes}分鐘行駛${distance}公里。它的速率是多少公里／小時？先把時間換算為小時。`],fields:[["km/h","公里／小時"]],answer:[speed],marks:1,
+      why:[`${minutes} ÷ 60 = ${hours} hours. Speed = distance ÷ time = ${distance} ÷ ${hours} = ${speed} km/h.`,`先把分鐘換算為小時：${minutes} ÷ 60 = ${hours}小時。速率 = 距離 ÷ 時間 = ${distance} ÷ ${hours} = ${speed}公里／小時。`],speedTime:{minutes,distance,hours,speed}};
+  }},
   {id:"mean1",grade:6,code:"6D1",label:["Arithmetic mean","算術平均數"],count:16,make(i){
     const a=10+i,b=a+7,c=a+2;
     return numeric([`A library lent ${a}, ${b} and ${c} books on three successive days. How many books did it lend per day on average?`,`圖書館連續三天分別借出${a}、${b}和${c}本書。平均每天借出多少本書？`],["books","本"],a+3,`(${a} + ${b} + ${c}) ÷ 3 = ${a+3}`);
