@@ -98,6 +98,12 @@ const families = [
     const [a,b,c]=triples[i],first=a+b,last=b+c,total=a+b+c;
     return {prompt:[`Use ${a} + ${b} + ${c}. Add the first two numbers, then the last two numbers. Write both subtotals and the total you get either way.`,`利用${a} + ${b} + ${c}。分別把前兩個數和後兩個數相加，寫出兩個小計，再寫出兩種方法所得的總和。`],fields:[["First two","前兩個數"],["Last two","後兩個數"],["Total either way","兩種方法的總和"]],answer:[first,last,total],marks:1,why:[`First two: ${a} + ${b} = ${first}, then ${first} + ${c} = ${total}. Last two: ${b} + ${c} = ${last}, then ${a} + ${last} = ${total}. Both ways give ${total}.`,`前兩個數：${a} + ${b} = ${first}，再算${first} + ${c} = ${total}。後兩個數：${b} + ${c} = ${last}，再算${a} + ${last} = ${total}。兩種方法都得到${total}。`],groupedAddition:{a,b,c,first,last,total}};
   }},
+  {id:"group10p1a",grade:1,code:"1N4",label:["Group counters to make whole tens","組合圓片湊成整十"],count:12,make(i){
+    const examples=[[[24,6,3],"first"],[[23,6,4],"last"],[[17,3,8],"first"],[[33,8,2],"last"],[[36,4,5],"first"],[[25,7,3],"last"],[[28,2,7],"first"],[[29,9,1],"last"],[[43,7,2],"first"],[[38,4,6],"last"],[[55,5,9],"first"],[[32,5,5],"last"]];
+    const [[a,b,c],pair]=examples[i],subtotal=pair==="first"?a+b:b+c,total=a+b+c;
+    const step=pair==="first"?[`${a} + ${b} = ${subtotal}; then ${subtotal} + ${c} = ${total}.`,`先算${a} + ${b} = ${subtotal}，再算${subtotal} + ${c} = ${total}。`]:[`${b} + ${c} = ${subtotal}; then ${a} + ${subtotal} = ${total}.`,`先算${b} + ${c} = ${subtotal}，再算${a} + ${subtotal} = ${total}。`];
+    return {prompt:["The three boxes show groups of counters. One adjacent pair adds to a number ending in 0. Add that pair first. Write its subtotal, then the total of all three groups.","三個盒子分別裝着圓片。其中相鄰的兩組相加會得到個位是0的數。先算這兩組，寫出小計，再寫出三組的總和。"],fields:[["Pair subtotal","兩組的小計"],["Total","總和"]],answer:[subtotal,total],marks:1,why:[`${step[0]} Grouping the pair makes the next addition easier.`,`${step[1]}先組合這兩組，接下來的加法較容易。`],figure:{kind:"groupingBoxes",counts:[a,b,c]},groupTen:{a,b,c,pair,subtotal,total}};
+  }},
   {id:"columnadd1a",grade:1,code:"1N4",label:["Complete a carrying addition column","完成進位加法直式"],count:12,make(i){
     const pairs=[[27,15],[38,24],[46,17],[19,32],[57,26],[64,18],[25,37],[48,33],[36,29],[18,45],[53,19],[72,19]];
     const [a,b]=pairs[i],result=a+b,ones=a%10+b%10,tens=Math.floor(a/10)+Math.floor(b/10)+1;

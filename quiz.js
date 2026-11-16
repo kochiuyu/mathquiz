@@ -68,6 +68,17 @@ function figure(type) {
     const label=titleA+": "+Array(type.a).fill(t("red counter","紅色圓片")).join(", ")+". "+titleB+": "+Array(type.b).fill(t("blue counter","藍色圓片")).join(", ");
     return '<svg class="figure two-groups" viewBox="0 0 320 102" role="img" aria-label="'+label+'"><g fill="#f8faf7" stroke="#9bb9a5"><rect x="4" y="22" width="152" height="74" rx="8"/><rect x="164" y="22" width="152" height="74" rx="8"/></g><g text-anchor="middle"><text x="80" y="17">'+titleA+'</text><text x="240" y="17">'+titleB+'</text></g>'+dots(type.a,4,"#a5541f")+dots(type.b,164,"#316a93")+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "groupingBoxes") {
+    const colours=["#a5541f","#316a93","#2d735a"];
+    const cards=type.counts.map((count,j)=>{
+      const x=6+j*172,tens=Math.floor(count/10),ones=count%10;
+      const rods=Array.from({length:tens},(_,k)=>'<g transform="translate('+(x+18)+' '+(38+k*16)+')"><rect width="120" height="12" rx="2" fill="#e1ece6" stroke="#20392f" stroke-width="1.5"/>'+Array.from({length:9},(_,n)=>'<path d="M'+((n+1)*12)+' 1v10" stroke="#526f61"/>').join('')+'</g>').join('');
+      const dots=Array.from({length:ones},(_,k)=>'<circle cx="'+(x+23+k*14)+'" cy="140" r="5" fill="'+colours[j]+'"/>').join('');
+      return '<rect x="'+x+'" y="5" width="160" height="162" rx="8" fill="#fffefa" stroke="#526f61" stroke-width="2"/><text x="'+(x+80)+'" y="27" text-anchor="middle">'+t("Group ","第")+(ch?["一","二","三"][j]:"ABC"[j])+t(": ","組：")+count+'</text>'+rods+dots;
+    }).join('');
+    const alt=t(`Three boxes with ${type.counts.join(', ')} counters. Each long rod shows ten counters; dots show single counters.`,`三個盒子分別有${type.counts.join('、')}粒圓片。每條長棒表示十粒，圓點表示單粒。`);
+    return '<svg class="figure grouping-boxes" viewBox="0 0 520 174" role="img" aria-label="'+alt+'">'+cards+'</svg>';
+  }
   if (typeof type === "object" && type.kind === "equalGroups") {
     const width=type.boxes*106+4;
     const boxes=Array.from({length:type.boxes},(_,i)=>'<rect x="'+(4+i*106)+'" y="8" width="98" height="70" rx="7" fill="#fffefa" stroke="#526f61" stroke-width="2"/>').join("");
@@ -191,7 +202,7 @@ function controls(q,i,paper,key=false) {
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.oddEven100?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.oddEven100?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -204,7 +215,7 @@ function mark(form) {
     }
     const values=q.fields.map((_,j)=>String(form.get("q"+i+"f"+j)||"").trim());
     if(values.some(v=>!v))return null;
-    if(q.numberOrder || q.groupedAddition || q.columnForm)return Number(values.every((v,j)=>pictogramAnswer(v,q.answer[j])));
+    if(q.numberOrder || q.groupedAddition || q.groupTen || q.columnForm)return Number(values.every((v,j)=>pictogramAnswer(v,q.answer[j])));
     if(q.equation){
       const m=values[0].normalize("NFKC").replace(/\s/g,"").match(/^([1-9])\+([1-9])=(\d{1,2})$/);
       return Number(!!m && +m[3]===q.equation.total && ((+m[1]===q.equation.a && +m[2]===q.equation.b) || (+m[1]===q.equation.b && +m[2]===q.equation.a)));
@@ -339,25 +350,25 @@ function renderOrder100Practice(){
   }
   show();
 }
-function renderGroupedAdditionPractice(){
-  const skill="groupadd1a",family=families.find(f=>f.id===skill),variants=[0,5,11];
+function renderGroupedAdditionPractice(skill="groupadd1a"){
+  const concrete=skill==="group10p1a",family=families.find(f=>f.id===skill),variants=concrete?[0,5,10]:[0,5,11];
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
-  document.title=t("Grouping addends · Practice | MathQuiz","加數分組 · 練習 | MathQuiz");
+  document.title=t(concrete?"Making tens · Practice | MathQuiz":"Grouping addends · Practice | MathQuiz",concrete?"組合湊整十 · 練習 | MathQuiz":"加數分組 · 練習 | MathQuiz");
   let position=0,attempts=0,firstTry=0;
   function show(){
     const q=family.make(variants[position]);
-    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise grouping three addends","練習組合三個加數")+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t(concrete?"Practise making whole tens":"Practise grouping three addends",concrete?"練習組合湊成整十":"練習組合三個加數")+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
     const form=document.getElementById("practice-form"),feedback=document.getElementById("practice-feedback"),inputs=[...form.querySelectorAll('input')];
     form.onsubmit=e=>{
       e.preventDefault();const values=inputs.map(el=>el.value.trim());
-      if(values.some(v=>!v)){feedback.textContent=t("Fill all three boxes.","請填好三格。");inputs[values.findIndex(v=>!v)].focus();return;}
+      if(values.some(v=>!v)){feedback.textContent=t(concrete?"Fill both boxes.":"Fill all three boxes.",concrete?"請填好兩格。":"請填好三格。");inputs[values.findIndex(v=>!v)].focus();return;}
       attempts++;const correct=values.every((v,j)=>pictogramAnswer(v,q.answer[j]));if(correct && attempts===1)firstTry++;
       if(correct || attempts===2){
-        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The subtotals and total are ","兩個小計和總和是 ")+q.answer.join(", ")+". ")+local(q.why);
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t(concrete?"The pair subtotal and total are ":"The subtotals and total are ",concrete?"兩組的小計和總和是 ":"兩個小計和總和是 ")+q.answer.join(", ")+". ")+local(q.why);
         inputs.forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
-      }else{feedback.textContent=t("Add the first two numbers, then the last two. Each subtotal plus the remaining number gives the same total.","先算前兩個數，再算後兩個數；每個小計加上剩下的數，總和都相同。");inputs[0].focus();}
+      }else{feedback.textContent=t(concrete?"Look for two neighbouring groups whose numbers add to a number ending in 0. Add that pair first.":"Add the first two numbers, then the last two. Each subtotal plus the remaining number gives the same total.",concrete?"找出相鄰的兩組，看看哪兩個數相加後個位是0，再先算這兩組。":"先算前兩個數，再算後兩個數；每個小計加上剩下的數，總和都相同。");inputs[0].focus();}
     };
     document.getElementById("practice-next").onclick=()=>{
       position++;attempts=0;
@@ -1259,6 +1270,7 @@ const practiceCatalogue=[
   {grade:1,skill:"noborrow1a",label:["Practise subtraction without borrowing","練習不退位減法"],render:()=>renderNumber100Practice("noborrow1a")},
   {grade:1,skill:"threeadd1a",label:["Practise adding three numbers","練習三個數相加"],render:()=>renderNumber100Practice("threeadd1a")},
   {grade:1,skill:"groupadd1a",label:["Practise grouping three addends","練習組合三個加數"],render:renderGroupedAdditionPractice},
+  {grade:1,skill:"group10p1a",label:["Practise grouping to make tens","練習組合湊成整十"],render:()=>renderGroupedAdditionPractice("group10p1a")},
   {grade:1,skill:"columnadd1a",label:["Practise addition columns","練習加法直式"],render:()=>renderColumnPractice("columnadd1a")},
   {grade:1,skill:"columnsub1a",label:["Practise subtraction columns","練習減法直式"],render:()=>renderColumnPractice("columnsub1a")},
   {grade:1,skill:"storyadd1a",label:["Practise addition stories","練習加法文字題"],render:()=>renderNumber100Practice("storyadd1a")},

@@ -33,6 +33,7 @@
     ["noborrow1a",1,12,"6e7a63855fbbc79090ea685f174ceea7ef4e30d86765315cb9824c3b66198292"],
     ["threeadd1a",1,12,"c18e93923c6df5f2668e71d8d3270fabe02c169757f9f4955bc714f8334ac744"],
     ["groupadd1a",1,12,"b25457aad1fe944c5f9473a0f3625a2d84d9be5998117ec283aae507becb5512"],
+    ["group10p1a",1,12,"f57f52b4f8aa03bf1487f697a2cae9ed4022f7369a743ff1d839ebb629efd00a"],
     ["columnadd1a",1,12,"f5ea5e4f1566fa0f914994aa5d59cf2e2bbd70252a7692e95d8e26d35174a0f7"],
     ["columnsub1a",1,12,"fc7bb15611db807259f94eed6a4a8e9ec8ad03ee20780577c8502cfcc7206cca"],
     ["storyadd1a",1,12,"1d8567cf174391023964f9b9bd4334329fee219a20525ba960d4f3e7124dea5a"],
@@ -107,9 +108,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===773,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===785,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 773 variants",()=>{
+  await check("Released bilingual and response contracts · 785 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -230,6 +231,20 @@
       assert(q.why[0].includes(`${first} + ${c} = ${total}`) && q.why[1].includes(`${a} + ${last} = ${total}`),"grouping explanation wrong "+i);
       assert(decodeItems("groupadd1a-"+i,1).length===1 && !decodeItems("groupadd1a-"+i,2).length,"grouping link guard failed "+i);
     }
+  });
+  await check("P1 concrete grouping · one useful adjacent pair in each diagram",()=>{
+    const family=families.find(f=>f.id==="group10p1a"),pairs=new Set(),triples=new Set();
+    assert(family?.grade===1 && family.code==="1N4" && family.count===12,"concrete grouping metadata missing");
+    for(let i=0;i<12;i++){
+      const q=family.make(i),{a,b,c,pair,subtotal,total}=q.groupTen,first=a+b,last=b+c;
+      assert([a,b,c].every(n=>n>=1 && n<100) && total===a+b+c && total<100,"concrete grouping range wrong "+i);
+      assert((first%10===0)!==(last%10===0) && subtotal===(pair==="first"?first:last) && subtotal%10===0,"concrete grouping pair ambiguous "+i);
+      assert(q.answer.join(",")===[subtotal,total].join(",") && q.fields.length===2 && q.marks===1,"concrete grouping answer contract wrong "+i);
+      assert(q.figure.kind==="groupingBoxes" && q.figure.counts.join(",")===[a,b,c].join(",") && q.why.every(w=>w.includes(String(subtotal)) && w.includes(String(total))),"concrete diagram or key wrong "+i);
+      assert(decodeItems("group10p1a-"+i,1).length===1 && !decodeItems("group10p1a-"+i,2).length,"concrete grouping link guard failed "+i);
+      pairs.add(pair);triples.add([a,b,c].join(","));
+    }
+    assert(pairs.size===2 && triples.size===12,"concrete grouping needs both pair positions and distinct triples");
   });
   await check("P1 column forms · carrying addition and no-borrow subtraction",()=>{
     const add=families.find(f=>f.id==="columnadd1a"),sub=families.find(f=>f.id==="columnsub1a");
@@ -1183,6 +1198,24 @@
       inputs.forEach(el=>el.value="1");practice.getElementById('practice-form').requestSubmit();assert(/first two/.test(practice.getElementById('practice-feedback').textContent),"grouping hint missing");
       inputs.forEach((el,j)=>el.value=String(q.answer[j]));practice.getElementById('practice-form').requestSubmit();assert(/Correct after a hint/.test(practice.getElementById('practice-feedback').textContent),"grouping retry missing");
       practice.getElementById('practice-next').click();assert(practice.querySelector('.practice-progress').textContent.includes('2'),"grouping follow-up missing");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P1 concrete grouping · diagram, scoring, bilingual PDF and practice",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const f=await shapeFrame(query);frames.push(f);return f.contentDocument;};
+      const id="group10p1a",q=families.find(f=>f.id===id).make(0),base="?v=3&lang=en&p=1&items="+id+"-0";
+      const builder=await open(base+"&view=build");assert(builder.querySelector('select[name="'+id+'"]') && builder.querySelector('.grouping-boxes'),"concrete grouping builder missing");
+      const blank=await open(base);blank.querySelector('form').requestSubmit();assert(/Please complete question 1/.test(blank.getElementById('status').textContent),"concrete grouping blank accepted");
+      const wrong=await open(base);wrong.querySelectorAll('input[name^="q0f"]').forEach((el,j)=>el.value=String(j?q.answer[j]:q.answer[j]+1));wrong.querySelector('form').requestSubmit();assert(/Score 0 \/ 1/.test(wrong.getElementById('status').textContent),"concrete grouping partial answer accepted");
+      const pupil=await open(base);pupil.querySelectorAll('input[name^="q0f"]').forEach((el,j)=>el.value=String(q.answer[j]));pupil.querySelector('form').requestSubmit();assert(/Score 1 \/ 1/.test(pupil.getElementById('status').textContent),"concrete grouping correct answer rejected");
+      const paper=await open(base+"&view=paper"),key=await open(base+"&view=key");assert(paper.querySelector('.grouping-boxes') && paper.querySelectorAll('fieldset .blank').length===2 && key.querySelector('fieldset').textContent.includes(q.why[0]),"concrete grouping paper/key mismatch");
+      const zh=await open("?v=3&lang=zh&p=1&items="+id+"-1&view=key"),zhq=families.find(f=>f.id===id).make(1);assert(zh.documentElement.lang==="zh-HK" && zh.querySelector('.grouping-boxes[aria-label*="三個盒子"]') && zh.querySelector('fieldset').textContent.includes(zhq.why[1]),"Chinese concrete grouping key missing");
+      const pdf=await frames.at(-1).contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await pdf.arrayBuffer());assert(raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && (raw.match(/\/Type\s*\/Page\b/g)||[]).length===1,"Chinese concrete grouping PDF missing text or page");
+      const practice=await open("?lang=en&p=1&view=practice&skill="+id),inputs=[...practice.querySelectorAll('#practice-form input')];assert(inputs.length===2 && practice.querySelector('.grouping-boxes') && practice.getElementById('zh').href.includes(id),"concrete grouping practice missing");
+      inputs.forEach(el=>el.value="1");practice.getElementById('practice-form').requestSubmit();assert(practice.getElementById('practice-feedback').textContent.includes('ending in 0'),"concrete grouping hint missing");
+      inputs.forEach((el,j)=>el.value=String(q.answer[j]));practice.getElementById('practice-form').requestSubmit();assert(practice.getElementById('practice-feedback').textContent.includes('Correct after a hint'),"concrete grouping retry missing");
+      practice.getElementById('practice-next').click();assert(practice.querySelector('.practice-progress').textContent.includes('2') && practice.querySelector('.grouping-boxes[aria-label*="25, 7, 3"]'),"concrete grouping follow-up missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P1 columns · aligned fields, scoring, key, PDF and practice",async()=>{
@@ -2296,18 +2329,18 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===45,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===46,"grade coverage counts wrong");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 45 distinct live home links",async()=>{
+  await check("Practice catalogue · 46 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===45 && new Set(links.map(a=>a.href)).size===45,"practice links missing or repeated");
+      assert(links.length===46 && new Set(links.map(a=>a.href)).size===46,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);
