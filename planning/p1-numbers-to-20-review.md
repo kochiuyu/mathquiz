@@ -1,6 +1,6 @@
 # 1N1 · Numbers to 20: objective review
 
-Status: supplementary material authored; independent review, browser/print QA, release and live verification pending. This is not a verified-complete unit or evidence of pupil mastery.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Sources and scope
 
@@ -33,3 +33,15 @@ All rows are **pending independent review and release verification**. The [bilin
 The teacher sheet records independent/supported/not-yet/unassessed per skill, with actual responses. Samples demonstrate a deliverable for each action, not an exhaustive assessment of every numeral or bond. Adapt response access without counting pointing as evidence of spoken reading or written numerals. No pass threshold is claimed to come from EDB.
 
 Before objective closure: independently review arithmetic and both languages; test both language links, key toggle, pupil-only and key printing, keyboard operation, narrow screens and live navigation; publish and verify the exact release. Classroom trials, native translation review, physical-printer and screen-reader checks remain separate pending validations. Do not infer any of them from an authored activity or digital-family count.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1N1 · Numbers to 20: resource complete.** Counting and numeral reading/writing, quantities and order, parity, and hands-on number bonds with sign language. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 5 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

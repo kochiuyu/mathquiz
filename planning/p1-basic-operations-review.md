@@ -1,6 +1,6 @@
 # 1N2 · Basic addition and subtraction: objective review
 
-Status: supplementary material authored; independent review, browser/print QA, release and live verification pending. No closure or classroom-mastery claim.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Sources and scope
 
@@ -33,3 +33,15 @@ All rows are **pending independent review and release verification**. Use E–G 
 The teacher records each skill as independent/supported/not-yet/unassessed, including prompts and response access. These representative samples are not an exhaustive fact test, speed drill or EDB-defined pass mark. A teacher must actually conduct the observations before claiming evidence for a learner.
 
 Before closure: independent source/answer/bilingual review, browser and responsive checks, keyboard and print tests, integration and exact-release live verification. Classroom trials, independent translation review, physical-printer and screen-reader checks remain pending separately. Authoring a worksheet does not itself pass those gates.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1N2 · Basic addition and subtraction: resource complete.** Pictured and oral addition/subtraction, comparison, zero properties, inverse actions and exchanging addends. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 5 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

@@ -25,3 +25,15 @@ Rechecked both official sources on 16 November 2026. Digital families provide su
 The earlier activity did not elicit the need for a standard unit, and its body-reference instructions did not explicitly assess precautions. A/C now supply these actions. Body references are personal and approximate, not a universal thumb size. If needed, the teacher supplies an approximate whole-centimetre reference; this is an estimation convention, not an added rounding objective. B uses whole-centimetre teacher-prepared endpoints, replacing the previous blanket nearest-whole-centimetre instruction. No prescribed error percentage, multiplication or millimetre calculation is required.
 
 This remains a prepared assessment, not a claim of observed physical mastery. Independent/supported/not-yet/unassessed records replace answer-only inference. Browser responsiveness, language switching, hidden-key controls, pupil/key print layouts, keyboard operation and exact-release live checks are pending for this revision. Classroom, independent translation, physical-printer and screen-reader checks remain separate pending validations. No unit-completion claim is made.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1M3 · Length and distance (II): resource complete.** Why standard units help, actual centimetre tools, calibrated body references and estimate-before-measure tasks. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 3 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

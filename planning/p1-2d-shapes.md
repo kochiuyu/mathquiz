@@ -1,6 +1,6 @@
 # 1S2 · 2-D shapes: source and assessment audit
 
-Status: authored supplementary pupil tasks and hidden bilingual key; independent review, integration, browser/print QA and publication pending. Not a verified-complete unit or pupil-attainment claim.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Source check
 
@@ -31,3 +31,15 @@ The packet provides actual pupil instructions and material setup, not only recom
 Static black-and-white SVG with consistent strokes; no colour-dependent cue. Three-column cards on desktop/print, two on narrow screens. Figures are native markup with neutral accessible labels that do not reveal answers. All answer material is hidden by default and revealed by the existing keyboard-operable button; language sections remain mutually exclusive. Key printing begins on a new page. No fixed page count is promised.
 
 Only this plan and `activities/p1-2d-shapes.html` were authored. New digital recognition families would be useful for repeated practice of the other shape types, but are not required to supply these authored teacher-led tasks and cannot replace drawing/making evidence. Do not count this sheet as digital-family coverage. Before completion: independent math/source/bilingual review, both language/key routes, phone/grayscale legibility, print pagination and live release verification. Screen-reader, native translation, physical printing and classroom observations remain unperformed.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1S2 · 2-D shapes: resource complete.** Points and lines, five flat-shape types, separate drawing and physical making, and composition/dissection. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 5 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

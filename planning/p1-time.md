@@ -1,6 +1,6 @@
 # P1 Time (I): objective evidence and first release
 
-**Status:** bilingual teacher-led activity authored; publication, browser/print review and independent review pending. This does not claim that the unit is verified complete or that pupils have demonstrated mastery.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Sources and boundaries
 
@@ -44,3 +44,15 @@ Every numbered objective has an authored task and observable criterion. Practica
 Before global status/count changes, review both language routes, key hide/reveal and keyboard activation, actual print preview with key off/on, clock and calendar legibility in grayscale, browser console and accessibility adaptation. Verify printed pupil sheets never contain the key. The key may flow onto additional pages; do not promise an exact printed page count until rendered.
 
 No builder, quiz, practice, global index, font or tests files were changed by this task. Any later digital families need permanent IDs, exhaustive finite-variant checks, localized marking/hints, practice integration, paper/key and PDF font tests, and existing-ID regression. This activity is deliberately usable without them. Independent translation review, screen-reader testing, physical printing and classroom observations remain unperformed.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1M4 · Time (I): resource complete.** Analogue hour/half-hour clocks, real hour measurement, elapsed/finish problems, weekday/month names and calendar reading. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 7 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

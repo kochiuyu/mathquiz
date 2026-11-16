@@ -78,3 +78,7 @@ Three12-variant choice families: `coinvalue1a` reads labelled denomination diagr
 ## Verified resource checkpoint
 
 Only 1N3, 1N4 and 1M2 are verified resource complete (14 numbered objectives): source audits, independent maths review, live49ffb20 PASS181/181 and targeted English/Chinese teacher screen/key and money paper/key checks. This is not pupil mastery or release4 verification. Manual downloaded-PDF visual inspection and teacher print-preview/pagination remain unperformed; classroom, independent translation, physical-printer and screen-reader validation are deferred.
+
+## P1 completed resource checkpoint
+
+All12 P1 units are resource complete after source/objective review, independent maths checks and livefa4b8e4 PASS185/185. This covers45 numbered objectives plus1F1 integrated inquiry. Earlier three-unit checkpoint is superseded for coverage, not for its recorded tests. Targeted visuals passed; manual downloaded-PDF visual inspection, teacher print-preview/pagination, classroom, independent translation, physical printing and screen-reader checks remain unperformed. No pupil attainment or ten-hour inquiry completion is claimed.

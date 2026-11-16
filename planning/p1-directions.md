@@ -1,6 +1,6 @@
 # P1 directions and positions (I): first activity and source audit
 
-**Status:** bilingual teacher-led resource authored; independent, browser, print and publication verification pending. No complete-unit claim.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Source scope
 
@@ -39,3 +39,15 @@ All seven terms have picture and real-object description evidence. Task 5 is add
 Static checks: unique IDs, six valid SVGs across both languages, two hidden keys and syntactically valid route/toggle script. All seven term modes have teacher setup and expected responses. Only these activity/planning files changed.
 
 Pending: independent language/content review, mobile and desktop layout, keyboard key toggle, pupil/key print preview and grayscale clarity, screen-reader usability, classroom and physical-printer testing, publication/live URL checks. The picture depth cue particularly needs visual review. Existing digital direction tasks, if any, were not audited here; no digital-family count or closure is claimed by this activity.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1S3 · Directions and positions (I): resource complete.** Seven positional terms through pictures and actual object description/placement from a fixed pupil viewpoint. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 1 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

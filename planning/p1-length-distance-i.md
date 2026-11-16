@@ -32,3 +32,15 @@ The KS1 curved-length requirement is explicitly addressed in B: compare two loos
 The prior material lacked an explicit pre-tool intuitive task, curved-length task and robust retention of measured string spans. Those deliverable gaps are addressed in this revision, not certified closed. Teacher observation is how these actions are assessed; authoring the sheet does not mean any child has performed them. Use independent/supported/not-yet/unassessed per action and record prompts; there is no EDB pass mark invented here.
 
 Browser, bilingual layout, key toggle, pupil-only/key printing, keyboard and exact-release live verification are pending for this revision. Classroom, independent translation, physical-printer and screen-reader validation remain separate pending checks. No verified-complete claim is made.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1M1 · Length and distance (I): resource complete.** Intuitive and direct comparisons, curved lengths, retained string spans and suitable improvised units. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 4 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

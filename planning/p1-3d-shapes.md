@@ -1,6 +1,6 @@
 # P1 3-D shapes (I): source audit and first release
 
-**Status:** bilingual activity and a proposed digital fragment authored, not yet independently reviewed, published or verified complete.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Official scope
 
@@ -44,3 +44,15 @@ Browser layout, grayscale print preview, page-fit, key hiding/reveal keyboard fl
 ## Integrated release candidate
 
 `solidname1a` is now integrated in builder, pupil, paper/key and five-question practice (one of each broad solid). All15 variants and all929 earlier permanent variants pass digest/preservation checks. The corrected prism projection has parallel matching edges. Bilingual browser/PDF and exact live-release verification remain pending; this is not yet a completed unit.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1S1 · 3-D shapes (I): resource complete.** Five broad solid families through pictures and real-model handling, classification, rolling and stacking. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Objectives closed:** 1 numbered objectives.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.

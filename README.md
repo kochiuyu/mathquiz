@@ -6,42 +6,33 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the 16 November 2026 release candidate, 27 units have at least one selectable task, 58 have none, and 3 have been verified resource complete. The candidate builder offers 59 question families and 929 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** As of 16 November 2026, 27 units have at least one selectable task, 58 have none, and 12 have been verified resource complete. The builder offers 59 question families and 929 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
-| P1 | 12 | 9 | 3 | 3 |
+| P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 4 | 11 | 0 |
 | P3 | 14 | 3 | 11 | 0 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **27** | **58** | **3** |
+| **Total** | **85** | **27** | **58** | **12** |
 
-**Release-candidate resource inventory:** 30 units have a digital task or linked teacher-led pupil activity; 27 have selectable digital tasks. All 12 P1 units now have resources and objective/source mappings; 9 have selectable digital tasks. Time, directions and inquiry are teacher-led. These counts include the unpublished release candidate, not a claim of verified completion. Whole-curriculum objective totals and percentages are not yet claimed.
+**Released resource inventory:** 30 units have a digital task or linked teacher-led pupil activity; 27 have selectable digital tasks. All 12 P1 units now have resources and objective/source mappings; 9 have selectable digital tasks. Time, directions and inquiry are teacher-led. All twelve P1 units are now resource complete; the other eighteen touched units are not yet certified complete. Whole-curriculum objective totals and percentages are not yet claimed.
 
-**Verified resource-complete checkpoint: 3/85 units.** Only 1N3 (Numbers to 100), 1N4 (Addition and subtraction I) and 1M2 (Money I) are verified resource complete, covering 14 numbered objectives. Evidence: source audits, independent mathematical review, live commit `49ffb20` passing **181/181** regression checks, targeted English/Chinese teacher screen/key routes and money paper/key verification. This means usable assessment resources, not pupil mastery. Manual downloaded-PDF visual inspection and teacher print-preview/pagination checks are unperformed; classroom, independent translation, physical-printer and screen-reader validation remain deferred. The remaining nine P1 units, including release-4 additions, await their own release verification. 1F1 has an integrated inquiry statement, so no combined P1 numbered-objective total is asserted.
+**Verified resource-complete checkpoint: 12/85 units, all P1.** Source audits and independent mathematics review cover 45 numbered objectives plus 1F1’s integrated inquiry statement. Live commit `fa4b8e4` passed **185/185** browser regression checks. Targeted bilingual teacher/key, money paper/key and shape-practice checks, plus clock, 2-D curve and positional-diagram visuals, passed. This means usable assessment resources, not pupil mastery or completion of a child’s inquiry hours. Manual downloaded-PDF visual inspection and teacher print-preview/pagination are unperformed; classroom, independent translation, physical-printer and screen-reader validation remain deferred.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
-**Release 4 candidate · P1 shapes, positions and inquiry:** 15 new `solidname1a` variants cover pictured recognition of five broad solid types, with bilingual five-question practice. Four teacher packets add real-solid exploration, flat-shape drawing/making, observer-based positional descriptions and investigations. Earlier number, operation, measurement, money and time packets remain linked. All 60 permanent families / 944 variants pass static digest checks. The expanded browser suite is expected to contain 185 checks (181 existing plus four new), not yet run for this candidate; browser regression, bilingual PDF, print and exact live-release verification remain pending. New release-4 units remain unverified; the three earlier resource-complete checkpoints below are retained. Classroom, independent translation, physical-printer and screen-reader checks remain separate.
+**Current release · P1 resource coverage complete:** 60 permanent families / 944 variants remain reproducible; 59 families / 929 variants are selectable. Teacher-led materials cover oral, real-object, drawing/making, measurement, time and inquiry objectives that digital answers cannot certify. P2’s three-digit numbers, addition/subtraction and multiplication are the next release; their locally authored work is not yet counted as published or complete.
 
 [Immediate priorities](#next-three-deliverables) · [Priority rules](#how-to-choose-the-next-release) · [P1–P6 delivery plan](#grade-by-grade-delivery-plan) · [Milestones](#milestones-and-handoff) · [Release procedure](#author-verify-and-hand-off-a-release)
 
 ## Next three deliverables
 
-1. **Verify P1 addition and subtraction (1N4).** Map its nine released families to all six numbered objectives in the [unit brief](planning/p1-addition-subtraction-i.md). The table below gives the starting evidence. For each row, record what the pupil actually does, which EDB remarks apply and any missing evidence. For example, the subtraction key demonstrates an addition check. See whether any task asks the pupil to recognise a valid check. Build the smallest task needed for an identified gap, then record the closure decision.
-2. **Verify the whole-unit review for numbers to 100 (1N3).** Its eight families already cover written and pictured work. For the spoken objectives, prepare an English and a Traditional Chinese teacher script, pupil instructions and observable marking criteria. Link these beside the digital tasks in the [unit brief](planning/p1-numbers-to-100.md). A pupil reading printed number words demonstrates a different skill from a pupil writing a number heard aloud.
-3. **Verify money (1M2), then open time (1M4).** Add tasks for recognising Hong Kong coins, reading marked prices up to HK$10 and counting coin groups within that limit. Test only the exchanges in the [1M2 remarks](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16); giving change belongs to a later unit. Prepare a real-coin observation activity alongside the digital questions.
-
-| 1N4 objective | Released evidence to review |
-|---|---|
-| 1 · Add two numbers | `carryadd1a`, with additional no-carry examples in `storyadd1a` |
-| 2 · Add three numbers | `threeadd1a` |
-| 3 · Recognise how regrouping addends preserves the sum | `groupadd1a`, `group10p1a` |
-| 4 · Subtract two numbers | `noborrow1a`, with addition checks in worked solutions |
-| 5 · Recognise column forms | `columnadd1a`, `columnsub1a` |
-| 6 · Solve simple problems | `storyadd1a`, `storysub1a` |
+1. **Close P2 three-digit numbers (2N1).** Audit the existing block representations and add digit values, boundary counting, parity, comparison and ordering, with oral/group-counting/estimation teacher evidence.
+2. **Deliver P2 addition and subtraction (2N2).** Keep addition below 1000 and subtraction operands within two digits; assess intermediate steps, strategy, estimates and statements separately from final arithmetic.
+3. **Deliver P2 basic multiplication (2N3).** Link concrete repeated addition, construction of the 0–10 table, zero/one, commutativity and one-step stories. Sampled practice is not evidence of whole-table recall.
 
 ## How to choose the next release
 

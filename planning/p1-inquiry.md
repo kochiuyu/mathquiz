@@ -1,6 +1,6 @@
 # P1 · 1F1 Inquiry and investigation
 
-Status: two bilingual investigations and teacher facilitation notes authored; independent review, browser/print QA and release verification pending. No learner achievement or complete-unit claim.
+**Status: verified resource complete.** See the dated checkpoint below for evidence and unperformed validation limits.
 
 ## Source audit
 
@@ -45,3 +45,15 @@ Teacher notes provide non-leading prompts and an independent/supported/not-yet/u
 ## Review and release evidence needed
 
 Check both language versions, blank record usability, teacher-note hiding, keyboard toggle, pupil-only/notes printing, responsive table layout and navigation. Independently review facilitation prompts for accidental answer cues and the mathematics of actual teacher preparations. Record exact deployment and live links before upgrading material status. Classroom process observations and independent translation, screen-reader and physical-printer checks remain distinct from software QA; their absence is not disguised by a generic completion label.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**1F1 · Inquiry and investigation: resource complete.** Open counter-partition and unit-size investigations with planning, organised trials, reasoning, revision and transfer. Every applicable objective and remark has a released pupil task and observable marking evidence. This is resource coverage, not pupil attainment.
+
+**Scope closed:** one integrated inquiry statement. These usable investigations support inquiry within other P1 units; they do not certify a pupil’s ten-hour programme or turn inquiry into a separate teaching block.
+
+**Last verified release:** `fa4b8e4767c8c1ca1d89bad2e773c6285515ebb1`; Pages run `43904709924` succeeded. The public browser suite passed **185/185**, including historical payloads, bilingual routes/keys, practice, PDF generation and phone pupil/key layout. Independent source and mathematics review passed. Targeted desktop checks confirmed the new solid practice in both languages, legible clock faces, the complete 2-D curve and front/behind diagram occlusion. These targeted checks do not claim every page was manually inspected.
+
+**Remaining objective gap:** none identified. **Validation still unperformed:** teacher print-preview/pagination (the available browser did not show a preview), manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing. Practical observation tasks must still be conducted with pupils; no observations are invented.
+
+**Next work:** proceed to P2 while preserving permanent IDs; collect later layout/accessibility and classroom findings separately.
