@@ -1,0 +1,15 @@
+# P1 length and distance (II): centimetres
+
+**Source check:** 16 November 2026. The [EDB 2017 primary supplement, 1M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=17) sets three objectives: recognise centimetre (cm); measure and compare object lengths and straight distances in centimetres; and estimate measurement results with ever-ready rulers. Pupils must choose an appropriate tool. The [2018 Key Stage 1 explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=17) describe aligning an object with the ruler's 0 mark and using a familiar body measure, such as thumb width or hand span, to estimate before checking. Work in 1M1 with improvised units is the prerequisite.
+
+## Released evidence by objective
+
+| Objective | Pupil action and evidence | Limit |
+|---|---|---|
+| 1 · Recognise centimetre | All four picture families show equal ruler intervals numbered 0–12 and labelled `cm`. The [teacher-led activity](../activities/p1-length-distance-ii.html?lang=en) asks the pupil to point from 0 to 1, name one centimetre and say `cm`. | Reading a labelled diagram alone does not prove that the pupil recognises one centimetre on a real tool. Record the teacher observation. |
+| 2 · Measure and compare lengths and distances in cm | `lengthcm1a` and `distancecm1a` ask for the number of centimetres between two marked endpoints. `comparelengthcm1a` and `comparedistancecm1a` ask which of two measured spans is longer. Each family has 12 variants. The [activity](../activities/p1-length-distance-ii.html?lang=en) uses real strips, a ruler, straight point-to-point distances and a suitable centimetre-marked tool. | Picture rulers assess scale reading and comparison, not the act of placing a real ruler. Starts include 0 and nonzero marks; the key subtracts the marks for the latter. The printed diagrams are schematic and must not be used as physical centimetre scales. |
+| 3 · Estimate with ever-ready rulers | The activity has the pupil measure their thumb width or hand span, then record an estimate **before** measuring an object and comparing it with the result. A teacher rubric records that sequence. | This physical estimate cannot be inferred from an online answer. No digital family claims to assess it. |
+
+The four families are selectable in the bilingual builder. Their pupils' quizzes, A4 paper, worked keys and three-question practice use the same permanent item IDs; practice provides a targeted hint, retry and first-try count. The diagrams keep the scale beside each ribbon or straight segment, so a resized page does not change the mathematical answer. Ruler marks are one diagram unit apart; labels, rather than screen or print millimetres, establish the centimetre values.
+
+**Still open:** teacher observation of actual ruler placement, tool choice and ever-ready estimation; classroom, translation, physical printer and screen-reader review. The unit remains **task live; objective audit needed**, not verified complete.

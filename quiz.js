@@ -32,6 +32,18 @@ function figure(type) {
     const alt=distance?t("Two straight distances from the same Start point to A and B.","由同一起點沿直線至A點和B點的兩段距離。") :t("Two ribbons labelled A and B with their starting ends aligned.","標示A和B的兩條絲帶，起點已對齊。");
     return '<svg class="figure measure-compare" viewBox="0 0 360 160" role="img" aria-label="'+alt+'">'+(distance?'<circle class="distance-start" cx="48" cy="80" r="5" fill="#20392f"/><text x="39" y="85" text-anchor="end">'+t("Start","起點")+'</text>':'<path d="M48 23v126" stroke="#20392f" stroke-width="2"/>')+rows+(type.units?'<text x="48" y="151">'+t("One segment = one paperclip length","每段 = 一個回形針長")+'</text>':'')+'</svg>';
   }
+  if (typeof type === "object" && type.kind === "cmRuler") {
+    const distance=type.subject==="distance",compare=type.items.length===2,step=24;
+    const rows=type.items.map(({start,length},j)=>{
+      const top=compare?12+j*105:22,y=top+18,rulerY=top+47,x1=40+start*step,x2=x1+length*step;
+      const ticks=Array.from({length:13},(_,n)=>'<path d="M'+(40+n*step)+' '+rulerY+'v12"/><text x="'+(40+n*step)+'" y="'+(rulerY+29)+'" text-anchor="middle">'+n+'</text>').join('');
+      const marks=distance?'<path d="M'+x1+' '+y+'H'+x2+'" stroke="#32755e" stroke-width="3"/><circle cx="'+x1+'" cy="'+y+'" r="4" fill="#20392f"/><circle cx="'+x2+'" cy="'+y+'" r="4" fill="#a5541f"/>':'<rect x="'+x1+'" y="'+(y-8)+'" width="'+(length*step)+'" height="16" fill="#d9e9e2" stroke="#32755e" stroke-width="2"/>';
+      const labels=compare?'<text x="15" y="'+(y+5)+'">'+"AB"[j]+'</text>':distance?'<text x="'+x1+'" y="'+(y-9)+'" text-anchor="middle">A</text><text x="'+x2+'" y="'+(y-9)+'" text-anchor="middle">B</text>':'';
+      return '<g class="cm-ruler-row" data-start="'+start+'" data-end="'+(start+length)+'"><rect x="34" y="'+(rulerY-4)+'" width="301" height="43" fill="#f5f8f4" stroke="#9bb9a5"/><g class="cm-ruler-ticks" stroke="#526f61" fill="#20392f">'+ticks+'</g><text x="349" y="'+(rulerY+29)+'">cm</text><path d="M'+x1+' '+(y+10)+'V'+(rulerY-4)+' M'+x2+' '+(y+10)+'V'+(rulerY-4)+'" fill="none" stroke="#a5541f" stroke-width="1" stroke-dasharray="3 3"/>'+marks+labels+'</g>';
+    }).join('');
+    const alt=type.items.map(({start,length},j)=>(compare?"AB"[j]+": ":"")+t(distance?"straight distance":"ribbon",distance?"直線距離":"絲帶")+t(" from ruler mark ","由厘米尺刻度")+start+t(" to ","至")+(start+length)).join("; ");
+    return '<svg class="figure cm-ruler" viewBox="0 0 375 '+(compare?215:120)+'" role="img" aria-label="'+alt+'">'+rows+'</svg>';
+  }
   if (typeof type === "object" && type.kind === "missingSide") {
     const horizontal=type.missing==="length",top=horizontal?"?":type.length,side=horizontal?type.width:"?";
     const alt=t(`Rectangle with perimeter ${type.perimeter} cm. The ${horizontal?"short":"long"} side is ${type.known} cm; find the other side marked question mark.`,`長方形周界為${type.perimeter}厘米。已知${horizontal?"短":"長"}邊長${type.known}厘米，求問號所示的另一邊。`);
@@ -264,8 +276,8 @@ function mark(form) {
   status.focus();
 }
 function renderNumber100Practice(skill){
-  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11],threeadd1a:[0,4,11],storyadd1a:[0,5,10],storysub1a:[0,5,10]},variants=sets[skill];
-  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"],threeadd1a:["Practise adding three numbers","練習三個數相加"],storyadd1a:["Practise addition stories","練習加法文字題"],storysub1a:["Practise subtraction stories","練習減法文字題"]};
+  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11],threeadd1a:[0,4,11],storyadd1a:[0,5,10],storysub1a:[0,5,10],lengthcm1a:[0,6,9],distancecm1a:[0,6,9]},variants=sets[skill];
+  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"],threeadd1a:["Practise adding three numbers","練習三個數相加"],storyadd1a:["Practise addition stories","練習加法文字題"],storysub1a:["Practise subtraction stories","練習減法文字題"],lengthcm1a:["Practise measuring ribbons in centimetres","練習用厘米量度絲帶"],distancecm1a:["Practise measuring distances in centimetres","練習用厘米量度距離"]};
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(titles[skill])+" · "+t("Practice","練習")+" | MathQuiz";
@@ -287,7 +299,8 @@ function renderNumber100Practice(skill){
         input.disabled=true;form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
       }else{
-        feedback.textContent=skill==="tensones1a"?t("Count the bundles of ten first. Then count the loose counters.","先數十粒一捆的圓片，再數單粒圓片。")
+        feedback.textContent=q.centimetre?t(`Count the centimetre spaces from mark ${q.centimetre.start} to mark ${q.centimetre.end}. The end mark alone is not always the length.`,`由${q.centimetre.start}刻度數到${q.centimetre.end}刻度，數一數有多少個厘米間隔。終點刻度不一定等於長度。`)
+          :skill==="tensones1a"?t("Count the bundles of ten first. Then count the loose counters.","先數十粒一捆的圓片，再數單粒圓片。")
           :skill==="countgroups1a"?t("Count on by the number of counters in each box, one box at a time.","按每盒的圓片數目順數，每次數一盒。")
           :skill==="numberwords100a"?t("Find the tens word first, then the ones word.","先找出數詞中的十位，再找個位。")
           :skill==="carryadd1a"?t("Add the ones first. Ten ones make one extra ten.","先加個位；10個一換成1個十。")
@@ -309,8 +322,8 @@ function renderNumber100Practice(skill){
   show();
 }
 function renderChoice100Practice(skill){
-  const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,variants=measure?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
-  const title=measure?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
+  const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,cm=family.make(0).centimetre?.items,variants=measure||cm?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
+  const title=measure||cm?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(title)+" · "+t("Practice","練習")+" | MathQuiz";
@@ -327,7 +340,8 @@ function renderChoice100Practice(skill){
         feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0])+". ")+local(q.why);
         form.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
-      }else feedback.textContent=measure?t(measure.units?"Count the equal paperclip lengths from the same starting point.":measure.subject==="distance"?"Compare the straight lines from Start to the two points.":"Line up the starting ends and compare where the ribbons end.",measure.units?"由同一起點數一數等長的回形針單位。":measure.subject==="distance"?"比較由起點至兩點的直線距離。":"把絲帶的起點對齊，再比較終點的位置。")
+      }else feedback.textContent=cm?t("Read both ruler marks for A and B. Count the centimetre spaces between each pair of ends, then compare.","讀取A和B各自的起點及終點刻度。數出兩端之間的厘米間隔，再作比較。")
+        :measure?t(measure.units?"Count the equal paperclip lengths from the same starting point.":measure.subject==="distance"?"Compare the straight lines from Start to the two points.":"Line up the starting ends and compare where the ribbons end.",measure.units?"由同一起點數一數等長的回形針單位。":measure.subject==="distance"?"比較由起點至兩點的直線距離。":"把絲帶的起點對齊，再比較終點的位置。")
         :skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
         :t("Use the box of 10 as a reference. Think in tens, without counting each counter.","以10粒一盒作參考，想想大約有幾個十，不用逐粒點算。");
     };
@@ -1296,6 +1310,10 @@ const practiceCatalogue=[
   {grade:1,skill:"distancedirect1a",label:["Practise comparing distances","練習比較距離"],render:()=>renderChoice100Practice("distancedirect1a")},
   {grade:1,skill:"lengthunits1a",label:["Practise lengths in paperclip units","練習用回形針單位比較長度"],render:()=>renderChoice100Practice("lengthunits1a")},
   {grade:1,skill:"distanceunits1a",label:["Practise distances in paperclip units","練習用回形針單位比較距離"],render:()=>renderChoice100Practice("distanceunits1a")},
+  {grade:1,skill:"lengthcm1a",label:["Practise measuring ribbons in centimetres","練習用厘米量度絲帶"],render:()=>renderNumber100Practice("lengthcm1a")},
+  {grade:1,skill:"distancecm1a",label:["Practise measuring distances in centimetres","練習用厘米量度距離"],render:()=>renderNumber100Practice("distancecm1a")},
+  {grade:1,skill:"comparelengthcm1a",label:["Practise comparing ribbon lengths in centimetres","練習比較絲帶的厘米長度"],render:()=>renderChoice100Practice("comparelengthcm1a")},
+  {grade:1,skill:"comparedistancecm1a",label:["Practise comparing straight distances in centimetres","練習比較直線距離的厘米長度"],render:()=>renderChoice100Practice("comparedistancecm1a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},

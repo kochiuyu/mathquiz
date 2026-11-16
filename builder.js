@@ -14,6 +14,22 @@ function measureCompareQuestion(i,subject,units){
     :[`${answer} ends farther from the shared starting line. ${distance?"Compare straight distances between points.":"Align the ribbon ends before comparing."}`,`${answer}的終點離共同起點較遠。${distance?"比較兩點之間的直線距離。":"比較絲帶前要把起點對齊。"}`];
   return {prompt,choices:["A","B"],answer:[answer],marks:1,why,figure:{kind:"measureCompare",a,b,subject,units},measureCompare:{a,b,subject,units,answer}};
 }
+function centimetreQuestion(i,subject,compare){
+  const distance=subject==="distance";
+  if(compare){
+    const lengths=[[3,7],[8,5],[6,2],[4,8],[7,3],[2,6],[5,8],[8,4],[3,6],[7,4],[5,2],[2,7]];
+    const starts=[[0,1],[2,0],[0,4],[1,0],[3,0],[0,2],[2,0],[0,4],[4,1],[0,3],[3,0],[1,1]];
+    const items=lengths[i].map((length,j)=>({start:starts[i][j],length}));
+    const answer=items[0].length>items[1].length?"A":"B";
+    return {prompt:distance?["Two straight distances are shown against centimetre rulers. Which distance is longer, A or B?","兩段直線距離放在厘米尺旁。哪段距離較長，A還是B？"]:["Two ribbons are shown against centimetre rulers. Which ribbon is longer, A or B?","兩條絲帶放在厘米尺旁。哪條絲帶較長，A還是B？"],choices:["A","B"],answer:[answer],marks:1,
+      why:[`A is ${items[0].length} cm (${items[0].start} to ${items[0].start+items[0].length}); B is ${items[1].length} cm (${items[1].start} to ${items[1].start+items[1].length}). ${answer} is longer.`,`A長${items[0].length}厘米（由${items[0].start}至${items[0].start+items[0].length}）；B長${items[1].length}厘米（由${items[1].start}至${items[1].start+items[1].length}）。${answer}較長。`],
+      figure:{kind:"cmRuler",subject,items},centimetre:{subject,items,answer}};
+  }
+  const examples=distance?[[0,4],[0,6],[0,8],[0,3],[0,7],[0,5],[2,5],[4,4],[3,7],[1,8],[2,6],[3,4]]:[[0,3],[0,5],[0,7],[0,9],[0,4],[0,8],[2,4],[3,6],[1,7],[4,5],[2,8],[3,3]];
+  const [start,length]=examples[i],end=start+length;
+  return {...numeric(distance?["Measure the straight distance from A to B using the centimetre ruler. Enter the number of centimetres.","用厘米尺量度A點至B點的直線距離。輸入厘米數。"]:["Measure the ribbon using the centimetre ruler. Enter the number of centimetres.","用厘米尺量度絲帶的長度。輸入厘米數。"],["cm","厘米"],length,[`The ${distance?"distance":"ribbon"} starts at ${start} cm and ends at ${end} cm. ${end} − ${start} = ${length} cm.`,`從${start}厘米刻度量至${end}厘米刻度。${end} − ${start} = ${length}厘米。`]),
+    figure:{kind:"cmRuler",subject,items:[{start,length}]},centimetre:{subject,start,end,length}};
+}
 const families = [
   {id:"add1", grade:1, code:"1N2", label:["Addition to 10","10以內的加法"], count:7, make(i){
     const a=i+1,b=1+(i*3 % (10-a));
@@ -153,6 +169,10 @@ const families = [
   {id:"distancedirect1a",grade:1,code:"1M1",label:["Compare straight distances","比較直線距離"],count:12,make(i){return measureCompareQuestion(i,"distance",false)}},
   {id:"lengthunits1a",grade:1,code:"1M1",label:["Compare ribbon lengths in paperclip units","用回形針作單位比較絲帶長度"],count:12,make(i){return measureCompareQuestion(i,"length",true)}},
   {id:"distanceunits1a",grade:1,code:"1M1",label:["Compare distances in paperclip units","用回形針作單位比較距離"],count:12,make(i){return measureCompareQuestion(i,"distance",true)}},
+  {id:"lengthcm1a",grade:1,code:"1M3",label:["Measure a ribbon in centimetres","用厘米量度絲帶"],count:12,make(i){return centimetreQuestion(i,"length",false)}},
+  {id:"distancecm1a",grade:1,code:"1M3",label:["Measure a straight distance in centimetres","用厘米量度直線距離"],count:12,make(i){return centimetreQuestion(i,"distance",false)}},
+  {id:"comparelengthcm1a",grade:1,code:"1M3",label:["Compare ribbon lengths in centimetres","比較絲帶的厘米長度"],count:12,make(i){return centimetreQuestion(i,"length",true)}},
+  {id:"comparedistancecm1a",grade:1,code:"1M3",label:["Compare straight distances in centimetres","比較直線距離的厘米長度"],count:12,make(i){return centimetreQuestion(i,"distance",true)}},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;
