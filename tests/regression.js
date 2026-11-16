@@ -1,4 +1,4 @@
-// Baseline from released v1 questions and every permanent generated family, including permissing4a.
+// Baseline from released v1 questions and every permanent generated family, including factorpair4a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -15,6 +15,7 @@
     ["per1",4,16,"d4ea48975699cce78756be1f7d8b62364d0e1c1534b3d77dae1696ffb71f4605"],
     ["permissing4a",4,12,"70c7f2615fcb37b322baa761f22d44a2fb1898aedde070f66c71a0ab3358e33e"],
     ["factor1",4,12,"9e9a57b5731a52b4fd6bc7f36acd725669d22f690b6aef6df0692a3001c84bd0"],
+    ["factorpair4a",4,12,"726d6cafc427204855d74eea6884322ab2014be0f2cf890403146c049dc0c8a3"],
     ["pct1",6,15,"b44b70e6ead240f97995e1e49c3d8149b19dc16a4646c9f3488366803b068efa"],
     ["pct2",6,15,"ba21d27c40ec9c4406e8bccb7cc887ac52bab3a994080c44f3eae22168948a95"],
     ["mean1",6,16,"b36e21806e2994332fb4ee7161529652dfbab4d61db021619d2314dba34071d5"],
@@ -88,9 +89,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===545,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===557,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 545 variants",()=>{
+  await check("Released bilingual and response contracts · 557 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -1873,6 +1874,43 @@
       const zh=await open("?lang=zh&p=4&view=practice&skill=permissing4a");assert(zh.querySelector("h1").textContent.includes("未知邊長"),"Chinese missing-side practice missing");
     }finally{frames.forEach(frame=>frame.remove());}
   });
+  await check("P4 factor pairs · twelve exact products and numeral rule",()=>{
+    const family=families.find(f=>f.id==="factorpair4a"),targets=new Set(),pairs=new Set();
+    assert(family && family.grade===4 && family.code==="4N3" && family.count===12,"factor-pair family metadata wrong");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),p=q.factorPair;
+      assert(p.target>0 && p.target<=100 && p.factor>0 && Number.isInteger(p.other) && p.factor*p.other===p.target,"factor pair not exact: "+i);
+      assert(q.inlineAnswer && q.answer[0]===p.other && q.prompt.every(s=>s.includes("___") && s.includes(String(p.target)) && s.includes(String(p.factor))) && q.why.every(s=>s.includes(String(p.other))),"factor-pair prompt or key wrong: "+i);
+      targets.add(p.target);pairs.add(p.factor+":"+p.other);
+    }
+    assert(targets.size===12 && pairs.size===12 && family.make(1).factorPair.factor===family.make(1).factorPair.other && family.make(10).factorPair.factor===1 && family.make(11).factorPair.other===1,"factor-pair cases lack square or unity variation");
+    assert(decodeItems("factorpair4a-0",4).length===1 && !decodeItems("factorpair4a-0",3).length,"factor-pair share link scope wrong");
+    assert(measureAnswer("４",4) && !measureAnswer("4.0",4) && !measureAnswer("8/2",4) && !measureAnswer("4 cm",4),"factor-pair numeral rule wrong");
+  });
+  await check("P4 factor pairs · builder, pupil, Chinese paper/key, PDF and practice",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const frame=await shapeFrame(query);frames.push(frame);return frame.contentDocument;};
+      const builder=await open("?v=3&lang=en&p=4&view=build");assert(builder.querySelector('select[name="factorpair4a"]'),"factor-pair builder family missing");
+      const pupil=await open("?v=3&lang=en&p=4&items=factorpair4a-0");
+      assert(pupil.querySelector(".inline-answer") && pupil.querySelector(".prompt").textContent.includes("3 ×"),"factor-pair pupil item missing");
+      pupil.querySelector("form").requestSubmit();assert(/Please complete question 1/.test(pupil.getElementById("status").textContent),"factor-pair blank accepted");
+      pupil.querySelector(".inline-answer").value="4.0";pupil.querySelector("form").requestSubmit();assert(/Score 0 \/ 1/.test(pupil.getElementById("status").textContent),"factor-pair decimal scored");
+      const correct=await open("?v=3&lang=en&p=4&items=factorpair4a-0");correct.querySelector(".inline-answer").value="４";correct.querySelector("form").requestSubmit();assert(/Score 1 \/ 1/.test(correct.getElementById("status").textContent),"factor-pair full-width answer rejected");
+      const paper=await open("?v=3&lang=zh&p=4&items=factorpair4a-0.factorpair4a-1&view=paper"),paperFrame=frames[frames.length-1];
+      const key=await open("?v=3&lang=zh&p=4&items=factorpair4a-0.factorpair4a-1&view=key");
+      assert(paper.querySelectorAll(".inline-blank").length===2 && key.querySelectorAll(".inline-solution").length===2 && key.body.textContent.includes("沒有餘數"),"Chinese paper/key factor pair missing");
+      assert(paper.querySelector(".paper-code").textContent===key.querySelector(".paper-code").textContent,"factor-pair paper/key code differs");
+      paperFrame.style.width="360px";assert(paper.documentElement.scrollWidth<=360,"factor-pair phone paper overflows");
+      const pdf=await paperFrame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await pdf.arrayBuffer());assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode"),"factor-pair PDF lacks text layer");
+      const practice=await open("?lang=en&p=4&view=practice&skill=factorpair4a"),input=practice.getElementById("practice-answer"),form=practice.getElementById("practice-form");
+      assert(input && practice.getElementById("zh").href.includes("factorpair4a"),"factor-pair practice route missing");
+      input.value="9";form.requestSubmit();assert(practice.getElementById("practice-feedback").textContent.includes("subtraction"),"factor-pair misconception hint missing");
+      input.value="4";form.requestSubmit();assert(practice.getElementById("practice-feedback").textContent.includes("Correct after a hint") && !practice.getElementById("practice-next").hidden,"factor-pair retry failed");
+      practice.getElementById("practice-next").click();assert(practice.querySelector(".practice-progress").textContent.includes("2 of 3") && practice.querySelector("legend").textContent.includes("4 ×"),"factor-pair square follow-up missing");
+      const zh=await open("?lang=zh&p=4&view=practice&skill=factorpair4a");assert(zh.querySelector("h1").textContent.includes("因數配對"),"Chinese factor-pair practice missing");
+    }finally{frames.forEach(frame=>frame.remove());}
+  });
   await check("Coverage page · live counts, planned work and home link",async()=>{
     const frames=[];
     try{
@@ -1880,18 +1918,18 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===26,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===27,"grade coverage counts wrong");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
       assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 26 distinct live home links",async()=>{
+  await check("Practice catalogue · 27 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===26 && new Set(links.map(a=>a.href)).size===26,"practice links missing or repeated");
+      assert(links.length===27 && new Set(links.map(a=>a.href)).size===27,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

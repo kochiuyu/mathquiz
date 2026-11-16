@@ -160,6 +160,12 @@ const families = [
     const options=Array.from({length:8},(_,j)=>j+2), good=options.filter(x=>n%x===0).slice(0,2),bad=options.filter(x=>n%x!==0).slice(0,2);
     return {prompt:[`Select every factor of ${n} in the list.`,`選出下列所有${n}的因數。`],multi:true,choices:[...good,...bad].sort((a,b)=>a-b).map(String),answer:good.map(String),why:[good.map(x=>`${x} × ${n/x} = ${n}`).join(", "),good.map(x=>`${x} × ${n/x} = ${n}`).join("；")]};
   }},
+  {id:"factorpair4a",grade:4,code:"4N3",label:["Explain a factor pair","用乘法說明因數配對"],count:12,make(i){
+    const cases=[[12,3],[16,4],[18,9],[20,5],[24,6],[27,3],[28,7],[30,5],[32,4],[36,6],[40,1],[42,42]];
+    const [target,factor]=cases[i],other=target/factor;
+    return {prompt:[`Complete the multiplication sentence to show why ${factor} is a factor of ${target}: ${factor} × ___ = ${target}.`,`完成乘法算式，說明為甚麼${factor}是${target}的因數：${factor} × ___ = ${target}。`],fields:[["",""]],answer:[other],marks:1,inlineAnswer:true,
+      why:[`${factor} × ${other} = ${target} exactly. The factors ${factor} and ${other} form a pair because the product is ${target} with no remainder.`,`因為${factor} × ${other} = ${target}，積剛好是${target}，沒有餘數，所以${factor}和${other}是一對因數。`],factorPair:{target,factor,other}};
+  }},
   {id:"pct1",grade:6,code:"6N3",label:["Finding a percentage","求百分比"],count:15,retired:true,make(i){return percentageQuestion(i)}},
   {id:"pct2",grade:6,code:"6N4",label:["Finding a percentage","求百分比"],count:15,make(i){return percentageQuestion(i)}},
   {id:"mean1",grade:6,code:"6D1",label:["Arithmetic mean","算術平均數"],count:16,make(i){

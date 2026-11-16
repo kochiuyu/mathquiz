@@ -190,7 +190,7 @@ function mark(form) {
     if(q.fractionBar)return Number(fractionBarAnswer(values,q.fractionBar));
     if(q.fractionAddition)return Number(fractionAdditionAnswer(values,q.fractionAddition));
     if(q.simpleEquation)return Number(simpleEquationAnswer(values[0],q.answer[0]));
-    if(q.triangleArea || q.cuboidVolume || q.missingSide)return Number(measureAnswer(values[0],q.answer[0]));
+    if(q.triangleArea || q.cuboidVolume || q.missingSide || q.factorPair)return Number(measureAnswer(values[0],q.answer[0]));
     if(q.measuringCup)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.barChart)return Number(measuringCupAnswer(values[0],q.answer[0]));
     if(q.placeValue)return Number(threeDigitAnswer(values[0],q.answer[0]));
@@ -682,6 +682,35 @@ function renderFactorPractice(){
   }
   show();
 }
+function renderFactorPairPractice(){
+  const family=families.find(f=>f.id==="factorpair4a"),variants=[0,1,10];
+  const practiceUrl=language=>"?lang="+language+"&p=4&view=practice&skill=factorpair4a";
+  let position=0,attempts=0,firstTry=0;
+  document.title=t("Factor pairs · Practice | MathQuiz","因數配對 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]),pair=q.factorPair;
+    const answer='<input id="practice-answer" class="inline-answer" type="text" inputmode="numeric" autocomplete="off" aria-label="'+t("Missing whole-number factor","未知的整數因數")+'">';
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise explaining factor pairs","練習用乘法說明因數配對")+'</h1><p>'+t("Complete each multiplication sentence. Try three questions.","完成每道乘法算式，試做三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt).replace("___",answer)+'</legend></fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();const input=document.getElementById("practice-answer"),value=input.value.trim(),feedback=document.getElementById("practice-feedback");
+      if(!value){feedback.textContent=t("Enter the missing factor.","請輸入未知的因數。");input.focus();return;}
+      attempts++;const correct=measureAnswer(value,pair.other);if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The missing factor is ","未知因數是 ")+pair.other+". ")+local(q.why);
+        input.disabled=true;e.currentTarget.querySelector('button[type="submit"]').hidden=true;const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const entered=Number(value.normalize("NFKC"));
+        feedback.textContent=!/^(?:0|[1-9][0-9]*)$/.test(value.normalize("NFKC"))?t("Enter a whole-number numeral only.","請只輸入整數數字。")
+          :entered===pair.target-pair.factor?t("That uses subtraction. A factor pair uses multiplication: what whole number times "+pair.factor+" gives "+pair.target+"?","這是減法。因數配對用乘法：哪個整數乘"+pair.factor+"會等於"+pair.target+"？")
+          :entered===pair.target?t("The product is already shown. Find the other number you multiply by "+pair.factor+".","積已經列出。找出另一個與"+pair.factor+"相乘的數。")
+          :t("Divide "+pair.target+" by "+pair.factor+". Check that your answer times "+pair.factor+" gives "+pair.target+" exactly.","用"+pair.target+"除以"+pair.factor+"，再檢查答案乘"+pair.factor+"是否剛好等於"+pair.target+"。");input.select();
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{position++;attempts=0;if(position<variants.length){show();document.getElementById("practice-answer").focus();return;}app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';};
+  }
+  show();
+}
 function renderPractice(){
   const sequence=params.get("skill")==="next1";
   const addition=params.get("skill")==="storyadd1";
@@ -940,6 +969,7 @@ const practiceCatalogue=[
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},
   {grade:4,skill:"factor1",label:["Practise factors","練習因數"],render:renderFactorPractice},
+  {grade:4,skill:"factorpair4a",label:["Practise factor pairs","練習因數配對"],render:renderFactorPairPractice},
   {grade:6,skill:"pct2",label:["Practise percentages","練習百分比"],render:renderPercentagePractice},
   {grade:6,skill:"mean1",label:["Practise averages","練習平均數"],render:renderMeanPractice},
   {grade:2,skill:"place3a",label:["Practise place value","練習位值"],render:renderPlaceValuePractice},

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Grade coverage | MathQuiz</title><link rel="stylesheet" href="quiz.css?v=21">
 <body><header><strong>MathQuiz</strong><nav aria-label="Language"><a id="en" href="coverage.html?lang=en">English</a> · <a id="zh" href="coverage.html?lang=zh" lang="zh-HK">繁體中文</a></nav></header><main id="coverage"></main>
-<script src="questions.js?v=4"></script><script src="builder.js?v=17"></script>
+<script src="questions.js?v=4"></script><script src="builder.js?v=18"></script>
 <script>
 (() => {
   const lang=new URLSearchParams(location.search).get("lang")==="zh"?1:0;
@@ -11,11 +11,11 @@
     1:["Explain why a rotated shape is a triangle","解釋旋轉後的圖形為何仍是三角形"],
     2:["Explain what a pictogram symbol represents","解釋象形圖中一個圖案代表甚麼"],
     3:["Compare shaded fractions using equal-sized wholes","比較相同大小整體的塗色分數"],
-    4:["Explain a factor pair using multiplication","用乘法解釋一對因數"],
+    4:["Find all factors of a number","找出一個數的所有因數"],
     5:["Translate a purchase story into an equation","把購物情境寫成方程"],
     6:["Convert minutes to hours before finding speed","先把分鐘化為小時，再計算速率"]
   };
-  const types={add1:"apply",next1:"identify",count20a:"identify",parts18a:"calculate",pictureadd1:"represent",storyadd1:"apply",otherway1:"represent",triangle1:"identify",place3a:"identify",groups2a:"represent",pict2a:"identify",share2a:"calculate",frac3a:"represent",cup3a:"identify",bar3a:"identify",per1:"calculate",permissing4a:"calculate",factor1:"identify",bar4a:"identify",fracadd5a:"calculate",equation5a:"calculate",triarea5a:"calculate",volume5a:"calculate",circle5a:"identify",pct2:"calculate",mean1:"calculate"};
+  const types={add1:"apply",next1:"identify",count20a:"identify",parts18a:"calculate",pictureadd1:"represent",storyadd1:"apply",otherway1:"represent",triangle1:"identify",place3a:"identify",groups2a:"represent",pict2a:"identify",share2a:"calculate",frac3a:"represent",cup3a:"identify",bar3a:"identify",per1:"calculate",permissing4a:"calculate",factor1:"identify",factorpair4a:"represent",bar4a:"identify",fracadd5a:"calculate",equation5a:"calculate",triarea5a:"calculate",volume5a:"calculate",circle5a:"identify",pct2:"calculate",mean1:"calculate"};
   const typeNames={apply:"應用",identify:"辨認",calculate:"計算",represent:"表示",other:"其他"};
   const live=families.filter(f=>!f.retired);
   const escaped=s=>String(s).replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
