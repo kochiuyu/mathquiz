@@ -2,7 +2,7 @@
 
 Code and documentation check: **16 November 2026**. This is a release ledger for the generated families. The [curriculum map](primary-mathematics.md) and linked family briefs carry the EDB objective, prerequisites, exclusions and source-check date for each skill. Those are project mappings, not EDB endorsement or evidence of pupil mastery. The misconception column records a **design hypothesis**, not an observed error.
 
-Release-candidate counts (new solid family not yet live-verified): **60 permanent family IDs and 944 versioned variants**. `pct1` (15 variants) is legacy and still decodes in old links; **59 families and 929 variants** are selectable for new papers. The home page links **59 practice routes**. All generated items award one mark; there is no partial credit for multi-field responses. Fixed pilot questions and downloadable fixed PDFs are separate from these counts.
+Release-5 candidate counts (new P2 families await live verification): **73 permanent family IDs and 1,227 versioned variants**. `pct1` (15 variants) is legacy and still decodes in old links; **72 families and 1,212 variants** are selectable for new papers. The home page links **72 practice routes**. All previously released items keep their one-mark/all-or-nothing contracts. New `smartadd2a` and `subchain2a` award up to two marks, and `order999a` up to three, one per correct field; all other new P2 items award one. P2 numeric-equivalence rules remain unchanged; choices are exact. Fixed pilot questions and downloadable fixed PDFs are separate from these counts.
 
 | Family | Objective record and status | Purpose and released variation | Answer rule; worked step | Error hypothesis to probe |
 |---|---|---|---|---|
@@ -82,3 +82,23 @@ Only 1N3, 1N4 and 1M2 are verified resource complete (14 numbered objectives): s
 ## P1 completed resource checkpoint
 
 All12 P1 units are resource complete after source/objective review, independent maths checks and livefa4b8e4 PASS185/185. This covers45 numbered objectives plus1F1 integrated inquiry. Earlier three-unit checkpoint is superseded for coverage, not for its recorded tests. Targeted visuals passed; manual downloaded-PDF visual inspection, teacher print-preview/pagination, classroom, independent translation, physical printing and screen-reader checks remain unperformed. No pupil attainment or ten-hour inquiry completion is claimed.
+
+## Release-5 P2 family additions
+
+Candidate tests: 241 authored checks, browser run pending. Prior 944 payloads preserved; 283 new variants. Teacher activities supply evidence modes not represented by numeric scoring. 2N4 is excluded.
+
+| Family | Unit / source map | Assessed action | Marking / limits | Error hypothesis |
+|---|---|---|---|---|
+| `digitvalue2a` (12) | [2N1](p2-3digit-numbers.md), candidate | Identify a digit’s value, including zero | One numeric value | Give the digit rather than its value |
+| `sequence999a` (12) | [2N1](p2-3digit-numbers.md), candidate | Count by one across hundreds boundaries | One numeric answer | Miss the hundreds boundary |
+| `parity999a` (12) | [2N1](p2-3digit-numbers.md), candidate | Identify parity from three-digit numerals | Exact odd/even choice, localized label | Use the hundreds digit |
+| `compare999a` (12) | [2N1](p2-3digit-numbers.md), candidate | Represent comparison with <, = or > | Exact symbol choice | Reverse the symbol |
+| `order999a` (12) | [2N1](p2-3digit-numbers.md), candidate | Order three distinct numerals in either direction | Three labelled numeric fields; one mark each | Ignore requested direction |
+| `addcarry2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Calculate two/three addends, sum below 1000 | One numeric result | Drop a carried amount |
+| `smartadd2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Use a supplied convenient pair, then total | Two fields; one mark each; independent strategy observed offline | Change an addend instead of order |
+| `subborrow2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Calculate two-number borrowing subtraction, operands below 100 | One numeric result | Subtract smaller digit from larger |
+| `subchain2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Record first and final left-to-right subtractions | Two fields; one mark each | Subtract the last two first |
+| `addstory2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Find total in two/three delivery stories | Numeric total only; explanation assessed offline | Leave out a delivery |
+| `substory2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Find remainder after one/two removals | Numeric total only; explanation assessed offline | Combine removals incorrectly |
+| `multfact2a` (121) | [2N3](p2-basic-multiplication.md), candidate | All ordered products with factors 0–10 | One numeric product; sampled practice not full recall evidence | Treat zero as identity |
+| `multstory2a` (30) | [2N3](p2-basic-multiplication.md), candidate | One-step equal-group totals in two contexts | Numeric total only; operation/factor explanation observed offline | Add group count and group size |

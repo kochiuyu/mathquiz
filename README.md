@@ -6,25 +6,27 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** As of 16 November 2026, 27 units have at least one selectable task, 58 have none, and 12 have been verified resource complete. The builder offers 59 question families and 929 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the 16 November 2026 release-5 candidate, 28 units have at least one selectable task, 57 have none, and 12 have been verified resource complete. The candidate builder offers 72 question families and 1,212 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
-| P2 | 15 | 4 | 11 | 0 |
+| P2 | 15 | 5 | 10 | 0 |
 | P3 | 14 | 3 | 11 | 0 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **27** | **58** | **12** |
+| **Total** | **85** | **28** | **57** | **12** |
 
-**Released resource inventory:** 30 units have a digital task or linked teacher-led pupil activity; 27 have selectable digital tasks. All 12 P1 units now have resources and objective/source mappings; 9 have selectable digital tasks. Time, directions and inquiry are teacher-led. All twelve P1 units are now resource complete; the other eighteen touched units are not yet certified complete. Whole-curriculum objective totals and percentages are not yet claimed.
+**Release-5 candidate resource inventory:** 31 units have digital tasks or linked teacher-led pupil activities; 28 have selectable digital tasks. This includes the unpublished P2 addition/subtraction unit. All 12 P1 units retain their verified resource-complete checkpoints; P2 has 0 verified complete. The other 19 touched units are not certified complete. Whole-curriculum objective totals and percentages are not yet claimed.
 
 **Verified resource-complete checkpoint: 12/85 units, all P1.** Source audits and independent mathematics review cover 45 numbered objectives plus 1F1’s integrated inquiry statement. Live commit `fa4b8e4` passed **185/185** browser regression checks. Targeted bilingual teacher/key, money paper/key and shape-practice checks, plus clock, 2-D curve and positional-diagram visuals, passed. This means usable assessment resources, not pupil mastery or completion of a child’s inquiry hours. Manual downloaded-PDF visual inspection and teacher print-preview/pagination are unperformed; classroom, independent translation, physical-printer and screen-reader validation remain deferred.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
-**Current release · P1 resource coverage complete:** 60 permanent families / 944 variants remain reproducible; 59 families / 929 variants are selectable. Teacher-led materials cover oral, real-object, drawing/making, measurement, time and inquiry objectives that digital answers cannot certify. P2’s three-digit numbers, addition/subtraction and multiplication are the next release; their locally authored work is not yet counted as published or complete.
+**Release 5 candidate · P2 numbers and operations:** 73 permanent families / 1,227 variants; 72 families / 1,212 variants selectable. Thirteen new families add 283 variants across 2N1, 2N2 and 2N3. [Three-digit number activity](activities/p2-3digit-numbers.html), [addition/subtraction activity](activities/p2-addition-subtraction-ii.html) and [multiplication activity](activities/p2-basic-multiplication.html) supply oral, concrete, strategy, estimation and explanation evidence that numeric answers cannot establish. The 241-check browser suite is authored, not yet passed for this candidate. P1 completion remains 12/85; no P2 completion claim is made. 2N4 drafts are excluded from this release.
+
+**P2 marking:** `smartadd2a` and `subchain2a` award one mark per correct field, up to two; `order999a` awards up to three. Other new items award one. These new per-field partial-credit contracts do not change any previously released item. P2 numeric fields retain equivalent-number acceptance; choosing a comparison/parity option requires the exact correct choice. Sampled multiplication practice does not establish whole-table recall.
 
 [Immediate priorities](#next-three-deliverables) · [Priority rules](#how-to-choose-the-next-release) · [P1–P6 delivery plan](#grade-by-grade-delivery-plan) · [Milestones](#milestones-and-handoff) · [Release procedure](#author-verify-and-hand-off-a-release)
 

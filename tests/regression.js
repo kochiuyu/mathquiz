@@ -5,6 +5,20 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["multfact2a",2,121,"885057eb535f67d040d3f4ce0db453cf9d1017a09c8a76bb8d66387502a2d8a9"],
+    ["multstory2a",2,30,"682e9bb6c2f4990d84bf01eca6170aa8a3f2db24753f0fcc371f9690a0a672ec"],
+    ["digitvalue2a",2,12,"eed20ff8983d839fb5603bb3101919c27f80791ede062c18d97d2562563ab4da"],
+    ["sequence999a",2,12,"ad35ada4e67af226db69f3c9188c77d196ce91ac7d271c10df725c3fa9400f69"],
+    ["parity999a",2,12,"43fb90abda60579a42e5479a8f2cbc25db2d90445b68e131efb3d3fab0a2d223"],
+    ["compare999a",2,12,"1d9180d5a296c38290bb77e691f158e6274f2028425960be4d0562a29a75da6c"],
+    ["order999a",2,12,"c82cb925f95ddbef7e74df5b01988db2bfe2beb94e664a31fcd6375eadb31091"],
+    ["addcarry2a",2,12,"cc7f80e387fba4b35c87092774a829f4e2c9237f1b1df5ad3eb7cd815d24193d"],
+    ["smartadd2a",2,12,"67ab3723fd8f09523c70937b05e3da773065c208e986ff81ffa4b8b3a47b4d54"],
+    ["subborrow2a",2,12,"1ab284904d0f84a246fde37cb4a373acd0da5bc60bca1448f33147ed1ac36a78"],
+    ["subchain2a",2,12,"be727d3db31eb9ad25d48cc7fbd9b02ecb95f847b06dbdc516e586c9936d142d"],
+    ["addstory2a",2,12,"70f00e5ddf89e9c9e0e3fa167d9e5be7e572755251b45c5efb484a584b4343cd"],
+    ["substory2a",2,12,"4e3b2f037d64c59af63ece69bb7eeadd4fb0fb796c9b4e16ff14de0fb54516b1"],
+
     ["solidname1a",1,15,"6e9c97486be4f178a58d6c000e84d2015e1e61202ebb78b89e650b8b704bfff3"],
     ["coincount1a",1,12,"1ac0c2eeb70330bba087314e13b9dfe6138b28ebb2fa2d0fe330c9b25b5694c5"],
     ["priceword1a",1,12,"b987bcfc5a687ebfa13d6418e6bd2ab6999b00e7295911743f5198bffbe81652"],
@@ -121,9 +135,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===944,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===1227,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 944 variants",()=>{
+  await check("Released bilingual and response contracts · 1227 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -267,6 +281,92 @@
         const blob=await frame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
         assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && raw.includes('/Subtype /Image'),'solid PDF content/font/image');
         assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'solid PDF pages');
+      }
+    }finally{frames.forEach(f=>f.remove())}
+  });
+  await check("P2 number extensions · all sixty independent answers and numeric contract",()=>{
+    for(const id of ['digitvalue2a','sequence999a','parity999a','compare999a','order999a']){
+      const f=families.find(f=>f.id===id);
+      for(let i=0;i<f.count;i++){
+        const q=f.make(i),m=q.number2N1;let expected;
+        if(m.kind==='digitValue')expected=[Number(String(m.n).padStart(3,'0')[m.place===100?0:m.place===10?1:2])*m.place];
+        if(m.kind==='sequence')expected=[m.start+3*m.step];
+        if(m.kind==='parity')expected=['02468'.includes(String(m.n).at(-1))?'even':'odd'];
+        if(m.kind==='comparison')expected=[m.a<m.b?'<':m.a>m.b?'>':'='];
+        if(m.kind==='order')expected=[...m.shown].sort((a,b)=>m.direction===1?a-b:b-a);
+        assert(stable(q.answer)===stable(expected),'2N1 oracle '+id+'-'+i);
+        if(q.fields)for(const answer of q.answer){
+          for(const value of [String(answer),answer+'.0',(answer*2)+'/2'])assert(numericAnswer(value,answer,false),'P2 equivalent numeral');
+          for(const value of ['',answer+' books',String(answer+1)])assert(!numericAnswer(value,answer,false),'P2 invalid numeral');
+        }
+      }
+    }
+  });
+  await check("P2 multiplication · complete 0–10 table and thirty story oracles",()=>{
+    const pairs=new Set();
+    for(const id of ['multfact2a','multstory2a']){
+      const f=families.find(f=>f.id===id);
+      assert(f.count===(id==='multfact2a'?121:30),'multiplication bank size');
+      for(let i=0;i<f.count;i++){
+        const q=f.make(i),m=q.multiplicationFact||q.multiplicationStory,a=m.a??m.groups,b=m.b??m.each;
+        assert(Number.isInteger(a)&&Number.isInteger(b)&&a>=0&&a<=10&&b>=0&&b<=10,'factor range');
+        let product=0;for(let j=0;j<a;j++)product+=b;
+        assert(q.answer[0]===product && q.marks===1 && q.practiceHint.length===2,'multiplication oracle');
+        if(q.multiplicationFact)pairs.add(a+','+b);
+      }
+    }
+    assert(pairs.size===121,'ordered fact missing');
+  });
+  async function checkP2NewRoutes(ids){
+    const frames=[];
+    try{
+      for(const language of ['en','zh'])for(const id of ids){
+        const l=language==='zh'?1:0,f=families.find(f=>f.id===id),q=f.make(0),query='?v=3&lang='+language+'&p=2&items='+id+'-0';
+        const builder=await shapeFrame(query+'&view=build');frames.push(builder);assert(builder.contentDocument.querySelector('select[name="'+id+'"]'),'P2 builder '+id);
+        const pupil=await shapeFrame(query);frames.push(pupil);const d=pupil.contentDocument;
+        d.querySelector('form').requestSubmit();assert(!d.querySelector('button[type="submit"]').hidden,'blank P2 item submitted');
+        if(q.choices)[...d.querySelectorAll('input[type="radio"]')].find(x=>x.value===q.answer[0]).checked=true;
+        else q.answer.forEach((answer,j)=>d.querySelector('[name="q0f'+j+'"]').value=(answer*2)+'/2');
+        d.querySelector('form').requestSubmit();assert(d.getElementById('status').textContent.includes(q.marks+' / '+q.marks),'P2 score '+id);
+        if(id==='order999a'){
+          const partial=await shapeFrame(query);frames.push(partial);const pd=partial.contentDocument;
+          q.answer.forEach((a,j)=>pd.querySelector('[name="q0f'+j+'"]').value=String(j===1?a+1:a));pd.querySelector('form').requestSubmit();
+          assert(pd.getElementById('status').textContent.includes('2 / 3'),'order partial field score');
+        }
+        const key=await shapeFrame(query+'&view=key');frames.push(key);const kd=key.contentDocument;
+        if(q.number2N1 && q.fields)q.fields.forEach((label,j)=>assert(kd.querySelector('fieldset p b').textContent.includes(label[l]+': '+q.answer[j]),'P2 labelled key '+id));
+        else if(q.choiceLabels)assert(kd.querySelector('fieldset p b').textContent===q.choiceLabels[q.answer[0]][l],'P2 localized choice key');
+        const practice=await shapeFrame('?lang='+language+'&p=2&view=practice&skill='+id);frames.push(practice);const pr=practice.contentDocument;
+        const variants=id==='multfact2a'?[0,51,120]:id==='multstory2a'?[0,12,29]:[0,6,11];
+        for(const variant of variants){
+          const item=f.make(variant),inputs=[...pr.querySelectorAll('#practice-form input')];
+          pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-next').hidden,'blank practice advanced');
+          if(item.choices){assert(inputs.length===item.choices.length,'choice count');inputs.find(x=>x.value!==item.answer[0]).checked=true;}
+          else inputs.forEach((input,j)=>input.value=String(item.answer[j]+1));
+          pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-feedback').textContent.includes((item.practiceHint||item.number2N1.hint)[l]),'P2 targeted hint');
+          if(item.choices)inputs.find(x=>x.value===item.answer[0]).checked=true;else inputs.forEach((input,j)=>input.value=item.answer[j]+'.0');
+          pr.querySelector('form').requestSubmit();assert(!pr.getElementById('practice-next').hidden && pr.getElementById('practice-feedback').textContent.includes(item.why[l]),'P2 retry feedback');
+          pr.querySelector('form').requestSubmit();pr.getElementById('practice-next').click();
+        }
+        assert(pr.querySelector('h1').textContent===(l?'練習完成':'Practice complete') && pr.body.textContent.includes('0 / 3'),'P2 fullflow completion');
+        if(id.startsWith('mult'))assert(pr.body.textContent.includes(l?'不能評估整張乘法表':'does not assess recall'),'sample recall caveat');
+        for(const frame of [builder,pupil,key,practice]){frame.style.width='360px';await new Promise(r=>setTimeout(r,70));assert(frame.contentDocument.documentElement.scrollWidth<=frame.contentDocument.documentElement.clientWidth+1,'P2 phone '+id);}
+      }
+    }finally{frames.forEach(f=>f.remove())}
+  }
+  await check("P2 2N1 · bilingual builder, pupil, partial marking, keys and practice",()=>checkP2NewRoutes(['digitvalue2a','sequence999a','parity999a','compare999a','order999a']));
+  await check("P2 2N3 · bilingual builder, pupil, keys and sampled practice",()=>checkP2NewRoutes(['multfact2a','multstory2a']));
+  await check("P2 number and multiplication · bilingual paper/key PDF",async()=>{
+    const frames=[];
+    try{
+      const ids=['digitvalue2a-0','sequence999a-6','parity999a-0','compare999a-0','order999a-0','multfact2a-120','multstory2a-29'].join('.');
+      for(const language of ['en','zh'])for(const view of ['paper','key']){
+        const frame=await shapeFrame('?v=3&lang='+language+'&p=2&items='+ids+'&view='+view);frames.push(frame);const d=frame.contentDocument;
+        assert(d.querySelectorAll('fieldset').length===7,'P2 mixed print count');
+        if(view==='paper')assert(d.querySelectorAll('input').length===0,'P2 paper live controls');
+        const blob=await frame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
+        assert(blob.size>10000 && raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && raw.includes('/Subtype /Image'),'P2 PDF text/images');
+        assert((raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,'P2 PDF page');
       }
     }finally{frames.forEach(f=>f.remove())}
   });
@@ -2554,7 +2654,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===59,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===72,"grade coverage counts wrong");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
@@ -2596,7 +2696,7 @@
   await check("P1 teacher activity routes, keys and phone layout",async()=>{
     const frames=[];
     try{
-      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry'])for(const language of ['en','zh']){
+      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication'])for(const language of ['en','zh']){
         const frame=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(frame);
         const d=frame.contentDocument,w=frame.contentWindow,section=d.getElementById(language);
         assert(section && !section.hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language');
@@ -2619,17 +2719,18 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 59 distinct live home links",async()=>{
+  await check("Practice catalogue · 72 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===59 && new Set(links.map(a=>a.href)).size===59,"practice links missing or repeated");
+      assert(links.length===72 && new Set(links.map(a=>a.href)).size===72,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);
       }
     }finally{frame.remove();}
   });
+  await run2N2ReleaseChecks({check,assert,shapeFrame,families,numericAnswer});
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";

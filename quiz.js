@@ -265,7 +265,7 @@ function controls(q,i,paper,key=false) {
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):(q.number2N1 && q.fields)||q.arithmetic2N2||q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -310,6 +310,77 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
+function renderNumber2Practice(skill){
+  const family=families.find(f=>f.id===skill),variants=[0,6,11];
+  const practiceUrl=language=>'?lang='+language+'&p=2&view=practice&skill='+skill;
+  for(const language of ['en','zh'])document.getElementById(language).href=practiceUrl(language);
+  document.title=local(family.label)+' · '+t('Practice','練習')+' | MathQuiz';
+  let position=0,attempts=0,firstTry=0,finished=false;
+  function show(){
+    const q=family.make(variants[position]);finished=false;
+    app.innerHTML='<a href="'+href(null)+'">← '+t('All quizzes','所有小測')+'</a><h1>'+local(family.label)+'</h1><p class="practice-progress">'+t('Question ','第 ')+(position+1)+t(' of ',' 題，共 ')+variants.length+t('',' 題')+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+controls(q,0,false)+'</fieldset><button type="submit">'+t('Check answer','核對答案')+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?'See result':'Next question',position+1===variants.length?'查看結果':'下一題')+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById('practice-form'),inputs=[...form.querySelectorAll('input')],feedback=document.getElementById('practice-feedback');
+    form.onsubmit=e=>{
+      e.preventDefault();if(finished)return;
+      const selected=q.choices?inputs.find(input=>input.checked):null,blank=q.choices?!selected:inputs.find(input=>!input.value.trim());
+      if(blank){feedback.textContent=q.choices?t('Choose one answer.','請選擇一個答案。'):t('Complete every answer field.','請填寫每個答案欄。');(q.choices?inputs[0]:blank).focus();return;}
+      attempts++;
+      const scores=q.choices?[Number(selected.value===q.answer[0])]:inputs.map((input,j)=>Number(numericAnswer(input.value,q.answer[j],false))),earned=scores.reduce((a,b)=>a+b,0),correct=scores.every(Boolean);
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts>=2){
+        finished=true;
+        const answers=q.choices?(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0]):q.fields.map((field,j)=>local(field)+': '+q.answer[j]).join('; ');
+        feedback.textContent=(correct?t(attempts===1?'Correct on the first try. ':'Correct after a hint. ',attempts===1?'第一次答對。':'看提示後答對。'):t('Answers: ','答案：')+answers+'. ')+t('Fields correct: ','答對欄數：')+earned+' / '+scores.length+'. '+local(q.why);
+        inputs.forEach(input=>input.disabled=true);form.querySelector('button[type="submit"]').hidden=true;const next=document.getElementById('practice-next');next.hidden=false;next.focus();
+      }else{feedback.textContent=local(q.number2N1.hint);inputs[q.choices?0:scores.indexOf(0)].focus();}
+    };
+    document.getElementById('practice-next').onclick=()=>{
+      if(!finished)return;finished=false;position++;attempts=0;
+      if(position<variants.length){show();app.querySelector('#practice-form input').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t('All quizzes','所有小測')+'</a><h1>'+t('Practice complete','練習完成')+'</h1><p role="status">'+t('Questions fully correct on the first try: ','第一次全部答對的題數：')+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t('Practise again','再練習')+' →</a>';
+    };
+  }
+  show();
+}
+
+function renderArithmetic2Practice(skill){
+  const family=families.find(f=>f.id===skill),variants=skill==="multfact2a"?[0,51,120]:skill==="multstory2a"?[0,12,29]:[0,6,11];
+  const practiceUrl=language=>'?lang='+language+'&p=2&view=practice&skill='+skill;
+  for(const language of ['en','zh'])document.getElementById(language).href=practiceUrl(language);
+  document.title=local(family.label)+' · '+t('Practice','練習')+' | MathQuiz';
+  let position=0,attempts=0,firstTry=0,finished=false;
+  function show(){
+    const original=family.make(variants[position]),q=original.multiplicationFact?{...original,fields:[["product","積"]]}:original;finished=false;
+    app.innerHTML='<a href="'+href(null)+'">← '+t('All quizzes','所有小測')+'</a><h1>'+local(family.label)+'</h1><p class="practice-progress">'+t('Question ','第 ')+(position+1)+t(' of ',' 題，共 ')+variants.length+t('',' 題')+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+controls(q,0,false)+'</fieldset><button type="submit">'+t('Check answer','核對答案')+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?'See result':'Next question',position+1===variants.length?'查看結果':'下一題')+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById('practice-form'),inputs=q.fields.map((_,j)=>form.querySelector('[name="q0f'+j+'"]')),feedback=document.getElementById('practice-feedback');
+    form.onsubmit=e=>{
+      e.preventDefault();if(finished)return;
+      const blank=inputs.find(input=>!input.value.trim());
+      if(blank){feedback.textContent=t('Complete every answer field.','請填寫每個答案欄。');blank.focus();return;}
+      attempts++;
+      const scores=inputs.map((input,j)=>Number(numericAnswer(input.value,q.answer[j],false))),earned=scores.reduce((a,b)=>a+b,0),correct=earned===inputs.length;
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts>=2){
+        finished=true;
+        const answers=q.fields.map((field,j)=>local(field)+': '+q.answer[j]).join('; ');
+        feedback.textContent=(correct?t(attempts===1?'Correct on the first try. ':'Correct after a hint. ',attempts===1?'第一次答對。':'看提示後答對。'):t('Answers: ','答案：')+answers+'. ')+t('Fields correct: ','答對欄數：')+earned+' / '+inputs.length+'. '+local(q.why);
+        inputs.forEach(input=>input.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById('practice-next');next.hidden=false;next.focus();
+      }else{
+        const missed=q.fields.filter((_,j)=>!scores[j]).map(local).join(t(', ','、'));
+        feedback.textContent=t('Check ','請檢查')+missed+'. '+local(q.practiceHint||q.arithmetic2N2.hint);
+        inputs[scores.indexOf(0)].focus();
+      }
+    };
+    document.getElementById('practice-next').onclick=()=>{
+      if(!finished)return;finished=false;position++;attempts=0;
+      if(position<variants.length){show();app.querySelector('#practice-form input').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t('All quizzes','所有小測')+'</a><h1>'+t('Practice complete','練習完成')+'</h1>'+(family.code==='2N3'?'<p>'+t('This short sample does not assess recall of the whole multiplication table.','這個短練習樣本不能評估整張乘法表的記憶。')+'</p>':'')+'<p role="status">'+t('Questions fully correct on the first try: ','第一次全部答對的題數：')+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t('Practise again','再練習')+' →</a>';
+    };
+  }
+  show();
+}
+
 function renderNumber100Practice(skill){
   const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11],threeadd1a:[0,4,11],storyadd1a:[0,5,10],storysub1a:[0,5,10],lengthcm1a:[0,6,9],distancecm1a:[0,6,9]},variants=sets[skill];
   const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"],threeadd1a:["Practise adding three numbers","練習三個數相加"],storyadd1a:["Practise addition stories","練習加法文字題"],storysub1a:["Practise subtraction stories","練習減法文字題"],lengthcm1a:["Practise measuring ribbons in centimetres","練習用厘米量度絲帶"],distancecm1a:["Practise measuring distances in centimetres","練習用厘米量度距離"]};
@@ -1319,6 +1390,9 @@ function renderAdditionalP1Practice(skill){
 // counting link omits skill to preserve already-shared URLs.
 const practiceCatalogue=[
   {grade:1,skill:null,label:["Practise counting","練習點算"],render:renderPractice},
+  ...multiplicationFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderArithmetic2Practice(f.id)})),
+  ...numberFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderNumber2Practice(f.id)})),
+  ...arithmeticFamilies2.map(f=>({grade:2,skill:f.id,label:f.label,render:()=>renderArithmetic2Practice(f.id)})),
   ...solidFamilies1.map(f=>({grade:1,skill:f.id,label:f.label,render:()=>renderChoice100Practice(f.id)})),
   ...moneyFamilies.map(f=>({grade:1,skill:f.id,label:f.label,render:()=>renderChoice100Practice(f.id)})),
   {grade:1,skill:"next1",label:["Practise counting forwards","練習順數"],render:renderPractice},
