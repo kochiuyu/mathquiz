@@ -98,6 +98,16 @@ const families = [
     const [a,b,c]=triples[i],first=a+b,last=b+c,total=a+b+c;
     return {prompt:[`Use ${a} + ${b} + ${c}. Add the first two numbers, then the last two numbers. Write both subtotals and the total you get either way.`,`利用${a} + ${b} + ${c}。分別把前兩個數和後兩個數相加，寫出兩個小計，再寫出兩種方法所得的總和。`],fields:[["First two","前兩個數"],["Last two","後兩個數"],["Total either way","兩種方法的總和"]],answer:[first,last,total],marks:1,why:[`First two: ${a} + ${b} = ${first}, then ${first} + ${c} = ${total}. Last two: ${b} + ${c} = ${last}, then ${a} + ${last} = ${total}. Both ways give ${total}.`,`前兩個數：${a} + ${b} = ${first}，再算${first} + ${c} = ${total}。後兩個數：${b} + ${c} = ${last}，再算${a} + ${last} = ${total}。兩種方法都得到${total}。`],groupedAddition:{a,b,c,first,last,total}};
   }},
+  {id:"columnadd1a",grade:1,code:"1N4",label:["Complete a carrying addition column","完成進位加法直式"],count:12,make(i){
+    const pairs=[[27,15],[38,24],[46,17],[19,32],[57,26],[64,18],[25,37],[48,33],[36,29],[18,45],[53,19],[72,19]];
+    const [a,b]=pairs[i],result=a+b,ones=a%10+b%10,tens=Math.floor(a/10)+Math.floor(b/10)+1;
+    return {prompt:["Complete the addition in columns. Write one digit in each answer box.","完成加法直式。每個答案格填一個數字。"],fields:[["Tens","十位"],["Ones","個位"]],answer:[Math.floor(result/10),result%10],marks:1,why:[`Ones: ${a%10} + ${b%10} = ${ones}; write ${result%10} in the ones column and carry 1 ten. Tens: ${Math.floor(a/10)} + ${Math.floor(b/10)} + 1 = ${tens}. So ${a} + ${b} = ${result}.`,`個位：${a%10} + ${b%10} = ${ones}，在個位寫${result%10}，並進1個十。十位：${Math.floor(a/10)} + ${Math.floor(b/10)} + 1 = ${tens}。所以${a} + ${b} = ${result}。`],columnForm:{a,b,operation:"add",result}};
+  }},
+  {id:"columnsub1a",grade:1,code:"1N4",label:["Complete a subtraction column without borrowing","完成不退位減法直式"],count:12,make(i){
+    const pairs=[[58,24],[76,35],[49,27],[83,42],[65,13],[92,51],[70,30],[57,25],[88,66],[64,34],[95,73],[61,21]];
+    const [a,b]=pairs[i],result=a-b;
+    return {prompt:["Complete the subtraction in columns. Write one digit in each answer box.","完成減法直式。每個答案格填一個數字。"],fields:[["Tens","十位"],["Ones","個位"]],answer:[Math.floor(result/10),result%10],marks:1,why:[`Ones: ${a%10} − ${b%10} = ${result%10}. Tens: ${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(result/10)}. So ${a} − ${b} = ${result}. Check: ${result} + ${b} = ${a}.`,`個位：${a%10} − ${b%10} = ${result%10}。十位：${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(result/10)}。所以${a} − ${b} = ${result}。驗算：${result} + ${b} = ${a}。`],columnForm:{a,b,operation:"subtract",result}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;

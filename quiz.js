@@ -168,9 +168,15 @@ function shapeOptions(q,i,paper,key=false){
     return paper?'<div class="shape-option">'+(key?'':'<span aria-hidden="true">□</span>')+label+drawing+'</div>':'<label class="shape-option"><input type="radio" name="q'+i+'" value="'+letter+'">'+label+drawing+'</label>';
   }).join("")+'</div>';
 }
-function controls(q,i,paper) {
+function controls(q,i,paper,key=false) {
   if(q.shapes)return shapeOptions(q,i,paper);
   if(q.choices) return q.choices.map(v=> paper ? '<span class="option">□ '+(q.choiceLabels?local(q.choiceLabels[v]):v)+'</span>' : '<label class="option"><input type="'+(q.multi?'checkbox':'radio')+'" name="q'+i+'" value="'+v+'"> '+(q.choiceLabels?local(q.choiceLabels[v]):v)+'</label>').join("");
+  if(q.columnForm){
+    const {a,b,operation}=q.columnForm,sign=operation==="add"?"+":"−",name=operation==="add"?t("Column addition","加法直式"):t("Column subtraction","減法直式");
+    const cells=n=>'<td>'+Math.floor(n/10)+'</td><td>'+n%10+'</td>';
+    const answer=paper?'<span class="column-blank" aria-label="'+t("answer space","作答位置")+'"></span>':null;
+    return '<table class="column-form"><caption class="sr-only">'+name+'</caption><thead><tr><th scope="col"><span class="sr-only">'+t("Operation","運算符號")+'</span></th><th scope="col">'+t("Tens","十位")+'</th><th scope="col">'+t("Ones","個位")+'</th></tr></thead><tbody><tr><td></td>'+cells(a)+'</tr><tr><td>'+sign+'</td>'+cells(b)+'</tr><tr class="column-result"><td>=</td>'+[0,1].map(j=>'<td>'+(key?'<b>'+q.answer[j]+'</b>':answer||'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(j?"Ones answer":"Tens answer",j?"個位答案":"十位答案")+'" name="q'+i+'f'+j+'">')+'</td>').join("")+'</tr></tbody></table>';
+  }
   if(q.purchaseEquation)return paper?'<div class="equation-space">________________________</div>':'<label class="field">'+t("Equation","方程")+' <input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Equation for the purchase story","購物情境的方程")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Use x, + or −, and =. Write the relationship before solving.","用 x、+ 或 − 及 = 表示數量關係，先不用求解。")+'</small>';
   if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
@@ -185,7 +191,7 @@ function controls(q,i,paper) {
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):'')+'<p><b>'+(q.oddEven100?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.oddEven100?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -198,7 +204,7 @@ function mark(form) {
     }
     const values=q.fields.map((_,j)=>String(form.get("q"+i+"f"+j)||"").trim());
     if(values.some(v=>!v))return null;
-    if(q.numberOrder || q.groupedAddition)return Number(values.every((v,j)=>pictogramAnswer(v,q.answer[j])));
+    if(q.numberOrder || q.groupedAddition || q.columnForm)return Number(values.every((v,j)=>pictogramAnswer(v,q.answer[j])));
     if(q.equation){
       const m=values[0].normalize("NFKC").replace(/\s/g,"").match(/^([1-9])\+([1-9])=(\d{1,2})$/);
       return Number(!!m && +m[3]===q.equation.total && ((+m[1]===q.equation.a && +m[2]===q.equation.b) || (+m[1]===q.equation.b && +m[2]===q.equation.a)));
@@ -350,6 +356,34 @@ function renderGroupedAdditionPractice(){
         inputs.forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
       }else{feedback.textContent=t("Add the first two numbers, then the last two. Each subtotal plus the remaining number gives the same total.","先算前兩個數，再算後兩個數；每個小計加上剩下的數，總和都相同。");inputs[0].focus();}
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();app.querySelector('input').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
+function renderColumnPractice(skill){
+  const family=families.find(f=>f.id===skill),variants=[0,5,11],addition=skill==="columnadd1a";
+  const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  document.title=t(addition?"Addition columns · Practice | MathQuiz":"Subtraction columns · Practice | MathQuiz",addition?"加法直式 · 練習 | MathQuiz":"減法直式 · 練習 | MathQuiz");
+  let position=0,attempts=0,firstTry=0;
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t(addition?"Practise addition columns":"Practise subtraction columns",addition?"練習加法直式":"練習減法直式")+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById("practice-form"),feedback=document.getElementById("practice-feedback"),inputs=[...form.querySelectorAll('input')];
+    form.onsubmit=e=>{
+      e.preventDefault();const values=inputs.map(el=>el.value.trim());
+      if(values.some(v=>!v)){feedback.textContent=t("Fill both columns.","請填好兩個數位。");inputs[values.findIndex(v=>!v)].focus();return;}
+      attempts++;const correct=values.every((v,j)=>pictogramAnswer(v,q.answer[j]));if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。") : t("The answer is ","答案是 ")+q.columnForm.result+". ")+local(q.why);
+        inputs.forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{feedback.textContent=addition?t("Add the ones first. Carry one ten if the ones sum reaches ten, then add the tens.","先加個位；個位的和達十便進1個十，再加十位。") : t("Subtract the ones first, then the tens. Each digit stays in its own column.","先減個位，再減十位；每個數字都寫在相應的數位。");inputs[0].focus();}
     };
     document.getElementById("practice-next").onclick=()=>{
       position++;attempts=0;
@@ -1223,6 +1257,8 @@ const practiceCatalogue=[
   {grade:1,skill:"noborrow1a",label:["Practise subtraction without borrowing","練習不退位減法"],render:()=>renderNumber100Practice("noborrow1a")},
   {grade:1,skill:"threeadd1a",label:["Practise adding three numbers","練習三個數相加"],render:()=>renderNumber100Practice("threeadd1a")},
   {grade:1,skill:"groupadd1a",label:["Practise grouping three addends","練習組合三個加數"],render:renderGroupedAdditionPractice},
+  {grade:1,skill:"columnadd1a",label:["Practise addition columns","練習加法直式"],render:()=>renderColumnPractice("columnadd1a")},
+  {grade:1,skill:"columnsub1a",label:["Practise subtraction columns","練習減法直式"],render:()=>renderColumnPractice("columnsub1a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},
