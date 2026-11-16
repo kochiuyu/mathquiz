@@ -24,6 +24,19 @@ function figure(type) {
     const alt=t(`Cuboid. Length ${type.length} cm, width ${type.width} cm and height ${type.height} cm.`,`長方體。長${type.length}厘米、闊${type.width}厘米、高${type.height}厘米。`);
     return '<svg class="figure cuboid-volume" viewBox="0 0 330 235" role="img" aria-label="'+alt+'"><path d="M55 65 L100 30 H270 L225 65 Z" fill="#e8f0ea" stroke="#20392f" stroke-width="2.5"/><path d="M225 65 L270 30 V150 L225 185 Z" fill="#d5e5da" stroke="#20392f" stroke-width="2.5"/><path d="M55 65 H225 V185 H55 Z" fill="#f5faf5" stroke="#20392f" stroke-width="2.5"/><text x="140" y="212" text-anchor="middle">'+t("length ","長 ")+type.length+' cm</text><text x="10" y="132">'+t("height ","高 ")+type.height+' cm</text><text x="54" y="36">'+t("width ","闊 ")+type.width+' cm</text></svg>';
   }
+  if (typeof type === "object" && type.kind === "circleParts") {
+    const raw={radius:[[0,0],[60,45]],diameter:[[-75,0],[75,0]],chord:[[-45,-60],[45,-60]]},turn=type.rotation/90;
+    const rotate=([x,y])=>turn===1?[-y,x]:turn===2?[-x,-y]:turn===3?[y,-x]:[x,y];
+    const at=point=>{const [x,y]=rotate(point);return [type.centre[0]+x,type.centre[1]+y];};
+    const drawn=type.segments.map(segment=>{
+      const [a,b]=raw[segment.kind].map(at),dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);
+      const fraction=segment.kind==="diameter"?.75:segment.kind==="radius"?.62:.5;
+      const x=a[0]+dx*fraction-dy/length*17,y=a[1]+dy*fraction+dx/length*17;
+      return '<path d="M'+a.join(' ')+' L'+b.join(' ')+'"/><text x="'+x+'" y="'+y+'" fill="#20392f" stroke="none" text-anchor="middle" dominant-baseline="central">'+segment.letter+'</text>';
+    }).join("");
+    const alt=t("Circle with centre O and three labelled line segments A, B and C. One joins O to the circle, one passes through O, and one joins two points on the circle away from O.","圓心標為O，圖中有A、B、C三條標示的線段。一條由O連至圓上，一條穿過O，另一條在O以外連接圓上的兩點。");
+    return '<svg class="figure circle-parts" viewBox="0 0 300 240" role="img" aria-label="'+alt+'"><circle cx="150" cy="120" r="75" fill="#fffefa" stroke="#20392f" stroke-width="2.5"/><g fill="none" stroke="#20392f" stroke-width="3.5" stroke-linecap="round">'+drawn+'</g><circle cx="150" cy="120" r="4" fill="#20392f"/><text x="137" y="106" text-anchor="middle">O</text></svg>';
+  }
   if (typeof type === "object" && type.kind === "pictogram") {
     const horizontal=type.orientation==="horizontal",names=type.categories.map(local);
     const symbol=(x,y)=>'<g class="pict-symbol" transform="translate('+x+' '+y+')" fill="none" stroke="#20392f" stroke-width="2"><circle cx="9" cy="6" r="4"/><path d="M2 23v-7q0-5 7-5t7 5v7M2 23h14"/></g>';
@@ -797,6 +810,42 @@ function renderP5MeasurePractice(skill){
   }
   show();
 }
+function renderCirclePractice(){
+  const family=families.find(f=>f.id==="circle5a"),variants=[0,5,7];
+  let position=0,attempts=0,firstTry=0;
+  const practiceUrl=language=>"?lang="+language+"&p=5&view=practice&skill=circle5a";
+  document.title=t("Circle parts · Practice | MathQuiz","圓的各部分 · 練習 | MathQuiz");
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise circle parts","練習辨認圓的各部分")+'</h1><p>'+t("Find the radius in each circle. Try three questions at your own pace.","在每個圓中找出半徑，按自己的步伐完成三題。")+'</p><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+figure(q.figure)+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    document.getElementById("practice-form").onsubmit=e=>{
+      e.preventDefault();
+      const choice=new FormData(e.currentTarget).get("q0"),feedback=document.getElementById("practice-feedback");
+      if(!choice){feedback.textContent=t("Choose one segment.","請選擇一條線段。");e.currentTarget.querySelector('input[type="radio"]').focus();return;}
+      attempts++;
+      const correct=choice===q.answer[0];
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+q.answer[0]+". ")+local(q.why);
+        e.currentTarget.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);
+        e.currentTarget.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else{
+        const chosen=q.circleParts.segments.find(segment=>segment.letter===choice);
+        feedback.textContent=chosen.kind==="diameter"
+          ?t("That line passes through O and has both ends on the circle: it is a diameter. Find a line with one end at O.","這條線穿過圓心O，兩端都在圓上，是直徑。找一條以O為其中一端的線段。")
+          :t("Both ends of that chord lie on the circle. Find the centre O, then look for a line ending on the circle.","這條弦的兩端都在圓上。先找圓心O，再找另一端在圓上的線段。");
+      }
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();document.querySelector('#practice-form input[type="radio"]').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 const custom=["2","3"].includes(params.get("v"));
 const strictP1=custom && grade===1 && params.get("v")==="3";
 const selected=custom?decodeItems(params.get("items"),grade):[];
@@ -806,7 +855,7 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a","bar3a"].includes(params.get("skill")))) || (grade===5 && !custom && (view!=="practice" || !["fracadd5a","equation5a","triarea5a","volume5a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","groups2a","pict2a","share2a"].includes(params.get("skill")))) || (grade===3 && !custom && (view!=="practice" || !["frac3a","cup3a","bar3a"].includes(params.get("skill")))) || (grade===5 && !custom && (view!=="practice" || !["fracadd5a","equation5a","triarea5a","volume5a","circle5a"].includes(params.get("skill")))) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
@@ -827,7 +876,8 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
 }else if(grade===3 && view==="practice" && params.get("skill")==="bar3a"){
   renderBarChartPractice();
 }else if(grade===5 && view==="practice"){
-  if(["triarea5a","volume5a"].includes(params.get("skill")))renderP5MeasurePractice(params.get("skill"));
+  if(params.get("skill")==="circle5a")renderCirclePractice();
+  else if(["triarea5a","volume5a"].includes(params.get("skill")))renderP5MeasurePractice(params.get("skill"));
   else renderP5Practice(params.get("skill"));
 }else if(grade===6 && view==="practice" && params.get("skill")==="mean1"){
   renderMeanPractice();
@@ -845,7 +895,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   ];
   app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 3, 4, 5 or 6.","選擇小一、小二、小三、小四、小五或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
   const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; P5 fractions, equations, triangle area and cuboid volume; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；小五分數加法、簡易方程、三角形面積和長方體體積；或小六百分比和平均數練習，遇到困難可看提示再試。");
+  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; P5 fractions, equations, triangle area, cuboid volume and circle parts; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；小五分數加法、簡易方程、三角形面積、長方體體積和圓的各部分；或小六百分比和平均數練習，遇到困難可看提示再試。");
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=next1">'+t("Practise counting forwards","練習順數")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=storyadd1">'+t("Practise addition","練習加法")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=1&view=practice&skill=parts18a">'+t("Practise missing parts","練習找出另一部分")+' →</a>');
@@ -868,6 +918,7 @@ if(invalidV4 || (grade===2 && !custom && (view!=="practice" || !["place3a","grou
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=equation5a">'+t("Practise simple equations","練習簡易方程")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=triarea5a">'+t("Practise triangle area","練習三角形面積")+' →</a>');
   practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=volume5a">'+t("Practise cuboid volume","練習長方體體積")+' →</a>');
+  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",'<a href="?lang='+lang+'&p=5&view=practice&skill=circle5a">'+t("Practise circle parts","練習辨認圓的各部分")+' →</a>');
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);

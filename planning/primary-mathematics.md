@@ -185,7 +185,7 @@ The online result does not by itself establish why a pupil chose an answer. Disc
 | [5A2 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39) | Simple equations (I) | [Solve a one-step equation and check it](p5-simple-equations.md) |
 | [5M1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=41) | Area (II) | [Find the area of a triangle from its base and perpendicular height](p5-triangle-area.md) |
 | [5M2 objective 6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=43) | Volume (I) | [Find the volume of a labelled cuboid](p5-cuboid-volume.md) |
-| [5S1 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45) | Circles | [Identify a pictured radius (draft)](p5-circles.md) |
+| [5S1 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45) | Circles | [Identify a pictured radius](p5-circles.md) |
 | [5S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=46) | 3-D shapes (III) | Identify edges and vertices |
 | [5D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=48) | Bar charts (III) | Compare groups in a compound bar chart |
 | [5F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=49) | Inquiry and investigation | Explain how changing a dimension changes area |
@@ -196,7 +196,11 @@ Source check: **16 November 2026**. [EDB 5N2 objective 2](https://www.edb.gov.hk
 
 #### Live P5 triangle-area and cuboid-volume families
 
-Source check: **16 November 2026**. [EDB 5M1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=87) supports using the triangle-area formula; [5M2 objective 6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=88) supports finding cuboid volume. The [area brief](p5-triangle-area.md) specifies twelve labelled base-and-height triangles; the [volume brief](p5-cuboid-volume.md) specifies twelve labelled cuboids. Both are single-skill samples, not full-unit coverage. The [5S1 circles brief](p5-circles.md) is a source-checked draft only. Manual pupil and hands-on screen-reader checks are deferred.
+Source check: **16 November 2026**. [EDB 5M1 objective 2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=87) supports using the triangle-area formula; [5M2 objective 6](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=88) supports finding cuboid volume. The [area brief](p5-triangle-area.md) specifies twelve labelled base-and-height triangles; the [volume brief](p5-cuboid-volume.md) specifies twelve labelled cuboids. Both are single-skill samples, not full-unit coverage. Manual pupil and hands-on screen-reader checks are deferred.
+
+#### Live P5 circle-parts family
+
+Source check: **16 November 2026**. [EDB 5S1 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=89) and the [2020 notes](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45) support recognising the centre, radius and diameter. The [circle-parts brief](p5-circles.md) defines nine drawings with one radius, one diameter and one noncentral chord each. `circle5a` tests identification of the radius only; it does not assess drawing circles or the whole unit. Manual pupil and hands-on screen-reader checks are deferred.
 
 ### Primary 6
 

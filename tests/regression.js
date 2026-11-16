@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, fracadd5a, equation5a, triarea5a and volume5a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, fracadd5a, equation5a, triarea5a, volume5a and circle5a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -28,7 +28,8 @@
     ["fracadd5a",5,12,"c8d89b1ea481650d2c2bb24e32cfd76f18cf403550075745adc17c430d4afef8"],
     ["equation5a",5,12,"851b768bf0b2b458fca07031b335ee2b836661f2f92ec32b7b4a2140f511340f"],
     ["triarea5a",5,12,"1f2cd92defd0a62de0e87bf651d1839adb1e4404befa560499d95250ec32063c"],
-    ["volume5a",5,12,"1e88938772a12cdd9a6055713aceb6af8352fd59d3deae4b98f2eaec10b2e050"]
+    ["volume5a",5,12,"1e88938772a12cdd9a6055713aceb6af8352fd59d3deae4b98f2eaec10b2e050"],
+    ["circle5a",5,9,"6167eb9000a7018a5cd5a3f1bed2a1ff32a0444ddc3708cfad264d061bd29e97"]
   ];
   const sharedSets = [
     {name:"P1 warm-up",grade:1,ids:["count20a-10","next1-5","pictureadd1-21"],answers:[11,9,"4 + 3 = 7"]},
@@ -85,7 +86,7 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===512,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===521,"fixture count changed");
   });
   for (const [id,grade,count,hash] of expectedFamilies) {
     await check(id+" · "+count+" released variants",async()=>{
@@ -1696,6 +1697,58 @@
       const blob=await paperFrame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
       const pages=(raw.match(/\/Type\s*\/Page\b/g)||[]).length;
       assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && pages>=1 && pages<=2,"P5 measure PDF missing A4/selectable text");
+    }finally{frames.forEach(f=>f.remove());}
+  });
+  await check("P5 circle parts · nine radii, diameters and noncentral chords",()=>{
+    const family=families.find(f=>f.id==="circle5a"),answers=new Set(),rotations=new Set();
+    assert(family && family.grade===5 && family.code==="5S1" && family.count===9,"circle family metadata missing");
+    for(let i=0;i<9;i++){
+      const q=family.make(i),c=q.circleParts;
+      assert(q.figure.kind==="circleParts" && c.radius===75 && c.centre.join(",")==="150,120","circle geometry changed at "+i);
+      assert(q.choices.join("")==="ABC" && c.segments.map(s=>s.letter).join("")==="ABC","circle labels missing at "+i);
+      assert(c.segments.map(s=>s.kind).sort().join(",")==="chord,diameter,radius","circle parts ambiguous at "+i);
+      assert(c.segments.find(s=>s.kind==="radius").letter===q.answer[0],"radius answer mismatch at "+i);
+      assert(q.prompt[0].includes("radius") && q.prompt[1].includes("半徑") && q.why.every(s=>s.includes(q.answer[0])),"bilingual circle text missing at "+i);
+      answers.add(q.answer[0]);rotations.add(c.rotation);
+    }
+    assert(answers.size===3 && rotations.size===4,"circle answer positions or rotations lack variety");
+    assert(decodeItems("circle5a-0",5).length===1 && !decodeItems("circle5a-0",4).length,"circle link or cross-grade guard failed");
+  });
+  await check("P5 circle parts · bilingual quiz, paper, key, practice and PDF",async()=>{
+    const frames=[];let run=0;
+    try{
+      const open=async query=>{const f=await shapeFrame(query+"&regressionRun="+Date.now()+"-circle-"+(++run));frames.push(f);return f.contentDocument;};
+      const builder=await open("?v=3&lang=en&p=5&view=build");
+      assert(builder.querySelector('select[name="circle5a"]'),"P5 circle builder choice missing");
+      const query="?v=3&lang=zh&p=5&items=circle5a-0";
+      const pupil=await open(query),svg=pupil.querySelector("svg.circle-parts");
+      assert(svg && svg.getAttribute("aria-label").includes("圓心") && !svg.getAttribute("aria-label").includes("A由"),"circle SVG access label missing or reveals answer");
+      const parts=[...svg.querySelectorAll("g path")],point=s=>s.match(/M([\d.]+) ([\d.]+) L([\d.]+) ([\d.]+)/).slice(1).map(Number);
+      assert(parts.length===3 && [...svg.querySelectorAll("g text")].map(t=>t.textContent).join("")==="ABC","circle drawing labels or segments missing");
+      const d=parts.map(p=>point(p.getAttribute("d"))),dist=(x,y)=>(x-150)**2+(y-120)**2;
+      assert(dist(d[0][0],d[0][1])===0 && dist(d[0][2],d[0][3])===75**2,"radius endpoints disagree");
+      assert(dist(d[1][0],d[1][1])===75**2 && dist(d[1][2],d[1][3])===75**2 && (d[1][0]+d[1][2])/2===150 && (d[1][1]+d[1][3])/2===120,"diameter geometry disagrees");
+      assert(dist(d[2][0],d[2][1])===75**2 && dist(d[2][2],d[2][3])===75**2 && ((d[2][0]+d[2][2])/2!==150 || (d[2][1]+d[2][3])/2!==120),"chord geometry disagrees");
+      assert(pupil.querySelectorAll('input[type="radio"][name="q0"]').length===3,"circle radio choices missing");
+      pupil.querySelector("form").requestSubmit();
+      assert(pupil.getElementById("status").textContent.includes("請完成第 1 題") && pupil.activeElement===pupil.querySelector('input[type="radio"]'),"blank circle choice not requested or focused");
+      pupil.querySelector('input[type="radio"][value="A"]').click();pupil.querySelector("form").requestSubmit();
+      assert(pupil.getElementById("status").textContent.includes("得分 1 / 1"),"circle pupil marking failed");
+      const key=await open(query+"&view=key"),paper=await open(query+"&view=paper");
+      assert(key.querySelector("fieldset").textContent.includes("A由圓心O") && paper.querySelector("svg.circle-parts") && paper.querySelectorAll(".option").length===3,"circle paper or worked key missing");
+      assert(paper.querySelector(".paper-code").textContent===key.querySelector(".paper-code").textContent,"circle paper/key codes disagree");
+      const paperFrame=frames[frames.length-1];paperFrame.style.width="360px";
+      assert(paper.documentElement.scrollWidth<=360,"circle phone paper overflows");
+      const practice=await open("?lang=zh&p=5&view=practice&skill=circle5a"),form=practice.getElementById("practice-form");
+      assert(form && practice.querySelector("svg.circle-parts") && form.querySelectorAll('input[type="radio"]').length===3,"circle practice missing");
+      form.querySelector('input[value="B"]').click();form.requestSubmit();
+      assert(practice.getElementById("practice-feedback").textContent.includes("直徑"),"diameter hint missing");
+      form.querySelector('input[value="A"]').click();form.requestSubmit();
+      assert(!practice.getElementById("practice-next").hidden,"circle retry failed");
+      practice.getElementById("practice-next").click();
+      assert(practice.querySelector("svg.circle-parts") && practice.querySelector('input[value="C"]') && practice.getElementById("practice-next").hidden,"circle follow-up missing");
+      const blob=await paperFrame.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
+      assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"circle PDF lacks page or selectable text");
     }finally{frames.forEach(f=>f.remove());}
   });
   window.regressionResult = {passed,failed};

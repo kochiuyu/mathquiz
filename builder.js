@@ -124,6 +124,13 @@ const families = [
     return {prompt:[`Find the volume of this cuboid. Its length is ${length} cm, width ${width} cm and height ${height} cm. The drawing is not to scale.`,`求這個長方體的體積。長${length}厘米、闊${width}厘米、高${height}厘米。圖形不依比例繪畫。`],fields:[["cm³","立方厘米"]],answer:[volume],marks:1,
       why:[`One layer has ${length} × ${width} = ${length*width} cubic centimetres. There are ${height} layers, so ${length} × ${width} × ${height} = ${volume} cm³.`,`每層有${length} × ${width} = ${length*width}個立方厘米，共${height}層，所以${length} × ${width} × ${height} = ${volume}立方厘米。`],cuboidVolume:cuboid,figure:{kind:"cuboidVolume",...cuboid}};
   }},
+  {id:"circle5a",grade:5,code:"5S1",label:["Identify a radius","辨認半徑"],count:9,make(i){
+    const letters=["A","B","C"],answer=letters[i%3],rotation=[0,90,180,270][i%4];
+    const parts=["radius","diameter","chord"],segments=letters.map((letter,j)=>({letter,kind:parts[(j-i%3+3)%3]}));
+    const circleParts={centre:[150,120],radius:75,rotation,segments};
+    return {prompt:["Which labelled line segment is a radius of the circle? Choose one.","圖中哪一條標示的線段是圓的半徑？選一個。"],choices:letters,answer:[answer],marks:1,
+      why:[`${answer} joins the centre O to one point on the circle. A diameter passes through O and has both ends on the circle. A chord joins two points on the circle without necessarily passing through O.`,`${answer}由圓心O連到圓上的一點。直徑穿過圓心O，兩端都在圓上。弦連接圓上的兩點，但不一定穿過圓心O。`],circleParts,figure:{kind:"circleParts",...circleParts}};
+  }},
   {id:"per1",grade:4,code:"4M1",label:["Rectangle perimeter","長方形周界"],count:16,make(i){
     const a=12+i,b=5+i%6;
     return numeric([`A rectangular book cover is ${a} cm long and ${b} cm wide. What is its perimeter?`,`長方形書套長${a}厘米、闊${b}厘米。它的周界是多少厘米？`],["cm","厘米"],2*(a+b),`(${a} + ${b}) × 2 = ${2*(a+b)}`);
