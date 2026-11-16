@@ -93,6 +93,11 @@ const families = [
     const [a,b,c]=triples[i],first=a+b,total=first+c;
     return {...numeric([`Add ${a} + ${b} + ${c} from left to right. Write the sum.`,`由左至右計算${a} + ${b} + ${c}，寫出和。`],["",""],total,[`First ${a} + ${b} = ${first}. Then ${first} + ${c} = ${total}.`,`先算${a} + ${b} = ${first}，再算${first} + ${c} = ${total}。`]),numberTo100:true,threeAddition:{a,b,c,first,total}};
   }},
+  {id:"groupadd1a",grade:1,code:"1N4",label:["Group three addends in two ways","用兩種方法組合三個加數"],count:12,make(i){
+    const triples=[[17,23,7],[26,14,9],[18,12,8],[31,18,2],[24,16,5],[35,14,6],[28,22,7],[42,17,3],[13,27,4],[36,13,7],[21,29,6],[32,27,3]];
+    const [a,b,c]=triples[i],first=a+b,last=b+c,total=a+b+c;
+    return {prompt:[`Use ${a} + ${b} + ${c}. Add the first two numbers, then the last two numbers. Write both subtotals and the total you get either way.`,`利用${a} + ${b} + ${c}。分別把前兩個數和後兩個數相加，寫出兩個小計，再寫出兩種方法所得的總和。`],fields:[["First two","前兩個數"],["Last two","後兩個數"],["Total either way","兩種方法的總和"]],answer:[first,last,total],marks:1,why:[`First two: ${a} + ${b} = ${first}, then ${first} + ${c} = ${total}. Last two: ${b} + ${c} = ${last}, then ${a} + ${last} = ${total}. Both ways give ${total}.`,`前兩個數：${a} + ${b} = ${first}，再算${first} + ${c} = ${total}。後兩個數：${b} + ${c} = ${last}，再算${a} + ${last} = ${total}。兩種方法都得到${total}。`],groupedAddition:{a,b,c,first,last,total}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;
