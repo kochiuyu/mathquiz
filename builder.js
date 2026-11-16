@@ -78,6 +78,16 @@ const families = [
     const options=nearest===20?[10,20,40]:[nearest-20,nearest,nearest+20],choices=options.map((_,j)=>options[(j+i)%3]);
     return {prompt:["The small box shows 10 counters. About how many counters are in the large box? Choose the best estimate without counting each one.","小盒有10粒圓片。大盒大約有多少粒圓片？不用逐粒點算，選出最合適的估計數目。"],choices:choices.map(String),answer:[String(nearest)],marks:1,why:[`Compare the large box with the reference group of 10. It has ${count} counters, so about ${nearest} is the closest estimate.`,`把大盒與10粒圓片的參考組比較。大盒有${count}粒，最接近的估計數目是約${nearest}粒。`],figure:{kind:"estimateCounters",count},estimateCount:{count,nearest}};
   }},
+  {id:"carryadd1a",grade:1,code:"1N4",label:["Add two numbers with carrying","兩個數相加並進位"],count:12,make(i){
+    const pairs=[[27,15],[38,24],[46,17],[19,32],[57,26],[64,18],[25,37],[48,33],[36,29],[18,45],[53,19],[72,19]];
+    const [a,b]=pairs[i],ones=a%10+b%10,tens=Math.floor(a/10)+Math.floor(b/10)+1,total=a+b;
+    return {...numeric([`Add ${a} + ${b}. Write the sum.`,`計算${a} + ${b}，寫出和。`],["",""],total,[`Ones: ${a%10} + ${b%10} = ${ones}. Regroup 10 ones as 1 ten. Tens: ${Math.floor(a/10)} + ${Math.floor(b/10)} + 1 = ${tens}. The sum is ${total}.`,`個位：${a%10} + ${b%10} = ${ones}，把10個一換成1個十。十位：${Math.floor(a/10)} + ${Math.floor(b/10)} + 1 = ${tens}。和是${total}。`]),numberTo100:true,carryAddition:{a,b,total}};
+  }},
+  {id:"noborrow1a",grade:1,code:"1N4",label:["Subtract without borrowing","不退位的減法"],count:12,make(i){
+    const pairs=[[58,24],[76,35],[49,27],[83,42],[65,13],[92,51],[70,30],[57,25],[88,66],[64,34],[95,73],[61,21]];
+    const [a,b]=pairs[i],difference=a-b;
+    return {...numeric([`Subtract ${a} − ${b}. Write the difference.`,`計算${a} − ${b}，寫出差。`],["",""],difference,[`Ones: ${a%10} − ${b%10} = ${a%10-b%10}. Tens: ${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(a/10)-Math.floor(b/10)}. So ${a} − ${b} = ${difference}. Check: ${difference} + ${b} = ${a}.`,`個位：${a%10} − ${b%10} = ${a%10-b%10}。十位：${Math.floor(a/10)} − ${Math.floor(b/10)} = ${Math.floor(a/10)-Math.floor(b/10)}。所以${a} − ${b} = ${difference}。驗算：${difference} + ${b} = ${a}。`]),numberTo100:true,noBorrowSubtraction:{a,b,difference}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;

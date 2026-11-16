@@ -231,8 +231,8 @@ function mark(form) {
   status.focus();
 }
 function renderNumber100Practice(skill){
-  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8]},variants=sets[skill];
-  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"]};
+  const family=families.find(f=>f.id===skill),sets={tensones1a:[0,3,7],countgroups1a:[0,5,10],sequence100a:[0,6,3],numberwords100a:[0,5,8],carryadd1a:[0,5,11],noborrow1a:[0,6,11]},variants=sets[skill];
+  const titles={tensones1a:["Practise tens and ones","練習十位和個位"],countgroups1a:["Practise counting in groups","練習分組點算"],sequence100a:["Practise counting forwards and backwards","練習順數和倒數"],numberwords100a:["Practise writing numerals","練習看數詞寫數字"],carryadd1a:["Practise addition with carrying","練習進位加法"],noborrow1a:["Practise subtraction without borrowing","練習不退位減法"]};
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(titles[skill])+" · "+t("Practice","練習")+" | MathQuiz";
@@ -257,6 +257,8 @@ function renderNumber100Practice(skill){
         feedback.textContent=skill==="tensones1a"?t("Count the bundles of ten first. Then count the loose counters.","先數十粒一捆的圓片，再數單粒圓片。")
           :skill==="countgroups1a"?t("Count on by the number of counters in each box, one box at a time.","按每盒的圓片數目順數，每次數一盒。")
           :skill==="numberwords100a"?t("Find the tens word first, then the ones word.","先找出數詞中的十位，再找個位。")
+          :skill==="carryadd1a"?t("Add the ones first. Ten ones make one extra ten.","先加個位；10個一換成1個十。")
+          :skill==="noborrow1a"?t("Subtract the ones first, then the tens. No borrowing is needed.","先減個位，再減十位；這題不用退位。")
           :q.numberSequence.step===1?t("The numbers go up by one each time.","每次順數一個數。")
           :t("The numbers go down by one each time.","每次倒數一個數。");
         input.focus();
@@ -1188,6 +1190,8 @@ const practiceCatalogue=[
   {grade:1,skill:"ordernums100a",label:["Practise ordering numbers","練習排列數字"],render:renderOrder100Practice},
   {grade:1,skill:"numberwords100a",label:["Practise writing numerals","練習看數詞寫數字"],render:()=>renderNumber100Practice("numberwords100a")},
   {grade:1,skill:"estimate100a",label:["Practise estimating counters","練習估計圓片數目"],render:()=>renderChoice100Practice("estimate100a")},
+  {grade:1,skill:"carryadd1a",label:["Practise addition with carrying","練習進位加法"],render:()=>renderNumber100Practice("carryadd1a")},
+  {grade:1,skill:"noborrow1a",label:["Practise subtraction without borrowing","練習不退位減法"],render:()=>renderNumber100Practice("noborrow1a")},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},
