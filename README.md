@@ -6,21 +6,21 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the local P3 first-three candidate, 40 units have at least one selectable task, 45 have none, and 27 have been verified resource complete. The candidate builder offers 107 question families and 1,770 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified P3 first-three release, 40 units have at least one selectable task, 45 have none, and 30 have been verified resource complete. The released builder offers 107 question families and 1,770 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 14 | 1 | 15 |
-| P3 | 14 | 6 | 8 | 0 |
+| P3 | 14 | 6 | 8 | 3 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **40** | **45** | **27** |
+| **Total** | **85** | **40** | **45** | **30** |
 
-**Local P3 candidate resource inventory:** 44 units have digital tasks or linked teacher-led activities; 40 have selectable tasks. All 12 P1 units and all 15 P2 units are verified resource complete. The other 17 touched units remain open. Whole-curriculum objective totals and percentages are not yet claimed.
+**Verified release resource inventory:** 44 units have digital tasks or linked teacher-led activities; 40 have selectable tasks. All 12 P1 units, all 15 P2 units and 3N1–3N3 are verified resource complete. The other 14 touched units remain open. Whole-curriculum objective totals and percentages are not yet claimed.
 
-**Verified resource-complete checkpoint: 27/85 units.** All P1 and P2 units have source-reviewed assessment resources, covering104 numbered objectives plus the1F1 and2F1 integrated inquiry statements. Live `10848e8` passed **299/299** checks including all1,641 released payloads. The original quadrilateral fixture is preserved by deterministic coordinates; its digest and the new mutation guard pass. The three P3 additions remain candidates awaiting their own326-check live run. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 30/85 units.** All P1/P2 units and 3N1–3N3 have source-reviewed assessment resources, covering 113 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `741d1b6` passed **326/326** browser checks with zero failures, including all 1,785 variant contracts. All 1,641 previous payloads remain unchanged. The three static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
@@ -34,9 +34,9 @@ The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, 
 
 ## Next three deliverables
 
-1. **Deliver four-digit numbers (2N4), then Money(II) (2M3).** Respect the source sequence2N4→2M3→2N5. Combine numerical work with real note/coin recognition and permitted exchanges.
-2. **Deliver Addition/subtraction(III) (2N5) and Basic division (2N6).** Assess intermediates, contextual remainders and explanations, not only final totals.
-3. **Continue P2 measurement, time and shape work.** Use genuine tool, construction and observation tasks alongside screen-suitable items; retain the stated manual-validation limits.
+1. **Complete Four arithmetic operations (I) (3N4), then Fractions (I) (3N5).** Follow source order and finish objective-level pupil tasks, worked answers and teacher evidence rather than treating existing variants as full coverage.
+2. **Deliver Length and distance (IV) (3M1), then Time (III) (3M2).** Pair screen-suitable items with genuine measurement, timing and explanation tasks; retain practical observation and manual-validation limits.
+3. **Continue the remaining P3 measurement, shape, data and inquiry units in source order.** Review each frozen candidate, verify the deployed release, then record its resource-complete checkpoint separately. Later private drafts are not released coverage.
 
 ## How to choose the next release
 
@@ -150,18 +150,18 @@ The account-free pilot, teacher workflow, sample papers, technical file guide an
 
 Eight new families / 112 variants extend the candidate to **97 permanent families / 1,641 variants; 96 selectable / 1,626**. All previous 1,529 payloads are unchanged. Added teacher resources cover [2M1](activities/p2-length-distance-iii.html), [2M2](activities/p2-time-ii.html), [2S1](activities/p2-3d-shapes-ii.html), [2S2](activities/p2-angles.html), [2S3](activities/p2-directions-ii.html), [2S4](activities/p2-quadrilaterals-i.html), [2D1](activities/p2-pictograms.html), [2F1](activities/p2-inquiry.html). All 15 P2 units now have verified resource-complete checkpoints (live10848e8,299/299). 2D1 keeps its historical `pict2a`; 2F1 is integrated inquiry, not a numeric family or a claim to deliver ten hours.
 
-`timefinish2a` awards two marks, one per labelled hour/minute field; other new families award one. Printed and real-tool tasks remain necessary for measurement, compass use, construction, timing and inquiry. Run `node tests/static.cjs` and `node tests/p2-later-static.cjs` before publication. The later-P2 suite has 298 authored checks, not a passed browser result. Release-6 verification status above is unchanged; all later additions await deployed browser/PDF/phone verification.
+`timefinish2a` awards two marks, one per labelled hour/minute field; other new families award one. Printed and real-tool tasks remain necessary for measurement, compass use, construction, timing and inquiry. Run `node tests/static.cjs` and `node tests/p2-later-static.cjs` before publication. Historical candidate-stage record: the later-P2 suite initially had 298 authored checks and awaited deployed verification. The corrected public 10848e8 release subsequently passed 299/299, closing the P2 checkpoints; manual validation limitations remain outstanding.
 
-## Local P3 first-three candidate (not yet published)
+## Verified P3 first-three resource checkpoint
 
-Eleven new families and 144 variants cover digital actions in 3N1, 3N2 and 3N3. Candidate totals are **108 permanent families / 1,785 variants; 107 selectable / 1,770**, spanning **40 selectable units and 44 units with resources**. All 1,641 previous payloads are preserved, including canonical quadrilateral coordinates with the original frozen digest. Teacher activities supply oral number reading, concrete place-value/regrouping, strategy, estimation and explanation evidence that numeric answers cannot establish:
+Eleven new families and 144 variants cover digital actions in 3N1, 3N2 and 3N3. Released totals are **108 permanent families / 1,785 variants; 107 selectable / 1,770**, spanning **40 selectable units and 44 units with resources**. All 1,641 previous payloads are preserved, including canonical quadrilateral coordinates with the original frozen digest. Teacher activities supply oral number reading, concrete place-value/regrouping, strategy, estimation and explanation evidence that numeric answers cannot establish:
 
 - [3N1: Five-digit number observation](activities/p3-5digit-numbers.html) · [source audit and objective map](planning/p3-5digit-numbers.md)
 - [3N2: Multiplication, grouping and explanation](activities/p3-multiplication-i.html) · [source audit and objective map](planning/p3-multiplication-i.md)
 - [3N3: Division, regrouping and remainders](activities/p3-division-i.html) · [source audit and objective map](planning/p3-division-i.md)
 
-These three P3 units remain candidates, not verified complete. All27 P1/P2 checkpoints are now verified. Published3cf13d8 initially passed297/298; the canonical-coordinate correction preserved the original payloads and the subsequent10848e8 run passed299/299. The local P3 suite has **326 authored checks**, not a browser pass. Required gates: `node tests/static.cjs`, `node tests/p2-later-static.cjs`, and `node tests/p3-static.cjs`.
+3N1–3N3 are verified resource complete after public `741d1b6` passed 326/326 checks. Required static gates: `node tests/static.cjs`, `node tests/p2-later-static.cjs`, and `node tests/p3-static.cjs`. Earlier candidate status elsewhere in this README is historical.
 
 New P3 numeric items award one mark per labelled field; division quotient/remainder and two-step division award up to two. Keys identify field units rather than slash-separated fractions. Choices require exact responses, and equivalent numeric forms retain the established marking contract. Grade-3 practice language switches and restarts retain grade 3. Finite practice samples do not certify fluency or replace hands-on/teacher evidence. All manual validation limits stated above still apply.
 
-**P2 closure supersedes earlier candidate wording:** 2M1,2M2,2S1–2S4,2D1 and2F1 passed the299-check live gate. The P3 first-three326 checks remain authored, not passed; later P3/P4 drafts are excluded from this candidate.
+**Current closure supersedes earlier candidate wording:** all P1/P2 and 3N1–3N3 checkpoints are verified. Other later-grade drafts are excluded from this release.

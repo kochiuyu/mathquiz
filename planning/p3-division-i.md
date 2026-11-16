@@ -1,5 +1,11 @@
 # P3 Division (I) · 3N3
 
+**Current status: verified resource complete.** 3N3 has three numbered objectives, 36 released variants and a bilingual teacher activity with pupil tasks, worked guidance and observation rubric. Public `741d1b6` passed 326/326 checks. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+
+## Historical draft, source audit and integration record
+
+The original notes below are preserved verbatim. References to unpublished status, missing integration or pending browser QA describe earlier drafting stages and are superseded by the current checkpoint above.
+
 **Unpublished later-grade local draft.** Sequence after P2 completion and QA. No global edits/publication, mastery claim or released-ID changes.
 
 ## Inventory and source audit

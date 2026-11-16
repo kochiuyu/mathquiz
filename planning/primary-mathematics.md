@@ -1,5 +1,9 @@
 # Hong Kong primary mathematics quiz plan
 
+**Verified resource-complete checkpoint: 30/85 units.** All P1/P2 units and 3N1–3N3 have source-reviewed assessment resources, covering 113 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `741d1b6` passed **326/326** browser checks with zero failures, including all 1,785 variant contracts. All 1,641 previous payloads remain unchanged. The three static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+
+Earlier release notes below retain their original dated status as historical evidence; they do not override this checkpoint.
+
 Teachers choose a year, unit and skill, preview the exact questions, replace individual items, then download a pupil paper and a worked key or distribute an online quiz. Pupils can also practise a single skill without an account.
 
 ## Curriculum map
