@@ -1,4 +1,4 @@
-// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, fracadd5a, equation5a, triarea5a, volume5a and circle5a.
+// Baseline from released v1 questions, legacy variants, corrected pct2, triangle1, place3a, groups2a, pict2a, share2a, frac3a, cup3a, bar3a, bar4a, fracadd5a, equation5a, triarea5a, volume5a and circle5a.
 // An intentional change to a released variant needs a new ID; do not refresh a digest
 // merely to make this page green. Review the old and new mathematics first.
 (async function () {
@@ -25,6 +25,7 @@
     ["frac3a",3,12,"b982b6c4eafc70ccdbbf03a93badc41d5c2e510d46d6ef6516093a214fba4bca"],
     ["cup3a",3,12,"5ac30486d8d127f49b72ee37ea92c57a5fe3853d623a22353f1a8eb5547a736b"],
     ["bar3a",3,12,"ef6534c060e1ace0626224c42ceee848ebfec97550d2898bd47e750aaf5e61d5"],
+    ["bar4a",4,12,"7d13e98587598a68c3dbce5c8ae6c2870bd5c1da006956abf6235d2af5d7d337"],
     ["fracadd5a",5,12,"c8d89b1ea481650d2c2bb24e32cfd76f18cf403550075745adc17c430d4afef8"],
     ["equation5a",5,12,"851b768bf0b2b458fca07031b335ee2b836661f2f92ec32b7b4a2140f511340f"],
     ["triarea5a",5,12,"1f2cd92defd0a62de0e87bf651d1839adb1e4404befa560499d95250ec32063c"],
@@ -86,9 +87,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===521,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===533,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 521 variants",()=>{
+  await check("Released bilingual and response contracts · 533 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -1371,7 +1372,7 @@
         .find(a=>a.textContent.includes("Practise counting forwards"));
       assert(sequences && sequences.href.includes("skill=next1"),"home sequence entry missing");
       const addition=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
-        .find(a=>a.textContent.includes("Practise addition"));
+        .find(a=>a.textContent.trim()==="Practise addition →");
       assert(addition && addition.href.includes("skill=storyadd1"),"home addition entry missing");
       const missingPart=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
         .find(a=>a.textContent.includes("Practise missing parts"));
@@ -1765,11 +1766,86 @@
       assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"circle PDF lacks page or selectable text");
     }finally{frames.forEach(f=>f.remove());}
   });
-  await check("Practice catalogue · 21 distinct live home links",async()=>{
+  await check("P4 scaled bar charts · all values, scales and links",()=>{
+    const family=families.find(f=>f.id==="bar4a"),scales=new Set(),orientations=new Set(),targets=new Set();
+    assert(family && family.grade===4 && family.code==="4D1" && family.count===12,"P4 chart metadata missing");
+    for(let i=0;i<family.count;i++){
+      const q=family.make(i),b=q.barChart;
+      assert([10,50,100].includes(b.scale) && ["horizontal","vertical"].includes(b.orientation),"P4 chart scale or direction wrong: "+i);
+      assert(b.steps.length===3 && b.steps.every(n=>Number.isInteger(n)&&n>=0&&n<=6) && b.target>=0&&b.target<3,"P4 chart step bounds wrong: "+i);
+      assert(q.answer[0]===b.steps[b.target]*b.scale && q.figure.kind==="barChart" && q.figure.scale===b.scale,"P4 chart answer and picture differ: "+i);
+      assert(q.prompt[0].includes(b.categories[b.target][0].toLowerCase()) && q.prompt[1].includes(b.categories[b.target][1]) && q.why.every(s=>s.includes(q.answer[0])),"P4 bilingual question or key missing: "+i);
+      scales.add(b.scale);orientations.add(b.scale+":"+b.orientation);targets.add(b.target);
+    }
+    assert(scales.size===3 && orientations.size===6 && targets.size===3,"P4 chart variation incomplete");
+    assert(decodeItems("bar4a-0",4).length===1 && !decodeItems("bar4a-0",3).length && measuringCupAnswer("５０",50) && !measuringCupAnswer("5",50) && !measuringCupAnswer("50 pupils",50),"P4 chart link or marking failed");
+  });
+  await check("P4 scaled bar charts · builder, practice and Chinese key",async()=>{
+    const frames=[];
+    try{
+      const open=async query=>{const frame=await shapeFrame(query);frames.push(frame);return frame.contentDocument;};
+      const builder=await open("?v=3&lang=en&p=4&view=build");
+      assert(builder.querySelector('select[name="bar4a"]'),"P4 chart not in builder");
+      const practice=await open("?lang=en&p=4&view=practice&skill=bar4a"),input=practice.getElementById("practice-answer");
+      assert(practice.querySelector(".bar-chart") && practice.querySelector("h1").textContent.includes("scaled bar charts"),"P4 chart practice missing");
+      input.value="5";practice.getElementById("practice-form").requestSubmit();
+      assert(/Check what one axis step represents/.test(practice.getElementById("practice-feedback").textContent),"P4 chart scale hint missing");
+      input.value="50";practice.getElementById("practice-form").requestSubmit();
+      assert(/Correct after a hint/.test(practice.getElementById("practice-feedback").textContent),"P4 chart retry failed");
+      practice.getElementById("practice-next").click();
+      assert(practice.querySelector('.bar-chart[aria-label*="50"]'),"P4 scale-50 follow-up missing");
+      const key=await open("?v=3&lang=zh&p=4&items=bar4a-0.bar4a-8&view=key");
+      assert(key.querySelectorAll("fieldset").length===2 && key.querySelector("fieldset").textContent.includes("50 名學生") && key.querySelectorAll("fieldset")[1].textContent.includes("600 名學生"),"P4 Chinese key missing");
+      const paper=await open("?v=3&lang=zh&p=4&items=bar4a-0.bar4a-8&view=paper");
+      assert(paper.querySelector(".paper-code").textContent===key.querySelector(".paper-code").textContent,"P4 paper/key codes differ");
+      frames[frames.length-1].style.width="360px";
+      assert(paper.documentElement.scrollWidth<=360,"P4 chart phone paper overflows");
+      const blob=await frames[frames.length-1].contentWindow.mathQuizPdf.generate(),raw=new TextDecoder("latin1").decode(await blob.arrayBuffer());
+      assert(raw.startsWith("%PDF-") && raw.includes("/ToUnicode") && (raw.match(/\/Type\s*\/Page\b/g)||[]).length>=1,"P4 chart PDF lacks a page or selectable text");
+    }finally{frames.forEach(frame=>frame.remove());}
+  });
+  await check("P1 remaining families · practice hints, marking and follow-ups",async()=>{
+    const frames=[];
+    try{
+      for(const [skill,wrong,correct,hint] of [
+        ["add1","1","2","Add both bead groups"],
+        ["pictureadd1","7","4 + 3 = 7","Count the red and blue groups"],
+        ["otherway1",["8","1"],["2","7"],"Swapping the pictured groups"]
+      ]){
+        const frame=await shapeFrame("?lang=en&p=1&view=practice&skill="+skill);frames.push(frame);
+        const doc=frame.contentDocument,form=doc.getElementById("practice-form"),inputs=[...form.querySelectorAll("input")];
+        assert(inputs.length===(skill==="otherway1"?2:1) && doc.querySelector("h1") && doc.getElementById("zh").href.includes(skill),skill+" practice route missing");
+        form.requestSubmit();assert(/Complete every answer box/.test(doc.getElementById("practice-feedback").textContent),skill+" blank answer consumed an attempt");
+        (Array.isArray(wrong)?wrong:[wrong]).forEach((value,i)=>inputs[i].value=value);
+        form.requestSubmit();assert(doc.getElementById("practice-feedback").textContent.includes(hint),skill+" targeted hint missing");
+        (Array.isArray(correct)?correct:[correct]).forEach((value,i)=>inputs[i].value=value);
+        form.requestSubmit();assert(/Correct after a hint/.test(doc.getElementById("practice-feedback").textContent) && !doc.getElementById("practice-next").hidden,skill+" retry or worked step failed");
+        doc.getElementById("practice-next").click();
+        assert(doc.querySelector(".practice-progress").textContent.includes("2 of 3") && doc.getElementById("practice-next").hidden,skill+" distinct follow-up missing");
+      }
+      const chinese=await shapeFrame("?lang=zh&p=1&view=practice&skill=otherway1");frames.push(chinese);
+      assert(chinese.contentDocument.documentElement.lang==="zh-HK" && chinese.contentDocument.querySelector("h1").textContent.includes("另一種組合方法"),"Chinese other-way practice missing");
+    }finally{frames.forEach(frame=>frame.remove());}
+  });
+  await check("Coverage page · live counts, planned work and home link",async()=>{
+    const frames=[];
+    try{
+      const home=await shapeFrame("?lang=en&coverageCheck="+Date.now());frames.push(home);
+      assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
+      const page=await shapeFrame("coverage.html?lang=en");frames.push(page);
+      const doc=page.contentDocument;
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===25,"grade coverage counts wrong");
+      assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
+      assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
+      const zh=await shapeFrame("coverage.html?lang=zh");frames.push(zh);
+      assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級"),"Chinese coverage missing");
+    }finally{frames.forEach(frame=>frame.remove());}
+  });
+  await check("Practice catalogue · 25 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===21 && new Set(links.map(a=>a.href)).size===21,"practice links missing or repeated");
+      assert(links.length===25 && new Set(links.map(a=>a.href)).size===25,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

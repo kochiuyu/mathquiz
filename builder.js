@@ -101,6 +101,18 @@ const families = [
       why:[`The ${categories[target][0].toLowerCase()} bar reaches ${steps[target]} step${steps[target]===1?"":"s"} from zero. Each step represents ${scale} pupil${scale===1?"":"s"}, so ${steps[target]} × ${scale} = ${value} pupils.`,`「${categories[target][1]}」的棒形由零起到第${steps[target]}格。每格代表${scale}人，所以${steps[target]} × ${scale} = ${value}人。`],
       barChart:chart,figure:{kind:"barChart",...chart}};
   }},
+  {id:"bar4a",grade:4,code:"4D1",label:["Read a scaled bar chart","閱讀大數量棒形圖"],count:12,make(i){
+    const cases=[
+      [10,"horizontal",[3,5,2],1],[10,"vertical",[0,4,6],2],[10,"horizontal",[6,1,3],0],[10,"vertical",[2,5,4],1],
+      [50,"horizontal",[4,2,5],0],[50,"vertical",[1,6,3],2],[50,"horizontal",[0,3,5],1],[50,"vertical",[5,4,2],0],
+      [100,"horizontal",[2,4,6],2],[100,"vertical",[5,1,3],0],[100,"horizontal",[3,0,4],1],[100,"vertical",[4,6,2],2]
+    ];
+    const [scale,orientation,steps,target]=cases[i],categories=[["Art","美術"],["Music","音樂"],["Sport","體育"]],value=steps[target]*scale;
+    const chart={scale,orientation,steps,target,categories,title:["Pupils choosing an activity","選擇活動的學生人數"]};
+    return {prompt:[`How many pupils chose ${categories[target][0].toLowerCase()}? Use the scale on the chart.`,`有多少名學生選擇${categories[target][1]}？請按棒形圖的刻度讀取人數。`],fields:[["pupils","名學生"]],answer:[value],marks:1,
+      why:[`The ${categories[target][0].toLowerCase()} bar reaches ${steps[target]} step${steps[target]===1?"":"s"} from zero. Each step is ${scale} pupils, so ${steps[target]} × ${scale} = ${value} pupils.`,`「${categories[target][1]}」的棒形由零起到第${steps[target]}格。每格代表${scale}人，所以${steps[target]} × ${scale} = ${value}人。`],
+      barChart:chart,figure:{kind:"barChart",...chart}};
+  }},
   {id:"fracadd5a",grade:5,code:"5N2",label:["Add unlike fractions","異分母分數加法"],count:12,make(i){
     const cases=[[1,2,1,4],[1,3,1,6],[1,4,1,8],[1,2,1,3],[1,3,1,4],[2,5,1,10],[1,6,1,3],[3,8,1,4],[1,2,1,6],[2,3,1,6],[1,5,3,10],[3,4,1,8]];
     const [a,b,c,d]=cases[i],gcd=(x,y)=>y?gcd(y,x%y):x,l=b*d/gcd(b,d),left=a*l/b,right=c*l/d,sum=left+right,reduce=gcd(sum,l),n=sum/reduce,den=l/reduce;
