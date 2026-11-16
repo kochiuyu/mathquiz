@@ -1,6 +1,6 @@
 # P2 Quadrilaterals (I) · 2S4
 
-**Integrated local candidate.** Source and finite mathematics/geometry independently reviewed. Live browser verification and publication pending; no unit-completion, pupil-mastery or delivered-inquiry-hours claim.
+**Full-unit resource status:** resource complete, verified 16 November 2026; all 4 numbered objectives and applicable remarks. Not pupil mastery or proof of delivered practical/inquiry time.
 
 ## Exact official scope
 
@@ -44,3 +44,11 @@ Classroom observations, independent translation certification, teacher print-pre
 ## Cross-engine payload hotfix candidate
 
 Live3cf13d8 passed297 checks but failed the quadrilateral immutable-payload digest. Node reproduced the original expected digest. Raw trigonometric coordinates are implementation-dependent in their last bits. The proposed fix stores the exact released canonical coordinate numbers and returns fresh copies, preserving all24 canonical payloads, their original digest and every three-decimal SVG. Independent geometry and mutation checks pass; the browser suite adds a deterministic-coordinate check (299 authored). This is a runtime determinism repair, not a changed mathematical item or an updated fixture. Live rerun is required; this unit remains pending.
+
+## Verified resource-complete checkpoint
+
+**2S4 · Quadrilaterals (I): resource complete.** One family / 24 variants for square/rectangle properties; activities assess segments, adjacent/opposite sides, tool checks and drawing/making different sizes. Canonical coordinates retain the original immutable digest.
+
+Source and mathematics review identified no remaining objective-resource gap. Live `10848e83b510822641a65bcef3a116dbadec1d66`, Pages run `43930855933`, passed **299/299** checks, including all1,641 released payloads, bilingual pupil/marking/partial-credit/practice routes, teacher-key hiding/reveal, phone widths and paper/key PDF export. The quadrilateral hotfix preserves its original immutable digest and rendered SVGs; deterministic-coordinate and mutation checks pass.
+
+These are independently reviewed resources and automated live-browser evidence, not comprehensive manual visual testing. Manual downloaded-PDF inspection, teacher print-preview pagination/key isolation, physical printing, classroom trials, independent translation certification and screen-reader/accessibility use remain unperformed. Practical/oral/construction tasks require actual pupil participation; inquiry resources do not certify completion of allocated hours. Earlier candidate sections retain review history and are superseded by this checkpoint.

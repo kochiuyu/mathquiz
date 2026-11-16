@@ -1,6 +1,6 @@
 # P2 Angles · 2S2
 
-**Integrated local candidate.** Source and finite mathematics/geometry independently reviewed. Live browser verification and publication pending; no unit-completion, pupil-mastery or delivered-inquiry-hours claim.
+**Full-unit resource status:** resource complete, verified 16 November 2026; all 6 numbered objectives and applicable remarks. Not pupil mastery or proof of delivered practical/inquiry time.
 
 ## Source audit
 
@@ -44,3 +44,11 @@ The design/proposal sections above retain the original audit history. The review
 The zero-dependency static gates pass 97 permanent families / 1,641 variants and all 112 new arithmetic/geometry cases. All 1,529 previously released payloads are preserved. The suite contains 298 authored browser checks, **not a passed live result**. Shared routes, partial scoring, labelled keys, visual practice, bilingual PDF exports and phone layouts await deployed verification.
 
 Classroom observations, independent translation certification, teacher print-preview pagination/key isolation, physical printing, screen-reader testing and manual downloaded-PDF visual inspection remain unperformed. Resource completeness does not certify practical performance, pupil mastery or delivery of the full allocated inquiry time.
+
+## Verified resource-complete checkpoint
+
+**2S2 · Angles: resource complete.** Two families / 24 variants for angle type and comparison; practical activities cover opening, right/acute/obtuse angles, perpendiculars through on/off-line points, shortest distance, and drawing/making.
+
+Source and mathematics review identified no remaining objective-resource gap. Live `10848e83b510822641a65bcef3a116dbadec1d66`, Pages run `43930855933`, passed **299/299** checks, including all1,641 released payloads, bilingual pupil/marking/partial-credit/practice routes, teacher-key hiding/reveal, phone widths and paper/key PDF export. The quadrilateral hotfix preserves its original immutable digest and rendered SVGs; deterministic-coordinate and mutation checks pass.
+
+These are independently reviewed resources and automated live-browser evidence, not comprehensive manual visual testing. Manual downloaded-PDF inspection, teacher print-preview pagination/key isolation, physical printing, classroom trials, independent translation certification and screen-reader/accessibility use remain unperformed. Practical/oral/construction tasks require actual pupil participation; inquiry resources do not certify completion of allocated hours. Earlier candidate sections retain review history and are superseded by this checkpoint.

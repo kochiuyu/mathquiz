@@ -101,9 +101,9 @@ Source check: **15 November 2026**. The [2017 EDB supplement, 2N6 objectives 1â€
 
 | EDB objectives | Learning unit | Proposed quiz task |
 |---|---|---|
-| [3N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=49) | 5-digit numbers | Compare five-digit numbers |
-| [3N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=50) | Multiplication (I) | Multiply to find a total |
-| [3N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=51) | Division (I) | Interpret the remainder in a sharing problem |
+| [3N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=49) | 5-digit numbers | [Represent, count, read and compare five-digit numbers](p3-5digit-numbers.md) |
+| [3N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=50) | Multiplication (I) | [Multiply, explain column methods and regroup three factors](p3-multiplication-i.md) |
+| [3N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=51) | Division (I) | [Divide, explain regrouping and interpret remainders](p3-division-i.md) |
 | [3N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=52) | Four arithmetic operations (I) | Choose operations for a two-step story |
 | [3N5 objective 1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) | Fractions (I) | [Write the shaded-part count over the equal-part count for one whole](p3-shaded-fractions.md) |
 | [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | Select a suitable length unit |

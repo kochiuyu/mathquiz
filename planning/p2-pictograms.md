@@ -1,5 +1,7 @@
 # P2 one-to-one pictogram family · item brief
 
+**Full-unit resource status:** resource complete, verified 16 November 2026; all 3 numbered objectives and applicable remarks. Not pupil mastery or proof of delivered practical/inquiry time.
+
 Status: **live**. Twelve `pict2a` variants are available in the P2 builder, pupil quiz, paper, worked key and [three-question practice](https://kochiuyu.github.io/mathquiz/?lang=en&p=2&view=practice&skill=pict2a). Manual pupil and hands-on screen-reader checks remain deferred at the user's request.
 
 ## Curriculum match
@@ -62,3 +64,11 @@ No additional digital family is proposed at this stage: single-category reading 
 ## Later-P2 integrated candidate checkpoint
 
 The linked full-unit activity is registered locally and independently source/mathematics reviewed. Existing pict2a payloads are unchanged. Live bilingual activity, responsive layout and key-toggle QA remain pending in the 298-check candidate suite. No unit closure yet; classroom, independent translation, physical print, screen-reader, print-preview pagination and manual downloaded-PDF visual checks remain unperformed.
+
+## Verified resource-complete checkpoint
+
+**2D1 · Pictograms: resource complete.** Preserves the existing pict2a reading family and adds actual sorting/counting, horizontal and vertical one-to-one chart construction, titles/keys, explanation and empty-category cases.
+
+Source and mathematics review identified no remaining objective-resource gap. Live `10848e83b510822641a65bcef3a116dbadec1d66`, Pages run `43930855933`, passed **299/299** checks, including all1,641 released payloads, bilingual pupil/marking/partial-credit/practice routes, teacher-key hiding/reveal, phone widths and paper/key PDF export. The quadrilateral hotfix preserves its original immutable digest and rendered SVGs; deterministic-coordinate and mutation checks pass.
+
+These are independently reviewed resources and automated live-browser evidence, not comprehensive manual visual testing. Manual downloaded-PDF inspection, teacher print-preview pagination/key isolation, physical printing, classroom trials, independent translation certification and screen-reader/accessibility use remain unperformed. Practical/oral/construction tasks require actual pupil participation; inquiry resources do not certify completion of allocated hours. Earlier candidate sections retain review history and are superseded by this checkpoint.

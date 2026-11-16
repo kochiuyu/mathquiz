@@ -2,7 +2,7 @@
 
 Code and documentation check: **16 November 2026**. This is a release ledger for the generated families. The [curriculum map](primary-mathematics.md) and linked family briefs carry the EDB objective, prerequisites, exclusions and source-check date for each skill. Those are project mappings, not EDB endorsement or evidence of pupil mastery. The misconception column records a **design hypothesis**, not an observed error.
 
-Later-P2 candidate counts: **97 permanent family IDs and 1,641 versioned variants**; **96 families and 1,626 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 96 practice routes. Nineteen units are verified resource complete (all P1,2N1–2N6,2M3); the eight later P2 additions await deployed QA. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a`, `timefinish2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
+Local P3 first-three candidate counts: **108 permanent family IDs and 1,785 versioned variants**; **107 families and 1,770 variants** selectable, with legacy `pct1` (15 variants) retained for older links. There are 107 practice routes. Twenty-seven units are verified resource complete (all P1 and P2); the three new P3 additions await deployed QA. New multi-field numeric items award one mark per correct field: `smartadd2a`, `subchain2a`, `moneycount1000a`, `mixed3steps2a`, `mixedstory3digit2a`, `moneychange2a`, `divremain2a`, `divgroup2a`, `timefinish2a` have two marks; `order999a` has three. Existing contracts, including all-or-none `share2a`, are unchanged. Choices remain exact and P2 numeric equivalence is preserved. Fixed pilot papers are separate.
 
 | Family | Objective record and status | Purpose and released variation | Answer rule; worked step | Error hypothesis to probe |
 |---|---|---|---|---|
@@ -148,3 +148,17 @@ Eight new families / 112 variants; all prior 1,529 payloads unchanged. Candidate
 ## Verified release-6 resource checkpoint
 
 Live a288a7c passed280/280 for1,529 variants; Pages43917886662 succeeded. 2N4/2M3/2N5/2N6 are resource complete with all14 numbered objectives mapped. Historical candidate wording above is superseded only for these four units. The later eight-unit candidate remains unverified; its298 checks are authored only. Unit briefs retain practical, manual PDF/print, translation and accessibility limitations.
+
+## Local P3 first-three integration (pending deployed QA)
+
+Eleven new families / 144 variants; all prior 1,641 payloads preserved. Totals 108/1,785 permanent and 107/1,770 selectable; 40 selectable units and 44 resource units. All27 P1/P2 units are verified after10848e8 passed299/299, fixing the one failure in3cf13d8; the local P3 suite contains 326 authored checks, not a browser pass. All three static gates pass. New numeric fields have explicit bilingual labels and one mark each; quotient/remainder and two-step division keys label both answers. Existing contracts remain unchanged.
+
+| Unit | New families | Source and teacher evidence |
+|---|---|---|
+| 3N1 | `compose5digit3a`, `tenthousandsvalue3a`, `sequence5digit3a`, `parity5digit3a`, `compare5digit3a` | [Reviewed brief](p3-5digit-numbers.md) · [Pupil activity/rubric](../activities/p3-5digit-numbers.html) |
+| 3N2 | `multdigit3a`, `multthree3a`, `multstory3a` | [Reviewed brief](p3-multiplication-i.md) · [Pupil activity/rubric](../activities/p3-multiplication-i.html) |
+| 3N3 | `dividecolumns3a`, `dividechain3a`, `divisionstory3a` | [Reviewed brief](p3-division-i.md) · [Pupil activity/rubric](../activities/p3-division-i.html) |
+
+## All-P2 verified resource checkpoint
+
+Live10848e8 / Pages43930855933 passed299/299, including the original quadrilateral immutable digest and deterministic-coordinate guard. All27 P1/P2 units are now resource complete (104 numbered objectives plus1F1/2F1 integrated statements). This supersedes earlier pending-P2 wording, not the pending326-check P3 candidate. Manual visual, PDF/print, classroom, independent translation and accessibility checks remain outstanding.
