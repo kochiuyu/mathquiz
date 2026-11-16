@@ -6,19 +6,21 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** On 16 November 2026, 23 units have at least one selectable task, 62 have none, and 0 have been verified complete. The builder offers 46 question families and 770 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** On 16 November 2026, 24 units have at least one selectable task, 61 have none, and 0 have been verified complete. The builder offers 50 question families and 818 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
-| P1 | 12 | 5 | 7 | 0 |
+| P1 | 12 | 6 | 6 | 0 |
 | P2 | 15 | 4 | 11 | 0 |
 | P3 | 14 | 3 | 11 | 0 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **23** | **62** | **0** |
+| **Total** | **85** | **24** | **61** | **0** |
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
+
+**Latest release · P1 length and distance (1M1):** Four pictured question families compare aligned lengths and straight distances, directly and with equal improvised units (48 variants). The [bilingual printable activity](activities/p1-length-distance-i.html) supplies real-object tasks and an observation rubric; the [unit brief](planning/p1-length-distance-i.md) maps evidence and remaining teacher checks. The [public regression suite](tests/regression.html) passed 165/165 after [release `0a3e008`](https://github.com/kochiuyu/mathquiz/commit/0a3e008d2f52741acdb64f510a16cf152d94c63b). Classroom observation is outstanding, so 1M1 is not marked complete.
 
 [Immediate priorities](#next-three-deliverables) · [Priority rules](#how-to-choose-the-next-release) · [P1–P6 delivery plan](#grade-by-grade-delivery-plan) · [Milestones](#milestones-and-handoff) · [Release procedure](#author-verify-and-hand-off-a-release)
 
@@ -26,7 +28,7 @@ The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, 
 
 1. **Audit P1 addition and subtraction (1N4).** Map its nine released families to all six numbered objectives in the [unit brief](planning/p1-addition-subtraction-i.md). The table below gives the starting evidence. For each row, record what the pupil actually does, which EDB remarks apply and any missing evidence. For example, the subtraction key demonstrates an addition check. See whether any task asks the pupil to recognise a valid check. Build the smallest task needed for an identified gap, then record the closure decision.
 2. **Finish the oral and listening review for numbers to 100 (1N3).** Its eight families already cover written and pictured work. For the spoken objectives, prepare an English and a Traditional Chinese teacher script, pupil instructions and observable marking criteria. Link these beside the digital tasks in the [unit brief](planning/p1-numbers-to-100.md). A pupil reading printed number words demonstrates a different skill from a pupil writing a number heard aloud.
-3. **Open the first untouched unit, length and distance (1M1).** Start with a picture task asking which of two strips is longer. Add a printable activity in which pupils align objects, compare distances and choose an improvised measuring unit. Map the resulting evidence to all four objectives. Move on to centimetres in 1M3 once direct comparison and informal measurement are represented.
+3. **Continue measurement with centimetres (1M3).** Build ruler-reading tasks that place the object beside a clear scale and include nonzero starting marks. Add a real-object activity for estimating, choosing a suitable tool and measuring to the nearest centimetre. Map pupil evidence against the [1M3 objectives](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=17); carry forward the teacher observation still needed for 1M1.
 
 | 1N4 objective | Released evidence to review |
 |---|---|
