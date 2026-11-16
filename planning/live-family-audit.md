@@ -81,7 +81,7 @@ Only 1N3, 1N4 and 1M2 are verified resource complete (14 numbered objectives): s
 
 ## P1 completed resource checkpoint
 
-All12 P1 units are resource complete after source/objective review, independent maths checks and livefa4b8e4 PASS185/185. This covers45 numbered objectives plus1F1 integrated inquiry. Earlier three-unit checkpoint is superseded for coverage, not for its recorded tests. Targeted visuals passed; manual downloaded-PDF visual inspection, teacher print-preview/pagination, classroom, independent translation, physical printing and screen-reader checks remain unperformed. No pupil attainment or ten-hour inquiry completion is claimed.
+All 12 P1 units are resource complete after source/objective review, independent maths checks and livefa4b8e4 PASS185/185. This covers45 numbered objectives plus 1F1 integrated inquiry. Earlier three-unit checkpoint is superseded for coverage, not for its recorded tests. Targeted visuals passed; manual downloaded-PDF visual inspection, teacher print-preview/pagination, classroom, independent translation, physical printing and screen-reader checks remain unperformed. No pupil attainment or ten-hour inquiry completion is claimed.
 
 ## Release-5 P2 family additions
 
@@ -102,3 +102,7 @@ Candidate tests: 241 authored checks, browser run pending. Prior 944 payloads pr
 | `substory2a` (12) | [2N2](p2-addition-subtraction-ii.md), candidate | Find remainder after one/two removals | Numeric total only; explanation assessed offline | Combine removals incorrectly |
 | `multfact2a` (121) | [2N3](p2-basic-multiplication.md), candidate | All ordered products with factors 0–10 | One numeric product; sampled practice not full recall evidence | Treat zero as identity |
 | `multstory2a` (30) | [2N3](p2-basic-multiplication.md), candidate | One-step equal-group totals in two contexts | Numeric total only; operation/factor explanation observed offline | Add group count and group size |
+
+## Verified P2 first-three checkpoint
+
+2N1,2N2 and 2N3 are resource complete after source/maths review and live 41891f6 PASS242/242. Their 14 numbered objectives bring the verified total to 15 units / 59 numbered objectives plus 1F1 integrated inquiry. Earlier candidate notes above are historical. All 1,227 payloads remain reproducible; three-digit variant links and exact pupil-prompt checks now pass. Manual PDF visuals, teacher print-preview/pagination, classroom, independent translation, physical printer and screen-reader checks remain unperformed.

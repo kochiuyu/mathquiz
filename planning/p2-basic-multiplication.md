@@ -1,6 +1,6 @@
 # P2 · 2N3 Basic multiplication
 
-Status: source audit and bilingual pupil activity authored; two digital families proposed externally, not integrated or released. Independent review, browser/print QA and live verification pending. No unit-completion or universal fact-recall claim.
+**Status: verified resource complete.** The dated checkpoint below supersedes earlier candidate-stage notes; validation limits remain explicit.
 
 ## Source and scope
 
@@ -51,3 +51,15 @@ Before integration, preserve IDs; verify schema with the app, numeric input/mark
 `multfact2a`, `multstory2a` are integrated in builder, pupil, paper/key and bilingual practice (151 finite variants). Independent arithmetic checks and previous-payload preservation pass. New P2 numeric entries retain the existing numeric-expression/full-width compatibility; multi-field tasks award one mark per correct field, unlike earlier all-or-nothing P1 tasks. Labels identify each intermediate or ordered answer.
 
 The full candidate suite contains241 authored browser checks. It has not yet been run on the deployed candidate. Unit completion remains pending exact deployment and applicable bilingual route/PDF/layout checks. Practical/oral evidence is supplied by the linked teacher activity, not inferred from a correct digital total.
+
+## Verified resource-completion checkpoint · 16 November 2026
+
+**2N3 · Basic multiplication: resource complete.** All 5 numbered objectives and applicable remarks have linked pupil tasks and observable marking evidence. Three digital families / 167 variants, plus real repeated-addition/grouping, construction of the complete 0–10 table, zero/one, array-turn commutativity and explained one-step stories. Sampled practice is not whole-table recall evidence.
+
+**Last verified release:** `41891f61a322ef5ea8208d0202270c61fd5cac8d`; Pages run `43912378673` succeeded. The public suite passed **242/242**: historical payload hashes, canonical shared links including indices 100–120, bilingual pupil marking/partial credit/retry, builder, practice, paper/key/PDF export, teacher-key routes and phone widths. Independent source and mathematics reviews passed.
+
+**Manual evidence and fixes:** live EN/ZH arithmetic pupil headings/prompts and the high-index multiplication key were inspected. A genuine shared-link decoder limit was fixed without changing question payloads. A separate test-selector error was independently reviewed against all 12 released HTML outputs and live bilingual UI; exact prompt equality now targets `.prompt`, with every later marking assertion retained. Other manual visuals are not claimed.
+
+**Remaining objective gap:** none identified. Resource completion does not claim pupil attainment or observed fluency. Teacher print-preview/pagination, manual downloaded-PDF visual inspection, classroom trials, independent translation review, physical printing and screen-reader testing remain unperformed. Practical/oral tasks must still be conducted with pupils.
+
+**Next work:** continue 2N4→2M3→2N5 and 2N6, preserving existing permanent IDs and scoring contracts.
