@@ -449,6 +449,16 @@
     }}finally{frames.forEach(f=>f.remove())}
   });
 
+  await check('P2 quadrilateral coordinates · deterministic across math engines and fresh per call',()=>{
+    const before=JSON.stringify(Array.from({length:24},(_,i)=>quadrilateralPoints2(i))),sin=Math.sin,cos=Math.cos;
+    try{
+      Math.sin=()=>{throw new Error('canonical payload called sin')};Math.cos=()=>{throw new Error('canonical payload called cos')};
+      assert(JSON.stringify(Array.from({length:24},(_,i)=>quadrilateralPoints2(i)))===before,'coordinates depend on transcendental implementation');
+      quadrilateralPoints2(0)[0][0]=9999;
+      assert(JSON.stringify(Array.from({length:24},(_,i)=>quadrilateralPoints2(i)))===before,'caller mutation changed canonical data');
+    }finally{Math.sin=sin;Math.cos=cos;}
+  });
+
   const laterP2Ids=['metrestocm2a','timefinish2a','timeelapsed2a','solidbasename2a','anglekind2a','anglecompare2a','directionmap2a','quadproperties2a'];
   for(const id of laterP2Ids)await check('P2 later measurement/geometry · bilingual routes '+id,()=>checkP2NewRoutes([id]));
   await check('P2 finishing time · either field earns one mark',async()=>{

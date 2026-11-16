@@ -40,3 +40,7 @@ The design/proposal sections above retain the original audit history. The review
 The zero-dependency static gates pass 97 permanent families / 1,641 variants and all 112 new arithmetic/geometry cases. All 1,529 previously released payloads are preserved. The suite contains 298 authored browser checks, **not a passed live result**. Shared routes, partial scoring, labelled keys, visual practice, bilingual PDF exports and phone layouts await deployed verification.
 
 Classroom observations, independent translation certification, teacher print-preview pagination/key isolation, physical printing, screen-reader testing and manual downloaded-PDF visual inspection remain unperformed. Resource completeness does not certify practical performance, pupil mastery or delivery of the full allocated inquiry time.
+
+## Cross-engine payload hotfix candidate
+
+Live3cf13d8 passed297 checks but failed the quadrilateral immutable-payload digest. Node reproduced the original expected digest. Raw trigonometric coordinates are implementation-dependent in their last bits. The proposed fix stores the exact released canonical coordinate numbers and returns fresh copies, preserving all24 canonical payloads, their original digest and every three-decimal SVG. Independent geometry and mutation checks pass; the browser suite adds a deterministic-coordinate check (299 authored). This is a runtime determinism repair, not a changed mathematical item or an updated fixture. Live rerun is required; this unit remains pending.
