@@ -208,6 +208,40 @@ function mark(form) {
   document.getElementById("retry").hidden=false;
   status.focus();
 }
+function renderCompare100Practice(){
+  const family=families.find(f=>f.id==="compare100a"),variants=[0,1,5];
+  const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill=compare100a";
+  for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
+  document.title=t("Comparing numbers · Practice | MathQuiz","比較數字 · 練習 | MathQuiz");
+  let position=0,attempts=0,firstTry=0;
+  function show(){
+    const q=family.make(variants[position]);
+    app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practise comparing numbers to 100","練習比較100以內的數")+'</h1><p class="practice-progress">'+t("Question ","第 ")+(position+1)+t(" of "," 題，共 ")+variants.length+t(""," 題")+'</p><form id="practice-form"><fieldset><legend>'+local(q.prompt)+'</legend>'+controls(q,0,false)+'</fieldset><button type="submit">'+t("Check answer","核對答案")+'</button> <button type="button" id="practice-next" hidden>'+t(position+1===variants.length?"See result":"Next question",position+1===variants.length?"查看結果":"下一題")+'</button><p id="practice-feedback" role="status" tabindex="-1"></p></form>';
+    const form=document.getElementById("practice-form"),feedback=document.getElementById("practice-feedback");
+    form.onsubmit=e=>{
+      e.preventDefault();
+      const choice=new FormData(form).get("q0");
+      if(!choice){feedback.textContent=t("Choose one number.","請選擇一個數字。");form.querySelector('input[type="radio"]').focus();return;}
+      attempts++;
+      const correct=choice===q.answer[0];
+      if(correct && attempts===1)firstTry++;
+      if(correct || attempts===2){
+        feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The larger number is ","較大的數是 ")+q.answer[0]+". ")+local(q.why);
+        form.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);
+        form.querySelector('button[type="submit"]').hidden=true;
+        const next=document.getElementById("practice-next");next.hidden=false;next.focus();
+      }else feedback.textContent=Math.floor(q.numberComparison.a/10)===Math.floor(q.numberComparison.b/10)
+        ?t("The tens are the same. Compare the ones.","十位相同，請比較個位。")
+        :t("Compare the tens first. More tens means a larger number.","先比較十位；十位較大的數較大。");
+    };
+    document.getElementById("practice-next").onclick=()=>{
+      position++;attempts=0;
+      if(position<variants.length){show();app.querySelector('input[type="radio"]').focus();return;}
+      app.innerHTML='<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a><h1>'+t("Practice complete","練習完成")+'</h1><p role="status">'+t("Correct on the first try: ","第一次答對：")+firstTry+' / '+variants.length+'</p><a class="builder-link" href="'+practiceUrl(lang)+'">'+t("Practise again","再練習")+' →</a>';
+    };
+  }
+  show();
+}
 function renderTrianglePractice(){
   const family=families.find(f=>f.id==="triangle1");
   const pool=Array.from({length:family.count},(_,i)=>i).filter(i=>i!==1);
@@ -1026,6 +1060,7 @@ const practiceCatalogue=[
   {grade:1,skill:"otherway1",label:["Practise another way to make a total","練習另一種組合方法"],render:()=>renderAdditionalP1Practice("otherway1")},
   {grade:1,skill:"storyadd1",label:["Practise addition","練習加法"],render:renderPractice},
   {grade:1,skill:"parts18a",label:["Practise missing parts","練習找出另一部分"],render:renderPractice},
+  {grade:1,skill:"compare100a",label:["Practise comparing numbers to 100","練習比較100以內的數"],render:renderCompare100Practice},
   {grade:1,skill:"triangle1",label:["Practise triangles","練習三角形"],render:renderTrianglePractice},
   {grade:4,skill:"per1",label:["Practise perimeter","練習周界"],render:renderPractice},
   {grade:4,skill:"permissing4a",label:["Practise missing rectangle sides","練習求長方形未知邊長"],render:renderMissingSidePractice},

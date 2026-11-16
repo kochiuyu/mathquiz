@@ -37,6 +37,14 @@ const families = [
     const shapes=letters.map((_,j)=>({kind:j===correct?"triangle":j===(correct+1)%3?"quadrilateral":"circle",rotation:j===correct?rotations[i]:(i*37+j*25)%180}));
     return {prompt:["Which shape is a triangle? Choose one.","哪個圖形是三角形？請選一個。"],choices:letters,answer:[letters[correct]],shapes,why:[`${letters[correct]} has three straight sides joined to make a closed shape. Turning it does not change that.`,`${letters[correct]}由三條直邊連成封閉圖形。它轉了方向，仍是三角形。`]};
   }},
+  {id:"compare100a",grade:1,code:"1N3",label:["Compare numbers to 100","比較100以內的數"],count:12,make(i){
+    const pairs=[[42,37],[58,53],[29,92],[71,67],[84,89],[100,90],[46,64],[33,39],[78,72],[95,59],[61,60],[27,24]];
+    const [a,b]=pairs[i],larger=Math.max(a,b),sameTens=Math.floor(a/10)===Math.floor(b/10);
+    const step=sameTens
+      ?[`Both numbers have ${Math.floor(a/10)} tens. Compare the ones: ${a%10} and ${b%10}. ${larger} is larger.`,`兩個數都有${Math.floor(a/10)}個十。比較個位：${a%10}和${b%10}。${larger}較大。`]
+      :[`Compare the tens first: ${a} has ${Math.floor(a/10)} tens and ${b} has ${Math.floor(b/10)} tens. ${larger} is larger.`,`先比較十位：${a}有${Math.floor(a/10)}個十，${b}有${Math.floor(b/10)}個十。${larger}較大。`];
+    return {prompt:[`Which number is larger, ${a} or ${b}? Choose the number.`,`哪個數較大：${a}還是${b}？選出該數。`],choices:[String(a),String(b)],answer:[String(larger)],marks:1,why:step,numberComparison:{a,b,larger}};
+  }},
   {id:"place3a",grade:2,code:"2N1",label:["Read hundreds, tens and ones","讀出百位、十位和個位"],count:12,make(i){
     const values=[304,230,500,426,242,100,999,507,680,909,115,370];
     const value=values[i],hundreds=Math.floor(value/100),tens=Math.floor(value/10)%10,ones=value%10;

@@ -12,7 +12,7 @@ Each code opens the EDB page containing the official objectives and teaching not
 |---|---|---|
 | [1N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=7) | Numbers to 20 | Count a pictured collection |
 | [1N2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=9) | Basic addition and subtraction | Match a joining story to a sum |
-| [1N3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11) | Numbers to 100 | Compare two quantities up to 100 |
+| [1N3 objective 3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=13) | Numbers to 100 | [Choose the larger of two numbers up to 100](p1-numbers-to-100.md) |
 | [1N4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=13) | Addition and subtraction (I) | Solve a short addition story |
 | [1M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=15) | Length and distance (I) | Compare two strips directly |
 | [1M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=16) | Money (I) | Choose coins for a stated amount |
