@@ -1,0 +1,281 @@
+{
+  "unit": "1N3",
+  "title": "Numbers to 100",
+  "grade": 1,
+  "sourceCheckedDate": "2026-11-16",
+  "sources": [
+    {
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=13",
+      "pages": "PDF13–14; printed10–11"
+    },
+    {
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=11",
+      "pages": "PDF11–12; printed5–6"
+    }
+  ],
+  "reviewStatus": "authored-pending-independent-review-and-live-verification",
+  "verifiedComplete": false,
+  "newActivity": "activities/p1-number-sense-review.html",
+  "languages": [
+    "en",
+    "zh-HK"
+  ],
+  "manualValidationPending": [
+    "classroom trial",
+    "independent translation review",
+    "physical printer",
+    "screen reader"
+  ],
+  "notes": [
+    "An existing online family supplies only the pupil action it actually scores, not every claim in its feedback.",
+    "Concrete construction is our assessment design for digit meaning, not a separate compulsory EDB objective.",
+    "Zero-as-even is guidance in the explanatory notes, addressed here without turning an illustrative strategy into a new numbered objective.",
+    "No new global inventory or unit-closure claim made."
+  ],
+  "objectives": [
+    {
+      "id": "1N3.1",
+      "number": 1,
+      "summary": "Recognise numbers 21–100",
+      "requirements": [
+        {
+          "id": "1N3.1.count",
+          "requirement": "Count collections and recognise their totals",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "tensones1a",
+              "pupilAction": "Write numeral from pictured bundles/singles"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-numbers-oral.html",
+              "pupilAction": "Count 27 objects and select 36 from 40"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "Oral teacher activity labels its activities by headings, not URL anchors; use the activity page and named section.",
+          "status": "pending-release-review"
+        },
+        {
+          "id": "1N3.1.read",
+          "requirement": "Read displayed numerals aloud",
+          "evidence": [
+            {
+              "type": "activity",
+              "id": "activities/p1-numbers-oral.html",
+              "pupilAction": "A: read 21, 40, 56, 65, 90, 100"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "",
+          "status": "pending-release-review"
+        },
+        {
+          "id": "1N3.1.write",
+          "requirement": "Write numerals representing numbers",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "numberwords100a",
+              "pupilAction": "Write numeral from printed number words"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-numbers-oral.html",
+              "pupilAction": "C: write six dictated numerals, including 100"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "Dictation is an assessment mode, not another numbered objective.",
+          "status": "pending-release-review"
+        },
+        {
+          "id": "1N3.1.sequence",
+          "requirement": "Count onwards and backwards",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "sequence100a",
+              "pupilAction": "Complete next value in forwards/backwards sequences"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-numbers-oral.html",
+              "pupilAction": "B: four spoken sequences crossing tens and reaching 100"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "",
+          "status": "pending-release-review"
+        },
+        {
+          "id": "1N3.1.parity",
+          "requirement": "Recognise odd/even through100, with explanatory guidance on zero",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "oddeven100a",
+              "pupilAction": "Classify two-digit numerals"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-number-sense-review.html",
+              "pupilAction": "B: remove pairs 8 → 0, classify 0, 56, 73 and 100, identify relevant units digits"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "Existing family has neither 0 nor 100, and only feedback explains the units rule.",
+          "reviewNote": "Pupil demonstrates zero-even and gives a basis for two-digit decisions; teacher key accepts multiple representations.",
+          "status": "pending-release-review"
+        }
+      ],
+      "status": "pending-release-review"
+    },
+    {
+      "id": "1N3.2",
+      "number": 2,
+      "summary": "Recognise units and tens and the meanings of their digits",
+      "requirements": [
+        {
+          "id": "1N3.2.representation",
+          "requirement": "Relate grouped quantity to numeral",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "tensones1a",
+              "pupilAction": "Write total from bundles/singles"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-number-sense-review.html",
+              "pupilAction": "A: build 24, 42 and 60 using tens and singles"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "",
+          "status": "pending-release-review"
+        },
+        {
+          "id": "1N3.2.digitvalue",
+          "requirement": "State or show the value of each digit, including zero ones",
+          "evidence": [
+            {
+              "type": "activity",
+              "id": "activities/p1-number-sense-review.html",
+              "pupilAction": "A:2 in 24 means 20; 4 means 4; 2 in 42 means 2; 0 in 60 records zero ones"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "Existing family asks for total only; the meaning of the digit occurs in its worked key.",
+          "reviewNote": "No need to use term place value; building is one means of showing understanding, not compulsory terminology.",
+          "status": "pending-release-review"
+        }
+      ],
+      "status": "pending-release-review"
+    },
+    {
+      "id": "1N3.3",
+      "number": 3,
+      "summary": "Compare number magnitudes",
+      "requirements": [
+        {
+          "id": "1N3.3.pair",
+          "requirement": "Compare two values",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "compare100a",
+              "pupilAction": "Select larger number, including same-tens and 100 boundary"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "",
+          "status": "pending-release-review"
+        },
+        {
+          "id": "1N3.3.order",
+          "requirement": "Order a group in either direction",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "ordernums100a",
+              "pupilAction": "Write three numerals in ascending or descending order"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "No inequality symbols; both directions included across 12 fixed cases.",
+          "status": "pending-release-review"
+        }
+      ],
+      "status": "pending-release-review"
+    },
+    {
+      "id": "1N3.4",
+      "number": 4,
+      "summary": "Count objects in groups of 2, 5 and 10",
+      "requirements": [
+        {
+          "id": "1N3.4.groups",
+          "requirement": "Count groupwise, below 100, without calculation notation",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "countgroups1a",
+              "pupilAction": "Count pictured groups and provide total"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-numbers-oral.html",
+              "pupilAction": "Optional group-counting section: successive totals for 24 in pairs, 35 in fives, 60 in tens"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "",
+          "reviewNote": "Oral evidence makes the process observable; use this section when assessing the objective, even though it is labelled optional on the general oral sheet.",
+          "status": "pending-release-review"
+        }
+      ],
+      "status": "pending-release-review"
+    },
+    {
+      "id": "1N3.5",
+      "number": 5,
+      "summary": "Estimate object quantities",
+      "requirements": [
+        {
+          "id": "1N3.5.reference",
+          "requirement": "Estimate below 100 using a reference after counting experience",
+          "evidence": [
+            {
+              "type": "family",
+              "id": "estimate100a",
+              "pupilAction": "Choose nearest offered ten from a pictured reference of 10 and target"
+            },
+            {
+              "type": "activity",
+              "id": "activities/p1-number-sense-review.html",
+              "pupilAction": "C: estimate targets of 24 and 47 against a real reference of 10 before counting, explain reference use, then check"
+            }
+          ],
+          "identifiedGapBeforeSupplement": "Persistent digital dots permit exact counting; the answer alone does not establish estimation process.",
+          "reviewNote": "Teacher records method and timing before counting; no invented EDB tolerance or nearest-ten requirement.",
+          "status": "pending-release-review"
+        }
+      ],
+      "status": "pending-release-review"
+    }
+  ],
+  "limits": [
+    "Number-recognition range 21–100; zero parity addressed as explanatory extension",
+    "All group-counting/estimation collections below 100",
+    "No multiplication expressions required for group counts",
+    "No < or > symbols required",
+    "No mandatory place-value terminology",
+    "Estimate only after counting experience"
+  ],
+  "releaseGates": [
+    "Independent content review of new activity and this map",
+    "Bilingual pupil/key route and toggle checks",
+    "Printing without key leakage or clipping",
+    "Check linked existing families and oral-sheet routes are live",
+    "Update objective inventory from actual reviewed evidence, leaving manual validation separately recorded"
+  ]
+}

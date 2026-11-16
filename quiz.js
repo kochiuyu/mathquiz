@@ -14,7 +14,29 @@ document.documentElement.lang = ch ? "zh-HK" : "en";
 for (const language of ["en","zh"]) document.getElementById(language).href = href(grade,language);
 const app = document.getElementById("app");
 if(fixedP6V4)quizzes[6]=fixedQuiz(6,"4");
+// In figure(type), before fallback: const moneySvg=moneyFigure1(type); if(moneySvg)return moneySvg;
+// Uses the application's existing t(en,zh) language helper.
+function moneyFigure1(type){
+  if(!type||typeof type!=='object')return '';
+  if(type.kind==='hkCoins'){
+    const width=420,rows=Math.ceil(type.coins.length/4),height=rows*100+42;
+    const labels=type.coins.map(c=>c<100?`${c}¢`:`$${c/100}`);
+    const alt=t('Schematic Hong Kong coin labels, left to right: ','香港硬幣示意圖的面值，由左至右：')+labels.join(t(', ','、'))+t('. Not actual coin designs or sizes.','。並非真實硬幣圖案或大小。');
+    const coins=labels.map((label,j)=>{
+      const x=57+(j%4)*102,y=72+Math.floor(j/4)*100;
+      return '<g class="money-coin" data-cents="'+type.coins[j]+'"><circle cx="'+x+'" cy="'+y+'" r="39" fill="#f5f3e8" stroke="#20392f" stroke-width="2"/><text x="'+x+'" y="'+(y+8)+'" font-size="24" font-weight="bold" text-anchor="middle">'+label+'</text></g>';
+    }).join('');
+    return '<svg class="figure money-coins" viewBox="0 0 '+width+' '+height+'" role="img" aria-label="'+alt+'"><text x="12" y="20" font-size="15">'+t('Labelled coin diagrams · not actual size','標有面值的硬幣示意圖 · 並非實際大小')+'</text>'+coins+'</svg>';
+  }
+  if(type.kind==='hkPrice'){
+    const price='$'+Math.floor(type.cents/100)+'.'+String(type.cents%100).padStart(2,'0');
+    return '<svg class="figure money-price" viewBox="0 0 420 135" role="img" aria-label="'+t('Hong Kong price tag: ','香港標價牌：')+price+'"><path d="M20 28h330l45 42-45 42H20Z" fill="#f5f3e8" stroke="#20392f" stroke-width="2"/><circle cx="365" cy="70" r="6" fill="none" stroke="#20392f" stroke-width="2"/><text x="184" y="52" text-anchor="middle" font-size="15">'+t('Price in Hong Kong dollars','港元標價')+'</text><text x="184" y="91" text-anchor="middle" font-size="32" font-weight="bold">'+price+'</text></svg>';
+  }
+  return '';
+}
+
 function figure(type) {
+  const moneySvg=moneyFigure1(type);if(moneySvg)return moneySvg;
   if (!type) return "";
   if (typeof type === "object" && type.kind === "measureCompare") {
     const distance=type.subject==="distance",x=48,scale=32;
@@ -216,8 +238,8 @@ function controls(q,i,paper,key=false) {
     const answer=paper?'<span class="column-blank" aria-label="'+t("answer space","作答位置")+'"></span>':null;
     return '<table class="column-form"><caption class="sr-only">'+name+'</caption><thead><tr><th scope="col"><span class="sr-only">'+t("Operation","運算符號")+'</span></th><th scope="col">'+t("Tens","十位")+'</th><th scope="col">'+t("Ones","個位")+'</th></tr></thead><tbody><tr><td></td>'+cells(a)+'</tr><tr><td>'+sign+'</td>'+cells(b)+'</tr><tr class="column-result"><td>=</td>'+[0,1].map(j=>'<td>'+(key?'<b>'+q.answer[j]+'</b>':answer||'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(j?"Ones answer":"Tens answer",j?"個位答案":"十位答案")+'" name="q'+i+'f'+j+'">')+'</td>').join("")+'</tr></tbody></table>';
   }
-  if(q.purchaseEquation)return paper?'<div class="equation-space">________________________</div>':'<label class="field">'+t("Equation","方程")+' <input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Equation for the purchase story","購物情境的方程")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Use x, + or −, and =. Write the relationship before solving.","用 x、+ 或 − 及 = 表示數量關係，先不用求解。")+'</small>';
-  if(q.equation)return paper?'<div class="equation-space">________________________</div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
+  if(q.purchaseEquation)return paper?'<div class="equation-space" aria-label="'+t('Write the equation here','在此寫出算式')+'"></div>':'<label class="field">'+t("Equation","方程")+' <input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Equation for the purchase story","購物情境的方程")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Use x, + or −, and =. Write the relationship before solving.","用 x、+ 或 − 及 = 表示數量關係，先不用求解。")+'</small>';
+  if(q.equation)return paper?'<div class="equation-space" aria-label="'+t('Write the equation here','在此寫出算式')+'"></div>':'<label class="field"><input class="equation-input" type="text" autocomplete="off" aria-label="'+t("Addition sentence","加法算式")+'" name="q'+i+'f0"></label><small class="response-help">'+t("Write number + number = total.","請輸入「數字 + 數字 = 總數」。")+'</small>';
   if(q.otherWay)return paper?'<div class="drawing-space">'+t("Draw two labelled groups, or write an addition sentence.","畫出兩組圓片並標明數量，或寫出一道加法算式。")+'</div>':'<div class="pair-entry"><label>'+t("First group","第一組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f0"></label><span> + </span><label>'+t("Second group","第二組")+' <input type="text" inputmode="numeric" autocomplete="off" name="q'+i+'f1"></label><span> = '+q.otherWay.total+'</span></div><small class="response-help">'+t("Enter one number from 1 to 9 in each box.","每格輸入一個 1 至 9 的數字。")+'</small>';
   if(q.equalGroups)return '<div class="group-equation">'+[0,1,2].map(j=>(j?'<span aria-hidden="true">'+(j===1?'×':'=')+'</span>':'')+(paper?'<span class="group-blank">_______</span>':'<label><span class="sr-only">'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'</span><input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["First factor","Second factor","Total"][j],["第一個乘數","第二個乘數","總數"][j])+'" name="q'+i+'f'+j+'"></label>')).join("")+'</div>';
   if(q.equalSharing)return '<div class="sharing-response">'+[0,1].map(j=>'<label>'+t(["Each child gets","Left over"][j],["每人分得","剩下"][j])+' '+(paper?'<span class="sharing-blank">_______</span>':'<input type="text" inputmode="numeric" autocomplete="off" aria-label="'+t(["Each child gets","Left over"][j],["每人分得","剩下"][j])+'" name="q'+i+'f'+j+'">')+' '+t("counters","粒圓片")+'</label>').join("")+'</div>'+(paper?'':'<small class="response-help">'+t("Enter a whole-number numeral in each box, including 0 when none are left over.","兩格都請輸入整數數字；沒有剩餘也要填0。")+'</small>');
@@ -230,7 +252,7 @@ function controls(q,i,paper,key=false) {
 function item(q,i,paper,key) {
   const inline=q.inlineAnswer?(key?'<b class="inline-solution">'+q.answer[0]+'</b>':paper?'<span class="inline-blank" aria-label="'+t("answer space","作答位置")+'"></span>':'<input class="inline-answer" type="text" autocomplete="off" inputmode="numeric" aria-label="'+t("Answer for question ","第 ")+(i+1)+t(""," 題答案")+'" name="q'+i+'f0">'):null;
   const prompt=inline?local(q.prompt).replace("___",inline):local(q.prompt);
-  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.oddEven100?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
+  const solution=key ? (q.shapes?shapeOptions(q,i,true,true):q.columnForm?controls(q,i,true,true):'')+'<p><b>'+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.numberOrder?q.answer.join(" → "):q.groupedAddition||q.groupTen||q.columnForm?q.fields.map((f,j)=>local(f)+": "+q.answer[j]).join("; "):q.measuringCup?q.answer[0]+" mL":q.barChart?q.answer[0]+t(" pupils"," 名學生"):q.fractionBar||q.fractionAddition?q.answer.join("/"):q.simpleEquation?"x = "+q.answer[0]:q.equalSharing?t("Each gets ","每人分得")+q.answer[0]+t("; left over ","；剩下")+q.answer[1]:q.equalGroups?q.answer[0]+" × "+q.answer[1]+" = "+q.answer[2]:q.otherWay?q.answer.join(" + ")+" = "+q.otherWay.total:q.answer.join(q.multi?", ":" / "))+'</b> · '+local(q.why)+'</p>' : controls(q,i,paper);
   return '<fieldset><legend>'+t("Question ","第 ")+(i+1)+t(""," 題")+'</legend><small>'+q.code+' · '+points(q)+t(points(q)>1?" marks":" mark"," 分")+'</small><p class="prompt">'+prompt+'</p>'+figure(q.figure)+solution+'<div class="feedback" id="feedback'+i+'"></div></fieldset>';
 }
 function mark(form) {
@@ -323,7 +345,7 @@ function renderNumber100Practice(skill){
 }
 function renderChoice100Practice(skill){
   const family=families.find(f=>f.id===skill),measure=family.make(0).measureCompare,cm=family.make(0).centimetre?.items,variants=measure||cm?[0,1,5]:skill==="oddeven100a"?[0,1,8]:[0,5,9];
-  const title=measure||cm||skill==="checksub1a"?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
+  const title=family.make(0).money||measure||cm||skill==="checksub1a"?family.label:skill==="oddeven100a"?["Practise odd and even numbers","練習單數和雙數"]:["Practise estimating counters","練習估計圓片數目"];
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
   for(const language of ["en","zh"])document.getElementById(language).href=practiceUrl(language);
   document.title=local(title)+" · "+t("Practice","練習")+" | MathQuiz";
@@ -340,7 +362,7 @@ function renderChoice100Practice(skill){
         feedback.textContent=(correct?t(attempts===1?"Correct on the first try. ":"Correct after a hint. ",attempts===1?"第一次答對。":"看提示後答對。"):t("The answer is ","答案是 ")+(q.choiceLabels?local(q.choiceLabels[q.answer[0]]):q.answer[0])+". ")+local(q.why);
         form.querySelectorAll('input[type="radio"]').forEach(el=>el.disabled=true);form.querySelector('button[type="submit"]').hidden=true;
         const next=document.getElementById("practice-next");next.hidden=false;next.focus();
-      }else feedback.textContent=cm?t("Read both ruler marks for A and B. Count the centimetre spaces between each pair of ends, then compare.","讀取A和B各自的起點及終點刻度。數出兩端之間的厘米間隔，再作比較。")
+      }else feedback.textContent=q.money?local(q.money.hint):cm?t("Read both ruler marks for A and B. Count the centimetre spaces between each pair of ends, then compare.","讀取A和B各自的起點及終點刻度。數出兩端之間的厘米間隔，再作比較。")
         :measure?t(measure.units?"Count the equal paperclip lengths from the same starting point.":measure.subject==="distance"?"Compare the straight lines from Start to the two points.":"Line up the starting ends and compare where the ribbons end.",measure.units?"由同一起點數一數等長的回形針單位。":measure.subject==="distance"?"比較由起點至兩點的直線距離。":"把絲帶的起點對齊，再比較終點的位置。")
         :skill==="checksub1a"?t("Add the difference to the number taken away. The sum should equal the starting number.","把差加上減去的數，所得的和應等於原來的數。")
         :skill==="oddeven100a"?t("Look at the units digit, not the tens digit.","只看個位數字，不看十位數字。")
@@ -1284,6 +1306,7 @@ function renderAdditionalP1Practice(skill){
 // counting link omits skill to preserve already-shared URLs.
 const practiceCatalogue=[
   {grade:1,skill:null,label:["Practise counting","練習點算"],render:renderPractice},
+  ...moneyFamilies.map(f=>({grade:1,skill:f.id,label:f.label,render:()=>renderChoice100Practice(f.id)})),
   {grade:1,skill:"next1",label:["Practise counting forwards","練習順數"],render:renderPractice},
   {grade:1,skill:"add1",label:["Practise addition to 10","練習10以內的加法"],render:()=>renderAdditionalP1Practice("add1")},
   {grade:1,skill:"pictureadd1",label:["Practise picture addition","練習看圖寫加法算式"],render:()=>renderAdditionalP1Practice("pictureadd1")},

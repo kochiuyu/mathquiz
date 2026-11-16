@@ -5,6 +5,9 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["coincount1a",1,12,"1ac0c2eeb70330bba087314e13b9dfe6138b28ebb2fa2d0fe330c9b25b5694c5"],
+    ["priceword1a",1,12,"b987bcfc5a687ebfa13d6418e6bd2ab6999b00e7295911743f5198bffbe81652"],
+    ["coinvalue1a",1,12,"200eba28ea3d5caa12ba66878397a202a23e8099c6e86b414fa2b52733d03a50"],
     ["checksub1a",1,12,"92f6d00eef3b97830a8da905f2bbc8a78476f23911e45a5ac6c42ce1dd9773cb"],
     ["add1",1,7,"a11713e8ba9b9b0435cbadc2269edd2f3adc56ef876c853426a998bf56336018"],
     ["next1",1,12,"03c40866a510fc3f2a61da716663cde4405c765d7bd079d9c2eb0c2c3aab60a0"],
@@ -117,9 +120,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===893,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===929,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 893 variants",()=>{
+  await check("Released bilingual and response contracts · 929 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -153,6 +156,44 @@
       positions[q.choices.indexOf(q.answer[0])]++;
     }
     assert(positions.every(n=>n===4),'choice positions not balanced');
+  });
+  await check("P1 money · integer-cent amounts and bilingual choices",()=>{
+    for(const id of ['coinvalue1a','priceword1a','coincount1a']){
+      const f=families.find(f=>f.id===id),positions=[0,0,0];
+      for(let i=0;i<f.count;i++){
+        const q=f.make(i),m=q.money;
+        assert(m.cents>0 && m.cents<=1000 && m.cents%10===0,'money bounds');
+        assert(q.choices.length===3 && new Set(q.choices).size===3,'money choices unique');
+        assert(q.answer[0]===String(m.cents),'money key');
+        assert(q.choices.every(k=>q.choiceLabels[k].length===2 && q.choiceLabels[k].every(v=>v && !v.includes('undefined'))),'money bilingual labels');
+        if(m.coins)assert(m.coins.every(c=>[10,20,50,100,200,500,1000].includes(c)),'coin denomination');
+        if(m.mode==='count')assert(m.coins.reduce((a,b)=>a+b,0)===m.cents,'counted value');
+        positions[q.choices.indexOf(q.answer[0])]++;
+      }
+      assert(positions.every(n=>n===4),'money choice positions');
+    }
+  });
+  await check("P1 money · bilingual pupil, key and practice routes",async()=>{
+    const frames=[];
+    try{
+      for(const language of ['en','zh']){
+        for(const id of ['coinvalue1a','priceword1a','coincount1a']){
+          const q=families.find(f=>f.id===id).make(0);
+          const frame=await shapeFrame('?lang='+language+'&p=1&view=practice&skill='+id);frames.push(frame);
+          const d=frame.contentDocument,inputs=[...d.querySelectorAll('input[type="radio"]')];
+          assert(inputs.length===3,'money practice choices');
+          inputs.find(r=>r.value!==q.answer[0]).click();d.querySelector('button[type="submit"]').click();
+          assert(d.getElementById('practice-feedback').textContent===q.money.hint[language==='zh'?1:0],'money targeted hint');
+          inputs.find(r=>r.value===q.answer[0]).click();d.querySelector('button[type="submit"]').click();
+          assert(!d.getElementById('practice-next').hidden,'money retry');
+          const key=await shapeFrame('?v=3&lang='+language+'&p=1&items='+id+'-0&view=key');frames.push(key);
+          assert(key.contentDocument.querySelector('fieldset').textContent.includes(q.choiceLabels[q.answer[0]][language==='zh'?1:0]),'money key exposes cents instead of spoken value');
+          assert(key.contentDocument.querySelector('svg.money-coins,svg.money-price'),'money figure missing');
+        }
+        const activity=await shapeFrame('activities/p1-money.html?lang='+language);frames.push(activity);
+        assert(!activity.contentDocument.getElementById(language).hidden,'money activity language');
+      }
+    }finally{frames.forEach(f=>f.remove())}
   });
   await check("P6 percentage family succession",()=>{
     const legacy=families.find(f=>f.id==="pct1"),current=families.find(f=>f.id==="pct2");
@@ -2438,7 +2479,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===55,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===58,"grade coverage counts wrong");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
@@ -2459,7 +2500,7 @@
     const frames=[];
     try{
       for(const language of ['en','zh']){
-        const frame=await shapeFrame('?v=3&lang='+language+'&p=1&view=practice&skill=checksub1a');frames.push(frame);
+        const frame=await shapeFrame('?lang='+language+'&p=1&view=practice&skill=checksub1a');frames.push(frame);
         const doc=frame.contentDocument,radios=[...doc.querySelectorAll('input[type="radio"]')];
         assert(radios.length===3,'check practice needs three choices');
         radios.find(r=>r.value!=='34 + 24 = 58').click();
@@ -2476,11 +2517,11 @@
       }
     }finally{frames.forEach(frame=>frame.remove());}
   });
-  await check("Practice catalogue · 55 distinct live home links",async()=>{
+  await check("Practice catalogue · 58 distinct live home links",async()=>{
     const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
-      assert(links.length===55 && new Set(links.map(a=>a.href)).size===55,"practice links missing or repeated");
+      assert(links.length===58 && new Set(links.map(a=>a.href)).size===58,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);

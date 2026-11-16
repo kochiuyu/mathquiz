@@ -30,7 +30,53 @@ function centimetreQuestion(i,subject,compare){
   return {...numeric(distance?["Measure the straight distance from A to B using the centimetre ruler. Enter the number of centimetres.","用厘米尺量度A點至B點的直線距離。輸入厘米數。"]:["Measure the ribbon using the centimetre ruler. Enter the number of centimetres.","用厘米尺量度絲帶的長度。輸入厘米數。"],["cm","厘米"],length,[`The ${distance?"distance":"ribbon"} starts at ${start} cm and ends at ${end} cm. ${end} − ${start} = ${length} cm.`,`從${start}厘米刻度量至${end}厘米刻度。${end} − ${start} = ${length}厘米。`]),
     figure:{kind:"cmRuler",subject,items:[{start,length}]},centimetre:{subject,start,end,length}};
 }
+// Integration fragment: add helper functions before families and spread moneyFamilies inside it.
+// All monetary computation uses integer cents. Do not change released IDs/variants later.
+// These labelled schematic tokens do not assess recognition of a real coin's physical design.
+function moneyWords1(cents){
+  const dollars=Math.floor(cents/100),rest=cents%100;
+  const en=['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
+  const tens=['zero','ten','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
+  const zh=['零','一','兩','三','四','五','六','七','八','九','十'];
+  const dollarsEn=dollars?`${en[dollars]} dollar${dollars===1?'':'s'}`:'';
+  const centsEn=rest?`${tens[rest/10]} cents`:'';
+  return [[dollarsEn,centsEn].filter(Boolean).join(' and '), (dollars?zh[dollars]+'元':'')+(rest?zh[rest/10]+'角':'')];
+}
+function moneyPrice1(cents){return '$'+Math.floor(cents/100)+'.'+String(cents%100).padStart(2,'0')}
+function moneyChoice1(cents,wrong,i){
+  const keys=[String(cents),...wrong.map(String)];
+  return {choices:keys.map((_,j)=>keys[(j+i)%3]),choiceLabels:Object.fromEntries(keys.map(k=>[k,moneyWords1(Number(k))])),answer:[String(cents)],marks:1};
+}
+const moneyFamilies=[
+  {id:'coinvalue1a',grade:1,code:'1M2',label:['Read a coin denomination','讀出硬幣面值'],count:12,make(i){
+    const values=[10,20,50,100,200,500,1000,50,20,200,100,500];
+    const distractors=[[20,100],[10,200],[20,500],[10,1000],[20,100],[50,1000],[100,500],[10,100],[50,100],[100,500],[20,200],[200,1000]];
+    const cents=values[i],label=cents<100?`${cents}¢`:`$${cents/100}`;
+    return {...moneyChoice1(cents,distractors[i],i),prompt:['This is a labelled diagram of a Hong Kong coin, not a real coin image. What value does the label show?','這是標有面值的香港硬幣示意圖，並非真實硬幣圖像。標示表示多少錢？'],figure:{kind:'hkCoins',coins:[cents]},
+      why:[`The label ${label} means ${moneyWords1(cents)[0]}. Read the unit as well as the number; the diagram's size does not show its value.`,`標示${label}表示${moneyWords1(cents)[1]}。要讀數字和單位；示意圖的大小不代表面值。`],
+      money:{mode:'coin',cents,coins:[cents],hint:['Look for ¢ (cents) or $ (dollars), not the size of the picture.','看清楚¢（仙）或$（元），不要按圖的大小判斷。']}};
+  }},
+  {id:'priceword1a',grade:1,code:'1M2',label:['Read a marked price','讀出標價'],count:12,make(i){
+    const amounts=[250,300,50,120,480,500,670,800,910,1000,30,740];
+    const wrong=[[520,200],[30,330],[500,50+10],[210,100],[840,400],[50,550],[760,600],[80,880],[190,900],[100,10],[300,20],[470,700]];
+    const cents=amounts[i],price=moneyPrice1(cents),words=moneyWords1(cents);
+    return {...moneyChoice1(cents,wrong[i],i),prompt:['Which reading matches this Hong Kong price tag? Choose one. You do not need to write the price.','哪個讀法符合這個香港標價牌？選一個，不用寫標價。'],figure:{kind:'hkPrice',cents},
+      why:[`${price} is read as ${words[0]}. ${cents%100===0?'The two zeros show that no extra cents are included.':'Read the dollar amount and then the cents.'}`,`${price}讀作${words[1]}。${cents%100===0?'小數點後的兩個零表示沒有另加角或仙。':'先讀元，再讀角或仙。'}`],
+      money:{mode:'price',cents,hint:['Read the dollars and cents as money, not as separate digits. Check both sides of the point.','把標價讀成金額，不要逐個數字讀。看清楚點前和點後的數字。']}};
+  }},
+  {id:'coincount1a',grade:1,code:'1M2',label:['Count a group of coins','點算一組硬幣'],count:12,make(i){
+    const cases=[[10,10,10],[20,20,10],[50,20,20,10],[100,50,20],[100,100,50,20],[200,100],[500,200,100],[500,500],[200,200,200,100],[100,50,50],[1000],[50,50,20,20,10]];
+    const coins=cases[i],cents=coins.reduce((a,b)=>a+b,0);
+    const wrong=[[20,100],[40,100],[50,200],[120,700],[250,720],[200,500],[700,900],[500,100],[600,800],[150,300],[100,500],[100,250]];
+    let total=0;const running=coins.map(c=>{total+=c;return moneyWords1(total)});
+    return {...moneyChoice1(cents,wrong[i],i),prompt:['Count the labelled Hong Kong coins. How much money is there altogether? The diagrams are not real coin images.','點算標有面值的香港硬幣，合共有多少錢？這些示意圖並非真實硬幣圖像。'],figure:{kind:'hkCoins',coins},
+      why:[`Count the value of each coin once, from left to right: ${running.map(v=>v[0]).join('; ')}. The total is ${moneyWords1(cents)[0]}.`,`由左至右，每枚硬幣的面值只數一次：${running.map(v=>v[1]).join('、')}。合共${moneyWords1(cents)[1]}。`],
+      money:{mode:'count',cents,coins,hint:['Read each coin value and keep a running total. Counting the coins alone does not tell you the money total.','讀出每枚硬幣的面值，一邊數一邊累計。硬幣的枚數並不等於總金額。']}};
+  }}
+];
+
 const families = [
+  ...moneyFamilies,
   {id:"add1", grade:1, code:"1N2", label:["Addition to 10","10以內的加法"], count:7, make(i){
     const a=i+1,b=1+(i*3 % (10-a));
     return numeric([`There ${a===1?"is":"are"} ${a} red bead${a===1?"":"s"} and ${b} blue bead${b===1?"":"s"}. How many beads are there altogether?`,`有${a}顆紅珠和${b}顆藍珠。共有多少顆珠？`],["beads","顆"],a+b,`${a} + ${b} = ${a+b}`);
