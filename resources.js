@@ -1323,6 +1323,26 @@ const resourceData = {
         "P4 · Fractions (II)",
         "小四 · 分數（二）"
       ]
+    },
+    {
+      "path": "activities/p4-decimals-i.html",
+      "units": [
+        "4N7"
+      ],
+      "title": [
+        "P4 · Decimals (I)",
+        "小四 · 小數（一）"
+      ]
+    },
+    {
+      "path": "activities/p4-decimals-ii.html",
+      "units": [
+        "4N8"
+      ],
+      "title": [
+        "P4 · Decimals (II)",
+        "小四 · 小數（二）"
+      ]
     }
   ],
   "strands": {

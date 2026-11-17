@@ -20,3 +20,7 @@ assert 'fractions4.js' in config['SOURCE_FILES']
 import re
 assert re.search(r'mathquiz-text\.ttf\?v=[^\"]+', (root/'pdf-export.js').read_text())
 print(f'PASS PDF font: {len(chars)} source characters covered by actual nonzero glyphs, including all current EN/繁中 paper, keys and practical resource.')
+
+assert 'decimals4.js' in config['SOURCE_FILES']
+assert 'activities/p4-decimals-i.html' in config['SOURCE_FILES']
+assert 'activities/p4-decimals-ii.html' in config['SOURCE_FILES']

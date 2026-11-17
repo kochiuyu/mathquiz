@@ -84,3 +84,19 @@ function scoreFraction4N6(value,spec){
   if(lowest&&a!==1n)return {correct:false,reason:'equivalent-unreduced'};
   return {correct:true,reason:'correct'};
 }
+
+// Isolated decimal contracts; preceding numeric and fraction graders remain immutable.
+function parseDecimal4N7(value){
+ if(typeof value!=='string'||value.length>80)return null;
+ const text=value.normalize('NFKC').trim();if(!/^\d{1,12}(?:\.\d{1,12})?$/.test(text))return null;
+ const parts=text.split('.'),places=(parts[1]||'').length;
+ return {coefficient:BigInt(parts.join('')),places,scale:10n**BigInt(places),text};
+}
+function scoreDecimal4N7(value,spec){
+ if(!spec||!['value','integer','places'].includes(spec.mode)||typeof spec.expected!=='string'||(spec.mode==='places'&&(!Number.isInteger(spec.places)||spec.places<0||spec.places>12)))return {correct:false,reason:'invalid'};
+ const a=parseDecimal4N7(value),b=parseDecimal4N7(spec.expected);
+ if(!a||!b)return {correct:false,reason:'invalid'};
+ if(a.coefficient*b.scale!==b.coefficient*a.scale)return {correct:false,reason:'wrong'};
+ if((spec.mode==='integer'&&a.places!==0)||(spec.mode==='places'&&a.places!==spec.places))return {correct:false,reason:'form'};
+ return {correct:true,reason:'correct'};
+}
