@@ -2,9 +2,10 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),a=require('node:assert/strict'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8'),hash=s=>crypto.createHash('sha256').update(s).digest('hex');
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+'\n'+read('marking.js')+';globalThis.bank=families;',c);
-const old=c.bank.filter(f=>!['4N7','4N8'].includes(f.code)).map(f=>({id:f.id,grade:f.grade,code:f.code,label:f.label,count:f.count,retired:f.retired,variants:Array.from({length:f.count},(_,i)=>f.make(i))}));
+const old=c.bank.filter(f=>!['4N7','4N8'].includes(f.code)&&!['perimeterconcept4a','perimetercompare4a','perimeterformula4a','areaconcept4a','areaunits4a','areacompare4a','areaformula4a'].includes(f.id)).map(f=>({id:f.id,grade:f.grade,code:f.code,label:f.label,count:f.count,retired:f.retired,variants:Array.from({length:f.count},(_,i)=>f.make(i))}));
 a.equal(old.length,152);a.equal(old.reduce((n,f)=>n+f.count,0),2355);a.equal(hash(JSON.stringify(old)),'c7c4f20f6eab1736d767fa469681d89201208f056699ed22c4bacc411e134306');
-const baselinePrefix=fs.readFileSync(path.join(root,'marking.js')).subarray(0,5301);a.equal(hash(baselinePrefix),'4ee6d75a0c01d3c5a40b917915514f50df88d375a839942b41fddd6ccf6234bf','unchanged public marking prefix; self-contained frozen hash');
+// Public 4N6 marking prefix: pinned UTF-8 byte length and SHA-256.
+const markingBytes=fs.readFileSync(path.join(root,'marking.js'));a.ok(markingBytes.length>=5301);a.equal(hash(markingBytes.subarray(0,5301)),'4ee6d75a0c01d3c5a40b917915514f50df88d375a839942b41fddd6ccf6234bf');
 function check(s,expected,mode='value',correct=true,extra={}){a.equal(c.scoreDecimal4N7(s,{expected,mode,...extra}).correct,correct,JSON.stringify({s,expected,mode,extra}));}
 for(const s of ['0.5','00.50',' ０.５０ ','0.500000000000'])check(s,'0.5');
 for(const s of ['', '-1','+1','.5','1.','1e2','1/2','1+0','NaN','Infinity','1,000','0.5m','1\n2','1'.repeat(13),'0.'+'1'.repeat(13),' '.repeat(81)])a.equal(c.parseDecimal4N7(s),null,s);

@@ -24,3 +24,9 @@ print(f'PASS PDF font: {len(chars)} source characters covered by actual nonzero 
 assert 'decimals4.js' in config['SOURCE_FILES']
 assert 'activities/p4-decimals-i.html' in config['SOURCE_FILES']
 assert 'activities/p4-decimals-ii.html' in config['SOURCE_FILES']
+
+assert 'perimeter4.js' in config['SOURCE_FILES']
+assert 'activities/p4-perimeter-i.html' in config['SOURCE_FILES']
+
+assert 'area4.js' in config['SOURCE_FILES']
+assert 'activities/p4-area-i.html' in config['SOURCE_FILES']

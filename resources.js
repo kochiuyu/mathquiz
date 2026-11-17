@@ -1343,6 +1343,26 @@ const resourceData = {
         "P4 · Decimals (II)",
         "小四 · 小數（二）"
       ]
+    },
+    {
+      "path": "activities/p4-perimeter-i.html",
+      "units": [
+        "4M1"
+      ],
+      "title": [
+        "P4 · Perimeter (I)",
+        "小四 · 周界（一）"
+      ]
+    },
+    {
+      "path": "activities/p4-area-i.html",
+      "units": [
+        "4M2"
+      ],
+      "title": [
+        "P4 · Area (I)",
+        "小四 · 面積（一）"
+      ]
     }
   ],
   "strands": {

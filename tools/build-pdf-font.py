@@ -18,7 +18,7 @@ from fontTools.varLib.instancer import instantiateVariableFont
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf"
 SOURCE_SHA256 = "864727d210d54f2537bbe23b3a839436c3992af72de9322af5270897246bd44f"
-SOURCE_FILES = ("index.html", "questions.js", "builder.js", "marking.js", "fractions4.js", "decimals4.js", "quiz.js", "pdf-export.js", "activities/p3-triangles.html", "activities/p3-bar-charts-i.html", "activities/p3-inquiry.html", "activities/p4-multiplication-ii.html", "activities/p4-division-ii.html", "activities/p4-multiples-factors.html", "activities/p4-common-multiples-factors.html", "activities/p4-four-operations-ii.html", "activities/p4-fractions-ii.html", "activities/p4-decimals-i.html", "activities/p4-decimals-ii.html")
+SOURCE_FILES = ("index.html", "questions.js", "builder.js", "marking.js", "fractions4.js", "decimals4.js", "perimeter4.js", "area4.js", "quiz.js", "pdf-export.js", "activities/p3-triangles.html", "activities/p3-bar-charts-i.html", "activities/p3-inquiry.html", "activities/p4-multiplication-ii.html", "activities/p4-division-ii.html", "activities/p4-multiples-factors.html", "activities/p4-common-multiples-factors.html", "activities/p4-four-operations-ii.html", "activities/p4-fractions-ii.html", "activities/p4-decimals-i.html", "activities/p4-decimals-ii.html", "activities/p4-perimeter-i.html", "activities/p4-area-i.html")
 OUTPUT = ROOT / "fonts" / "mathquiz-text.ttf"
 
 
