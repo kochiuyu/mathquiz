@@ -18,7 +18,7 @@ for(const [litres,ml,total] of [[1,30,1030],[2,250,2250],[3,5,3005]]){
  let expected=ml;for(let n=0;n<litres;n++)expected+=1000;assert.equal(total,expected);
 }
 assert(html.includes('1000 mL = 1 L') && html.includes('1000 mL＝1 L'));
-const coverage=read('coverage.html');assert(coverage.includes('activities/p3-capacity.html?lang='));
+const coverage=read('coverage.html');assert(read('resources.js').includes('activities/p3-capacity.html') && coverage.includes('resources.js'));
 new vm.Script(coverage.match(/<script>([\s\S]*?)<\/script>/)[1]);
 const reg=read('tests/regression.js');assert(/for\(const file of \[([^\]]+)\]\)for\(const language/.exec(reg)[1].includes("'p3-capacity'"));
 assert(reg.includes('3M3 capacity · complete bilingual activity'));

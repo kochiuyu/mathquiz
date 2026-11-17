@@ -12,7 +12,9 @@ async function run2N2ReleaseChecks({check,assert,shapeFrame,families,numericAnsw
  const submit=f=>d(f).querySelector('form').requestSubmit();
  const fill=(f,values,qi=0)=>values.forEach((v,j)=>{const el=d(f).querySelector('[name="q'+qi+'f'+j+'"]');assert(el,'missing field '+qi+'/'+j);el.value=String(v);});
  const score=(f,n,total)=>assert(d(f).getElementById('status').textContent.includes(n+' / '+total),'score expected '+n+'/'+total+': '+d(f).getElementById('status').textContent);
- const tick=f=>new Promise(resolve=>f.contentWindow.requestAnimationFrame(()=>f.contentWindow.requestAnimationFrame(resolve)));
+ // Offscreen frames may suspend animation callbacks. Reading layout after a
+ // short task boundary exercises the same width assertions without hanging.
+ const tick=f=>new Promise(resolve=>setTimeout(()=>{void f.contentDocument.documentElement.offsetWidth;resolve();},50));
  await check('P2 2N2 ·72 finite variants and numeric contract',()=>{
   let count=0;for(const id of ids){const f=get(id);assert(f.grade===2&&f.code==='2N2'&&f.count===12,'metadata '+id);for(let i=0;i<12;i++){
    const q=f.make(i),m=q.arithmetic2N2,ns=m.nums;let sum=BigInt(ns[0]);for(const x of ns.slice(1))sum=m.op==='+'?sum+BigInt(x):sum-BigInt(x);
@@ -26,7 +28,7 @@ async function run2N2ReleaseChecks({check,assert,shapeFrame,families,numericAnsw
   await check('P2 2N2 ·'+l+' all six builder selections',()=>withFrames(async open=>{
    const frame=await open('?v=3&lang='+l+'&p=2&view=build'),doc=d(frame);for(const s of doc.querySelectorAll('#mix select'))s.value='0';
    for(const id of ids){const s=doc.querySelector('#mix select[name="'+id+'"]');assert(s,'selector '+id);s.value='1';assert(s.closest('label').textContent.includes(loc(get(id).label,l)),'builder label '+id);}
-   const loaded=new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('builder submit navigation timeout')),20000);frame.addEventListener('load',()=>{clearTimeout(timer);resolve();},{once:true});});doc.getElementById('mix').requestSubmit();await loaded;
+   doc.getElementById('mix').requestSubmit();assert(!doc.getElementById('review-stage').hidden,'builder review stage visible');
    const now=d(frame),selected=new URL(frame.contentWindow.location.href).searchParams.get('items').split('.');assert(selected.length===6&&ids.every(id=>selected.some(s=>s.startsWith(id+'-'))),'builder generated six families');assert(now.querySelectorAll('fieldset').length===6,'builder six previews');assert(now.querySelector('.builder-totals').textContent.includes('8'),'builder8marks');assert(new URL(now.getElementById('take').href).searchParams.get('items')===selected.join('.'),'pupil link preserves set');
   }));
   for(const id of ids)await check('P2 2N2 ·'+l+' '+id+' blank, invalid, correct',()=>withFrames(async open=>{

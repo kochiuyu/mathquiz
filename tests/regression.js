@@ -1430,7 +1430,7 @@
           const ready=activity?(oralSheets
             ? doc.getElementById('print') && ['en','zh'].every(id=>doc.getElementById(id)?.querySelectorAll('article.sheet').length===3)
             : doc.getElementById('en')&&doc.getElementById('zh')&&doc.getElementById('key-toggle'))
-            : doc.getElementById(coverage?'coverage':'app')?.children.length;
+            : doc.getElementById(coverage?'resource-results':'app')?.children.length;
           if(!ready){lastState="requested document complete but expected "+(activity?(oralSheets?"oral activity bilingual three-sheet sections/print control":"activity sections/key toggle"):coverage?"coverage content":"app content")+" absent";return;}
           finish();
         }catch(error){lastState="document not accessible: "+error.message;}
@@ -1821,10 +1821,10 @@
       assert(practice.getElementById('en').getAttribute('href').includes('skill=place3a'),"P2 language switch lost skill");
       practice.getElementById('practice-answer').value='314';practice.getElementById('practice-form').requestSubmit();
       assert(/十位要填0/.test(practice.getElementById('practice-feedback').textContent),"Chinese P2 hint missing");
-      const home=await open('?lang=en');
-      assert([...home.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Create a P2 quiz') && a.href.includes('p=2')),"P2 builder home link missing");
-      assert([...home.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise place value') && a.href.includes('skill=place3a')),"P2 practice home link missing");
-      assert([...home.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise equal groups') && a.href.includes('skill=groups2a')),"P2 group practice home link missing");
+      const home=await open('?lang=en&view=browse');
+      assert([...home.querySelectorAll('.resource-card a')].some(a=>a.href.includes('view=build') && a.href.includes('p=2')),"P2 builder home link missing");
+      assert([...home.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise place value') && a.href.includes('skill=place3a')),"P2 practice home link missing");
+      assert([...home.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise equal groups') && a.href.includes('skill=groups2a')),"P2 group practice home link missing");
     }finally{frames.forEach(f=>f.remove());}
   });
   await check("P2 place value · Chinese direct PDF",async()=>{
@@ -1951,8 +1951,8 @@
       assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習閱讀象形圖' && doc.getElementById('en').getAttribute('href').includes('pict2a'),"Chinese pictogram practice missing");
       doc.getElementById('practice-answer').value='4';doc.getElementById('practice-form').requestSubmit();
       assert(/找出香蕉一類/.test(doc.getElementById('practice-feedback').textContent),"Chinese category hint missing");
-      const home=await shapeFrame('?lang=en');frames.push(home);
-      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise pictograms') && a.href.includes('skill=pict2a')),"pictogram home link missing");
+      const home=await shapeFrame('?lang=en&view=browse');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise pictograms') && a.href.includes('skill=pict2a')),"pictogram home link missing");
       const paper=await shapeFrame('?v=3&lang=zh&p=2&items=pict2a-6&view=paper');frames.push(paper);
       const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
       const raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());
@@ -2013,8 +2013,8 @@
       assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習平均分配' && doc.getElementById('en').getAttribute('href').includes('share2a'),"Chinese sharing practice missing");
       doc.getElementById('practice-answer-0').value='3';doc.getElementById('practice-answer-1').value='0';doc.getElementById('practice-form').requestSubmit();
       assert(/輪流給每人一粒/.test(doc.getElementById('practice-feedback').textContent),"Chinese sharing hint missing");
-      const home=await shapeFrame('?lang=en');frames.push(home);
-      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise equal sharing') && a.href.includes('skill=share2a')),"sharing home link missing");
+      const home=await shapeFrame('?lang=en&view=browse');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise equal sharing') && a.href.includes('skill=share2a')),"sharing home link missing");
       const paper=await shapeFrame('?v=3&lang=zh&p=2&items=share2a-0.share2a-1&view=paper');frames.push(paper);
       paper.style.width='360px';
       assert(paper.contentDocument.documentElement.scrollWidth<=360,"sharing phone paper overflows");
@@ -2080,9 +2080,9 @@
       assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習塗色分數' && doc.getElementById('en').getAttribute('href').includes('frac3a'),"Chinese fraction practice missing");
       doc.getElementById('practice-answer-0').value='2';doc.getElementById('practice-answer-1').value='4';doc.getElementById('practice-form').requestSubmit();
       assert(/先數所有等分/.test(doc.getElementById('practice-feedback').textContent),"Chinese fraction hint missing");
-      const home=await shapeFrame('?lang=en');frames.push(home);
-      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Create a P3 quiz') && a.href.includes('p=3')),"P3 builder home link missing");
-      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise fractions') && a.href.includes('skill=frac3a')),"fraction practice home link missing");
+      const home=await shapeFrame('?lang=en&view=browse');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.resource-card a')].some(a=>a.href.includes('view=build') && a.href.includes('p=3')),"P3 builder home link missing");
+      assert([...home.contentDocument.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise fractions') && a.href.includes('skill=frac3a')),"fraction practice home link missing");
       const paper=await shapeFrame('?v=3&lang=zh&p=3&items=frac3a-7.frac3a-8.frac3a-3&view=paper');frames.push(paper);
       paper.style.width='360px';assert(paper.contentDocument.documentElement.scrollWidth<=360,"fraction phone paper overflows");
       const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
@@ -2139,8 +2139,8 @@
       assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習讀取量杯刻度' && doc.getElementById('en').getAttribute('href').includes('cup3a'),"Chinese cup practice missing");
       doc.getElementById('practice-answer').value='300';doc.getElementById('practice-form').requestSubmit();
       assert(/從有數字的刻度開始/.test(doc.getElementById('practice-feedback').textContent),"Chinese cup hint missing");
-      const home=await shapeFrame('?lang=en');frames.push(home);
-      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise measuring cups') && a.href.includes('skill=cup3a')),"cup home link missing");
+      const home=await shapeFrame('?lang=en&view=browse');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise measuring cups') && a.href.includes('skill=cup3a')),"cup home link missing");
       const paper=await shapeFrame('?v=3&lang=zh&p=3&items=cup3a-3.cup3a-8&view=paper');frames.push(paper);
       paper.style.width='360px';assert(paper.contentDocument.documentElement.scrollWidth<=360,"cup phone paper overflows");
       const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
@@ -2195,8 +2195,8 @@
       const doc=practice.contentDocument;
       assert(doc.documentElement.lang==='zh-HK' && doc.querySelector('h1').textContent==='練習閱讀棒形圖' && doc.getElementById('en').getAttribute('href').includes('bar3a'),"Chinese bar practice missing");
       doc.getElementById('practice-answer').value='4';doc.getElementById('practice-form').requestSubmit();assert(/找出題目指定的棒形/.test(doc.getElementById('practice-feedback').textContent),"Chinese bar hint missing");
-      const home=await shapeFrame('?lang=en');frames.push(home);
-      assert([...home.contentDocument.querySelectorAll('.home-actions a')].some(a=>a.textContent.includes('Practise bar charts') && a.href.includes('skill=bar3a')),"bar home link missing");
+      const home=await shapeFrame('?lang=en&view=browse');frames.push(home);
+      assert([...home.contentDocument.querySelectorAll('.resource-card a')].some(a=>a.textContent.includes('Practise bar charts') && a.href.includes('skill=bar3a')),"bar home link missing");
       const paper=await shapeFrame('?v=3&lang=zh&p=3&items=bar3a-0.bar3a-9&view=paper');frames.push(paper);
       paper.style.width='360px';assert(paper.contentDocument.documentElement.scrollWidth<=360,"bar phone paper overflows");
       const code=await paper.contentWindow.mathQuizPdf.paperCode(),blob=await paper.contentWindow.mathQuizPdf.generate();
@@ -2219,8 +2219,8 @@
       assert(raw.startsWith('%PDF-') && raw.includes('/ToUnicode') && pages>=1 && pages<=3,"mixed P3 A4/PDF or selectable text missing");
     }finally{frames.forEach(f=>f.remove());}
   });
-  await check("P1 counting practice is linked from the home page",async()=>{
-    const home=new URL("../?lang=en",location.href);
+  await check("P1 counting practice is linked from the resource browser",async()=>{
+    const home=new URL("../?lang=en&view=browse",location.href);
     home.searchParams.set("practiceLinkCheck",String(Date.now()));
     const response=await fetch(home);
     assert(response.ok,"home page unavailable");
@@ -2233,34 +2233,34 @@
         frame.src=home;
         document.body.appendChild(frame);
       });
-      const link=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const link=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise counting"));
       assert(link && link.href.includes("p=1") && link.href.includes("view=practice"),"home practice entry missing");
-      const sequences=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const sequences=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise counting forwards"));
       assert(sequences && sequences.href.includes("skill=next1"),"home sequence entry missing");
-      const addition=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const addition=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.trim()==="Practise addition →");
       assert(addition && addition.href.includes("skill=storyadd1"),"home addition entry missing");
-      const missingPart=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const missingPart=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise missing parts"));
       assert(missingPart && missingPart.href.includes("skill=parts18a"),"home missing-part entry missing");
-      const triangles=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const triangles=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise triangles"));
       assert(triangles && triangles.href.includes("skill=triangle1"),"home triangle entry missing");
-      const perimeter=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const perimeter=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise perimeter"));
       assert(perimeter && perimeter.href.includes("p=4") && perimeter.href.includes("skill=per1"),
         "home perimeter entry missing");
-      const factors=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const factors=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise factors"));
       assert(factors && factors.href.includes("p=4") && factors.href.includes("skill=factor1"),
         "home factor entry missing");
-      const percentages=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const percentages=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise percentages"));
       assert(percentages && percentages.href.includes("p=6") && percentages.href.includes("skill=pct2"),
         "home percentage entry missing");
-      const means=Array.from(frame.contentDocument.querySelectorAll(".home-actions a"))
+      const means=Array.from(frame.contentDocument.querySelectorAll(".resource-card a"))
         .find(a=>a.textContent.includes("Practise averages"));
       assert(means && means.href.includes("p=6") && means.href.includes("skill=mean1"),
         "home mean entry missing");
@@ -2856,14 +2856,14 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("section.card").length===6 && doc.querySelectorAll("section.card li a").length===122,"grade coverage counts wrong");
-      assert(doc.querySelector('section.card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
-      assert(doc.querySelector('section.card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
+      assert(doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===122,"grade coverage counts wrong");
+      assert(doc.querySelector('.resource-card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
+      assert(doc.querySelector('.resource-card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
-      assert(doc.body.textContent.includes("Planned example") && doc.body.textContent.includes("3 units touched"),"live/planned distinction missing");
-      assert([...doc.querySelectorAll("section.card li a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
+      assert(doc.body.textContent.includes("Planned · Not yet available") && doc.querySelectorAll(".badge.complete").length===36,"live/planned distinction missing");
+      assert([...doc.querySelectorAll(".resource-card a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
-      assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("各年級") && zh.contentDocument.querySelector("section.card h2").textContent==="小一" && !zh.contentDocument.querySelector("section.card").textContent.includes("identify"),"Chinese coverage missing or untranslated");
+      assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("課程") && zh.contentDocument.querySelector("[data-unit=\"1N1\"] h2").textContent==="二十以內的數" && !zh.contentDocument.querySelector("[data-unit=\"1N1\"]").textContent.includes("identify"),"Chinese coverage missing or untranslated");
       const activity=await shapeFrame("activities/p1-length-distance-i.html?lang=en");frames.push(activity);
       assert(!activity.contentDocument.getElementById('en').hidden && activity.contentDocument.getElementById('zh').hidden && activity.contentDocument.querySelector('#en .key'),"English practical activity missing");
       const activityZh=await shapeFrame("activities/p1-length-distance-i.html?lang=zh");frames.push(activityZh);
@@ -2927,10 +2927,10 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 122 distinct live home links",async()=>{
-    const frame=await shapeFrame("?lang=en&regressionRun="+Date.now()+"-practice-catalogue");
+  await check("Practice catalogue · 122 distinct live resource-browser links",async()=>{
+    const frame=await shapeFrame("?lang=en&view=browse&regressionRun="+Date.now()+"-practice-catalogue");
     try{
-      const links=[...frame.contentDocument.querySelectorAll(".home-actions .home-feature:last-child .home-links a")];
+      const links=[...frame.contentDocument.querySelectorAll(".practice-link")];
       assert(links.length===122 && new Set(links.map(a=>a.href)).size===122,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");

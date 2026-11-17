@@ -590,7 +590,7 @@ function renderCompare100Practice(){
 function renderTrianglePractice(){
   const family=families.find(f=>f.id==="triangle1");
   const pool=Array.from({length:family.count},(_,i)=>i).filter(i=>i!==1);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[1,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill=triangle1";
@@ -631,7 +631,7 @@ function renderTrianglePractice(){
 }
 function renderEqualGroupsPractice(){
   const family=families.find(f=>f.id==="groups2a"),pool=Array.from({length:family.count-1},(_,i)=>i+1);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[0,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p=2&view=practice&skill=groups2a";
@@ -869,7 +869,7 @@ function renderPictogramPractice(){
 function renderPlaceValuePractice(){
   const family=families.find(f=>f.id==="place3a");
   const pool=Array.from({length:family.count-1},(_,i)=>i+1);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[0,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p=2&view=practice&skill=place3a";
@@ -939,7 +939,7 @@ function renderSpeedPractice(){
 function renderMeanPractice(){
   const family=families.find(f=>f.id==="mean1");
   const pool=Array.from({length:family.count-1},(_,i)=>i+1);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[0,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p=6&view=practice&skill=mean1";
@@ -993,7 +993,7 @@ function renderMeanPractice(){
 function renderPercentagePractice(){
   const family=families.find(f=>f.id==="pct2");
   const pool=Array.from({length:family.count},(_,i)=>i).filter(i=>i!==7);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[7,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p=6&view=practice&skill=pct2";
@@ -1046,7 +1046,7 @@ function renderPercentagePractice(){
 function renderFactorPractice(){
   const family=families.find(f=>f.id==="factor1");
   const pool=Array.from({length:family.count-1},(_,i)=>i+1);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[0,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p=4&view=practice&skill=factor1";
@@ -1129,7 +1129,7 @@ function renderPractice(){
   const family=families.find(f=>f.id===(perimeter?"per1":sequence?"next1":addition?"storyadd1":missingPart?"parts18a":"count20a"));
   const first=perimeter?6:sequence?6:addition?39:missingPart?58:10;
   const pool=(perimeter?Array.from({length:16},(_,i)=>i):sequence?Array.from({length:12},(_,i)=>i):addition||missingPart?Array.from({length:81},(_,i)=>i):Array.from({length:15},(_,i)=>i+5)).filter(i=>i!==first);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[first,...pool.slice(0,2)];
   let position=0,attempts=0,firstTry=0;
   const practiceUrl=language=>"?lang="+language+"&p="+grade+"&view=practice"+(perimeter?"&skill=per1":sequence?"&skill=next1":addition?"&skill=storyadd1":missingPart?"&skill=parts18a":"");
@@ -1352,7 +1352,7 @@ function renderAdditionalP1Practice(skill){
   const family=families.find(f=>f.id===skill && f.grade===1);
   const first={add1:0,pictureadd1:21,otherway1:3}[skill];
   const pool=Array.from({length:family.count},(_,i)=>i).filter(i=>i!==first);
-  for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
+  for(let i=pool.length-1;i>0;i--){const j=Math.floor(practiceRandom()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}
   const variants=[first,...pool.slice(0,2)];
   const titles={add1:["Practise addition to 10","練習10以內的加法"],pictureadd1:["Practise writing addition sentences","練習看圖寫加法算式"],otherway1:["Practise making a total another way","練習另一種組合方法"]};
   const practiceUrl=language=>"?lang="+language+"&p=1&view=practice&skill="+skill;
@@ -1471,26 +1471,18 @@ if(custom && grade){
   for(const language of ["en","zh"]) document.getElementById(language).href=customLink(ids,view,grade,language);
   if(selected.length)quizzes[grade]=selected;
 }
-if(invalidV4 || ([2,3,5].includes(grade) && !custom && !practiceEntry) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
+if(window.mathQuizLoadError){
+  app.innerHTML='<h1>'+t('MathQuiz could not load','????MathQuiz')+'</h1><p><a href="">'+t('Check your connection and try again.','?????????????')+'</a></p>';
+}else if(window.mathQuizCoverage || view==='browse'){
+  MathQuizUI.browser(app,!!window.mathQuizCoverage);
+}else if(invalidV4 || ([2,3,5].includes(grade) && !custom && !practiceEntry) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
   app.innerHTML='<h1>'+t("Quiz link unavailable","小測連結無效")+'</h1><a href="'+href(null)+'">'+t("All quizzes","所有小測")+'</a>';
 }else if(custom && view==="build"){
   renderBuilder(grade,selected);
 }else if(practiceEntry){
   practiceEntry.render();
 }else if(!grade){
-  document.title=t("MathQuiz · Primary mathematics","MathQuiz · 小學數學");
-  const presets=[
-    {ids:warmUpP1,title:t("P1 five-minute warm-up","小一五分鐘熱身題"),description:t("Three quick questions on counting, sequences and addition.","三題數數、順數和加法題。"),edit:t("Edit warm-up","編輯熱身題"),pupil:t("Try warm-up","試做熱身題")},
-    {ids:exitTicketP1,title:t("Six-question P1 exit ticket","小一六題離堂小測"),description:t("A ready-to-edit set on numbers to 20 and addition.","可編輯的二十以內數和加法題組。"),edit:t("Edit exit ticket","編輯離堂小測"),pupil:t("Try exit ticket","試做離堂小測")}
-  ];
-  app.innerHTML='<h1>'+t("Primary mathematics","小學數學")+'</h1><p class="intro">'+t("Choose a quiz to practise online or download an A4 paper and worked answers.","選擇小測，網上作答或下載 A4 試卷及解答。")+'</p><section class="home-actions" aria-label="'+t("Get started","開始使用")+'">'+presets.map(p=>'<div class="home-feature"><h2>'+p.title+'</h2><p>'+p.description+'</p><div class="home-links"><a class="builder-link" href="'+customLink(p.ids,"build",1)+'">'+p.edit+' →</a><a href="'+customLink(p.ids,"",1)+'">'+p.pupil+' →</a></div></div>').join("")+'<div class="home-feature"><h2>'+t("Create a quiz","建立小測")+'</h2><p>'+t("Choose questions for Primary 1, 2, 3, 4, 5 or 6.","選擇小一、小二、小三、小四、小五或小六的題目。")+'</p><div class="home-links"><a class="builder-link" href="'+customLink([],"build",1)+'">'+t("Start a new quiz","開始建立小測")+' →</a></div></div><div class="home-feature"><h2>'+t("Practise a skill","練習一項技能")+'</h2><p>'+t("Start with three P1 counting questions. Get a hint and try again.","先做三題小一點算題，遇到困難可看提示再試。")+'</p><div class="home-links"><a class="builder-link" href="?lang='+lang+'&p=1&view=practice">'+t("Practise counting","練習點算")+' →</a></div></div></section><h2>'+t("Example quizzes","示例小測")+'</h2><section class="cards">'+[1,4,6].map(n=>'<a class="card" href="'+href(n)+'"><b>'+level(n)+'</b><span>'+local(topics[n])+'</span><strong>'+t("Open quiz","開啟小測")+' →</strong></a>').join("")+'</section>';
-  const practiceCard=app.querySelector(".home-actions .home-feature:last-child");
-  app.querySelector(".intro").insertAdjacentHTML("afterend",'<p><a href="coverage.html?lang='+lang+'">'+t("See grade coverage and planned examples","查看各年級題目涵蓋範圍及計劃中的例子")+' →</a></p>');
-  practiceCard.querySelector("p").textContent=t("Choose P1 counting, addition and shapes; P2 place value, equal groups, pictograms and equal sharing; P3 fractions, measuring cups and bar charts; P4 perimeter and factors; P5 fractions, equations, triangle area, cuboid volume and circle parts; or P6 percentages and averages. Get a hint and try again.","選擇小一點算、加法和圖形；小二位值、等量分組、象形圖和平均分配；小三分數、量杯刻度和棒形圖；小四周界和因數；小五分數加法、簡易方程、三角形面積、長方體體積和圓的各部分；或小六百分比和平均數練習，遇到困難可看提示再試。");
-  practiceCard.querySelector(".home-links").insertAdjacentHTML("beforeend",practiceCatalogue.filter(entry=>entry.skill).map(entry=>'<a href="?lang='+lang+'&p='+entry.grade+'&view=practice&skill='+entry.skill+'">'+local(entry.label)+' →</a>').join(""));
-  app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",2)+'">'+t("Create a P2 quiz","建立小二小測")+' →</a>');
-  app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",3)+'">'+t("Create a P3 quiz","建立小三小測")+' →</a>');
-  app.querySelector(".home-actions .home-feature:nth-child(3) .home-links").insertAdjacentHTML("beforeend",'<a href="'+customLink([],"build",5)+'">'+t("Create a P5 quiz","建立小五小測")+' →</a>');
+  MathQuizUI.home(app);
 }else{
   const paper=custom?(["paper","key"].includes(view)?view:null):params.get("sheet");
   if(fixedP6V4 && paper)for(const language of ["en","zh"])document.getElementById(language).href=href(grade,language,paper);
