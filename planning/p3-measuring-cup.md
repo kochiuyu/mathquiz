@@ -30,3 +30,7 @@ Show an upright transparent measuring cup with a horizontal water level exactly 
 - **Practice:** Start with the 250 mL example, offer the tick-counting hint after a wrong first try, allow one retry, then show the worked reading. Follow with two distinct scales and amounts, including a labelled mark and a 1000 mL-scale intermediate mark. Record first-try success separately.
 - **Automated release checks:** Enumerate all twelve records and independently verify amount bounds, exact graduation alignment, label spacing, scale maxima, bilingual text and key. Test accepted and rejected response forms, blank prompting, hint/retry, distinct follow-ups, old links, phone width and A4/PDF output. Manual pupil and hands-on screen-reader checks remain deferred and must not be marked complete.
 
+
+## Whole-unit practical candidate
+
+The [3M3 capacity audit](p3-capacity.md) links a new bilingual teacher activity covering the remaining comparison, tool-use, estimation and recording modes. It does not change this family or imply that the digital reading certifies practical skill. The activity remains a candidate pending live verification.

@@ -2895,7 +2895,7 @@
   await check("P1 teacher activity routes, keys and phone layout",async()=>{
     const frames=[];
     try{
-      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication','p2-4digit-numbers','p2-money','p2-addition-subtraction-iii','p2-basic-division','p2-length-distance-iii','p2-time-ii','p2-3d-shapes-ii','p2-angles','p2-directions-ii','p2-quadrilaterals-i','p2-pictograms','p2-inquiry','p3-5digit-numbers','p3-multiplication-i','p3-division-i','p3-four-operations-i','p3-fractions-i','p3-length-distance-iv','p3-time-iii'])for(const language of ['en','zh']){
+      for(const file of ['p1-early-number-review','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-2d-shapes','p1-3d-shapes','p1-directions','p1-inquiry','p2-3digit-numbers','p2-addition-subtraction-ii','p2-basic-multiplication','p2-4digit-numbers','p2-money','p2-addition-subtraction-iii','p2-basic-division','p2-length-distance-iii','p2-time-ii','p2-3d-shapes-ii','p2-angles','p2-directions-ii','p2-quadrilaterals-i','p2-pictograms','p2-inquiry','p3-5digit-numbers','p3-multiplication-i','p3-division-i','p3-four-operations-i','p3-fractions-i','p3-length-distance-iv','p3-time-iii','p3-capacity'])for(const language of ['en','zh']){
         const frame=await shapeFrame('activities/'+file+'.html?lang='+language);frames.push(frame);
         const d=frame.contentDocument,w=frame.contentWindow,section=d.getElementById(language);
         assert(section && !section.hidden && d.getElementById(language==='en'?'zh':'en').hidden,'activity language');
@@ -2936,6 +2936,22 @@
     }finally{frame.remove();}
   });
   await run2N2ReleaseChecks({check,assert,shapeFrame,families,numericAnswer});
+  await check("3M3 capacity · complete bilingual activity, source links and recording key",async()=>{
+    for(const language of ['en','zh']){
+      const frame=await shapeFrame('activities/p3-capacity.html?lang='+language);
+      try{
+        const d=frame.contentDocument,section=d.getElementById(language);
+        assert(section.querySelectorAll('[data-task]').length===8,'eight pupil actions');
+        assert(section.querySelectorAll('.sheet').length===5,'three pupil and two teacher sheets');
+        for(let n=1;n<=8;n++)assert(section.querySelector('[data-task="'+n+'"] .work'),'writing space '+n);
+        const key=section.querySelector('.key').textContent;
+        for(const answer of ['1030','2250','3005','1000'])assert(key.includes(answer),'worked result '+answer);
+        assert(section.querySelector('a[href*="cup3a-3"]'),'existing cup family link');
+        assert(section.querySelector('a[href*="pmc2017_e.pdf#page=51"]'),'supplement link');
+        assert(section.querySelector('a[href*="EN_KS1_e.pdf#page=59"]'),'notes link');
+      }finally{frame.remove();}
+    }
+  });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";

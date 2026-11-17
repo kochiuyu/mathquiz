@@ -179,3 +179,7 @@ Thirteen families /156 variants added; all1,785 prior payloads preserved. Snapsh
 | 3N5 | `fractionset3a`, `fractionequivalent3a`, `fractioncompare3a`, `fractionoperation3a` | [Source map](p3-fractions-i.md) · [Teacher activity](../activities/p3-fractions-i.html) |
 | 3M1 | `cmtomm3a`, `comparekm3a`, `rulermm3a` | [Source map](p3-length-distance-iv.md) · [Teacher activity](../activities/p3-length-distance-iv.html) |
 | 3M2 | `startminutes3a`, `starthours3a` | [Source map](p3-time-iii.md) · [Teacher activity](../activities/p3-time-iii.html) |
+
+## 3M3 capacity practical candidate
+
+[Capacity activity and source audit](p3-capacity.md) supply the seven-objective teacher-assessment candidate. `cup3a` is unchanged and remains limited to pictured scale reading; no new family or variants are added. Completion requires live verification.

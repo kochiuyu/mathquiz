@@ -279,3 +279,7 @@ The following are original English and Traditional Chinese item briefs. Use the 
 ## 1N4 inverse-operation evidence update
 
 `checksub1a` adds a pupil action absent from the older worked keys: choose the addition sentence checking a displayed subtraction. Twelve pairs stay below 100 and need no borrowing. The [unit brief](p1-addition-subtraction-i.md) records the objective review, including teacher-scored intermediate working and column alignment.
+
+## 3M3 capacity practical candidate
+
+The [seven-objective activity audit](p3-capacity.md) adds bilingual practical comparison, measurement, estimation and recording tasks. It reuses all twelve `cup3a` variants unchanged. This is a local candidate, not a resource-complete checkpoint; browser and deployed QA remain pending. No family or resource-unit count increases.
