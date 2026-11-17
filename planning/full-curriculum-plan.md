@@ -1,6 +1,6 @@
 # Full curriculum development plan
 
-**Verified resource-complete checkpoint: 38/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1 have source-reviewed assessment resources, covering 151 numbered objectives plus two integrated inquiry statements. Public Quadrilaterals (II) release `23b60fb` passed **371/371 curriculum checks and 150/150 UI checks**, with zero failures. All 1,989 variant contracts and nine static gates pass. This unit adds six objectives and 12 variants; all 1,977 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Verified resource-complete checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
 
@@ -62,7 +62,7 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 | P3 | [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | `write24hour3a`, `read24hour3a`; [activity and audit](p3-time-iv.md) | Verified resource complete; live `604fd9f` PASS 365/365; manual/practical limitations retained |
 | P3 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | `weightgrams3a`; [activity and audit](p3-weight.md) | Verified resource complete; live `00eb0d4` PASS 368/368 curriculum and 147/147 UI; manual/practical limitations retained |
 | P3 | [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | `parallelpairs3a`; [activity and audit](p3-quadrilaterals-ii.md) | Verified resource complete; live `23b60fb` PASS 371/371 curriculum and 150/150 UI; manual/practical limitations retained |
-| P3 | [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | `triangleproperty3a`, `trianglerelation3a`, `trianglesides3a` | Private candidate; six-task practical activity; not verified complete |
+| P3 | [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | `triangleproperty3a`, `trianglerelation3a`, `trianglesides3a` | Verified resource complete; live `6c88951` PASS 378/378 curriculum and 153/153 UI; manual/practical limits retained |
 | P3 | [3D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=57) | Bar charts (I) | `bar3a` | Task live; objective audit needed |
 | P3 | [3F1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=69) | Inquiry and investigation | — | No task |
 | P4 | [4N1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=7) | Multiplication (II) | — | No task |
@@ -112,8 +112,8 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 
 ## Immediate sequence
 
-1. Preserve all P1/P2, 3N1–3N5 and 3M1–3M5 and 3S1 public resource checkpoints (38/85), including their manual/practical limitations.
-2. Complete Triangles (3S2). Continue remaining P3 in source order; verify each deployed candidate before closure.
+1. Preserve all P1/P2, 3N1–3N5 and 3M1–3M5 and 3S1–3S2 public resource checkpoints (39/85), including their manual/practical limitations.
+2. Complete Bar charts (I) (3D1). Continue remaining P3 in source order; verify each deployed candidate before closure.
 3. Keep later-grade drafts out of live coverage until their own reviewed release. Preserve permanent question IDs, payloads and shared links.
 4. Retain teacher-marked practical, oral, construction, explanation and inquiry evidence separately from automated answers.
 5. Update the inventory, map, ledger, coverage page and README after each verified release.

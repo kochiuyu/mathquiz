@@ -389,7 +389,7 @@ const resourceData = {
         "三角形"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66",
-      "complete": false
+      "complete": true
     },
     {
       "code": "3D1",

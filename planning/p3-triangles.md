@@ -1,3 +1,7 @@
+## Verified publication · 17 November 2026
+
+3S2 is resource complete. Public release `6c88951` passed 378/378 curriculum and 153/153 UI browser checks, plus ten static gates. Checkpoint: 39/85 units, 155 numbered objectives and two inquiry statements. Earlier candidate notes below are historical. Actual pupil performance, manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unverified.
+
 # 3S2 Triangles: private candidate audit
 
 ## Implemented checkpoint
