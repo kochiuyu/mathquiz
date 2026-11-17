@@ -1,6 +1,6 @@
 # Full curriculum development plan
 
-**Verified resource-complete checkpoint: 34/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M2 have source-reviewed assessment resources, covering 129 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8d75a7f` passed **359/359** browser checks with zero failures, including all 1,941 variant contracts. All 1,785 earlier payloads remain unchanged. The four static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 35/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M3 have source-reviewed assessment resources, covering 136 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8864780` passed **360/360** browser checks with zero failures, including all 1,941 variant contracts. Capacity adds seven teacher-assessed objectives without changing any question payload. The five static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
 **Verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
 
@@ -56,7 +56,7 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 | P3 | [3N5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=48) | Fractions (I) | `frac3a`, `fractionset3a`, `fractionequivalent3a`, `fractioncompare3a`, `fractionoperation3a`; [teacher activity](../activities/p3-fractions-i.html); [review](p3-fractions-i.md) | Verified resource complete; live `8d75a7f` PASS 359/359; manual/practical limitations retained |
 | P3 | [3M1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=56) | Length and distance (IV) | `cmtomm3a`, `comparekm3a`, `rulermm3a`; [teacher activity](../activities/p3-length-distance-iv.html); [review](p3-length-distance-iv.md) | Verified resource complete; live `8d75a7f` PASS 359/359; manual/practical limitations retained |
 | P3 | [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | `startminutes3a`, `starthours3a`; [teacher activity](../activities/p3-time-iii.html); [review](p3-time-iii.md) | Verified resource complete; live `8d75a7f` PASS 359/359; manual/practical limitations retained |
-| P3 | [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) | Capacity | `cup3a`; [practical candidate](p3-capacity.md) | Seven-objective candidate; live QA pending |
+| P3 | [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) | Capacity | `cup3a`; [practical activity and audit](p3-capacity.md) | Verified resource complete; live `8864780` PASS 360/360; manual/practical limitations retained |
 | P3 | [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | — | No task |
 | P3 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | — | No task |
 | P3 | [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | — | No task |
@@ -110,8 +110,8 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 
 ## Immediate sequence
 
-1. Preserve all P1/P2, 3N1–3N5 and 3M1–3M2 public resource checkpoints (34/85), including their manual/practical limitations.
-2. Audit and complete Capacity (3M3), then Time (IV) (3M4) and Weight (3M5). Continue remaining P3 in source order; verify each deployed candidate before closure.
+1. Preserve all P1/P2, 3N1–3N5 and 3M1–3M3 public resource checkpoints (35/85), including their manual/practical limitations.
+2. Complete Time (IV) (3M4), then Weight (3M5). Continue remaining P3 in source order; verify each deployed candidate before closure.
 3. Keep later-grade drafts out of live coverage until their own reviewed release. Preserve permanent question IDs, payloads and shared links.
 4. Retain teacher-marked practical, oral, construction, explanation and inquiry evidence separately from automated answers.
 5. Update the inventory, map, ledger, coverage page and README after each verified release.

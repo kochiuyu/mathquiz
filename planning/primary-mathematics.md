@@ -1,6 +1,6 @@
 # Hong Kong primary mathematics quiz plan
 
-**Verified resource-complete checkpoint: 34/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M2 have source-reviewed assessment resources, covering 129 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8d75a7f` passed **359/359** browser checks with zero failures, including all 1,941 variant contracts. All 1,785 earlier payloads remain unchanged. The four static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 35/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M3 have source-reviewed assessment resources, covering 136 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8864780` passed **360/360** browser checks with zero failures, including all 1,941 variant contracts. Capacity adds seven teacher-assessed objectives without changing any question payload. The five static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
 **Verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
 
@@ -280,6 +280,6 @@ The following are original English and Traditional Chinese item briefs. Use the 
 
 `checksub1a` adds a pupil action absent from the older worked keys: choose the addition sentence checking a displayed subtraction. Twelve pairs stay below 100 and need no borrowing. The [unit brief](p1-addition-subtraction-i.md) records the objective review, including teacher-scored intermediate working and column alignment.
 
-## 3M3 capacity practical candidate
+## Verified 3M3 capacity practical checkpoint
 
-The [seven-objective activity audit](p3-capacity.md) adds bilingual practical comparison, measurement, estimation and recording tasks. It reuses all twelve `cup3a` variants unchanged. This is a local candidate, not a resource-complete checkpoint; browser and deployed QA remain pending. No family or resource-unit count increases.
+The [seven-objective activity audit](p3-capacity.md) adds bilingual practical comparison, measurement, estimation and recording tasks. It reuses all twelve `cup3a` variants unchanged. Public `8864780` passed 360/360 live browser checks with zero failures after all five static gates. All seven objectives are resource complete; practical attainment and manual validation remain separate. No family or resource-unit count increases.

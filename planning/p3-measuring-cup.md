@@ -31,6 +31,6 @@ Show an upright transparent measuring cup with a horizontal water level exactly 
 - **Automated release checks:** Enumerate all twelve records and independently verify amount bounds, exact graduation alignment, label spacing, scale maxima, bilingual text and key. Test accepted and rejected response forms, blank prompting, hint/retry, distinct follow-ups, old links, phone width and A4/PDF output. Manual pupil and hands-on screen-reader checks remain deferred and must not be marked complete.
 
 
-## Whole-unit practical candidate
+## Verified whole-unit practical checkpoint
 
-The [3M3 capacity audit](p3-capacity.md) links a new bilingual teacher activity covering the remaining comparison, tool-use, estimation and recording modes. It does not change this family or imply that the digital reading certifies practical skill. The activity remains a candidate pending live verification.
+The [3M3 capacity audit](p3-capacity.md) links a new bilingual teacher activity covering the remaining comparison, tool-use, estimation and recording modes. It does not change this family or imply that the digital reading certifies practical skill. The activity is resource complete after public `8864780` passed 360/360 live checks with zero failures. This closes the seven-objective resource audit, not demonstrated pupil attainment; manual validation remains unperformed.
