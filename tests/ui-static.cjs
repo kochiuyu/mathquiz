@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+'\n'+read('resources.js')+'\nglobalThis.data=resourceData;globalThis.fs=families;',c);
 const {units,activities}=c.data,live=c.fs.filter(f=>!f.retired);
 assert.equal(units.length,85);assert.equal(new Set(units.map(u=>u.code)).size,85);assert.equal(units.filter(u=>u.complete).length,41);
-assert.equal(activities.length,41);assert.equal(new Set(activities.map(a=>a.path)).size,41);
+assert.equal(activities.length,42);assert.equal(new Set(activities.map(a=>a.path)).size,42);
 for(const u of units){assert(u.title.length===2&&u.title.every(s=>s.trim()));assert.match(u.code,/^[1-6][NMSDFA]\d+$/);assert.equal(u.grade,+u.code[0]);assert(u.source.startsWith('https://www.edb.gov.hk/'));}
 for(const f of live)assert(units.some(u=>u.code===f.code&&u.grade===f.grade),'Missing unit for '+f.id);
 for(const a of activities){assert(a.title.length===2&&a.title.every(s=>s.trim()));assert(a.units.every(code=>units.some(u=>u.code===code)));assert(fs.existsSync(path.join(root,a.path)));const html=read(a.path);assert(a.units.includes((html.match(/<body[^>]*data-unit="([^"]+)"/)||[])[1]),'Activity unit route '+a.path);assert(html.includes('activity-ui.js')&&html.includes('activity-ui.css'),'Activity shell '+a.path);}
@@ -13,7 +13,7 @@ for(const file of ['index.html','coverage.html','ui.js','builder-ui.js','pupil-u
 const lum=hex=>{const c=hex.match(/\w\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722;};
 for(const [fg,bg]of [['20392f','f7f6ef'],['526454','fffefa'],['215a48','fffefa'],['ffffff','215a48'],['465b4d','eef1e9'],['244f3b','dfebdd'],['8c481d','fffefa']])assert((Math.max(lum(fg),lum(bg))+.05)/(Math.min(lum(fg),lum(bg))+.05)>=4.5,'Text contrast '+fg+'/'+bg);
 for(const [fg,bg]of [['789080','fffefa'],['a84e1b','f7f6ef']])assert((Math.max(lum(fg),lum(bg))+.05)/(Math.min(lum(fg),lum(bg))+.05)>=3,'Control contrast '+fg+'/'+bg);
-console.log('PASS UI: 85 unique bilingual units, 41 linked activities, every selectable family mapped, local assets, JS parsing and primary text/control contrast.');
+console.log('PASS UI: 85 unique bilingual units, 42 linked activities, every selectable family mapped, local assets, JS parsing and primary text/control contrast.');
 
 assert(read('tests/ui-regression.js').includes("fetch('../resources.js?regression='+Date.now(),{cache:'no-store'})"),'uncached activity manifest');
 assert(read('tests/ui-regression.js').includes('paths.length==='+activities.length),'activity manifest count guard');

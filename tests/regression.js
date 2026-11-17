@@ -5,6 +5,9 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["multproduct4a",4,24,"4aa28eb6c9e4f846b85803d87bd314143fce20a0c0e4142eeaf945e8e113f50b"],
+    ["multstrategy4a",4,12,"7c3e6a10bf4f8769bde282f4342d3141cbc5db45bb2e9ffe0fd42c3a17c5ccd9"],
+    ["multstory4a",4,12,"6e5978957ca591777538a74f687792f91f04375a3f945ca71aa5a047cfe0440e"],
     ["barcompare3a",3,12,"0d3d87e303bcbc28570622bf51ed440bca38edbba9a3fed36082442399c21d5b"],
     ["triangleproperty3a",3,12,"105889ac836e70c85aa2cbd01e967c7e2630a2fdadce2ac8aa81c08b8d676962"],
     ["trianglerelation3a",3,12,"2e9154cc963f9407ef2675a5ce01c8ec5e138e70477ab9f2c68791a74fbc86d6"],
@@ -197,9 +200,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===2037,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===2085,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 2037 variants",()=>{
+  await check("Released bilingual and response contracts · 2085 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -408,12 +411,13 @@
         if(q.answerUnitLabels || (q.number2N1 && q.fields))(q.answerUnitLabels||q.fields).forEach((label,j)=>assert(kd.querySelector('fieldset p b').textContent.includes(label[l]+': '+q.answer[j]),'P2 labelled key '+id));
         else if(q.choiceLabels)assert(kd.querySelector('fieldset p b').textContent===q.choiceLabels[q.answer[0]][l],'P2 localized choice key');
         const practice=await shapeFrame('?lang='+language+'&p='+f.grade+'&view=practice&skill='+id);frames.push(practice);const pr=practice.contentDocument;
-        const samples={barcompare3a:[0,1,2,3,4,5,6,7,8,9,10,11],triangleproperty3a:[0,1,2,3,4,5,6,7,8,9,10,11],trianglerelation3a:[0,1,2,3,4,5,6,7,8,9,10,11],trianglesides3a:[0,1,2,3,4,5,6,7,8,9,10,11],parallelpairs3a:[0,1,2,3,4,5,8,9],weightgrams3a:[0,2,3,8],write24hour3a:[0,1,5,6,7,11],read24hour3a:[0,2,5,6,10,11],addsub4digit3a:[0, 1, 2, 3, 11],mixedmultiply3a:[0, 2, 7, 11],bracketorder3a:[0, 1, 2, 8],comparetotal3a:[0, 5, 6, 11],fractionset3a:[0, 3, 4, 10],fractionequivalent3a:[0, 3, 4, 6, 9, 10],fractioncompare3a:[0, 1, 2, 3, 4, 5],fractionoperation3a:[0, 1, 2, 4, 5, 7],cmtomm3a:[0, 3, 8, 11],comparekm3a:[0, 1, 2],rulermm3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],startminutes3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],starthours3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],compose5digit3a:[0,2,4],tenthousandsvalue3a:[0,2,4],sequence5digit3a:[0,2,4,6,9,10],parity5digit3a:[0,1,4],compare5digit3a:[0,1,2],multdigit3a:[0,6,12,18],multthree3a:[0,3,11],multstory3a:[0,6,9],dividecolumns3a:[0,3,6,7,8],dividechain3a:[0,1,11],divisionstory3a:[0,1,2,4],metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
+        const samples={multproduct4a:[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23],multstrategy4a:[0,1,2,3,4,5,6,7,8,9,10,11],multstory4a:[0,1,2,3,4,5,6,7,8,9,10,11],barcompare3a:[0,1,2,3,4,5,6,7,8,9,10,11],triangleproperty3a:[0,1,2,3,4,5,6,7,8,9,10,11],trianglerelation3a:[0,1,2,3,4,5,6,7,8,9,10,11],trianglesides3a:[0,1,2,3,4,5,6,7,8,9,10,11],parallelpairs3a:[0,1,2,3,4,5,8,9],weightgrams3a:[0,2,3,8],write24hour3a:[0,1,5,6,7,11],read24hour3a:[0,2,5,6,10,11],addsub4digit3a:[0, 1, 2, 3, 11],mixedmultiply3a:[0, 2, 7, 11],bracketorder3a:[0, 1, 2, 8],comparetotal3a:[0, 5, 6, 11],fractionset3a:[0, 3, 4, 10],fractionequivalent3a:[0, 3, 4, 6, 9, 10],fractioncompare3a:[0, 1, 2, 3, 4, 5],fractionoperation3a:[0, 1, 2, 4, 5, 7],cmtomm3a:[0, 3, 8, 11],comparekm3a:[0, 1, 2],rulermm3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],startminutes3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],starthours3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],compose5digit3a:[0,2,4],tenthousandsvalue3a:[0,2,4],sequence5digit3a:[0,2,4,6,9,10],parity5digit3a:[0,1,4],compare5digit3a:[0,1,2],multdigit3a:[0,6,12,18],multthree3a:[0,3,11],multstory3a:[0,6,9],dividecolumns3a:[0,3,6,7,8],dividechain3a:[0,1,11],divisionstory3a:[0,1,2,4],metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
         for(const dest of ['en','zh']){const u=new URL(pr.getElementById(dest).href);assert(Number(u.searchParams.get('p'))===f.grade && u.searchParams.get('skill')===id,'practice grade URL');}
         const variants=samples[id]||(id==='multfact2a'?[0,51,120]:id==='multstory2a'?[0,12,29]:[0,6,11]);
         for(const variant of variants){
           const item=f.make(variant),inputs=[...pr.querySelectorAll('#practice-form input')];
           if(['parallelpairs3a','write24hour3a','read24hour3a','weightgrams3a'].includes(id))assert(pr.querySelector('#practice-form legend').textContent===item.prompt[l],'Practice sample prompt '+id+'-'+variant);
+          if(['multproduct4a','multstrategy4a','multstory4a'].includes(id))assert(pr.querySelector('#practice-form legend').textContent===item.prompt[l],'P4 practice fixture '+id+'-'+variant);
           if(id==='barcompare3a'){assert(pr.querySelector('#practice-form legend').textContent===item.prompt[l],'bar comparison practice prompt '+variant);const bars=[...pr.querySelectorAll('#practice-form .bar-mark')];assert(bars.length===3,'three practice bars');bars.forEach((bar,j)=>assert(Number(bar.getAttribute(item.figure.orientation==='horizontal'?'width':'height'))===item.figure.steps[j]*(item.figure.orientation==='horizontal'?40:26),'bar practice geometry '+variant));}
           if(id.startsWith('triangle'))assert(pr.querySelector('#practice-form legend').textContent===item.prompt[l],'Triangle practice sample '+id+'-'+variant);
           if(id==='triangleproperty3a')assert(pr.querySelector('#practice-form polygon').getAttribute('points')===item.figure.points.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' '),'Triangle practice geometry '+variant);
@@ -2869,7 +2873,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===128,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===131,"grade coverage counts wrong");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
@@ -2940,11 +2944,11 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 128 distinct live resource-browser links",async()=>{
+  await check("Practice catalogue · 131 distinct live resource-browser links",async()=>{
     const frame=await shapeFrame("?lang=en&view=browse&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".practice-link")];
-      assert(links.length===128 && new Set(links.map(a=>a.href)).size===128,"practice links missing or repeated");
+      assert(links.length===131 && new Set(links.map(a=>a.href)).size===131,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);
@@ -2999,6 +3003,12 @@
   });
   await check('3F1 inquiry · bilingual independent-evidence resource',async()=>{
     for(const language of ['en','zh']){const f=await shapeFrame('activities/p3-inquiry.html?lang='+language);try{const d=f.contentDocument,s=d.getElementById(language);assert(d.body.dataset.unit==='3F1','inquiry route');assert(s.querySelectorAll('[data-task]').length===6,'six inquiry tasks');assert(s.querySelectorAll('.sheet').length===5,'five inquiry sheets');assert(s.querySelector('.key').hidden,'inquiry key initially hidden');assert(s.querySelectorAll('svg.construction').length>=3,'original chart drawing spaces');const records=[...s.querySelectorAll('[data-observation]')];assert(records.length>=6,'observed evidence spaces');assert(records.every(e=>!e.textContent.replace(/_/g,'').trim()),'observations must begin blank');}finally{f.remove();}}
+  });
+  for(const id of ['multproduct4a','multstrategy4a','multstory4a'])await check('4N1 · bilingual grade4 routes '+id,()=>checkP2NewRoutes([id]));
+  await check('4N1 · bilingual paper/key/PDF and reasoning activity',async()=>{
+    const ids=['multproduct4a-0','multproduct4a-6','multproduct4a-7','multproduct4a-8','multproduct4a-14','multproduct4a-18','multstrategy4a-0','multstrategy4a-3','multstory4a-2','multstory4a-8'];
+    for(const language of ['en','zh'])for(const view of ['paper','key']){const f=await shapeFrame('?v=3&lang='+language+'&p=4&items='+ids.join('.')+'&view='+view);try{const d=f.contentDocument,l=language==='zh'?1:0;assert(f.contentWindow.eval('selected.map(q=>q.id).join(".")')===ids.join('.'),'exact P4 selected IDs');assert(d.querySelectorAll('fieldset').length===ids.length,'P4paper count');ids.forEach((id,i)=>{const q=decodeItems(id,4)[0],field=d.querySelectorAll('fieldset')[i];assert(field.querySelector('.prompt').textContent===q.prompt[l],'P4paper fixture');if(view==='key'){const key=field.querySelector('p b').textContent;assert(key===(q.choiceLabels?q.choiceLabels[q.answer[0]][l]:q.answerUnitLabels[0][l]+': '+q.answer[0]),'P4labelled key');}});if(view==='paper')assert(!d.querySelector('input'),'P4paper not interactive');f.style.width='360px';await new Promise(r=>setTimeout(r,60));assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'P4paper phone');const blob=await f.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());assert(blob.size>10000&&raw.startsWith('%PDF-')&&raw.includes('/ToUnicode')&&raw.includes('/Subtype /Image'),'P4PDF structure');}finally{f.remove();}}
+    for(const language of ['en','zh']){const f=await shapeFrame('activities/p4-multiplication-ii.html?lang='+language);try{const d=f.contentDocument,s=d.getElementById(language);assert(d.body.dataset.unit==='4N1','P4activity route');assert(s.querySelectorAll('[data-task]').length===6,'six P4actions');assert(s.querySelectorAll('.sheet').length===5,'five P4sheets');assert(s.querySelector('.key').hidden,'P4key hidden');for(const n of ['322','1296','6318','4860','2520'])assert(s.querySelector('.key').textContent.includes(n),'P4teacher arithmetic '+n);}finally{f.remove();}}
   });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";

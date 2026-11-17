@@ -1263,6 +1263,16 @@ const resourceData = {
         "P3 · Investigate and explain",
         "小三 · 探究及解釋"
       ]
+    },
+    {
+      "path": "activities/p4-multiplication-ii.html",
+      "units": [
+        "4N1"
+      ],
+      "title": [
+        "P4 · Multiplication reasoning",
+        "小四 · 乘法及推理"
+      ]
     }
   ],
   "strands": {
