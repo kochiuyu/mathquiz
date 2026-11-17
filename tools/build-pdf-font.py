@@ -18,7 +18,7 @@ from fontTools.varLib.instancer import instantiateVariableFont
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_URL = "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanstc/NotoSansTC%5Bwght%5D.ttf"
 SOURCE_SHA256 = "864727d210d54f2537bbe23b3a839436c3992af72de9322af5270897246bd44f"
-SOURCE_FILES = ("index.html", "questions.js", "builder.js", "marking.js", "quiz.js", "pdf-export.js", "activities/p3-triangles.html", "activities/p3-bar-charts-i.html")
+SOURCE_FILES = ("index.html", "questions.js", "builder.js", "marking.js", "quiz.js", "pdf-export.js", "activities/p3-triangles.html", "activities/p3-bar-charts-i.html", "activities/p3-inquiry.html")
 OUTPUT = ROOT / "fonts" / "mathquiz-text.ttf"
 
 

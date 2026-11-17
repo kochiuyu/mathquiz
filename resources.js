@@ -1253,6 +1253,16 @@ const resourceData = {
         "P3 · Bar charts (I)",
         "小三 · 棒形圖（一）"
       ]
+    },
+    {
+      "path": "activities/p3-inquiry.html",
+      "units": [
+        "3F1"
+      ],
+      "title": [
+        "P3 · Investigate and explain",
+        "小三 · 探究及解釋"
+      ]
     }
   ],
   "strands": {

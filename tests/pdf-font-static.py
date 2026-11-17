@@ -13,6 +13,7 @@ missing=sorted({ord(c) for c in chars if ord(c)>32 and (ord(c) not in cmap or fo
 assert not missing, 'Missing PDF glyphs: '+', '.join(f'U+{n:04X} {chr(n)}' for n in missing)
 assert 'activities/p3-triangles.html' in config['SOURCE_FILES']
 assert 'activities/p3-bar-charts-i.html' in config['SOURCE_FILES']
+assert 'activities/p3-inquiry.html' in config['SOURCE_FILES']
 import re
 assert re.search(r'mathquiz-text\.ttf\?v=[^\"]+', (root/'pdf-export.js').read_text())
-print(f'PASS PDF font: {len(chars)} source characters covered by actual nonzero glyphs, including Triangle and Bar-chart EN/繁中 paper, keys and practical resource.')
+print(f'PASS PDF font: {len(chars)} source characters covered by actual nonzero glyphs, including Triangle, Bar-chart and Inquiry EN/繁中 paper, keys and practical resource.')

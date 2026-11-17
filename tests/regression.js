@@ -2997,6 +2997,9 @@
     const expected=[3,6,0,5,6,12,0,10,15,30,0,25],family=families.find(f=>f.id==='barcompare3a');expected.forEach((value,i)=>assert(family.make(i).answer[0]===value,'bar comparison oracle '+i));
     for(const language of ['en','zh']){const f=await shapeFrame('activities/p3-bar-charts-i.html?lang='+language);try{const d=f.contentDocument,s=d.getElementById(language);assert(d.body.dataset.unit==='3D1','bar activity unit');assert(s.querySelectorAll('[data-task]').length===6,'six bar actions');assert(s.querySelectorAll('.sheet').length===5,'five bar sheets');assert(s.querySelector('.key').hidden,'bar key initially hidden');assert(s.querySelector('a[href*="barcompare3a"]'),'comparison route');assert(s.querySelectorAll('svg').length>=4,'chart examples and drawing grids');}finally{f.remove();}}
   });
+  await check('3F1 inquiry · bilingual independent-evidence resource',async()=>{
+    for(const language of ['en','zh']){const f=await shapeFrame('activities/p3-inquiry.html?lang='+language);try{const d=f.contentDocument,s=d.getElementById(language);assert(d.body.dataset.unit==='3F1','inquiry route');assert(s.querySelectorAll('[data-task]').length===6,'six inquiry tasks');assert(s.querySelectorAll('.sheet').length===5,'five inquiry sheets');assert(s.querySelector('.key').hidden,'inquiry key initially hidden');assert(s.querySelectorAll('svg.construction').length>=3,'original chart drawing spaces');const records=[...s.querySelectorAll('[data-observation]')];assert(records.length>=6,'observed evidence spaces');assert(records.every(e=>!e.textContent.replace(/_/g,'').trim()),'observations must begin blank');}finally{f.remove();}}
+  });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
