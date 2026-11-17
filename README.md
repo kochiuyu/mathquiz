@@ -1,5 +1,7 @@
 # MathQuiz · Hong Kong primary mathematics
 
+**UI release · 17 November 2026:** [The redesign is live](https://kochiuyu.github.io/mathquiz/). Final local and public verification of UI release `3f4fcc0`: **365/365 existing checks + 145/145 UI checks**, zero failures. See the [UI plan and release checkpoint](#ui-improvement-plan) and [release evidence](planning/ui-release-evidence.md). Later curriculum releases have separate verification records. This changes interface behaviour, not curriculum completion.
+
 **Verified resource-complete checkpoint: 36/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M4 have source-reviewed assessment resources, covering 138 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `604fd9f` passed **365/365** browser checks with zero failures, including all 1,965 variant contracts. Time (IV) adds two objectives and 24 variants; all 1,941 earlier payloads remain unchanged. The six static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
 **Verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
@@ -197,7 +199,7 @@ The [capacity activity](activities/p3-capacity.html) and [seven-objective source
 
 ## UI improvement plan
 
-**Requested 17 November 2026 · implementation delivered; release verification in progress.** This is the next interface workstream, explicitly requested alongside full curriculum development. It takes precedence over the earlier advice to defer general interface changes for this workstream only. The curriculum queue and resource-completion criteria remain in force. Implementation and evidence are recorded in [UI release evidence](planning/ui-release-evidence.md). Curriculum completion is unchanged. Deferred human validation remains pending.
+**Requested 17 November 2026 · implemented and published.** This is the next interface workstream, explicitly requested alongside full curriculum development. It takes precedence over the earlier advice to defer general interface changes for this workstream only. The curriculum queue and resource-completion criteria remain in force. Implementation and evidence are recorded in [UI release evidence](planning/ui-release-evidence.md). Curriculum completion is unchanged. Deferred human validation remains pending.
 
 ### Goals and findings
 
@@ -278,8 +280,8 @@ The order below is the delivery order. Items marked **automated** can proceed wi
 
 #### Release UI-6 · Verification and handoff
 
-- [ ] **UI-19 — Run the automated UI acceptance matrix.** Execute the existing static gates and browser regression suite, then add navigation, search, filter, draft, language, feedback, link and responsive-layout checks listed below. Run against both the local build and deployed release. **Exit:** all applicable checks pass with exact counts, revision and known limits recorded.
-- [ ] **UI-20 — Record the release and remaining review.** Update this checklist with commit links and evidence. Publish UI completion separately from curriculum resource completion. Retain the manual items below as pending until actually performed; they do not block other automated work. **Exit:** the next unfinished UI task is unambiguous and deferred review is not reported as passed.
+- [x] **UI-19 — Run the automated UI acceptance matrix.** Execute the existing static gates and browser regression suite, then add navigation, search, filter, draft, language, feedback, link and responsive-layout checks listed below. Run against both the local build and deployed release. **Exit:** all applicable checks pass with exact counts, revision and known limits recorded.
+- [x] **UI-20 — Record the release and remaining review.** Update this checklist with commit links and evidence. Publish UI completion separately from curriculum resource completion. Retain the manual items below as pending until actually performed; they do not block other automated work. **Exit:** the next unfinished UI task is unambiguous and deferred review is not reported as passed.
 
 ### Acceptance criteria and verification matrix
 
@@ -303,13 +305,14 @@ The active app uses [index.html](index.html), [quiz.js](quiz.js), [quiz.css](qui
 
 Separate navigation metadata and rendering from mathematical generation. Preserve permanent family IDs, finite variant payloads, versioned URL decoding, marks and acceptance rules in [marking.js](marking.js). Do not rewrite frozen payload digests to make a visual refactor pass. Any necessary mathematical correction needs its own documented change. Update asset versions when application assets change, and retain the previous release as a rollback point.
 
-**Implementation handoff:** UI-02–UI-18 are implemented. The repeatable compatibility baseline for UI-01 exists, but its comprehensive before/after screenshot archive remains open. UI-19/UI-20 will close after the deployed runners pass and the exact release is recorded. See the [release evidence](planning/ui-release-evidence.md) for delivered behaviour, baseline links, size/timing observations and validation limits. Curriculum development continues from its existing checkpoint; the interface redesign adds no curriculum-complete units.
+**Implementation handoff:** UI-02–UI-18 are implemented. The repeatable compatibility baseline for UI-01 exists, but its comprehensive before/after screenshot archive remains open. UI-19/UI-20 are verified: the final local and public runs pass 365/365 existing checks and 145/145 UI checks. The remaining part of UI-01 is a deferred visual-reference archive; skip it under the standing manual-review deferral. See the [release evidence](planning/ui-release-evidence.md) for delivered behaviour, baseline links, size/timing observations and validation limits. Curriculum development continues from its existing checkpoint; the interface redesign adds no curriculum-complete units.
 
 
 ### UI release checkpoint · 17 November 2026
 
-The compact homepage, bilingual resource browser, staged builder, pupil session continuity and shared teacher-resource styling are implemented. All 145 dedicated UI checks and seven static gates pass locally. Full regression and deployment verification are recorded in [UI release evidence](planning/ui-release-evidence.md); this checkpoint will be updated with the published revision and final public results. Manual reviews listed above remain pending.
+The compact homepage, bilingual resource browser, staged builder, pupil session continuity and shared teacher-resource styling are [published in 568d474](https://github.com/kochiuyu/mathquiz/commit/568d4745793ed278e954a3489b110aab10b86ca9), with final Chinese-label corrections in [3f4fcc0](https://github.com/kochiuyu/mathquiz/commit/3f4fcc0444aaf0b3b40f755d04d95d92255a59f8). GitHub Pages deployment succeeded. Both the local and public runs pass **365/365 existing checks and 145/145 dedicated UI checks**, with zero failures; all seven static gates pass. See [UI release evidence](planning/ui-release-evidence.md) for compatibility boundaries, viewport coverage, measured size/timing changes and remaining review. The first open UI item is the deferred visual-reference archive in UI-01; the manual checks listed above remain pending. Curriculum resource completeness is unchanged at 36/85 units.
 
 ## 3M5 Weight candidate
 
 One new family, `weightgrams3a`, adds 12 mixed-unit recording variants. The bilingual practical activity supplies evidence for all seven objectives. Candidate inventory: 124 permanent families / 1,977 variants; 123 selectable families / 1,962 variants; 45 selectable units / 49 resource units. The 36 verified units remain unchanged. Browser and live verification are pending; no completion claim is added. See [Weight audit](planning/p3-weight.md).
+
