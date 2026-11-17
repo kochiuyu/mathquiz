@@ -30,7 +30,7 @@ for(let d=1;d<=100;d++)for(const n of [0,1,d-1,d,d+1,12*d]){
 }
 for(const f of [{n:1201,d:100},{n:1,d:101},{n:0,d:0},{n:-1,d:2},{n:0.5,d:2},{n:1,d:2.5},{n:Infinity,d:2},{n:1,d:'2'}])a.equal(c.fractionUnitsSvg4(f),'');
 // Previous functions are byte-for-byte unchanged, and strict legacy fraction forms remain strict.
-const predecessor=path.resolve(root,'../mathquiz-p4-four-operations-candidate/marking.js');if(fs.existsSync(predecessor))a.ok(read('marking.js').startsWith(fs.readFileSync(predecessor,'utf8')));
+const legacyPrefix=Buffer.from(read('marking.js'),'utf8').subarray(0,3246);a.equal(legacyPrefix.length,3246);a.equal(require('crypto').createHash('sha256').update(legacyPrefix).digest('hex'),'a2493e63ddbf494e41545641a9482c9b64671ae3958a23bdc0b84477f5aeb714');
 a.equal(c.fractionBarAnswer(['2','4'],{shaded:1,parts:2}),false);a.equal(c.fractionAdditionAnswer(['2','4'],{n:1,den:2}),false);
 a.equal(c.fractionBarAnswer(['1','2'],{shaded:1,parts:2}),true);a.equal(c.fractionAdditionAnswer(['1','2'],{n:1,den:2}),true);
 console.log(`PASS independent 4N6 malformed/Unicode/bounded BigInt/form/legacy cases and ${renderChecks} geometry fixtures (all denominators1–100, zero/full/12whole bounds).`);

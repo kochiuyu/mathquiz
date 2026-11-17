@@ -479,7 +479,7 @@ const resourceData = {
         "小數（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=18",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N8",
@@ -489,7 +489,7 @@ const resourceData = {
         "小數（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=20",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4M1",

@@ -1,8 +1,8 @@
 # Hong Kong primary mathematics quiz plan
 
-**Reconstructed private 4N7–4N8 candidate; incomplete:** 108 new variants across seven families and two bilingual activities. Candidate inventory: 159 permanent families / 2,463 variants; 158 selectable families / 2,448 variants; 54 selectable units / 59 resource units; 49 activities and 12 open resource-bearing units. All 2,355 public predecessor payloads remain unchanged. The verified 47-unit baseline, 183 numbered objectives and three inquiry statements are unchanged. This reconstructed candidate passed fresh466/466 curriculum and173/173 UI browser checks,22 static gates and font coverage. Live deployment verification remains pending; completion flags remain47. [4N7 audit](p4-decimals-i.md) · [4N8 audit](p4-decimals-ii.md).
+**Verified resource-complete checkpoint: 49/85 units.** All P1–P3 units and 4N1–4N8 have source-reviewed assessment resources, covering 190 numbered objectives plus three integrated inquiry statements. Public decimal release `86fb6bc` passed **466/466 curriculum checks and 173/173 UI checks**, with zero failures. Two units add 108 variants; all 2,355 predecessor payloads are preserved. Inventory: 159 permanent families / 2,463 variants; 158 selectable families / 2,448 variants; 54 selectable units / 59 resource units; 49 activities and 10 open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
-**Verified resource-complete checkpoint: 47/85 units.** All P1–P3 units and 4N1–4N6 have source-reviewed assessment resources, covering 183 numbered objectives plus three integrated inquiry statements. Public 4N2–4N6 release `64335b9` passed **435/435 curriculum checks and 169/169 UI checks**, with zero failures, plus twenty static gates. Five units add 270 variants; all 2,085 predecessor payloads remain unchanged. Inventory: 152 permanent families / 2,355 variants; 151 selectable families / 2,340 variants; 52 selectable units / 57 resource units; 47 activities and 10 open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Historical verified 4N2–4N6 checkpoint: 47/85 units.** All P1–P3 units and 4N1–4N6 have source-reviewed assessment resources, covering 183 numbered objectives plus three integrated inquiry statements. Public 4N2–4N6 release `64335b9` passed **435/435 curriculum checks and 169/169 UI checks**, with zero failures, plus twenty static gates. Five units add 270 variants; all 2,085 predecessor payloads remain unchanged. Inventory: 152 permanent families / 2,355 variants; 151 selectable families / 2,340 variants; 52 selectable units / 57 resource units; 47 activities and 10 open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified Multiplication checkpoint: 42/85 units.** All P1–P3 units and 4N1 have source-reviewed assessment resources, covering 161 numbered objectives plus three integrated inquiry statements. Public Multiplication (II) release `12e57a3` passed **389/389 curriculum checks and 159/159 UI checks**, with zero failures, plus thirteen static gates. This unit adds three objectives and 48 variants; all 2,037 prior payloads remain unchanged. Inventory: 132 permanent families / 2,085 variants; 131 selectable families / 2,070 variants; 48 selectable units / 53 resource units; 42 activities and 11 open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
@@ -19,6 +19,15 @@
 Earlier draft/candidate notes below are historical records, including references to tests then pending. This current verified checkpoint supersedes their status claims, not their recorded test results or manual-validation limits.
 
 Teachers choose a year, unit and skill, preview the exact questions, replace individual items, then download a pupil paper and a worked key or distribute an online quiz. Pupils can also practise a single skill without an account.
+
+## Verified decimal objective closure
+
+Public `86fb6bc` passed466/466 curriculum and173/173 UI. Seven new numbered objectives, no additional inquiry statement.
+
+| Unit | Objectives | Evidence |
+|---|---|---|
+| 4N7 | 4N7.1–4N7.4 | [Audit](p4-decimals-i.md); [activity](../activities/p4-decimals-i.html) |
+| 4N8 | 4N8.1–4N8.3 | [Audit](p4-decimals-ii.md); [activity](../activities/p4-decimals-ii.html) |
 
 ## Verified 4N2–4N6 objective closure
 

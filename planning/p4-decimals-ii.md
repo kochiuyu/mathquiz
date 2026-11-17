@@ -1,5 +1,11 @@
 # 4N8 Decimals (II): reconstructed private candidate
 
+**Verified resource complete.** Public decimal release `86fb6bc` passed466/466 curriculum and173/173 UI checks. Current49/85,190numbered objectives plus three inquiry statements. Linked resources do not prove pupil mastery. Manual print, classroom, translation and screen-reader validation remain unperformed.
+
+## Historical reconstruction record
+
+Earlier pending states below describe reconstruction, not current release evidence.
+
 Incomplete; fresh verification required. Earlier lost-candidate checks are not evidence for this rebuilt code. Verified baseline47 units/183 numbered objectives plus three inquiry statements is preserved. No publication or pupil-mastery claim.
 
 ## Source and evidence map
@@ -22,8 +28,8 @@ Reuse the unchanged exact decimal value scorer: integer answers and equivalent t
 
 ## Validation and inventory
 
-48 new variants; combined with60 from4N7,159 permanent families/2,463 variants and158 selectable/2,448. All2,355 public predecessor payloads preserved.54 selectable/59 resource units,49 activities,47 complete and12 open. Fresh independent tests cover all fixtures, aligned scope, nonnegative intermediates, zero/carry/borrow, subtraction order, actual handler grading and both languages. Full bounded paper/key/PDF batches must retain every ID and key. Fresh browser results:466/466 curriculum and173/173 UI pass; live deployment verification pending. Font glyph coverage and cache protections are required; manual print/PDF pagination, classroom trials, independent translation and screen-reader validation remain unperformed.
+48 new variants; combined with60 from4N7,159 permanent families/2,463 variants and158 selectable/2,448. All2,355 public predecessor payloads preserved.54 selectable/59 resource units,49 activities,47 complete and12 open. Fresh independent tests cover all fixtures, aligned scope, nonnegative intermediates, zero/carry/borrow, subtraction order, actual handler grading and both languages. Full bounded paper/key/PDF batches must retain every ID and key. Fresh browser results pending. Font glyph coverage and cache protections are required; manual print/PDF pagination, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 ## Fresh reconstruction checks
 
-22 CJS static gates passed on this reconstructed tree, plus actual PDF-font cmap coverage (253,856 bytes;934 source characters). Independent review passed all108 new fixtures,216 bilingual assessment/practice handler cases,40,000 parser properties and10,201 arithmetic properties. All2,355 public predecessor payloads and the existing marking prefix are unchanged. Fresh browser verification of this reconstructed tree passed466/466 curriculum and173/173 UI checks. Live deployment verification remains pending.
+22 CJS static gates passed on this reconstructed tree, plus actual PDF-font cmap coverage (253,856 bytes;934 source characters). Independent review passed all108 new fixtures,216 bilingual assessment/practice handler cases,40,000 parser properties and10,201 arithmetic properties. All2,355 public predecessor payloads and the existing marking prefix are unchanged. Browser verification of this tree is still pending; historical lost-candidate browser results are not substituted.

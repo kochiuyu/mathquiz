@@ -1,5 +1,11 @@
 # 4N7 Decimals (I): reconstructed private candidate
 
+**Verified resource complete.** Public decimal release `86fb6bc` passed466/466 curriculum and173/173 UI checks. Current49/85,190numbered objectives plus three inquiry statements. Linked resources do not prove pupil mastery. Manual print, classroom, translation and screen-reader validation remain unperformed.
+
+## Historical reconstruction record
+
+Earlier pending states below describe reconstruction, not current release evidence.
+
 Incomplete; no resource-completion promotion. This is newly reconstructed code, not recovery of the lost candidate byte-for-byte. Earlier 445/445 curriculum and171/171 UI results apply only to the lost candidate; fresh verification is required. The current verified baseline remains47 units,183 numbered objectives plus three inquiry statements, from public64335b9. No pupil mastery is inferred.
 
 ## Scope and evidence
@@ -29,4 +35,4 @@ Fresh static, independent oracle/scoring/geometry tests and bilingual browser pa
 
 ## Fresh reconstruction checks
 
-22 CJS static gates passed on this reconstructed tree, plus actual PDF-font cmap coverage (253,856 bytes;934 source characters). Independent review passed all108 new fixtures,216 bilingual assessment/practice handler cases,40,000 parser properties and10,201 arithmetic properties. All2,355 public predecessor payloads and the existing marking prefix are unchanged. Fresh browser verification of this reconstructed tree passed466/466 curriculum and173/173 UI checks. Live deployment verification remains pending.
+22 CJS static gates passed on this reconstructed tree, plus actual PDF-font cmap coverage (253,856 bytes;934 source characters). Independent review passed all108 new fixtures,216 bilingual assessment/practice handler cases,40,000 parser properties and10,201 arithmetic properties. All2,355 public predecessor payloads and the existing marking prefix are unchanged. Browser verification of this tree is still pending; historical lost-candidate browser results are not substituted.
