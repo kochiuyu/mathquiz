@@ -369,7 +369,7 @@ const resourceData = {
         "重量"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62",
-      "complete": false
+      "complete": true
     },
     {
       "code": "3S1",

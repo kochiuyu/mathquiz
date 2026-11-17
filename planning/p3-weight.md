@@ -1,3 +1,7 @@
+## Verified publication · 17 November 2026
+
+3M5 is resource complete. Public release `00eb0d4` passed 368/368 curriculum and 147/147 UI browser checks with zero failures, plus eight static gates. All seven objectives have evidence resources. Checkpoint: 37/85 units and 145 numbered objectives plus two inquiry statements. Earlier candidate notes below are historical, not current status. Actual pupil performance, manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unverified.
+
 # P3 Weight · 3M5
 
 **Local candidate, not resource complete.** Prepared17November2026 on reviewed3M4 candidate. This document does not override later predecessor closure records. One new family `weightgrams3a` adds12 mixed-unit recording variants. All1,965 prior payloads retain their original hashes. Totals:124 permanent families/1,977 variants;123 selectable/1,962;45 selectable units/49 resource units. No new completion claim.

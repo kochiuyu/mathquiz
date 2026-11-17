@@ -1,8 +1,8 @@
 # Full curriculum development plan
 
-**Verified resource-complete checkpoint: 36/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M4 have source-reviewed assessment resources, covering 138 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `604fd9f` passed **365/365** browser checks with zero failures, including all 1,965 variant contracts. Time (IV) adds two objectives and 24 variants; all 1,941 earlier payloads remain unchanged. The six static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 37/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M5 have source-reviewed assessment resources, covering 145 numbered objectives plus two integrated inquiry statements. Public release `00eb0d4` passed **368/368 curriculum checks and 147/147 UI checks**, with zero failures. All 1,977 variant contracts and eight static gates pass. Weight adds seven objectives and 12 variants; all 1,965 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
-**Verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
+**Historical verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
 
 **Historical verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
 
@@ -60,7 +60,7 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 | P3 | [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | `startminutes3a`, `starthours3a`; [teacher activity](../activities/p3-time-iii.html); [review](p3-time-iii.md) | Verified resource complete; live `8d75a7f` PASS 359/359; manual/practical limitations retained |
 | P3 | [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) | Capacity | `cup3a`; [practical activity and audit](p3-capacity.md) | Verified resource complete; live `8864780` PASS 360/360; manual/practical limitations retained |
 | P3 | [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | `write24hour3a`, `read24hour3a`; [activity and audit](p3-time-iv.md) | Verified resource complete; live `604fd9f` PASS 365/365; manual/practical limitations retained |
-| P3 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | `weightgrams3a`; [activity and audit](p3-weight.md) | Candidate; live verification pending |
+| P3 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | `weightgrams3a`; [activity and audit](p3-weight.md) | Verified resource complete; live `00eb0d4` PASS 368/368 curriculum and 147/147 UI; manual/practical limitations retained |
 | P3 | [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | — | No task |
 | P3 | [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | — | No task |
 | P3 | [3D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=57) | Bar charts (I) | `bar3a` | Task live; objective audit needed |
@@ -112,8 +112,8 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 
 ## Immediate sequence
 
-1. Preserve all P1/P2, 3N1–3N5 and 3M1–3M4 public resource checkpoints (36/85), including their manual/practical limitations.
-2. Complete Weight (3M5), then Quadrilaterals (II) (3S1) and Triangles (3S2). Continue remaining P3 in source order; verify each deployed candidate before closure.
+1. Preserve all P1/P2, 3N1–3N5 and 3M1–3M5 public resource checkpoints (37/85), including their manual/practical limitations.
+2. Complete Quadrilaterals (II) (3S1) and Triangles (3S2). Continue remaining P3 in source order; verify each deployed candidate before closure.
 3. Keep later-grade drafts out of live coverage until their own reviewed release. Preserve permanent question IDs, payloads and shared links.
 4. Retain teacher-marked practical, oral, construction, explanation and inquiry evidence separately from automated answers.
 5. Update the inventory, map, ledger, coverage page and README after each verified release.

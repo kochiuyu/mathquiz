@@ -2,11 +2,11 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+'\n'+read('resources.js')+'\nglobalThis.data=resourceData;globalThis.fs=families;',c);
 const {units,activities}=c.data,live=c.fs.filter(f=>!f.retired);
-assert.equal(units.length,85);assert.equal(new Set(units.map(u=>u.code)).size,85);assert.equal(units.filter(u=>u.complete).length,36);
+assert.equal(units.length,85);assert.equal(new Set(units.map(u=>u.code)).size,85);assert.equal(units.filter(u=>u.complete).length,37);
 assert.equal(activities.length,37);assert.equal(new Set(activities.map(a=>a.path)).size,37);
 for(const u of units){assert(u.title.length===2&&u.title.every(s=>s.trim()));assert.match(u.code,/^[1-6][NMSDFA]\d+$/);assert.equal(u.grade,+u.code[0]);assert(u.source.startsWith('https://www.edb.gov.hk/'));}
 for(const f of live)assert(units.some(u=>u.code===f.code&&u.grade===f.grade),'Missing unit for '+f.id);
-for(const a of activities){assert(a.title.length===2&&a.title.every(s=>s.trim()));assert(a.units.every(code=>units.some(u=>u.code===code)));assert(fs.existsSync(path.join(root,a.path)));const html=read(a.path);assert(html.includes('activity-ui.js')&&html.includes('activity-ui.css'),'Activity shell '+a.path);}
+for(const a of activities){assert(a.title.length===2&&a.title.every(s=>s.trim()));assert(a.units.every(code=>units.some(u=>u.code===code)));assert(fs.existsSync(path.join(root,a.path)));const html=read(a.path);assert(a.units.includes((html.match(/<body[^>]*data-unit="([^"]+)"/)||[])[1]),'Activity unit route '+a.path);assert(html.includes('activity-ui.js')&&html.includes('activity-ui.css'),'Activity shell '+a.path);}
 for(const file of ['index.html','coverage.html'])for(const match of read(file).matchAll(/(?:src|href)="([^"?#]+)(?:\?[^"#]*)?"/g)){const p=match[1];if(!p.startsWith('http')&&!p.startsWith('#'))assert(fs.existsSync(path.join(root,p)),'Missing asset '+p);}
 for(const file of ['ui.js','builder-ui.js','session-ui.js','pupil-ui.js','activity-ui.js','tests/ui-regression.js'])new vm.Script(read(file));
 for(const file of ['index.html','coverage.html','ui.js','builder-ui.js','pupil-ui.js','activity-ui.js','quiz.js'])assert(!/\?{3,}/.test(read(file)),'Replacement-character placeholder in '+file);
