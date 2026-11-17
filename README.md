@@ -194,3 +194,113 @@ The [capacity activity](activities/p3-capacity.html) and [seven-objective source
 ## Verified Time (IV) (3M4) resource checkpoint
 
 [Activity](activities/p3-time-iv.html) and [source audit](planning/p3-time-iv.md) cover recognition, written/oral telling and equivalent time notation, including named-day 00:00/24:00 boundaries. Public `604fd9f` passed 365/365 live checks with zero failures. Six static gates pass. No elapsed-time arithmetic is introduced. All 1,941 previous payloads remain unchanged. Manual validation and actual pupil attainment remain separate.
+
+## UI improvement plan
+
+**Requested 17 November 2026 · planned, not implemented.** This is the next interface workstream, explicitly requested alongside full curriculum development. It takes precedence over the earlier advice to defer general interface changes for this workstream only. The curriculum queue and resource-completion criteria remain in force. Check off each item only after its stated evidence exists; publishing this plan does not complete any UI work.
+
+### Goals and findings
+
+Help a teacher find an appropriate resource, assemble a short quiz, and share or print it. Help a pupil reach the right practice task and answer it with minimal distraction. Give all six grades equal prominence while making digital practice and teacher-led resources easy to distinguish.
+
+The live homepage, P1 builder and preset preview, and a Traditional Chinese P3 practice route were inspected, with desktop and mobile samples. Current source for the entry page, UI, stylesheet and coverage page was also reviewed. This was a targeted review, not comprehensive usability or accessibility validation.
+
+| Observed condition | Proposed improvement |
+|---|---|
+| The homepage exposes 122 practice links in one practice card. At the inspected 1425px desktop viewport, the page was 8,788px tall. | Replace the full link list with a grade-and-topic resource browser; retain direct links to every existing practice route. |
+| Two P1 presets lead the homepage. The create card includes extra P2, P3 and P5 shortcuts but no matching P4/P6 shortcuts. | Lead with the user's task, then show a consistent P1–P6 selector. Keep presets as secondary shortcuts. |
+| The P1 builder shows 38 family quantity selectors before its generated preview. Existing move, replace and sharing controls are useful but appear further down the page. | Group the catalogue by unit, expose selection totals, and make the draft and preview separate, reachable stages. |
+| Coverage is a long grade-by-grade list with curriculum codes, release counts, resource links and historical verification text. | Provide a teacher-facing unit catalogue with concise availability labels and expandable evidence. Keep detailed release records in documentation. |
+| The existing warm cream, dark green and simple question cards are a usable visual foundation. Practice already has labelled choices, progress and feedback. | Refine hierarchy and consistency; preserve these useful behaviours and strengthen state handling across all task types. |
+
+### Proposed navigation and screen layouts
+
+Use **Home**, **Find resources**, and **Create a quiz** as the main teacher navigation, with a persistent English / 繁體中文 switch. Use **Practise / 開始練習**, **Create a quiz / 建立小測**, and **Teacher activities / 教師活動** as the three homepage actions. These are proposed labels, subject to bilingual review. Pupil routes use a reduced header with a return-to-topic link, language and progress; teacher controls belong in the builder.
+
+| Screen | Desktop layout | Narrow-screen layout |
+|---|---|---|
+| Home | Short introduction; three task actions; six equal grade choices; two existing presets below. | Single column, compact introduction, wrapping grade grid; no long catalogue below the actions. |
+| Resource browser | Grade selector, search and filters; unit groups; resource cards in two or three columns as space permits. | Search followed by a labelled filter disclosure; one-column cards; visible result count and clear-filters action. |
+| Quiz builder | Catalogue on the left; draft summary and ordered selection on the right; full question preview in a dedicated stage. | One column with Choose / Review / Share stages; a compact selection summary that never covers inputs or focused controls. |
+| Pupil quiz and practice | Comfortable reading column with clear prompt, figure, response and feedback order. | Same reading order, full-width answer area where useful, wrapping choices and readable diagrams. |
+| Unit resources | Unit heading and availability; digital tasks and teacher activities; objective details in disclosures. | Same sections stacked; planned resources visibly labelled and never presented as playable tasks. |
+| Paper and key | Existing A4 content with a separate screen-only export toolbar. | Readable screen preview with clearly distinguished print and direct-download actions. |
+
+Keep existing URLs working. A resource-browser route is new work: specify its query parameters during implementation and add routing tests before linking it from the homepage. The existing coverage URL must continue to open a useful equivalent view.
+
+### Visual direction and reusable components
+
+Build a calm classroom tool using the current cream-and-green identity. Use colour sparingly for actions and states; mathematical figures remain the focus.
+
+- Define CSS variables in the active [quiz.css](quiz.css) for canvas, surface, text, muted text, border, primary action, focus, success and error. Starting candidates are the current cream `#f7f6ef`, near-white `#fffefa`, dark text `#20392f` and green `#215a48`; validate every actual foreground/background combination before adoption.
+- Use the existing system font stack with Traditional Chinese fallbacks. Keep the serif wordmark, but use a consistent sans-serif hierarchy for UI and mathematical prompts. Target 17–18px body text, 20–24px pupil prompts and a responsive 28–40px page title. These are starting design values, not fixed sizes that prevent zoom.
+- Use a 4/8/12/16/24/32/48px spacing scale, restrained borders, 8–12px corner radii and minimal shadows. Allow a wider teacher workspace, approximately 1200px maximum, while keeping pupil reading areas around 760px.
+- Create shared primary/secondary/text actions, grade selectors, labelled inputs, resource cards, availability badges, filter chips, empty states, error messages, progress and result panels. Specify hover, focus, active, selected, disabled and loading states where applicable.
+- Use text plus symbols for correct, incorrect and partial-credit states. Never rely on green/red alone. Icons supplement labels; they do not replace meaningful action names.
+- Use approximately 640px and 1024px as initial layout breakpoints, then test content fit in both languages. Avoid fixed-height cards, truncated Chinese labels and tiny diagram text. Respect reduced-motion preferences and avoid decorative animation.
+
+### Ordered implementation backlog
+
+The order below is the delivery order. Items marked **automated** can proceed without the deferred hands-on checks. Each release should remain useful independently.
+
+#### Release UI-1 · Shared structure and a usable homepage
+
+- [ ] **UI-01 — Freeze compatibility evidence.** Record representative existing URLs, family/variant payload digests, marking results, practice behaviour and paper/key fixtures. Capture desktop/mobile reference views for home, builder, quiz, practice, coverage and one teacher activity in both languages. Record automated results and visual-review limits separately. **Exit:** a repeatable baseline exists before changing rendering.
+- [ ] **UI-02 — Establish visual tokens and shared controls.** Implement the typography, spacing, button, field and focus rules above, with screen styles isolated from print styles. Apply them first to the header and homepage. **Exit:** components work at narrow widths and no mathematical or print contract changes.
+- [ ] **UI-03 — Replace the homepage link wall.** Add the three task actions and equal P1–P6 navigation; move the full practice list into the browser delivered in UI-05. Keep both existing P1 presets and sample quiz links reachable. Ship UI-03 together with a working UI-05 destination. **Exit:** no full practice catalogue in the initial homepage DOM, and every released practice remains reachable.
+- [ ] **UI-04 — Standardise navigation and language context.** Make the wordmark a home link; add current-page indication, a skip link and meaningful page titles. Keep grade, unit/filter state and selected quiz items when changing language. Define and test retention of in-progress responses and practice position/attempt state; switching language must not silently restart a session or reveal answers. **Exit:** English/Chinese navigation and browser Back behave predictably.
+
+#### Release UI-2 · Find every released resource
+
+- [ ] **UI-05 — Build the resource browser.** Filter by grade, curriculum strand, unit and resource mode; search English names, Traditional Chinese names and codes such as 3M4. Group by curriculum order, show result counts, and include clear filters and a helpful no-results state. Use native controls where possible. Keep search/filter state in the URL so links and Back restore it. **Exit:** each non-retired family and each released teacher activity is discoverable; a search result has a valid destination.
+- [ ] **UI-06 — Add useful resource cards and previews.** Show grade, unit title/code, skill, available mode and an action such as Practise, Add to quiz or Open activity. Use a sample-question disclosure where appropriate. Do not invent difficulty ratings, completion times or pupil mastery labels. Show estimated times only where an existing resource provides them. **Exit:** cards explain what the pupil will do without exposing answers by default.
+- [ ] **UI-07 — Make coverage understandable.** Reuse the browser's unit data in [coverage.html](coverage.html). Distinguish available digital tasks, teacher-led resources, verified resource completeness and planned work; these are separate facts, not interchangeable progress badges. Preserve links to source audits and rubrics. **Exit:** all 85 units have an honest status, and a teacher-led-only unit remains findable without a digital family.
+- [ ] **UI-08 — Consolidate navigation metadata.** Create one lightweight resource manifest joining family IDs to bilingual titles, units, strands, practice support and activity links. Derive family counts from released data and reconcile unit status against the audited inventory. Validate missing translations, duplicate IDs, broken destinations and retired-family visibility. **Exit:** adding a released resource no longer requires hand-appending another homepage link.
+
+#### Release UI-3 · Build, review and share a quiz
+
+- [ ] **UI-09 — Organise selection by unit.** Replace the flat family list with grouped, searchable rows and explicit zero/nonzero quantities. For a new empty quiz, start with no implicit questions. Retain the existing presets. Show selected question count and marks independently of the filtered list; clearing a search must not clear selections. Explain variant limits and the existing overall quiz limit. **Exit:** a teacher can select across several units without losing previous choices.
+- [ ] **UI-10 — Add a persistent draft summary and review stage.** Show selected families, quantities and the ordered questions. Keep existing Move up, Move down, Replace and undo behaviour; add per-item removal with undo. Keyboard buttons remain available even if drag-and-drop is added later. Announce updates without moving focus unexpectedly. **Exit:** question order and totals match the generated pupil link, paper and key.
+- [ ] **UI-11 — Separate editing from sharing.** Use Choose questions → Review quiz → Share or print as visible stages. Provide one primary next action per stage, with easy return to editing. Distinguish Open pupil quiz, Copy pupil link, Pupil paper and Worked key; show copy success and a selectable-link fallback when clipboard access fails. Never silently regenerate selected variants during navigation. **Exit:** the teacher shares exactly the reviewed item IDs and order.
+- [ ] **UI-12 — Handle draft changes and empty states.** Make grade changes explicit about incompatible selections, offer a recoverable undo, and show useful guidance for an empty quiz or unavailable link. Keep the URL as the portable quiz source of truth. Any later local draft recovery must be optional, versioned and limited to quiz configuration, with a clear reset action. **Exit:** navigation, reload, language changes and recovery cannot substitute different questions or discard work silently.
+
+#### Release UI-4 · Clearer pupil work and results
+
+- [ ] **UI-13 — Standardise question layout.** Present number/progress, prompt, figure, labelled response and action in that order. Support single choice, multiple choice, numeric fields, fractions, equations, column forms and multi-field answers. Set an appropriate mobile input mode without blocking legitimate decimals, signs or equation text. Keep units beside the matching fields. **Exit:** all current response contracts render without clipping or ambiguous field order.
+- [ ] **UI-14 — Clarify practice feedback.** Preserve each family's hint/retry rules while presenting blank-answer guidance, incorrect responses, partial credit, worked explanations and next-question actions consistently. Keep feedback adjacent to the question with accessible announcements. **Exit:** repeated submissions, double clicks and switching language do not award extra credit or skip attempts.
+- [ ] **UI-15 — Improve quiz review and session results.** Add an answered/remaining summary for longer quizzes and clear post-marking question feedback. Give Retry and Back to topic actions; describe scores as results for this session, not curriculum mastery. Keep worked answers separate from the unsubmitted pupil view. **Exit:** totals still use the existing marking rules and incomplete responses receive clear guidance without changing scoring policy.
+
+#### Release UI-5 · Teacher resources, print and resilience
+
+- [ ] **UI-16 — Unify teacher activity pages.** Add consistent grade/unit navigation, pupil-task sections, required materials, language controls and print actions. Clearly distinguish pupil sheets from teacher criteria/rubrics, while preserving the existing tasks and source links. **Exit:** oral, practical, construction and inquiry resources are as easy to find as digital questions.
+- [ ] **UI-17 — Clarify paper and PDF actions.** Distinguish browser Print / Save as PDF from the direct PDF download, retaining its beta status until validated. Show download progress/failure and a useful retry or browser-print fallback. Preserve question numbering, writing space, paper identifier and matching key. **Exit:** screen navigation is absent from printed output; Chinese text and mathematical diagrams remain represented correctly. Real measurement activities must state their printing/scale requirements; a resized screen ruler is not a real instrument.
+- [ ] **UI-18 — Keep the expanded catalogue fast.** Avoid rendering every practice link on home and every question figure in a collapsed preview. Defer the PDF font/export work until required, preserving reliable downloads. Keep the static, account-free deployment and avoid a framework migration for this redesign. **Exit:** record comparable before/after page weight and interaction measurements; no unexplained regression, missing resources or new external tracking dependency.
+
+#### Release UI-6 · Verification and handoff
+
+- [ ] **UI-19 — Run the automated UI acceptance matrix.** Execute the existing static gates and browser regression suite, then add navigation, search, filter, draft, language, feedback, link and responsive-layout checks listed below. Run against both the local build and deployed release. **Exit:** all applicable checks pass with exact counts, revision and known limits recorded.
+- [ ] **UI-20 — Record the release and remaining review.** Update this checklist with commit links and evidence. Publish UI completion separately from curriculum resource completion. Retain the manual items below as pending until actually performed; they do not block other automated work. **Exit:** the next unfinished UI task is unambiguous and deferred review is not reported as passed.
+
+### Acceptance criteria and verification matrix
+
+**Automated acceptance**
+
+| Area | Required checks |
+|---|---|
+| Layout and languages | English and Traditional Chinese at 320, 375, 768, 1024 and 1440 CSS pixels. No document-level horizontal overflow, overlapping controls or hidden primary actions. Test long labels, multiline feedback and increased text size. Give genuinely two-dimensional content its own accessible treatment rather than shrinking it until unreadable. |
+| Resource discovery | All released families and teacher resources resolve; retired IDs stay out of new selection but old links still work. Search by English, Chinese and unit code; test combined filters, zero results, reset, reload, Back and language switch. Missing metadata fails a gate. |
+| Builder | Empty state, presets, multiple units, quantity limits, reorder, replace/undo, remove/undo, grade changes and URL round-trip. Filtering cannot mutate the draft. Preview, pupil quiz, paper and key contain identical item IDs and ordering. |
+| Pupil tasks | Representative fixtures for every response/figure type and every grade. Test blank, wrong, correct, equivalent valid numeric and partial-credit answers; hint/retry limits; progress; duplicate submission; results; language transitions. All finite variant and legacy marking checks still pass. |
+| Accessibility | Semantic headings/landmarks, accessible field names, keyboard operation, visible unobscured focus, status/error announcements and contrast checks. Use [WCAG 2.2 AA](https://www.w3.org/WAI/WCAG22/quickref/) as the target: normal text at least 4.5:1, large text 3:1, relevant non-text controls 3:1. Use a project target of 44×44 CSS pixels for primary controls, stronger than the AA minimum target-size criterion. Reflow at 320 CSS pixels and 200% text resizing need dedicated checks. Automated scans are not a conformance claim. |
+| Figures and print | Preserve SVG proportions, mathematical labels, units and diagram meaning. Check print-media rules, paper/key content parity and PDF text/glyph generation automatically. Test colour-independent distinctions in charts and response states. Do not infer physical print quality from successful PDF generation. |
+| Failure and performance | Clipboard denied, PDF failure, unavailable/malformed route, empty search and asset-load failure receive recoverable messages. Record home/browser/builder timings and transferred bytes under the same conditions before and after changes. |
+
+**Deferred human validation:** teacher and pupil task walkthroughs; independent Traditional Chinese wording review; keyboard/zoom and screen-reader assessment on real browser/device combinations; visual inspection of diagrams and downloaded PDFs; print-preview pagination and physical A4 output. Record reviewer, device/browser, date and findings when these happen. Continue to skip these checks under the existing instruction until requested; do not claim usability, accessibility conformance or classroom success from automation alone.
+
+### Implementation boundaries and first handoff
+
+The active app uses [index.html](index.html), [quiz.js](quiz.js), [quiz.css](quiz.css), [builder.js](builder.js), [coverage.html](coverage.html) and [pdf-export.js](pdf-export.js). The legacy [style.css](style.css) is not the stylesheet loaded by the current entry page. Keep UI changes in active files and small shared modules as needed; do not redesign unused legacy screens by mistake.
+
+Separate navigation metadata and rendering from mathematical generation. Preserve permanent family IDs, finite variant payloads, versioned URL decoding, marks and acceptance rules in [marking.js](marking.js). Do not rewrite frozen payload digests to make a visual refactor pass. Any necessary mathematical correction needs its own documented change. Update asset versions when application assets change, and retain the previous release as a rollback point.
+
+**First implementation slice:** UI-01 and UI-02, then ship UI-03 with a minimal working UI-05 grade/unit browser. Verify that all existing resources remain reachable before removing the homepage link list. Continue in release order; attach automated evidence to each completed checkbox. This document-only update changes no live interface behaviour.
