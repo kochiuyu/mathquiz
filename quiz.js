@@ -1472,7 +1472,7 @@ if(custom && grade){
   if(selected.length)quizzes[grade]=selected;
 }
 if(window.mathQuizLoadError){
-  app.innerHTML='<h1>'+t('MathQuiz could not load','????MathQuiz')+'</h1><p><a href="">'+t('Check your connection and try again.','?????????????')+'</a></p>';
+  app.innerHTML='<h1>'+t('MathQuiz could not load','未能載入MathQuiz')+'</h1><p><a href="">'+t('Check your connection and try again.','請檢查網絡連線並重新載入。')+'</a></p>';
 }else if(window.mathQuizCoverage || view==='browse'){
   MathQuizUI.browser(app,!!window.mathQuizCoverage);
 }else if(invalidV4 || ([2,3,5].includes(grade) && !custom && !practiceEntry) || (custom && (!grade || (params.get("items") && !selected.length) || (!selected.length && view!=="build")))){
