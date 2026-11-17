@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+'\n'+read('resources.js')+'\nglobalThis.data=resourceData;globalThis.fs=families;',c);
 const {units,activities}=c.data,live=c.fs.filter(f=>!f.retired);
 assert.equal(units.length,85);assert.equal(new Set(units.map(u=>u.code)).size,85);assert.equal(units.filter(u=>u.complete).length,51);
-assert.equal(activities.length,51);assert.equal(new Set(activities.map(a=>a.path)).size,51);
+assert.equal(activities.length,56);assert.equal(new Set(activities.map(a=>a.path)).size,56);
 for(const u of units){assert(u.title.length===2&&u.title.every(s=>s.trim()));assert.match(u.code,/^[1-6][NMSDFA]\d+$/);assert.equal(u.grade,+u.code[0]);assert(u.source.startsWith('https://www.edb.gov.hk/'));}
 for(const f of live)assert(units.some(u=>u.code===f.code&&u.grade===f.grade),'Missing unit for '+f.id);
 for(const a of activities){assert(a.title.length===2&&a.title.every(s=>s.trim()));assert(a.units.every(code=>units.some(u=>u.code===code)));assert(fs.existsSync(path.join(root,a.path)));const html=read(a.path);assert(a.units.includes((html.match(/<body[^>]*data-unit="([^"]+)"/)||[])[1]),'Activity unit route '+a.path);assert(html.includes('activity-ui.js')&&html.includes('activity-ui.css'),'Activity shell '+a.path);}
@@ -13,9 +13,21 @@ for(const file of ['index.html','coverage.html','ui.js','builder-ui.js','pupil-u
 const lum=hex=>{const c=hex.match(/\w\w/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722;};
 for(const [fg,bg]of [['20392f','f7f6ef'],['526454','fffefa'],['215a48','fffefa'],['ffffff','215a48'],['465b4d','eef1e9'],['244f3b','dfebdd'],['8c481d','fffefa']])assert((Math.max(lum(fg),lum(bg))+.05)/(Math.min(lum(fg),lum(bg))+.05)>=4.5,'Text contrast '+fg+'/'+bg);
 for(const [fg,bg]of [['789080','fffefa'],['a84e1b','f7f6ef']])assert((Math.max(lum(fg),lum(bg))+.05)/(Math.min(lum(fg),lum(bg))+.05)>=3,'Control contrast '+fg+'/'+bg);
-console.log('PASS UI: 85 unique bilingual units, 51 linked activities, every selectable family mapped, local assets, JS parsing and primary text/control contrast.');
+console.log('PASS UI: 85 unique bilingual units, 56 linked activities, every selectable family mapped, local assets, JS parsing and primary text/control contrast.');
 
 assert(read('tests/ui-regression.js').includes("fetch('../resources.js?regression='+Date.now(),{cache:'no-store'})"),'uncached activity manifest');
 assert(read('tests/ui-regression.js').includes('paths.length==='+activities.length),'activity manifest count guard');
 
-assert(fs.readFileSync(path.join(root,"tests/regression.js"),"utf8").includes('doc.querySelectorAll(".badge.complete").length===51'),"main regression completion count matches51 closure");
+assert(fs.readFileSync(path.join(root,"tests/regression.js"),"utf8").includes('doc.querySelectorAll(".badge.complete").length===51'),"main regression completion count matches51 baseline");
+
+// Exact current catalogue counts must agree across runtime and both browser suites.
+const quiz=read('quiz.js'),catalogue=quiz.match(/const practiceCatalogue=\[[\s\S]*?\n\];/)[0];
+for(const name of new Set(catalogue.match(/render[A-Za-z0-9]+/g)))c[name]=(...args)=>({name,args});
+vm.runInContext(catalogue+';globalThis.catalogue=practiceCatalogue;',c);
+assert.equal(live.length,174);assert.equal(new Set(live.map(f=>f.code)).size,58);assert.equal(c.catalogue.length,174);
+for(const f of live){const entries=c.catalogue.filter(x=>x.skill===f.id||(!x.skill&&f.id==='count20a'));assert.equal(entries.length,1,'exact practice registration '+f.id);assert.equal(entries[0].grade,f.grade);}
+const mainReg=read('tests/regression.js');
+assert(mainReg.includes('doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===174'),'main coverage exact85/174');
+assert(mainReg.includes('links.length===174 && new Set(links.map(a=>a.href)).size===174'),'main exact174 unique practice links');
+assert(!mainReg.includes('===171'),'no stale171-count guards');
+assert(read('tests/regression.html').includes('regression.js?v=remaining-p4-routes-r3'),'updated main-test cache token');

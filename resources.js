@@ -1363,6 +1363,56 @@ const resourceData = {
         "P4 · Area (I)",
         "小四 · 面積（一）"
       ]
+    },
+    {
+      "path": "activities/p4-quadrilaterals-iii.html",
+      "units": [
+        "4S1"
+      ],
+      "title": [
+        "P4 · Quadrilaterals (III)",
+        "小四 · 四邊形（三）"
+      ]
+    },
+    {
+      "path": "activities/p4-dissecting-forming.html",
+      "units": [
+        "4S2"
+      ],
+      "title": [
+        "P4 · Dissecting and forming shapes",
+        "小四 · 分割和拼砌圖形"
+      ]
+    },
+    {
+      "path": "activities/p4-inquiry.html",
+      "units": [
+        "4F1"
+      ],
+      "title": [
+        "Investigation A: Same tiles, different borders",
+        "探究A：相同拼塊，不同邊界"
+      ]
+    },
+    {
+      "path": "activities/p4-bar-charts-ii.html",
+      "units": [
+        "4D1"
+      ],
+      "title": [
+        "Bar charts (II): collect, approximate and construct",
+        "棒形圖（二）：收集、近似及繪製"
+      ]
+    },
+    {
+      "path": "activities/p4-directions-iii.html",
+      "units": [
+        "4S3"
+      ],
+      "title": [
+        "P4 · Directions and positions (III)",
+        "小四 · 方向和位置（三）"
+      ]
     }
   ],
   "strands": {
