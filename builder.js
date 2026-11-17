@@ -307,7 +307,11 @@ const timeNotationFamilies3=[false,true].map(reverse=>({id:reverse?'read24hour3a
  why:[`${display} corresponds to ${twelve[0]}. The left pair gives hours and the right pair gives minutes. 00:00 starts the day; 24:00 ends that day.`,`${display}表示${twelve[1]}。左邊兩位表示時，右邊兩位表示分。00:00是一天的開始，24:00是該天的結束。`],
  practiceHint:reverse?['Read the minutes unchanged. Hours 01–11 are before noon; 12 is noon or the following hour; for 13–23 subtract 12 and say p.m. Keep 00:00 and 24:00 tied to the stated day boundary.','分鐘不變。01至11時在中午前；12時是中午或其後的一小時；13至23時減12並說明下午或晚上。00:00及24:00須連同所述日子的分界理解。']:['Keep the minutes unchanged. Before noon use the morning hour (12 a.m. is 00); after noon add 12 to hours 1–11. Noon is 12. Distinguish the start and end of the stated day.','分鐘不變。中午前用上午時數（凌晨12時為00）；中午後1至11時的時數加12，中午為12。分清所述日子的開始和結束。'],timeNotation3M4:{hour,minute,reverse,optionRows:ordered.map(k=>timeNotationRows3[k].slice())}};
 }}));
+// P3 Weight: mixed-unit recording to grams; practical weighing remains teacher assessed.
+const weightRows3=[[1,30],[2,250],[3,5],[1,0],[2,5],[4,90],[3,600],[5,10],[2,999],[6,125],[7,50],[4,500]];
+const weightFamilies3=[{id:'weightgrams3a',grade:3,code:'3M5',label:['Record a weight in grams','以克記錄重量'],count:12,make(i){const [kg,g]=weightRows3[i],answer=kg*1000+g;return {prompt:[`A parcel weighs ${kg} kg ${g} g. Record its weight in grams. Write the number; g is printed for you.`,`一件包裹重${kg} kg ${g} g。用克記錄重量，填數字，單位g已印出。`],fields:[['g','g']],answer:[answer],marks:1,answerUnitLabels:[['g','g']],why:[`${kg} kg is ${kg*1000} g. ${kg*1000} + ${g} = ${answer}, so the weight is ${answer} g.`,` ${kg} kg是${kg*1000} g。${kg*1000}＋${g}＝${answer}，所以重量是${answer} g。`],practiceHint:['Each kilogram is 1000 grams. Count all the kilograms in grams, then include the remaining grams.','每千克有1000克。先把所有千克數算成克，再加上餘下的克數。'],weight3M5:{kg,g}};}}];
 const families = [
+  ...weightFamilies3,
   ...timeNotationFamilies3,
   ...operationsFamilies3,...fractionFamilies3,...lengthFamilies3,...timeFamilies3,
   ...numberFamilies3,...multiplicationFamilies3,...divisionFamilies3,

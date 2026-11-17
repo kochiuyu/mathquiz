@@ -289,3 +289,8 @@ The [seven-objective activity audit](p3-capacity.md) adds bilingual practical co
 ## Verified 3M4 Time (IV) checkpoint
 
 [Unit audit and bilingual activity](p3-time-iv.md) cover recognition and telling of 24-hour times, with named-day boundaries and 12-hour equivalents. Two new permanent families `write24hour3a` and `read24hour3a` each offer 12 variants. All previous 1,941 payloads are unchanged. Released totals: 123 permanent families / 1,965 variants; 122 selectable / 1,950; 44 selectable units / 48 resource units. Public `604fd9f` passed 365/365 live checks with zero failures; both objectives are resource complete. 24-hour duration arithmetic is excluded.
+
+
+## 3M5 Weight candidate
+
+One new family, `weightgrams3a`, adds 12 mixed-unit recording variants. The bilingual practical activity supplies evidence for all seven objectives. Candidate inventory: 124 permanent families / 1,977 variants; 123 selectable families / 1,962 variants; 45 selectable units / 49 resource units. The 36 verified units remain unchanged. Browser and live verification are pending; no completion claim is added. See [Weight audit](p3-weight.md).

@@ -60,7 +60,7 @@ Completion means usable assessment resources, not pupil mastery or inquiry hours
 | P3 | [3M2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=58) | Time (III) | `startminutes3a`, `starthours3a`; [teacher activity](../activities/p3-time-iii.html); [review](p3-time-iii.md) | Verified resource complete; live `8d75a7f` PASS 359/359; manual/practical limitations retained |
 | P3 | [3M3](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=51) | Capacity | `cup3a`; [practical activity and audit](p3-capacity.md) | Verified resource complete; live `8864780` PASS 360/360; manual/practical limitations retained |
 | P3 | [3M4](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=61) | Time (IV) | `write24hour3a`, `read24hour3a`; [activity and audit](p3-time-iv.md) | Verified resource complete; live `604fd9f` PASS 365/365; manual/practical limitations retained |
-| P3 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | — | No task |
+| P3 | [3M5](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=62) | Weight | `weightgrams3a`; [activity and audit](p3-weight.md) | Candidate; live verification pending |
 | P3 | [3S1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64) | Quadrilaterals (II) | — | No task |
 | P3 | [3S2](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=66) | Triangles | — | No task |
 | P3 | [3D1](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=57) | Bar charts (I) | `bar3a` | Task live; objective audit needed |

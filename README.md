@@ -309,3 +309,7 @@ Separate navigation metadata and rendering from mathematical generation. Preserv
 ### UI release checkpoint · 17 November 2026
 
 The compact homepage, bilingual resource browser, staged builder, pupil session continuity and shared teacher-resource styling are implemented. All 145 dedicated UI checks and seven static gates pass locally. Full regression and deployment verification are recorded in [UI release evidence](planning/ui-release-evidence.md); this checkpoint will be updated with the published revision and final public results. Manual reviews listed above remain pending.
+
+## 3M5 Weight candidate
+
+One new family, `weightgrams3a`, adds 12 mixed-unit recording variants. The bilingual practical activity supplies evidence for all seven objectives. Candidate inventory: 124 permanent families / 1,977 variants; 123 selectable families / 1,962 variants; 45 selectable units / 49 resource units. The 36 verified units remain unchanged. Browser and live verification are pending; no completion claim is added. See [Weight audit](planning/p3-weight.md).

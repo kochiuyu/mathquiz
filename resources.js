@@ -1213,6 +1213,16 @@ const resourceData = {
         "P3 · Tell time without a.m./p.m.",
         "小三 · 不用上午／下午也能報時"
       ]
+    },
+    {
+      "path": "activities/p3-weight.html",
+      "units": [
+        "3M5"
+      ],
+      "title": [
+        "P3 · Heavy and light",
+        "小三 · 輕和重"
+      ]
     }
   ],
   "strands": {
