@@ -1,3 +1,7 @@
+## Verified publication · 17 November 2026
+
+3S1 is resource complete. Public release `23b60fb` passed 371/371 curriculum and 150/150 UI browser checks, plus nine static gates. Checkpoint: 38/85 units, 151 numbered objectives and two inquiry statements. Earlier candidate notes below are historical. Actual pupil performance, manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unverified.
+
 # P3 Quadrilaterals (II) · 3S1
 
 **Local candidate, not resource complete.** Prepared 17 November 2026 against the verified Weight closure and current UI. Earlier closure counts in inherited files are historical and must not override newer public checkpoints. `parallelpairs3a` adds12 exact-coordinate classification variants; all1,977 prior payload hashes are unchanged. Totals125 permanent families/1,989 variants;124 selectable/1,974;46 selectable units/50 resource units.

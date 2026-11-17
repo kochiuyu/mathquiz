@@ -1,6 +1,6 @@
 # Live family authoring audit
 
-**Verified resource-complete checkpoint: 37/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M5 have source-reviewed assessment resources, covering 145 numbered objectives plus two integrated inquiry statements. Public release `00eb0d4` passed **368/368 curriculum checks and 147/147 UI checks**, with zero failures. All 1,977 variant contracts and eight static gates pass. Weight adds seven objectives and 12 variants; all 1,965 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Verified resource-complete checkpoint: 38/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1 have source-reviewed assessment resources, covering 151 numbered objectives plus two integrated inquiry statements. Public Quadrilaterals (II) release `23b60fb` passed **371/371 curriculum checks and 150/150 UI checks**, with zero failures. All 1,989 variant contracts and nine static gates pass. This unit adds six objectives and 12 variants; all 1,977 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
 
@@ -196,6 +196,6 @@ Thirteen families /156 variants added; all1,785 prior payloads preserved. Snapsh
 Public `00eb0d4` passed 368/368 curriculum and 147/147 UI checks. All seven objectives have linked digital or teacher-observed evidence. Inventory: 124 permanent families / 1,977 variants; 123 selectable families / 1,962 variants; 45 selectable units / 49 resource units. Completion: 37/85 units, 145 numbered objectives and two inquiry statements. Manual/practical validation limitations remain.
 
 
-## 3S1 Quadrilaterals (II) candidate
+## Verified 3S1 Quadrilaterals (II) checkpoint
 
-Twelve exact-coordinate classification variants and bilingual drawing/making activities cover six objectives. Inventory: 125 permanent families / 1,989 variants; 124 selectable families / 1,974 variants; 46 selectable units / 50 resource units. Earlier 1,977 payloads are unchanged. Browser/live checks pending; 37-unit verified predecessor checkpoint is retained.
+Public `23b60fb` passed 371/371 curriculum and 150/150 UI checks. All six objectives have linked digital or teacher-observed evidence. Inventory: 125 permanent families / 1,989 variants; 124 selectable families / 1,974 variants; 46 selectable units / 50 resource units. Completion: 38/85 units, 151 numbered objectives and two inquiry statements. Manual/practical validation limitations remain.

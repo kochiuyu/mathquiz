@@ -379,7 +379,7 @@ const resourceData = {
         "四邊形（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=64",
-      "complete": false
+      "complete": true
     },
     {
       "code": "3S2",

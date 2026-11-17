@@ -2,7 +2,7 @@
 
 **UI release · 17 November 2026:** [The redesign is live](https://kochiuyu.github.io/mathquiz/). Final local and public verification of UI release `3f4fcc0`: **365/365 existing checks + 145/145 UI checks**, zero failures. See the [UI plan and release checkpoint](#ui-improvement-plan) and [release evidence](planning/ui-release-evidence.md). Later curriculum releases have separate verification records. This changes interface behaviour, not curriculum completion.
 
-**Verified resource-complete checkpoint: 37/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M5 have source-reviewed assessment resources, covering 145 numbered objectives plus two integrated inquiry statements. Public release `00eb0d4` passed **368/368 curriculum checks and 147/147 UI checks**, with zero failures. All 1,977 variant contracts and eight static gates pass. Weight adds seven objectives and 12 variants; all 1,965 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Verified resource-complete checkpoint: 38/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1 have source-reviewed assessment resources, covering 151 numbered objectives plus two integrated inquiry statements. Public Quadrilaterals (II) release `23b60fb` passed **371/371 curriculum checks and 150/150 UI checks**, with zero failures. All 1,989 variant contracts and nine static gates pass. This unit adds six objectives and 12 variants; all 1,977 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
 
@@ -16,21 +16,21 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified Weight release, 45 units have at least one selectable task, 40 have none, and 37 have been verified resource complete. The released builder offers 123 question families and 1,962 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified Quadrilaterals (II) release, 46 units have at least one selectable task, 39 have none, and 38 have been verified resource complete. The released builder offers 124 question families and 1,974 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 14 | 1 | 15 |
-| P3 | 14 | 11 | 3 | 10 |
+| P3 | 14 | 12 | 2 | 11 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **45** | **40** | **37** |
+| **Total** | **85** | **46** | **39** | **38** |
 
-**Verified resource inventory:** 49 units have digital tasks or linked teacher activities; 45 have selectable tasks. All P1/P2, 3N1–3N5 and 3M1–3M5 are publicly resource complete (37 units). The other 12 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
+**Verified resource inventory:** 50 units have digital tasks or linked teacher activities; 46 have selectable tasks. All P1/P2, 3N1–3N5, 3M1–3M5 and 3S1 are publicly resource complete (38 units). The other 12 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
 
-**Verified resource-complete checkpoint: 37/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M5 have source-reviewed assessment resources, covering 145 numbered objectives plus two integrated inquiry statements. Public release `00eb0d4` passed **368/368 curriculum checks and 147/147 UI checks**, with zero failures. All 1,977 variant contracts and eight static gates pass. Weight adds seven objectives and 12 variants; all 1,965 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Verified resource-complete checkpoint: 38/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1 have source-reviewed assessment resources, covering 151 numbered objectives plus two integrated inquiry statements. Public Quadrilaterals (II) release `23b60fb` passed **371/371 curriculum checks and 150/150 UI checks**, with zero failures. All 1,989 variant contracts and nine static gates pass. This unit adds six objectives and 12 variants; all 1,977 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
@@ -45,7 +45,7 @@ The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, 
 ## Next three deliverables
 
 1. **Preserve the verified Weight (3M5) release.** Continue to distinguish completed resources from actual pupil weighing performance.
-2. **Deliver Quadrilaterals (II) (3S1), then Triangles (3S2).** Cover constructions and properties with pupil actions and teacher criteria, not recognition questions alone.
+2. **Deliver Triangles (3S2).** Cover constructions and properties with pupil actions and teacher criteria, not recognition questions alone.
 3. **Finish the remaining P3 data and inquiry units in source order.** Review each candidate, verify the deployed release, then record its resource-complete checkpoint separately. Later private drafts are not released coverage.
 
 ## How to choose the next release
@@ -317,6 +317,6 @@ The compact homepage, bilingual resource browser, staged builder, pupil session 
 Public `00eb0d4` passed 368/368 curriculum and 147/147 UI checks. All seven objectives have linked digital or teacher-observed evidence. Inventory: 124 permanent families / 1,977 variants; 123 selectable families / 1,962 variants; 45 selectable units / 49 resource units. Completion: 37/85 units, 145 numbered objectives and two inquiry statements. Manual/practical validation limitations remain.
 
 
-## 3S1 Quadrilaterals (II) candidate
+## Verified 3S1 Quadrilaterals (II) checkpoint
 
-Twelve exact-coordinate classification variants and bilingual drawing/making activities cover six objectives. Inventory: 125 permanent families / 1,989 variants; 124 selectable families / 1,974 variants; 46 selectable units / 50 resource units. Earlier 1,977 payloads are unchanged. Browser/live checks pending; 37-unit verified predecessor checkpoint is retained.
+Public `23b60fb` passed 371/371 curriculum and 150/150 UI checks. All six objectives have linked digital or teacher-observed evidence. Inventory: 125 permanent families / 1,989 variants; 124 selectable families / 1,974 variants; 46 selectable units / 50 resource units. Completion: 38/85 units, 151 numbered objectives and two inquiry statements. Manual/practical validation limitations remain.
