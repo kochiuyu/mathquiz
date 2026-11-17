@@ -1,6 +1,6 @@
-# P3 Inquiry and investigation · 3F1 reviewed resource candidate
+# P3 Inquiry and investigation · 3F1 verified resource checkpoint
 
-17 November2026. Candidate resource, live verification pending. No scored family added; all2,037 predecessor variants unchanged. One new teacher resource gives41activities/52resource-bearing units;47selectable units,129permanent families/2,037variants and128selectable families/2,022variants remain. The verified baseline is 40 units, 158 numbered objectives and two inquiry statements. This candidate maps **one integrated inquiry statement and zero numbered objectives**, not six invented objectives.
+**Verified resource-complete checkpoint: 41/85 units.** All P1–P3 units have source-reviewed assessment resources, covering 158 numbered objectives plus three integrated inquiry statements. Public 3F1 release `3943bd1` passed **382/382 curriculum checks and 157/157 UI checks**, with zero failures, plus twelve static gates. This resource adds one inquiry statement and zero numbered objectives or scored variants. All 2,037 prior payloads remain unchanged. Inventory: 129 permanent families / 2,037 variants; 128 selectable families / 2,022 variants; 47 selectable units / 52 resource units; 41 activities and 11 open resource-bearing units. Resource completeness does not assert pupil mastery, delivered lesson hours or observed inquiry. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 ## Source and scope
 
@@ -28,8 +28,8 @@ Dataset2/4/6 meets the stated constraints at scales1/2; scale5 fails whole-grid 
 
 ## Validation and limits
 
-Static tests must independently enumerate triples and derive admissible scales, check both languages/hidden keys/blank observation spaces, verify resource routing and unchanged payload hashes, and inspect actual font cmap coverage. Browser tests cover navigation, key visibility, phone layout and drawing spaces. Manual print/PDF pagination, independent translation, screen-reader use, classroom delivery and observed pupil inquiry remain unperformed. No completion, delivery or pupil-achievement claim follows from resource availability alone.
+Static tests must independently enumerate triples and derive admissible scales, check both languages/hidden keys/blank observation spaces, verify resource routing and unchanged payload hashes, and inspect actual font cmap coverage. Browser tests cover navigation, key visibility, phone layout and drawing spaces. Manual print/PDF pagination, independent translation, screen-reader use, classroom delivery and observed pupil inquiry remain unperformed. Staged resource completeness does not claim delivered lessons or pupil achievement.
 
 ## Historical development checks (before release verification)
 
-All12static gates passed. Independent enumeration gives3successful unordered triples for total12 and7for total15; scale checks derive1/2 for2/4/6 and5for10/20/30 under the explicit task constraints. Both languages have6tasks,5sheets,3blank six-interval grids and intentionally unfilled observation records. All2,037 question payloads remain unchanged. Rebuilt font230,120bytes covers859source characters with actual nonzero glyphs, including this activity. Full variable font source is excluded. Browser/runtime and manual validation remain pending.
+All12static gates passed. Independent enumeration gives3successful unordered triples for total12 and7for total15; scale checks derive1/2 for2/4/6 and5for10/20/30 under the explicit task constraints. Both languages have6tasks,5sheets,3blank six-interval grids and intentionally unfilled observation records. All2,037 question payloads remain unchanged. Rebuilt font230,120bytes covers859source characters with actual nonzero glyphs, including this activity. Full variable font source is excluded. Live curriculum 382/382 and UI 157/157 checks passed. Manual validation remains pending.

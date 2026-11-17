@@ -409,7 +409,7 @@ const resourceData = {
         "探究活動"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=69",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N1",
