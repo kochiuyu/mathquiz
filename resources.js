@@ -1273,6 +1273,56 @@ const resourceData = {
         "P4 · Multiplication reasoning",
         "小四 · 乘法及推理"
       ]
+    },
+    {
+      "path": "activities/p4-division-ii.html",
+      "units": [
+        "4N2"
+      ],
+      "title": [
+        "P4 · Division and divisibility",
+        "小四 · 除法及整除"
+      ]
+    },
+    {
+      "path": "activities/p4-multiples-factors.html",
+      "units": [
+        "4N3"
+      ],
+      "title": [
+        "P 4 · Multiples and factors",
+        "小四 · 倍數和因數"
+      ]
+    },
+    {
+      "path": "activities/p4-common-multiples-factors.html",
+      "units": [
+        "4N4"
+      ],
+      "title": [
+        "P 4 · Common multiples and common factors",
+        "小四 · 公倍數和公因數"
+      ]
+    },
+    {
+      "path": "activities/p4-four-operations-ii.html",
+      "units": [
+        "4N5"
+      ],
+      "title": [
+        "P4 · Four arithmetic operations (II)",
+        "小四 · 四則運算（二）"
+      ]
+    },
+    {
+      "path": "activities/p4-fractions-ii.html",
+      "units": [
+        "4N6"
+      ],
+      "title": [
+        "P4 · Fractions (II)",
+        "小四 · 分數（二）"
+      ]
     }
   ],
   "strands": {

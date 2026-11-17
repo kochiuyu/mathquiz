@@ -1,5 +1,7 @@
 # MathQuiz · Hong Kong primary mathematics
 
+**Reviewed 4N2–4N6 candidate; live verification pending:** Five units add 270 variants and five bilingual activities. Private verification passed 435/435 curriculum checks, 169/169 UI checks and twenty static gates. All 2,085 predecessor payloads remain unchanged. Inventory: 152 permanent families / 2,355 variants; 151 selectable families / 2,340 variants; 52 selectable units / 57 resource units; 47 activities. The verified 42-unit baseline is retained; these five units remain incomplete, with 15 open resource-bearing units. Completion will be recorded only after public deployment verification.
+
 **Verified resource-complete checkpoint: 42/85 units.** All P1–P3 units and 4N1 have source-reviewed assessment resources, covering 161 numbered objectives plus three integrated inquiry statements. Public Multiplication (II) release `12e57a3` passed **389/389 curriculum checks and 159/159 UI checks**, with zero failures, plus thirteen static gates. This unit adds three objectives and 48 variants; all 2,037 prior payloads remain unchanged. Inventory: 132 permanent families / 2,085 variants; 131 selectable families / 2,070 variants; 48 selectable units / 53 resource units; 42 activities and 11 open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified Inquiry checkpoint: 41/85 units.** All P1–P3 units have source-reviewed assessment resources, covering 158 numbered objectives plus three integrated inquiry statements. Public 3F1 release `3943bd1` passed **382/382 curriculum checks and 157/157 UI checks**, with zero failures, plus twelve static gates. This resource adds one inquiry statement and zero numbered objectives or scored variants. All 2,037 prior payloads remain unchanged. Inventory: 129 permanent families / 2,037 variants; 128 selectable families / 2,022 variants; 47 selectable units / 52 resource units; 41 activities and 11 open resource-bearing units. Resource completeness does not assert pupil mastery, delivered lesson hours or observed inquiry. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
@@ -24,19 +26,19 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified Multiplication (II) release, 48 units have selectable tasks, 37 have none and 42 units are resource complete. The builder offers 131 question families and 2,070 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all85units.** This candidate has52selectable units and33without selectable tasks,151selectable families/2,340variants.42verified baseline units remain complete;4N2–4N4are not promoted. One retired family/15variants retains old-link compatibility.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 14 | 1 | 15 |
 | P3 | 14 | 13 | 1 | 14 |
-| P4 | 15 | 4 | 11 | 1 |
+| P4 | 15 | 8 | 7 | 1 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **48** | **37** | **42** |
+| **Total** | **85** | **52** | **33** | **42** |
 
-**Verified resource inventory:** 53 units have digital tasks or linked activities; 48 have selectable tasks. All P1–P3 units and 4N1 are resource complete (42 units), leaving 11 open resource-bearing units. The checkpoint covers 161 numbered objectives plus three inquiry statements.
+**Candidate resource inventory:**57units have digital tasks or linked activities;52have selectable tasks.42baseline complete units and15open resource-bearing units. Verified objective totals remain161numbered plus three inquiry statements; this candidate does not promote completion.
 
 **Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
