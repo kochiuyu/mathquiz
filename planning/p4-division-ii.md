@@ -1,4 +1,10 @@
-#4N2 Division (II): private implementation audit
+#4N2 Division (II): verified resource closure
+
+**Verified resource complete.** All numbered objectives below have linked digital and teacher-assessed resources. Public batch `64335b9` passed 435/435 curriculum and 169/169 UI checks; twenty static gates passed. Current checkpoint47/85,183numbered objectives plus three inquiry statements;152permanent families/2355variants,151selectable/2340,52selectable57resource units,47activities,10open. Completion denotes resources, not pupil mastery. Manual print/PDF pagination, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+## Historical implementation record
+
+The following record describes earlier private candidate stages; its former inventories and pending-browser statements are historical, not current release evidence.
 
 Not published or resource complete. Adds48variants: dividecolumns4a12, divisibility4a24, divisionstory4a12. All2,085 predecessor payloads unchanged; candidate135families/2,133variants,134selectable/2,118,49selectable units/54resource units,43activities. Verified42unit baseline retained; this unit remains incomplete.
 

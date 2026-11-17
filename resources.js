@@ -429,7 +429,7 @@ const resourceData = {
         "除法（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=9",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N3",
@@ -439,7 +439,7 @@ const resourceData = {
         "倍數和因數"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=11",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N4",
@@ -449,7 +449,7 @@ const resourceData = {
         "公倍數和公因數"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=13",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N5",
@@ -459,7 +459,7 @@ const resourceData = {
         "四則運算（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=14",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N6",
@@ -469,7 +469,7 @@ const resourceData = {
         "分數（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=16",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N7",

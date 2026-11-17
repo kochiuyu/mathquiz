@@ -1,4 +1,10 @@
-#4N4 Common multiples and common factors: private candidate
+#4N4 Common multiples and common factors: verified resource closure
+
+**Verified resource complete.** All numbered objectives below have linked digital and teacher-assessed resources. Public batch `64335b9` passed 435/435 curriculum and 169/169 UI checks; twenty static gates passed. Current checkpoint47/85,183numbered objectives plus three inquiry statements;152permanent families/2355variants,151selectable/2340,52selectable57resource units,47activities,10open. Completion denotes resources, not pupil mastery. Manual print/PDF pagination, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+## Historical implementation record
+
+The following record describes earlier private candidate stages; its former inventories and pending-browser statements are historical, not current release evidence.
 
 No publication or completion promotion.36newvariants across commonfactors4a,commonmultiples4a,lcmhcf4a(12each). All2187predecessorpayloads unchanged.142permanent/2223variants,141selectable/2208,50selectableunits/55resourceunits,45activities,42inheritedcomplete.
 

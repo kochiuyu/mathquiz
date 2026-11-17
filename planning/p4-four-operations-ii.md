@@ -1,4 +1,10 @@
-#4N5 Four arithmetic operations (II): private candidate audit
+#4N5 Four arithmetic operations (II): verified resource closure
+
+**Verified resource complete.** All numbered objectives below have linked digital and teacher-assessed resources. Public batch `64335b9` passed 435/435 curriculum and 169/169 UI checks; twenty static gates passed. Current checkpoint47/85,183numbered objectives plus three inquiry statements;152permanent families/2355variants,151selectable/2340,52selectable57resource units,47activities,10open. Completion denotes resources, not pupil mastery. Manual print/PDF pagination, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+## Historical implementation record
+
+The following record describes earlier private candidate stages; its former inventories and pending-browser statements are historical, not current release evidence.
 
 Four families/48variants: distribute4a,divisionmixed4a,mixedfive4a,unitary4a,12each. All2223predecessorpayloads unchanged.146permanent/2271variants,145selectable/2256,51selectable56resourceunits,46activities,42inheritedcomplete14open. No publication or completion promotion.
 

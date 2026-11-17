@@ -1,4 +1,10 @@
-# 4N6 Fractions (II): private candidate audit
+# 4N6 Fractions (II): verified resource closure
+
+**Verified resource complete.** All numbered objectives below have linked digital and teacher-assessed resources. Public batch `64335b9` passed 435/435 curriculum and 169/169 UI checks; twenty static gates passed. Current checkpoint47/85,183numbered objectives plus three inquiry statements;152permanent families/2355variants,151selectable/2340,52selectable57resource units,47activities,10open. Completion denotes resources, not pupil mastery. Manual print/PDF pagination, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+## Historical implementation record
+
+The following record describes earlier private candidate stages; its former inventories and pending-browser statements are historical, not current release evidence.
 
 Six families/84variants: fractionkind4a12, fractionconvert4a12, fractionscale4a12, fractioncompare4a12, fractioncalc4a24, fractionstory4a12. All2,271 predecessor payloads preserved.152families/2,355variants;151selectable/2,340;52selectable57resourceunits;47activities;42inheritedcomplete15open. No public release or completion promotion.
 
