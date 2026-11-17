@@ -2,6 +2,8 @@
 
 **Verified resource-complete checkpoint: 35/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M3 have source-reviewed assessment resources, covering 136 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8864780` passed **360/360** browser checks with zero failures, including all 1,941 variant contracts. Capacity adds seven teacher-assessed objectives without changing any question payload. The five static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
+**3M4 publication candidate (not resource complete):** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 Time (IV) variants, preserving all 1,941 earlier payloads. Verified completion remains 35/85 units and 136 numbered objectives plus two inquiry statements. Six static gates pass; 365 browser checks are authored, not yet a browser pass. No 3M4 completion claim until deployed verification. Historical release counts below retain their original scope.
+
 **Verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
 
 Earlier draft/candidate notes below are historical records, including references to tests then pending. This current verified checkpoint supersedes their status claims, not their recorded test results or manual-validation limits.
@@ -12,19 +14,19 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified capacity release, 43 units have at least one selectable task, 42 have none, and 35 have been verified resource complete. The released builder offers 120 question families and 1,926 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the 3M4 candidate, 44 units have at least one selectable task, 41 have none, and 35 have been verified resource complete. The candidate builder offers 122 question families and 1,950 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 14 | 1 | 15 |
-| P3 | 14 | 9 | 5 | 8 |
+| P3 | 14 | 10 | 4 | 8 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **43** | **42** | **35** |
+| **Total** | **85** | **44** | **41** | **35** |
 
-**Verified resource inventory:** 47 units have digital tasks or linked teacher activities; 43 have selectable tasks. All P1/P2, 3N1–3N5 and 3M1–3M3 are publicly resource complete (35 units). The other 12 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
+**Candidate resource inventory:** 48 units have digital tasks or linked teacher activities; 44 have selectable tasks. All P1/P2, 3N1–3N5 and 3M1–3M3 are publicly resource complete (35 units). The other 13 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
 
 **Verified resource-complete checkpoint: 35/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M3 have source-reviewed assessment resources, covering 136 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8864780` passed **360/360** browser checks with zero failures, including all 1,941 variant contracts. Capacity adds seven teacher-assessed objectives without changing any question payload. The five static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 

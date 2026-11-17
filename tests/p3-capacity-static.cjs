@@ -20,6 +20,6 @@ for(const [litres,ml,total] of [[1,30,1030],[2,250,2250],[3,5,3005]]){
 assert(html.includes('1000 mL = 1 L') && html.includes('1000 mL＝1 L'));
 const coverage=read('coverage.html');assert(coverage.includes('activities/p3-capacity.html?lang='));
 new vm.Script(coverage.match(/<script>([\s\S]*?)<\/script>/)[1]);
-const reg=read('tests/regression.js');assert(reg.includes("'p3-time-iii','p3-capacity']"));
+const reg=read('tests/regression.js');assert(/for\(const file of \[([^\]]+)\]\)for\(const language/.exec(reg)[1].includes("'p3-capacity'"));
 assert(reg.includes('3M3 capacity · complete bilingual activity'));
 console.log('PASS capacity: bilingual structure, eight tasks per language, worked recording arithmetic, hidden keys, source/practice/coverage links and authored regression integration. Browser/printer/classroom checks remain separate.');

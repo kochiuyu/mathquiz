@@ -1,0 +1,12 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+';globalThis.bank=families;',c);
+const rows=[[0,0,'midnight at the start of the stated day'],[0,5,'12:05 a.m.'],[6,30,'6:30 a.m.'],[9,7,'9:07 a.m.'],[11,59,'11:59 a.m.'],[12,0,'12 noon'],[12,15,'12:15 p.m.'],[13,5,'1:05 p.m.'],[16,45,'4:45 p.m.'],[20,8,'8:08 p.m.'],[23,59,'11:59 p.m.'],[24,0,'midnight at the end of the stated day']];
+const zh=['所述日子開始時的午夜','凌晨12時05分','上午6時30分','上午9時07分','上午11時59分','中午12時','下午12時15分','下午1時05分','下午4時45分','晚上8時08分','晚上11時59分','所述日子結束時的午夜'];
+let n=0;for(const id of ['write24hour3a','read24hour3a']){const f=c.bank.find(f=>f.id===id);assert.equal(f.count,12);const positions=[0,0,0,0];for(let i=0;i<12;i++){
+ const q=f.make(i),[h,m,label]=rows[i],display=('0'+h).slice(-2)+':'+('0'+m).slice(-2),answer=q.choiceLabels[q.answer[0]];
+ assert.equal(answer[0],id==='write24hour3a'?display:label);assert.equal(answer[1],id==='write24hour3a'?display:zh[i]);assert.equal(q.marks,1);assert.equal(new Set(q.choices.map(k=>q.choiceLabels[k][0])).size,4);assert.equal(new Set(q.choices.map(k=>q.choiceLabels[k][1])).size,4);assert(q.practiceHint.every(Boolean));positions[q.choices.indexOf(q.answer[0])]++;
+ for(const [oh,om] of q.timeNotation3M4.optionRows){assert(oh>=0&&oh<=24&&om>=0&&om<60);assert(oh!==24||om===0);}n++;
+ }assert.deepEqual(positions,[3,3,3,3]);}
+const html=read('activities/p3-time-iv.html');new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);for(const language of ['en','zh']){const section=html.split('<section id="'+language+'"')[1].split('</section>')[0];assert.equal((section.match(/data-task=/g)||[]).length,6);assert.equal((section.match(/class="sheet"/g)||[]).length,5);assert(section.includes('class="key" hidden'));for(const token of ['00:00','24:00','12:00','00:15','12:15','09:07','13:05','20:08'])assert(section.includes(token));}
+console.log('PASS 24 Time IV variants: independent explicit time oracle, unique localized distractors, balanced choice positions, valid boundary notation, bilingual pupil/key structure. No browser claim.');

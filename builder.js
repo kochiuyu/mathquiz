@@ -287,7 +287,28 @@ function startTimeQuestion3(kind,i){let end,duration,unit;if(kind==='minutes'){c
 const timeFamilies3=[{id:'startminutes3a',grade:3,code:'3M2',label:['Find a starting time in whole minutes','以整分鐘求開始時刻'],count:12,make:i=>startTimeQuestion3('minutes',i)},{id:'starthours3a',grade:3,code:'3M2',label:['Find a starting time in whole hours','以整小時求開始時刻'],count:12,make:i=>startTimeQuestion3('hours',i)}];
 
 
+// P3 Time IV: notation and equivalent times, never elapsed-time arithmetic.
+const timeNotationRows3=[[0,0],[0,5],[6,30],[9,7],[11,59],[12,0],[12,15],[13,5],[16,45],[20,8],[23,59],[24,0]];
+function notation24text3(h,m){return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');}
+function notation12text3(h,m){
+  if(h===24)return ['midnight at the end of the stated day','所述日子結束時的午夜'];
+  if(h===0&&m===0)return ['midnight at the start of the stated day','所述日子開始時的午夜'];
+  if(h===12&&m===0)return ['12 noon','中午12時'];
+  const hour=h%12||12,minute=String(m).padStart(2,'0');
+  return [hour+':'+minute+(h<12?' a.m.':' p.m.'),(h<6?'凌晨':h<12?'上午':h<18?'下午':'晚上')+hour+'時'+minute+'分'];
+}
+const timeNotationFamilies3=[false,true].map(reverse=>({id:reverse?'read24hour3a':'write24hour3a',grade:3,code:'3M4',label:reverse?['Read a 24-hour time','讀出二十四小時制時間']:['Write a 24-hour time','寫出二十四小時制時間'],count:12,make(i){
+ const [hour,minute]=timeNotationRows3[i],display=notation24text3(hour,minute),twelve=notation12text3(hour,minute),position=i%4;
+ const options=[i,(i+3)%12,(i+5)%12,(i+7)%12];
+ const ordered=options.slice(4-position).concat(options.slice(0,4-position));
+ const choices=['A','B','C','D'];
+ return {prompt:reverse?[`The 24-hour display is ${display}. Which description gives the same time? Keep the stated day boundary.`,`二十四小時制顯示${display}。哪個描述表示同一時間？留意所述日子的開始或結束。`]:[`Choose the 24-hour notation for ${twelve[0]}.`,`選出「${twelve[1]}」的二十四小時制寫法。`],choices,
+ choiceLabels:Object.fromEntries(choices.map((key,j)=>{const [h,m]=timeNotationRows3[ordered[j]];return [key,reverse?notation12text3(h,m):[notation24text3(h,m),notation24text3(h,m)]];})),answer:[choices[position]],marks:1,
+ why:[`${display} corresponds to ${twelve[0]}. The left pair gives hours and the right pair gives minutes. 00:00 starts the day; 24:00 ends that day.`,`${display}表示${twelve[1]}。左邊兩位表示時，右邊兩位表示分。00:00是一天的開始，24:00是該天的結束。`],
+ practiceHint:reverse?['Read the minutes unchanged. Hours 01–11 are before noon; 12 is noon or the following hour; for 13–23 subtract 12 and say p.m. Keep 00:00 and 24:00 tied to the stated day boundary.','分鐘不變。01至11時在中午前；12時是中午或其後的一小時；13至23時減12並說明下午或晚上。00:00及24:00須連同所述日子的分界理解。']:['Keep the minutes unchanged. Before noon use the morning hour (12 a.m. is 00); after noon add 12 to hours 1–11. Noon is 12. Distinguish the start and end of the stated day.','分鐘不變。中午前用上午時數（凌晨12時為00）；中午後1至11時的時數加12，中午為12。分清所述日子的開始和結束。'],timeNotation3M4:{hour,minute,reverse,optionRows:ordered.map(k=>timeNotationRows3[k].slice())}};
+}}));
 const families = [
+  ...timeNotationFamilies3,
   ...operationsFamilies3,...fractionFamilies3,...lengthFamilies3,...timeFamilies3,
   ...numberFamilies3,...multiplicationFamilies3,...divisionFamilies3,
   ...lengthFamilies2,...timeFamilies2,...solidFamilies2,...angleFamilies2,...directionFamilies2,...quadrilateralFamilies2,
