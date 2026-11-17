@@ -399,7 +399,7 @@ const resourceData = {
         "棒形圖（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=57",
-      "complete": false
+      "complete": true
     },
     {
       "code": "3F1",

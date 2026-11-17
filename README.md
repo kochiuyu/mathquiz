@@ -1,12 +1,12 @@
 # MathQuiz · Hong Kong primary mathematics
 
-**Reviewed 3D1 extension candidate; live verification pending:** `barcompare3a` adds12 comparison variants and a six-task bilingual collection/tally/construction resource. All2,025 predecessor payloads remain unchanged. Candidate129 permanent families/2,037 variants;128 selectable/2,022;47 selectable units/51 resource units;40 activities. Verified completion remains 39 units while this candidate awaits live verification. [Candidate audit](planning/p3-bar-charts-extension.md).
+**Verified resource-complete checkpoint: 40/85 units.** All P1/P2 units and P3 through 3D1 have source-reviewed assessment resources, covering 158 numbered objectives plus two integrated inquiry statements. Public Bar charts (I) release `21bd72c` passed **381/381 curriculum checks and 155/155 UI checks**, with zero failures. All 2,037 variant contracts and eleven static gates pass. This unit adds three objectives and 12 variants; all 2,025 prior payloads remain unchanged. Inventory: 129 permanent families / 2,037 variants; 128 selectable families / 2,022 variants; 47 selectable units / 51 resource units, with 11 resource-bearing units still open. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Verified 3S2 Triangles:** Four objectives have linked assessment resources; 36 new variants and six bilingual practical tasks. Public `6c88951` passed 378/378 curriculum and 153/153 UI checks. See the Triangles audit for evidence and human-validation limits.
 
 **UI release · 17 November 2026:** [The redesign is live](https://kochiuyu.github.io/mathquiz/). Final local and public verification of UI release `3f4fcc0`: **365/365 existing checks + 145/145 UI checks**, zero failures. See the [UI plan and release checkpoint](#ui-improvement-plan) and [release evidence](planning/ui-release-evidence.md). Later curriculum releases have separate verification records. This changes interface behaviour, not curriculum completion.
 
-**Verified resource-complete checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
 
@@ -20,21 +20,21 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified Triangles release, 47 units have at least one selectable task, 38 have none, and 39 have been verified resource complete. The released builder offers 127 question families and 2,010 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified Bar charts release, 47 units have at least one selectable task, 38 have none and 40 are resource complete. The builder offers 128 question families and 2,022 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 14 | 1 | 15 |
-| P3 | 14 | 13 | 1 | 12 |
+| P3 | 14 | 13 | 1 | 13 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **47** | **38** | **39** |
+| **Total** | **85** | **47** | **38** | **40** |
 
-**Verified resource inventory:** 51 units have digital tasks or linked teacher activities; 47 have selectable tasks. All P1/P2, 3N1–3N5, 3M1–3M5 and 3S1–3S2 are publicly resource complete (39 units). The other 12 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
+**Verified resource inventory:** 51 units have digital tasks or linked teacher activities; 47 have selectable tasks. All P1/P2 units and P3 through 3D1 are resource complete (40 units), leaving 11 open resource-bearing units. Whole-curriculum objective totals are not claimed.
 
-**Verified resource-complete checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+**Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
