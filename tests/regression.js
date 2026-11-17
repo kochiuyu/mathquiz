@@ -5,6 +5,9 @@
   "use strict";
   const expectedFixedV1 = "c7fb36d698138938a2eaa643d51ccc6aab3db1d3b2f90ad1fe8e4331a263e5ff";
   const expectedFamilies = [
+    ["triangleproperty3a",3,12,"105889ac836e70c85aa2cbd01e967c7e2630a2fdadce2ac8aa81c08b8d676962"],
+    ["trianglerelation3a",3,12,"2e9154cc963f9407ef2675a5ce01c8ec5e138e70477ab9f2c68791a74fbc86d6"],
+    ["trianglesides3a",3,12,"cd144da34f7aa62d4cbac00559874d131739b2936f992dbf10c4e6b59d68850b"],
     ["parallelpairs3a",3,12,"dba86289e3bfe503ac68ccaeadcef2cb4cac95f757f60538cb3030fce582c5f7"],
     ["weightgrams3a",3,12,"19f09ac3afbdf080d73f7109e9c872ec28d8e62a6776899fe9d86080df672735"],
     ["write24hour3a",3,12,"8ef6217f0e3b6149c4e4d5c2cd473b495e96ce34fb940c361e71323afb1b6989"],
@@ -193,9 +196,9 @@
   await check("Family catalogue",()=>{
     assert(families.length===expectedFamilies.length,"family count changed");
     assert(new Set(families.map(f=>f.id)).size===families.length,"duplicate family ID");
-    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===1989,"fixture count changed");
+    assert(expectedFamilies.reduce((n,f)=>n+f[2],0)===2025,"fixture count changed");
   });
-  await check("Released bilingual and response contracts · 1989 variants",()=>{
+  await check("Released bilingual and response contracts · 2025 variants",()=>{
     for(const family of families){
       assert(family.label?.length===2 && family.label.every(s=>typeof s==="string" && s.trim()),"family label missing: "+family.id);
       for(let i=0;i<family.count;i++){
@@ -404,14 +407,16 @@
         if(q.answerUnitLabels || (q.number2N1 && q.fields))(q.answerUnitLabels||q.fields).forEach((label,j)=>assert(kd.querySelector('fieldset p b').textContent.includes(label[l]+': '+q.answer[j]),'P2 labelled key '+id));
         else if(q.choiceLabels)assert(kd.querySelector('fieldset p b').textContent===q.choiceLabels[q.answer[0]][l],'P2 localized choice key');
         const practice=await shapeFrame('?lang='+language+'&p='+f.grade+'&view=practice&skill='+id);frames.push(practice);const pr=practice.contentDocument;
-        const samples={parallelpairs3a:[0,1,2,3,4,5,8,9],weightgrams3a:[0,2,3,8],write24hour3a:[0,1,5,6,7,11],read24hour3a:[0,2,5,6,10,11],addsub4digit3a:[0, 1, 2, 3, 11],mixedmultiply3a:[0, 2, 7, 11],bracketorder3a:[0, 1, 2, 8],comparetotal3a:[0, 5, 6, 11],fractionset3a:[0, 3, 4, 10],fractionequivalent3a:[0, 3, 4, 6, 9, 10],fractioncompare3a:[0, 1, 2, 3, 4, 5],fractionoperation3a:[0, 1, 2, 4, 5, 7],cmtomm3a:[0, 3, 8, 11],comparekm3a:[0, 1, 2],rulermm3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],startminutes3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],starthours3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],compose5digit3a:[0,2,4],tenthousandsvalue3a:[0,2,4],sequence5digit3a:[0,2,4,6,9,10],parity5digit3a:[0,1,4],compare5digit3a:[0,1,2],multdigit3a:[0,6,12,18],multthree3a:[0,3,11],multstory3a:[0,6,9],dividecolumns3a:[0,3,6,7,8],dividechain3a:[0,1,11],divisionstory3a:[0,1,2,4],metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
+        const samples={triangleproperty3a:[0,1,2,3,4,5,6,7,8,9,10,11],trianglerelation3a:[0,1,2,3,4,5,6,7,8,9,10,11],trianglesides3a:[0,1,2,3,4,5,6,7,8,9,10,11],parallelpairs3a:[0,1,2,3,4,5,8,9],weightgrams3a:[0,2,3,8],write24hour3a:[0,1,5,6,7,11],read24hour3a:[0,2,5,6,10,11],addsub4digit3a:[0, 1, 2, 3, 11],mixedmultiply3a:[0, 2, 7, 11],bracketorder3a:[0, 1, 2, 8],comparetotal3a:[0, 5, 6, 11],fractionset3a:[0, 3, 4, 10],fractionequivalent3a:[0, 3, 4, 6, 9, 10],fractioncompare3a:[0, 1, 2, 3, 4, 5],fractionoperation3a:[0, 1, 2, 4, 5, 7],cmtomm3a:[0, 3, 8, 11],comparekm3a:[0, 1, 2],rulermm3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],startminutes3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],starthours3a:[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],compose5digit3a:[0,2,4],tenthousandsvalue3a:[0,2,4],sequence5digit3a:[0,2,4,6,9,10],parity5digit3a:[0,1,4],compare5digit3a:[0,1,2],multdigit3a:[0,6,12,18],multthree3a:[0,3,11],multstory3a:[0,6,9],dividecolumns3a:[0,3,6,7,8],dividechain3a:[0,1,11],divisionstory3a:[0,1,2,4],metrestocm2a:[0,2,11],timefinish2a:[0,1,4,7],timeelapsed2a:[0,1,4,7],solidbasename2a:[0,1,2,3,4,5,6,7],anglekind2a:[0,1,2],anglecompare2a:[0,1,2],directionmap2a:[0,1,2,3,4,5,6,7,8,9,10,11],quadproperties2a:[0,1,2,12,13,14],divfact2a:[0,54,109],divremain2a:[0,8,9],divgroup2a:[0,1,6,7],divcheck2a:[0,6,8],cross1000seq2a:[0,3,6,9],groupcount4digit2a:[0,1,2,3],price1000read2a:[0,3,6],moneycount1000a:[0,2,7],noteexchange2a:[0,5,8,10],sub3borrow2a:[0,1,7,10],mixed3steps2a:[0,6,12,18],moneychange2a:[0,4,11]};
         for(const dest of ['en','zh']){const u=new URL(pr.getElementById(dest).href);assert(Number(u.searchParams.get('p'))===f.grade && u.searchParams.get('skill')===id,'practice grade URL');}
         const variants=samples[id]||(id==='multfact2a'?[0,51,120]:id==='multstory2a'?[0,12,29]:[0,6,11]);
         for(const variant of variants){
           const item=f.make(variant),inputs=[...pr.querySelectorAll('#practice-form input')];
           if(['parallelpairs3a','write24hour3a','read24hour3a','weightgrams3a'].includes(id))assert(pr.querySelector('#practice-form legend').textContent===item.prompt[l],'Practice sample prompt '+id+'-'+variant);
+          if(id.startsWith('triangle'))assert(pr.querySelector('#practice-form legend').textContent===item.prompt[l],'Triangle practice sample '+id+'-'+variant);
+          if(id==='triangleproperty3a')assert(pr.querySelector('#practice-form polygon').getAttribute('points')===item.figure.points.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' '),'Triangle practice geometry '+variant);
           if(id==='parallelpairs3a')assert(pr.querySelector('#practice-form polygon').getAttribute('points')===item.figure.points.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' '),'Quadrilateral practice sample geometry '+variant);
-          if(item.figure && ['baseOutline2','angleOpening2','anglePair2','directionMap2','quadrilateralProperties2'].includes(item.figure.kind)){assert(pr.querySelectorAll('.p2-geometry svg').length===(item.figure.kind==='anglePair2'?2:1),'practice figure missing');for(const svg of pr.querySelectorAll('.p2-geometry svg'))assert(svg.getBoundingClientRect().width>20,'practice figure collapsed');}
+          if(item.figure && ['baseOutline2','angleOpening2','anglePair2','directionMap2','quadrilateralProperties2','triangleProperties3'].includes(item.figure.kind)){assert(pr.querySelectorAll('.p2-geometry svg').length===(item.figure.kind==='anglePair2'?2:1),'practice figure missing');for(const svg of pr.querySelectorAll('.p2-geometry svg'))assert(svg.getBoundingClientRect().width>20,'practice figure collapsed');}
           if(item.figure && ['fractionsEvidence3','millimetreRuler3'].includes(item.figure.kind))assert(pr.querySelectorAll('.p3-evidence svg').length===1,'P3 practice evidence figure');
           pr.querySelector('form').requestSubmit();assert(pr.getElementById('practice-next').hidden,'blank practice advanced');
           if(item.choices){assert(inputs.length===item.choices.length,'choice count');inputs.find(x=>x.value!==item.answer[0]).checked=true;}
@@ -516,7 +521,7 @@
     }}finally{frames.forEach(f=>f.remove())}
   });
 
-  const nextP3Ids=['parallelpairs3a','weightgrams3a','write24hour3a','read24hour3a','addsub4digit3a','mixedmultiply3a','bracketorder3a','comparetotal3a','fractionset3a','fractionequivalent3a','fractioncompare3a','fractionoperation3a','cmtomm3a','comparekm3a','rulermm3a','startminutes3a','starthours3a'];
+  const nextP3Ids=['triangleproperty3a','trianglerelation3a','trianglesides3a','parallelpairs3a','weightgrams3a','write24hour3a','read24hour3a','addsub4digit3a','mixedmultiply3a','bracketorder3a','comparetotal3a','fractionset3a','fractionequivalent3a','fractioncompare3a','fractionoperation3a','cmtomm3a','comparekm3a','rulermm3a','startminutes3a','starthours3a'];
   for(const id of nextP3Ids)await check('P3 next four · bilingual routes '+id,()=>checkP2NewRoutes([id]));
   for(const code of ['3N4','3N5','3M1','3M2'])await check('P3 next four · independent all-variant oracle '+code,()=>runNextP3Oracle(code,families));
   await check('P3 next four · exact choice scoring and legacy fraction isolation',async()=>{
@@ -525,10 +530,13 @@
       const old=families.find(f=>f.id==='frac3a').make(0);assert(old.fractionBar && !old.fraction3N5,'legacy fraction contract changed');
     }finally{frames.forEach(f=>f.remove())}
   });
+  function boundedPaperBatches(ids){const batches=[];for(const id of ids){if(id.length>300)throw new Error('Single paper ID exceeds URL contract');let batch=batches[batches.length-1];if(!batch||batch.length===12||batch.concat(id).join('.').length>300){batch=[];batches.push(batch);}batch.push(id);}return batches;}
   for(const language of ['en','zh'])await check('P3 next four · '+language+' paper/key/evidence/PDF',async()=>{
-    const frames=[],batches=[nextP3Ids.slice(0,8).map(id=>id+'-0'),nextP3Ids.slice(8).map(id=>id+'-0').concat(['rulermm3a-11','startminutes3a-2','starthours3a-1'])];
-    try{for(const ids of batches)for(const view of ['paper','key']){const f=await shapeFrame('?v=3&lang='+language+'&p=3&items='+ids.join('.')+'&view='+view);frames.push(f);const d=f.contentDocument,l=language==='zh'?1:0;assert(d.querySelectorAll('fieldset').length===ids.length,'next P3 paper count');if(view==='paper')assert(!d.querySelector('input'),'paper interactive input');
-      ids.forEach((id,i)=>{const q=decodeItems(id,3)[0],field=d.querySelectorAll('fieldset')[i];assert(field.querySelector('.prompt').textContent===q.prompt[l],'localized paper prompt');if(q.figure){const svg=field.querySelector(q.figure.kind==='quadrilateralProperties2'?'.p2-geometry svg':'.p3-evidence svg');assert(svg,'P3 paper evidence figure missing');if(q.figure.kind==='quadrilateralProperties2')assert(svg.querySelector('polygon').getAttribute('points')===q.figure.points.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' '),'P3 quadrilateral paper geometry');if(q.figure.kind==='millimetreRuler3')assert(svg.querySelectorAll('line').length===41,'ruler ticks missing');if(q.figure.kind==='fractionsEvidence3'&&q.figure.items[0].kind==='set')assert(svg.querySelectorAll('circle').length===q.figure.items[0].d,'set whole missing');}if(view==='key'){const text=field.querySelector('p b').textContent;if(q.answerUnitLabels)q.answerUnitLabels.forEach((label,j)=>assert(text.includes(label[l]+': '+q.answer[j]),'unit key missing'));else assert(text===(q.choiceLabels?q.choiceLabels[q.answer[0]][l]:q.answer[0]),'localized time/fraction/symbol key');}});
+    const frames=[],paperIds=nextP3Ids.map(id=>id+'-0').concat(['rulermm3a-11','startminutes3a-2','starthours3a-1']),batches=boundedPaperBatches(paperIds);
+    assert(batches.flat().join('.')===paperIds.join('.')&&new Set(paperIds).size===paperIds.length,'paper batches preserve every requested ID exactly once');
+    for(const ids of batches)assert(ids.length<=12&&ids.join('.').length<=300&&decodeItems(ids.join('.'),3).length===ids.length,'paper batch respects stable-link limits');
+    try{for(const ids of batches)for(const view of ['paper','key']){const f=await shapeFrame('?v=3&lang='+language+'&p=3&items='+ids.join('.')+'&view='+view);frames.push(f);const d=f.contentDocument,l=language==='zh'?1:0;assert(d.querySelectorAll('fieldset').length===ids.length,'next P3 paper count');assert(f.contentWindow.eval('selected.map(q=>q.id).join(".")')===ids.join('.'),'exact paper selected IDs');assert(d.querySelectorAll('fieldset .p2-geometry svg,fieldset .p3-evidence svg').length===ids.filter(id=>decodeItems(id,3)[0].figure).length,'exact paper evidence SVG count');if(view==='paper')assert(!d.querySelector('input'),'paper interactive input');
+      ids.forEach((id,i)=>{const q=decodeItems(id,3)[0],field=d.querySelectorAll('fieldset')[i];assert(field.querySelector('.prompt').textContent===q.prompt[l],'localized paper prompt');if(q.figure){const svg=field.querySelector(['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind)?'.p2-geometry svg':'.p3-evidence svg');assert(svg,'P3 paper evidence figure missing');if(['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind))assert(svg.querySelector('polygon').getAttribute('points')===q.figure.points.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' '),'P3 polygon paper geometry');if(q.figure.kind==='millimetreRuler3')assert(svg.querySelectorAll('line').length===41,'ruler ticks missing');if(q.figure.kind==='fractionsEvidence3'&&q.figure.items[0].kind==='set')assert(svg.querySelectorAll('circle').length===q.figure.items[0].d,'set whole missing');}if(view==='key'){const text=field.querySelector('p b').textContent;if(q.answerUnitLabels)q.answerUnitLabels.forEach((label,j)=>assert(text.includes(label[l]+': '+q.answer[j]),'unit key missing'));else assert(text===(q.choiceLabels?q.choiceLabels[q.answer[0]][l]:q.answer[0]),'localized time/fraction/symbol key');}});
       f.style.width='360px';await new Promise(r=>setTimeout(r,60));assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'next P3 paper phone');const blob=await f.contentWindow.mathQuizPdf.generate(),raw=new TextDecoder('latin1').decode(await blob.arrayBuffer());assert(blob.size>10000&&raw.startsWith('%PDF-')&&raw.includes('/ToUnicode')&&raw.includes('/Subtype /Image'),'next P3 PDF');
     }}finally{frames.forEach(f=>f.remove())}
   });
@@ -2859,7 +2867,7 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===124,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===127,"grade coverage counts wrong");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
@@ -2930,11 +2938,11 @@
       }
     }finally{frames.forEach(f=>f.remove())}
   });
-  await check("Practice catalogue · 124 distinct live resource-browser links",async()=>{
+  await check("Practice catalogue · 127 distinct live resource-browser links",async()=>{
     const frame=await shapeFrame("?lang=en&view=browse&regressionRun="+Date.now()+"-practice-catalogue");
     try{
       const links=[...frame.contentDocument.querySelectorAll(".practice-link")];
-      assert(links.length===124 && new Set(links.map(a=>a.href)).size===124,"practice links missing or repeated");
+      assert(links.length===127 && new Set(links.map(a=>a.href)).size===127,"practice links missing or repeated");
       for(const link of links){
         const url=new URL(link.href),grade=Number(url.searchParams.get("p")),skill=url.searchParams.get("skill");
         assert(url.searchParams.get("view")==="practice" && (skill?families.some(f=>f.id===skill && f.grade===grade && !f.retired):grade===1),"home practice route lacks a live family: "+link.href);
@@ -2973,6 +2981,15 @@
     const f=families.find(f=>f.id==='parallelpairs3a'),cross=(a,b)=>a[0]*b[1]-a[1]*b[0];
     for(let i=0;i<12;i++){const q=f.make(i),p=q.figure.points,v=p.map((a,k)=>[p[(k+1)%4][0]-a[0],p[(k+1)%4][1]-a[1]]),pairs=Number(cross(v[0],v[2])===0)+Number(cross(v[1],v[3])===0);assert(q.answer[0]===String(pairs),'parallel oracle '+i);}
     for(const language of ['en','zh']){const frame=await shapeFrame('activities/p3-quadrilaterals-ii.html?lang='+language);try{const s=frame.contentDocument.getElementById(language);assert(s.querySelectorAll('[data-task]').length===8,'eight quadrilateral tasks');assert(s.querySelectorAll('svg[data-card]').length===6,'six shape cards');assert(s.querySelector('svg.construction'),'drawing grid');assert(s.querySelectorAll('.sheet').length===5,'five sheets');assert(s.querySelector('a[href*="parallelpairs3a"]'),'practice link');}finally{frame.remove();}}
+  });
+  await check('3S2 triangles · category and inequality oracles with bilingual practical resource',async()=>{
+    const truths=[[true,false,false,false,true],[true,true,false,true,false],[false,true,true,false,false],[false,true,false,false,false],[false,false,false,false,true]];
+    for(let i=0;i<12;i++){
+      const q=families.find(f=>f.id==='triangleproperty3a').make(i),m=q.triangle3S2;assert(q.answer[0]===(truths[m.row][m.category]?'yes':'no'),'triangle category '+i);
+      const r=families.find(f=>f.id==='trianglerelation3a').make(i),n=r.triangle3S2;assert(r.answer[0]===(truths.filter(t=>t[n.from]).every(t=>t[n.to])?'true':'false'),'triangle relationship '+i);
+      const s=families.find(f=>f.id==='trianglesides3a').make(i),[a,b,c]=s.triangle3S2.sides;assert(s.answer[0]===(a+b>c&&a+c>b&&b+c>a?'yes':'no'),'triangle inequality '+i);
+    }
+    for(const language of ['en','zh']){const f=await shapeFrame('activities/p3-triangles.html?lang='+language);try{const d=f.contentDocument,s=d.getElementById(language);assert(d.body.dataset.unit==='3S2','triangle activity unit');assert(s.querySelectorAll('[data-task]').length===6,'six triangle tasks');assert(s.querySelector('.key').hidden,'teacher key initially hidden');assert(s.querySelector('svg.construction'),'triangle drawing space');assert(s.querySelector('a[href*="trianglesides3a"]'),'triangle practice link');}finally{f.remove();}}
   });
   window.regressionResult = {passed,failed};
   document.documentElement.dataset.result = failed?"fail":"pass";

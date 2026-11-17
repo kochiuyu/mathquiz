@@ -1233,6 +1233,16 @@ const resourceData = {
         "P3 · Parallel lines",
         "小三 · 平行線"
       ]
+    },
+    {
+      "path": "activities/p3-triangles.html",
+      "units": [
+        "3S2"
+      ],
+      "title": [
+        "P3 · Triangle properties",
+        "小三 · 三角形的性質"
+      ]
     }
   ],
   "strands": {

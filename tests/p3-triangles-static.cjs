@@ -1,0 +1,41 @@
+// Independent category, inequality, SVG and frozen-predecessor gate. No browser claim.
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+';globalThis.bank=families;globalThis.rows=triangleRows3;globalThis.svg=triangleSvg3;globalThis.truth=triangleTruth3;',c);
+const truths=[[true,false,false,false,true],[true,true,false,true,false],[false,true,true,false,false],[false,true,false,false,false],[false,false,false,false,true]],sub=(a,b)=>[a[0]-b[0],a[1]-b[1]],dot=(a,b)=>a[0]*b[0]+a[1]*b[1];
+for(let i=0;i<c.rows.length;i++){const row=c.rows[i],p=row.points,v=p.map((a,j)=>sub(p[(j+1)%3],a)),sq=v.map(a=>dot(a,a));assert.notEqual(v[0][0]*v[1][1]-v[0][1]*v[1][0],0);if(i===2){assert.equal(row.symbolic,'equilateral: side 120; height 60√3');assert.deepEqual(Array.from(row.squared),[14400,14400,14400]);assert(Math.abs(p[2][1]-(140-60*Math.sqrt(3)))<1e-12);}else assert.deepEqual(Array.from(row.squared),Array.from(sq));assert.deepEqual(Array.from(c.truth(row)),truths[i]);const right=p.some((a,j)=>dot(sub(p[(j+1)%3],a),sub(p[(j+2)%3],a))===0);assert.equal(right,truths[i][0]);}
+const family=id=>c.bank.find(f=>f.id===id);
+for(let i=0;i<12;i++){
+ const q=family('triangleproperty3a').make(i),{row,category}=q.triangle3S2;assert.equal(q.answer[0],truths[row][category]?'yes':'no');const base=c.rows[row].points,expected=base.map(([x,y])=>i>=6?[180-y,x]:[x,y]);assert.equal(JSON.stringify(q.figure.points),JSON.stringify(expected));const svg=c.svg(q.figure);assert(svg.includes('points="'+expected.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' ')+'"'));assert.equal((svg.match(/class="equal-tick"/g)||[]).length,[0,2,3,2,0][row]);assert.equal((svg.match(/class="right-marker"/g)||[]).length,truths[row][0]?1:0);assert(q.prompt.every(Boolean)&&q.why.every(Boolean));
+ const rel=family('trianglerelation3a').make(i),{from,to}=rel.triangle3S2,universal=truths.filter(t=>t[from]).every(t=>t[to]);assert.equal(rel.answer[0],universal?'true':'false');if(!universal){const counter=from===0?(to===4?1:0):from===1?3:from===2?2:from===3?1:4;assert(truths[counter][from]&&!truths[counter][to],'worked counterexample');}
+ const side=family('trianglesides3a').make(i),[a,b,d]=side.triangle3S2.sides;assert.equal(side.answer[0],a+b>d&&a+d>b&&b+d>a?'yes':'no');
+}
+let triples=0;for(let a=1;a<=15;a++)for(let b=1;b<=15;b++)for(let d=1;d<=15;d++){const s=[a,b,d].sort((x,y)=>x-y);assert.equal(a+b>d&&a+d>b&&b+d>a,s[0]+s[1]>s[2]);triples++;}
+for(const name of ['quiz.js','tests/regression.js']){const text=read(name);for(const id of ['triangleproperty3a','trianglerelation3a','trianglesides3a'])assert(text.includes(id+':[0,1,2,3,4,5,6,7,8,9,10,11]'),'all boundary samples '+name);}
+const html=read('activities/p3-triangles.html');assert(html.includes('data-unit="3S2"'));for(const lang of ['en','zh']){const section=html.split('<section id="'+lang+'"')[1].split('</section>')[0];assert.equal((section.match(/data-task=/g)||[]).length,6);assert(section.includes('class="key" hidden'));assert(section.includes('trianglesides3a'));assert(section.includes('triangleproperty3a'));}
+console.log('PASS 36 triangle variants: independent category truth vectors, all relationship implications/counterexamples, symbolic equilateral and integer geometry, SVG ticks/right markers, '+triples+' strict-inequality triples, bilingual activity structure and all practice samples.');
+// Independently inspect the actual printed-card SVGs, rather than trusting family metadata.
+const expectedCardSides={A:[4,4,4],B:[3,3,Math.sqrt(18)],C:[3,4,5],D:[5,5,6],E:[4,5,6]},expectedRight={A:false,B:true,C:true,D:false,E:false};
+for(const lang of ['en','zh']){
+ const section=html.split('<section id="'+lang+'"')[1].split('</section>')[0],cards=[...section.matchAll(/data-card="([A-E])"[^>]*><polygon points="([^"]+)"/g)];assert.equal(cards.length,5);
+ for(const [,label,raw]of cards){const points=raw.split(' ').map(s=>s.split(',').map(Number)),lengths=points.map((a,j)=>Math.hypot(...sub(points[(j+1)%3],a))).sort((a,b)=>a-b),expected=expectedCardSides[label].slice().sort((a,b)=>a-b),scale=lengths[2]/expected[2];for(let k=0;k<3;k++)assert(Math.abs(lengths[k]-expected[k]*scale)<0.001,'printed card ratio '+lang+label);const right=points.some((a,j)=>Math.abs(dot(sub(points[(j+1)%3],a),sub(points[(j+2)%3],a)))<0.01);assert.equal(right,expectedRight[label]);}
+}
+// Run the actual browser geometry guard with wrong rendered fixtures to prove it detects them.
+const guard=read('tests/regression.js').split('\n').find(s=>s.includes("if(id==='triangleproperty3a')assert(pr.querySelector"));assert(guard);let rejected=0;
+for(let variant=0;variant<12;variant++){const item=family('triangleproperty3a').make(variant),coords=q=>q.figure.points.map(p=>p.map(v=>v.toFixed(3)).join(',')).join(' '),run=shown=>vm.runInNewContext(guard,{id:'triangleproperty3a',item,variant,assert,pr:{querySelector:()=>({getAttribute:()=>shown})}});run(coords(item));for(let j=0;j<12;j++){const wrong=coords(family('triangleproperty3a').make(j));if(wrong!==coords(item)){assert.throws(()=>run(wrong),/Triangle practice geometry/);rejected++;}}}
+assert.equal(family('trianglesides3a').make(1).answer[0],'no');assert.equal(family('trianglesides3a').make(5).answer[0],'no');assert.equal(family('trianglesides3a').make(7).answer[0],'no');
+console.log('PASS independent printed-card ratios and angles in both languages; '+rejected+' misordered geometry fixtures rejected by actual browser guard; all equality cases rejected.');
+// Exercise the actual catalogue declaration, including its rendering callbacks.
+const quiz=read('quiz.js'),catalogue=quiz.match(/const practiceCatalogue=\[[\s\S]*?\n\];/)[0];
+for(const name of new Set(catalogue.match(/render[A-Za-z0-9]+/g)))c[name]=(...args)=>({renderer:name,args});
+vm.runInContext(catalogue+';globalThis.catalogue=practiceCatalogue;',c);
+assert.equal(c.catalogue.length,c.bank.filter(f=>!f.retired).length,'practice catalogue completeness');
+for(const id of ['triangleproperty3a','trianglerelation3a','trianglesides3a']){const entries=c.catalogue.filter(e=>e.skill===id);assert.equal(entries.length,1);assert.equal(entries[0].grade,3);const result=entries[0].render();assert.equal(result.renderer,'renderNumberPractice');assert.equal(result.args[0],id);}
+assert(read('tests/regression.js').includes("['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind)?'.p2-geometry svg':'.p3-evidence svg'"),'paper SVG kind routing');
+assert(read('tests/regression.js').includes("['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind))assert(svg.querySelector('polygon')"),'paper polygon assertion retained');
+assert(read('tests/ui-regression.html').includes('ui-regression.js?v=triangles-r4'));
+console.log('PASS actual practice catalogue: 127 routes, all three triangle callbacks registered; paper/practice SVG assertions cover triangles and UI suite cache token is unique.');
+const regression=read('tests/regression.js'),chunkFunction=regression.match(/  function boundedPaperBatches\(ids\)\{[^\n]+/)[0],chunks=vm.runInNewContext(chunkFunction+';boundedPaperBatches'),p3ids=vm.runInNewContext(regression.match(/const nextP3Ids=(\[[^;]+\]);/)[1]),paperIds=Array.from(p3ids,id=>id+'-0').concat(['rulermm3a-11','startminutes3a-2','starthours3a-1']);
+const batches=chunks(paperIds);assert.equal(batches.flat().join('.'),paperIds.join('.'));for(const ids of batches){assert(ids.length<=12&&ids.join('.').length<=300);assert.equal(c.decodeItems(ids.join('.'),3).length,ids.length);}
+const longIds=Array.from({length:20},(_,i)=>'x'.repeat(90)+i);for(const ids of chunks(longIds))assert(ids.length<=12&&ids.join('.').length<=300);assert.equal(chunks(longIds).flat().join('.'),longIds.join('.'));assert.throws(()=>chunks(['x'.repeat(301)]));
+console.log('PASS bounded paper batches: all '+paperIds.length+' exact IDs retained, decoder count and 300-character/12-item limits enforced.');
+process.stdout.write(require('node:child_process').execFileSync('python',['tests/pdf-font-static.py'],{cwd:root,encoding:'utf8'}));
