@@ -194,3 +194,8 @@ Thirteen families /156 variants added; all1,785 prior payloads preserved. Snapsh
 ## Verified 3M5 Weight checkpoint
 
 Public `00eb0d4` passed 368/368 curriculum and 147/147 UI checks. All seven objectives have linked digital or teacher-observed evidence. Inventory: 124 permanent families / 1,977 variants; 123 selectable families / 1,962 variants; 45 selectable units / 49 resource units. Completion: 37/85 units, 145 numbered objectives and two inquiry statements. Manual/practical validation limitations remain.
+
+
+## 3S1 Quadrilaterals (II) candidate
+
+Twelve exact-coordinate classification variants and bilingual drawing/making activities cover six objectives. Inventory: 125 permanent families / 1,989 variants; 124 selectable families / 1,974 variants; 46 selectable units / 50 resource units. Earlier 1,977 payloads are unchanged. Browser/live checks pending; 37-unit verified predecessor checkpoint is retained.

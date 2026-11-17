@@ -8,7 +8,7 @@ console.log('PASS Weight12variants: explicit/repeated-addition oracles, g labels
 // Exercise the actual regression prompt guard with matching and deliberately misordered fixtures.
 const runtimeMap=vm.runInNewContext('('+read('quiz.js').match(/samples=(\{[^;]+?\}),variants=/)[1]+')');
 const fixtureMap=vm.runInNewContext('('+read('tests/regression.js').match(/const samples=(\{[^;]+?\});/)[1]+')');
-const guard=read('tests/regression.js').split('\n').find(line=>line.includes("if(['write24hour3a','read24hour3a','weightgrams3a'].includes(id))assert(pr.querySelector"));
+const guard=read('tests/regression.js').split('\n').find(line=>line.includes("if(['parallelpairs3a','write24hour3a','read24hour3a','weightgrams3a'].includes(id))assert(pr.querySelector"));
 assert(guard,'actual browser prompt guard missing');
 let rejected=0;
 for(const id of ['write24hour3a','read24hour3a','weightgrams3a']){

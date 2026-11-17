@@ -1223,6 +1223,16 @@ const resourceData = {
         "P3 · Heavy and light",
         "小三 · 輕和重"
       ]
+    },
+    {
+      "path": "activities/p3-quadrilaterals-ii.html",
+      "units": [
+        "3S1"
+      ],
+      "title": [
+        "P3 · Parallel lines",
+        "小三 · 平行線"
+      ]
     }
   ],
   "strands": {
