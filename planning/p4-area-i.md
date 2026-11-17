@@ -1,6 +1,6 @@
-# 4M2 Area (I): private candidate
+# 4M2 Area (I): verified resource complete
 
-Incomplete; no publication or completion promotion. The verified decimal baseline of 49/85 units, 190 numbered objectives plus three inquiry statements is preserved; public `86fb6bc` passed 466/466 curriculum and 173/173 UI checks. Both 4M1 and 4M2 remain incomplete. Current combined inventory: 166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities; 49 complete and 11 open resource-bearing units. The perimeter-only private run passed 480/480 curriculum and 175/175 UI checks; the final combined private browser run passed 497/497 curriculum and 177/177 UI checks with zero failures. Public deployment verification remains pending. All predecessor payloads and marking.js remain frozen.
+**Verified resource-complete checkpoint: 51/85 units.** All P1–P3 units, 4N1–4N8, 4M1 and 4M2 have source-reviewed assessment resources, covering 200 numbered objectives plus three integrated inquiry statements. Public measures release `d9cd8a1` passed **497/497 curriculum checks and 177/177 UI checks**, with zero failures. Two units add 90 variants; all 2,463 public predecessor payloads remain unchanged. Inventory: 166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities and nine open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 ## Official scope and seven-objective evidence
 
@@ -30,12 +30,12 @@ Independent cell-center inclusion/union counts must agree with a separate shoela
 
 Indirect comparisons must hold under every assignment satisfying the premises. A smaller than B and C makes A smallest but does not determine B versus C. Do not count raw tiles of unequal area as equivalent units.
 
-## Candidate inventory and verification status
+## Verified inventory and verification status
 
-166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities; 49 complete and 11 open resource-bearing units. Seven numbered objectives are not promoted until later verified closure.
+166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities; 51 complete and nine open resource-bearing units. Seven numbered objectives now have linked verified assessment resources; this does not assert pupil mastery.
 
-Fresh static, independent geometry/scoring, all54 bilingual practice/assessment and bounded paper/key/PDF checks are required. Exact font glyph coverage and cache/no-store protections are retained. Private browser verification is recorded below. Public deployment, physical print, classroom trial, independent translation and screen-reader verification remain unperformed until separately evidenced.
+Fresh static, independent geometry/scoring, all54 bilingual practice/assessment and bounded paper/key/PDF checks are required. Exact font glyph coverage and cache/no-store protections are retained. Private and public browser verification is recorded above. Physical print, classroom trial, independent translation and screen-reader verification remain unperformed.
 
 ## Fresh private verification
 
-All26 CJS gates and actual PDF-font cmap coverage passed on this candidate. The same gates also run from a standalone copy without sibling workspaces; baseline guards use pinned hashes/byte lengths. Independent review enumerated54 fixtures and88 bilingual SVGs using a separate scanline unit-cell union, alternate shoelace formula, exact non-overlapping tilings, common-scale/overlay coordinates, rigid-transform invariance and131 satisfying order assignments. All2,499 predecessor payloads and marking code remain unchanged. Font subset264,092 bytes covers964 source characters. The final combined private browser run passed 497/497 curriculum and 177/177 UI checks with zero failures, including the final area-r2 coverage route. Public deployment verification remains pending; both units remain incomplete.
+All26 CJS gates and actual PDF-font cmap coverage passed on this candidate. The same gates also run from a standalone copy without sibling workspaces; baseline guards use pinned hashes/byte lengths. Independent review enumerated54 fixtures and88 bilingual SVGs using a separate scanline unit-cell union, alternate shoelace formula, exact non-overlapping tilings, common-scale/overlay coordinates, rigid-transform invariance and131 satisfying order assignments. All2,499 predecessor payloads and marking code remain unchanged. Font subset264,092 bytes covers964 source characters. The final combined private browser run passed 497/497 curriculum and 177/177 UI checks with zero failures, including the final area-r2 coverage route. Public release `d9cd8a1` passed 497/497 curriculum and 177/177 UI checks; both units are resource complete.

@@ -1,6 +1,6 @@
-# 4M1 Perimeter (I): private candidate
+# 4M1 Perimeter (I): verified resource complete
 
-Incomplete; no publication or completion promotion. The verified decimal baseline of 49/85 units, 190 numbered objectives plus three inquiry statements is preserved; public `86fb6bc` passed 466/466 curriculum and 173/173 UI checks. Both 4M1 and 4M2 remain incomplete. Current combined inventory: 166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities; 49 complete and 11 open resource-bearing units. The perimeter-only private run passed 480/480 curriculum and 175/175 UI checks; the final combined private browser run passed 497/497 curriculum and 177/177 UI checks with zero failures. Public deployment verification remains pending. All predecessor payloads and marking.js remain frozen.
+**Verified resource-complete checkpoint: 51/85 units.** All P1–P3 units, 4N1–4N8, 4M1 and 4M2 have source-reviewed assessment resources, covering 200 numbered objectives plus three integrated inquiry statements. Public measures release `d9cd8a1` passed **497/497 curriculum checks and 177/177 UI checks**, with zero failures. Two units add 90 variants; all 2,463 public predecessor payloads remain unchanged. Inventory: 166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities and nine open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 ## Source scope
 
@@ -24,11 +24,11 @@ New perimeter4 figure schema separates ordered boundary vertices, labelled edge 
 
 Anchor examples: L boundary22cm;4×3 and2×2 rectangles sharing2cm give18cm, not22; a6×5 outer shape with a2-wide,3-deep exterior notch has28cm, not its bounding-box22. Shared edges must cancel twice. Square side5 and rectangle8×2 both have20cm perimeter, demonstrating different shapes can have equal perimeters.
 
-All36 fixtures require bilingual practice, assessment, bounded paper/key/PDF checks, unique correct choices and faithful units. Legacy payloads and graders stay unchanged. Font glyph coverage, unique cache tokens and no-store manifest checks are required. Private browser verification is recorded below. Public deployment, physical printing, classroom trials, independent translation and screen-reader review remain unperformed until separately evidenced.
+All36 fixtures require bilingual practice, assessment, bounded paper/key/PDF checks, unique correct choices and faithful units. Legacy payloads and graders stay unchanged. Font glyph coverage, unique cache tokens and no-store manifest checks are required. Private and public browser verification is recorded above. Physical printing, classroom trials, independent translation and screen-reader review remain unperformed.
 
-## Current candidate inventory
+## Current verified inventory
 
-162 permanent families/2,499 variants;161 selectable/2,484;54 selectable units/59 resource units;50 activities;49 complete and11 open. 4M1 already had selectable resources, so adding these families does not create another selectable unit. Three objectives may be counted only when a later reviewed closure is legitimately verified; estimation is not a fourth numbered objective.
+Current combined verified inventory: 166 permanent families / 2,553 variants; 165 selectable / 2,538; 55 selectable units / 60 resource units; 51 activities; 51 complete and nine open resource-bearing units. 4M1 already had selectable resources, so its new families do not create another selectable unit. Its three objectives now have verified linked assessment resources; estimation is not a fourth numbered objective.
 
 ## Fresh private verification
 
@@ -36,4 +36,4 @@ Historical perimeter-only private evidence: all 24 CJS static gates passed on th
 
 ## Current combined private static verification
 
-All 26 CJS static suites and actual PDF font glyph coverage pass on the combined candidate and in an isolated copy without sibling workspaces. The current 264,092-byte font subset covers 964 source characters. The final combined private browser run passed 497/497 curriculum and 177/177 UI checks with zero failures, including the final area-r2 coverage route. Public deployment verification remains pending; both units remain incomplete.
+All 26 CJS static suites and actual PDF font glyph coverage pass on the combined candidate and in an isolated copy without sibling workspaces. The current 264,092-byte font subset covers 964 source characters. The final combined private browser run passed 497/497 curriculum and 177/177 UI checks with zero failures, including the final area-r2 coverage route. Public release `d9cd8a1` passed 497/497 curriculum and 177/177 UI checks; both units are resource complete.

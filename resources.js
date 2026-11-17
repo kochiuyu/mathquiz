@@ -499,7 +499,7 @@ const resourceData = {
         "周界（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=21",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4M2",
@@ -509,7 +509,7 @@ const resourceData = {
         "面積（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=23",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4S1",
