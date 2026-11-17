@@ -1,10 +1,10 @@
 # MathQuiz · Hong Kong primary mathematics
 
-**Verified resource-complete checkpoint: 35/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M3 have source-reviewed assessment resources, covering 136 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8864780` passed **360/360** browser checks with zero failures, including all 1,941 variant contracts. Capacity adds seven teacher-assessed objectives without changing any question payload. The five static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 36/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M4 have source-reviewed assessment resources, covering 138 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `604fd9f` passed **365/365** browser checks with zero failures, including all 1,965 variant contracts. Time (IV) adds two objectives and 24 variants; all 1,941 earlier payloads remain unchanged. The six static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
-**3M4 publication candidate (not resource complete):** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 Time (IV) variants, preserving all 1,941 earlier payloads. Verified completion remains 35/85 units and 136 numbered objectives plus two inquiry statements. Six static gates pass; 365 browser checks are authored, not yet a browser pass. No 3M4 completion claim until deployed verification. Historical release counts below retain their original scope.
+**Verified 3M4 Time (IV) checkpoint:** 123 permanent families / 1,965 variants; 122 selectable / 1,950. There are 44 selectable units and 48 resource units. Two new families add 24 variants with named-day boundaries and 12-hour equivalents. Public `604fd9f` passed 365/365 live checks with zero failures. Completion is 36/85 units and 138 numbered objectives plus two inquiry statements. Historical release counts below retain their original scope.
 
-**Verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
+**Historical verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
 
 Earlier draft/candidate notes below are historical records, including references to tests then pending. This current verified checkpoint supersedes their status claims, not their recorded test results or manual-validation limits.
 
@@ -14,21 +14,21 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the 3M4 candidate, 44 units have at least one selectable task, 41 have none, and 35 have been verified resource complete. The candidate builder offers 122 question families and 1,950 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
+**The goal is to give teachers usable assessment material for every objective across all 85 P1–P6 learning units.** In the verified Time (IV) release, 44 units have at least one selectable task, 41 have none, and 36 have been verified resource complete. The released builder offers 122 question families and 1,950 variants. One retired family with 15 variants remains available through older links. Adding variants to an existing exercise can improve practice, but only adds curriculum coverage when pupils demonstrate a previously unassessed objective.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
 | P1 | 12 | 9 | 3 | 12 |
 | P2 | 15 | 14 | 1 | 15 |
-| P3 | 14 | 10 | 4 | 8 |
+| P3 | 14 | 10 | 4 | 9 |
 | P4 | 15 | 3 | 12 | 0 |
 | P5 | 13 | 5 | 8 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **44** | **41** | **35** |
+| **Total** | **85** | **44** | **41** | **36** |
 
-**Candidate resource inventory:** 48 units have digital tasks or linked teacher activities; 44 have selectable tasks. All P1/P2, 3N1–3N5 and 3M1–3M3 are publicly resource complete (35 units). The other 13 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
+**Verified resource inventory:** 48 units have digital tasks or linked teacher activities; 44 have selectable tasks. All P1/P2, 3N1–3N5 and 3M1–3M4 are publicly resource complete (36 units). The other 12 resource-bearing units remain open. Whole-curriculum objective totals are not claimed.
 
-**Verified resource-complete checkpoint: 35/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M3 have source-reviewed assessment resources, covering 136 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `8864780` passed **360/360** browser checks with zero failures, including all 1,941 variant contracts. Capacity adds seven teacher-assessed objectives without changing any question payload. The five static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
+**Verified resource-complete checkpoint: 36/85 units.** All P1/P2 units, 3N1–3N5 and 3M1–3M4 have source-reviewed assessment resources, covering 138 numbered objectives plus the 1F1 and 2F1 integrated inquiry statements. Public release `604fd9f` passed **365/365** browser checks with zero failures, including all 1,965 variant contracts. Time (IV) adds two objectives and 24 variants; all 1,941 earlier payloads remain unchanged. The six static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
 The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, source and status. The [curriculum map](planning/primary-mathematics.md) suggests tasks, and the [family ledger](planning/live-family-audit.md) documents released question types. Use the [EDB primary supplement](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf) for the numbered objectives and the [EDB curriculum documents page](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) for the Key Stage 1 and 2 explanatory notes and updates.
 
@@ -42,9 +42,9 @@ The [unit inventory](planning/full-curriculum-plan.md) gives each unit's title, 
 
 ## Next three deliverables
 
-1. **Complete Time (IV) (3M4).** Cover 24-hour notation, day boundaries and its relation to 12-hour time; do not introduce time-interval problems belonging to later grades.
-2. **Deliver Weight (3M5).** Pair digital tasks with real comparison, appropriate tool selection, measurement, estimation and recording evidence.
-3. **Continue the remaining P3 shape, data and inquiry units in source order.** Review each candidate, verify the deployed release, then record its resource-complete checkpoint separately. Later private drafts are not released coverage.
+1. **Complete Weight (3M5).** Pair appropriate digital tasks with actual comparison, tool choice, measurement, estimation and recording evidence.
+2. **Deliver Quadrilaterals (II) (3S1), then Triangles (3S2).** Cover constructions and properties with pupil actions and teacher criteria, not recognition questions alone.
+3. **Finish the remaining P3 data and inquiry units in source order.** Review each candidate, verify the deployed release, then record its resource-complete checkpoint separately. Later private drafts are not released coverage.
 
 ## How to choose the next release
 
@@ -172,7 +172,7 @@ Eleven new families and 144 variants cover digital actions in 3N1, 3N2 and 3N3. 
 
 New P3 numeric items award one mark per labelled field; division quotient/remainder and two-step division award up to two. Keys identify field units rather than slash-separated fractions. Choices require exact responses, and equivalent numeric forms retain the established marking contract. Grade-3 practice language switches and restarts retain grade 3. Finite practice samples do not certify fluency or replace hands-on/teacher evidence. All manual validation limits stated above still apply.
 
-**Current closure:** all P1/P2, 3N1–3N5 and 3M1–3M3 are publicly resource complete (35/85). All remaining units stay open.
+**Current closure:** all P1/P2, 3N1–3N5 and 3M1–3M4 are publicly resource complete (36/85). All remaining units stay open.
 
 ## Verified P3 next-four resource checkpoint
 
@@ -183,10 +183,14 @@ Thirteen new families / 156 variants extend the first-three P3 release to **121 
 - [3M1: Millimetres and real measurement](activities/p3-length-distance-iv.html) · [source audit and objective map](planning/p3-length-distance-iv.md)
 - [3M2: Starting times and real timing](activities/p3-time-iii.html) · [source audit and objective map](planning/p3-time-iii.md)
 
-**Verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
+**Historical verified R9 next-four checkpoint:** 121 permanent families / 1,941 variants; 120 selectable / 1,926. There are 43 selectable units and 47 resource units. The 13 new families / 156 variants cover 3N4, 3N5, 3M1 and 3M2. Their 16 numbered objectives now have linked digital or teacher-assessed evidence. Public `8d75a7f`, including the framefix2 readiness helper, passed 359/359 live checks with zero failures. No later P3/P4/P5 draft is included. Manual validation limits below remain in force.
 
 All 13 new families award one mark. Numeric fields retain equivalent-number acceptance and explicit unit labels; fraction/time choices require exact choices with localized visible answers. The new fraction choices do not change `frac3a`’s strict pictured numerator/denominator contract. Represented ruler diagrams are not real measuring tools; teacher tasks provide actual measurement, timing, reasoning, estimates and explanations. Grade-3 practice preserves its grade on language switches/restarts. Existing partial-credit contracts remain unchanged. Manual visual/PDF/print/classroom/translation/accessibility limits above remain in force.
 
-## Verified Capacity (3M3) resource checkpoint
+## Historical verified Capacity (3M3) resource checkpoint
 
-The [capacity activity](activities/p3-capacity.html) and [seven-objective source audit](planning/p3-capacity.md) cover intuitive, direct and improvised-unit comparison, standard units, real measurement, estimation and recording. Public `8864780` passed 360/360 live checks with zero failures, after five static gates and private browser checks. Existing `cup3a` and all 1,941 payloads are unchanged. Counts remain 43 selectable units and 47 resource units; verified completion is 35/85. Practical attainment still requires observation of each pupil, and manual-validation limits above remain outstanding.
+The [capacity activity](activities/p3-capacity.html) and [seven-objective source audit](planning/p3-capacity.md) cover intuitive, direct and improvised-unit comparison, standard units, real measurement, estimation and recording. Public `8864780` passed 360/360 live checks with zero failures, after five static gates and private browser checks. Existing `cup3a` and all 1,941 payloads are unchanged. At that capacity checkpoint, counts were 43 selectable units and 47 resource units; verified completion was 35/85. Practical attainment still requires observation of each pupil, and manual-validation limits above remain outstanding.
+
+## Verified Time (IV) (3M4) resource checkpoint
+
+[Activity](activities/p3-time-iv.html) and [source audit](planning/p3-time-iv.md) cover recognition, written/oral telling and equivalent time notation, including named-day 00:00/24:00 boundaries. Public `604fd9f` passed 365/365 live checks with zero failures. Six static gates pass. No elapsed-time arithmetic is introduced. All 1,941 previous payloads remain unchanged. Manual validation and actual pupil attainment remain separate.
