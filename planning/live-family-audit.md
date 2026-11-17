@@ -1,5 +1,7 @@
 # Live family authoring audit
 
+**Private 3D1 extension:** `barcompare3a` adds12 variants for differences between two named bars, including ties, zeros and scale1/2/5. Six-task practical collection, tally and construction evidence is supplied separately. Not published or complete. [Audit](p3-bar-charts-extension.md).
+
 **Verified 3S2 Triangles:** Four objectives have linked assessment resources; 36 new variants and six bilingual practical tasks. Public `6c88951` passed 378/378 curriculum and 153/153 UI checks. See the Triangles audit for evidence and human-validation limits.
 
 **Verified resource-complete checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.

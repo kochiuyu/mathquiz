@@ -30,10 +30,10 @@ for(const name of new Set(catalogue.match(/render[A-Za-z0-9]+/g)))c[name]=(...ar
 vm.runInContext(catalogue+';globalThis.catalogue=practiceCatalogue;',c);
 assert.equal(c.catalogue.length,c.bank.filter(f=>!f.retired).length,'practice catalogue completeness');
 for(const id of ['triangleproperty3a','trianglerelation3a','trianglesides3a']){const entries=c.catalogue.filter(e=>e.skill===id);assert.equal(entries.length,1);assert.equal(entries[0].grade,3);const result=entries[0].render();assert.equal(result.renderer,'renderNumberPractice');assert.equal(result.args[0],id);}
-assert(read('tests/regression.js').includes("['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind)?'.p2-geometry svg':'.p3-evidence svg'"),'paper SVG kind routing');
+assert(read('tests/regression.js').includes("['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind)?'.p2-geometry svg':q.figure.kind==='barChart'?'svg.bar-chart':'.p3-evidence svg'"),'paper SVG kind routing');
 assert(read('tests/regression.js').includes("['quadrilateralProperties2','triangleProperties3'].includes(q.figure.kind))assert(svg.querySelector('polygon')"),'paper polygon assertion retained');
 assert(/ui-regression\.js\?v=[^\"]+/.test(read('tests/ui-regression.html')));
-console.log('PASS actual practice catalogue: 127 routes, all three triangle callbacks registered; paper/practice SVG assertions cover triangles and UI suite cache token is unique.');
+console.log('PASS actual practice catalogue: 128 routes, all three triangle callbacks registered; paper/practice SVG assertions cover triangles and UI suite cache token is unique.');
 const regression=read('tests/regression.js'),chunkFunction=regression.match(/  function boundedPaperBatches\(ids\)\{[^\n]+/)[0],chunks=vm.runInNewContext(chunkFunction+';boundedPaperBatches'),p3ids=vm.runInNewContext(regression.match(/const nextP3Ids=(\[[^;]+\]);/)[1]),paperIds=Array.from(p3ids,id=>id+'-0').concat(['rulermm3a-11','startminutes3a-2','starthours3a-1']);
 const batches=chunks(paperIds);assert.equal(batches.flat().join('.'),paperIds.join('.'));for(const ids of batches){assert(ids.length<=12&&ids.join('.').length<=300);assert.equal(c.decodeItems(ids.join('.'),3).length,ids.length);}
 const longIds=Array.from({length:20},(_,i)=>'x'.repeat(90)+i);for(const ids of chunks(longIds))assert(ids.length<=12&&ids.join('.').length<=300);assert.equal(chunks(longIds).flat().join('.'),longIds.join('.'));assert.throws(()=>chunks(['x'.repeat(301)]));

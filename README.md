@@ -1,5 +1,7 @@
 # MathQuiz · Hong Kong primary mathematics
 
+**Reviewed 3D1 extension candidate; live verification pending:** `barcompare3a` adds12 comparison variants and a six-task bilingual collection/tally/construction resource. All2,025 predecessor payloads remain unchanged. Candidate129 permanent families/2,037 variants;128 selectable/2,022;47 selectable units/51 resource units;40 activities. Verified completion remains 39 units while this candidate awaits live verification. [Candidate audit](planning/p3-bar-charts-extension.md).
+
 **Verified 3S2 Triangles:** Four objectives have linked assessment resources; 36 new variants and six bilingual practical tasks. Public `6c88951` passed 378/378 curriculum and 153/153 UI checks. See the Triangles audit for evidence and human-validation limits.
 
 **UI release · 17 November 2026:** [The redesign is live](https://kochiuyu.github.io/mathquiz/). Final local and public verification of UI release `3f4fcc0`: **365/365 existing checks + 145/145 UI checks**, zero failures. See the [UI plan and release checkpoint](#ui-improvement-plan) and [release evidence](planning/ui-release-evidence.md). Later curriculum releases have separate verification records. This changes interface behaviour, not curriculum completion.

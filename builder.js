@@ -342,7 +342,14 @@ const triangleFamilies3=[
  {id:'trianglesides3a',grade:3,code:'3S2',label:['Can three lengths form a triangle?','三條邊長能組成三角形嗎？'],count:12,make(i){const sides=triangleSideRows3[i].slice(),sorted=sides.slice().sort((a,b)=>a-b),sum=sorted[0]+sorted[1],yes=sum>sorted[2];return {prompt:[`Three strips have lengths ${sides.join(', ')} cm. Without bending or overlapping strips, can they form the three sides of a triangle?`,`三條紙條的長度為${sides.join('、')} cm。不彎曲或重疊紙條，能否用它們作三邊組成三角形？`],choices:['yes','no'],choiceLabels:{yes:['Yes','能'],no:['No','不能']},answer:[yes?'yes':'no'],marks:1,triangle3S2:{sides},practiceHint:['Compare the sum of the two shorter lengths with the longest. Equality gives a straight line, not a triangle.','把兩條較短邊的長度之和與最長邊比較。相等時只成一直線，不能形成三角形。'],why:[`${sorted[0]} + ${sorted[1]} = ${sum}, which is ${yes?'greater than':sum===sorted[2]?'equal to':'less than'} ${sorted[2]}. ${yes?'A triangle can be made.':'A triangle cannot be made.'} The sum of any two sides must be greater than the third.`,`${sorted[0]}＋${sorted[1]}＝${sum}，${yes?'大於':sum===sorted[2]?'等於':'小於'}${sorted[2]}，所以${yes?'能':'不能'}組成三角形。任何兩邊長度之和必須大於第三邊。`]};}}
 ];
 
+// 3D1 extension: labelled numeric difference, separate from frozen bar3a marking.
+const barComparisonFamilies3=[{id:'barcompare3a',grade:3,code:'3D1',label:['Compare two bars','比較兩個棒形'],count:12,make(i){
+ const scale=[1,2,5][Math.floor(i/4)],rows=[[[5,2,0],0,1],[[0,3,6],2,0],[[2,2,4],0,1],[[6,4,1],0,2]],row=i%4,[steps,first,second]=rows[row],orientation=row%2?'vertical':'horizontal',categories=[['Walking','步行'],['Bus','巴士'],['Train','港鐵']],a=steps[first]*scale,b=steps[second]*scale;
+ return {prompt:[`What is the difference between the numbers of pupils choosing ${categories[first][0].toLowerCase()} and ${categories[second][0].toLowerCase()}? Write the number of pupils.`,`選擇${categories[first][1]}和${categories[second][1]}的學生人數相差多少？填寫人數。`],fields:[['pupils','名學生']],answerUnitLabels:[['pupils','名學生']],answer:[a-b],marks:1,figure:{kind:'barChart',scale,orientation,steps:steps.slice(),categories,title:['How our class travels to school','本班上學方式']},barComparison3D1:{first,second},practiceHint:['Read both bar endpoints using the scale. Subtract the smaller count from the larger; equal counts have a difference of zero.','按刻度讀取兩個棒形的末端。用較大人數減較小人數；人數相等時相差零。'],why:[`${categories[first][0]}: ${steps[first]} × ${scale} = ${a} pupils. ${categories[second][0]}: ${steps[second]} × ${scale} = ${b} pupils. Difference: ${a} − ${b} = ${a-b} pupils.`,`${categories[first][1]}：${steps[first]} × ${scale}＝${a}人。${categories[second][1]}：${steps[second]} × ${scale}＝${b}人。相差${a} − ${b}＝${a-b}人。`]};
+}}];
+
 const families = [
+  ...barComparisonFamilies3,
   ...triangleFamilies3,
   ...quadrilateralFamilies3,
   ...weightFamilies3,

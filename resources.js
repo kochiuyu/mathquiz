@@ -1243,6 +1243,16 @@ const resourceData = {
         "P3 · Triangle properties",
         "小三 · 三角形的性質"
       ]
+    },
+    {
+      "path": "activities/p3-bar-charts-i.html",
+      "units": [
+        "3D1"
+      ],
+      "title": [
+        "P3 · Bar charts (I)",
+        "小三 · 棒形圖（一）"
+      ]
     }
   ],
   "strands": {
