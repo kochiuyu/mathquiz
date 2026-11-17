@@ -1,6 +1,6 @@
-# 4N1 Multiplication (II): reviewed resource candidate
+# 4N1 Multiplication (II): verified resource checkpoint
 
-17 November2026. Reviewed candidate; live verification pending. Three new families add48variants: `multproduct4a`24, `multstrategy4a`12, `multstory4a`12. All2,037 prior payloads unchanged. Candidate132permanent families/2,085variants;131selectable/2,070;48selectable units/53resource units;42activities. Verified baseline of 41 units, 158 numbered objectives and three inquiry statements retained; 4N1 remains incomplete.
+**Verified resource-complete checkpoint: 42/85 units.** All P1–P3 units and 4N1 have source-reviewed assessment resources, covering 161 numbered objectives plus three integrated inquiry statements. Public Multiplication (II) release `12e57a3` passed **389/389 curriculum checks and 159/159 UI checks**, with zero failures, plus thirteen static gates. This unit adds three objectives and 48 variants; all 2,037 prior payloads remain unchanged. Inventory: 132 permanent families / 2,085 variants; 131 selectable families / 2,070 variants; 48 selectable units / 53 resource units; 42 activities and 11 open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 ## Official scope
 

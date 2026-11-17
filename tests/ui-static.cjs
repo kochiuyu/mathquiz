@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+'\n'+read('resources.js')+'\nglobalThis.data=resourceData;globalThis.fs=families;',c);
 const {units,activities}=c.data,live=c.fs.filter(f=>!f.retired);
-assert.equal(units.length,85);assert.equal(new Set(units.map(u=>u.code)).size,85);assert.equal(units.filter(u=>u.complete).length,41);
+assert.equal(units.length,85);assert.equal(new Set(units.map(u=>u.code)).size,85);assert.equal(units.filter(u=>u.complete).length,42);
 assert.equal(activities.length,42);assert.equal(new Set(activities.map(a=>a.path)).size,42);
 for(const u of units){assert(u.title.length===2&&u.title.every(s=>s.trim()));assert.match(u.code,/^[1-6][NMSDFA]\d+$/);assert.equal(u.grade,+u.code[0]);assert(u.source.startsWith('https://www.edb.gov.hk/'));}
 for(const f of live)assert(units.some(u=>u.code===f.code&&u.grade===f.grade),'Missing unit for '+f.id);
@@ -17,3 +17,5 @@ console.log('PASS UI: 85 unique bilingual units, 42 linked activities, every sel
 
 assert(read('tests/ui-regression.js').includes("fetch('../resources.js?regression='+Date.now(),{cache:'no-store'})"),'uncached activity manifest');
 assert(read('tests/ui-regression.js').includes('paths.length==='+activities.length),'activity manifest count guard');
+
+{const text=require('node:fs').readFileSync(require('node:path').join(__dirname,'../README.md'),'utf8');assert(text.includes('| **Total** | **85** | **48** | **37** | **42** |'),'canonical completion table');assert(text.includes('53units have digital tasks')&&text.includes('11open resource-bearing units'),'canonical resource inventory');}

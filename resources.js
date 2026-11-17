@@ -419,7 +419,7 @@ const resourceData = {
         "乘法（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=7",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4N2",

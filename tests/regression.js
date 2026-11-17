@@ -2877,7 +2877,7 @@
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
-      assert(doc.body.textContent.includes("Planned · Not yet available") && doc.querySelectorAll(".badge.complete").length===41,"live/planned distinction missing");
+      assert(doc.body.textContent.includes("Planned · Not yet available") && doc.querySelectorAll(".badge.complete").length===42,"live/planned distinction missing");
       assert([...doc.querySelectorAll(".resource-card a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("課程") && zh.contentDocument.querySelector("[data-unit=\"1N1\"] h2").textContent==="二十以內的數" && !zh.contentDocument.querySelector("[data-unit=\"1N1\"]").textContent.includes("identify"),"Chinese coverage missing or untranslated");
