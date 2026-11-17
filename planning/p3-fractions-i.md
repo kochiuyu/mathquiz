@@ -1,8 +1,10 @@
 # P3 Fractions (I) · 3N5
 
-**Current status: publication candidate, NOT resource complete.** Source/code/static review passed; original R9 private browser regression passed359/359. The publication overlay includes the reviewed framefix2 readiness helper and requires fresh359-check live verification. All1,785 prior payloads are unchanged. Earlier first-three P3 pending references below are historical:3N1–3N3 closed publicly under741d1b6/9d6b319. Manual visuals/PDF, printing, classroom, independent translation and accessibility remain unverified.
+**Current status: verified resource complete.** Public `8d75a7f` passed 359/359 browser checks with zero failures, including all 1,941 variant contracts. All 4 numbered objectives and applicable remarks have linked digital or teacher-assessed pupil evidence below. All 1,785 earlier payloads are unchanged. The four static gates pass. Resource completeness is not pupil mastery, observed practical performance or delivered inquiry hours. Comprehensive manual visuals, downloaded-PDF inspection, teacher print-preview/pagination, physical printing, classroom trials, independent translation and screen-reader/accessibility validation remain unperformed.
 
 ## Historical source, draft and integration record
+
+The draft-stage and pending-test statements below record the earlier development sequence. They are superseded by the verified status above; they do not describe a current publication or live-QA blocker. Original source limits and assessment requirements remain applicable.
 
 **Local later-grade draft**, sequenced after P2 completion and QA. No publication/global integration by this author. Independent review and mobile/print checks pending.
 
@@ -58,3 +60,7 @@ The359 authored browser checks remain unrun for this candidate. Source and mathe
 ## Integrated next-four candidate evidence
 
 The reviewed digital proposals and bilingual teacher activity are included in the local next-four P3 snapshot:121 permanent families /1,941 variants,120 selectable /1,926. All1,785 earlier payloads remain unchanged; all156 new cases pass independent oracles and regenerate byte-identically with sin/cos/sqrt disabled. Four static gates pass. The359 browser checks are authored, not passed live. This unit remains pending deployed QA; all27 P1/P2 checkpoints are unchanged, and the first-three P3 live326 checks are also pending. No later P3 draft is included in this snapshot. Manual visual/PDF/print/classroom/translation/accessibility limits remain unverified.
+
+## Verified unit handoff
+
+Last verified release: `8d75a7f`, live 359/359 with zero failures. Objectives closed: all 4 numbered 3N5 objectives and applicable remarks, mapped to the pupil actions above. Remaining gap: no resource-coverage gap identified; manual visual/PDF/print, classroom, independent translation and accessibility validation remain unperformed. Next pupil task: use the linked bilingual activity and its teacher rubric; the development queue proceeds to 3M3 Capacity. Verify the [public regression suite](../tests/regression.html) and the activity links above. This checkpoint records usable assessment resources, not demonstrated pupil mastery.
