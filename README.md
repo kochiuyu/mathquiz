@@ -460,3 +460,25 @@ All four skill banks share a compact session layout: a collapsed setup panel, vi
 **Published and verified:** [UI release 7076678](https://github.com/kochiuyu/mathquiz/commit/70766782b308f2e39b0d8016342edc17be983791) deployed successfully (Pages run 44288118722). **All 228 public level-navigation/session cases are verified:** the full run passed 227/228 with one P3 Chinese directory page-load timeout, and that exact case passed 1/1 on rerun. Shared UI passed **193/193**, giving **421 distinct public browser cases verified**. All thirteen changed runtime assets match the local build. Seven static gates passed; 311 predecessor files, including every question bank and marking/diagram/curriculum file, are unchanged.
 
 Locally, all 228 distinct cases are verified: a 223/224 full run, its exact timeout rerun 1/1, and four added active-view/draft checks 4/4. Local shared UI passed 193/193. An earlier incomplete run was stopped to replace a background-frame test wait; it is not counted as a finished run. The original timeouts, exact reruns and test scope are retained in [release evidence](planning/levels-navigation-evidence.json). The full historical curriculum browser suite and deferred human reviews were not run.
+
+
+## Find resources: faster discovery · 18 November 2026
+
+The [Find resources page](https://kochiuyu.github.io/mathquiz/?view=browse) now puts compact filters beside the results on larger screens. Visible year buttons, resource-type shortcuts and removable filter chips make narrowing the catalogue easier. Cards and List views, expand/collapse controls and a mobile Show results jump support different ways of browsing.
+
+Every P1–P4 skill has a concise **Practise · Easy / Normal / Difficult** action using the chosen level. Quick practice and Use in a quiz remain separate actions. Cards distinguish twelve questions per difficulty level from the original quiz variants; teacher activities have their own appearance and action. Search, filters, level and layout survive language changes and Back/Forward. The alternate curriculum page uses the same design.
+
+[Read the detailed improvement plan](planning/resource-browser-ui.md) and [release evidence](planning/resource-browser-evidence.json).
+
+- [x] Reduce the banner and move desktop filters beside results.
+- [x] Add visible year/resource shortcuts, chips and empty-state recovery.
+- [x] Clarify levelled practice, quick practice, quiz and teacher actions.
+- [x] Add Cards / List, expansion controls and mobile result navigation.
+- [x] Preserve bilingual links, sharing/history state and all resource counts.
+- [x] Pass local responsive, behavior and shared UI checks.
+- [ ] Verify the published release and record results below.
+- [ ] Deferred human review: pupil usability, independent translation, physical printing and full screen-reader assessment.
+
+<!-- resource-release-status -->
+**Local verification:** 97/97 resource checks, 193/193 shared UI checks and the existing level-entry contract 1/1 passed after correcting coverage-route quiz enhancements and enlarged-text header wrapping. Four static gates passed. Public release verification is pending. All question banks, marking, diagrams and curriculum-completion records are unchanged.
+<!-- /resource-release-status -->

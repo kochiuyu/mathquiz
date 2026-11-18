@@ -1,7 +1,7 @@
 /* Retain presentation state when switching language; use existing answer handlers. */
 (() => {
   const p=new URLSearchParams(location.search),view=p.get('view'),paper=['paper','key'].includes(view)||p.has('sheet');
-  if(view==='build'||view==='browse'||!p.has('p'))return;
+  if(window.mathQuizCoverage||view==='build'||view==='browse'||!p.has('p'))return;
   if(paper){document.body.classList.add('paper-page');const tools=document.querySelector('.print-tools');if(tools){const help=document.createElement('p');help.className='export-help screen-only';help.textContent= document.documentElement.lang.startsWith('zh')?'列印及儲存PDF使用瀏覽器功能。直接下載PDF仍為測試版，使用前請檢查輸出。':'Print / Save as PDF uses your browser. Direct PDF download is still beta; check the output before use.';tools.after(help);}return;}
   document.body.classList.add('pupil-page');MathQuizUI.shell('',true);
   const ui=MathQuizUI,main=document.querySelector('main');if(!main)return;

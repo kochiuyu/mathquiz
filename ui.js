@@ -41,50 +41,7 @@ window.MathQuizUI = (() => {
   }
   function pilotLink(unit='1N1'){const hasSkill=families.some(f=>!f.retired&&f.grade===1&&f.code===unit);return '<p class="p1-level-pilot"><a href="'+(hasSkill?'p1-skill-levels.html':'p1-levels.html')+'?lang='+language()+'&unit='+unit+'">'+(hasSkill?tr('P1 skills: Easy / Normal / Difficult for each skill','小一技能：每項均有容易／一般／較難'):tr('Unit exploration and observation activities','單元探究及觀察活動'))+' →</a></p>';}
   function browser(app,coverage=false) {
-    shell('browse');document.body.classList.add('browse-page');
-    document.title=tr(coverage?'Curriculum & resources':'Find resources',coverage?'課程及資源':'尋找資源')+' | MathQuiz';
-    const p=new URLSearchParams(location.search),state={p:p.get('p')||'',strand:p.get('strand')||'',unit:p.get('unit')||'',mode:p.get('mode')||'',q:p.get('q')||''};
-    const option=(v,label)=>'<option value="'+esc(v)+'">'+esc(label)+'</option>';
-    app.innerHTML='<div class="page-heading"><p class="eyebrow">'+tr('THE RESOURCE LIBRARY','數學資源庫')+'</p><h1>'+tr(coverage?'Curriculum & resources':'Find resources',coverage?'課程及資源':'尋找資源')+'</h1><p class="intro">'+tr('Practice, quizzes and practical activities, organised around the Hong Kong primary curriculum.','按香港小學數學課程編排的練習、小測及實作活動。')+'</p></div>'+
-    '<form id="resource-filters" class="filter-panel"><label class="search-label">'+tr('Search resources','搜尋資源')+'<input id="resource-search" name="q" type="search" placeholder="'+tr('Try fractions, money or 3M4','例如：分數、貨幣或3M4')+'" value="'+esc(state.q)+'"></label><details class="filter-options" open><summary>'+tr('Filter by year, topic and resource','按年級、課題及資源篩選')+'</summary><div class="filter-grid"><label>'+tr('Year','年級')+'<select name="p">'+option('',tr('All years','所有年級'))+[1,2,3,4,5,6].map(n=>option(n,year(n))).join('')+'</select></label><label>'+tr('Strand','範疇')+'<select name="strand">'+option('',tr('All strands','所有範疇'))+Object.entries(resourceData.strands).map(([k,v])=>option(k,loc(v))).join('')+'</select></label><label>'+tr('Unit','單元')+'<select name="unit"></select></label><label>'+tr('Resource','資源')+'<select name="mode">'+[['',tr('All resources','所有資源')],['practice',tr('Online practice','網上練習')],['quiz',tr('Quiz questions','小測題目')],['activity',tr('Teacher activities','教師活動')],['planned',tr('Planned units','計劃中的單元')]].map(([v,l])=>option(v,l)).join('')+'</select></label></div></details><div class="filter-actions"><button type="reset" class="text-button">'+tr('Clear filters','清除篩選')+'</button><span id="resource-count" role="status" aria-live="polite"></span></div></form>'+
-    '<div id="resource-results"></div><aside class="coverage-note"><h2>'+tr('Resources are a starting point','資源是學習的起點')+'</h2><p>'+tr('Resource complete means every audited objective has linked material. It does not mean a pupil has mastered the unit. Practical work and teacher observation remain essential.','資源完成表示每項已審核目標均有對應材料，不代表學生已掌握單元。實際操作及教師觀察仍不可少。')+'</p><a href="planning/full-curriculum-plan.md">'+tr('Full 85-unit inventory','85個單元完整清單')+'</a> · <a href="planning/primary-mathematics.md">'+tr('Curriculum and objective map','課程及學習目標對照表')+'</a></aside>';
-    const form=document.getElementById('resource-filters'),results=document.getElementById('resource-results');
-    form.insertAdjacentHTML('beforebegin','<div id="levels-library-entry"></div>');
-    function units(){const current=state.unit;form.elements.unit.innerHTML=option('',tr('All units','所有單元'))+resourceData.units.filter(u=>(!state.p||u.grade===+state.p)&&(!state.strand||u.code[1]===state.strand)).map(u=>option(u.code,u.code+' · '+loc(u.title))).join('');form.elements.unit.value=current;if(form.elements.unit.value!==current)state.unit='';}
-    function render(push=false){
-      document.getElementById('levels-library-entry').innerHTML=(!state.p||[1,2,3,4].includes(+state.p))?levelsEntry(state.p):'';
-      units();for(const k of ['p','strand','unit','mode'])form.elements[k].value=state[k];
-      const query=state.q.toLocaleLowerCase().trim(),list=[];let resourceCount=0;
-      for(const u of resourceData.units){
-        if(state.p&&u.grade!==+state.p||state.strand&&u.code[1]!==state.strand||state.unit&&u.code!==state.unit)continue;
-        const matchUnit=(u.code+' '+u.title.join(' ')).toLocaleLowerCase().includes(query);
-        let fs=families.filter(f=>!f.retired&&f.code===u.code),as=resourceData.activities.filter(a=>a.units.includes(u.code));
-        const hasResources=fs.length||as.length;
-        if(state.mode==='planned'&&hasResources)continue;
-        fs=fs.filter(f=>!query||matchUnit||f.label.join(' ').toLocaleLowerCase().includes(query));
-        as=as.filter(a=>!query||matchUnit||a.title.join(' ').toLocaleLowerCase().includes(query));
-        if(state.mode==='activity')fs=[];if(['practice','quiz'].includes(state.mode))as=[];
-        if(!fs.length&&!as.length&&(hasResources||!matchUnit||['practice','quiz','activity'].includes(state.mode)))continue;
-        resourceCount+=fs.length+as.length;
-        const digital=fs.map(f=>{
-          const entry=typeof practiceCatalogue!=='undefined'?practiceCatalogue.find(x=>x.skill===f.id||(!x.skill&&f.id==='count20a')):null;
-          const practice=root()+'?'+new URLSearchParams({lang:language(),p:f.grade,view:'practice',...(f.id==='count20a'?{}:{skill:f.id})});
-          const label=entry?loc(entry.label):tr('Practise: ','練習：')+loc(f.label);
-          return '<article class="resource-card" data-family="'+f.id+'"><span class="badge">'+tr('Online · Quiz','網上 · 小測')+'</span><h3>'+esc(loc(f.label))+'</h3><p class="quiet">'+f.count+tr(' question variants','個題目版本')+'</p><div class="resource-actions">'+([1,2,3,4].includes(f.grade)?'<a class="skill-level-link" href="p'+f.grade+'-skill-levels.html?lang='+language()+'&skill='+f.id+'">'+tr('Easy / Normal / Difficult','容易／一般／較難')+' →</a>':'')+'<a class="practice-link" href="'+practice+'">'+esc(label)+' →</a><a href="'+root()+customLink([f.id+'-0'],'build',f.grade)+'">'+tr('Add to quiz','加入小測')+' +</a></div><details data-sample="'+f.id+'"><summary>'+tr('Sample question','示例題目')+'</summary><div class="sample-question"></div></details></article>';
-        }).join('');
-        const activities=as.map(a=>'<article class="resource-card activity-card" data-activity="'+a.path+'"><span class="badge">'+tr('Teacher-led · Printable','教師帶領 · 可列印')+'</span><h3>'+esc(loc(a.title))+'</h3><p class="quiet">'+tr('Pupil tasks and teacher assessment criteria','學生任務及教師評估準則')+'</p><a href="'+a.path+'?lang='+language()+'">'+tr('Open activity','開啟活動')+' →</a></article>').join('');
-        list.push('<details class="unit-group" '+(state.p||state.unit||query?'open ':'')+'data-unit="'+u.code+'"><summary class="unit-heading"><div><span class="eyebrow">'+year(u.grade)+' · '+u.code+'</span><h2>'+esc(loc(u.title))+'</h2></div><span class="badge '+(u.complete?'complete':'')+'">'+(u.complete?tr('Resources complete','資源完成'):hasResources?tr('Resources available · More to develop','已有資源 · 尚待擴展'):tr('Planned · Not yet available','計劃中 · 尚未提供'))+'</span></summary>'+(u.grade===1?pilotLink(u.code):'')+(digital||activities?'<div class="resource-grid">'+digital+activities+'</div>':'<p class="empty-unit">'+tr('This unit is on the development plan. Try another unit with available resources.','本單元已列入開發計劃，請先選擇已有資源的單元。')+'</p>')+'<details class="unit-evidence"><summary>'+tr('Curriculum reference & coverage','課程來源及涵蓋範圍')+'</summary><p><a href="'+u.source+'">'+tr('EDB objectives and notes','教育局目標及說明')+'</a> · <a href="planning/full-curriculum-plan.md">'+tr('Objective review and resource inventory','目標審核及資源清單')+'</a></p><p>'+tr('Digital practice samples a skill. Teacher activities supply practical and oral evidence where required.','網上練習用作技能練習；需要實作及口述證據時，請配合教師活動。')+'</p></details></details>');
-      }
-      results.innerHTML=list.join('')||'<div class="empty-state"><h2>'+tr('No resources match these filters','找不到符合篩選的資源')+'</h2><p>'+tr('Try another word, choose all years, or clear your filters.','請試用其他字詞、選擇所有年級，或清除篩選。')+'</p></div>';
-      document.getElementById('resource-count').textContent=list.length+tr(' units','個單元')+' · '+resourceCount+tr(' resources','項資源');
-      if(push){const url=new URL(location.href);for(const [k,v]of Object.entries(state)){if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);}history.pushState(null,'',url);}
-      for(const l of ['en','zh']){const a=document.getElementById(l);if(a){const u=new URL(location.href);u.searchParams.set('lang',l);a.href=u.href;}}
-      results.querySelectorAll('[data-sample]').forEach(d=>d.addEventListener('toggle',()=>{if(d.open&&!d.dataset.loaded){const f=families.find(f=>f.id===d.dataset.sample),q=f.make(0);d.querySelector('.sample-question').innerHTML='<p>'+esc(loc(q.prompt))+'</p>'+(typeof figure==='function'?figure(q.figure):'');d.dataset.loaded='1';}}));
-    }
-    form.onsubmit=e=>e.preventDefault();form.onchange=()=>{for(const k of ['p','strand','unit','mode'])state[k]=form.elements[k].value;render(true);};
-    let timer;form.elements.q.oninput=()=>{clearTimeout(timer);timer=setTimeout(()=>{state.q=form.elements.q.value;render(true);},180);};
-    form.onreset=e=>{e.preventDefault();clearTimeout(timer);Object.keys(state).forEach(k=>state[k]='');form.elements.q.value='';render(true);};
-    window.addEventListener('popstate',()=>{const q=new URLSearchParams(location.search);for(const k in state)state[k]=q.get(k)||'';form.elements.q.value=state.q;render();});render();
+    return MathQuizResources.render(app,coverage,{shell,language,tr,loc,esc,year,root,pilotLink});
   }
   return {shell,home,browser,esc,tr,loc,year,browseLink};
 })();

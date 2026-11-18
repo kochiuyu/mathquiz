@@ -1,0 +1,106 @@
+{
+  "release": "Find resources UI",
+  "date": "2026-11-18",
+  "base_commit": "71a9e8045f76c9e1a5cf3efb917c2181eb869dec",
+  "runtime_commit": null,
+  "deployment": null,
+  "scope": {
+    "selectable_skills": 187,
+    "levelled_skills": 165,
+    "unique_activities": 59,
+    "curriculum_units": 85,
+    "resource_complete_units_unchanged": 56,
+    "core_variants_unchanged": 2853,
+    "levelled_tasks_unchanged": 5940
+  },
+  "local": {
+    "initial_resource_run": {
+      "passed": 92,
+      "failed": 5,
+      "failures": [
+        {
+          "name": "Responsive en 1024 coverage.html?p=3&layout=list",
+          "error": "results above fold"
+        },
+        {
+          "name": "Responsive en 1440 coverage.html?p=3&layout=list",
+          "error": "results above fold"
+        },
+        {
+          "name": "Responsive zh 1024 coverage.html?p=3&layout=list",
+          "error": "results above fold"
+        },
+        {
+          "name": "Responsive zh 1440 coverage.html?p=3&layout=list",
+          "error": "results above fold"
+        },
+        {
+          "name": "200% text coverage.html?p=1&layout=list&lang=en",
+          "error": "page overflow 419/360"
+        }
+      ]
+    },
+    "after_coverage_guard_text_check": {
+      "passed": 1,
+      "failed": 1,
+      "remaining_failure": "200% English header text overflow"
+    },
+    "fixes": [
+      "Exclude coverage pages from pupil-only enhancements, avoiding an inserted answered count, restricted main width and decimal keyboard on search.",
+      "Allow resource-page navigation to wrap at enlarged text sizes."
+    ],
+    "final_resources_full": {
+      "passed": 97,
+      "failed": 0
+    },
+    "final_shared_ui_full": {
+      "passed": 193,
+      "failed": 0
+    },
+    "established_level_entry_contract": {
+      "passed": 1,
+      "failed": 0
+    },
+    "distinct_current_cases_verified": 291,
+    "navigation_timeout_retries": 0
+  },
+  "static_gates": {
+    "tests/static.cjs": "pass",
+    "tests/ui-static.cjs": "pass",
+    "tests/levels-ui-static.cjs": "pass",
+    "tests/resources-ui-static.cjs": "pass",
+    "development_note": "An extra closing parenthesis in the new static test was fixed before the final gate run; no production code was affected."
+  },
+  "public": {
+    "status": "pending"
+  },
+  "preservation": {
+    "unchanged_predecessor_files": 326,
+    "changed_predecessor_files": [
+      "README.md",
+      "coverage.html",
+      "index.html",
+      "pupil-ui.js",
+      "ui.js"
+    ],
+    "method": "Git blob SHA-1 compared with the published base tree; local CRLF-only differences normalized to the published LF bytes. All question, marking, diagram, skill-bank and curriculum files are unchanged."
+  },
+  "visual_review": [
+    "English desktop P3 coverage/list layout",
+    "English mobile P4 resource cards and Show results jump"
+  ],
+  "limitations": [
+    "No full historical mathematics browser-suite rerun for this UI-only release.",
+    "Pupil calibration and classroom usability are not verified.",
+    "Independent language, physical printing and full screen-reader reviews remain deferred.",
+    "Difficulty banks remain available for P1–P4 only."
+  ],
+  "runtime_sha256": {
+    "index.html": "d857c890255147dc13c0ab74ab49c3e20ea70ceb706dd87fdba6fa82c09c6170",
+    "coverage.html": "235cc9df65490971c4865dfc9ae94234e12ddbec86e293b532a14d68d4bc58a5",
+    "ui.js": "e5d282ee2d4ac79511d09d4349529aed1c45c540f75815144b2882f21d9c2bc6",
+    "pupil-ui.js": "9d3340da8714a91c2a00a79a679a31b4af66e12597609481777b95c58dac2692",
+    "resource-browser.js": "8b52bad99bedd29bafd033c092e895695ae8d50d413f0979e1dabebfe1ad9d5d",
+    "resource-browser.css": "1093d3995b469449083e33002a418d63fd972b3f6ac47cf9ed5b3484139b988d"
+  }
+}
