@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-19",
+  "base": "3b65aee94b7ee92ed32e02c40ce32eab36346e2b",
+  "catalogue": {
+    "quizzes": 21,
+    "new_quizzes": 18,
+    "new_quizzes_per_grade": 3,
+    "questions_per_new_quiz": 6,
+    "distinct_existing_items": 108,
+    "languages": [
+      "en",
+      "zh"
+    ]
+  },
+  "static": [
+    "examples-static.cjs",
+    "static.cjs",
+    "ui-static.cjs"
+  ],
+  "static_passed": true,
+  "local": {
+    "full": {
+      "passed": 53,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Catalogue layout en 320",
+          "error": "Page load timeout examples.html?lang=en&p=5"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "only": "Catalogue layout en 320",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinct_verified": 54
+  },
+  "initial_local": {
+    "passed": 48,
+    "failed": 6,
+    "causes": [
+      "Original P1/P4 paper views had no explicit print control (four bilingual cases); added toolbar without changing questions.",
+      "Test expected one mark for the original P6 two-field speed question (two bilingual cases); corrected expected total to documented per-field default."
+    ]
+  },
+  "public": null,
+  "visual_review": [
+    "English desktop catalogue",
+    "Traditional Chinese mobile catalogue and language-preserved year filter"
+  ],
+  "limits": [
+    "Physical printing, independent translation review, classroom calibration and full screen-reader review deferred.",
+    "The full historical curriculum browser suite and PDF export suite were not rerun."
+  ],
+  "runtime_hashes": {
+    "examples.html": "e0ff471af285459ae3103b8dc24371bc8306b83d6e02d647be1bbdbbf6edc621",
+    "examples-data.js": "3abeae72d4236d38210721cec53115097f3ca83e49f22485e71af44a0ee6cfe0",
+    "examples.js": "091b0d2f962aab8a9a3d7539edae2b2ab6748ab26a3d49c2499e7dfd10b1dd3e",
+    "examples.css": "f046651b0e24a6ec6169d8dbe26374fdf833e5e3a6f434f686cba0502838c7d8",
+    "index.html": "cb97abf70f859842d6874fc3a0ee58ac292eb38c1fed92edb79ea3861c4a4d44",
+    "ui.js": "fe642266c15eb405e9843cef6cbbdc39ec3b5454a375a81d9ec8c563635d9044",
+    "ui.css": "169c2b3a026775e6d9fecc88c34a03a1898fc329f8bf75bcd13e5b52a6f07051",
+    "quiz.js": "65e6c63e574807825c20ecb0d9ae128776d74b43a48c2dda477ad38896ebf731"
+  }
+}

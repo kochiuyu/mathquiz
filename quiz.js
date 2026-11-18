@@ -1562,7 +1562,7 @@ if(window.mathQuizLoadError){
   const links=custom?'':fixedP6V4?'<div class="downloads"><a href="'+href(grade,lang,"paper")+'">'+t("Print student paper / PDF","列印學生試卷／PDF")+'</a><a href="'+href(grade,lang,"key")+'">'+t("Print worked key / PDF","列印解答／PDF")+'</a></div>':'<div class="downloads"><a download href="'+file+'paper.pdf">'+t("Student paper (PDF)","學生試卷 (PDF)")+'</a><a download href="'+file+'key.pdf">'+t("Worked answers (PDF)","解題步驟 (PDF)")+'</a></div>';
   app.innerHTML=(paper?'':'<a href="'+href(null)+'">← '+t("All quizzes","所有小測")+'</a>')+'<h1>'+title+'</h1>'+(paper?'<h2>'+(key?t("Worked answers","解題步驟"):t("Student paper","學生試卷"))+'</h2>'+(key?'':'<p>'+t("Name","姓名")+' __________________　'+t("Class","班別")+' ______　'+t("Date","日期")+' __________</p>'):links)+'<form>'+quizzes[grade].map((q,i)=>item(q,i,paper,key)).join("")+(paper?'':'<button type="submit">'+t("Mark my quiz","提交及核對答案")+'</button><a id="retry" hidden href="'+(custom?customLink(ids,"",grade):href(grade))+'" >'+t("Try again","重新作答")+'</a><p id="status" tabindex="-1" role="status"></p>')+'</form>';
    if(custom && paper)app.querySelector("h2").insertAdjacentHTML("beforeend",'<span id="paper-code" class="paper-code"></span>');
-  if((custom || fixedP6V4) && paper){
+  if(paper){
     const back=custom?customLink(ids,"build",grade):href(grade);
     const samplePdf=custom && ids.join(".")===exitTicketP1.join(".")
       ? '<a download href="papers/p1-exit-ticket-'+lang+'-'+paper+'.pdf">'+t("Download sample PDF","下載示例 PDF")+'</a>' : '';
