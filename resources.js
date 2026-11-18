@@ -569,7 +569,7 @@ const resourceData = {
         "多位數"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=30",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5N2",
@@ -579,7 +579,7 @@ const resourceData = {
         "分數（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=31",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5N3",
@@ -589,7 +589,7 @@ const resourceData = {
         "分數（四）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=33",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5N4",
@@ -599,7 +599,7 @@ const resourceData = {
         "小數（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=34",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5N5",
@@ -609,7 +609,7 @@ const resourceData = {
         "分數（五）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=36",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5A1",
@@ -619,7 +619,7 @@ const resourceData = {
         "代數初步"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=38",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5A2",
@@ -629,7 +629,7 @@ const resourceData = {
         "簡易方程（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=39",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5M1",
@@ -639,7 +639,7 @@ const resourceData = {
         "面積（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=41",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5M2",
@@ -649,7 +649,7 @@ const resourceData = {
         "體積（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=43",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5S1",
@@ -659,7 +659,7 @@ const resourceData = {
         "圓"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=45",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5S2",
@@ -669,7 +669,7 @@ const resourceData = {
         "立體圖形（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=46",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5D1",
@@ -679,7 +679,7 @@ const resourceData = {
         "棒形圖（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=48",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5F1",
@@ -689,7 +689,7 @@ const resourceData = {
         "探究活動"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=49",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6N1",

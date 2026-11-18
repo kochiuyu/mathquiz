@@ -38,15 +38,31 @@ for line in (root/'planning/full-curriculum-plan.md').read_text(encoding='utf-8'
  grade,code,source,title=m.groups()
  units.append(dict(code=code,grade=int(grade),title=[title,zh(title)],source=source,complete=bool(re.search(r'resource complete',line,re.I))))
 assert len(units)==85
+from html.parser import HTMLParser
+class ActivityTitles(HTMLParser):
+ def __init__(self):
+  super().__init__();self.sections=[];self.language=None;self.heading=None;self.parts=[];self.titles={}
+ def handle_starttag(self,tag,attrs):
+  attrs=dict(attrs)
+  if tag=='section':
+   self.sections.append(self.language)
+   if attrs.get('id') in ['en','zh']:self.language=attrs['id']
+  if tag=='h1' and self.language and self.language not in self.titles:
+   self.heading=self.language;self.parts=[]
+ def handle_data(self,data):
+  if self.heading:self.parts.append(data)
+ def handle_endtag(self,tag):
+  if tag=='h1' and self.heading:
+   self.titles[self.heading]=''.join(self.parts);self.heading=None
+  if tag=='section':
+   self.heading=None;self.language=self.sections.pop() if self.sections else None
+
 activities=[]
 for slug,codes in activity_units.items():
  path='activities/'+slug+'.html';raw=(root/path).read_text(encoding='utf-8')
- titles=[]
- for language in ['en','zh']:
-  section=re.search(r'<section[^>]*id=[\"\']'+language+r'[\"\'][^>]*>(.*)',raw,re.S)
-  title=re.search(r'<h1[^>]*>(.*?)</h1>',section[1],re.S) if section else None
-  if not title:raise ValueError(path+' missing '+language+' title')
-  titles.append(re.sub('<[^>]+>','',title[1]))
+ parser=ActivityTitles();parser.feed(raw)
+ if set(parser.titles)!={'en','zh'}:raise ValueError(path+' missing language-specific h1 title')
+ titles=[parser.titles[language] for language in ['en','zh']]
  activities.append(dict(path=path,units=codes,title=titles))
 assert {p.stem for p in (root/'activities').glob('*.html')}==set(activity_units)
 data=dict(units=units,activities=activities,strands={'N':['Number','數'],'M':['Measures','度量'],'S':['Shape and space','圖形與空間'],'D':['Data handling','數據處理'],'A':['Algebra','代數'],'F':['Inquiry','探究']})

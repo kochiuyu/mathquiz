@@ -24,4 +24,4 @@ for offset in [0,6]:
  has(5,F(7,4),F(21,2),F(7,2))
 print('PASS12 bilingual actual model keys: independent fraction arithmetic/remainders/rate table;10 blank observations perlanguage.')
 `],{input:html,encoding:'utf8'});a.equal(result.status,0,result.stdout+result.stderr);console.log(result.stdout.trim());
-a(read('tools/build-pdf-font.py').includes('"activities/p5-fractions-v.html"'));const data=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(data.activities.filter(x=>x.path==='activities/p5-fractions-v.html').length,1);a.equal(data.units.find(u=>u.code==='5N5').complete,false);
+a(read('tools/build-pdf-font.py').includes('"activities/p5-fractions-v.html"'));const data=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(data.activities.filter(x=>x.path==='activities/p5-fractions-v.html').length,1);a.equal(data.units.find(u=>u.code==='5N5').complete,true);

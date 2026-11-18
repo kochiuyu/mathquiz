@@ -78,5 +78,5 @@ for(const rel of ['index.html','coverage.html','tests/regression.html'])a(read(r
 
 a(c.scoreAlgebra5('2(x+3)',{mode:'expression',variable:'x',expected:'2*x+6'}));
 const batchFn=read('tests/regression.js').match(/function boundedPaperBatches\(ids\)\{[^\n]+/)[0],batches=vm.runInNewContext(batchFn+';boundedPaperBatches')(c.added.flatMap(f=>Array.from({length:f.count},(_,i)=>f.id+'-'+i)));a.equal(batches.flat().length,96);a.equal(new Set(batches.flat()).size,96);for(const ids of batches){a(ids.length<=12&&ids.join('.').length<=300);a.equal(c.decodeItems(ids.join('.'),5).length,ids.length);}
-const data=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(data.units.find(u=>u.code==='5A1').complete,false);a.equal(data.units.find(u=>u.code==='5A2').complete,false);
+const data=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(data.units.find(u=>u.code==='5A1').complete,true);a.equal(data.units.find(u=>u.code==='5A2').complete,true);
 for(const token of ['5A1/5A2 all96 bounded','5A1/5A2 all96 actual','5A1/5A2 full practice'])a(read('tests/regression.js').includes(token));

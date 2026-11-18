@@ -1,5 +1,9 @@
 # 5N5 Fractions (V): source and private implementation audit
 
+**Current resource status: complete.** 5N5: 4 numbered objectives and0 inquiry statements. Code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23` passed the linked live checks. This marks resource availability, not pupil achievement. [Verification](p5-live-closure-evidence.json).
+
+## Historical implementation record
+
 **Private 5N5 candidate; incomplete:** Five families add84 variants plus a bilingual six-group practical resource for four numbered objectives. Inventory198 permanent families/3009variants;197 selectable/2994;62 selectable units/68resource units;61activities;56complete/12open. All2925 predecessor payloads and P1 releases are preserved. 5N1–5N5 remain incomplete pending verified publication; completed totals remain211 numbered objectives plus four inquiry statements. Static and browser results are separate; browser verification is pending.
 
 ## Historical source-reviewed plan retained as design evidence

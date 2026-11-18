@@ -2977,12 +2977,12 @@
       const unitGroups=[...doc.querySelectorAll('.unit-group[data-unit]')];
       let planned=0;
       for(const unit of unitGroups){
-        const badge=unit.querySelector(':scope > .unit-heading > .badge'),hasResources=Boolean(unit.querySelector('[data-family],[data-activity]')),complete=Number(unit.dataset.unit[0])<=4;
+        const badge=unit.querySelector(':scope > .unit-heading > .badge'),hasResources=Boolean(unit.querySelector('[data-family],[data-activity]')),complete=Number(unit.dataset.unit[0])<=5;
         assert(badge&&badge.classList.contains('complete')===complete,'exact inherited completion flag '+unit.dataset.unit);
         assert(badge.textContent.trim()===(complete?'Resources complete':hasResources?'More to develop':'Planned'),'exact resource availability badge '+unit.dataset.unit);
         if(!hasResources){planned++;assert(!complete&&unit.querySelector('.empty-unit'),'planned unit has no invented resources '+unit.dataset.unit);}
       }
-      assert(planned===13&&doc.querySelectorAll('.badge.complete').length===56,'13 planned and56 inherited complete units');
+      assert(planned===13&&doc.querySelectorAll('.badge.complete').length===69,'13 planned and69 verified complete units');
       assert([...doc.querySelectorAll(".resource-card a")].some(a=>a.href.includes("bar4a-0")),"P4 scaled chart missing from coverage");
       const zh=await shapeFrame("coverage.html?lang=zh&coverageCheck="+Date.now());frames.push(zh);
       assert(zh.contentDocument.documentElement.lang==="zh-HK" && zh.contentDocument.querySelector("h1").textContent.includes("課程") && zh.contentDocument.querySelector("[data-unit=\"1N1\"] h2").textContent==="二十以內的數" && !zh.contentDocument.querySelector("[data-unit=\"1N1\"]").textContent.includes("identify"),"Chinese coverage missing or untranslated");

@@ -1,5 +1,9 @@
 # 5N1 · Multi-digit numbers: source and activity audit
 
+**Current resource status: complete.** 5N1: 4 numbered objectives and0 inquiry statements. Code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23` passed the linked live checks. This marks resource availability, not pupil achievement. [Verification](p5-live-closure-evidence.json).
+
+## Historical implementation record
+
 **Private 5N1–5N3 candidate; incomplete:** Rebased onto the verified 56-unit P1–P4 closure. Thirteen new families add 192 variants (60 for 5N1, 72 for 5N2, 60 for 5N3), preserving all 175 predecessor families / 2,661 variants. Current inventory: 188 permanent families / 2,853 variants; 187 selectable / 2,838; 60 selectable units / 66 resource units; 59 activities; 56 complete and 10 open resource-bearing units. Verified totals remain 211 numbered objectives plus four inquiry statements. 5N1, 5N2 and 5N3 remain incomplete. Private verification completed: **616/616 curriculum, 193/193 UI and 248/248 dedicated P1 checks passed**, with zero failures. This is private evidence only; deployed candidate verification is pending. All 56 inherited completion flags remain unchanged, and 5N1, 5N2 and 5N3 remain incomplete. The later P1 skill release `2b3521f` has now been preserved in this private candidate; core computational bytes are unchanged. Fresh integrated checks passed **193/193 UI, 248/248 P1 unit and 251/251 P1 skill checks**, with zero failures. All44 static gates and actual font coverage passed locally and in an isolated copy. Live P5 verification remains pending.
 
 ## Historical source-development and independent evidence

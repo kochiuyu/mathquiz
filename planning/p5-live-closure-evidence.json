@@ -1,0 +1,109 @@
+{
+  "commit": "504a2ea0a383b34fc5fe76f037860bb4a88bea23",
+  "site": "https://kochiuyu.github.io/mathquiz/",
+  "verifiedAt": "2026-11-18T15:15:06.013426+00:00",
+  "verifiedUnits": [
+    "5N1",
+    "5N2",
+    "5N3",
+    "5N4",
+    "5N5",
+    "5A1",
+    "5A2",
+    "5M1",
+    "5M2",
+    "5S1",
+    "5S2",
+    "5D1",
+    "5F1"
+  ],
+  "bilingualActivitiesVerified": true,
+  "runtimeMatchesCandidate": true,
+  "pages": {
+    "runId": 44331521088,
+    "status": "success"
+  },
+  "suites": {
+    "p5Core": {
+      "passed": 193,
+      "failed": 0,
+      "skipped": 625,
+      "complete": true,
+      "scope": "p5",
+      "environment": "live",
+      "outsideScope": 625,
+      "sharedVariantsVerified": 3351,
+      "p5SkillsVerified": 53
+    },
+    "p5Levels": {
+      "passed": 357,
+      "failed": 0,
+      "skipped": 0,
+      "complete": true,
+      "environment": "live"
+    },
+    "smart": {
+      "passed": 201,
+      "failed": 0,
+      "skipped": 0,
+      "complete": true,
+      "environment": "live"
+    },
+    "shared": {
+      "passed": 293,
+      "failed": 0,
+      "skipped": 0,
+      "complete": true,
+      "environment": "live"
+    },
+    "ui": {
+      "passed": 213,
+      "failed": 0,
+      "skipped": 0,
+      "complete": true,
+      "environment": "live"
+    },
+    "resources": {
+      "passed": 98,
+      "failed": 0,
+      "skipped": 0,
+      "complete": true,
+      "environment": "live"
+    }
+  },
+  "localEvidence": {
+    "historicalFullCore": {
+      "environment": "local",
+      "passed": 818,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "all",
+      "complete": true,
+      "computationalBytesMatchRelease": true
+    },
+    "freshScopedP5Core": {
+      "environment": "local",
+      "passed": 193,
+      "failed": 0,
+      "skipped": 625,
+      "scope": "p5",
+      "complete": true
+    }
+  },
+  "liveAssets": {
+    "commit": "504a2ea0a383b34fc5fe76f037860bb4a88bea23",
+    "matched": 240,
+    "mismatched": 0,
+    "algorithm": "sha256"
+  },
+  "activityCoverage": {
+    "suite": "ui",
+    "totalPages": 69,
+    "p5Pages": 13,
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "allVerified": true
+  }
+}

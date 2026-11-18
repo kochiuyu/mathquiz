@@ -1,8 +1,10 @@
 # MathQuiz · Hong Kong primary mathematics
 
-**P5 upload candidate, not yet deployed:** Prepared from the verified private 53-skill / 1,908-task bank, preserving public `300f2368` documentation and `beb30ebd` test improvements. The public 86-check / 19-skill record below describes the earlier public release only. All 56 completion flags remain unchanged pending fresh live verification. The following branch snapshots are historical evidence, not claims that all 53 skills are already public.
+**P5 resources verified:** All 13 P5 units are resource complete following live verification of code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23`. Total 69/85 units, 254 numbered objectives plus 5 inquiry statements. P5 includes 53 selectable skills, 759 core variants, 1,908 level tasks and 13 bilingual practical resources. Whole-site inventory remains 222 permanent families / 3,351 variants; 221 selectable / 3,336; 65 selectable units; 72 resource-bearing units; 69 activities; 3 open resource-bearing units and 13 planned units. All P6 completion flags remain false. The unchanged computational runtime retains the local full 818-check proof; fresh live P5 core verification covers 193 checks with 625 other-grade checks explicitly outside that fresh scope, alongside the live level, Smart, shared, UI and resource checks. Resource completeness is not pupil mastery or observed classroom performance. [Live verification](planning/p5-live-closure-evidence.json).
 
-**Integrated private P5 core candidate; incomplete:** 222 permanent families / 3351 variants; 221 selectable / 3336; 53 P5 skills; 65 selectable units; 72 units have digital tasks or linked activities; 69 activities; 56 complete and 16 open resource-bearing units. All 3009 baseline variants and P1–P4 assets remain unchanged. No live verification or completion promotion is claimed. Earlier branch inventory figures below are historical snapshots.
+Earlier implementation and release records below retain their original scope; current completion is stated above.
+
+**Historical integrated private P5 core candidate; incomplete:** 222 permanent families / 3351 variants; 221 selectable / 3336; 53 P5 skills; 65 selectable units; 72 units have digital tasks or linked activities; 69 activities; 56 complete and 16 open resource-bearing units. All 3009 baseline variants and P1–P4 assets remain unchanged. No live verification or completion promotion is claimed. Earlier branch inventory figures below are historical snapshots.
 
 **Private 5A1–5A2 candidate; incomplete:** Six new families add96variants and two bilingual practical resources for2+3 numbered objectives. Inventory204permanent families/3105variants;203selectable/3090;63selectable units/69resource units;63activities;56complete/13open. All3009predecessor payloads and P1–P4 difficulty/Smart assets are preserved. Algebra units remain incomplete; browser verification is pending. Completed totals stay211numbered plus four inquiry statements.
 
@@ -50,7 +52,7 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 units.** This private P5 candidate has 65 selectable units and 20 without selectable tasks, 221 selectable families / 3,336 variants. 56 units are resource complete. One retired family / 15 variants retains old-link compatibility.
+**The goal is to give teachers usable assessment material for every objective across all 85 units.** This P5 release has 65 selectable units and 20 without selectable tasks, 221 selectable families / 3,336 variants. 69 units are resource complete. One retired family / 15 variants retains old-link compatibility.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
@@ -58,11 +60,11 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 | P2 | 15 | 14 | 1 | 15 |
 | P3 | 14 | 13 | 1 | 14 |
 | P4 | 15 | 14 | 1 | 15 |
-| P5 | 13 | 12 | 1 | 0 |
+| P5 | 13 | 12 | 1 | 13 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **65** | **20** | **56** |
+| **Total** | **85** | **65** | **20** | **69** |
 
-**Candidate resource inventory:** 72 units have digital tasks or linked activities; 65 selectable units, 56 complete and 16 open resource-bearing units; 69 activities.
+**Current resource inventory:** 72 units have digital tasks or linked activities; 65 selectable units, 69 complete and 3 open resource-bearing units; 69 activities.
 
 **Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 

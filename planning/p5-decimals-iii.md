@@ -1,5 +1,9 @@
 # 5N4 Decimals (III): private candidate
 
+**Current resource status: complete.** 5N4: 4 numbered objectives and0 inquiry statements. Code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23` passed the linked live checks. This marks resource availability, not pupil achievement. [Verification](p5-live-closure-evidence.json).
+
+## Historical implementation record
+
 **Private 5N4 candidate, incomplete:** Adds72 bilingual decimal multiplication variants and a six-task practical activity covering4 numbered objectives. Static/browser results must be recorded separately; no new completion is claimed. Current inventory193 permanent families/2925 variants;192 selectable/2910;61 selectable units/67 resource units;60 activities;56 resource-complete and11 open resource-bearing units. All2853 predecessor payloads and marking.js remain frozen. First-threeP5 units also remain incomplete pending their independent release. Physical printing, classroom trials, independent translation and screen-reader validation are unperformed.
 
 # 5N4 Decimals (III): official-source and legacy plan

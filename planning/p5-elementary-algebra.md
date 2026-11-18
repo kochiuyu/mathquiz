@@ -1,5 +1,9 @@
 # 5A1: source and private implementation audit
 
+**Current resource status: complete.** 5A1: 2 numbered objectives and0 inquiry statements. Code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23` passed the linked live checks. This marks resource availability, not pupil achievement. [Verification](p5-live-closure-evidence.json).
+
+## Historical implementation record
+
 **Private 5A1–5A2 candidate; incomplete:** Six new families add96variants and two bilingual practical resources for2+3 numbered objectives. Inventory204permanent families/3105variants;203selectable/3090;63selectable units/69resource units;63activities;56complete/13open. All3009predecessor payloads and P1–P4 difficulty/Smart assets are preserved. Algebra units remain incomplete; browser verification is pending. Completed totals stay211numbered plus four inquiry statements.
 
 ## Official scope
