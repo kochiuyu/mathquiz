@@ -519,7 +519,7 @@ const resourceData = {
         "四邊形（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=25",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4S2",
@@ -529,7 +529,7 @@ const resourceData = {
         "分割和拼砌圖形"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=26",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4S3",
@@ -539,7 +539,7 @@ const resourceData = {
         "方向和位置（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=27",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4D1",
@@ -549,7 +549,7 @@ const resourceData = {
         "棒形圖（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=28",
-      "complete": false
+      "complete": true
     },
     {
       "code": "4F1",
@@ -559,7 +559,7 @@ const resourceData = {
         "探究活動"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=29",
-      "complete": false
+      "complete": true
     },
     {
       "code": "5N1",

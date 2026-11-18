@@ -1,4 +1,10 @@
-# 4S2 Dissecting and forming shapes: candidate audit
+# 4S2 Dissecting and forming shapes: verified resource-complete checkpoint
+
+**Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+**This unit contributes 2 numbered objectives and zero inquiry statements.** Source scope and evidence below were reviewed before publication. Earlier candidate status language is retained only as historical provenance and is superseded by this verified checkpoint. Physical/manual limitations remain in force.
+
+## Historical development and source-evidence record
 
 Private candidate; incomplete. No live or practical verification is claimed.
 
@@ -30,10 +36,6 @@ Do not change P1 polygon activities, P3 triangle properties or the exactly-one-p
 All 30 CJS static suites and actual PDF-font cmap coverage pass: 984 source characters, 270,312-byte subset. The independent runtime gate verifies 24 fixtures, 48 bilingual SVGs and 90 rejected missing-piece/duplicate/gap/shear mutations with exact rational clipping, outer-boundary cancellation, rigid piece preservation and independently fixed bilingual answers. The separate activity gate verifies 10 bilingual source/cut/assembly diagrams. All 2,577 predecessor payloads and marking remain frozen. Private 4S2 browser verification passed **519/519 curriculum checks and 181/181 UI checks**, zero failures, as reported by the release coordinator on 17 November 2026. This verifies the private candidate, not a public release; completion flags are unchanged.
 
 Private 4S1 browser verification passed **508/508 curriculum checks and 179/179 UI checks**, zero failures, as reported by the release coordinator on 17 November 2026. These are private-candidate results, not live publication evidence; 4S1 remains incomplete pending its later reviewed public closure. The inherited measures candidate passed private 497/497 curriculum and 177/177 UI checks. Predecessor results were not substituted for the separate 4S2 browser run, and no private test substitutes for live verification.
-
-## Current reconciled private packet
-
-Rebased on published measures closure `7c98f40`: 51 complete units, 200 numbered objectives plus three inquiry statements. Current private inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities; 13 open resource-bearing units. 4S1, 4S2, 4S3, 4D1 and 4F1 remain incomplete. All 35 CJS static suites and actual font coverage pass in an isolated standalone copy (279,960-byte subset, 1,016 source characters). The final combined private browser run passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures, as verified by the release coordinator. Public deployment verification remains pending; all five remaining P4 units stay incomplete and the 51 published completion flags are unchanged.
 
 ## Private rerun provenance
 

@@ -1,0 +1,21 @@
+{
+  "origin": "https://kochiuyu.github.io/mathquiz/",
+  "commit": "b10a7719edb13d935c598c1f01e81f4a24240a0f",
+  "deployed_commit_verified": true,
+  "manifest_sha256": "a03fe9477ce79517c8f55e9305a47482fce5a0113510ea0c9ba27c10ce066552",
+  "curriculum": {
+    "passed": 549,
+    "failed": 0,
+    "total": 549
+  },
+  "ui": {
+    "passed": 187,
+    "failed": 0,
+    "total": 187
+  },
+  "verified_at_utc": "2026-11-18T00:00:12.080785+00:00",
+  "curriculum_evidence": "CUA public tests/regression.html observed PASS title and 549 passed, 0 failed",
+  "ui_evidence": "CUA public tests/ui-regression.html observed PASS title and 187 passed, 0 failed",
+  "deployment_evidence": "GitHub Pages run44203110371 success for exact candidate b10a7719edb13d935c598c1f01e81f4a24240a0f; public browser confirms2661variant release",
+  "note": "Actual completed deployed runs, not targets."
+}

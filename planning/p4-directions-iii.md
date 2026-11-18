@@ -1,4 +1,10 @@
-# 4S3 Directions and positions (III): candidate audit
+# 4S3 Directions and positions (III): verified resource-complete checkpoint
+
+**Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+**This unit contributes 2 numbered objectives and zero inquiry statements.** Source scope and evidence below were reviewed before publication. Earlier candidate status language is retained only as historical provenance and is superseded by this verified checkpoint. Physical/manual limitations remain in force.
+
+## Historical development and source-evidence record
 
 Private candidate, incomplete. [EDB KS2 printed 21 / PDF 27](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=27) and [primary supplement printed 71 / PDF 74](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=74) specify two objectives: recognise intermediate directions and use a compass for direction measurement. Required abbreviations NE/SE/SW/NW, explicit relative positions, all eight compass points and map/route applications. Left/right right-angle turns support route tasks. Numerical bearings, declination and map-scale calculations are outside scope.
 
@@ -25,10 +31,6 @@ Two maps share exact eight vectors N(0,-1), NE(1,-1), E(1,0), SE(1,1), S(0,1), S
 All 32 CJS static suites and actual PDF-font cmap coverage pass in an isolated standalone copy. The subset is 275,792 bytes and covers 1,001 source characters. The runtime oracle independently recovers actual SVG north, reference, facing and road vectors for 24 choices/48 bilingual renders and 192 exhaustive orientation/reversal/turn properties. A separate activity gate checks four compass maps and blank, safe practical records. All 2,601 predecessor payloads and marking are frozen. At that unit-only checkpoint, browser/PDF execution remained pending. The final combined private pass is recorded below; digital results do not establish actual compass use.
 
 Inherited private provenance: Private 4S2 browser verification passed **519/519 curriculum checks and 181/181 UI checks**, zero failures, as reported by the release coordinator on 17 November 2026. This verifies the private candidate, not a public release; completion flags are unchanged. The 4S1 private run passed 508/508 curriculum and 179/179 UI checks. These predecessor results alone did not verify the new 4S3 browser routes; the final combined private pass is recorded below.
-
-## Current reconciled private packet
-
-Rebased on published measures closure `7c98f40`: 51 complete units, 200 numbered objectives plus three inquiry statements. Current private inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities; 13 open resource-bearing units. 4S1, 4S2, 4S3, 4D1 and 4F1 remain incomplete. All 35 CJS static suites and actual font coverage pass in an isolated standalone copy (279,960-byte subset, 1,016 source characters). The final combined private browser run passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures, as verified by the release coordinator. Public deployment verification remains pending; all five remaining P4 units stay incomplete and the 51 published completion flags are unchanged.
 
 ## Private rerun provenance
 

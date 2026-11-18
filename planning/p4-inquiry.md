@@ -1,4 +1,10 @@
-# 4F1 Inquiry and investigation: private activity audit
+# 4F1 Inquiry and investigation: verified resource-complete checkpoint
+
+**Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+**This unit contributes one inquiry statement and zero numbered objectives.** Source scope and evidence below were reviewed before publication. Earlier candidate status language is retained only as historical provenance and is superseded by this verified checkpoint. Physical/manual limitations remain in force.
+
+## Historical development and source-evidence record
 
 17 November 2026. Assets only, incomplete. No question family, numbered objective or completion promotion is added. The release coordinator reconciles current publication state and integrates these assets after the 4D1 candidate.
 
@@ -43,10 +49,6 @@ Merge only the activity, audit and test. Update registration/inventory and brows
 ## Verification state
 
 `tests/p4-inquiry-static.cjs` passes in the assets folder and an isolated copy: exact visible teacher tables, bilingual six-task/five-sheet parity, fourteen blank work/observation fields per language, hidden/revealed-key script, source links and original-work space. Runtime integration and font rebuild passed in the final candidate, followed by the complete 549/549 curriculum and 187/187 UI private browser runs. Deployed verification remains pending. Physical printing, classroom delivery, independent translation and screen-reader use remain unperformed.
-
-## Current private integration checks
-
-Integrated over published measures closure `7c98f40`, preserving all 51 completed flags and all predecessor payloads. All 35 CJS suites and actual font glyph coverage pass in an isolated standalone copy. Font subset: 279,960 bytes / 1,016 source characters. The final combined private browser run passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures, as verified by the release coordinator. Public deployment verification remains pending; all five remaining P4 units stay incomplete and the 51 published completion flags are unchanged.
 
 ## Private rerun provenance
 

@@ -29,7 +29,7 @@ for(const [i,sec]of sections.entries()){
  a(key.includes('EN_KS2_e.pdf#page=28')&&key.includes('pmc2017_e.pdf#page=74'));
  for(const pair of ['44→40','45→50','46→50','249→200','250→300','251→300'])a(key.includes(pair),pair+' key missing');
  a(key.includes('435')&&key.includes('440')&&key.includes('450'));
- a(key.includes(i?'尚未確認資源完成':'not resource-complete'));a(key.includes(i?'屏幕閱讀器':'screen-reader'));
+ a(!key.includes(i?'尚未確認資源完成':'not resource-complete'));a(key.includes(i?'實際列印、課堂試用、獨立翻譯及屏幕閱讀器驗證尚未進行。':'Physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.'));
 }
 // Tally by independent token enumeration, then check the actual bilingual source list/key.
 const responses='Art Music Art Sport Music Art Sport Music Art Music Sport Art'.split(' '),counts={};for(const v of responses)counts[v]=(counts[v]||0)+1;
@@ -45,3 +45,5 @@ const near=(n,u)=>[Math.floor(n/u)*u,(Math.floor(n/u)+1)*u].sort((x,y)=>Math.abs
 a.deepEqual([[44,10],[45,10],[46,10],[249,100],[250,100],[251,100]].map(([n,u])=>near(n,u)),[40,50,50,200,300,300]);
 a.equal([145,145,145].map(n=>near(n,10)).reduce((x,y)=>x+y,0),450);a.equal(near(145*3,10),440);
 console.log('PASS 4D1 activity: bilingual8tasks/6sheets/3blankgrids/3models/4rubricrows; independent geometry,ticks,tallies,scale constraints,rounding and empty observations.');
+
+const data=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../resources.js'),'utf8').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(data.units.find(u=>u.code==='4D1').complete,true,'verified 4D1 closure metadata');

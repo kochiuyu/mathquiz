@@ -1,4 +1,10 @@
-# 4D1 Bar charts (II): private candidate, incomplete
+# 4D1 Bar charts (II): verified resource-complete checkpoint
+
+**Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+**This unit contributes 4 numbered objectives and zero inquiry statements.** Source scope and evidence below were reviewed before publication. Earlier candidate status language is retained only as historical provenance and is superseded by this verified checkpoint. Physical/manual limitations remain in force.
+
+## Historical development and source-evidence record
 
 Four numbered objectives, not three. Published coverage is 51 units, 200 numbered objectives plus three inquiry statements; private work does not promote completion. New families add36 variants; all172 predecessor families/2625variants remain frozen. The combined private browser run now passes 549/549 curriculum and 187/187 UI checks; public deployment verification remains pending.
 
@@ -22,10 +28,6 @@ Three new12-variant choice families preserve legacybar3a,barcompare3a andbar4a p
 Independent tests pin the full172-family/2625-variant predecessor hash and marking bytes, enumerate all36 new fixtures, check actual rendered24 bilingual SVGs, exact ticks/endpoints/equal widths and origins, rounding via adjacent-multiple distances (2000cases), and capacity constraints by enumerating allowed scales. Initial proposed350 count was replaced with400 so chosen100 scales retain whole-tick endpoints; no fractional-grid interpretation is smuggled in.
 
 All 36 new variants passed bilingual actual assessment/practice and bounded paper/key/PDF checks in the final 549/549 private curriculum run; UI passed 187/187. Deployed verification remains required. Physical printing, classroom trials, independent translation, screen-reader validation and actual pupil performance remain unverified. No completion email is warranted by this private candidate.
-
-## Current private integration checks
-
-Integrated over published measures closure `7c98f40`, preserving all 51 completed flags and all predecessor payloads. All 35 CJS suites and actual font glyph coverage pass in an isolated standalone copy. Font subset: 279,960 bytes / 1,016 source characters. The final combined private browser run passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures, as verified by the release coordinator. Public deployment verification remains pending; all five remaining P4 units stay incomplete and the 51 published completion flags are unchanged.
 
 ## Private rerun provenance
 

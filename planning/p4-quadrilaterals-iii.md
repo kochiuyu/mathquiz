@@ -1,4 +1,10 @@
-# 4S1 Quadrilaterals (III): candidate source and objective audit
+# 4S1 Quadrilaterals (III): verified resource-complete checkpoint
+
+**Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
+
+**This unit contributes 3 numbered objectives and zero inquiry statements.** Source scope and evidence below were reviewed before publication. Earlier candidate status language is retained only as historical provenance and is superseded by this verified checkpoint. Physical/manual limitations remain in force.
+
+## Historical development and source-evidence record
 
 Private candidate, incomplete. No claim of live verification or pupil mastery.
 
@@ -33,10 +39,6 @@ Historical unit-only candidate inventory: 168 permanent families / 2,577 variant
 Required checks: independent integer edge norm/dot/cross geometry; convex simple outlines; exact answer and bilingual-name contracts; all 24 assessment/practice routes; bounded bilingual paper/key/PDF geometry and labels; actual font cmap coverage; activity geometry and blank records; standalone static gates without sibling checkout dependencies. Physical printing, classroom trial, independent translation and screen-reader validation remain unperformed.
 
 Private verification: all 28 CJS static suites and actual PDF-font cmap coverage pass (976 source characters, 268,292-byte subset). The independent runtime oracle checks 24 choices, 48 bilingual SVGs and 27,248 exact integer quadrilateral implications; the separate activity oracle checks 12 bilingual cards. Private 4S1 browser verification passed **508/508 curriculum checks and 179/179 UI checks**, zero failures, as reported by the release coordinator on 17 November 2026. These are private-candidate results, not live publication evidence; 4S1 remains incomplete pending its later reviewed public closure.
-
-## Current reconciled private packet
-
-Rebased on published measures closure `7c98f40`: 51 complete units, 200 numbered objectives plus three inquiry statements. Current private inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities; 13 open resource-bearing units. 4S1, 4S2, 4S3, 4D1 and 4F1 remain incomplete. All 35 CJS static suites and actual font coverage pass in an isolated standalone copy (279,960-byte subset, 1,016 source characters). The final combined private browser run passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures, as verified by the release coordinator. Public deployment verification remains pending; all five remaining P4 units stay incomplete and the 51 published completion flags are unchanged.
 
 ## Private rerun provenance
 

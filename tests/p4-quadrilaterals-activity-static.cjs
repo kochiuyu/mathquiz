@@ -38,6 +38,6 @@ a.ok(html.includes('data-unit="4S1"'));a.ok(html.includes('setAttribute(\'aria-e
 for(const term of ['not calibrated','Separately make models','Draw different rhombuses','Independent / prompted / not yet / not observed','製作不能用繪圖或選擇題代替','原作、工具、日期及下一步']){a.ok(html.includes(term),term);}
 for(const source of ['EN_KS2_e.pdf#page=25','pmc2017_e.pdf#page=72'])a.equal(html.split(source).length-1,2);
 const data=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));
-a.equal(data.units.length,85);a.equal(data.units.find(x=>x.code==='4S1').complete,false);a.equal(data.activities.filter(x=>x.path==='activities/p4-quadrilaterals-iii.html').length,1);a.deepEqual(data.activities.find(x=>x.path==='activities/p4-quadrilaterals-iii.html').units,['4S1']);
+a.equal(data.units.length,85);a.equal(data.units.find(x=>x.code==='4S1').complete,true);a.equal(data.activities.filter(x=>x.path==='activities/p4-quadrilaterals-iii.html').length,1);a.deepEqual(data.activities.find(x=>x.path==='activities/p4-quadrilaterals-iii.html').units,['4S1']);
 a.ok(read('tools/build-pdf-font.py').includes('activities/p4-quadrilaterals-iii.html'));
 console.log('PASS 4S1 activity: '+rendered+' exact bilingual convex cards, visible lengths/classes, isotropic SVG/margins, six tasks/five sheets per language, three blank objectives and hidden teacher key.');
