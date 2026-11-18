@@ -206,7 +206,13 @@
   ];
   const results = document.getElementById("results");
   const summary = document.getElementById("summary");
-  let passed = 0, failed = 0;
+  let passed = 0, failed = 0, skipped = 0;
+  const parameters=new URLSearchParams(location.search),scope=parameters.get('scope')==='p5'?'p5':'all',only=parameters.get('only'),failures=[];
+  const p5Ids=new Set(expectedFamilies.filter(f=>f[1]===5).map(f=>f[0]));
+  const sharedChecks=new Set(['Fixed v1 questions','Family catalogue','Released bilingual and response contracts · 2853 variants']);
+  function inScope(label){return scope==='all'||sharedChecks.has(label)||/\bP5\b|^5[A-Z][0-9]/.test(label)||p5Ids.has(label.split(' · ')[0]);}
+  document.getElementById('test-scope').textContent=scope==='p5'?'P5 skills + shared frozen-data contracts':'All curriculum checks';
+  if(only)document.getElementById('test-scope').textContent+=' · filtered: '+only;
 
   function assert(ok, message) {
     if (!ok) throw new Error(message);
@@ -223,6 +229,7 @@
     return Array.from(new Uint8Array(bytes),b=>b.toString(16).padStart(2,"0")).join("");
   }
   async function check(label,run) {
+    if(!inScope(label)||(only&&!label.includes(only))){skipped++;return;}
     const row = document.createElement("li");
     try {
       await run();
@@ -231,6 +238,7 @@
       row.textContent = "PASS · "+label;
     } catch (error) {
       failed++;
+      failures.push({name:label,error:error.message});
       row.className = "fail";
       row.textContent = "FAIL · "+label+" · "+error.message;
     }
@@ -3154,7 +3162,9 @@
   for(const lang of ['en','zh'])for(const family of productFamilies5)await check('5N3 full practice '+family.id+' '+lang,async()=>{const f=await shapeFrame('?p=5&view=practice&skill='+family.id+'&lang='+lang);try{const d=f.contentDocument;for(let i=0;i<family.count;i++){const q=family.make(i);if(i===0){d.getElementById('practice-form').requestSubmit();assert(d.getElementById('practice-next').hidden,'blank remains retry');if(q.choices)d.querySelector('input[value="'+q.choices.find(v=>v!==q.answer[0])+'"]').checked=true;else d.querySelector('#practice-form input').value='1/0';d.getElementById('practice-form').requestSubmit();assert(d.getElementById('practice-next').hidden,'wrong remains retry');}if(q.choices)d.querySelector('input[value="'+q.answer[0]+'"]').checked=true;else d.querySelector('#practice-form input').value=q.answer[0];d.getElementById('practice-form').requestSubmit();assert(!d.getElementById('practice-next').hidden,'practice correct');d.getElementById('practice-next').click();}assert(!d.getElementById('practice-form'),'practice complete');}finally{f.remove();}});
   for(const lang of ['en','zh'])await check('5N3 six-task observed activity '+lang,async()=>{const f=await shapeFrame('activities/p5-fractions-iv.html?lang='+lang);try{const d=f.contentDocument,s=d.getElementById(lang);assert(d.body.dataset.unit==='5N3','5N3 activity route');assert(s.querySelectorAll('[data-task]').length===6,'six practical groups');assert(s.querySelector('.key').hidden,'key hidden');d.getElementById('key-toggle').click();assert(!s.querySelector('.key').hidden,'key reveal');d.getElementById('key-toggle').click();assert(s.querySelector('.key').hidden,'key hide again');f.style.width='360px';await new Promise(r=>setTimeout(r,60));assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'activity mobile width');}finally{f.remove();}});
 
-  window.regressionResult = {passed,failed};
+  window.regressionResult = {passed,failed,skipped,scope,only,failures};
+  if(passed+failed===0){summary.textContent='No checks matched this filter.';document.documentElement.dataset.result='empty';document.title='NO MATCH · MathQuiz regression checks';return;}
+  summary.textContent=passed+' passed, '+failed+' failed · '+scope+' scope · '+skipped+' outside this run';
   document.documentElement.dataset.result = failed?"fail":"pass";
   document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
 })();

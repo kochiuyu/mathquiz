@@ -54,4 +54,5 @@ except AssertionError:pass
 else:raise AssertionError('HTML swallowing mutation was not detected')
 print('PASS180 production HTML parses: all72 keys x2 languages plus36 relation surface cases; plain/localized/labeled keys and explanations exact, raw IDs preserved, old markup mutation rejected.')
 `;
-const parsed=require('child_process').spawnSync('python3',['-c',htmlOracle],{input:JSON.stringify(htmlCases),encoding:'utf8'});a.equal(parsed.status,0,parsed.stdout+parsed.stderr);console.log(parsed.stdout.trim());
+const python=process.env.PYTHON||(process.platform==='win32'?'python':'python3');
+const parsed=require('child_process').spawnSync(python,['-c',htmlOracle],{input:JSON.stringify(htmlCases),encoding:'utf8'});a.equal(parsed.status,0,'HTML oracle requires Python 3; set PYTHON to its executable path. '+(parsed.error?.message||'')+(parsed.stdout||'')+(parsed.stderr||''));console.log(parsed.stdout.trim());

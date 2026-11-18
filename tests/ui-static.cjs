@@ -52,5 +52,5 @@ assert(uiRunner.includes("querySelectorAll('.badge.complete').length===56"));
 assert(!uiRunner.includes('===174'),'no stale UI family count');
 
 for(const file of ['index.html','coverage.html','tests/regression.html'])assert(read(file).includes('builder.js?v=p5-order-html-r2'),'updated order labels cache');
-assert(read('tests/regression.html').includes('regression.js?v=p5-key-shapes-r3'));
+assert(read('tests/regression.html').includes('regression.js?v=p5-verification-r1'));
 assert(read('tests/ui-regression.html').includes('ui-regression.js?v=p5-ui-counts-r2'));
