@@ -29,4 +29,4 @@ This release makes the decision sequence explicit: **year → level → skill �
 
 ## Verification
 
-Actual local and public results, preserved failures and deployed commit identifiers are recorded in `levels-navigation-evidence.json` after verification.
+The [runtime release](https://github.com/kochiuyu/mathquiz/commit/70766782b308f2e39b0d8016342edc17be983791) is deployed. All 228 distinct level-navigation/session cases and 193 shared UI cases are verified locally and publicly. Both level-UI full runs had one page-load timeout; exact isolated reruns passed. The shared UI full runs passed 193/193 without failures. Seven static gates passed, and all thirteen changed runtime assets match the deployed site. See [the evidence record](levels-navigation-evidence.json) for the original failures, reruns, exact case scope and limitations.

@@ -1,0 +1,146 @@
+{
+  "release": "P1–P4 level navigation UI",
+  "date": "2026-11-18",
+  "base_commit": "718c336e631ba447882a9f92b6bda62143b3fef0",
+  "runtime_commit": "70766782b308f2e39b0d8016342edc17be983791",
+  "deployment": {
+    "run_id": 44288118722,
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "scope": {
+    "skills": 165,
+    "grade_counts": {
+      "P1": 38,
+      "P2": 41,
+      "P3": 35,
+      "P4": 51
+    },
+    "levelled_tasks_unchanged": 5940,
+    "core_families_unchanged": 188,
+    "core_variants_unchanged": 2853
+  },
+  "local": {
+    "initial_incomplete_run": {
+      "passed": 208,
+      "failed": 0,
+      "reason": "Stopped to replace requestAnimationFrame test waiting, which was throttled in background tabs."
+    },
+    "full_level_ui": {
+      "passed": 223,
+      "failed": 1,
+      "total": 224,
+      "failures": [
+        {
+          "name": "Search, empty state, reset and level choice zh",
+          "error": "Page load timeout",
+          "url": "http://127.0.0.1:8026/skill-levels.html?lang=zh&p=4&uiCheck=1794998382686-0.7403873056897773"
+        }
+      ]
+    },
+    "exact_timeout_rerun": {
+      "passed": 1,
+      "failed": 0
+    },
+    "added_active_view_checks": {
+      "passed": 4,
+      "failed": 0
+    },
+    "distinct_current_level_ui_cases_verified": 228,
+    "shared_ui": {
+      "passed": 193,
+      "failed": 0
+    }
+  },
+  "static_gates": {
+    "passed": 7,
+    "names": [
+      "static",
+      "ui-static",
+      "p1-skill-static",
+      "p2-skill-static",
+      "p3-skill-static",
+      "p4-skill-static",
+      "levels-ui-static"
+    ]
+  },
+  "runtime_assets": {
+    "all_13_local_public_sha256_match": true,
+    "normalization": "UTF-8 with CRLF normalized to LF",
+    "hashes": {
+      "skill-directory.js": "effeed98d603da9fbd387f0c6096b7459fa438d8effeda73d30ea252be6ea740",
+      "skill-levels.html": "83650e1d1e6f230610f848269ec7ff43511d632e5347684edc9435215e4e5827",
+      "skill-levels-hub.js": "7894564d5a6042630789eed58da5115280a023fad6afbfc4ee1f46527368fa7e",
+      "skill-session-ui.js": "a8e07f9af011e9f939255bbc90fec244f5208d9f7bd9e97a18c69ceba8abc30b",
+      "levels-ui.css": "231881f7266ad622c863782fd251e3b84bdc46e86aa681126dc06072d5ea611e",
+      "ui.js": "244bb5678a92b08fa9a8c70ae15ede0877e4b57aef6b4875149fd59c9695d772",
+      "ui.css": "d24057ce8f9e3a2ed7ef2ad2e65b50f7ade0c1d90bd5e98656b2b22cb9d7ed1a",
+      "index.html": "d4e06217aaf5fb06f2557d913764f2847ef1206680b7c60a867766980f95f064",
+      "coverage.html": "9bdc65c8c8962ddf21682d491cc6e0c4e2be9ac4f5ebd43cf1b2171c190df7d0",
+      "p1-skill-levels.html": "1003a057d1f328a09b05a4709eff2e2b3148bcf54ca2de0bca0d4b061c8bbda2",
+      "p2-skill-levels.html": "0c40d8a5d1030c14ebbe655e65aec87caa9dcfb43b36c62c12beb850a6c4e988",
+      "p3-skill-levels.html": "1e8d94b35144c380abe9fadbcd0a9dc19ecd0d14a172ff10f28bbc262e1882a0",
+      "p4-skill-levels.html": "97ef40c2572ac564ed7db19826719a121f580d39fdce5166030109f0da6e0300"
+    }
+  },
+  "preservation": {
+    "unchanged_tracked_files": 311,
+    "changed_existing_paths": [
+      "README.md",
+      "coverage.html",
+      "index.html",
+      "p1-skill-levels.html",
+      "p2-skill-levels.html",
+      "p3-skill-levels.html",
+      "p4-skill-levels.html",
+      "ui.css",
+      "ui.js"
+    ],
+    "question_data_marking_diagrams_and_curriculum_files_unchanged": true
+  },
+  "manual_deferred": [
+    "pupil difficulty calibration",
+    "classroom usability review",
+    "independent translation review",
+    "physical print review",
+    "full screen-reader assessment"
+  ],
+  "limits": [
+    "Full historical curriculum browser suite was not rerun.",
+    "Automated checks do not establish pupil mastery or calibrated difficulty.",
+    "Paper and key DOM/layout checks do not establish physical printer output."
+  ],
+  "browser_scope": {
+    "directory": "Every one of the 165 links checked in both languages, with exact grade, skill, difficulty and set routes.",
+    "phone_layout": "All 165 skills: Difficult, all 12 tasks, 320px; English/Traditional Chinese alternate by skill.",
+    "marking_and_views": "24 representative grade/language/level combinations; blank prevention, correct scoring, locked answers, retry, progress, next-set link and quiz/paper/key parity.",
+    "navigation": "Search, unit filters, empty state, clearing, history, language, 10 hub viewport cases, 200% text, four grade selector/draft/marked transfer cases, invalid routes and active-view draft protection."
+  },
+  "public": {
+    "origin": "https://kochiuyu.github.io/mathquiz/",
+    "full_level_ui": {
+      "passed": 227,
+      "failed": 1,
+      "total": 228,
+      "failures": [
+        {
+          "name": "Directory P3 zh",
+          "error": "Page load timeout",
+          "url": "https://kochiuyu.github.io/mathquiz/skill-levels.html?p=3&lang=zh&level=difficult&uiCheck=1794998696649-0.02350563897754554"
+        }
+      ]
+    },
+    "exact_timeout_rerun": {
+      "passed": 1,
+      "failed": 0
+    },
+    "distinct_current_level_ui_cases_verified": 228,
+    "shared_ui": {
+      "passed": 193,
+      "failed": 0
+    },
+    "total_distinct_browser_cases_verified": 421,
+    "no_product_assertion_failures": true,
+    "timeout_cause": "Not established; exact original cases passed isolated reruns. Timeouts are retained as failures in the run records."
+  }
+}

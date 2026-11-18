@@ -453,8 +453,10 @@ All four skill banks share a compact session layout: a collapsed setup panel, vi
 - [x] Apply a consistent compact session layout to P1–P4.
 - [x] Add readable level choices, progress and post-marking next steps.
 - [x] Preserve bilingual answers, paper/key separation and original question banks.
-- [ ] Record final local and public verification below.
+- [x] Record final local and public verification below.
 - [ ] Deferred human review: pupil calibration, classroom usability, independent translation, physical print and full screen-reader assessment.
 
 
-**Local verification:** all 228 distinct level-navigation/session checks are verified: the full run passed 223/224 with one page-load timeout, that exact case passed on rerun, and four added active-view/draft checks passed 4/4. The original background-frame test wait was replaced before the full run. Shared UI passed 193/193; seven static gates passed. No question-bank, marking, diagram or curriculum-data file changed. Public deployment verification will be recorded after publication.
+**Published and verified:** [UI release 7076678](https://github.com/kochiuyu/mathquiz/commit/70766782b308f2e39b0d8016342edc17be983791) deployed successfully (Pages run 44288118722). **All 228 public level-navigation/session cases are verified:** the full run passed 227/228 with one P3 Chinese directory page-load timeout, and that exact case passed 1/1 on rerun. Shared UI passed **193/193**, giving **421 distinct public browser cases verified**. All thirteen changed runtime assets match the local build. Seven static gates passed; 311 predecessor files, including every question bank and marking/diagram/curriculum file, are unchanged.
+
+Locally, all 228 distinct cases are verified: a 223/224 full run, its exact timeout rerun 1/1, and four added active-view/draft checks 4/4. Local shared UI passed 193/193. An earlier incomplete run was stopped to replace a background-frame test wait; it is not counted as a finished run. The original timeouts, exact reruns and test scope are retained in [release evidence](planning/levels-navigation-evidence.json). The full historical curriculum browser suite and deferred human reviews were not run.
