@@ -340,3 +340,13 @@ Public `23b60fb` passed 371/371 curriculum and 150/150 UI checks. All six object
 ## Remaining P4 private verification provenance
 
 The first complete private run recorded 544 passes and five failures, with UI 187/187 passing. Two failures came from inherited 171-family expectations instead of the independently verified 174 selectable families. Three came from new 4D1 routes using a test-helper default sequence [0,6,11] instead of the actual full [0..11] practice sequence. Exact counts, new-ID sample maps and static guards were corrected without changing computational runtime or weakening assertions. The subsequent full 549/549 and 187/187 private rerun passed. The first run is retained as failed test-harness provenance, not a release pass.
+
+
+
+## P1 question difficulty pilot ? 18 November 2026
+
+Question variations and difficulty are different. The new [P1 pilot](https://kochiuyu.github.io/mathquiz/p1-levels.html) offers **Easy / Normal / Difficult** for **1N1 Numbers to 20** and **1N2 Basic addition and subtraction**: 12 questions per level per unit, **72 questions in total**. Each level has three task formats, not merely larger numbers. Both languages, reproducible three-question sets, feedback, partial credit, retry, browser-print pupil sheets and worked keys are included.
+
+These are provisional teaching levels, not measured pupil ability or mastery. Harder tasks combine clues, recover missing information or check a claim while respecting the same unit's curriculum limits. Existing questions have not all been labelled easy. The [P1 difficulty plan](planning/p1-difficulty-pilot.md) explains the rationale, source limits, an evaluation approach and the rollout for all twelve P1 units; the other ten units are still planned.
+
+The pilot is linked from Home and both resource-browser unit groups. It is **separate from the mixed-quiz builder**, with its own stable IDs and counts; it does not add 72 to the core family totals or change any curriculum-complete flag. Direct PDF download is not included; use browser Print / Save as PDF. Pupil trials, independent language review and manual print/accessibility checks remain deferred. Static answer/scope checks pass for all 72 questions; local and public browser results will be recorded in the pilot brief after verification.
