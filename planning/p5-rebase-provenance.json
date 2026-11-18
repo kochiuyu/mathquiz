@@ -10,7 +10,7 @@
   "static_cjs_passed": 44,
   "font_passed": true,
   "standalone_passed": true,
-  "browser_verification_scope": "616/616 curriculum checks on identical computational assets; fresh193/193 UI,248/248 P1 unit and251/251 P1 skill checks after preserving the concurrent release. Live P5 verification pending.",
+  "browser_verification_scope": "Historical private full suite: 616/616 curriculum,193/193 UI,248/248 P1 unit and251/251 P1 skill checks. Current focused verification on 18 November 2026:86/86 P5 and shared-contract browser checks locally and publicly;530 other cases explicitly outside this run. See p5-test-results.json.",
   "private_curriculum": {
     "passed": 616,
     "failed": 0,
@@ -26,8 +26,8 @@
     "failed": 0,
     "total": 248
   },
-  "live_verified": false,
-  "rerun_provenance": "The first complete private curriculum run recorded 614 passes and two failures: a real HTML interpretation defect in six new 5N2 relation labels and a real 5N3 SVG font-size override that clipped labels. The scoped fixes preserved all 2,661 published predecessor payloads. The second run recorded 615 passes and one failure caused by the test\u2019s expected-key fallback for plain choices, not an additional runtime defect. After that test-only correction, the final full run passed 616/616. The first private UI run recorded 191 passes and two failures from stale catalogue/activity counters; corrected exact-count tests passed 193/193. Dedicated P1 checks passed 248/248 on the same corrected runtime. Earlier failed runs are retained as provenance, not counted as passing verification. All 43 static gates, actual font coverage and isolated-copy checks passed, including 144 production key HTML parses. No live P5 verification, classroom observation, physical printing, independent translation or screen-reader validation is claimed.",
+  "live_verified": true,
+  "rerun_provenance": "The first complete private curriculum run recorded 614 passes and two failures: a real HTML interpretation defect in six new 5N2 relation labels and a real 5N3 SVG font-size override that clipped labels. The scoped fixes preserved all 2,661 published predecessor payloads. The second run recorded 615 passes and one failure caused by the test’s expected-key fallback for plain choices, not an additional runtime defect. After that test-only correction, the final full run passed 616/616. The first private UI run recorded 191 passes and two failures from stale catalogue/activity counters; corrected exact-count tests passed 193/193. Dedicated P1 checks passed 248/248 on the same corrected runtime. Earlier failed runs are retained as provenance, not counted as passing verification. All 43 static gates, actual font coverage and isolated-copy checks passed, including 144 production key HTML parses. No live P5 verification, classroom observation, physical printing, independent translation or screen-reader validation is claimed.",
   "concurrent_p1_skill_preserved": true,
   "private_integration_verified": true,
   "private_integration_pending": [],
@@ -35,5 +35,25 @@
     "passed": 251,
     "failed": 0,
     "total": 251
+  },
+  "current_p5_verification": {
+    "commit": "beb30ebdae259631cbf7108f9b93e52dba927c3f",
+    "local": {
+      "passed": 86,
+      "failed": 0,
+      "skipped": 530,
+      "scope": "p5",
+      "only": null,
+      "failures": []
+    },
+    "public": {
+      "passed": 86,
+      "failed": 0,
+      "skipped": 530,
+      "scope": "p5",
+      "only": null,
+      "failures": []
+    },
+    "report": "p5-test-verification.md"
   }
 }

@@ -1,0 +1,21 @@
+CHECK static.cjs
+PASS 188 families / 2853 variants: bilingual/schema/mark/choice contracts, all stable-link round trips and malformed/bounds checks and all frozen payload hashes.
+CHECK ui-static.cjs
+PASS UI: 85 unique bilingual units, 59 linked activities, every selectable family mapped, local assets, JS parsing and primary text/control contrast.
+CHECK p5-multi-digit-independent-static.cjs
+PASS5N1:60variants,2661frozenpredecessors,independent BigInt rounding/324properties,decimal-string comparison,explicit bilingual names,practice registration. Browser pending.
+CHECK p5-multi-digit-activity-static.cjs
+PASS 5N1 activity: bilingual six tasks, four objective records, 32 empty evidence fields, ten rounding rows per language independently checked with BigInt distances, two sequences, six exact model calculations; browser/print/classroom pending.
+CHECK p5-fractions-independent-static.cjs
+PASS5N2:72 independent exact rational fixtures,48 response contracts,2721 frozen predecessors/unchanged marking,three-term denominator bounds,7744 algebraic properties;browser pending.
+PASS displayed operands and 84 exact pairwise common-denominator steps; no three-number LCM algorithm required.
+PASS180 production HTML parses: all72 keys x2 languages plus36 relation surface cases; plain/localized/labeled keys and explanations exact, raw IDs preserved, old markup mutation rejected.
+CHECK p5-fractions-activity-static.cjs
+PASS 5N2 activity: six bilingual tasks, four blank objective records,32 empty fields;14 visible model rows,4 order chains,4 strict estimate bounds independently checked with BigInt rationals; borrowed-whole inverse and denominator-error rejection. Browser/print pending.
+CHECK p5-products-independent-static.cjs
+PASS5N3:60 exact rational fixtures,48 response contracts,2793 predecessors/marking frozen,2704 cell-count/algebra properties,24 bilingual SVGs and72 rejected geometry mutations;browser pending.
+CHECK p5-fractions-product-activity-static.cjs
+PASS5N3 activity: six bilingual tasks/two objectives,28 empty fields;20 visible product models,exact conversions/bounds,finite-cell overlap and positive/zero multiplier counterexamples. Browser/print pending.
+CHECK regression-scope-static.cjs
+PASS runner selection: all19 P5 families/shared contracts, unrelated grades excluded, default full suite, failures retained, filtered empty runs never green.
+PASS PDF font: 1033 source characters covered by actual nonzero glyphs, including all current EN/繁中 paper, keys and practical resource.

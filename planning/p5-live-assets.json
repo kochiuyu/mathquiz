@@ -1,0 +1,179 @@
+{
+  "commit": "beb30ebdae259631cbf7108f9b93e52dba927c3f",
+  "files": [
+    {
+      "path": "index.html",
+      "matches": true,
+      "sha256": "20350aebc6770dca233750a6f948b54326c98d37547a40aa1fbd1aec19f1b4ad",
+      "live_sha256": "20350aebc6770dca233750a6f948b54326c98d37547a40aa1fbd1aec19f1b4ad"
+    },
+    {
+      "path": "quiz.css",
+      "matches": true,
+      "sha256": "98f89dca55040cbf5d4ec6c837c335d64f38c2d964ecc1dadb4370b65129b454",
+      "live_sha256": "98f89dca55040cbf5d4ec6c837c335d64f38c2d964ecc1dadb4370b65129b454"
+    },
+    {
+      "path": "ui.css",
+      "matches": true,
+      "sha256": "d24057ce8f9e3a2ed7ef2ad2e65b50f7ade0c1d90bd5e98656b2b22cb9d7ed1a",
+      "live_sha256": "d24057ce8f9e3a2ed7ef2ad2e65b50f7ade0c1d90bd5e98656b2b22cb9d7ed1a"
+    },
+    {
+      "path": "resource-browser.css",
+      "matches": true,
+      "sha256": "1093d3995b469449083e33002a418d63fd972b3f6ac47cf9ed5b3484139b988d",
+      "live_sha256": "1093d3995b469449083e33002a418d63fd972b3f6ac47cf9ed5b3484139b988d"
+    },
+    {
+      "path": "questions.js",
+      "matches": true,
+      "sha256": "9deba9491f28287208c0bd913a75823dcb58840eb03ef4e65397c21e6aec28fb",
+      "live_sha256": "9deba9491f28287208c0bd913a75823dcb58840eb03ef4e65397c21e6aec28fb"
+    },
+    {
+      "path": "builder.js",
+      "matches": true,
+      "sha256": "291a28eb2105927584d08033e2170602d8b16eb5d2404005fb7ed80b03111c99",
+      "live_sha256": "291a28eb2105927584d08033e2170602d8b16eb5d2404005fb7ed80b03111c99"
+    },
+    {
+      "path": "marking.js",
+      "matches": true,
+      "sha256": "625361f4c2e9e1101eb3ed7e8233cfa06573ed458242a78fe1145947f301ba2e",
+      "live_sha256": "625361f4c2e9e1101eb3ed7e8233cfa06573ed458242a78fe1145947f301ba2e"
+    },
+    {
+      "path": "directions4.js",
+      "matches": true,
+      "sha256": "076adc7cef2284705e41bcb8c8fcdeaf1fecb5b82a334f920f4f36c2f3d1f910",
+      "live_sha256": "076adc7cef2284705e41bcb8c8fcdeaf1fecb5b82a334f920f4f36c2f3d1f910"
+    },
+    {
+      "path": "dissection4.js",
+      "matches": true,
+      "sha256": "b96eda8395506d26ad6d32b1d23a74b5b8fb895771b866c1fd36dbfbfd8c2c71",
+      "live_sha256": "b96eda8395506d26ad6d32b1d23a74b5b8fb895771b866c1fd36dbfbfd8c2c71"
+    },
+    {
+      "path": "quadrilateral4.js",
+      "matches": true,
+      "sha256": "d17378d4eea2edeab3e2a9fccf735b193f9c8c53ebc6b21e6b470bbbd6cc6785",
+      "live_sha256": "d17378d4eea2edeab3e2a9fccf735b193f9c8c53ebc6b21e6b470bbbd6cc6785"
+    },
+    {
+      "path": "area4.js",
+      "matches": true,
+      "sha256": "780fcf032312e7b5be242f99c336deac28736c21dc25df4368cb88b291d0d161",
+      "live_sha256": "780fcf032312e7b5be242f99c336deac28736c21dc25df4368cb88b291d0d161"
+    },
+    {
+      "path": "perimeter4.js",
+      "matches": true,
+      "sha256": "c5705367c430b986f02418cbe74f4f7e2c46552b99e0e4204aa35d4a8c5b2ce4",
+      "live_sha256": "c5705367c430b986f02418cbe74f4f7e2c46552b99e0e4204aa35d4a8c5b2ce4"
+    },
+    {
+      "path": "decimals4.js",
+      "matches": true,
+      "sha256": "b04cd3a034a6edfc7e1085c8218f4e1818b83ba94dfd97d8e2bd032136d97ecf",
+      "live_sha256": "b04cd3a034a6edfc7e1085c8218f4e1818b83ba94dfd97d8e2bd032136d97ecf"
+    },
+    {
+      "path": "fractions5.js",
+      "matches": true,
+      "sha256": "f2a42a8300ae970aa0ef1358cdc82bf6e95f47f8e48ecafa2ed540f035160cea",
+      "live_sha256": "f2a42a8300ae970aa0ef1358cdc82bf6e95f47f8e48ecafa2ed540f035160cea"
+    },
+    {
+      "path": "fractions4.js",
+      "matches": true,
+      "sha256": "107aa45a1878acba5247d6459337cbb107dc416ba39b3bd9d58f8b6960cc8297",
+      "live_sha256": "107aa45a1878acba5247d6459337cbb107dc416ba39b3bd9d58f8b6960cc8297"
+    },
+    {
+      "path": "resources.js",
+      "matches": true,
+      "sha256": "32e33e63bf4fb751020d20240fb1f741ac120213667b88804690a4eca2679a78",
+      "live_sha256": "32e33e63bf4fb751020d20240fb1f741ac120213667b88804690a4eca2679a78"
+    },
+    {
+      "path": "resource-browser.js",
+      "matches": true,
+      "sha256": "98becaa20858b54474c6ef00b191a1aa266c79c3f359b0d3ddb7e795d2614f03",
+      "live_sha256": "98becaa20858b54474c6ef00b191a1aa266c79c3f359b0d3ddb7e795d2614f03"
+    },
+    {
+      "path": "ui.js",
+      "matches": true,
+      "sha256": "e5d282ee2d4ac79511d09d4349529aed1c45c540f75815144b2882f21d9c2bc6",
+      "live_sha256": "e5d282ee2d4ac79511d09d4349529aed1c45c540f75815144b2882f21d9c2bc6"
+    },
+    {
+      "path": "builder-ui.js",
+      "matches": true,
+      "sha256": "9c354c3b74fb2cee88d9f704550fd9e937c653fa4465ff97c95445332ddaa5c2",
+      "live_sha256": "9c354c3b74fb2cee88d9f704550fd9e937c653fa4465ff97c95445332ddaa5c2"
+    },
+    {
+      "path": "session-ui.js",
+      "matches": true,
+      "sha256": "1ed2e52685b5c432ea0d8f990ecb38bc772bc40bf8c96c43b6cb9483c0f9d5a8",
+      "live_sha256": "1ed2e52685b5c432ea0d8f990ecb38bc772bc40bf8c96c43b6cb9483c0f9d5a8"
+    },
+    {
+      "path": "quiz.js",
+      "matches": true,
+      "sha256": "47fc4d7f31222c4548060fbde6ca28a6f6e37fd86cb75cc686ed9518aa0b66cc",
+      "live_sha256": "47fc4d7f31222c4548060fbde6ca28a6f6e37fd86cb75cc686ed9518aa0b66cc"
+    },
+    {
+      "path": "pdf-export.js",
+      "matches": true,
+      "sha256": "876f3f4b65e0d8488740f0cc02932b9fde9258f7876e7f38c84cf923ab372509",
+      "live_sha256": "876f3f4b65e0d8488740f0cc02932b9fde9258f7876e7f38c84cf923ab372509"
+    },
+    {
+      "path": "pupil-ui.js",
+      "matches": true,
+      "sha256": "9d3340da8714a91c2a00a79a679a31b4af66e12597609481777b95c58dac2692",
+      "live_sha256": "9d3340da8714a91c2a00a79a679a31b4af66e12597609481777b95c58dac2692"
+    },
+    {
+      "path": "tests/regression.html",
+      "matches": true,
+      "sha256": "267d106f1aa838a04ab83ccbaed9dac290b8e1b312709cc80383024ab3c8724c",
+      "live_sha256": "267d106f1aa838a04ab83ccbaed9dac290b8e1b312709cc80383024ab3c8724c"
+    },
+    {
+      "path": "tests/regression.js",
+      "matches": true,
+      "sha256": "ab2c0d114a3bc8ae8d9303bb332ebe6f0b92ab301a633deebf129b27fc7c2671",
+      "live_sha256": "ab2c0d114a3bc8ae8d9303bb332ebe6f0b92ab301a633deebf129b27fc7c2671"
+    },
+    {
+      "path": "activities/p5-multi-digit-numbers.html",
+      "matches": true,
+      "sha256": "9f10bfe693e01fb28d7a5401090a81aad8cd47db54cd7c825c768e545f9f2f8d",
+      "live_sha256": "9f10bfe693e01fb28d7a5401090a81aad8cd47db54cd7c825c768e545f9f2f8d"
+    },
+    {
+      "path": "activities/p5-fractions-iii.html",
+      "matches": true,
+      "sha256": "2a41a1f80e2f7ae740a2de35875c7191c9d013711ee1b5fe63f3b1135a39d295",
+      "live_sha256": "2a41a1f80e2f7ae740a2de35875c7191c9d013711ee1b5fe63f3b1135a39d295"
+    },
+    {
+      "path": "activities/p5-fractions-iv.html",
+      "matches": true,
+      "sha256": "8e6577422b61edbf99ba0e14fe0aef6e8a98eaf04f56721e763552653a5d895b",
+      "live_sha256": "8e6577422b61edbf99ba0e14fe0aef6e8a98eaf04f56721e763552653a5d895b"
+    },
+    {
+      "path": "fonts/mathquiz-text.ttf",
+      "matches": true,
+      "sha256": "48b39ea3aaf539d78493adc271791635fd554693a444b684520105e913de11fc",
+      "live_sha256": "48b39ea3aaf539d78493adc271791635fd554693a444b684520105e913de11fc"
+    }
+  ]
+}

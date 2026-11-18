@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-18",
+  "test_commit": "beb30ebdae259631cbf7108f9b93e52dba927c3f",
+  "deployment_run": 44321857066,
+  "deployment_conclusion": "success",
+  "local": {
+    "passed": 86,
+    "failed": 0,
+    "skipped": 530,
+    "scope": "p5",
+    "only": null,
+    "failures": []
+  },
+  "public": {
+    "passed": 86,
+    "failed": 0,
+    "skipped": 530,
+    "scope": "p5",
+    "only": null,
+    "failures": []
+  },
+  "node_gates_passed": 9,
+  "pdf_font_passed": true,
+  "deployed_assets_matched": 29,
+  "p5_families": 19,
+  "p5_variants": 261,
+  "all_core_variants_checked_by_shared_contract": 2853,
+  "test_assertions_or_payloads_weakened": false,
+  "browser_reruns": [],
+  "initial_static_failures": [
+    "Windows python3 alias did not invoke the installed interpreter. Fixed executable selection; reran with PYTHON set to the actual Python 3 executable.",
+    "Two static cache-version assertions still expected the old URL after the focused runner was introduced. Updated both to the exact new version."
+  ],
+  "scope_limits": [
+    "530 other browser checks were not rerun.",
+    "No new P5 difficulty bank or curriculum completion claim.",
+    "Classroom, translation, physical printer and screen-reader reviews deferred."
+  ]
+}
