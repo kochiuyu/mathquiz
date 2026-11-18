@@ -377,7 +377,7 @@ The page includes four stable sets of three or all twelve questions, English/Tra
 - [x] Link every skill from the resource library and preserve original quiz routes.
 - [x] Implement bilingual marking, alternative answers, column forms, stable sets and paper/key parity.
 - [x] Pass independent answer/scope checks for all 1,368 questions and 2,904 alternative-pair trials; preserve original core payloads.
-- [ ] Complete final local and deployed browser verification and record the release below.
+- [x] Complete final local and deployed browser verification and record the release below.
 - [ ] Deferred human review: pupil calibration, independent language review, physical printing and full screen-reader assessment.
 
-The static bank and interface are implemented. Publication and browser verification results will be recorded after completion; this is not yet a claim that the levels have been calibrated with pupils.
+**Published and verified:** [initial skill release 4ef05df](https://github.com/kochiuyu/mathquiz/commit/4ef05df5123baf0bd11a76c7c19bf657774adf3f), with rendered-variation correction in [1356b32](https://github.com/kochiuyu/mathquiz/commit/1356b325ebc134946d50c6be0dbf37ec502c37bc). Pages deployment 44221326378 succeeded. The final local runner passed **251/251**. The public full run passed **250/251**, with one answer-key page-load timeout; an isolated quiz/paper/key rerun of that case passed **1/1**, so all 251 distinct checks are verified. The original timeout remains in the [release evidence](planning/p1-skill-release-evidence.json). All 1,368 deployed question payloads match the local bank. The static gate also checks that all twelve displayed tasks in every skill/level are distinct in both languages. Core, UI and earlier unit-collection static checks passed; the full historical browser suite was not rerun. Difficulty calibration with pupils and the manual reviews remain pending.

@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-18",
+  "release": "1356b325ebc134946d50c6be0dbf37ec502c37bc",
+  "preserved_upstream": "c01b95e479977470e2bc161d953f9a620ae536c6",
+  "scope": "Every one of the 38 selectable P1 skills, not twelve unit collections",
+  "skills": 38,
+  "levels_per_skill": 3,
+  "questions_per_skill_level": 12,
+  "questions": 1368,
+  "question_payload_sha256": "362de231e505ccad3b3c897f0fe6e610ef8a663d77301286afc103a5608445a7",
+  "local_fresh_guided_references": {
+    "passed": 6,
+    "failed": 0
+  },
+  "public_browser": {
+    "passed": 250,
+    "failed": 1,
+    "failure_kind": "answer-key page-load timeout",
+    "case": "solidname1a easy en all 12 quiz/paper/key"
+  },
+  "static": {
+    "p1_skill_static": "pass; 1368 answer/choice oracles, 114 full level sets, 2904 exhaustive alternative-pair trials",
+    "core_static": "pass; 175 permanent families / 2661 variants and frozen payloads unchanged",
+    "ui_static": "pass on current upstream; 85 units, 56 activities and 56 resource-complete units",
+    "previous_unit_collection_static": "pass; original 72 and extended 432 tasks preserved"
+  },
+  "test_page": "https://kochiuyu.github.io/mathquiz/tests/p1-skill-levels.html",
+  "limitations": [
+    "Difficulty levels are provisional pending pupil calibration.",
+    "The new question bank is separate from the mixed builder and direct PDF exporter.",
+    "Full historical browser suite was not rerun for this release.",
+    "Independent wording, physical print and full assistive-technology reviews remain deferred."
+  ],
+  "initial_release": "4ef05df5123baf0bd11a76c7c19bf657774adf3f",
+  "preliminary_local_browser": {
+    "passed": 251,
+    "failed": 0
+  },
+  "local_browser": {
+    "passed": 251,
+    "failed": 0
+  },
+  "rendered_uniqueness": "All 114 levels contain 12 distinct displayed question payloads in both languages",
+  "pages_run": 44221326378,
+  "deployed_commit_verified": true,
+  "public_payload_matches_local": true,
+  "public_isolated_retry": {
+    "passed": 1,
+    "failed": 0,
+    "case": "solidname1a easy en all 12 quiz/paper/key"
+  },
+  "distinct_browser_cases_verified_publicly": 251,
+  "public_mobile_library_smoke": {
+    "language": "zh-HK",
+    "skill": "count20a",
+    "viewport_width": 360,
+    "overflow": false
+  },
+  "provenance": [
+    "Initial narrow selector overflow fixed before successful local run.",
+    "Rendered-twelfth-task duplication in four measurement skills corrected in 1356b32; strengthened static guard passed before final verification.",
+    "The first public attempt on initial 4ef05df was interrupted for the content correction; it is not counted as a completed run.",
+    "Final public run retained one key-page navigation timeout; isolated quiz/paper/key rerun passed."
+  ]
+}
