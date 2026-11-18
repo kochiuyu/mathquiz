@@ -34,3 +34,7 @@ The 54-case browser runner covers both languages, all 21 quizzes, canonical-answ
 The first local run passed 48/54. Four failures exposed the original P1/P4 paper views' absent print button, now added. Two were a test expectation that counted the original P6 two-field speed question as one mark; the runner now uses the documented per-field default. Runtime marking did not change. Final local/live results are recorded in the README and release evidence.
 
 Physical printing, independently reviewed translations, classroom difficulty calibration and full screen-reader testing remain deferred. The full historical curriculum browser suite and PDF export suite were not rerun for this catalogue change.
+
+## Published result
+
+[Release 7d0f07c8](https://github.com/kochiuyu/mathquiz/commit/7d0f07c8dda1b2a3e135419b3daf18b974262cdc) deployed successfully. All 54 distinct public checks verified (53/54 in the full run, plus 1 exact passing rerun). Local verification covered all 54 cases: 53/54 in the full run and one exact passing timeout rerun. Three static gates passed. All eight deployed runtime files matched the tested content. See [release evidence](example-quizzes-evidence.json) for the original failures and exact reruns.

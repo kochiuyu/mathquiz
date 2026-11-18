@@ -46,7 +46,27 @@
       "Test expected one mark for the original P6 two-field speed question (two bilingual cases); corrected expected total to documented per-field default."
     ]
   },
-  "public": null,
+  "public": {
+    "full": {
+      "passed": 53,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Catalogue layout en 320",
+          "error": "Page load timeout examples.html?lang=en&p=5"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "only": "Catalogue layout en 320",
+        "passed": 1,
+        "failed": 0,
+        "failures": []
+      }
+    ],
+    "interpretation": "54 distinct cases verified across the full run and its exact rerun; not a clean 54/54 full run."
+  },
   "visual_review": [
     "English desktop catalogue",
     "Traditional Chinese mobile catalogue and language-preserved year filter"
@@ -64,5 +84,53 @@
     "ui.js": "fe642266c15eb405e9843cef6cbbdc39ec3b5454a375a81d9ec8c563635d9044",
     "ui.css": "169c2b3a026775e6d9fecc88c34a03a1898fc329f8bf75bcd13e5b52a6f07051",
     "quiz.js": "65e6c63e574807825c20ecb0d9ae128776d74b43a48c2dda477ad38896ebf731"
-  }
+  },
+  "release": "7d0f07c8dda1b2a3e135419b3daf18b974262cdc",
+  "deployment": {
+    "id": 44422945593,
+    "conclusion": "success"
+  },
+  "public_distinct_verified": 54,
+  "live_runtime_assets": [
+    {
+      "path": "examples.html",
+      "match": true,
+      "sha256": "e0ff471af285459ae3103b8dc24371bc8306b83d6e02d647be1bbdbbf6edc621"
+    },
+    {
+      "path": "examples-data.js",
+      "match": true,
+      "sha256": "3abeae72d4236d38210721cec53115097f3ca83e49f22485e71af44a0ee6cfe0"
+    },
+    {
+      "path": "examples.js",
+      "match": true,
+      "sha256": "091b0d2f962aab8a9a3d7539edae2b2ab6748ab26a3d49c2499e7dfd10b1dd3e"
+    },
+    {
+      "path": "examples.css",
+      "match": true,
+      "sha256": "f046651b0e24a6ec6169d8dbe26374fdf833e5e3a6f434f686cba0502838c7d8"
+    },
+    {
+      "path": "index.html",
+      "match": true,
+      "sha256": "cb97abf70f859842d6874fc3a0ee58ac292eb38c1fed92edb79ea3861c4a4d44"
+    },
+    {
+      "path": "ui.js",
+      "match": true,
+      "sha256": "fe642266c15eb405e9843cef6cbbdc39ec3b5454a375a81d9ec8c563635d9044"
+    },
+    {
+      "path": "ui.css",
+      "match": true,
+      "sha256": "169c2b3a026775e6d9fecc88c34a03a1898fc329f8bf75bcd13e5b52a6f07051"
+    },
+    {
+      "path": "quiz.js",
+      "match": true,
+      "sha256": "65e6c63e574807825c20ecb0d9ae128776d74b43a48c2dda477ad38896ebf731"
+    }
+  ]
 }
