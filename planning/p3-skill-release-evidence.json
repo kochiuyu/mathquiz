@@ -1,0 +1,118 @@
+{
+  "release": "P3 skills: three teaching levels",
+  "date": "2026-11-18",
+  "sourceRevision": "07eb49cc38fc01f4ac512dcb6c0d499a5719b560",
+  "sourceCopy": "All 296 tracked source files matched Git blob hashes; local verified copy used after archive download timed out.",
+  "scope": {
+    "skills": 35,
+    "unitsWithSelectableSkills": 13,
+    "levelsPerSkill": 3,
+    "levelledTasks": 1260,
+    "underlyingContexts": 420,
+    "tasksPerSkillLevel": 12,
+    "inquiry": "3F1 remains teacher-observed; no invented selectable skill"
+  },
+  "bankSHA256": "012bd6f3e5d14db432c7aa0303bb97db96fd729a5d118bb27bedea9f9af2bab9",
+  "static": {
+    "status": "passed",
+    "gates": [
+      "tests/p3-skill-static.cjs",
+      "tests/static.cjs",
+      "tests/ui-static.cjs",
+      "tests/p1-skill-static.cjs",
+      "tests/p2-skill-static.cjs",
+      "tests/p3-static.cjs",
+      "tests/p3-next-static.cjs",
+      "tests/p3-triangles-static.cjs",
+      "tests/p3-quadrilaterals-static.cjs",
+      "tests/p3-weight-static.cjs",
+      "tests/p3-time-iv-static.cjs",
+      "tests/p3-bar-charts-static.cjs",
+      "tests/p3-capacity-static.cjs"
+    ],
+    "coreFamilies": 188,
+    "coreVariants": 2853
+  },
+  "local": {
+    "sharedUi": {
+      "passed": 193,
+      "failed": 0
+    },
+    "svgTextBounds": {
+      "checkedFigures": 264,
+      "outOfBounds": 0
+    },
+    "difficulty": {
+      "fullRun": {
+        "passed": 230,
+        "failed": 1,
+        "navigationRetries": []
+      },
+      "failedCase": "Unmarked language transfer: test targeted first field as numeric, but this P3 question begins with a select.",
+      "correctedCaseRerun": {
+        "passed": 1,
+        "failed": 0,
+        "navigationRetries": []
+      },
+      "verifiedDistinctCases": 231,
+      "note": "The initial full run passed 230/231. The sole failure was a test targeting a select as numeric. The corrected case passed 1/1; four affected skill/level/language cases passed again after the time-boundary wording refinement. All other tasks were confirmed unchanged. All 231 distinct current cases are verified locally."
+    },
+    "wordingRefinement": {
+      "tasks": 4,
+      "skills": [
+        "write24hour3a",
+        "read24hour3a"
+      ],
+      "level": "difficult",
+      "description": "Explanations now name the minutes after midnight/noon for 00:05 and 12:15; all answer values and all other tasks unchanged.",
+      "verification": {
+        "passed": 4,
+        "failed": 0,
+        "navigationRetries": []
+      }
+    }
+  },
+  "public": {
+    "status": "passed",
+    "bankSHA256": "012bd6f3e5d14db432c7aa0303bb97db96fd729a5d118bb27bedea9f9af2bab9",
+    "questionPayloadsMatchLocal": true,
+    "runtimeAssetsMatchLocal": true,
+    "assetSHA256": {
+      "p3-skill-seeds.js": "43efe54ea0d3afced518e4b84330fcf15b354c6b44bb3084c99127abd2163b72",
+      "p3-skill-data.js": "d80adb8575e346080abc06b80c54f91a49e78733654213b3a22d0e2cbe17fcc9",
+      "p3-skill-pictures.js": "1ea11f0f84341e75060ca08da87d9d815bb19e622d717220fa123c692593dc16",
+      "p3-skill-levels.js": "20146f433f0acf3dbdb285368448b8481fd504ad7539a624c1d007aa162c9f99",
+      "p3-skill-levels.css": "49f402f81fec556b349c5903314896d8a45cd8ab50e58e93de0feef8b0e1b57d",
+      "p3-skill-levels.html": "f439f6b9ef22dc8096830ec24f54326cc7db368c56203770b8bcee389673e261",
+      "p1-levels.css": "d2b4448911316eda4f71c149adaf3c101f3c4aaf3bafd6b5eb497e2bb83f0234"
+    },
+    "assetHashNormalization": "UTF-8 source text with LF line endings, matching uploaded blobs.",
+    "sharedUi": {
+      "passed": 193,
+      "failed": 0
+    },
+    "difficulty": {
+      "passed": 231,
+      "failed": 0,
+      "skills": 35,
+      "questions": 1260,
+      "navigationRetries": []
+    }
+  },
+  "preReleaseFindings": [
+    "The cue assertion initially assumed one guide per skill. Division-story guides vary by context, so the check now verifies each question's own guide.",
+    "The triangle gate's Python child initially used Windows cp1252. Rerunning with PYTHONUTF8=1 passed without modifying the source gate or PDF runtime."
+  ],
+  "limitations": [
+    "Difficulty is provisional; no pupil calibration performed.",
+    "Independent translation review, physical printing and full screen-reader assessment remain deferred.",
+    "The separate level bank uses browser Print / Save as PDF, not mixed-builder composition or direct PDF export.",
+    "Full historical curriculum browser suite not rerun; dedicated skill and shared UI runners used."
+  ],
+  "runtimeCommit": "90ba1f4e5ec35b94d482017cc2f41161f261a46b",
+  "runtimeDeployment": {
+    "runId": 44260380818,
+    "status": "completed",
+    "conclusion": "success"
+  }
+}

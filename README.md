@@ -417,5 +417,7 @@ Every P3 resource card links to the exact skill. Four fixed sets of three or all
 - [x] Implement three levels with twelve questions per level per skill.
 - [x] Add exact library links, bilingual responses and paper/key views.
 - [x] Pass static bank and source/compatibility checks.
-- [ ] Finish local/public browser verification and record release evidence.
+- [x] Finish local/public browser verification and record release evidence.
 - [ ] Deferred human review: difficulty calibration, independent translation, physical print and full screen-reader assessment.
+
+**Published and verified:** [P3 release 90ba1f4](https://github.com/kochiuyu/mathquiz/commit/90ba1f4e5ec35b94d482017cc2f41161f261a46b) deployed successfully (Pages run 44260380818). The public runner passed **231/231 difficulty checks and 193/193 shared UI checks**, with zero failures and zero navigation-timeout retries. All 1,260 public question payloads and seven runtime assets match the local build. All thirteen static gates passed. Locally, the initial full run passed 230/231; its one test-harness error was corrected and the case passed 1/1. Four affected bilingual skill/level cases passed again after clarifying minutes after midnight/noon, with all other tasks unchanged. All 231 distinct current cases are therefore verified locally, and local UI checks passed 193/193. See [release evidence](planning/p3-skill-release-evidence.json) for exact provenance and limitations. The full historical browser suite was not rerun. Pupil calibration and deferred manual reviews remain open.
