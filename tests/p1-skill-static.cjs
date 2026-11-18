@@ -48,6 +48,7 @@ for(const q of B.questions){
 for(const skill of Object.keys(B.skills))for(const level of Object.keys(B.levels)){
  const all=B.pick(skill,level,'all');assert.equal(all.length,12,skill+' '+level);const keys=[];for(let s=0;s<4;s++){const qs=B.pick(skill,level,String(s));assert.equal(qs.length,3);keys.push(...qs.map(q=>q.id));}assert.equal(new Set(keys).size,12);
  const demand=all.map(q=>JSON.stringify([q.prompt,q.fields,q.visual]));assert.equal(new Set(demand).size,12,skill+' '+level+' duplicate task');
+ for(const lang of ['en','zh']){const rendered=all.map(q=>JSON.stringify([q.prompt,q.fields,P1SkillPicture(q.visual,lang)]));assert.equal(new Set(rendered).size,12,skill+' '+level+' duplicate rendered task '+lang);}
 }
 for(const f of ['p1-skill-data.js','p1-skill-number.js','p1-skill-operations.js','p1-skill-measures.js','p1-skill-shapes.js','p1-skill-pictures.js','p1-skill-levels.js','ui.js'])new vm.Script(read(f),{filename:f});
 console.log(`PASS: all 38 core P1 skills exactly matched; 1368 answer/choice oracles; 114 complete 12-question levels; ${pairTrials} exhaustive alternative-pair trials; stable sets, bilingual metadata, figures and P1 bounds.`);

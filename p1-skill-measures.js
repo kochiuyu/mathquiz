@@ -13,7 +13,7 @@
   const choices=[total,total+10,total===100?200:100];
   add(skill,level,i,[`Count the total VALUE of the labelled tokens.${easy?' They all have the same value; count on in that value.':''}${hard?` A pupil treats each token as one dollar and says ${coins.length} dollars. Find the actual total and choose the correct method.`:''}`,`點算標示代幣的總值。${easy?'每個面值相同，可按該面值累計。':''}${hard?`同學把每個當一元，說是${coins.length}元。找出真正總值，並選正確方法。`:''}`],[V(choices,total,i,['Total value','總值'],money),...(hard?[C([['Add the labelled value of each token once.','每個代幣的標示面值各計一次。'],['Count only the number of tokens and call it dollars.','只數代幣枚數，當作元。'],['Use only the largest token value.','只用最大面值。']],i)]:[])],[`The running values are ${coins.map((_,j)=>money(sum(coins.slice(0,j+1)))[0]).join('; ')}.`,`累計：${coins.map((_,j)=>money(sum(coins.slice(0,j+1)))[1]).join('、')}。`],{type:'skillcoins',coins,variant:i},{coins});
   for(const sk of ['lengthdirect1a','distancedirect1a','lengthunits1a','distanceunits1a']){
-   const distance=sk.startsWith('distance'),units=sk.includes('units'),a=3+i%5,b=a+(i%2?2:-2),larger=a>b?0:1;
+   const distance=sk.startsWith('distance'),units=sk.includes('units'),a=i===11?5:3+i%5,b=i===11?8:a+(i%2?2:-2),larger=a>b?0:1;
    const A=Math.max(1,a),BB=Math.max(1,b),target=i%3===0?'shorter':'longer',answer=target==='longer'?larger:1-larger;
    const what=distance?(target==='longer'?'farther from S by straight distance':'nearer to S'):(target==='longer'?'longer':'shorter'),whatZh=distance?(target==='longer'?'離S的直線距離較遠':'較接近S'):(target==='longer'?'較長':'較短');
    const visual={type:'skillmeasure',a:A,b:BB,distance,units,offset:hard&&!distance?2+i%2:0,route:hard&&distance,variant:i};
