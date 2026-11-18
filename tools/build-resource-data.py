@@ -13,6 +13,17 @@ def zh(title):
  if m and m[1] in translations:return translations[m[1]]+'（'+{'I':'一','II':'二','III':'三','IV':'四','V':'五'}[m[2]]+'）'
  raise ValueError('Translation required: '+title)
 activity_units={
+ 'p5-elementary-algebra':['5A1'],
+ 'p5-simple-equations-i':['5A2'],
+ 'p5-area-ii':['5M1'],
+ 'p5-volume-i':['5M2'],
+ 'p5-circles':['5S1'],
+ 'p5-3d-shapes-iii':['5S2'],
+ 'p5-bar-charts-iii':['5D1'],
+ 'p5-inquiry':['5F1'],
+
+ 'p5-fractions-v':['5N5'],
+ 'p5-decimals-iii':['5N4'],
  'p5-fractions-iv':['5N3'],
  'p5-fractions-iii':['5N2'],
  'p5-multi-digit-numbers':['5N1'],

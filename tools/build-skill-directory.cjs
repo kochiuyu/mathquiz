@@ -1,7 +1,7 @@
 // Small navigation manifest: no question or answer payloads are loaded by the hub.
 const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..');
-const grades=[1,2,3,4].map(grade=>{
+const grades=[1,2,3,4,5].map(grade=>{
   const bank=require(path.join(root,`p${grade}-skill-data.js`));
   return {grade,units:bank.units,skills:bank.skills};
 });

@@ -1,0 +1,15 @@
+{
+  "source": "Reviewed private 5N4 decimal multiplication candidate",
+  "base": "Published first-three P5 candidate with latest P1 skills",
+  "base_commit": "ee6fef8a911c171627926c9519d396085c88d4d3",
+  "inherited_complete": 56,
+  "5N4_complete": false,
+  "browser_verified": false,
+  "predecessor_payloads_preserved": 2853,
+  "new_variants": 72,
+  "public_P1_assets_preserved": true,
+  "static_cjs_passed": 46,
+  "font_passed": true,
+  "standalone_passed": true,
+  "terminal_zero_fix_preserved": true
+}

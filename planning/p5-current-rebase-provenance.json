@@ -1,0 +1,75 @@
+{
+  "scope": "P5 resource integration and release verification evidence",
+  "release_status": "Candidate; live verification and completion promotion not claimed",
+  "current_inventory": {
+    "permanent_families": 222,
+    "permanent_variants": 3351,
+    "selectable_families": 221,
+    "selectable_variants": 3336,
+    "p5_skills": 53,
+    "p5_level_tasks": 1908,
+    "all_p1_to_p5_level_tasks": 7848,
+    "resource_complete_units": 56
+  },
+  "preservation": {
+    "application_files_byte_identical_to_verified_candidate": 190,
+    "public_predecessor_variants_preserved": 2853,
+    "all_completion_flags_unchanged": true,
+    "question_answer_grader_renderer_and_activity_bytes_unchanged": true
+  },
+  "historical_5N4_5N5_integration": {
+    "base_commit": "02be401d8c39c81e67b092cdd9450e66c19b7883",
+    "source": "Reviewed5N5 candidate including reviewed5N4 additions",
+    "new_variants": 156,
+    "preserved_public_predecessor_variants": 2853,
+    "all_source_variants": 3009,
+    "permanent_families": 198,
+    "selectable_families": 197,
+    "selectable_variants": 2994,
+    "selectable_units": 62,
+    "resource_units": 68,
+    "activities": 61,
+    "resource_complete_units": 56,
+    "open_resource_units": 12,
+    "all_completion_flags_unchanged": true,
+    "new_browser_verification": false,
+    "new_live_verification": false,
+    "current_P1_P2_P3_P4_level_banks_preserved": true,
+    "current_shared_Smart_and_resource_browser_runtime_preserved": true,
+    "static_cjs_passed": 54,
+    "actual_font_coverage_characters": 1039,
+    "new_test_updates": "Resource-browser static/browser inventory checks updated187to197skills,59to61activities,19to17planned units; all165 P1-P4levelled skills remain unchanged.",
+    "earlier_test_failure": "Initial static run failed one stale resource-browser187-family assertion; corrected to independently verified197. All54 subsequently passed.",
+    "limitations": "Browser integration, deployment, classroom, physical printing, independent translation and screen-reader verification not claimed."
+  },
+  "current_verification": {
+    "static_cjs_passed_local_and_isolated": 66,
+    "actual_font_coverage_characters": 1062,
+    "fresh_browser": {
+      "p5_and_shared_contract_scope": {
+        "passed": 193,
+        "failed": 0
+      },
+      "p5_levels": {
+        "passed": 357,
+        "failed": 0
+      },
+      "smart_practice": {
+        "passed": 201,
+        "failed": 0
+      },
+      "shared_ui": {
+        "passed": 213,
+        "failed": 0
+      }
+    },
+    "prior_full_core_browser": {
+      "passed": 818,
+      "failed": 0,
+      "application_bytes_identical": true
+    },
+    "core_checks_not_reexecuted_in_fresh_focused_run": 625,
+    "scope_note": "Fresh focused results do not claim a fresh full-core rerun. Earlier public 86-check / 19-skill evidence describes a different historical release."
+  },
+  "limitations": "Live deployment verification, physical printing and measurement, classroom validation, independent translation and screen-reader review are not claimed. Resource completeness is not pupil mastery."
+}

@@ -854,6 +854,106 @@ const resourceData = {
   ],
   "activities": [
     {
+      "path": "activities/p5-elementary-algebra.html",
+      "units": [
+        "5A1"
+      ],
+      "title": [
+        "5A1 Model, explain and check",
+        "5A1 建模、解釋與驗算"
+      ]
+    },
+    {
+      "path": "activities/p5-simple-equations-i.html",
+      "units": [
+        "5A2"
+      ],
+      "title": [
+        "5A2 Model, explain and check",
+        "5A2 建模、解釋與驗算"
+      ]
+    },
+    {
+      "path": "activities/p5-area-ii.html",
+      "units": [
+        "5M1"
+      ],
+      "title": [
+        "Area (II): measure, cut and explain",
+        "面積（二）：量度、剪拼與解釋"
+      ]
+    },
+    {
+      "path": "activities/p5-volume-i.html",
+      "units": [
+        "5M2"
+      ],
+      "title": [
+        "Volume (I): build, compare and measure",
+        "體積（一）：建構、比較與量度"
+      ]
+    },
+    {
+      "path": "activities/p5-circles.html",
+      "units": [
+        "5S1"
+      ],
+      "title": [
+        "P5 · Circles",
+        "P5 · 圓"
+      ]
+    },
+    {
+      "path": "activities/p5-3d-shapes-iii.html",
+      "units": [
+        "5S2"
+      ],
+      "title": [
+        "P5 · 3-D shapes (III)",
+        "P5 · 立體圖形（三）"
+      ]
+    },
+    {
+      "path": "activities/p5-bar-charts-iii.html",
+      "units": [
+        "5D1"
+      ],
+      "title": [
+        "P5 · Bar charts (III)",
+        "P5 · 棒形圖（三）"
+      ]
+    },
+    {
+      "path": "activities/p5-inquiry.html",
+      "units": [
+        "5F1"
+      ],
+      "title": [
+        "P5 · Inquiry and investigation",
+        "P5 · 探究活動"
+      ]
+    },
+    {
+      "path": "activities/p5-fractions-v.html",
+      "units": [
+        "5N5"
+      ],
+      "title": [
+        "Fractions (V): investigate and explain",
+        "分數（五）：探究與解釋"
+      ]
+    },
+    {
+      "path": "activities/p5-decimals-iii.html",
+      "units": [
+        "5N4"
+      ],
+      "title": [
+        "P5 · Decimals (III)",
+        "P5 · 小數（三）"
+      ]
+    },
+    {
       "path": "activities/p5-fractions-iv.html",
       "units": [
         "5N3"

@@ -1,0 +1,27 @@
+{
+  "status": "historical integration candidate; incomplete",
+  "scope": [
+    "5M1",
+    "5M2"
+  ],
+  "new_families": 8,
+  "new_variants": 108,
+  "numbered_objectives": {
+    "5M1": 3,
+    "5M2": 6
+  },
+  "preserved_predecessor_variants": 3009,
+  "static_gates_passed": 56,
+  "actual_font_characters": 1046,
+  "font_bytes": 289740,
+  "isolated_static_and_font_passed": true,
+  "production_html_parses": 648,
+  "independent_coordinate_lattice_cases": 108,
+  "svg_strings_checked": 192,
+  "wrong_answer_overlap_mutations_rejected": 120,
+  "resource_complete_units_unchanged": 56,
+  "browser_verified": false,
+  "live_verified": false,
+  "initial_corrections": "Static development caught stale global counts, signed-zero comparison in test oracle, wrong test link separator, and new-choice label-map shape. Corrected only new authored fixtures/test setup; all predecessor payload hashes remain unchanged. Full later56gates and font passed.",
+  "limitations": "Actual browser geometry, PDFs, physical measurement/printing, classroom, independent translation and screen-reader checks not claimed."
+}

@@ -1,5 +1,21 @@
 # MathQuiz · Hong Kong primary mathematics
 
+**P5 upload candidate, not yet deployed:** Prepared from the verified private 53-skill / 1,908-task bank, preserving public `300f2368` documentation and `beb30ebd` test improvements. The public 86-check / 19-skill record below describes the earlier public release only. All 56 completion flags remain unchanged pending fresh live verification. The following branch snapshots are historical evidence, not claims that all 53 skills are already public.
+
+**Integrated private P5 core candidate; incomplete:** 222 permanent families / 3351 variants; 221 selectable / 3336; 53 P5 skills; 65 selectable units; 72 units have digital tasks or linked activities; 69 activities; 56 complete and 16 open resource-bearing units. All 3009 baseline variants and P1–P4 assets remain unchanged. No live verification or completion promotion is claimed. Earlier branch inventory figures below are historical snapshots.
+
+**Private 5A1–5A2 candidate; incomplete:** Six new families add96variants and two bilingual practical resources for2+3 numbered objectives. Inventory204permanent families/3105variants;203selectable/3090;63selectable units/69resource units;63activities;56complete/13open. All3009predecessor payloads and P1–P4 difficulty/Smart assets are preserved. Algebra units remain incomplete; browser verification is pending. Completed totals stay211numbered plus four inquiry statements.
+
+**Private 5M1/5M2 additions; incomplete:** Eight new families add108 variants (60area,48volume) and two bilingual practical activities for3+6numbered objectives. Inventory206 permanent families/3117variants;205selectable/3102;62selectableunits/68resourceunits;63activities;56complete/12open. All3009 predecessor payloads and P1–P4 levels/Smart practice remain unchanged. Browser and live verification are pending. Resource completeness is not pupil mastery.
+
+**Private P5 shape/data candidate; incomplete:** Adds138variants across10families and four practical resources for5S1/5S2/5D1/5F1. Preserves3009predecessor payloads and allP1–P4level/Smart assets. Inventory208permanent/3147variants;207selectable/3132;64selectable units/71resource units;65activities;56complete/15open. Eleven numbered objectives and one inquiry statement have candidate material; no flags promoted. Browser, print, translation, screen-reader and classroom review remain pending.
+
+**Private 5N5 candidate; incomplete:** Five families add84 variants plus a bilingual six-group practical resource for four numbered objectives. Inventory198 permanent families/3009variants;197 selectable/2994;62 selectable units/68resource units;61activities;56complete/12open. All2925 predecessor payloads and P1 releases are preserved. 5N1–5N5 remain incomplete pending verified publication; completed totals remain211 numbered objectives plus four inquiry statements. Static and browser results are separate; browser verification is pending.
+
+**Private 5N4 candidate, incomplete:** Adds72 bilingual decimal multiplication variants and a six-task practical activity covering4 numbered objectives. Static/browser results must be recorded separately; no new completion is claimed. 67 units have digital tasks or linked activities;11 open resource-bearing units. Current inventory193 permanent families/2925 variants;192 selectable/2910;61 selectable units/67 resource units;60 activities;56 resource-complete and11 open resource-bearing units. All2853 predecessor payloads and marking.js remain frozen. First-threeP5 units also remain incomplete pending their independent release. Physical printing, classroom trials, independent translation and screen-reader validation are unperformed.
+
+**Private 5N1–5N3 candidate; incomplete:** Rebased onto the verified 56-unit P1–P4 closure. Thirteen new families add 192 variants (60 for 5N1, 72 for 5N2, 60 for 5N3), preserving all 175 predecessor families / 2,661 variants. Current inventory: 188 permanent families / 2,853 variants; 187 selectable / 2,838; 60 selectable units / 66 resource units; 59 activities; 56 complete and 10 open resource-bearing units. Verified totals remain 211 numbered objectives plus four inquiry statements. 5N1, 5N2 and 5N3 remain incomplete. Private verification completed: **616/616 curriculum, 193/193 UI and 248/248 dedicated P1 checks passed**, with zero failures. This is private evidence only; deployed candidate verification is pending. All 56 inherited completion flags remain unchanged, and 5N1, 5N2 and 5N3 remain incomplete. The later P1 skill release `2b3521f` has now been preserved in this private candidate; core computational bytes are unchanged. Fresh integrated checks passed **193/193 UI, 248/248 P1 unit and 251/251 P1 skill checks**, with zero failures. All44 static gates and actual font coverage passed locally and in an isolated copy. Live P5 verification remains pending.
+
 **Published 5N1–5N3 resources; curriculum incomplete:** Thirteen new families add 192 variants (60 for 5N1, 72 for 5N2, 60 for 5N3), preserving all 175 predecessor families / 2,661 variants. Current inventory: 188 permanent families / 2,853 variants; 187 selectable / 2,838; 60 selectable units / 66 resource units; 59 activities; 56 complete and 10 open resource-bearing units. Verified totals remain 211 numbered objectives plus four inquiry statements. The current P5 and shared-contract browser checks passed **86/86 locally and publicly**, with zero failures, on 18 November 2026. [Read the test repair and live evidence](planning/p5-test-verification.md). The earlier private 616/616 full-suite result remains historical evidence; the other 530 browser checks were not rerun in this focused release. All 56 inherited completion flags remain unchanged; 5N1, 5N2 and 5N3 remain incomplete. The published P1–P4 levels and Smart practice releases are preserved.
 
 **Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
@@ -34,7 +50,7 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 units.** This private P5 candidate has 60 selectable units and 25 without selectable tasks, 187 selectable families / 2,838 variants. 56 units are resource complete. One retired family / 15 variants retains old-link compatibility.
+**The goal is to give teachers usable assessment material for every objective across all 85 units.** This private P5 candidate has 65 selectable units and 20 without selectable tasks, 221 selectable families / 3,336 variants. 56 units are resource complete. One retired family / 15 variants retains old-link compatibility.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
@@ -42,11 +58,11 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 | P2 | 15 | 14 | 1 | 15 |
 | P3 | 14 | 13 | 1 | 14 |
 | P4 | 15 | 14 | 1 | 15 |
-| P5 | 13 | 7 | 6 | 0 |
+| P5 | 13 | 12 | 1 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **60** | **25** | **56** |
+| **Total** | **85** | **65** | **20** | **56** |
 
-**Candidate resource inventory:** 66 units have digital tasks or linked activities; 60 have selectable tasks. All 56 P1–P4 units remain resource complete, leaving 10 open resource-bearing units. Verified totals remain 211 numbered objectives plus four inquiry statements. 5N1, 5N2 and 5N3 remain incomplete.
+**Candidate resource inventory:** 72 units have digital tasks or linked activities; 65 selectable units, 56 complete and 16 open resource-bearing units; 69 activities.
 
 **Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
@@ -511,6 +527,7 @@ Questions are shuffled within each existing twelve-question level. A labelled re
 All **355 distinct local cases** are verified: Smart practice 65/65, shared UI 193/193, and library 96/97 plus the exact navigation-timeout rerun 1/1. The original timeout remains in [release evidence](planning/smart-practice-evidence.json). Five static gates passed, including progression invariants and all 5,940 canonical bank answers. The 331 unchanged predecessor files include every question bank, original marking function, diagram and curriculum record. Manual reviews and mastery calibration remain deferred.
 <!-- /smart-release-status -->
 
+
 ## P5 test repair and live verification · 18 November 2026
 
 All **86 P5 browser checks passed locally and publicly**, covering the **19 current P5 skills / 261 variants** and shared contracts for all 2,853 core variants. [Run the P5 checks](https://kochiuyu.github.io/mathquiz/tests/regression.html?scope=p5) or read the [verification report](planning/p5-test-verification.md).
@@ -520,3 +537,4 @@ The earlier fraction-label and clipped-diagram fixes were already published; the
 Nine relevant Node gates and the actual PDF font check passed. All 29 checked public assets match the tested local files. The unfiltered 616-case suite remains available; the other 530 browser checks were not rerun for this release. No new P5 difficulty bank or curriculum-completion claim is made. Manual classroom, translation, physical-print and screen-reader reviews remain deferred.
 
 Test release: [beb30ebd](https://github.com/kochiuyu/mathquiz/commit/beb30ebdae259631cbf7108f9b93e52dba927c3f), successful Pages run [44321857066](https://github.com/kochiuyu/mathquiz/actions/runs/44321857066). [Machine-readable results](planning/p5-test-results.json).
+

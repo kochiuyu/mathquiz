@@ -1,0 +1,12 @@
+{
+  "baseline": "Frozen reviewed P5 current candidate with P1\u2013P4 levels and Smart practice",
+  "predecessor_variants": 3009,
+  "new_families": 6,
+  "new_variants": 96,
+  "static_cjs_passed": 56,
+  "font_passed": true,
+  "standalone_passed": true,
+  "browser_verified": false,
+  "complete_flags": 56,
+  "new_units_complete": false
+}

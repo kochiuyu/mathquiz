@@ -1,6 +1,6 @@
 /* Shared presentation layer. Original question rendering and marking remain in each grade's script. */
 (()=>{
- const match=location.pathname.match(/p([1-4])-skill-levels\.html$/);if(!match)return;
+ const match=location.pathname.match(/p([1-5])-skill-levels\.html$/);if(!match)return;
  const grade=+match[1],bank=window['P'+grade+'Skills'],form=document.getElementById('choose'),questions=document.getElementById('questions');if(!bank||!form||!questions)return;
  const p=new URLSearchParams(location.search),lang=p.get('lang')==='zh'?'zh':'en',t=(en,zh)=>lang==='zh'?zh:en,loc=a=>a[lang==='zh'?1:0],skill=form.elements.skill.value,level=form.elements.level.value,set=form.elements.set.value,view=p.get('view')||'quiz';
  const E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

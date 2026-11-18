@@ -1,0 +1,47 @@
+{
+  "scope": "Private integration of remaining P5 core families and practical resources; no level bank or completion promotion",
+  "baseline": "public 02be401 plus reviewed private P5 number candidates through 5N5",
+  "inventory": {
+    "permanentFamilies": 222,
+    "variants": 3351,
+    "selectableFamilies": 221,
+    "selectableVariants": 3336,
+    "p5Skills": 53,
+    "selectableUnits": 65,
+    "resourceUnits": 72,
+    "activities": 69,
+    "completeUnits": 56,
+    "openResourceUnits": 16,
+    "plannedUnits": 13
+  },
+  "preservation": {
+    "baselineVariants": 3009,
+    "addedVariants": 342,
+    "p1ToP4AndSmartAssets": "byte-identical",
+    "completionFlags": "unchanged"
+  },
+  "validation": {
+    "status": "61 static suites and actual font cmap passed locally and in isolated copy",
+    "browser": "not run",
+    "live": "not run",
+    "pdfLayout": "not run",
+    "physicalClassroom": "not run",
+    "independentTranslation": "not run",
+    "screenReader": "not run",
+    "staticSuites": 61,
+    "fontCharacters": 1062,
+    "fontBytes": 294616,
+    "payloadComparison": "All 3009 baseline plus 342 new final branch variants byte-equivalent; 222 golden fixture hashes unchanged/matched",
+    "sourceFontCopies": 0,
+    "isolatedStaticSuites": 61,
+    "productionRenderer": {
+      "scope": "Actual quiz.figure boolean-language calls",
+      "diagramRoutes": 192,
+      "visiblePolygonLabels": 204,
+      "oldBooleanIndexMutationRejected": true
+    },
+    "resourceBrowserActivityCounts": "69 paths and dataset total, exact static guard",
+    "refreeze": "Measures boolean language-index correction and resource-runner count correction;61 suites and actualfont pass locally and fresh isolated reconstruction"
+  },
+  "publication": "not performed"
+}

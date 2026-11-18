@@ -1,0 +1,14 @@
+{
+  "baseline": "Reviewed private reconciled 5N4 candidate, including current public P1 skills and corrected first-three P5",
+  "new_unit": "5N5",
+  "new_families": 5,
+  "new_variants": 84,
+  "predecessor_variants_preserved": 2925,
+  "complete_flags": 56,
+  "unit_complete": false,
+  "static_cjs_passed": 48,
+  "font_cmap_passed": true,
+  "standalone_passed": true,
+  "browser_verified": false,
+  "manual_reviews": "Physical printing, classroom trials, independent translation and screen-reader validation remain unperformed"
+}
