@@ -1,5 +1,7 @@
 # P1 difficulty pilot · 18 November 2026
 
+> Historical two-unit release record. The rollout below has now been implemented for all twelve P1 units. See the [current all-P1 plan and verification record](p1-all-levels.md) for 432 tasks, including 36 teacher-observed investigations. The original pilot payloads are preserved.
+
 ## Decision
 
 Add **Easy / Normal / Difficult** as teaching choices, not labels for children. Twelve numeric variations of one template do not establish twelve different demands. Existing questions should not all be reclassified as easy: some already ask pupils to find another number bond, interpret a story or justify an observation. Adult speed is not evidence of difficulty for a P1 learner.
