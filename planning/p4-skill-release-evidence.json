@@ -1,0 +1,175 @@
+{
+  "release": "P4 skills: three teaching levels",
+  "date": "2026-11-18",
+  "sourceRevision": "3a292f639fce3b5424627ea16833340b05a75e54",
+  "scope": {
+    "skills": 51,
+    "unitsWithSelectableSkills": 14,
+    "levelsPerSkill": 3,
+    "tasksPerSkillLevel": 12,
+    "levelledTasks": 1836,
+    "contexts": 612,
+    "adaptations": {
+      "compassMapRotations": 4,
+      "shapeRotations": 2
+    }
+  },
+  "sourceCopy": "All 308 tracked source files matched remote Git blob hashes before implementation.",
+  "bankSHA256": "5060cf7e2d3ad932df3e08038026acce5519d46e8258eb96b6d96e740401ee10",
+  "assetSHA256": {
+    "p4-skill-seeds.js": "c6ac77940fd21ef5c02010600fff29d61aadf0a697d8bbee4ca0b3744b6091a2",
+    "p4-skill-data.js": "4d4b5782c8ae7568fb44c6e25d84b6567bf7df86577e2d139ec1f247350b49e1",
+    "p4-skill-pictures.js": "f4edbedbb039d5d4d9ac5d226091996479cca210872e1051d7dd46a83aa483d8",
+    "p4-skill-levels.js": "9b7407991cf0c628048aac6571b3534ccd4af90ef038d505724b800aa166c8b2",
+    "p4-skill-levels.css": "ba63cb6bc666ba29703c264eaa916edb20174707b8adb8ccaaf387da2cffdea7",
+    "p4-skill-levels.html": "a7fa3c6ee67c28122dd0c340434fd2e3b80560d74d881a86e36a71a5c6228957",
+    "p1-levels.css": "d2b4448911316eda4f71c149adaf3c101f3c4aaf3bafd6b5eb497e2bb83f0234",
+    "marking.js": "625361f4c2e9e1101eb3ed7e8233cfa06573ed458242a78fe1145947f301ba2e"
+  },
+  "assetHashNormalization": "UTF-8 text with LF endings",
+  "static": {
+    "passed": 29,
+    "failed": 0,
+    "gates": [
+      "static",
+      "ui-static",
+      "p1-skill-static",
+      "p2-skill-static",
+      "p3-skill-static",
+      "p4-area-independent-static",
+      "p4-area-static",
+      "p4-bars-activity-static",
+      "p4-bars-independent-static",
+      "p4-common-factors-static",
+      "p4-decimal-independent-static",
+      "p4-decimal-operations-independent-static",
+      "p4-directions-activity-static",
+      "p4-directions-independent-static",
+      "p4-dissection-activity-static",
+      "p4-dissection-independent-static",
+      "p4-division-static",
+      "p4-factors-static",
+      "p4-four-operations-static",
+      "p4-fraction-independent-static",
+      "p4-fraction-response-static",
+      "p4-fractions-static",
+      "p4-inquiry-static",
+      "p4-multiplication-static",
+      "p4-perimeter-independent-static",
+      "p4-perimeter-static",
+      "p4-quadrilaterals-activity-static",
+      "p4-quadrilaterals-independent-static",
+      "p4-skill-static"
+    ],
+    "coreFamilies": 188,
+    "coreVariants": 2853
+  },
+  "local": {
+    "sharedUi": {
+      "passed": 193,
+      "failed": 0
+    },
+    "svgTextBounds": {
+      "figures": 420,
+      "outOfBounds": 0
+    },
+    "difficulty": {
+      "passed": 329,
+      "failed": 0,
+      "navigationRetries": []
+    },
+    "refinement": {
+      "tasksChanged": 24,
+      "skills": [
+        "allfactors4a",
+        "factorrelation4a"
+      ],
+      "level": "difficult",
+      "answerValuesUnchanged": true,
+      "allOtherTasksUnchanged": true,
+      "verification": {
+        "passed": 4,
+        "failed": 0,
+        "navigationRetries": []
+      }
+    },
+    "verifiedDistinctCurrentCases": 329,
+    "difficultyNote": "Initial full local run passed 329/329. Following the wording-only refinement, four affected bilingual cases passed 4/4 again; all other tasks and all answers were confirmed unchanged. All 329 distinct current cases verified locally."
+  },
+  "public": {
+    "status": "verified",
+    "firstDifficultyRun": {
+      "passedBeforeStopped": 86,
+      "failed": 0,
+      "reason": "Stopped to verify the refined wording release instead."
+    },
+    "firstUiRun": {
+      "passed": 192,
+      "failed": 1,
+      "failedCase": "Teacher resource · activities/p4-perimeter-i.html · en · 320px · activity overflow"
+    },
+    "isolatedActivityRead": {
+      "width": 305,
+      "scrollWidth": 305,
+      "overflowingElements": 0,
+      "stylesheetLoaded": true,
+      "note": "Original overflow not reproduced; cause not established."
+    },
+    "bankSHA256": "5060cf7e2d3ad932df3e08038026acce5519d46e8258eb96b6d96e740401ee10",
+    "questionPayloadsMatchLocal": true,
+    "runtimeAssetsMatchLocal": true,
+    "sharedUi": {
+      "fullRun": {
+        "passed": 192,
+        "failed": 1,
+        "failedCase": "Home: compact entry points and six equal grades · Page load timeout ?lang=en"
+      },
+      "isolatedReruns": {
+        "passed": 2,
+        "failed": 0,
+        "cases": [
+          "Home: compact entry points and six equal grades",
+          "Teacher resource · activities/p4-perimeter-i.html · en · 320px"
+        ]
+      },
+      "verifiedDistinctCases": 193,
+      "note": "The initial UI run passed 192/193 with an un-reproduced perimeter overflow assertion. The second full run passed 192/193, including perimeter, but had a home-page load timeout. Both cases subsequently passed all original assertions in isolated reruns. Failures are retained, not silently retried."
+    },
+    "assetReadNote": "An uncached verification fetch timed out. A bounded read of all eight deployed assets succeeded and matched the local hashes.",
+    "difficulty": {
+      "passed": 329,
+      "failed": 0,
+      "skills": 51,
+      "questions": 1836,
+      "navigationRetries": []
+    }
+  },
+  "preReleaseFindings": [
+    "Two source contexts had repeated displayed diagrams; rigid rotations now make all twelve displayed tasks distinct in every skill/level/language.",
+    "Multiplication partial-product labels name the factors explicitly, avoiding ambiguity when the original displayed factor order is reversed. The label was clarified before the affected local browser cases ran.",
+    "The source-provenance test normalizes negative zero, which JSON serializes as zero, when comparing rigid rotations.",
+    "Replaced square-root terminology and letter-based factor notation in 24 difficult tasks. All answers and the other 1812 tasks are unchanged; four affected bilingual cases passed locally again."
+  ],
+  "limitations": [
+    "Teaching levels are provisional; no pupil calibration.",
+    "Independent translation review, physical printing and full screen-reader assessment are deferred.",
+    "Selected explanations are not evidence of unaided written reasoning or mastery.",
+    "The level bank uses browser Print / Save as PDF and remains separate from the mixed builder and direct PDF exporter.",
+    "Dedicated skill and shared UI browser runners used; full historical curriculum browser suite not rerun.",
+    "Original core payloads, P1-P3 banks and curriculum-completion flags unchanged."
+  ],
+  "runtimeCommit": "bca0bfe6aaff67144643bc5dd813d6a5aba211bf",
+  "runtimeDeployment": {
+    "id": 44281663882,
+    "sha": "bca0bfe6aaff67144643bc5dd813d6a5aba211bf",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "initialRuntimeCommit": "4d051b9539a1e4e609aa9a92ef00061f47940fa2",
+  "initialRuntimeDeployment": {
+    "id": 44280596963,
+    "sha": "4d051b9539a1e4e609aa9a92ef00061f47940fa2",
+    "status": "completed",
+    "conclusion": "success"
+  }
+}
