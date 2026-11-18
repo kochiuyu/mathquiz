@@ -1,4 +1,4 @@
-const fs=require('fs'),vm=require('vm'),path=require('path'),a=require('assert/strict'),root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),B=require('../p3-skill-data.js'),S=require('../p3-skill-seeds.js');
+const fs=require('fs'),vm=require('vm'),path=require('path'),a=require('assert/strict'),root=path.resolve(__dirname,'..'),read=p=>fs.readFileSync(path.join(root,p),'utf8'),Full=require('../p3-skill-data.js'),B={...Full,skills:Object.fromEntries(Object.entries(Full.skills).filter(([id])=>!id.startsWith('tsa'))),questions:Full.questions.filter(q=>!q.meta?.tsa2026)},S=require('../p3-skill-seeds.js');
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('questions.js')+read('builder.js')+';this.bank=families;',c);
 const core=c.bank.filter(f=>f.grade===3&&!f.retired);a.equal(core.length,35);a.deepEqual(Object.keys(B.skills).sort(),Array.from(core,f=>f.id).sort());a.equal(B.questions.length,1260);
 for(const f of core){a.equal(B.skills[f.id].unit,f.code);a.equal(JSON.stringify(B.skills[f.id].label),JSON.stringify(f.label));}
@@ -38,3 +38,4 @@ for(const id of Object.keys(B.skills))for(const level of Object.keys(B.levels)){
 const mp=S.seeds.filter(s=>s.skill==='multdigit3a');a.equal(new Set(mp.map(s=>s.q.multiplication3N2.factors.join(','))).size,12);a.equal(new Set(mp.map(s=>s.q.multiplication3N2.reverse)).size,2);
 for(const f of ['p3-skill-data.js','p3-skill-seeds.js','p3-skill-levels.js','p3-skill-pictures.js','ui.js','tests/p3-skill-levels-tests.js'])new vm.Script(read(f));
 console.log('PASS: 35 P3 skill mappings; 1260 field/answer contracts and added numeric oracles; 105 distinct twelve-question levels in both languages; 420 exact source contexts; both multiplication orders; fraction positions and bounds. Run existing P3 independent oracles for source answers.');
+

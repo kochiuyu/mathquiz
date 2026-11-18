@@ -53,5 +53,8 @@ questions.push({id:`p3s-${skill}-${level}-${i+1}`,skill,unit:s.unit,level,prompt
 }
 const norm=s=>String(s).normalize('NFKC').trim(),num=s=>/^\+?\d+(?:\.0+)?$/.test(norm(s))?Number(norm(s)):NaN,matches=(f,v)=>f.options?norm(v)===f.answer:Number.isFinite(num(v))&&num(v)===+f.answer;
 const assess=(q,v)=>q.fields.map((f,i)=>matches(f,v[i])),pick=(skill,level,set)=>questions.filter(q=>q.skill===skill&&q.level===level).filter((_,i)=>set==='all'||i%4===+set);
-root.P3Skills={version:1,skills:source.skills,units:source.units,levels,questions,pick,matches,assess,guides,progressions};if(typeof module!=='undefined')module.exports=root.P3Skills;
+root.P3Skills={version:2,skills:{...source.skills},units:{...source.units},levels,questions,pick,matches,assess,guides,progressions};
+(typeof module!=='undefined'?require('./p3-tsa.js'):root.MathQuizP3TSA).extend(root.P3Skills);
+if(typeof module!=='undefined')module.exports=root.P3Skills;
 })(typeof globalThis!=='undefined'?globalThis:this);
+

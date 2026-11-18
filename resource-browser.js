@@ -32,6 +32,7 @@ window.MathQuizResources = {render(app,coverage,ui){
   document.getElementById('library-level-filter').hidden=!showLevels;
   const directoryQuery=new URLSearchParams({lang:language(),...(state.p&&levelScope?{p:state.p}:{}),...(state.unit&&+state.unit[0]<=6?{unit:state.unit}:{}),level:state.level});
   document.getElementById('levels-library-entry').innerHTML=levelScope?'<div class="levels-entry library-level-entry"><a href="skill-levels.html?'+directoryQuery+'">'+tr('P1–P6 levelled skill directory','小一至小六分級技能目錄')+' →</a></div>':'';
+  if(!state.p||state.p==='3')document.getElementById('levels-library-entry').insertAdjacentHTML('beforeend','<p class="tsa-entry"><a href="skill-levels.html?'+new URLSearchParams({lang:language(),p:'3',q:'TSA',level:state.level})+'">'+tr('New: 15 P3 TSA question types','新增：15項小三TSA題型')+' →</a></p>');
   const chips=[['p',state.p?year(+state.p):''],['strand',state.strand?loc(resourceData.strands[state.strand]):''],['unit',state.unit],['mode',state.mode?modes.find(([id])=>id===state.mode)[1]:''],['q',state.q?tr('Search: ','搜尋：')+state.q:'']].filter(([,value])=>value);
   document.getElementById('active-resource-filters').innerHTML=chips.map(([key,label])=>'<button type="button" class="filter-chip" data-clear="'+key+'" aria-label="'+esc(tr('Remove filter: ','移除此篩選：')+label)+'">'+esc(label)+' <span aria-hidden="true">×</span></button>').join('');
   const query=state.q.toLocaleLowerCase().trim(),list=[],seenSkills=new Set(),seenActivities=new Set();
@@ -78,3 +79,4 @@ window.MathQuizResources = {render(app,coverage,ui){
  for(const [id,open]of [['expand-units',true],['collapse-units',false]])document.getElementById(id).onclick=()=>results.querySelectorAll('.unit-group').forEach(d=>{d.open=open;openUnits.set(d.dataset.unit,open);});
  window.addEventListener('popstate',()=>{clearTimeout(timer);openUnits.clear();readState();render();});render();
 }};
+

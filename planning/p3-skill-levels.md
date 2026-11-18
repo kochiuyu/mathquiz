@@ -86,3 +86,9 @@ Release `90ba1f4` is published and verified. The deployed runner passed **231/23
 Human pupil calibration, independent translation, physical printing and full assistive-technology review remain deferred. Automated success is not a usability or accessibility-conformance claim.
 
 For later calibration, sample pupils across several skills, vary set order, record prompting and misconceptions, and revise cues or reasoning demands that do not separate as intended. Keep practical observation and curriculum-completion evidence separate from difficulty labels.
+
+
+## TSA variety extension — 19 November 2026
+
+The original 35-skill plan and 1,260 tasks above remain intact. Fifteen additional types bring P3 to 50 skills / 1,800 tasks. See [the TSA source mapping and response contracts](p3-tsa-2026.md) for the additional progressions, cumulative-review grouping and limits.
+

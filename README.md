@@ -590,3 +590,13 @@ Correct answers now receive a green tick and a short animation in core practice/
 These fixed selections sample topics; they do not claim whole-unit assessment or an Easy/Normal/Difficult calibration. [See all topics and verification scope](planning/example-quizzes.md), or [run the example checks](tests/examples-regression.html).
 
 **Published and verified:** [release 7d0f07c8](https://github.com/kochiuyu/mathquiz/commit/7d0f07c8dda1b2a3e135419b3daf18b974262cdc). **All 54 distinct public checks verified (53/54 in the full run, plus 1 exact passing rerun).** All 54 local cases are verified (53/54 plus the exact timeout rerun). Three static gates passed, and all eight deployed runtime files match the tested copies. [Release evidence](planning/example-quizzes-evidence.json) retains failed attempts and verification limits. Physical-print, classroom, independent translation and full screen-reader reviews remain deferred.
+
+## P3 TSA question variety — 19 November 2026
+
+The eight supplied English/Chinese TSA 2026 P3 papers informed **15 new skill types**: number names, combined order/parity, all-equivalent fractions, money/change, calendars, balances, dial scales, capacity relationships, route distances, directions, angle ordering, parallel/perpendicular lines, boundary classification, solid classification and chart completion values/titles.
+
+P3 now has **50 skills / 1,800 levelled tasks**. The addition contains 180 contexts presented at three levels (**540 tasks**), with bilingual prompts, diagrams, worked keys, printable pupil papers and Smart practice. All 1,260 existing P3 tasks retain their payloads and IDs. Earlier-grade topics assessed at P3 sit in an explicit cumulative-review group; the separate mixed-quiz builder keeps its existing question families.
+
+[Open the new TSA skills](https://kochiuyu.github.io/mathquiz/skill-levels.html?p=3&q=TSA) · [Source mapping, implementation and limits](planning/p3-tsa-2026.md) · [Focused browser checks](tests/p3-skill-levels.html?scope=tsa).
+
+Validation: the new independent answer/contract checks and the original P3 static checks pass. Live-browser results are recorded in [release evidence](planning/p3-tsa-evidence.json).

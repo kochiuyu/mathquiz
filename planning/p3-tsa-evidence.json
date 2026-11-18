@@ -1,0 +1,13 @@
+{
+  "release": "P3 TSA 2026 question variety",
+  "date_hong_kong": "2026-11-19",
+  "new_skills": 15,
+  "new_contexts": 180,
+  "new_levelled_tasks": 540,
+  "total_p3_skills": 50,
+  "total_p3_levelled_tasks": 1800,
+  "static_checks": {"new_independent_answers": "pass", "original_35_skills": "pass", "original_1260_payload_hash": "pass"},
+  "local_browser": "Unavailable: local socket access is restricted by the execution environment.",
+  "public_browser": "pending deployment",
+  "limits": ["No physical-print validation", "No classroom calibration", "Online chart completion uses values and title choices rather than freehand drawing", "New skills are separate from mixed-quiz builder families"]
+}
