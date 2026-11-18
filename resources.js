@@ -699,7 +699,7 @@ const resourceData = {
         "小數（四）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=50",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6N2",
@@ -709,7 +709,7 @@ const resourceData = {
         "小數（五）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=52",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6N3",
@@ -719,7 +719,7 @@ const resourceData = {
         "百分數（一）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=53",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6N4",
@@ -729,7 +729,7 @@ const resourceData = {
         "百分數（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=54",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6A1",
@@ -739,7 +739,7 @@ const resourceData = {
         "簡易方程（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=55",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6M1",
@@ -749,7 +749,7 @@ const resourceData = {
         "角（度）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=56",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6M2",
@@ -759,7 +759,7 @@ const resourceData = {
         "體積（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=58",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6M3",
@@ -769,7 +769,7 @@ const resourceData = {
         "周界（二）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=59",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6M4",
@@ -779,7 +779,7 @@ const resourceData = {
         "速率"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=60",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6M5",
@@ -789,7 +789,7 @@ const resourceData = {
         "面積（三）"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=62",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6S1",
@@ -799,7 +799,7 @@ const resourceData = {
         "對稱"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=64",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6D1",
@@ -809,7 +809,7 @@ const resourceData = {
         "平均數"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=65",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6D2",
@@ -819,7 +819,7 @@ const resourceData = {
         "折線圖"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=66",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6D3",
@@ -829,7 +829,7 @@ const resourceData = {
         "圓形圖"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=67",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6D4",
@@ -839,7 +839,7 @@ const resourceData = {
         "統計圖的應用和誤用"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=68",
-      "complete": false
+      "complete": true
     },
     {
       "code": "6F1",
@@ -849,7 +849,7 @@ const resourceData = {
         "探究活動"
       ],
       "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=69",
-      "complete": false
+      "complete": true
     }
   ],
   "activities": [

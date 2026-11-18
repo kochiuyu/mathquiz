@@ -1,5 +1,9 @@
 # 6M1: Angle (degree)
 
+**P6 resources verified:** All 16 P6 units are resource complete following live verification of `11eb4a1d7fd6652a55acddc4c3cdb6992c225013`. All 85 units are resource complete: 297 numbered objectives plus 6 inquiry statements. Inventory: 271 permanent families / 4,035 variants; 270 selectable / 4,020; 77 selectable units, 85 resource-bearing units, 85 activities and zero open units. P1–P6 has 9,720 level tasks. Resource completeness is not pupil mastery or observed classroom performance. Physical printing, classroom trials, independent translation and screen-reader validation remain unverified. [Live evidence](p6-live-closure-evidence.json).
+
+Earlier verification records below retain their original scope and are historical.
+
 ## Learning coverage
 
 3 numbered objectives. Angles are named by their vertex and rays. Tasks cover degrees, straight/reflex/round turns, rotated dual-scale protractors and angle comparisons independent of ray length. Measuring and drawing tasks do not use 0° or 360° as targets.

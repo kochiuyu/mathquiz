@@ -1,5 +1,9 @@
 # 6M4: Speed
 
+**P6 resources verified:** All 16 P6 units are resource complete following live verification of `11eb4a1d7fd6652a55acddc4c3cdb6992c225013`. All 85 units are resource complete: 297 numbered objectives plus 6 inquiry statements. Inventory: 271 permanent families / 4,035 variants; 270 selectable / 4,020; 77 selectable units, 85 resource-bearing units, 85 activities and zero open units. P1–P6 has 9,720 level tasks. Resource completeness is not pupil mastery or observed classroom performance. Physical printing, classroom trials, independent translation and screen-reader validation remain unverified. [Live evidence](p6-live-closure-evidence.json).
+
+Earlier verification records below retain their original scope and are historical.
+
 ## Learning coverage
 
 9 numbered objectives. Tasks cover all nine objectives: single-unit time conversions, intervals, speed meaning, intuitive/direct/improvised comparisons, standard speed units, travel/rest graphs and distance–speed–time problems. No m/s–km/h conversion or pursuit problem is required. Practical comparisons use safe toy or walking observations, not dangerous races.

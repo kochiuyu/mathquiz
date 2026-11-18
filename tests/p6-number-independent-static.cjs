@@ -85,12 +85,12 @@ a(c.scoreAlgebra6('25%x=1.5',{mode:'equation',variable:'x',expected:'0.25*x=1.5'
 console.log('PASS3351 frozen predecessors,480 correct+480 wrong production mark calls, malformed/near-miss scalar and direct-equation contracts. Browser pending.');
 
 const resource=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));const selectable=c.bank.filter(f=>!f.retired),selectedUnits=new Set(selectable.map(f=>f.code)),bearing=new Set([...selectedUnits,...resource.activities.flatMap(x=>x.units)]),planned=resource.units.length-bearing.size;
-a.deepEqual([c.bank.length,c.bank.reduce((n,f)=>n+f.count,0),selectable.length,selectable.reduce((n,f)=>n+f.count,0),selectedUnits.size,bearing.size,resource.activities.length,planned,resource.units.filter(x=>x.complete).length],[271,4035,270,4020,77,85,85,0,69]);
+a.deepEqual([c.bank.length,c.bank.reduce((n,f)=>n+f.count,0),selectable.length,selectable.reduce((n,f)=>n+f.count,0),selectedUnits.size,bearing.size,resource.activities.length,planned,resource.units.filter(x=>x.complete).length],[271,4035,270,4020,77,85,85,0,85]);
 const resourceRunner=read('tests/resources-ui-regression.js');a(resourceRunner.includes("querySelectorAll('[data-unit]').length==="+planned+",'planned only'"),'exact current planned-unit browser total');
-for(const code of ['6N1','6N2','6N3','6N4','6A1'])a.equal(resource.units.find(u=>u.code===code).complete,false);
+for(const code of ['6N1','6N2','6N3','6N4','6A1'])a.equal(resource.units.find(u=>u.code===code).complete,true);
 for(const f of c.added){const ids=Array.from({length:f.count},(_,i)=>f.id+'-'+i);let batch=[];for(const id of ids){if(batch.length>=12||[...batch,id].join('.').length>300)batch=[];batch.push(id);a(batch.length<=12&&batch.join('.').length<=300);a.equal(c.decodeItems(batch.join('.'),6).length,batch.length);}}
 a(read('tests/regression.js').includes('P6 number/algebra recovery '));a(read('tests/regression.js').includes('P6 all240 bounded bilingual paper/key/PDF'));a(read('tests/regression.js').includes('P6 observed practical '));
-console.log('PASS exact current resource/test inventory and bounded new links; all five unit flags remain incomplete.');
+console.log('PASS exact current resource/test inventory and bounded new links; all five unit flags resource complete.');
 
 for(const bad of ['1 1/2*x=3','0. 5*x=3','0 .5*x=3','１ １/２*x=3'])a.equal(c.parseAlgebra6(bad.split('=')[0]),null,'separated numeric token rejected');
 a(c.scoreAlgebra6('(1+1/2)*x=3',{mode:'equation',variable:'x',expected:'1.5*x=3'}));

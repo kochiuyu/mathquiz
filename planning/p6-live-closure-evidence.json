@@ -1,0 +1,123 @@
+{
+  "commit": "11eb4a1d7fd6652a55acddc4c3cdb6992c225013",
+  "site": "https://kochiuyu.github.io/mathquiz/",
+  "verifiedAt": "2026-11-18T15:58:35.146119+00:00",
+  "verifiedUnits": [
+    "6N1",
+    "6N2",
+    "6N3",
+    "6N4",
+    "6A1",
+    "6M1",
+    "6M2",
+    "6M3",
+    "6M4",
+    "6M5",
+    "6S1",
+    "6D1",
+    "6D2",
+    "6D3",
+    "6D4",
+    "6F1"
+  ],
+  "runtimeMatchesCandidate": true,
+  "pages": {
+    "commit": "11eb4a1d7fd6652a55acddc4c3cdb6992c225013",
+    "runId": 44340165312,
+    "status": "success"
+  },
+  "suites": {
+    "core": {
+      "commit": "8b282ce04fe80a4e58c1b8ec89ad30178124b112",
+      "environment": "live",
+      "complete": true,
+      "passed": 1071,
+      "failed": 0,
+      "skipped": 0,
+      "scope": "all",
+      "unchangedSuiteAndRuntimeAcrossCorrection": true
+    },
+    "p6Levels": {
+      "commit": "8b282ce04fe80a4e58c1b8ec89ad30178124b112",
+      "environment": "live",
+      "complete": true,
+      "passed": 379,
+      "failed": 0,
+      "skipped": 0,
+      "unchangedSuiteAndRuntimeAcrossCorrection": true
+    },
+    "smart": {
+      "commit": "11eb4a1d7fd6652a55acddc4c3cdb6992c225013",
+      "environment": "live",
+      "complete": true,
+      "passed": 329,
+      "failed": 0,
+      "skipped": 0
+    },
+    "shared": {
+      "commit": "8b282ce04fe80a4e58c1b8ec89ad30178124b112",
+      "environment": "live",
+      "complete": true,
+      "passed": 357,
+      "failed": 0,
+      "skipped": 0,
+      "unchangedSuiteAndRuntimeAcrossCorrection": true
+    },
+    "ui": {
+      "commit": "8b282ce04fe80a4e58c1b8ec89ad30178124b112",
+      "environment": "live",
+      "complete": true,
+      "passed": 245,
+      "failed": 0,
+      "skipped": 0,
+      "unchangedSuiteAndRuntimeAcrossCorrection": true
+    },
+    "resources": {
+      "commit": "8b282ce04fe80a4e58c1b8ec89ad30178124b112",
+      "environment": "live",
+      "complete": true,
+      "passed": 101,
+      "failed": 0,
+      "skipped": 0,
+      "unchangedSuiteAndRuntimeAcrossCorrection": true
+    }
+  },
+  "testCorrection": {
+    "parent": "8b282ce04fe80a4e58c1b8ec89ad30178124b112",
+    "commit": "11eb4a1d7fd6652a55acddc4c3cdb6992c225013",
+    "description": "Test-only keyboard expectation correction; computational runtime unchanged. Suite commit provenance is recorded separately."
+  },
+  "liveAssets": {
+    "commit": "11eb4a1d7fd6652a55acddc4c3cdb6992c225013",
+    "algorithm": "sha256",
+    "matched": 484,
+    "mismatched": 0
+  },
+  "activityCoverage": {
+    "suite": "ui",
+    "totalPages": 85,
+    "allVerified": true,
+    "p6Paths": [
+      "activities/p6-angle-degree.html",
+      "activities/p6-area-iii.html",
+      "activities/p6-averages.html",
+      "activities/p6-broken-line-graphs.html",
+      "activities/p6-decimals-iv.html",
+      "activities/p6-decimals-v.html",
+      "activities/p6-inquiry.html",
+      "activities/p6-percentages-i.html",
+      "activities/p6-percentages-ii.html",
+      "activities/p6-perimeter-ii.html",
+      "activities/p6-pie-charts.html",
+      "activities/p6-simple-equations-ii.html",
+      "activities/p6-speed.html",
+      "activities/p6-statistics.html",
+      "activities/p6-symmetry.html",
+      "activities/p6-volume-ii.html"
+    ],
+    "languages": [
+      "en",
+      "zh"
+    ]
+  }
+}

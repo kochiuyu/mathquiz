@@ -1,5 +1,9 @@
 # P6 skill demands and limitations
 
+**P6 resources verified:** All 16 P6 units are resource complete following live verification of `11eb4a1d7fd6652a55acddc4c3cdb6992c225013`. All 85 units are resource complete: 297 numbered objectives plus 6 inquiry statements. Inventory: 271 permanent families / 4,035 variants; 270 selectable / 4,020; 77 selectable units, 85 resource-bearing units, 85 activities and zero open units. P1–P6 has 9,720 level tasks. Resource completeness is not pupil mastery or observed classroom performance. Physical printing, classroom trials, independent translation and screen-reader validation remain unverified. [Live evidence](p6-live-closure-evidence.json).
+
+Earlier verification records below retain their original scope and are historical.
+
 All 52 selectable P6 skills have 12 sampled, reviewed core contexts each. Each context is reused at Easy, Normal and Difficult: 624 contexts and 1,872 labelled tasks, not 1,872 independent scenarios. Easy adds a method cue, Normal preserves independent application, and Difficult requires the original response plus contextual checking. There are 718 additional answer fields, independently checked against visible English prompts and actual SVG geometry. The labels are provisional teaching demands, not validated difficulty or mastery ratings.
 
 ## Exact response contracts

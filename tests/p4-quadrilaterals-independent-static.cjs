@@ -18,4 +18,4 @@ console.log(`PASS 4S1: 2553 predecessor payloads/marking frozen; ${total} indepe
 for(const token of ['4S1 all24 bounded bilingual paper/key/PDF geometry','4S1 all24 actual assessment','4S1 full practice','4S1 six-task activity','quad label not clipped'])a.ok(read('tests/regression.js').includes(token),'missing browser guard '+token);
 a.ok(read('index.html').includes('quadrilateral4.js?v=quad-r1'));a.ok(read('tests/regression.html').includes('quadrilateral4.js?v=quad-r1'));a.ok(read('tools/build-pdf-font.py').includes('"quadrilateral4.js"'));
 
-a.ok(read('coverage.html').includes('quadrilateral4.js?v=quad-r1'));for(const name of ['index.html','coverage.html'])for(const asset of ['builder.js','quiz.js','resources.js','pdf-export.js'])a.ok(read(name).includes(asset+'?v=p6-core-r1'));
+a.ok(read('coverage.html').includes('quadrilateral4.js?v=quad-r1'));for(const name of ['index.html','coverage.html'])for(const asset of ['builder.js','quiz.js','resources.js','pdf-export.js'])a.ok(read(name).includes(asset+'?v='+(asset==='resources.js'?'p6-closure85-r1':'p6-core-r1')));

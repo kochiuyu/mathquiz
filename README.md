@@ -1,6 +1,6 @@
 # MathQuiz · Hong Kong primary mathematics
 
-**P6 release candidate:** 52 selectable P6 skills use 624 core contexts at three provisional teaching demands (1,872 tasks), bringing P1–P6 to 270 skills and 9,720 level tasks. The candidate contains 271 permanent families / 4,035 variants, 270 selectable / 4,020 variants, 77 selectable units, 85 resource-bearing units and 85 activities. The 69 verified P1–P5 completion flags remain unchanged; all 16 P6 units await live closure. Practical objectives require actual teacher observations. See [P6 learning scope and verification](planning/p6-core-integration.md).
+**P6 resources verified:** All 16 P6 units are resource complete following live verification of `11eb4a1d7fd6652a55acddc4c3cdb6992c225013`. All 85 units are resource complete: 297 numbered objectives plus 6 inquiry statements. Inventory: 271 permanent families / 4,035 variants; 270 selectable / 4,020; 77 selectable units, 85 resource-bearing units, 85 activities and zero open units. P1–P6 has 9,720 level tasks. Resource completeness is not pupil mastery or observed classroom performance. Physical printing, classroom trials, independent translation and screen-reader validation remain unverified. [Live evidence](planning/p6-live-closure-evidence.json).
 
 **P5 resources verified:** All 13 P5 units are resource complete following live verification of code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23`. Total 69/85 units, 254 numbered objectives plus 5 inquiry statements. P5 includes 53 selectable skills, 759 core variants, 1,908 level tasks and 13 bilingual practical resources. Whole-site inventory remains 222 permanent families / 3,351 variants; 221 selectable / 3,336; 65 selectable units; 72 resource-bearing units; 69 activities; 3 open resource-bearing units and 13 planned units. All P6 completion flags remain false. The unchanged computational runtime retains the local full 818-check proof; fresh live P5 core verification covers 193 checks with 625 other-grade checks explicitly outside that fresh scope, alongside the live level, Smart, shared, UI and resource checks. Resource completeness is not pupil mastery or observed classroom performance. [Live verification](planning/p5-live-closure-evidence.json).
 
@@ -54,7 +54,7 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 units.** This P6 candidate has 77 selectable units and 8 without selectable tasks, 270 selectable families / 4,020 variants. 69 units are resource complete. One retired family / 15 variants retains old-link compatibility.
+**The goal is to give teachers usable assessment material for every objective across all 85 units.** This P6 release has 77 selectable units and 8 without selectable tasks, 270 selectable families / 4,020 variants. 85 units are resource complete. One retired family / 15 variants retains old-link compatibility.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
@@ -63,10 +63,10 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 | P3 | 14 | 13 | 1 | 14 |
 | P4 | 15 | 14 | 1 | 15 |
 | P5 | 13 | 12 | 1 | 13 |
-| P6 | 16 | 15 | 1 | 0 |
-| **Total** | **85** | **77** | **8** | **69** |
+| P6 | 16 | 15 | 1 | 16 |
+| **Total** | **85** | **77** | **8** | **85** |
 
-**Current resource inventory:** 85 units have digital tasks or linked activities; 77 selectable units, 69 complete and 16 open resource-bearing units; 85 activities.
+**Current resource inventory:** 85 units have digital tasks or linked activities; 77 selectable units, 85 complete and 0 open resource-bearing units; 85 activities.
 
 **Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 

@@ -25,7 +25,7 @@ let total=0,svgs=0;for(const f of c.added){a.equal(f.count,12);const seen=[new S
  if(['bars','truncated'].includes(fig.mode)){const bars=[...svg.matchAll(/data-bar="(\d+)" x="([^"]+)" y="([^"]+)" width="([^"]+)" height="([^"]+)"/g)],base=fig.mode==='truncated'?fig.base:0,step=fig.mode==='truncated'?1:Math.max(1,Math.ceil(Math.max(...fig.values)/10));a.equal(bars.length,fig.values.length);bars.forEach((p,j)=>{close(+p[3],280-(fig.values[j]-base)/step*20);close(+p[5],(fig.values[j]-base)/step*20);close(+p[4],35);});}
  svgs++;}total++;}for(const s of seen)a.equal(s.size,12,f.id+' visible contexts');}
 a.equal(total,144);a.equal(c.bank.length,271);a.equal(c.bank.reduce((s,f)=>s+f.count,0),4035);
-const r=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(r.units.filter(u=>u.complete).length,69);a.equal(r.activities.length,85);for(const code of ['6S1','6D1','6D2','6D3','6D4','6F1'])a.equal(r.units.find(u=>u.code===code).complete,false);
+const r=JSON.parse(read('resources.js').split('const resourceData = ')[1].replace(/;\s*$/,''));a.equal(r.units.filter(u=>u.complete).length,85);a.equal(r.activities.length,85);for(const code of ['6S1','6D1','6D2','6D3','6D4','6F1'])a.equal(r.units.find(u=>u.code===code).complete,true);
 console.log(`PASS ${total} P6 independent answers, ${svgs} bilingual actual SVG checks, all3351 predecessors frozen; browser verification pending.`);
 
 const quiz=read("quiz.js");
