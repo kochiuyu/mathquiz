@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="../answer-feedback.css?v=1"><title>Answer feedback test fixture</title></head><body><header>Test fixture</header><main><form id="questions"><input value=""><p id="feedback0" class="feedback"></p><button>Check</button><button type="button" id="retry">Retry</button></form></main><script>
+const params=new URLSearchParams(location.search);if(params.get('lang')==='zh')document.documentElement.lang='zh-HK';
+// Deterministic audio visibility; real hidden-page behaviour gets its own case.
+Object.defineProperty(document,'hidden',{get:()=>params.has('hidden')});
+window.audioLog={contexts:0,starts:0,stops:0,gains:[],resumes:0};
+class FakeAudio{constructor(){audioLog.contexts++;this.state='suspended';this.currentTime=0;this.destination={};}resume(){audioLog.resumes++;if(params.has('reject'))return Promise.reject(Error('blocked'));this.state='running';return Promise.resolve();}createOscillator(){return {frequency:{setValueAtTime(){}},connect(){},disconnect(){},start(){audioLog.starts++;},stop(){audioLog.stops++;}};}createGain(){return {gain:{setValueAtTime(v){audioLog.gains.push(v)},linearRampToValueAtTime(v){audioLog.gains.push(v)},exponentialRampToValueAtTime(v){audioLog.gains.push(v)}},connect(){},disconnect(){}};}}
+window.AudioContext=params.has('unsupported')?undefined:FakeAudio;window.webkitAudioContext=undefined;
+if(params.has('storage')){Storage.prototype.getItem=()=>{throw Error('blocked')};Storage.prototype.setItem=()=>{throw Error('blocked')};}
+document.getElementById('questions').onsubmit=e=>{e.preventDefault();const f=document.getElementById('feedback0');if(!e.target.querySelector('input').value)return;const ok=e.target.querySelector('input').value==='1';f.dataset.correct=String(ok);f.textContent=ok?'Correct':'Try again';};
+document.getElementById('retry').onclick=()=>{document.getElementById('feedback0').textContent='';};
+</script><script src="../answer-feedback.js?v=1"></script></body></html>

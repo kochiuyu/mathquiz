@@ -1,0 +1,12 @@
+.answer-tools{box-sizing:border-box;display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:.5rem;max-width:1100px;margin:.5rem auto;padding:0 1rem;font:inherit}
+.answer-tools button{min-height:44px;min-width:44px;max-width:100%;white-space:normal;background:#fff;color:#185743;border:1px solid #51786c;border-radius:999px;padding:.45rem .9rem;font:inherit;font-weight:700;cursor:pointer}
+.answer-tools button[aria-pressed="true"]{background:#e6f6ec}.answer-tools button:focus-visible{outline:3px solid #164eaa;outline-offset:3px}.answer-tools button:disabled{cursor:default}.answer-sound-note{font-size:.85em}
+.answer-celebration{display:flex;gap:.55em;align-items:center;margin:.65rem 0 .2rem;color:#185743;font-weight:700;overflow-wrap:anywhere;animation:answer-pop .35s ease-out}
+.answer-tick{display:inline-grid;place-items:center;flex:none;width:1.8em;height:1.8em;border-radius:50%;background:#e6f6ec;border:1px solid #51786c;line-height:1}
+.answer-success{border-inline-start:3px solid #28704f;padding-inline-start:.65rem!important;animation:answer-glow .65s ease-out}
+.answer-milestone{border-inline-start-width:5px}.answer-celebration[data-kind="promote"] .answer-tick,.answer-celebration[data-kind="complete"] .answer-tick{background:#fff2c6;color:#634400;border-color:#92712d}
+@keyframes answer-pop{from{opacity:.35;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes answer-glow{from{background-color:#e6f6ec}to{background-color:transparent}}
+@media(prefers-reduced-motion:reduce){.answer-celebration,.answer-success{animation:none!important;transform:none!important}}
+@media print{.answer-tools,.answer-celebration{display:none!important}.answer-success{animation:none!important;border:0!important;padding-inline-start:0!important}}
+@media(forced-colors:active){.answer-tick,.answer-tools button{border-color:ButtonText;color:ButtonText}.answer-success{border-color:Highlight}}

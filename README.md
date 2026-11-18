@@ -542,3 +542,11 @@ Nine relevant Node gates and the actual PDF font check passed. All 29 checked pu
 
 Test release: [beb30ebd](https://github.com/kochiuyu/mathquiz/commit/beb30ebdae259631cbf7108f9b93e52dba927c3f), successful Pages run [44321857066](https://github.com/kochiuyu/mathquiz/actions/runs/44321857066). [Machine-readable results](planning/p5-test-results.json).
 
+
+## Correct-answer celebrations and optional sound ? 19 November 2026
+
+Correct answers now receive a green tick and a short animation in core practice/quizzes, P1 unit practice and P1?P6 skill practice. Smart practice celebrates readiness for the next level and completion of Difficult. Assisted answers remain encouraging without changing streak or progression rules.
+
+**Sound is off by default.** Use the Sound button to enable gentle chimes; the choice is remembered in this browser. Muting stops sound immediately. Reduced-motion preferences keep the tick and words without animation. Restoring progress or changing language does not replay celebrations. Papers and keys exclude the controls and effects.
+
+[Implementation and limits](planning/answer-feedback.md) ? [Feedback checks](tests/answer-feedback.html). No question bank, marking function or progression rule changed. Local verification: all 36 feedback cases verified (35/36 plus the exact page-load-timeout rerun), 245/245 shared UI checks and 331/331 Smart candidate checks. The concurrently published P6 keyboard test was preserved and its two bilingual cases also passed. Live verification will be recorded after deployment. Manual classroom, translation, screen-reader and cross-device audio reviews remain deferred.
