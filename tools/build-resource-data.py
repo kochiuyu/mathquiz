@@ -13,6 +13,9 @@ def zh(title):
  if m and m[1] in translations:return translations[m[1]]+'（'+{'I':'一','II':'二','III':'三','IV':'四','V':'五'}[m[2]]+'）'
  raise ValueError('Translation required: '+title)
 activity_units={
+ 'p5-fractions-iv':['5N3'],
+ 'p5-fractions-iii':['5N2'],
+ 'p5-multi-digit-numbers':['5N1'],
  'p1-early-number-review':['1N1','1N2'],'p1-number-sense-review':['1N3'],'p1-numbers-oral':['1N3'],'p1-addition-subtraction-review':['1N4'],
  'p1-length-distance-i':['1M1'],'p1-length-distance-ii':['1M3'],'p1-money':['1M2'],'p1-time':['1M4'],'p1-3d-shapes':['1S1'],'p1-2d-shapes':['1S2'],'p1-directions':['1S3'],'p1-inquiry':['1F1'],
  'p2-3digit-numbers':['2N1'],'p2-addition-subtraction-ii':['2N2'],'p2-basic-multiplication':['2N3'],'p2-4digit-numbers':['2N4'],'p2-addition-subtraction-iii':['2N5'],'p2-basic-division':['2N6'],'p2-length-distance-iii':['2M1'],'p2-time-ii':['2M2'],'p2-money':['2M3'],'p2-3d-shapes-ii':['2S1'],'p2-angles':['2S2'],'p2-directions-ii':['2S3'],'p2-quadrilaterals-i':['2S4'],'p2-pictograms':['2D1'],'p2-inquiry':['2F1'],

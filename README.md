@@ -1,5 +1,7 @@
 # MathQuiz · Hong Kong primary mathematics
 
+**Private 5N1–5N3 candidate; incomplete:** Rebased onto the verified 56-unit P1–P4 closure. Thirteen new families add 192 variants (60 for 5N1, 72 for 5N2, 60 for 5N3), preserving all 175 predecessor families / 2,661 variants. Current inventory: 188 permanent families / 2,853 variants; 187 selectable / 2,838; 60 selectable units / 66 resource units; 59 activities; 56 complete and 10 open resource-bearing units. Verified totals remain 211 numbered objectives plus four inquiry statements. 5N1, 5N2 and 5N3 remain incomplete. Private verification completed: **616/616 curriculum, 193/193 UI and 248/248 dedicated P1 checks passed**, with zero failures. This is private evidence only; deployed candidate verification is pending. All 56 inherited completion flags remain unchanged, and 5N1, 5N2 and 5N3 remain incomplete. The later P1 skill release `2b3521f` has now been preserved in this private candidate; core computational bytes are unchanged. Fresh integrated checks passed **193/193 UI, 248/248 P1 unit and 251/251 P1 skill checks**, with zero failures. All44 static gates and actual font coverage passed locally and in an isolated copy. Live P5 verification remains pending.
+
 **Verified resource-complete checkpoint: 56/85 units.** All P1–P4 units have source-reviewed assessment resources, covering 211 numbered objectives plus four integrated inquiry statements. Public remaining-P4 release `b10a771` passed **549/549 curriculum checks and 187/187 UI checks**, with zero failures. The five units add 108 variants, 11 numbered objectives (3+2+2+4) and one inquiry statement; all 2,553 measures-release predecessor payloads are preserved. Inventory: 175 permanent families / 2,661 variants; 174 selectable / 2,646; 58 selectable units / 64 resource units; 56 activities and eight open resource-bearing units. Resource completeness is not pupil mastery or delivered inquiry hours. Manual printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
 **Historical verified measures checkpoint: 51/85 units.** All P1–P3 units, 4N1–4N8, 4M1 and 4M2 have source-reviewed assessment resources, covering 200 numbered objectives plus three integrated inquiry statements. Public measures release `d9cd8a1` passed **497/497 curriculum checks and 177/177 UI checks**, with zero failures. Two units add 90 variants; all 2,463 public predecessor payloads remain unchanged. Inventory: 166 permanent families / 2,553 variants; 165 selectable families / 2,538 variants; 55 selectable units / 60 resource units; 51 activities and nine open resource-bearing units. Resource completeness is not pupil mastery. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
@@ -32,7 +34,7 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## Curriculum completion
 
-**The goal is to give teachers usable assessment material for every objective across all 85 units.** This verified release has 58 selectable units and 27 without selectable tasks, 174 selectable families / 2,646 variants. 56 units are resource complete. One retired family / 15 variants retains old-link compatibility.
+**The goal is to give teachers usable assessment material for every objective across all 85 units.** This private P5 candidate has 60 selectable units and 25 without selectable tasks, 187 selectable families / 2,838 variants. 56 units are resource complete. One retired family / 15 variants retains old-link compatibility.
 
 | Year | Units | With a selectable task | Without a selectable task | Verified complete |
 |---|---:|---:|---:|---:|
@@ -40,11 +42,11 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 | P2 | 15 | 14 | 1 | 15 |
 | P3 | 14 | 13 | 1 | 14 |
 | P4 | 15 | 14 | 1 | 15 |
-| P5 | 13 | 5 | 8 | 0 |
+| P5 | 13 | 7 | 6 | 0 |
 | P6 | 16 | 3 | 13 | 0 |
-| **Total** | **85** | **58** | **27** | **56** |
+| **Total** | **85** | **60** | **25** | **56** |
 
-**Verified resource inventory:** 64 units have digital tasks or linked activities; 58 have selectable tasks. All 56 P1–P4 units are resource complete, leaving 8 open resource-bearing units. Verified totals are 211 numbered objectives plus four inquiry statements.
+**Candidate resource inventory:** 66 units have digital tasks or linked activities; 60 have selectable tasks. All 56 P1–P4 units remain resource complete, leaving 10 open resource-bearing units. Verified totals remain 211 numbered objectives plus four inquiry statements. 5N1, 5N2 and 5N3 remain incomplete.
 
 **Historical verified Triangles checkpoint: 39/85 units.** All P1/P2 units, 3N1–3N5, 3M1–3M5 and 3S1–3S2 have source-reviewed assessment resources, covering 155 numbered objectives plus two integrated inquiry statements. Public Triangles release `6c88951` passed **378/378 curriculum checks and 153/153 UI checks**, with zero failures. All 2,025 variant contracts and ten static gates pass. This unit adds four objectives and 36 variants; all 1,989 prior payloads remain unchanged. Resource completeness is not pupil mastery or observed practical performance. Manual PDF/print pagination, physical printing, classroom trials, independent translation and screen-reader validation remain unperformed.
 
@@ -360,6 +362,10 @@ The levels vary support, application and reasoning within the unit's scope. Task
 These are provisional teaching levels, pending pupil trials. English/Traditional Chinese, feedback/retry, retained answers on language changes and browser-print paper/key views are included. The levels page remains outside the mixed-quiz builder and does not change core family counts or curriculum-completion flags. Coin tokens test values rather than real-coin recognition; screen rulers are schematic. Manual classroom, translation, physical-print and screen-reader reviews remain deferred.
 
 **All-P1 release verified:** [release 7d4d03a](https://github.com/kochiuyu/mathquiz/commit/7d4d03a27a20708a94e513df49902b1f74d94212) deployed successfully (Pages run 44215202889). The exact published runtime passed **248/248 dedicated browser checks locally and publicly**, with zero failures. The independent static gate passed for 396 marked tasks and 36 investigations. Existing core static checks passed for 175 families / 2,661 variants, including frozen payload hashes; the UI static gate also passed. These are dedicated P1 and integration checks; the full legacy browser suite was not rerun, and the separate remaining-P4 verification workstream is unchanged.
+
+## Current private verification and rerun provenance
+
+The first complete private curriculum run recorded 614 passes and two failures: a real HTML interpretation defect in six new 5N2 relation labels and a real 5N3 SVG font-size override that clipped labels. The scoped fixes preserved all 2,661 published predecessor payloads. The second run recorded 615 passes and one failure caused by the test’s expected-key fallback for plain choices, not an additional runtime defect. After that test-only correction, the final full run passed 616/616. The first private UI run recorded 191 passes and two failures from stale catalogue/activity counters; corrected exact-count tests passed 193/193. Dedicated P1 checks passed 248/248 on the same corrected runtime. Earlier failed runs are retained as provenance, not counted as passing verification. All 43 static gates, actual font coverage and isolated-copy checks passed, including 144 production key HTML parses. No live P5 verification, classroom observation, physical printing, independent translation or screen-reader validation is claimed.
 
 ## Every P1 skill: Easy / Normal / Difficult · 18 November 2026
 

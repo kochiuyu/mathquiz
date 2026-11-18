@@ -854,6 +854,36 @@ const resourceData = {
   ],
   "activities": [
     {
+      "path": "activities/p5-fractions-iv.html",
+      "units": [
+        "5N3"
+      ],
+      "title": [
+        "P5 · Fractions (IV)",
+        "小五 · 分數（四）"
+      ]
+    },
+    {
+      "path": "activities/p5-fractions-iii.html",
+      "units": [
+        "5N2"
+      ],
+      "title": [
+        "P5 · Fractions (III)",
+        "小五 · 分數（三）"
+      ]
+    },
+    {
+      "path": "activities/p5-multi-digit-numbers.html",
+      "units": [
+        "5N1"
+      ],
+      "title": [
+        "P5 · Multi-digit numbers",
+        "小五 · 多位數"
+      ]
+    },
+    {
       "path": "activities/p1-early-number-review.html",
       "units": [
         "1N1",
