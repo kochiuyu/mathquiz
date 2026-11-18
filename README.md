@@ -400,5 +400,7 @@ Four fixed three-question sets or all twelve are available, with English/Traditi
 - [x] Implement 12 guided, 12 independent and 12 reasoning tasks per skill.
 - [x] Add exact resource links, bilingual marking, stable sets and paper/key views.
 - [x] Pass the bank's static answer/scope/provenance gate and compatibility static gates.
-- [ ] Complete local/public browser verification and record the deployed revision.
+- [x] Complete local/public browser verification and record the deployed revision.
 - [ ] Deferred human review: pupil difficulty calibration, independent translation, physical printing and full screen-reader assessment.
+
+**Published and verified:** [P2 release 0ae8339](https://github.com/kochiuyu/mathquiz/commit/0ae83397ca62f5bb489b841bdac8338ff58d854c) deployed successfully (Pages run 44248761908). The final public runner passed **266/266 difficulty checks and 193/193 shared UI checks**, with zero assertion failures and 0 navigation-timeout retries. The local full run passed 266/266; a subsequent content audit corrected solid sampling to include all eight prism/pyramid base types. All six affected bilingual skill/level cases then passed 6/6 again, and every other context was confirmed unchanged. Thus all 266 distinct current cases are verified locally. Local shared UI checks passed 193/193. All 1,476 public question payloads and seven runtime assets match the local build. See [release evidence](planning/p2-skill-release-evidence.json) for exact provenance and limitations. The five static gates passed; no original core payload or curriculum-completion flag changed. Pupil calibration and the deferred manual reviews remain open.

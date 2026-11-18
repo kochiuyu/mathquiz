@@ -1,0 +1,114 @@
+{
+  "release": "P2 skills: three teaching levels",
+  "date": "2026-11-18",
+  "runtimeCommit": "0ae83397ca62f5bb489b841bdac8338ff58d854c",
+  "sourceRevision": "ee6fef8a911c171627926c9519d396085c88d4d3",
+  "scope": {
+    "skills": 41,
+    "unitsWithSelectableSkills": 14,
+    "levelsPerSkill": 3,
+    "tasksPerSkillLevel": 12,
+    "levelledTasks": 1476,
+    "underlyingContexts": 492,
+    "inquiry": "2F1 remains teacher-observed; no invented selectable skill"
+  },
+  "bankSHA256": "5e586f3ae71fe404e6a62ac7bf1517babfb27b91fae296e172c80ad271dc575b",
+  "static": {
+    "status": "passed",
+    "gates": [
+      "tests/p2-skill-static.cjs",
+      "tests/static.cjs",
+      "tests/ui-static.cjs",
+      "tests/p1-skill-static.cjs",
+      "tests/p2-later-static.cjs"
+    ],
+    "coreFamilies": 188,
+    "coreVariants": 2853,
+    "scope": "New bank answers, source provenance, all solid subtypes, both quadrilateral criterion groups, four mixed-operation patterns, displayed uniqueness in each language, alternative factors, bounded arithmetic, time and money; original payload hashes preserved."
+  },
+  "local": {
+    "initialFullDifficulty": {
+      "passed": 266,
+      "failed": 0,
+      "navigationRetries": [],
+      "bankHash": "a1ba3ed62255f767ffdb92c8d04b750d68dffa00ee51e40b4aa0aecfdf4066ca"
+    },
+    "correction": {
+      "contextsChanged": 8,
+      "skill": "solidbasename2a",
+      "allOtherContextsUnchanged": true
+    },
+    "correctedSolidCases": {
+      "passed": 6,
+      "failed": 0,
+      "navigationRetries": []
+    },
+    "verifiedDistinctCurrentCases": 266,
+    "note": "The first full run passed 266/266. The final content audit changed only eight solid contexts to include all eight prism/pyramid base-name categories. All six affected skill/level/language cases were rerun using the identical quiz/paper/key assertions and passed 6/6. All other contexts were compared and unchanged.",
+    "sharedUi": {
+      "passed": 193,
+      "failed": 0
+    }
+  },
+  "public": {
+    "status": "verified",
+    "bankMatchesLocal": true,
+    "bankSHA256": "5e586f3ae71fe404e6a62ac7bf1517babfb27b91fae296e172c80ad271dc575b",
+    "assetHashesMatchLocal": true,
+    "assets": [
+      "p2-skill-seeds.js",
+      "p2-skill-data.js",
+      "p2-skill-levels.js",
+      "p2-skill-pictures.js",
+      "p2-skill-levels.css",
+      "p2-skill-levels.html",
+      "ui.js"
+    ],
+    "sharedUi": {
+      "passed": 193,
+      "failed": 0
+    },
+    "figureTextBounds": {
+      "checkedSvgFigures": 240,
+      "languages": [
+        "en",
+        "zh"
+      ],
+      "outOfBounds": 0
+    },
+    "mobileResourceClick": {
+      "language": "zh-HK",
+      "skill": "quadproperties2a",
+      "correctRoute": true,
+      "documentOverflow": false
+    },
+    "difficulty": {
+      "failed": 0,
+      "navigationRetries": [],
+      "passed": 266,
+      "questions": 1476,
+      "skills": 41
+    }
+  },
+  "limitations": [
+    "Levels have not been calibrated with pupils.",
+    "Independent Traditional Chinese review, physical print and full screen-reader review are deferred.",
+    "Browser Print / Save as PDF only; no direct-PDF exporter or mixed-builder integration for this separate bank.",
+    "These dedicated and UI integration checks are not a rerun of the full historical curriculum browser suite or verification of a separate P5 release."
+  ],
+  "preReleaseFindings": [
+    {
+      "kind": "test-only",
+      "detail": "The first static oracle treated fixed exchanged notes as denomination/count tuples. The core stores individual denomination values. Corrected the oracle and reran successfully; no question answer changed."
+    },
+    {
+      "kind": "sampling",
+      "detail": "Evenly spaced sampling of sixteen solid contexts omitted the two hexagonal solid types. Switched to all eight base/family categories plus four rotations, added a coverage assertion, reran the affected browser cases."
+    }
+  ],
+  "deployment": {
+    "id": 44248761908,
+    "conclusion": "success",
+    "headSHA": "0ae83397ca62f5bb489b841bdac8338ff58d854c"
+  }
+}
