@@ -387,3 +387,18 @@ The page includes four stable sets of three or all twelve questions, English/Tra
 - [ ] Deferred human review: pupil calibration, independent language review, physical printing and full screen-reader assessment.
 
 **Published and verified:** [initial skill release 4ef05df](https://github.com/kochiuyu/mathquiz/commit/4ef05df5123baf0bd11a76c7c19bf657774adf3f), with rendered-variation correction in [1356b32](https://github.com/kochiuyu/mathquiz/commit/1356b325ebc134946d50c6be0dbf37ec502c37bc). Pages deployment 44221326378 succeeded. The final local runner passed **251/251**. The public full run passed **250/251**, with one answer-key page-load timeout; an isolated quiz/paper/key rerun of that case passed **1/1**, so all 251 distinct checks are verified. The original timeout remains in the [release evidence](planning/p1-skill-release-evidence.json). All 1,368 deployed question payloads match the local bank. The static gate also checks that all twelve displayed tasks in every skill/level are distinct in both languages. Core, UI and earlier unit-collection static checks passed; the full historical browser suite was not rerun. Difficulty calibration with pupils and the manual reviews remain pending.
+
+## Every P2 skill: Easy / Normal / Difficult · 18 November 2026
+
+The [P2 skill-level page](https://kochiuyu.github.io/mathquiz/p2-skill-levels.html) covers **all 41 selectable P2 skills**, with twelve questions at each of three levels: **1,476 bilingual levelled tasks**. Every P2 resource card links to its exact skill. The bank reuses **492 representative contexts with three teaching demands**; these are not 1,476 unrelated numerical contexts, and existing questions have not all been labelled Easy.
+
+Easy supplies a skill-specific cue; Normal asks for independent application; Difficult adds required checking or explanation within the same P2 limits. Some harder questions add an intermediate value, a further sequence step, reversed direction or separate geometry conditions. [Read the complete 41-skill progression, curriculum boundaries and answer contracts](planning/p2-skill-levels.md).
+
+Four fixed three-question sets or all twelve are available, with English/Traditional Chinese, partial credit, retry, retained answers when switching language, pupil papers and worked keys. Both factor orders are accepted in equal-group multiplication. Use browser Print / Save as PDF; this bank is separate from the mixed builder and direct PDF download. Original P1 resources, permanent core payloads and curriculum-completion flags are preserved. P2 inquiry remains teacher-observed and is not invented as a forty-second selectable skill.
+
+- [x] Audit all 41 P2 skills and their source limits.
+- [x] Implement 12 guided, 12 independent and 12 reasoning tasks per skill.
+- [x] Add exact resource links, bilingual marking, stable sets and paper/key views.
+- [x] Pass the bank's static answer/scope/provenance gate and compatibility static gates.
+- [ ] Complete local/public browser verification and record the deployed revision.
+- [ ] Deferred human review: pupil difficulty calibration, independent translation, physical printing and full screen-reader assessment.
