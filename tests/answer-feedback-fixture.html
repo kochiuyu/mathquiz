@@ -8,4 +8,4 @@ window.AudioContext=params.has('unsupported')?undefined:FakeAudio;window.webkitA
 if(params.has('storage')){Storage.prototype.getItem=()=>{throw Error('blocked')};Storage.prototype.setItem=()=>{throw Error('blocked')};}
 document.getElementById('questions').onsubmit=e=>{e.preventDefault();const f=document.getElementById('feedback0');if(!e.target.querySelector('input').value)return;const ok=e.target.querySelector('input').value==='1';f.dataset.correct=String(ok);f.textContent=ok?'Correct':'Try again';};
 document.getElementById('retry').onclick=()=>{document.getElementById('feedback0').textContent='';};
-</script><script src="../answer-feedback.js?v=1"></script></body></html>
+</script><script src="../answer-feedback.js?v=2"></script></body></html>

@@ -34,7 +34,7 @@
    const app=window.MathQuizSmartApp,state=app?.state;if(!state||state.attempts===before.attempts||!state.correct)return;
    const kind=state.phase==='complete'?'complete':state.phase==='promote'?'promote':'correct';
    const levels=['easy','normal','difficult'],next=app.bank.levels[levels[state.level+1]],message=kind==='complete'?t('Difficult completed!','完成較難級！'):kind==='promote'?t('Ready for ','準備挑戰')+next[zh?1:0]+'!':'';
-   decorate(document.getElementById('smart-feedback'),kind,message);sound(kind);return;
+   decorate(kind==='complete'?document.querySelector('#smart-complete h2'):document.getElementById('smart-feedback'),kind,message);sound(kind);return;
   }
   let count=0;
   for(const out of outputs(form)){

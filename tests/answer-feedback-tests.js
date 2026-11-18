@@ -12,7 +12,7 @@
   d.getElementById('smart-form').requestSubmit();assert(badges(d)===0&&a.state.attempts===0,'blank not rewarded');smartAnswer(d,false);assert(badges(d)===0&&a.state.streak===0,'wrong not rewarded');d.getElementById('smart-next').click();
   d.getElementById('smart-help').click();smartAnswer(d);assert(badges(d)===1&&a.state.streak===0,'supported correct rewarded without streak');d.getElementById('smart-next').click();
   for(let n=0;n<9;n++){smartAnswer(d);assert(badges(d)===1,'one reward per answer');const kind=n===8?'complete':n%3===2?'promote':'correct';assert(d.querySelector('.answer-celebration').dataset.kind===kind,'right celebration');d.getElementById('smart-form').requestSubmit();assert(badges(d)===1,'duplicate ignored');if(n<8)d.getElementById('smart-next').click();}
-  assert(a.state.phase==='complete','difficult completed');assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'mobile overflow');
+  assert(a.state.phase==='complete','difficult completed');assert(d.querySelector('#smart-complete .answer-celebration'),'completion celebration is inside focused card');assert(d.documentElement.scrollWidth<=d.documentElement.clientWidth+1,'mobile overflow');
   const restored=await load('../smart-practice.html?p='+g+'&skill='+defaults[g-1]+'&lang='+(lang==='en'?'zh':'en'));assert(restored.defaultView.MathQuizSmartApp.state.phase==='complete'&&badges(restored)===0,'restored completion not celebrated again');
  });
  for(const g of [1,2,3,4,5,6])for(const lang of ['en','zh'])await check('Fixed-level rewards P'+g+' '+lang,async()=>{
