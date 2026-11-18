@@ -1,0 +1,107 @@
+{
+  "release": "7251a56428ee0b9efe0d44be1bbd42cc1d1cf4e5",
+  "files": [
+    {
+      "path": "answer-feedback.js",
+      "matches": true,
+      "expected_sha256": "fd0e2855eb8b6826f59cf610956640c77b1251fa12a5574ca1a882229dd305c0",
+      "live_sha256": "fd0e2855eb8b6826f59cf610956640c77b1251fa12a5574ca1a882229dd305c0"
+    },
+    {
+      "path": "answer-feedback.css",
+      "matches": true,
+      "expected_sha256": "77f23bf1f9a74a9a1cdccc232c29136bef19092915ab617202aaed6edb064981",
+      "live_sha256": "77f23bf1f9a74a9a1cdccc232c29136bef19092915ab617202aaed6edb064981"
+    },
+    {
+      "path": "index.html",
+      "matches": true,
+      "expected_sha256": "66baef5a3cbea895ff9a3b38ed6ce699f776d7ab6cbf91cedcf03b393ae138ea",
+      "live_sha256": "66baef5a3cbea895ff9a3b38ed6ce699f776d7ab6cbf91cedcf03b393ae138ea"
+    },
+    {
+      "path": "smart-practice.html",
+      "matches": true,
+      "expected_sha256": "d2a6152da0d6ebf5090d3328c7393d161a22729199d6e568ef245dd73e5abafe",
+      "live_sha256": "d2a6152da0d6ebf5090d3328c7393d161a22729199d6e568ef245dd73e5abafe"
+    },
+    {
+      "path": "p1-levels.html",
+      "matches": true,
+      "expected_sha256": "27bb9d2144ba071d73fe34ccb4465100abea28e541120c0ab2f3d0263a2fe43d",
+      "live_sha256": "27bb9d2144ba071d73fe34ccb4465100abea28e541120c0ab2f3d0263a2fe43d"
+    },
+    {
+      "path": "p1-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "792e29046b226f2767d5a37b1c8f3f0edef55f336138824679efddd16605cfd0",
+      "live_sha256": "792e29046b226f2767d5a37b1c8f3f0edef55f336138824679efddd16605cfd0"
+    },
+    {
+      "path": "p2-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "caa05fb0a7f55d2fa82d71a2ceebf8077eed3d3cb4f52394748f885013f44ca6",
+      "live_sha256": "caa05fb0a7f55d2fa82d71a2ceebf8077eed3d3cb4f52394748f885013f44ca6"
+    },
+    {
+      "path": "p3-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "448c78fa0bf9cdefa618e511ce4a4a6eef80bba541d926b7e431a4aa904ebf7f",
+      "live_sha256": "448c78fa0bf9cdefa618e511ce4a4a6eef80bba541d926b7e431a4aa904ebf7f"
+    },
+    {
+      "path": "p4-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "ec23e384eb77d1e923726edf4b0c29ad92d285ba54bab9e28bf8b1c446862d25",
+      "live_sha256": "ec23e384eb77d1e923726edf4b0c29ad92d285ba54bab9e28bf8b1c446862d25"
+    },
+    {
+      "path": "p5-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "62525e765803155e16b875fe63fc617a537ddc0c63ee2a2dad1dcb01e2b24df4",
+      "live_sha256": "62525e765803155e16b875fe63fc617a537ddc0c63ee2a2dad1dcb01e2b24df4"
+    },
+    {
+      "path": "p6-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "0e64ab885f2129b6731fad9750ed9f59c4fa4ce7b260f9b6c8d6d9b61a225c13",
+      "live_sha256": "0e64ab885f2129b6731fad9750ed9f59c4fa4ce7b260f9b6c8d6d9b61a225c13"
+    },
+    {
+      "path": "tests/answer-feedback-fixture.html",
+      "matches": true,
+      "expected_sha256": "71781defaa5860703357752361ff5a96f7bfc0fc38944bf8efb8673d6a674436",
+      "live_sha256": "71781defaa5860703357752361ff5a96f7bfc0fc38944bf8efb8673d6a674436"
+    },
+    {
+      "path": "tests/answer-feedback.html",
+      "matches": true,
+      "expected_sha256": "f65c69d8c33d86643ab9b6e84ef5ade80da04387bdc807212e4cdcba24a440ed",
+      "live_sha256": "f65c69d8c33d86643ab9b6e84ef5ade80da04387bdc807212e4cdcba24a440ed"
+    },
+    {
+      "path": "tests/answer-feedback-tests.js",
+      "matches": true,
+      "expected_sha256": "aba1a1df5ec81c51e4dc1e808788f8c3da1c221f187ed0458f99c98fb8fb840b",
+      "live_sha256": "aba1a1df5ec81c51e4dc1e808788f8c3da1c221f187ed0458f99c98fb8fb840b"
+    },
+    {
+      "path": "tests/answer-feedback-static.cjs",
+      "matches": true,
+      "expected_sha256": "09586aa8f1ffd5b70e05421ec35b53690721ecb58ba33453321edda9a0c7b564",
+      "live_sha256": "09586aa8f1ffd5b70e05421ec35b53690721ecb58ba33453321edda9a0c7b564"
+    },
+    {
+      "path": "planning/answer-feedback.md",
+      "matches": true,
+      "expected_sha256": "21fbad1694e79123916fb1dbc1fe017bca71286879fb89788794f7be5f7e9a6d",
+      "live_sha256": "21fbad1694e79123916fb1dbc1fe017bca71286879fb89788794f7be5f7e9a6d"
+    },
+    {
+      "path": "README.md",
+      "matches": true,
+      "expected_sha256": "ab53afe573cafb777505e7d603c0344588d5f91a8a5901d90e7a4fd6c358e5d3",
+      "live_sha256": "ab53afe573cafb777505e7d603c0344588d5f91a8a5901d90e7a4fd6c358e5d3"
+    }
+  ]
+}

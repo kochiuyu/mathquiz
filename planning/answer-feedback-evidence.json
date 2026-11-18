@@ -1,0 +1,228 @@
+{
+  "date": "2026-11-19",
+  "initial_release": "7251a56428ee0b9efe0d44be1bbd42cc1d1cf4e5",
+  "base": "ae2e36ef046e034efe7a141ed7cd30e5156bb683",
+  "initial_deployment": {
+    "id": 44344905602,
+    "conclusion": "success"
+  },
+  "placement_refinement": {
+    "release": "ed687a3acec971e0d860042226614d4dd98eda73",
+    "parent": "d9c05e245b13c6508eb3a991e58ef8977847653d",
+    "deployment": {
+      "id": 44348497155,
+      "conclusion": "success"
+    },
+    "change": "Place the Difficult-completed celebration inside the focused completion card; shared script version 2.",
+    "local_feedback": {
+      "passed": 36,
+      "failed": 0
+    },
+    "public_feedback": {
+      "passed": 36,
+      "failed": 0,
+      "failures": []
+    },
+    "deployed_files_matched": 14,
+    "scope": "Includes completion-card placement across all six grades in both languages. Broad UI and Smart runs belong to the initial feature release; they were not repeated in full for this placement-only refinement."
+  },
+  "local_initial": {
+    "feedback": {
+      "full": {
+        "passed": 35,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Smart rewards and preserved progression P2 zh",
+            "error": "Page load timeout on restored English page"
+          }
+        ]
+      },
+      "exact_rerun": {
+        "passed": 1,
+        "failed": 0
+      },
+      "distinct_verified": 36
+    },
+    "ui": {
+      "passed": 245,
+      "failed": 0
+    },
+    "smart_candidate": {
+      "passed": 331,
+      "failed": 0
+    },
+    "adopted_p6_keyboard_cases": {
+      "passed": 2,
+      "failed": 0
+    },
+    "count_note": "The local Smart candidate had two separate extra keyboard cases; the adopted concurrent published suite folds exhaustive keyboard coverage into its original cases. Counts are not added as distinct cases."
+  },
+  "public_initial": {
+    "feedback": {
+      "passed": 36,
+      "failed": 0
+    },
+    "ui": {
+      "passed": 245,
+      "failed": 0
+    },
+    "smart": {
+      "full": {
+        "passed": 322,
+        "failed": 7,
+        "failures": [
+          {
+            "name": "P5 complete Smart flow expressionwords5a zh",
+            "error": "Smart page load timeout"
+          },
+          {
+            "name": "P5 complete Smart flow expressionforms5a en",
+            "error": "Smart page load timeout"
+          },
+          {
+            "name": "P5 complete Smart flow triarea5a zh",
+            "error": "Smart page load timeout"
+          },
+          {
+            "name": "P6 complete Smart flow displacementmethod6a en",
+            "error": "Smart page load timeout"
+          },
+          {
+            "name": "P6 complete Smart flow decshiftleft6a zh",
+            "error": "Smart page load timeout"
+          },
+          {
+            "name": "P6 complete Smart flow decshiftright6a en",
+            "error": "Smart page load timeout"
+          },
+          {
+            "name": "P6 complete Smart flow decshiftright6a zh",
+            "error": "Smart page load timeout"
+          }
+        ]
+      },
+      "reruns": [
+        {
+          "only": "P5 complete Smart flow expressionwords5a zh",
+          "passed": 1,
+          "failed": 0,
+          "failures": []
+        },
+        {
+          "only": "P5 complete Smart flow expressionforms5a en",
+          "passed": 1,
+          "failed": 0,
+          "failures": []
+        },
+        {
+          "only": "P5 complete Smart flow triarea5a zh",
+          "passed": 1,
+          "failed": 0,
+          "failures": []
+        },
+        {
+          "only": "P6 complete Smart flow displacementmethod6a en",
+          "passed": 1,
+          "failed": 0,
+          "failures": []
+        },
+        {
+          "only": "P6 complete Smart flow decshiftleft6a zh",
+          "passed": 1,
+          "failed": 0,
+          "failures": [],
+          "phase": "After placement refinement"
+        },
+        {
+          "only": "P6 complete Smart flow decshiftright6a en",
+          "passed": 1,
+          "failed": 0,
+          "failures": [],
+          "phase": "After placement refinement"
+        },
+        {
+          "only": "P6 complete Smart flow decshiftright6a zh",
+          "passed": 1,
+          "failed": 0,
+          "failures": []
+        }
+      ],
+      "additional_attempts": [
+        {
+          "only": "P6 complete Smart flow decshiftleft6a zh",
+          "passed": 0,
+          "failed": 1,
+          "error": "Cannot read properties of undefined (reading 'state')",
+          "tool_error": "Navigation timed out",
+          "resolution": "The exact case subsequently passed 1/1. Asset-load interruption is suspected but was not directly established; failure retained."
+        }
+      ],
+      "interpretation": "329 distinct cases verified across the full run and exact reruns; this is not a clean 329/329 full run. The first four reruns and final zh case were observed before the final placement verification. The remaining two were re-observed after the refinement."
+    },
+    "smart_distinct_verified": 329
+  },
+  "static_gates": [
+    "static.cjs",
+    "ui-static.cjs",
+    "smart-static.cjs",
+    "answer-feedback-static.cjs",
+    "p6-smart-keyboard-static.cjs"
+  ],
+  "all_static_passed_again_after_placement_refinement": true,
+  "initial_deployed_release_files_matched": 17,
+  "native_audio": {
+    "context": "running",
+    "oscillator_starts_for_one_correct_answer": 1,
+    "muted_after_check": true
+  },
+  "motion": {
+    "reduced_motion_emulated": true,
+    "badge_animation": "none",
+    "feedback_animation": "none",
+    "normal_animation": "answer-pop",
+    "mobile_overflow": false
+  },
+  "preservation": "Question banks, marking functions, Smart engine and practice logic unchanged. Concurrent P6 keyboard correction, P6 resource-completion release and TSA planning README update retained.",
+  "earlier_attempts": [
+    {
+      "suite": "feedback",
+      "passed": 34,
+      "failed": 1,
+      "cause": "CSS shorthand serialization assumption in test; changed assertion to actual CSS properties."
+    },
+    {
+      "suite": "feedback",
+      "passed": 34,
+      "failed": 1,
+      "cause": "Navigation/readiness error; loader now requires a fresh document."
+    },
+    {
+      "suite": "feedback",
+      "passed": 35,
+      "failed": 0,
+      "scope": "Earlier 35-case candidate, before explicit hidden-page coverage."
+    },
+    {
+      "suite": "feedback",
+      "passed": 34,
+      "failed": 1,
+      "cause": "Audio fixture assertion during concurrent background-tab testing; fixture now controls visibility and separately tests hidden-page silence. The hidden state at the original failure was not directly measured."
+    },
+    {
+      "suite": "smart",
+      "passed": 325,
+      "failed": 4,
+      "failures": [
+        "P6 complete Smart flow circlecircum6a en: page-load timeout",
+        "P6 complete Smart flow inversecircle6a en: page-load timeout",
+        "P6 invalid to correct decdivide6a en: keyboard assertion",
+        "P6 invalid to correct decdivide6a zh: keyboard assertion"
+      ]
+    }
+  ],
+  "limits": [
+    "No full 1071-case core browser rerun; frozen core data checked by static gate.",
+    "Classroom, independent translation, full screen-reader and cross-device audio listening reviews deferred."
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "release": "ed687a3acec971e0d860042226614d4dd98eda73",
+  "files": [
+    {
+      "path": "answer-feedback.js",
+      "matches": true,
+      "expected_sha256": "92aa0b0f92548f4ad08557de60afcd4fa49936bb1d6428ce87075a5aa2fb89ed",
+      "live_sha256": "92aa0b0f92548f4ad08557de60afcd4fa49936bb1d6428ce87075a5aa2fb89ed"
+    },
+    {
+      "path": "index.html",
+      "matches": true,
+      "expected_sha256": "6b9b8d932f1cd6196134af8d590f4a4947927e7cac5e8678aa38fb929e953516",
+      "live_sha256": "6b9b8d932f1cd6196134af8d590f4a4947927e7cac5e8678aa38fb929e953516"
+    },
+    {
+      "path": "smart-practice.html",
+      "matches": true,
+      "expected_sha256": "6d099b8897bdc9f0f3820eeedf4b27408f01479af4a488ae4343382876f4aa27",
+      "live_sha256": "6d099b8897bdc9f0f3820eeedf4b27408f01479af4a488ae4343382876f4aa27"
+    },
+    {
+      "path": "p1-levels.html",
+      "matches": true,
+      "expected_sha256": "8c0f45c04317b9825fe546e0501189208f77ea64bd116cdd5f17c1b82434ebfa",
+      "live_sha256": "8c0f45c04317b9825fe546e0501189208f77ea64bd116cdd5f17c1b82434ebfa"
+    },
+    {
+      "path": "p1-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "887543c6a88c47d9574474f3159adc84a691d5d94af0c5842fdb173ee3212143",
+      "live_sha256": "887543c6a88c47d9574474f3159adc84a691d5d94af0c5842fdb173ee3212143"
+    },
+    {
+      "path": "p2-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "f60d840e86a6466bf84f3cefe74042a1e6ceb899f4abc6d54f830fac2af93ccb",
+      "live_sha256": "f60d840e86a6466bf84f3cefe74042a1e6ceb899f4abc6d54f830fac2af93ccb"
+    },
+    {
+      "path": "p3-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "8d713758b6c04da15044c5cc574d08f386c78d14968a19102a918afc5d6df55a",
+      "live_sha256": "8d713758b6c04da15044c5cc574d08f386c78d14968a19102a918afc5d6df55a"
+    },
+    {
+      "path": "p4-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "bd94f1f019b98aab6cd80f4eeac98af0b21d7842bbe8724e01ede3baa576af6e",
+      "live_sha256": "bd94f1f019b98aab6cd80f4eeac98af0b21d7842bbe8724e01ede3baa576af6e"
+    },
+    {
+      "path": "p5-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "6909565756a1fc5af5b88065009833257ab835fd8d3327826bed5abea29dcfee",
+      "live_sha256": "6909565756a1fc5af5b88065009833257ab835fd8d3327826bed5abea29dcfee"
+    },
+    {
+      "path": "p6-skill-levels.html",
+      "matches": true,
+      "expected_sha256": "7c6f9199e27a47a1b5813764d8c808bab16261cbcac38c3c74a524112aab9552",
+      "live_sha256": "7c6f9199e27a47a1b5813764d8c808bab16261cbcac38c3c74a524112aab9552"
+    },
+    {
+      "path": "tests/answer-feedback-fixture.html",
+      "matches": true,
+      "expected_sha256": "dadf014d1a6278d6f7347f4fdf1c3dd31c49b72385a4e16e302e5097a03d95cd",
+      "live_sha256": "dadf014d1a6278d6f7347f4fdf1c3dd31c49b72385a4e16e302e5097a03d95cd"
+    },
+    {
+      "path": "tests/answer-feedback.html",
+      "matches": true,
+      "expected_sha256": "f2bbd8efdb76834d73a6c5dcea3b765b6f261b89d71c5e106810fe4693a6d8f9",
+      "live_sha256": "f2bbd8efdb76834d73a6c5dcea3b765b6f261b89d71c5e106810fe4693a6d8f9"
+    },
+    {
+      "path": "tests/answer-feedback-tests.js",
+      "matches": true,
+      "expected_sha256": "15c5e8dc9ee651c2d8d0346f8afcdd6c11c60656787aed9ad782fa424ca3bfda",
+      "live_sha256": "15c5e8dc9ee651c2d8d0346f8afcdd6c11c60656787aed9ad782fa424ca3bfda"
+    },
+    {
+      "path": "tests/answer-feedback-static.cjs",
+      "matches": true,
+      "expected_sha256": "893680ce443f867b15a3014ead55c97f3b5c4874ef49c0011d4ab9c6b3b3a9ab",
+      "live_sha256": "893680ce443f867b15a3014ead55c97f3b5c4874ef49c0011d4ab9c6b3b3a9ab"
+    }
+  ]
+}
