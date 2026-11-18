@@ -476,9 +476,11 @@ Every P1–P4 skill has a concise **Practise · Easy / Normal / Difficult** acti
 - [x] Add Cards / List, expansion controls and mobile result navigation.
 - [x] Preserve bilingual links, sharing/history state and all resource counts.
 - [x] Pass local responsive, behavior and shared UI checks.
-- [ ] Verify the published release and record results below.
+- [x] Verify the published release and record results below.
 - [ ] Deferred human review: pupil usability, independent translation, physical printing and full screen-reader assessment.
 
 <!-- resource-release-status -->
-**Local verification:** 97/97 resource checks, 193/193 shared UI checks and the existing level-entry contract 1/1 passed after correcting coverage-route quiz enhancements and enlarged-text header wrapping. Four static gates passed. Public release verification is pending. All question banks, marking, diagrams and curriculum-completion records are unchanged.
+**Published and verified:** [Resource UI release c8f1c69](https://github.com/kochiuyu/mathquiz/commit/c8f1c69eee7d46f066e0175434be11142a17d7f0) deployed successfully (Pages run 44293309456). **All 97 public resource checks are verified:** the full run passed 96/97 with one P3 page-load timeout, and that exact case passed 1/1 on rerun. Public shared UI passed **193/193**, and the established level-entry contract passed **1/1**: **291 distinct public cases verified**. Local full runs passed 97/97, 193/193 and 1/1. All six public runtime assets match the local build. Four static gates passed; 326 predecessor files, including every question bank, marking/diagram file and curriculum record, are unchanged.
+
+The first local run exposed coverage-route quiz enhancements and enlarged-text header overflow; both were corrected before final verification. Failed attempts and the exact public timeout rerun remain in [release evidence](planning/resource-browser-evidence.json). English desktop and Traditional Chinese mobile layouts were inspected. The full historical mathematics browser suite and deferred human reviews were not run.
 <!-- /resource-release-status -->

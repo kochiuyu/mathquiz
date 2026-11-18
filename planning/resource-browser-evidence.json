@@ -2,8 +2,12 @@
   "release": "Find resources UI",
   "date": "2026-11-18",
   "base_commit": "71a9e8045f76c9e1a5cf3efb917c2181eb869dec",
-  "runtime_commit": null,
-  "deployment": null,
+  "runtime_commit": "c8f1c69eee7d46f066e0175434be11142a17d7f0",
+  "deployment": {
+    "run_id": 44293309456,
+    "status": "completed",
+    "conclusion": "success"
+  },
   "scope": {
     "selectable_skills": 187,
     "levelled_skills": 165,
@@ -72,7 +76,46 @@
     "development_note": "An extra closing parenthesis in the new static test was fixed before the final gate run; no production code was affected."
   },
   "public": {
-    "status": "pending"
+    "resources": {
+      "failed": 1,
+      "failures": [
+        {
+          "error": "Page load timeout https://kochiuyu.github.io/mathquiz/?view=browse&lang=en&p=3&resourceCheck=1795000712348-0.21536396624769694",
+          "name": "Year P3 ?view=browse en"
+        }
+      ],
+      "passed": 96
+    },
+    "resource_timeout_rerun": {
+      "failed": 0,
+      "failures": [],
+      "passed": 1
+    },
+    "resource_timeout_rerun_filter": "Year P3 ?view=browse en",
+    "shared_ui": {
+      "passed": 193,
+      "failed": 0
+    },
+    "level_entry": {
+      "passed": 1,
+      "failed": 0,
+      "failures": []
+    },
+    "distinct_current_cases_verified": 291,
+    "navigation_timeout_reruns": 1,
+    "status": "all distinct cases verified across full runs and one exact timeout rerun",
+    "runtime_sha256": {
+      "coverage.html": "235cc9df65490971c4865dfc9ae94234e12ddbec86e293b532a14d68d4bc58a5",
+      "index.html": "d857c890255147dc13c0ab74ab49c3e20ea70ceb706dd87fdba6fa82c09c6170",
+      "pupil-ui.js": "9d3340da8714a91c2a00a79a679a31b4af66e12597609481777b95c58dac2692",
+      "resource-browser.css": "1093d3995b469449083e33002a418d63fd972b3f6ac47cf9ed5b3484139b988d",
+      "resource-browser.js": "8b52bad99bedd29bafd033c092e895695ae8d50d413f0979e1dabebfe1ad9d5d",
+      "ui.js": "e5d282ee2d4ac79511d09d4349529aed1c45c540f75815144b2882f21d9c2bc6"
+    },
+    "tool_diagnostics": [
+      "Opening the public resource runner returned a tool navigation timeout; a subsequent read showed the correct runner active with 6 passed and 0 failed. It was not restarted.",
+      "One later tool evaluate call timed out. A semantic snapshot then returned the completed 96/97 result. The runner's P3 page-load timeout is retained above and rerun with its original assertions. Its cause was not established."
+    ]
   },
   "preservation": {
     "unchanged_predecessor_files": 326,
@@ -87,7 +130,9 @@
   },
   "visual_review": [
     "English desktop P3 coverage/list layout",
-    "English mobile P4 resource cards and Show results jump"
+    "English mobile P4 resource cards and Show results jump",
+    "Published English desktop P4 resource cards",
+    "Published Traditional Chinese mobile resource page"
   ],
   "limitations": [
     "No full historical mathematics browser-suite rerun for this UI-only release.",
