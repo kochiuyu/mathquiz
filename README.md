@@ -404,3 +404,18 @@ Four fixed three-question sets or all twelve are available, with English/Traditi
 - [ ] Deferred human review: pupil difficulty calibration, independent translation, physical printing and full screen-reader assessment.
 
 **Published and verified:** [P2 release 0ae8339](https://github.com/kochiuyu/mathquiz/commit/0ae83397ca62f5bb489b841bdac8338ff58d854c) deployed successfully (Pages run 44248761908). The final public runner passed **266/266 difficulty checks and 193/193 shared UI checks**, with zero assertion failures and 0 navigation-timeout retries. The local full run passed 266/266; a subsequent content audit corrected solid sampling to include all eight prism/pyramid base types. All six affected bilingual skill/level cases then passed 6/6 again, and every other context was confirmed unchanged. Thus all 266 distinct current cases are verified locally. Local shared UI checks passed 193/193. All 1,476 public question payloads and seven runtime assets match the local build. See [release evidence](planning/p2-skill-release-evidence.json) for exact provenance and limitations. The five static gates passed; no original core payload or curriculum-completion flag changed. Pupil calibration and the deferred manual reviews remain open.
+
+## Every P3 skill: Easy / Normal / Difficult · 18 November 2026
+
+The [P3 skill-level page](https://kochiuyu.github.io/mathquiz/p3-skill-levels.html) covers **all 35 selectable P3 skills**: twelve tasks per level, **1,260 bilingual levelled tasks**. These use **420 contexts at three teaching demands**. Easy adds method cues, Normal asks for independent application, and Difficult adds checking, sub-results or explanation within P3 limits. Existing questions are not all relabelled Easy.
+
+Every P3 resource card links to the exact skill. Four fixed sets of three or all twelve, partial credit, retry, retained answers across language changes, pupil papers and worked keys are included. Numerator and denominator fields sit above and below a fraction line. Browser Print / Save as PDF is available; the bank remains separate from the mixed builder and direct PDF exporter. P1/P2 resources, original core payloads and curriculum-completion flags are preserved. Inquiry and practical evidence remain teacher-observed.
+
+[Read the 35-skill progression, scope and answer contracts](planning/p3-skill-levels.md).
+
+- [x] Audit all 35 current skills and curriculum limits.
+- [x] Implement three levels with twelve questions per level per skill.
+- [x] Add exact library links, bilingual responses and paper/key views.
+- [x] Pass static bank and source/compatibility checks.
+- [ ] Finish local/public browser verification and record release evidence.
+- [ ] Deferred human review: difficulty calibration, independent translation, physical print and full screen-reader assessment.
