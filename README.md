@@ -52,6 +52,38 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 [Open MathQuiz](https://kochiuyu.github.io/mathquiz/) · [English builder](https://kochiuyu.github.io/mathquiz/?v=3&lang=en&p=1&view=build) · [繁體中文出卷工具](https://kochiuyu.github.io/mathquiz/?v=3&lang=zh&p=1&view=build) · [Browse available skills](https://kochiuyu.github.io/mathquiz/coverage.html)
 
+## TSA 2026 review and lower-primary improvement priorities
+
+**Reviewed 19 November 2026.** The official [P3 question-paper index](https://bca.hkeaa.edu.hk/web/TSA/en/2026priPaper/P3Index.html) and [marking schemes](https://bca.hkeaa.edu.hk/web/TSA/en/2026priMarking/P3Index.html) provide a useful assessment reference for the completed P1–P3 resources. Review scope includes the text of all four English mathematics sub-papers and their schemes, plus the Chinese first paper. Diagram rendering and the other three Chinese papers still need a visual/bilingual review. These priorities extend the current resource-complete baseline. Each proposed task below requires an audit against existing families and activities before implementation.
+
+### Ordered improvements
+
+| Priority | Official evidence | MathQuiz work to review or develop | Earlier foundations |
+|---|---|---|---|
+| 1. Assess working as well as the result | [3ME1 Q10 and Q15](https://bca.hkeaa.edu.hk/web/Common/res/2026priPaper/P3Math/TSA2026_3ME1.pdf) request mathematical working for whole-number and fraction stories. | Compare the existing multiplication, division, operations and fraction activities with a short mixed paper. Provide space for an expression and a conclusion, plus a teacher rubric that accepts alternative valid methods. | P1 picture-to-operation sentences; P2 choose an operation from a story and label the quantity found. |
+| 2. Construct data displays | [3ME2 Q33](https://bca.hkeaa.edu.hk/web/Common/res/2026priPaper/P3Math/TSA2026_3ME2.pdf) combines a data table, chart completion and a title. | Audit the existing P3 bar-chart activity for both orientations, scale interpretation, category placement and title. Add an original table-to-chart task where evidence is missing. | P1 sort and count objects; P2 collect counts and complete a one-symbol pictogram. |
+| 3. Select every valid example | [3ME3 Q26–30](https://bca.hkeaa.edu.hk/web/Common/res/2026priPaper/P3Math/TSA2026_3ME3.pdf) varies classification and angle ordering. | Audit rotated solids and polygons, straight/curved boundaries and angle comparisons. Add a select-all response with explicit instructions and exact-set marking if existing routes cannot assess it. | P1 sort several flat shapes and solids; P2 distinguish angle size from arm length. |
+| 4. Connect measurements to decisions | [3ME4 Q18–24](https://bca.hkeaa.edu.hk/web/Common/res/2026priPaper/P3Math/TSA2026_3ME4.pdf) uses calendars, clocks, routes, weights, capacity and units. | Audit the clock/calendar resources and capacity activity. Build short linked questions using one diagram, such as reading a quantity then comparing it. Include suitable-unit and suitable-instrument decisions. | P1 hour/half-hour clocks and centimetres; P2 minutes, calendar intervals, metres and money. |
+
+### Marking and variation
+
+The [3ME1 scheme](https://bca.hkeaa.edu.hk/web/Common/res/2026priMarking/P3/TSA2026_3ME1_MS.pdf) distinguishes method, answer and presentation in designated problems, accepts other correct methods, and allows a range of valid responses in an open number blank. MathQuiz should record these dimensions in teacher rubrics. An automatically checked final answer should report the evidence it actually scores. New open-response families need a predicate for valid answers, with boundary checks, rather than one stored model answer.
+
+The [3ME2 scheme](https://bca.hkeaa.edu.hk/web/Common/res/2026priMarking/P3/TSA2026_3ME2_MS.pdf) accepts equivalent fraction forms in a particular item and gives separate guidance for chart titles and construction. Review answer policies by task. Keep the existing pictured-count contract for `frac3a`; use a new family when equivalent-value acceptance changes the task.
+
+The [3ME3 scheme](https://bca.hkeaa.edu.hk/web/Common/res/2026priMarking/P3/TSA2026_3ME3_MS.pdf) requires all relevant selections for some classification answers and accepts suitable alternative chart titles. Test omitted and extra selections separately. Give teachers a semantic checklist for titles and an example of an acceptable alternative.
+
+### Delivery sequence and acceptance
+
+1. Audit P3 core families and practical activities against the rows above. Record each actual gap with its unit, existing evidence, required pupil action and proposed marking rule. Review the remaining Chinese papers beside their English counterparts.
+2. Release the first improvement as a short bilingual paper with two original story problems, worked examples and teacher marking criteria. Verify mathematical working, final answer and conclusion separately. Follow with chart construction and select-all classification where the audit identifies a gap.
+3. Build an original mixed P3 diagnostic from reviewed tasks. Use its results to direct a pupil to the relevant skill practice. Record correct, incorrect and unanswered responses, and teacher review where needed. Validate timing with pupils before assigning a completion-time claim.
+4. Add simpler P1 and P2 versions at their own curriculum limits. Use fewer objects, shorter wording and concrete representations. Check each against its EDB objective before release.
+5. Verify both languages, phone controls, printed answer space, keys, rubrics, equivalent responses and older links. Track these as assessment improvements separately from the existing curriculum resource-completion count.
+
+Use original contexts, values and diagrams for new MathQuiz items, with source references in author briefs. Preserve the official papers as linked references. Keep practical, oral and inquiry work in the full curriculum alongside these written assessment formats.
+
+
 ## Curriculum completion
 
 **The goal is to give teachers usable assessment material for every objective across all 85 units.** This P6 release has 77 selectable units and 8 without selectable tasks, 270 selectable families / 4,020 variants. 85 units are resource complete. One retired family / 15 variants retains old-link compatibility.
