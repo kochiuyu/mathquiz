@@ -421,3 +421,18 @@ Every P3 resource card links to the exact skill. Four fixed sets of three or all
 - [ ] Deferred human review: difficulty calibration, independent translation, physical print and full screen-reader assessment.
 
 **Published and verified:** [P3 release 90ba1f4](https://github.com/kochiuyu/mathquiz/commit/90ba1f4e5ec35b94d482017cc2f41161f261a46b) deployed successfully (Pages run 44260380818). The public runner passed **231/231 difficulty checks and 193/193 shared UI checks**, with zero failures and zero navigation-timeout retries. All 1,260 public question payloads and seven runtime assets match the local build. All thirteen static gates passed. Locally, the initial full run passed 230/231; its one test-harness error was corrected and the case passed 1/1. Four affected bilingual skill/level cases passed again after clarifying minutes after midnight/noon, with all other tasks unchanged. All 231 distinct current cases are therefore verified locally, and local UI checks passed 193/193. See [release evidence](planning/p3-skill-release-evidence.json) for exact provenance and limitations. The full historical browser suite was not rerun. Pupil calibration and deferred manual reviews remain open.
+
+## Every P4 skill: Easy / Normal / Difficult · 18 November 2026
+
+The [P4 skill-level page](https://kochiuyu.github.io/mathquiz/p4-skill-levels.html) covers **all 51 selectable P4 skills** with twelve tasks per level: **1,836 bilingual levelled tasks**, using **612 contexts at three teaching demands**. Easy supplies method cues, Normal asks for independent application, and Difficult adds required checking or reasoning within P4 limits.
+
+Every P4 library card links to its skill. Four sets of three or all twelve, partial credit, retry, language retention, pupil papers and worked keys are included. Exact fraction-form and decimal-value marking are preserved. All factor candidates receive Yes/No decisions. Use browser Print / Save as PDF; this bank is separate from the mixed builder and direct PDF exporter.
+
+[Read all 51 skill progressions, source boundaries and answer contracts](planning/p4-skill-levels.md). Earlier banks and curriculum-completion flags are unchanged. Inquiry and practical activities remain teacher-observed.
+
+- [x] Audit all 51 P4 skills and source limits.
+- [x] Implement three levels and twelve distinct displayed tasks per skill/level.
+- [x] Add bilingual responses, exact library links, stable sets and paper/key views.
+- [x] Pass static bank and source/compatibility checks.
+- [ ] Complete local/public browser verification and record release evidence.
+- [ ] Deferred human review: pupil calibration, independent translation, physical print and full screen-reader assessment.
