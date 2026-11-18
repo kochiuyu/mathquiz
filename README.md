@@ -438,3 +438,23 @@ Every P4 library card links to its skill. Four sets of three or all twelve, part
 - [ ] Deferred human review: pupil calibration, independent translation, physical print and full screen-reader assessment.
 
 **Published and verified:** [P4 release bca0bfe](https://github.com/kochiuyu/mathquiz/commit/bca0bfe6aaff67144643bc5dd813d6a5aba211bf) deployed successfully (Pages run 44281663882), following the [initial release 4d051b9](https://github.com/kochiuyu/mathquiz/commit/4d051b9539a1e4e609aa9a92ef00061f47940fa2). The final public difficulty runner passed **329/329**, with zero failures and zero navigation-timeout retries. All 1,836 deployed question records and eight runtime assets match the local build. All 29 static gates passed. The local full difficulty run passed 329/329; four affected bilingual cases passed again after simplifying two factor explanations, with every answer and all other tasks unchanged. Local UI checks passed 193/193. **All 193 public UI cases are verified across full runs and isolated reruns:** the first full run had one perimeter-layout assertion; the second passed that case but had one home-page load timeout. Both cases subsequently passed their original assertions in isolated reruns. These failures are retained in the [release evidence](planning/p4-skill-release-evidence.json), rather than reported as a clean full UI run. Pupil calibration and deferred manual reviews remain open; the full historical curriculum browser suite was not rerun.
+
+
+## One entrance for P1–P4 skill levels · 18 November 2026
+
+The new [Practise by level page](https://kochiuyu.github.io/mathquiz/skill-levels.html) brings all **165 P1–P4 skills** together. Choose a year and Easy / Normal / Difficult, then search by either language, skill or unit. Each card starts the exact skill at the selected level. Home and the resource library now provide one clear entrance instead of four separate grade links.
+
+All four skill banks share a compact session layout: a collapsed setup panel, visible Practise / Pupil paper / Worked key navigation, an answered-progress bar and next-step actions after marking. Native radio choices explain the levels before starting. Papers and keys have explicit headings. Search filters survive language changes and browser Back/Forward. Existing draft and marked answer retention on language changes is preserved.
+
+[Read the detailed UI improvement plan](planning/levels-navigation-ui.md). Question content, scoring, stable IDs, all 5,940 levelled tasks and original core payloads remain unchanged. The mixed-quiz builder, P1 unit collections and practical activities remain separate and available. P5/P6 links lead to the existing resource library; this UI does not claim new difficulty coverage there.
+
+- [x] Consolidate Home and library entry points.
+- [x] Add a lightweight searchable directory with exact grade/skill/level links.
+- [x] Apply a consistent compact session layout to P1–P4.
+- [x] Add readable level choices, progress and post-marking next steps.
+- [x] Preserve bilingual answers, paper/key separation and original question banks.
+- [ ] Record final local and public verification below.
+- [ ] Deferred human review: pupil calibration, classroom usability, independent translation, physical print and full screen-reader assessment.
+
+
+**Local verification:** all 228 distinct level-navigation/session checks are verified: the full run passed 223/224 with one page-load timeout, that exact case passed on rerun, and four added active-view/draft checks passed 4/4. The original background-frame test wait was replaced before the full run. Shared UI passed 193/193; seven static gates passed. No question-bank, marking, diagram or curriculum-data file changed. Public deployment verification will be recorded after publication.

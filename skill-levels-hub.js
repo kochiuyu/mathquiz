@@ -1,0 +1,37 @@
+/* Navigation only: the manifest contains labels and routes, never answers. */
+(()=>{
+ const data=window.MathQuizSkillDirectory,app=document.getElementById('app'),params=new URLSearchParams(location.search),lang=params.get('lang')==='zh'?'zh':'en';
+ const t=(en,zh)=>lang==='zh'?zh:en,loc=a=>a[lang==='zh'?1:0],E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ if(!data){app.innerHTML='<h1>'+t('Skills could not load','未能載入技能')+'</h1><a href="">'+t('Reload','重新載入')+'</a>';return;}
+ const levels={easy:[t('Easy','容易'),t('With guidance','有提示協助'),t('Use cues and visible support.','運用提示及圖像協助。')],normal:[t('Normal','一般'),t('Apply independently','獨立應用'),t('Put the skill into practice.','自行運用所學技能。')],difficult:[t('Difficult','較難'),t('Check and reason','核對及推理'),t('Explain, check or find missing information.','解釋、核對或找出欠缺資料。')]};
+ const state={p:'1',unit:'',level:'normal',q:''};
+ function read(){const p=new URLSearchParams(location.search);state.p=['1','2','3','4'].includes(p.get('p'))?p.get('p'):'1';state.level=levels[p.get('level')]?p.get('level'):'normal';state.unit=p.get('unit')||'';state.q=p.get('q')||'';}
+ read();document.documentElement.lang=lang==='zh'?'zh-HK':'en';document.title=t('Practise by level','按級別練習')+' | MathQuiz';
+ document.querySelector('.brand').href='./?lang='+lang;document.getElementById('home-link').href='./?lang='+lang;document.getElementById('home-link').textContent=t('Home','首頁');document.getElementById('library-link').href='./?view=browse&lang='+lang;document.getElementById('library-link').textContent=t('All resources','所有資源');
+ app.innerHTML='<section class="levels-intro"><div><p class="eyebrow">'+t('PRACTICE THAT GROWS WITH YOU','一步一步，學懂更多')+'</p><h1>'+t('A skill. A level.<br>Your next step.','選技能，選級別，<br>踏出下一步。')+'</h1><p>'+t('Start with support, try it independently, or take time to reason. Choose what helps you learn today.','從提示起步、獨立應用，或多花時間推理。選擇今天適合你的練習。')+'</p></div><aside class="levels-facts"><strong>165</strong><span>'+t('skills across P1–P4','小一至小四技能')+'</span><p>'+t('3 levels · 12 questions per level','3個級別 · 每級12題')+'</p><small>'+t('Start with a short set of 3.','先從3題短練習開始。')+'</small></aside></section>'+
+ '<form id="level-filters"><fieldset class="grade-picker"><legend><span class="step-number">1</span>'+t('Choose your year','選擇年級')+'</legend><div>'+data.map(g=>'<label><input type="radio" name="p" value="'+g.grade+'"><span><strong>P'+g.grade+'</strong><small>'+Object.keys(g.skills).length+t(' skills','項技能')+'</small></span></label>').join('')+'</div></fieldset>'+
+ '<fieldset class="level-picker"><legend><span class="step-number">2</span>'+t('Choose your level','選擇級別')+'</legend><div class="level-options">'+Object.entries(levels).map(([id,[name,subtitle,desc]])=>'<label class="level-option"><input type="radio" name="level" value="'+id+'"><span><strong>'+name+'</strong><b>'+subtitle+'</b><small>'+desc+'</small></span></label>').join('')+'</div></fieldset>'+
+ '<section class="skill-finder"><h2><span class="step-number">3</span>'+t('Find a skill','尋找技能')+'</h2><div class="finder-fields"><label>'+t('Search skills','搜尋技能')+'<input type="search" name="q" id="skill-search" placeholder="'+t('Try fractions, money or a unit code','例如：分數、貨幣或單元編號')+'"></label><label>'+t('Unit','單元')+'<select name="unit"></select></label></div><div class="finder-status"><p id="skill-count" role="status" aria-live="polite"></p><button class="secondary" type="reset">'+t('Clear search','清除搜尋')+'</button></div></section></form><div id="skill-results"></div>'+
+ '<aside class="levels-footnote"><h2>'+t('Choose a level, not a label','選擇級別，不為學生貼標籤')+'</h2><p>'+t('These are teaching options, not measured ability ratings. Every level stays within the skill’s curriculum scope. You can change level whenever you need.','這些是教學選項，並非經驗證的能力評級。每級均在該技能的課程範圍內，可按需要轉換。')+'</p><p>'+t('Looking for P5–P6 or hands-on learning?','尋找小五、小六或實作學習？')+' <a href="./?view=browse&lang='+lang+'">'+t('Explore all resources','瀏覽所有資源')+' →</a></p><p class="note">'+t('P1–P4 skill levels include quizzes, pupil papers and worked keys. For a mixed quiz, use the separate quiz builder.','小一至小四技能級別提供小測、工作紙及解答。如需混合題目，請使用小測建立工具。')+'</p></aside>';
+ const form=document.getElementById('level-filters'),results=document.getElementById('skill-results');
+ function render(historyMode){
+  const grade=data.find(g=>g.grade===+state.p);if(!grade.units[state.unit])state.unit='';
+  form.elements.p.value=state.p;form.elements.level.value=state.level;form.elements.q.value=state.q;
+  form.elements.unit.innerHTML='<option value="">'+t('All units','所有單元')+'</option>'+Object.entries(grade.units).map(([id,title])=>'<option value="'+id+'">'+id+' · '+E(loc(title))+'</option>').join('');form.elements.unit.value=state.unit;
+  const query=state.q.trim().toLocaleLowerCase(),groups=[];let count=0;
+  for(const [unit,title]of Object.entries(grade.units)){
+   if(state.unit&&state.unit!==unit)continue;
+   const skills=Object.entries(grade.skills).filter(([id,s])=>s.unit===unit&&(!query||[unit,id,...title,...s.label].join(' ').toLocaleLowerCase().includes(query)));
+   if(!skills.length)continue;count+=skills.length;
+   groups.push('<section class="skill-unit" data-unit="'+unit+'"><div class="skill-unit-heading"><span>'+unit+'</span><h2>'+E(loc(title))+'</h2><small>'+skills.length+t(' skills','項技能')+'</small></div><div class="skill-card-grid">'+skills.map(([id,s])=>'<a class="level-skill-card" data-skill="'+id+'" href="p'+grade.grade+'-skill-levels.html?'+new URLSearchParams({lang,skill:id,level:state.level,set:'0'})+'"><span class="skill-level-badge">'+levels[state.level][0]+'</span><h3>'+E(loc(s.label))+'</h3><span class="skill-start">'+t('Start 3 questions','開始3題練習')+' <span aria-hidden="true">→</span></span></a>').join('')+'</div></section>');
+  }
+  results.innerHTML=groups.join('')||'<div class="levels-empty"><h2>'+t('No skills found','找不到技能')+'</h2><p>'+t('Try a different word or clear the search. You can also choose another year.','請嘗試其他字詞或清除搜尋，也可選擇其他年級。')+'</p><button id="empty-clear" class="secondary" type="button">'+t('Show all P'+state.p+' skills','顯示P'+state.p+'所有技能')+'</button></div>';
+  document.getElementById('skill-count').textContent='P'+state.p+' · '+count+t(' skills','項技能')+' · '+levels[state.level][0];
+  const next=new URL(location.href);for(const [key,value]of Object.entries(state)){if(value)next.searchParams.set(key,value);else next.searchParams.delete(key);}next.searchParams.set('lang',lang);if(historyMode)history[historyMode+'State'](null,'',next);
+  for(const l of ['en','zh']){const a=document.getElementById(l),u=new URL(next);u.searchParams.set('lang',l);a.href=u.href;a.setAttribute('aria-current',l===lang?'true':'false');}
+  const clear=document.getElementById('empty-clear');if(clear)clear.onclick=()=>{state.q='';state.unit='';render('push');form.elements.q.focus();};
+ }
+ form.onsubmit=e=>e.preventDefault();form.onchange=e=>{if(e.target.name==='p'){state.p=e.target.value;state.unit='';}else if(e.target.name==='unit')state.unit=e.target.value;else if(e.target.name==='level')state.level=e.target.value;else return;render('push');};
+ form.elements.q.oninput=e=>{state.q=e.target.value;render('replace');};form.onreset=e=>{e.preventDefault();state.q='';state.unit='';render('push');form.elements.q.focus();};
+ window.addEventListener('popstate',()=>{read();render();});render();
+})();
