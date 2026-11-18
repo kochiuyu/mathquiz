@@ -33,10 +33,10 @@ The middle column is Normal's independent task; Easy adds a context-specific cue
 | 4N2 · `dividecolumns4a` | Divide by a two-digit number | Amount in complete groups before any leftover. Divisor × quotient + remainder must recover the dividend; remainder is smaller than divisor. |
 | 4N2 · `divisibility4a` | Test divisibility by 2, 3, 5 or 10 | Remainder when divided by the stated divisor. Divisible means a whole-number quotient with zero remainder, including zero divided by a nonzero divisor. |
 | 4N2 · `divisionstory4a` | Interpret division in problems | Amount in complete groups before any leftover. Interpret the quotient and remainder in the situation; decide whether leftovers require another container. |
-| 4N3 · `allfactors4a` | List every positive factor | Number of positive factors. Use factor pairs and include 1 and the number itself, without repeating a square-root factor. |
+| 4N3 · `allfactors4a` | List every positive factor | Number of positive factors. Use factor pairs and include 1 and the number itself; when both factors in a pair are equal, list that factor once. |
 | 4N3 · `factor1` | Identifying factors | Test every listed number for exact division, including both selected and rejected candidates. |
 | 4N3 · `factorpair4a` | Explain a factor pair | Target divided by the missing partner. The whole-number partner must complete a product equal to the target. |
-| 4N3 · `factorrelation4a` | Connect factors and multiples | Whole-number partner: given factor × partner = target. If a × b = n, a is a factor of n and n is a multiple of a. |
+| 4N3 · `factorrelation4a` | Connect factors and multiples | Whole-number partner: given factor × partner = target. An exact multiplication sentence shows that each factor divides the product, and the product is a multiple of each factor. |
 | 4N3 · `multiples4a` | List positive multiples | Fourth positive multiple. Multiply by 1, 2, 3 and so on; this question asks for positive multiples. |
 | 4N3 · `primeclass4a` | Classify prime and composite numbers | Number of positive factors. A prime has exactly two positive factors; 1 is neither prime nor composite. |
 | 4N4 · `commonfactors4a` | List all common factors | Number of common factors. A common factor divides both numbers exactly; include every such positive factor once. |
