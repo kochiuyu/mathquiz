@@ -854,6 +854,166 @@ const resourceData = {
   ],
   "activities": [
     {
+      "path": "activities/p6-angle-degree.html",
+      "units": [
+        "6M1"
+      ],
+      "title": [
+        "Angle measurement and construction",
+        "量角及畫角"
+      ]
+    },
+    {
+      "path": "activities/p6-volume-ii.html",
+      "units": [
+        "6M2"
+      ],
+      "title": [
+        "Capacity and displacement",
+        "容量與排水"
+      ]
+    },
+    {
+      "path": "activities/p6-perimeter-ii.html",
+      "units": [
+        "6M3"
+      ],
+      "title": [
+        "Pi and outside boundaries",
+        "圓周率及外周界"
+      ]
+    },
+    {
+      "path": "activities/p6-speed.html",
+      "units": [
+        "6M4"
+      ],
+      "title": [
+        "Safe speed investigation",
+        "安全速率探究"
+      ]
+    },
+    {
+      "path": "activities/p6-area-iii.html",
+      "units": [
+        "6M5"
+      ],
+      "title": [
+        "Circle area investigation",
+        "圓面積探究"
+      ]
+    },
+    {
+      "path": "activities/p6-symmetry.html",
+      "units": [
+        "6S1"
+      ],
+      "title": [
+        "P6 · Symmetry",
+        "P6 · 對稱"
+      ]
+    },
+    {
+      "path": "activities/p6-averages.html",
+      "units": [
+        "6D1"
+      ],
+      "title": [
+        "P6 · Averages",
+        "P6 · 平均數"
+      ]
+    },
+    {
+      "path": "activities/p6-broken-line-graphs.html",
+      "units": [
+        "6D2"
+      ],
+      "title": [
+        "P6 · Broken-line graphs",
+        "P6 · 折線圖"
+      ]
+    },
+    {
+      "path": "activities/p6-pie-charts.html",
+      "units": [
+        "6D3"
+      ],
+      "title": [
+        "P6 · Pie charts",
+        "P6 · 圓形圖"
+      ]
+    },
+    {
+      "path": "activities/p6-statistics.html",
+      "units": [
+        "6D4"
+      ],
+      "title": [
+        "P6 · Uses and abuses of statistics",
+        "P6 · 統計圖的應用和誤用"
+      ]
+    },
+    {
+      "path": "activities/p6-inquiry.html",
+      "units": [
+        "6F1"
+      ],
+      "title": [
+        "P6 · Inquiry and investigation",
+        "P6 · 探究活動"
+      ]
+    },
+    {
+      "path": "activities/p6-decimals-iv.html",
+      "units": [
+        "6N1"
+      ],
+      "title": [
+        "Decimals IV: divide, estimate and check",
+        "小數（四）：除法、估算與驗算"
+      ]
+    },
+    {
+      "path": "activities/p6-decimals-v.html",
+      "units": [
+        "6N2"
+      ],
+      "title": [
+        "Decimals V: compare representations",
+        "小數（五）：比較不同表示"
+      ]
+    },
+    {
+      "path": "activities/p6-percentages-i.html",
+      "units": [
+        "6N3"
+      ],
+      "title": [
+        "Percentages I: name the whole",
+        "百分數（一）：指出整體"
+      ]
+    },
+    {
+      "path": "activities/p6-percentages-ii.html",
+      "units": [
+        "6N4"
+      ],
+      "title": [
+        "Percentages II: parts and changed totals",
+        "百分數（二）：部分與新總量"
+      ]
+    },
+    {
+      "path": "activities/p6-simple-equations-ii.html",
+      "units": [
+        "6A1"
+      ],
+      "title": [
+        "Simple equations II: model and verify",
+        "簡易方程（二）：建模與驗算"
+      ]
+    },
+    {
       "path": "activities/p5-elementary-algebra.html",
       "units": [
         "5A1"

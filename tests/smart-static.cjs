@@ -7,6 +7,6 @@ s=E.start();for(let i=0;i<2;i++){s=E.step(s,{type:'mark',correct:true});s=E.step
 s=E.start();for(let i=0;i<12;i++){s=E.step(s,{type:'mark',correct:false});s=E.step(s,{type:'next'});}a.equal(s.round,1);a.equal(s.index,0);a.equal(s.level,0);
 for(const p of ['smart-practice.js','smart-engine.js','resource-browser.js'])new vm.Script(read(p));
 const p1=require('../p1-skill-data.js');for(const n of ['number','operations','measures','shapes'])require('../p1-skill-'+n+'.js');
-let skills=0,questions=0;for(let g=1;g<=5;g++){const b=g===1?p1:require('../p'+g+'-skill-data.js');for(const skill of Object.keys(b.skills)){skills++;for(const level of E.levels){const qs=b.pick(skill,level,'all');a.equal(qs.length,12);a.equal(new Set(qs.map(q=>q.id)).size,12);for(const q of qs){questions++;a(b.assess(q,q.fields.map(f=>f.answer)).every(Boolean),q.id);a(q.prompt.length===2&&q.why.length===2);}}}}
-a.equal(skills,218);a.equal(questions,7848);a(!read('smart-practice.js').includes('localStorage'));
-console.log('PASS Smart practice: progression, repeated submissions, help, errors, exhaustion; all 218 skills / 7848 canonical answers and bilingual prompts; syntax.');
+let skills=0,questions=0;for(let g=1;g<=6;g++){const b=g===1?p1:require('../p'+g+'-skill-data.js');for(const skill of Object.keys(b.skills)){skills++;for(const level of E.levels){const qs=b.pick(skill,level,'all');a.equal(qs.length,12);a.equal(new Set(qs.map(q=>q.id)).size,12);for(const q of qs){questions++;a(b.assess(q,q.fields.map(f=>f.answer)).every(Boolean),q.id);a(q.prompt.length===2&&q.why.length===2);}}}}
+a.equal(skills,270);a.equal(questions,9720);a(!read('smart-practice.js').includes('localStorage'));
+console.log('PASS Smart practice: progression, repeated submissions, help, errors, exhaustion; all 270 skills / 9720 canonical answers and bilingual prompts; syntax.');

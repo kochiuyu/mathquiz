@@ -1,0 +1,54 @@
+{
+  "activities/p5-3d-shapes-iii.html": {
+    "before": "ed096e164713148de9d92b236d08b12be067050d8487dec88276b06182581eff",
+    "publishedSHA256": "0d322805f2a3b6617adeb404f2b162e4a971e4cdb797be8d495ce82636e262a4"
+  },
+  "activities/p5-area-ii.html": {
+    "before": "75829c9671c018250cf139d2e52a04f4a329b0ee8b29a7191d8cd804c4c68be2",
+    "publishedSHA256": "41cb20248b009d9ed242c2e29c172dbed6d3a365a7109217476905014de86a6a"
+  },
+  "activities/p5-bar-charts-iii.html": {
+    "before": "d54b0872c7fc2f72048b4656446ff1f1a9a8fd891487c6ffe06fd50de2f92074",
+    "publishedSHA256": "9589501636aa2927b3b277dbca9a3959375f39f3c716145a585e8b4480c2a07b"
+  },
+  "activities/p5-circles.html": {
+    "before": "1fd80e6c40b768274bf76be9a993df37ab67a75f4a605f7d852e95ba46d7cf08",
+    "publishedSHA256": "a470f790c98c3d071aba1c569c17e7e515b32ec944b05ef5288bc8183192ac7c"
+  },
+  "activities/p5-decimals-iii.html": {
+    "before": "9259fb48d7d923fdb37939d887bdff7c6bb80a417d2cf4a855341280985ddca8",
+    "publishedSHA256": "43ea7986f4f6d162b90617503cbef1b90357a5d199ea93a9a28d59e01103aa76"
+  },
+  "activities/p5-elementary-algebra.html": {
+    "before": "0996bf0f71d312610584c3302f200adc9330459751d95f488305a9e6728c151f",
+    "publishedSHA256": "38df670e7c1115be9f9114ea44a05daf0d27f205c879f453fd6b26174dae420d"
+  },
+  "activities/p5-fractions-iii.html": {
+    "before": "2a41a1f80e2f7ae740a2de35875c7191c9d013711ee1b5fe63f3b1135a39d295",
+    "publishedSHA256": "3953f8efabc2085592bbf972d9c90ce6cf6b541419a407a3c10255a5f4e995d9"
+  },
+  "activities/p5-fractions-iv.html": {
+    "before": "8e6577422b61edbf99ba0e14fe0aef6e8a98eaf04f56721e763552653a5d895b",
+    "publishedSHA256": "6d607ff25558452f416e42d665d6cc6fc9d5d7e49c1b4e8ced859e774cf3a024"
+  },
+  "activities/p5-fractions-v.html": {
+    "before": "530d5247fd0aedc47e78e9730c58f83bb2a1af98415284f7e2519f47ebcde821",
+    "publishedSHA256": "5e35add24767c4172d1093eb1636346233e8be0226d2f53a303ec6474e6d3886"
+  },
+  "activities/p5-inquiry.html": {
+    "before": "0b63b084ac2c80e8bf3e6d47fb3f3f17f28f896a09c14a9168b895793b9b9ece",
+    "publishedSHA256": "14a87ff2eae7010b69504030c49feb8e9a4ea6eff7a6c78ca7be33410e696139"
+  },
+  "activities/p5-multi-digit-numbers.html": {
+    "before": "9f10bfe693e01fb28d7a5401090a81aad8cd47db54cd7c825c768e545f9f2f8d",
+    "publishedSHA256": "57c0df0eaae3b7678add1c78dcfdf1c508755e87ee67abcd58bd748447865ab2"
+  },
+  "activities/p5-simple-equations-i.html": {
+    "before": "c07e458d4a67a664c22f729344c037d7c969c5cbf4d08602f5cb3c61605e3804",
+    "publishedSHA256": "bceecbdc92a022c740487f35e1ce4c3fae662832442f37922535b487b4a967e1"
+  },
+  "activities/p5-volume-i.html": {
+    "before": "1dfbcb6e975debac98d33255bd07295490bf306c57ed92a7cad9a5738a286393",
+    "publishedSHA256": "70229e80fca5503c8ee2b578ec5ac66892042dab7ae6bff4f5c8001177456d51"
+  }
+}

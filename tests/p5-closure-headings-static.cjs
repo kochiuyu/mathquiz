@@ -12,8 +12,8 @@ assert re.search(r'<h1>(.*?)</h1>',zh)[1]=='體積（一）：建構、比較與
 with tempfile.TemporaryDirectory() as tmp:
  out=Path(tmp);(out/'tools').mkdir();(out/'planning').mkdir();shutil.copy2(root/'tools/build-resource-data.py',out/'tools/build-resource-data.py');shutil.copy2(root/'planning/full-curriculum-plan.md',out/'planning/full-curriculum-plan.md');shutil.copytree(root/'activities',out/'activities')
  run=subprocess.run([sys.executable,str(out/'tools/build-resource-data.py')],capture_output=True,text=True);assert run.returncode==0,run.stderr
- assert (out/'resources.js').read_bytes()==(root/'resources.js').read_bytes(),'Generator must reproduce exact metadata including all69 bilingual activity titles'
+ assert (out/'resources.js').read_bytes()==(root/'resources.js').read_bytes(),'Generator must reproduce exact metadata including all85 bilingual activity titles'
  p=out/'activities/p5-volume-i.html';p.write_text(volume.replace(en,en.replace('<h1>','<h 1>').replace('</h1>','</h 1>')))
  bad=subprocess.run([sys.executable,str(out/'tools/build-resource-data.py')],capture_output=True,text=True);assert bad.returncode!=0 and 'missing language-specific h1 title'in bad.stderr,'Malformed EN headings must not leak a ZH title across language sections'
-print('PASS closure headings:5 EN sheet headings/12 task headings, original EN/ZH titles,69 exact generated activity records; malformed EN-heading mutation rejected without language leakage.')
+print('PASS closure headings:5 EN sheet headings/12 task headings, original EN/ZH titles,85 exact generated activity records; malformed EN-heading mutation rejected without language leakage.')
 `;cp.execFileSync(python,['-c',test,root],{stdio:'inherit'});

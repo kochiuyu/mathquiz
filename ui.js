@@ -36,8 +36,8 @@ window.MathQuizUI = (() => {
     app.querySelector('.hero')?.insertAdjacentHTML('afterend',levelsEntry());
   }
   function levelsEntry(grade=''){
-    const query=new URLSearchParams({lang:language(),...([1,2,3,4,5].includes(+grade)?{p:grade}:{})});
-    return '<section class="levels-entry"><div><p class="eyebrow">'+tr('NEW WAYS TO PRACTISE','多種練習方式')+'</p><h2>'+tr('One skill. Three ways to grow.','同一技能，三種學習方式。')+'</h2><p>'+tr('Easy with guidance · Normal application · Difficult reasoning','容易：有引導 · 一般：應用 · 較難：推理')+'</p><small>'+tr('Available for '+families.filter(f=>!f.retired&&f.grade<=5).length+' released P1–P5 skills.','涵蓋小一至小五已推出的'+families.filter(f=>!f.retired&&f.grade<=5).length+'項技能。')+'</small></div><a class="button" href="skill-levels.html?'+query+'">'+tr('Choose a skill and level','選擇技能及級別')+' →</a></section>';
+    const query=new URLSearchParams({lang:language(),...([1,2,3,4,5,6].includes(+grade)?{p:grade}:{})});
+    return '<section class="levels-entry"><div><p class="eyebrow">'+tr('NEW WAYS TO PRACTISE','多種練習方式')+'</p><h2>'+tr('One skill. Three ways to grow.','同一技能，三種學習方式。')+'</h2><p>'+tr('Easy with guidance · Normal application · Difficult reasoning','容易：有引導 · 一般：應用 · 較難：推理')+'</p><small>'+tr('Available for '+families.filter(f=>!f.retired&&f.grade<=6).length+' released P1–P6 skills.','涵蓋小一至小六已推出的'+families.filter(f=>!f.retired&&f.grade<=6).length+'項技能。')+'</small></div><a class="button" href="skill-levels.html?'+query+'">'+tr('Choose a skill and level','選擇技能及級別')+' →</a></section>';
   }
   function pilotLink(unit='1N1'){const hasSkill=families.some(f=>!f.retired&&f.grade===1&&f.code===unit);return '<p class="p1-level-pilot"><a href="'+(hasSkill?'p1-skill-levels.html':'p1-levels.html')+'?lang='+language()+'&unit='+unit+'">'+(hasSkill?tr('P1 skills: Easy / Normal / Difficult for each skill','小一技能：每項均有容易／一般／較難'):tr('Unit exploration and observation activities','單元探究及觀察活動'))+' →</a></p>';}
   function browser(app,coverage=false) {

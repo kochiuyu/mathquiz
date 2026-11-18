@@ -1,0 +1,67 @@
+{
+  "p1-skill-levels.html": {
+    "before": "166add5cfc59a9b1ba5f76280ff75448afd18673598d6af7385ab631a3185f26",
+    "after": "122ac4bd499a8eaedb5d94d00c290bf9f7b49bd56faf54db4cd2c4fb0c5e1af1",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "p2-skill-levels.html": {
+    "before": "f0950d356a46e0d21312a4a4aaf8ed9611108c7eb760b1eda0844e8158787a93",
+    "after": "67d15a7581dec212259a211210e3a4b13995cb0616c2d9c6dce660a3739db67e",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "p3-skill-levels.html": {
+    "before": "7779240457f2fd4c511c648be95dd4c7f4789f2dd2e71e4b27028245d79f9147",
+    "after": "151b0f197bebce0c298d0b2f71041413782016ef9c286062a80ff9b6760619fc",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "p4-skill-levels.html": {
+    "before": "df98dcdd6e0f05f7d1ccf33abdb1799c1484d8ae0bba41c5eae7d95327daafa2",
+    "after": "e43d538d1c5ab19f54bb0e4b37ed6f2497bc6020ba3022701b8b05ba1b0216eb",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "p5-skill-levels.html": {
+    "before": "70efa91d4ff7696409cdd434fb7c9f72f276be7151e21f929e34f11f141fa72b",
+    "after": "09b17ed2945de0a52daf269837e0625659a4bead93df63ce41248df423219824",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "resource-browser.js": {
+    "before": "f7bc7ceafe4a177e1a11c8e4fdcb4b949d4835ff6b34dc39c6462f4d41dca0d3",
+    "after": "a7c57d0cf15a9e590be1d3d8745a0d2da796e40fde61fa574e5c6fe8f37035e4",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "skill-directory.js": {
+    "before": "bba31a140ff4e6a371c5c1b2f5f5337b1564f35c2192bd3079291454eff4be05",
+    "after": "52c5d5c2754c9361d472d3ee129dd20e2d86a697faf44e89348493d411694a87",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "skill-levels-hub.js": {
+    "before": "69621fd8b3f8a30e0c1ceb6309be1992df2fcb5c863c20a035729c7ef8433f83",
+    "after": "bb92a61269a61e9c8fdc4e4934dbe31369afed654e3e7a50c3d2424864dcde3d",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "skill-levels.html": {
+    "before": "e9fca651a5818b831c91f742a61d0b8cc0f5308f0760d8aa394d8d29393a3653",
+    "after": "aa04cd174bf3101419dd7fcc4614c1d7b67b8d34f14fb88a1007c341caabdbe0",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "skill-session-ui.js": {
+    "before": "57d9c6affa3c18984f4c70b1439b2fde36eacfa445e58c305dbd37747a572da7",
+    "after": "b3f15e8682c08670610412e2c94d2e4924aab5ce926bfa8d7a51f8fd2de8782f",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "smart-practice.html": {
+    "before": "f0714ea3ff134309a047a794c85cc05f1ed0418c33ea858dd3d58605e38c0167",
+    "after": "9df87d16bd7041ef992d91d596fe5bcb4f52ca20b2ea1529650bd1b4efde6f9b",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "smart-practice.js": {
+    "before": "cf4287f358455e9270721e9cad82488452e38472263a63f819a6eaf26466a591",
+    "after": "34a8e449acea72488998833a8ac114ab5a0d08353a5a641c7fd982355584db33",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  },
+  "ui.js": {
+    "before": "a3fe09c0acde79e188216a1fb2d1758733a78c378516cdd3734effa8633a2f16",
+    "after": "bf20911258ce5ed64448597f2da2f55534bbd9cceb7d67397b86480f4e0e436f",
+    "scope": "P6 shared adapter/directory integration only; preceding bank payloads remain separately pinned"
+  }
+}

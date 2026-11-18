@@ -1,0 +1,5 @@
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),a=require('node:assert/strict'),root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8'),S=require('../p6-skill-seeds.js'),c={};vm.createContext(c);
+const source=read('quiz.js');vm.runInContext("let ch=false;const t=(a,b)=>ch?b:a;const local=p=>p[ch?1:0];"+source.slice(source.indexOf('function moneyFigure1'),source.indexOf('function points(q)')),c);
+for(const f of ['directions4.js','dissection4.js','quadrilateral4.js','area4.js','perimeter4.js','decimals4.js','fractions4.js','fractions5.js','measures5.js','shapes-data5.js','measures6.js','shapes-data6.js'])vm.runInContext(read(f),c);
+let rendered=0;for(const s of S.seeds)for(let lang=0;lang<2;lang++){c.current=s.q.figure;c.zh=!!lang;const expected=s.q.figure?vm.runInContext('ch=zh;figure(current)',c):'';a.equal(s.pictures[lang],expected,s.skill+'-'+s.index+' language'+lang);if(s.q.figure)rendered++;}
+console.log(`PASS P6 frozen figures: all1248 bilingual seed outputs match actual production boolean-language renderer;${rendered} nonempty SVGs.`);

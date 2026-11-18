@@ -73,7 +73,7 @@ const result=cp.spawnSync('python3',['-c',oracle],{input:JSON.stringify({rows,ht
 a(c.scoreAlgebra5('-x+9',{mode:'expression',variable:'x',expected:'9-x'}));a(c.scoreAlgebra5('x+x+x',{mode:'expression',variable:'x',expected:'3*x'}));a(!c.scoreAlgebra5('3+x',{mode:'expression',variable:'x',expected:'3*x'}));a(!c.scoreAlgebra5('x=4',{mode:'equation',variable:'x',expected:'2*x+3=11'}));a(!c.scoreAlgebra5('2*x=11',{mode:'equation',variable:'x',expected:'2*x+3=11'}));
 for(let k=1;k<=8;k++)for(let b=0;b<=8;b++){a(c.scoreAlgebra5(`${k}x+${b}`,{mode:'expression',variable:'x',expected:`${b}+x*${k}`}));a(!c.scoreAlgebra5(`${k}x+${b+1}`,{mode:'expression',variable:'x',expected:`${b}+x*${k}`}));}
 const sample=vm.runInNewContext('('+read('tests/regression.js').match(/const samples=(\{[^;]+\});/)[1]+')');for(const f of c.added){a.equal(sample[f.id].join(','),Array.from({length:f.count},(_,i)=>i).join(','));a(quiz.includes(f.id+':['+sample[f.id].join(',')+']'));}
-a(quiz.includes('if(q.algebra5)return Number(scoreAlgebra5(values[0],q.algebra5))'));a(quiz.includes('const scores=algebraResult!==null?[Number(algebraResult)]'));
+a(quiz.includes('if(q.algebra5)return Number(scoreAlgebra5(values[0],q.algebra5))'));a(quiz.includes(':algebraResult!==null?[Number(algebraResult)]'));
 for(const rel of ['index.html','coverage.html','tests/regression.html'])a(read(rel).includes('algebra5.js?v=all-core-p5-r1'));
 
 a(c.scoreAlgebra5('2(x+3)',{mode:'expression',variable:'x',expected:'2*x+6'}));

@@ -9,7 +9,7 @@ function context(search){const nodes={};const document={title:'',documentElement
   const c=context('?scope=p5');
   assert.equal(rows.filter(f=>f[1]===5).length,53);
   for(const f of rows)assert.equal(vm.runInContext('inScope('+JSON.stringify(f[0]+' · '+f[2]+' released variants')+')',c),f[1]===5,f[0]);
-  for(const label of ['Fixed v1 questions','Family catalogue','Released bilingual and response contracts · 3351 variants','P5 equations · twelve balanced whole-number answers','5N1 all60 actual assessment en','5N2 full practice fractionorder5a zh','5N3 all60 bounded bilingual paper/key/PDF'])assert(vm.runInContext('inScope('+JSON.stringify(label)+')',c),label);
+  for(const label of ['Fixed v1 questions','Family catalogue','Released bilingual and response contracts · 4035 variants','P5 equations · twelve balanced whole-number answers','5N1 all60 actual assessment en','5N2 full practice fractionorder5a zh','5N3 all60 bounded bilingual paper/key/PDF'])assert(vm.runInContext('inScope('+JSON.stringify(label)+')',c),label);
   for(const label of ['P1 number names','P4 fractions','5 unrelated text','P50 invalid grade'])assert(!vm.runInContext('inScope('+JSON.stringify(label)+')',c),label);
   for(const search of ['', '?scope=unknown'])assert(vm.runInContext('inScope("P4 fractions")',context(search)),'default remains full suite');
   await vm.runInContext('check("P5 sample",()=>{})',c);

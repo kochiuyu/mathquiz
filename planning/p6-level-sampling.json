@@ -1,0 +1,5435 @@
+{
+  "sourceRevision": "reviewed-P6-all-core-59577b35",
+  "contextCount": 624,
+  "taskCount": 1872,
+  "skills": {
+    "angleconcept6a": {
+      "unit": "6M1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "angleconcept6a-0",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "angleconcept6a-1",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "angleconcept6a-2",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "angleconcept6a-3",
+          "subtype": 3,
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "angleconcept6a-4",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "angleconcept6a-5",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "angleconcept6a-6",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "angleconcept6a-7",
+          "subtype": 3,
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "angleconcept6a-8",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "angleconcept6a-9",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "angleconcept6a-10",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "angleconcept6a-11",
+          "subtype": 3,
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "protractor6a": {
+      "unit": "6M1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "protractor6a-0",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "protractor6a-1",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "protractor6a-6",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "protractor6a-7",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "protractor6a-8",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "protractor6a-9",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "protractor6a-14",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "protractor6a-15",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "protractor6a-16",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "protractor6a-17",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "protractor6a-22",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "protractor6a-23",
+          "subtype": "protractor",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "anglecompare6a": {
+      "unit": "6M1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "anglecompare6a-0",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "anglecompare6a-1",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "anglecompare6a-2",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "anglecompare6a-3",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "anglecompare6a-4",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "anglecompare6a-5",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "anglecompare6a-6",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "anglecompare6a-7",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "anglecompare6a-8",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "anglecompare6a-9",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "anglecompare6a-10",
+          "subtype": "anglecompare",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "anglecompare6a-11",
+          "subtype": "anglecompare",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "capacityvolume6a": {
+      "unit": "6M2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "capacityvolume6a-0",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "capacityvolume6a-1",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "capacityvolume6a-2",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "capacityvolume6a-3",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "capacityvolume6a-4",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "capacityvolume6a-5",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "capacityvolume6a-6",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "capacityvolume6a-7",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "capacityvolume6a-8",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "capacityvolume6a-9",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "capacityvolume6a-10",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "capacityvolume6a-11",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "displacement6a": {
+      "unit": "6M2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "displacement6a-0",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "displacement6a-1",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "displacement6a-6",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "displacement6a-7",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "displacement6a-8",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "displacement6a-9",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "displacement6a-14",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "displacement6a-15",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "displacement6a-16",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "displacement6a-17",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "displacement6a-22",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "displacement6a-23",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1
+      ]
+    },
+    "displacementmethod6a": {
+      "unit": "6M2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "displacementmethod6a-0",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "displacementmethod6a-1",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "displacementmethod6a-2",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "displacementmethod6a-3",
+          "subtype": 3,
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "displacementmethod6a-4",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "displacementmethod6a-5",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "displacementmethod6a-6",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "displacementmethod6a-7",
+          "subtype": 3,
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "displacementmethod6a-8",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "displacementmethod6a-9",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "displacementmethod6a-10",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "displacementmethod6a-11",
+          "subtype": 3,
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "piratio6a": {
+      "unit": "6M3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "piratio6a-0",
+          "subtype": "piratio",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "piratio6a-1",
+          "subtype": "piratio",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "piratio6a-2",
+          "subtype": "piratio",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "piratio6a-3",
+          "subtype": "piratio",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "piratio6a-4",
+          "subtype": "piratio",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "piratio6a-5",
+          "subtype": "piratio",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "piratio6a-6",
+          "subtype": "piratio",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "piratio6a-7",
+          "subtype": "piratio",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "piratio6a-8",
+          "subtype": "piratio",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "piratio6a-9",
+          "subtype": "piratio",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "piratio6a-10",
+          "subtype": "piratio",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "piratio6a-11",
+          "subtype": "piratio",
+          "response": [
+            "fraction"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "circlecircum6a": {
+      "unit": "6M3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "circlecircum6a-0",
+          "subtype": "circumference",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "circlecircum6a-1",
+          "subtype": "circumference",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "circlecircum6a-2",
+          "subtype": "circumference",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "circlecircum6a-3",
+          "subtype": "circumference",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "circlecircum6a-4",
+          "subtype": "circumference",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "circlecircum6a-5",
+          "subtype": "circumference",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "circlecircum6a-6",
+          "subtype": "circumference",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "circlecircum6a-7",
+          "subtype": "circumference",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "circlecircum6a-8",
+          "subtype": "circumference",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "circlecircum6a-9",
+          "subtype": "circumference",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "circlecircum6a-10",
+          "subtype": "circumference",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "circlecircum6a-11",
+          "subtype": "circumference",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "inversecircle6a": {
+      "unit": "6M3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "inversecircle6a-0",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "inversecircle6a-1",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "inversecircle6a-2",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "inversecircle6a-3",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "inversecircle6a-4",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "inversecircle6a-5",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "inversecircle6a-6",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "inversecircle6a-7",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "inversecircle6a-8",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "inversecircle6a-9",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "inversecircle6a-10",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "inversecircle6a-11",
+          "subtype": "inversecircle",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "circleboundary6a": {
+      "unit": "6M3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "circleboundary6a-0",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "circleboundary6a-1",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "circleboundary6a-6",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "circleboundary6a-7",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "circleboundary6a-8",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "circleboundary6a-9",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "circleboundary6a-14",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "circleboundary6a-15",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "circleboundary6a-16",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "circleboundary6a-17",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "circleboundary6a-22",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "circleboundary6a-23",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "timeconvert6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "timeconvert6a-0",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "timeconvert6a-1",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "timeconvert6a-2",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "timeconvert6a-3",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "timeconvert6a-4",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "timeconvert6a-5",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "timeconvert6a-6",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "timeconvert6a-7",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "timeconvert6a-8",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "timeconvert6a-9",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "timeconvert6a-10",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "timeconvert6a-11",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "timeinterval6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "timeinterval6a-0",
+          "subtype": 0,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "timeinterval6a-1",
+          "subtype": 1,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "timeinterval6a-2",
+          "subtype": 2,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "timeinterval6a-3",
+          "subtype": 0,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "timeinterval6a-4",
+          "subtype": 1,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "timeinterval6a-5",
+          "subtype": 2,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "timeinterval6a-6",
+          "subtype": 0,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "timeinterval6a-7",
+          "subtype": 1,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "timeinterval6a-8",
+          "subtype": 2,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "timeinterval6a-9",
+          "subtype": 0,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "timeinterval6a-10",
+          "subtype": 1,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "timeinterval6a-11",
+          "subtype": 2,
+          "response": [
+            "integer",
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "speedmeaning6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "speedmeaning6a-0",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "speedmeaning6a-1",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "speedmeaning6a-2",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "speedmeaning6a-3",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "speedmeaning6a-4",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "speedmeaning6a-5",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "speedmeaning6a-6",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "speedmeaning6a-7",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "speedmeaning6a-8",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "speedmeaning6a-9",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "speedmeaning6a-10",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "speedmeaning6a-11",
+          "subtype": "speedmeaning",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "speedcompare6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "speedcompare6a-0",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "speedcompare6a-1",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "speedcompare6a-2",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "speedcompare6a-3",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "speedcompare6a-4",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "speedcompare6a-5",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "speedcompare6a-6",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "speedcompare6a-7",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "speedcompare6a-8",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "speedcompare6a-9",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "speedcompare6a-10",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "speedcompare6a-11",
+          "subtype": 2,
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "speedgraph6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "speedgraph6a-0",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "speedgraph6a-1",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "speedgraph6a-6",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "speedgraph6a-7",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "speedgraph6a-8",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "speedgraph6a-9",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "speedgraph6a-14",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "speedgraph6a-15",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "speedgraph6a-16",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "speedgraph6a-17",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "speedgraph6a-22",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "speedgraph6a-23",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "speedproblem6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "speedproblem6a-0",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "speedproblem6a-1",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "speedproblem6a-6",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "speedproblem6a-7",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "speedproblem6a-8",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "speedproblem6a-9",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "speedproblem6a-14",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "speedproblem6a-15",
+          "subtype": 0,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "speedproblem6a-16",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "speedproblem6a-17",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "speedproblem6a-22",
+          "subtype": 1,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "speedproblem6a-23",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "circleareamodel6a": {
+      "unit": "6M5",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "circleareamodel6a-0",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "circleareamodel6a-1",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "circleareamodel6a-2",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "circleareamodel6a-3",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "circleareamodel6a-4",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "circleareamodel6a-5",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "circleareamodel6a-6",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "circleareamodel6a-7",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "circleareamodel6a-8",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "circleareamodel6a-9",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "circleareamodel6a-10",
+          "subtype": "areamodel",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "circleareamodel6a-11",
+          "subtype": "areamodel",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "circlearea6a": {
+      "unit": "6M5",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "circlearea6a-0",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "circlearea6a-1",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "circlearea6a-2",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "circlearea6a-3",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "circlearea6a-4",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "circlearea6a-5",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "circlearea6a-6",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "circlearea6a-7",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "circlearea6a-8",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "circlearea6a-9",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "circlearea6a-10",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "circlearea6a-11",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "fractioncirclearea6a": {
+      "unit": "6M5",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "fractioncirclearea6a-0",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "fractioncirclearea6a-1",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "fractioncirclearea6a-6",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "fractioncirclearea6a-7",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "fractioncirclearea6a-8",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "fractioncirclearea6a-9",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "fractioncirclearea6a-14",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "fractioncirclearea6a-15",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "fractioncirclearea6a-16",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "fractioncirclearea6a-17",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "fractioncirclearea6a-22",
+          "subtype": "circlearea",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "fractioncirclearea6a-23",
+          "subtype": "circlearea",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "axesym6a": {
+      "unit": "6S1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "axesym6a-0",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "axesym6a-1",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "axesym6a-2",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "axesym6a-3",
+          "subtype": 3,
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "axesym6a-4",
+          "subtype": 4,
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "axesym6a-5",
+          "subtype": 5,
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "axesym6a-6",
+          "subtype": 0,
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "axesym6a-7",
+          "subtype": 1,
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "axesym6a-8",
+          "subtype": 2,
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "axesym6a-9",
+          "subtype": 3,
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "axesym6a-10",
+          "subtype": 4,
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "axesym6a-11",
+          "subtype": 5,
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "reflectsym6a": {
+      "unit": "6S1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "reflectsym6a-0",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "reflectsym6a-1",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "reflectsym6a-2",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 3,
+          "coreId": "reflectsym6a-3",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 4,
+          "coreId": "reflectsym6a-4",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "reflectsym6a-5",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "reflectsym6a-6",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 7,
+          "coreId": "reflectsym6a-7",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "reflectsym6a-8",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 9,
+          "coreId": "reflectsym6a-9",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "reflectsym6a-10",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 11,
+          "coreId": "reflectsym6a-11",
+          "subtype": "reflection",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "meanmodel6a": {
+      "unit": "6D1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "meanmodel6a-0",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "meanmodel6a-1",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "meanmodel6a-2",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "meanmodel6a-3",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "meanmodel6a-4",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "meanmodel6a-5",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "meanmodel6a-6",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "meanmodel6a-7",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "meanmodel6a-8",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "meanmodel6a-9",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "meanmodel6a-10",
+          "subtype": "meanModel",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "meanmodel6a-11",
+          "subtype": "meanModel",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "meancalc6a": {
+      "unit": "6D1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "meancalc6a-0",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "meancalc6a-1",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "meancalc6a-2",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 3,
+          "coreId": "meancalc6a-3",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 4,
+          "coreId": "meancalc6a-4",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "meancalc6a-5",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "meancalc6a-6",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 7,
+          "coreId": "meancalc6a-7",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "meancalc6a-8",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 9,
+          "coreId": "meancalc6a-9",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "meancalc6a-10",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 11,
+          "coreId": "meancalc6a-11",
+          "subtype": "mean",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "meanmissing6a": {
+      "unit": "6D1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "meanmissing6a-0",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "meanmissing6a-1",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "meanmissing6a-2",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 3,
+          "coreId": "meanmissing6a-3",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 4,
+          "coreId": "meanmissing6a-4",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "meanmissing6a-5",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "meanmissing6a-6",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 7,
+          "coreId": "meanmissing6a-7",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "meanmissing6a-8",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 9,
+          "coreId": "meanmissing6a-9",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "meanmissing6a-10",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 11,
+          "coreId": "meanmissing6a-11",
+          "subtype": "missingMean",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "linefeatures6a": {
+      "unit": "6D2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "linefeatures6a-0",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "linefeatures6a-1",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "linefeatures6a-2",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "linefeatures6a-3",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "linefeatures6a-4",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "linefeatures6a-5",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "linefeatures6a-6",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "linefeatures6a-7",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "linefeatures6a-8",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "linefeatures6a-9",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "linefeatures6a-10",
+          "subtype": "lineFeature",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "linefeatures6a-11",
+          "subtype": "lineFeature",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "lineinterpret6a": {
+      "unit": "6D2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "lineinterpret6a-0",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "lineinterpret6a-1",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "lineinterpret6a-2",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 3,
+          "coreId": "lineinterpret6a-3",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 4,
+          "coreId": "lineinterpret6a-4",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "lineinterpret6a-5",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "lineinterpret6a-6",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 7,
+          "coreId": "lineinterpret6a-7",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "lineinterpret6a-8",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 9,
+          "coreId": "lineinterpret6a-9",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "lineinterpret6a-10",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 11,
+          "coreId": "lineinterpret6a-11",
+          "subtype": "lineRead",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "lineplot6a": {
+      "unit": "6D2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "lineplot6a-0",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "lineplot6a-1",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "lineplot6a-2",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "lineplot6a-3",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "lineplot6a-4",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "lineplot6a-5",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "lineplot6a-6",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "lineplot6a-7",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "lineplot6a-8",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "lineplot6a-9",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "lineplot6a-10",
+          "subtype": "linePlot",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "lineplot6a-11",
+          "subtype": "linePlot",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pieread6a": {
+      "unit": "6D3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pieread6a-0",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "pieread6a-1",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "pieread6a-2",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 3,
+          "coreId": "pieread6a-3",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 4,
+          "coreId": "pieread6a-4",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "pieread6a-5",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "pieread6a-6",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 7,
+          "coreId": "pieread6a-7",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "pieread6a-8",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 9,
+          "coreId": "pieread6a-9",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "pieread6a-10",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 11,
+          "coreId": "pieread6a-11",
+          "subtype": "pieRead",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "piecompare6a": {
+      "unit": "6D3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "piecompare6a-0",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "piecompare6a-1",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "piecompare6a-2",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "piecompare6a-3",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "piecompare6a-4",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "piecompare6a-5",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "piecompare6a-6",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "piecompare6a-7",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "piecompare6a-8",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "piecompare6a-9",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "piecompare6a-10",
+          "subtype": "pieCompare",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "piecompare6a-11",
+          "subtype": "pieCompare",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "chartchoose6a": {
+      "unit": "6D4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "chartchoose6a-0",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "chartchoose6a-1",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "chartchoose6a-2",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "chartchoose6a-3",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "chartchoose6a-4",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "chartchoose6a-5",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "chartchoose6a-6",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "chartchoose6a-7",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "chartchoose6a-8",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "chartchoose6a-9",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "chartchoose6a-10",
+          "subtype": "chartChoice",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "chartchoose6a-11",
+          "subtype": "chartChoice",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "chartcritique6a": {
+      "unit": "6D4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "chartcritique6a-0",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "chartcritique6a-1",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "chartcritique6a-2",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "chartcritique6a-3",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "chartcritique6a-4",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "chartcritique6a-5",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "chartcritique6a-6",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "chartcritique6a-7",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "chartcritique6a-8",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "chartcritique6a-9",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "chartcritique6a-10",
+          "subtype": "critique",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "chartcritique6a-11",
+          "subtype": "critique",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "decshiftleft6a": {
+      "unit": "6N1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decshiftleft6a-0",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decshiftleft6a-1",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "decshiftleft6a-2",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "decshiftleft6a-3",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "decshiftleft6a-4",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "decshiftleft6a-5",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decshiftleft6a-6",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decshiftleft6a-7",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decshiftleft6a-8",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decshiftleft6a-9",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "decshiftleft6a-10",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "decshiftleft6a-11",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "decshiftright6a": {
+      "unit": "6N1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decshiftright6a-0",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decshiftright6a-1",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "decshiftright6a-2",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "decshiftright6a-3",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "decshiftright6a-4",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "decshiftright6a-5",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decshiftright6a-6",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decshiftright6a-7",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decshiftright6a-8",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decshiftright6a-9",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "decshiftright6a-10",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "decshiftright6a-11",
+          "subtype": "division",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "decdivide6a": {
+      "unit": "6N1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decdivide6a-0",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decdivide6a-1",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decdivide6a-6",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decdivide6a-7",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decdivide6a-8",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decdivide6a-9",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "decdivide6a-14",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "decdivide6a-15",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "decdivide6a-16",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "decdivide6a-17",
+          "subtype": 2,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "decdivide6a-22",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "decdivide6a-23",
+          "subtype": 3,
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "decmixed6a": {
+      "unit": "6N1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decmixed6a-0",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decmixed6a-1",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "decmixed6a-2",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "decmixed6a-3",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "decmixed6a-4",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "decmixed6a-5",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decmixed6a-6",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decmixed6a-7",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decmixed6a-8",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decmixed6a-9",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "decmixed6a-10",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "decmixed6a-11",
+          "subtype": "mixed",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "decround6a": {
+      "unit": "6N1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decround6a-0",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decround6a-1",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "decround6a-2",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "decround6a-3",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "decround6a-4",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "decround6a-5",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decround6a-6",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decround6a-7",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decround6a-8",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decround6a-9",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "decround6a-10",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "decround6a-11",
+          "subtype": "roundDivision",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "decspend6a": {
+      "unit": "6N1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decspend6a-0",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decspend6a-1",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "decspend6a-2",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "decspend6a-3",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "decspend6a-4",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "decspend6a-5",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decspend6a-6",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decspend6a-7",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decspend6a-8",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decspend6a-9",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "decspend6a-10",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "decspend6a-11",
+          "subtype": "purchase",
+          "response": [
+            "integer",
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "decfraction6a": {
+      "unit": "6N2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "decfraction6a-0",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "decfraction6a-1",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "decfraction6a-2",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "decfraction6a-3",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "decfraction6a-4",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "decfraction6a-5",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "decfraction6a-6",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "decfraction6a-7",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "decfraction6a-8",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "decfraction6a-9",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "decfraction6a-10",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "decfraction6a-11",
+          "subtype": "decimalFraction",
+          "response": [
+            "fraction"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "fractiondecimal6a": {
+      "unit": "6N2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "fractiondecimal6a-0",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "fractiondecimal6a-1",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "fractiondecimal6a-2",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "fractiondecimal6a-3",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "fractiondecimal6a-4",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "fractiondecimal6a-5",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "fractiondecimal6a-6",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "fractiondecimal6a-7",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "fractiondecimal6a-8",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "fractiondecimal6a-9",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "fractiondecimal6a-10",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "fractiondecimal6a-11",
+          "subtype": "fractionDecimal",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "fractioncompare6a": {
+      "unit": "6N2",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "fractioncompare6a-0",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "fractioncompare6a-1",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "fractioncompare6a-2",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "fractioncompare6a-3",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "fractioncompare6a-4",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "fractioncompare6a-5",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "fractioncompare6a-6",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "fractioncompare6a-7",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "fractioncompare6a-8",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "fractioncompare6a-9",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "fractioncompare6a-10",
+          "subtype": "compareFractions",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "fractioncompare6a-11",
+          "subtype": "compareFractions",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "pctmeaning6a": {
+      "unit": "6N3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pctmeaning6a-0",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 1,
+          "coreId": "pctmeaning6a-1",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 2,
+          "coreId": "pctmeaning6a-2",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 3,
+          "coreId": "pctmeaning6a-3",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 4,
+          "coreId": "pctmeaning6a-4",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 5,
+          "coreId": "pctmeaning6a-5",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 6,
+          "coreId": "pctmeaning6a-6",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 7,
+          "coreId": "pctmeaning6a-7",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 8,
+          "coreId": "pctmeaning6a-8",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 9,
+          "coreId": "pctmeaning6a-9",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 10,
+          "coreId": "pctmeaning6a-10",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        },
+        {
+          "index": 11,
+          "coreId": "pctmeaning6a-11",
+          "subtype": "percentMeaning",
+          "response": "choice"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pctdecimal6a": {
+      "unit": "6N3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pctdecimal6a-0",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "pctdecimal6a-1",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "pctdecimal6a-2",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "pctdecimal6a-3",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "pctdecimal6a-4",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "pctdecimal6a-5",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "pctdecimal6a-6",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "pctdecimal6a-7",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "pctdecimal6a-8",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "pctdecimal6a-9",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "pctdecimal6a-10",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "pctdecimal6a-11",
+          "subtype": "percentDecimal",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pctfraction6a": {
+      "unit": "6N3",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pctfraction6a-0",
+          "subtype": "percentFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "pctfraction6a-1",
+          "subtype": "percentFraction",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "pctfraction6a-2",
+          "subtype": "percentFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "pctfraction6a-3",
+          "subtype": "percentFraction",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "pctfraction6a-4",
+          "subtype": "percentFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "pctfraction6a-5",
+          "subtype": "percentFraction",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "pctfraction6a-6",
+          "subtype": "percentFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "pctfraction6a-7",
+          "subtype": "percentFraction",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "pctfraction6a-8",
+          "subtype": "percentFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "pctfraction6a-9",
+          "subtype": "percentFraction",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "pctfraction6a-10",
+          "subtype": "percentFraction",
+          "response": [
+            "fraction"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "pctfraction6a-11",
+          "subtype": "percentFraction",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pctrelation6a": {
+      "unit": "6N4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pctrelation6a-0",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "pctrelation6a-1",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "pctrelation6a-2",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "pctrelation6a-3",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "pctrelation6a-4",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "pctrelation6a-5",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "pctrelation6a-6",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "pctrelation6a-7",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "pctrelation6a-8",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "pctrelation6a-9",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "pctrelation6a-10",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "pctrelation6a-11",
+          "subtype": "percentRelation",
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pctquantity6a": {
+      "unit": "6N4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pctquantity6a-0",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "pctquantity6a-1",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "pctquantity6a-2",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "pctquantity6a-3",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "pctquantity6a-4",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "pctquantity6a-5",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "pctquantity6a-6",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "pctquantity6a-7",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "pctquantity6a-8",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "pctquantity6a-9",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "pctquantity6a-10",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "pctquantity6a-11",
+          "subtype": "percentQuantity",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pctchange6a": {
+      "unit": "6N4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pctchange6a-0",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "pctchange6a-1",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "pctchange6a-2",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "pctchange6a-3",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "pctchange6a-4",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "pctchange6a-5",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "pctchange6a-6",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "pctchange6a-7",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "pctchange6a-8",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "pctchange6a-9",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "pctchange6a-10",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "pctchange6a-11",
+          "subtype": "percentChange",
+          "response": [
+            "integer"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "equationtypes6a": {
+      "unit": "6A1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "equationtypes6a-0",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "equationtypes6a-1",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "equationtypes6a-6",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "equationtypes6a-7",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "equationtypes6a-8",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "equationtypes6a-9",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 14,
+          "coreId": "equationtypes6a-14",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 15,
+          "coreId": "equationtypes6a-15",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 16,
+          "coreId": "equationtypes6a-16",
+          "subtype": 4,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 17,
+          "coreId": "equationtypes6a-17",
+          "subtype": 4,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 22,
+          "coreId": "equationtypes6a-22",
+          "subtype": 5,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 23,
+          "coreId": "equationtypes6a-23",
+          "subtype": 5,
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "equationmodel6a": {
+      "unit": "6A1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "equationmodel6a-0",
+          "subtype": 0,
+          "response": "direct-equation"
+        },
+        {
+          "index": 1,
+          "coreId": "equationmodel6a-1",
+          "subtype": 1,
+          "response": "direct-equation"
+        },
+        {
+          "index": 2,
+          "coreId": "equationmodel6a-2",
+          "subtype": 2,
+          "response": "direct-equation"
+        },
+        {
+          "index": 3,
+          "coreId": "equationmodel6a-3",
+          "subtype": 3,
+          "response": "direct-equation"
+        },
+        {
+          "index": 4,
+          "coreId": "equationmodel6a-4",
+          "subtype": 0,
+          "response": "direct-equation"
+        },
+        {
+          "index": 5,
+          "coreId": "equationmodel6a-5",
+          "subtype": 1,
+          "response": "direct-equation"
+        },
+        {
+          "index": 6,
+          "coreId": "equationmodel6a-6",
+          "subtype": 2,
+          "response": "direct-equation"
+        },
+        {
+          "index": 7,
+          "coreId": "equationmodel6a-7",
+          "subtype": 3,
+          "response": "direct-equation"
+        },
+        {
+          "index": 8,
+          "coreId": "equationmodel6a-8",
+          "subtype": 0,
+          "response": "direct-equation"
+        },
+        {
+          "index": 9,
+          "coreId": "equationmodel6a-9",
+          "subtype": 1,
+          "response": "direct-equation"
+        },
+        {
+          "index": 10,
+          "coreId": "equationmodel6a-10",
+          "subtype": 2,
+          "response": "direct-equation"
+        },
+        {
+          "index": 11,
+          "coreId": "equationmodel6a-11",
+          "subtype": 3,
+          "response": "direct-equation"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "equationcheck6a": {
+      "unit": "6A1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "equationcheck6a-0",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 1,
+          "coreId": "equationcheck6a-1",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 2,
+          "coreId": "equationcheck6a-2",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 3,
+          "coreId": "equationcheck6a-3",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 4,
+          "coreId": "equationcheck6a-4",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 5,
+          "coreId": "equationcheck6a-5",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 6,
+          "coreId": "equationcheck6a-6",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 7,
+          "coreId": "equationcheck6a-7",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 8,
+          "coreId": "equationcheck6a-8",
+          "subtype": 0,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 9,
+          "coreId": "equationcheck6a-9",
+          "subtype": 1,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 10,
+          "coreId": "equationcheck6a-10",
+          "subtype": 2,
+          "response": [
+            "decimal"
+          ]
+        },
+        {
+          "index": 11,
+          "coreId": "equationcheck6a-11",
+          "subtype": 3,
+          "response": [
+            "decimal"
+          ]
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "pct2": {
+      "unit": "6N4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "pct2-0",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "pct2-1",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "pct2-2",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 3,
+          "coreId": "pct2-3",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "pct2-5",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "pct2-6",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 7,
+          "coreId": "pct2-7",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "pct2-8",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "pct2-10",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 11,
+          "coreId": "pct2-11",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 12,
+          "coreId": "pct2-12",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 13,
+          "coreId": "pct2-13",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    "speed6a": {
+      "unit": "6M4",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "speed6a-0",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 1,
+          "coreId": "speed6a-1",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 2,
+          "coreId": "speed6a-2",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 3,
+          "coreId": "speed6a-3",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 4,
+          "coreId": "speed6a-4",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 5,
+          "coreId": "speed6a-5",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 6,
+          "coreId": "speed6a-6",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 7,
+          "coreId": "speed6a-7",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 8,
+          "coreId": "speed6a-8",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 9,
+          "coreId": "speed6a-9",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 10,
+          "coreId": "speed6a-10",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        },
+        {
+          "index": 11,
+          "coreId": "speed6a-11",
+          "subtype": "legacy",
+          "response": "legacy-strict-measure"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "mean1": {
+      "unit": "6D1",
+      "samples": [
+        {
+          "index": 0,
+          "coreId": "mean1-0",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 1,
+          "coreId": "mean1-1",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 2,
+          "coreId": "mean1-2",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 4,
+          "coreId": "mean1-4",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 5,
+          "coreId": "mean1-5",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 6,
+          "coreId": "mean1-6",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 8,
+          "coreId": "mean1-8",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 9,
+          "coreId": "mean1-9",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 10,
+          "coreId": "mean1-10",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 12,
+          "coreId": "mean1-12",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 13,
+          "coreId": "mean1-13",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        },
+        {
+          "index": 14,
+          "coreId": "mean1-14",
+          "subtype": "legacy",
+          "response": "legacy-numeric"
+        }
+      ],
+      "difficultExtraFields": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  }
+}
