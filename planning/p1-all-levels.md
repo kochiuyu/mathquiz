@@ -1,5 +1,7 @@
 # P1 question levels: all twelve units
 
+**Scope correction:** the user's requested rollout is now [each of the 38 selectable P1 skills](p1-skill-levels.md), with twelve questions at each of three levels per skill. The 432 tasks documented here remain supplementary unit collections; they are not the per-skill rollout.
+
 ## Decision and delivery
 
 **Easy / Normal / Difficult** describes the demand of a task, not a child's ability. Numeric variations do not create a progression by themselves. Existing core questions have not all been relabelled easy; adult fluency is not evidence of difficulty for a beginning learner.

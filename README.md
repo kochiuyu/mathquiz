@@ -360,3 +360,24 @@ The levels vary support, application and reasoning within the unit's scope. Task
 These are provisional teaching levels, pending pupil trials. English/Traditional Chinese, feedback/retry, retained answers on language changes and browser-print paper/key views are included. The levels page remains outside the mixed-quiz builder and does not change core family counts or curriculum-completion flags. Coin tokens test values rather than real-coin recognition; screen rulers are schematic. Manual classroom, translation, physical-print and screen-reader reviews remain deferred.
 
 **All-P1 release verified:** [release 7d4d03a](https://github.com/kochiuyu/mathquiz/commit/7d4d03a27a20708a94e513df49902b1f74d94212) deployed successfully (Pages run 44215202889). The exact published runtime passed **248/248 dedicated browser checks locally and publicly**, with zero failures. The independent static gate passed for 396 marked tasks and 36 investigations. Existing core static checks passed for 175 families / 2,661 variants, including frozen payload hashes; the UI static gate also passed. These are dedicated P1 and integration checks; the full legacy browser suite was not rerun, and the separate remaining-P4 verification workstream is unchanged.
+
+## Every P1 skill: Easy / Normal / Difficult · 18 November 2026
+
+**Corrected scope: all 38 selectable P1 skills, not twelve unit-level collections.** The [P1 skill-level page](https://kochiuyu.github.io/mathquiz/p1-skill-levels.html) provides twelve Easy, twelve Normal and twelve Difficult questions for each skill: **1,368 bilingual questions**. Every P1 resource card links to its exact skill. The earlier 432 unit-level tasks remain available separately, including teacher-observed inquiry.
+
+Easy offers cues or visible support; Normal asks for independent application; Difficult adds missing information, correction, checking or explanation within the same P1 skill limits. These are provisional teaching levels, pending pupil calibration. Existing questions have not all been relabelled Easy. [Read the detailed 38-skill progression, answer contracts, source limits and evaluation plan](planning/p1-skill-levels.md).
+
+The page includes four stable sets of three or all twelve questions, English/Traditional Chinese, partial credit, retry, answer retention across language changes, pupil papers and worked keys. Column answers stay in tens/ones cells, and valid alternative number bonds are accepted rather than requiring one fixed example. Browser Print / Save as PDF is available; the new bank remains separate from the mixed-quiz builder and direct PDF exporter. Core family totals and curriculum-completion flags are unchanged by this release.
+
+### Per-skill implementation and verification
+
+- [x] Audit and exactly match all 38 current P1 skill IDs, labels and units.
+- [x] Author 36 questions per skill with guided, independent and reasoning demands.
+- [x] Keep P1 number/concept limits and real-object assessment boundaries.
+- [x] Link every skill from the resource library and preserve original quiz routes.
+- [x] Implement bilingual marking, alternative answers, column forms, stable sets and paper/key parity.
+- [x] Pass independent answer/scope checks for all 1,368 questions and 2,904 alternative-pair trials; preserve original core payloads.
+- [ ] Complete final local and deployed browser verification and record the release below.
+- [ ] Deferred human review: pupil calibration, independent language review, physical printing and full screen-reader assessment.
+
+The static bank and interface are implemented. Publication and browser verification results will be recorded after completion; this is not yet a claim that the levels have been calibrated with pupils.

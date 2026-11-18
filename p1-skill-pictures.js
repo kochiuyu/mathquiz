@@ -1,0 +1,26 @@
+((root)=>{
+ const E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ root.P1SkillPicture=(v,lang)=>{
+  if(!v)return '';
+  const t=(a,b)=>lang==='zh'?b:a,txt=(x,y,s,size=15)=>`<text x="${x}" y="${y}" fill="#20392f" stroke="none" text-anchor="middle" font-size="${size}">${E(s)}</text>`,line=(x,y,X,Y,more='')=>`<line x1="${x}" y1="${y}" x2="${X}" y2="${Y}" ${more}/>`;
+  const svg=(body,label,w=360,h=160)=>`<svg class="level-diagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" role="img" aria-label="${E(label)}"><g fill="#edf2e7" stroke="#294f40" stroke-width="2" stroke-linejoin="round">${body}</g></svg>`;
+  const dots=(count,scattered=false,variant=0)=>{let body='';for(let j=0;j<count;j++){const x=15+(j%10)*21+(scattered?(j*7+variant*3)%9:0),y=15+Math.floor(j/10)*24+(scattered?(j*3+variant)%7:0);body+=`<circle cx="${x}" cy="${y}" r="6" fill="#294f40"/>`;}return svg(body,t('A collection of counters.','一組圓片。'),230,Math.ceil(count/10)*24+18);};
+  const schemaNote='<p class="note">'+t('Schematic scale: read the marks, not the physical size of the screen or paper.','刻度是示意圖，請讀刻度，不要量度螢幕或紙上圖的實際尺寸。')+'</p>';
+  switch(v.type){
+   case 'guidedsolids':{const names=[['Prism','角柱體'],['Cylinder','圓柱體'],['Pyramid','角錐體'],['Cone','圓錐體'],['Sphere','球體']];return '<b>'+t('Model to name','要命名的模型')+'</b>'+P1LevelPicture({...v,type:'solids'},lang)+'<details open><summary>'+t('Reference models','參考模型')+'</summary><div class="skill-groups">'+names.map((n,k)=>'<div><b>'+t(...n)+'</b>'+P1LevelPicture({type:'solids',items:[k]},lang)+'</div>').join('')+'</div></details>';}
+   case 'track':return '<div class="number-track">'+Array.from({length:v.end-v.start+1},(_,i)=>'<span>'+(v.start+i)+'</span>').join('')+'</div>';
+   case 'countdots':return dots(v.count,v.scattered,v.variant);
+   case 'groups':return '<div class="skill-groups">'+v.groups.map((n,i)=>'<div><b>'+t('Group '+String.fromCharCode(65+i),'第'+(i+1)+'組')+'</b>'+dots(n,false)+'</div>').join('')+'</div>';
+   case 'partmat':return '<div class="part-mat"><strong>'+t('Whole: ','整體：')+(v.a+v.b)+'</strong><div class="skill-groups"><div>'+t('Known part','已知部分')+dots(v.a)+'</div><div>'+t('Other part','另一部分')+(v.reveal?dots(v.b):'<div class="covered">?</div>')+'</div></div></div>';
+   case 'tenspairs':return '<div class="paired-diagrams">'+v.values.map(n=>'<div><b>'+n+'</b>'+P1LevelPicture({type:'tens',t:Math.floor(n/10),o:n%10},lang)+'</div>').join('')+'</div>';
+   case 'wordclue':return '<p class="word-clue">'+t(v.t+' tens and '+v.o+' ones',v.t+'個十和'+v.o+'個一')+'</p>';
+   case 'estimate':return '<div class="estimate-pictures"><div><b>'+t('Reference: 10','參考：10粒')+'</b>'+dots(10)+'</div><div><b>'+t('Estimate this collection','估計這一組')+'</b>'+dots(v.count,!v.grouped,v.variant)+'</div></div>';
+   case 'quantitygroups':return '<div class="quantity-cards">'+v.values.map((n,i)=>'<div><b>'+String.fromCharCode(65+i)+': '+n+'</b>'+P1LevelPicture({type:'tens',t:Math.floor(n/10),o:n%10},lang)+'</div>').join('')+'</div>';
+   case 'skillcoins':return '<div class="coin-tokens">'+v.coins.map((n,j)=>'<span class="coin-token" style="border-style:'+(v.variant%2?'double':'solid')+'">'+(n>=100?'$'+n/100:n+'¢')+'</span>').join('')+'</div><p class="note">'+t('Labelled tokens, not real coin photographs.','標示代幣，並非實物硬幣照片。')+'</p>';
+   case 'skillmeasure':{let body='';[v.a,v.b].forEach((n,i)=>{const start=45+(i===1?v.offset*23:0),y=35+i*70,width=n*25;body+=txt(15,y+15,'AB'[i]);if(v.distance){body+=line(start,y+15,start+width,y+15,'stroke-width="3"')+txt(start,y-2,'S')+txt(start+width,y-2,'AB'[i]);if(v.route&&i===1)body+=`<path d="M${start} ${y+15} Q${start+width/2} ${y-70} ${start+width} ${y+15}" fill="none" stroke-dasharray="5 4"/>`;}else body+=`<rect x="${start}" y="${y}" width="${width}" height="28"/>`;if(v.units)for(let k=1;k<n;k++)body+=line(start+k*25,y,start+k*25,y+28);});return svg(body,t('Two labelled spans. Compare whole lengths; each segment, when present, represents the same paperclip-length unit.','兩段已標示長度；有分段時，每段代表相同的回形針長度單位。'),410,175);}
+   case 'skillrulerpair':return '<div class="paired-diagrams">'+v.spans.map((p,i)=>'<div><b>'+String.fromCharCode(65+i)+'</b>'+P1LevelPicture({type:'ruler',start:p[0],end:p[1],distance:v.distance},lang)+'</div>').join('')+'</div>'+schemaNote;
+   case 'trianglechoices':return '<div class="shape-cards">'+v.kinds.map((kind,j)=>{const shape=kind==='triangle'?`<polygon points="${20+v.variant%4*3},110 ${60+v.variant%3*9},${18+Math.floor(v.variant/3)*5} 115,110"/>`:kind==='quadrilateral'?'<polygon points="25,105 40,25 108,35 115,110"/>':kind==='circle'?'<circle cx="70" cy="70" r="46"/>':kind==='open'?'<path d="M25 110L70 22L115 110L42 110" fill="none"/>':'<path d="M25 110L70 22Q85 75 115 110Z"/>';return '<div><b>'+String.fromCharCode(65+j)+'</b>'+svg(`<g transform="rotate(${v.rotation} 70 70) scale(.85) translate(12 12)">${shape}</g>`,t('Shape '+String.fromCharCode(65+j)+': inspect sides and closure.','圖'+String.fromCharCode(65+j)+'：檢查邊及是否封閉。'),140,140)+'</div>';}).join('')+'</div>';
+   default:{const s=P1LevelPicture(v,lang);if(s===null)throw Error('Unimplemented skill visual '+v.type);return s+(v.type==='ruler'?schemaNote:'');}
+  }
+ };
+})(typeof globalThis!=='undefined'?globalThis:this);
