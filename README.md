@@ -484,3 +484,25 @@ Every P1–P4 skill has a concise **Practise · Easy / Normal / Difficult** acti
 
 The first local run exposed coverage-route quiz enhancements and enlarged-text header overflow; both were corrected before final verification. Failed attempts and the exact public timeout rerun remain in [release evidence](planning/resource-browser-evidence.json). English desktop and Traditional Chinese mobile layouts were inspected. The full historical mathematics browser suite and deferred human reviews were not run.
 <!-- /resource-release-status -->
+
+## Smart practice: progress from Easy to Difficult · 18 November 2026
+
+[Smart practice](https://kochiuyu.github.io/mathquiz/?view=browse&mode=practice) replaces Quick practice on all **165 P1–P4 skill cards**. Fixed-level practice still lets pupils and teachers choose a particular level or print a set; Smart practice starts at Easy and guides progression automatically.
+
+Get **three consecutive questions completely correct on the first try, without Show method**, to move up. Mistakes or method help reset the streak and provide a worked explanation; the learner remains at the current level. After Difficult, the page celebrates reaching the session target. This is a provisional practice rule, not proof of lasting mastery.
+
+Questions are shuffled within each existing twelve-question level. A labelled review round starts if more practice is needed. Progress and draft answers survive reloads and language switches in the same browser session, with a 24-hour inactivity limit. P5/P6 retain their existing practice until their difficulty banks are developed.
+
+[Read the progression rules and implementation plan](planning/smart-practice.md) and [release evidence](planning/smart-practice-evidence.json).
+
+- [x] Separate fixed-level practice from guided Smart practice.
+- [x] Implement progression, worked support, completion and explicit restart.
+- [x] Preserve grade-specific marking, diagrams, bilingual answers and session progress.
+- [x] Integrate all P1–P4 library links and retain existing direct core practice URLs.
+- [x] Run local automated verification.
+- [ ] Verify the published Smart practice release.
+- [ ] Deferred human review: pupil calibration, translation, physical printing and full screen-reader assessment.
+
+<!-- smart-release-status -->
+Local Smart practice checks passed 65/65 and shared UI checks passed 193/193. Five static gates passed, including all 5,940 bank answers and the progression rules. Public verification is pending.
+<!-- /smart-release-status -->

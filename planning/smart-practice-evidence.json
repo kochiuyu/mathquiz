@@ -1,0 +1,84 @@
+{
+  "release": "Smart practice for all P1–P4 skills",
+  "date": "2026-11-18",
+  "base_commit": "abc6a9840caa464294a5848d673567f75c5ae689",
+  "runtime_commit": null,
+  "scope": {
+    "skills": 165,
+    "grade_counts": [
+      38,
+      41,
+      35,
+      51
+    ],
+    "bank_questions_unchanged": 5940
+  },
+  "local": {
+    "smart_full": {
+      "passed": 65,
+      "failed": 0
+    },
+    "shared_ui": {
+      "passed": 193,
+      "failed": 0
+    },
+    "library_full": {
+      "passed": 96,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Back/Forward and language preserve the whole search",
+          "error": "Navigation timeout"
+        }
+      ]
+    },
+    "library_exact_rerun": {
+      "passed": 1,
+      "failed": 0,
+      "filter": "Back/Forward and language preserve the whole search"
+    },
+    "distinct_cases_verified": 355
+  },
+  "development": [
+    "The initial 59-case Smart suite and 97-case resource suite passed. Six persistence/partial-answer/expiry cases and exact Smart-link assertions were added for final verification."
+  ],
+  "static_gates": [
+    "tests/static.cjs",
+    "tests/ui-static.cjs",
+    "tests/levels-ui-static.cjs",
+    "tests/resources-ui-static.cjs",
+    "tests/smart-static.cjs"
+  ],
+  "static_result": "all five passed",
+  "public": {
+    "status": "pending"
+  },
+  "limitations": [
+    "Three correct answers is a provisional session target, not a validated mastery assessment.",
+    "P5/P6 do not have difficulty banks and retain existing practice.",
+    "Pupil calibration, independent translation, physical print and full screen-reader review remain deferred.",
+    "The full historical mathematics browser suite was not rerun; core frozen hashes and unchanged bank files were checked."
+  ],
+  "preservation": {
+    "unchanged_predecessor_files": 331,
+    "changed_predecessor_files": [
+      "README.md",
+      "coverage.html",
+      "index.html",
+      "resource-browser.js",
+      "tests/resources-ui-regression.js",
+      "tests/resources-ui-static.cjs",
+      "tests/ui-regression.js"
+    ],
+    "method": "Git blob hashes against published base; CRLF-only local differences ignored. All banks, marking, diagrams and curriculum records unchanged."
+  },
+  "runtime_sha256": {
+    "index.html": "20350aebc6770dca233750a6f948b54326c98d37547a40aa1fbd1aec19f1b4ad",
+    "coverage.html": "0627ae6e19ab60f9d227c51fc85bc029d4196923e255c7615430fb4dc1b7d943",
+    "resource-browser.js": "98becaa20858b54474c6ef00b191a1aa266c79c3f359b0d3ddb7e795d2614f03",
+    "smart-practice.html": "faa527e673701093ddfcd1ff698ac0173d80afb9246c3098c522147e2c4ed0e3",
+    "smart-practice.js": "710290cf95a62f60f2cdc9013af24764d7ca58239a98b548b393c32590ac0a27",
+    "smart-practice.css": "6d55bbeb566dca1d6023ed71529c78757e99a48387348e6d14572fce2c847fdf",
+    "smart-engine.js": "04c36a93d5ad772ffd2c8364f1f83ee9d62ae2da1c2a5a883d1addee70dab892"
+  }
+}
