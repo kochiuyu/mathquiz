@@ -500,9 +500,11 @@ Questions are shuffled within each existing twelve-question level. A labelled re
 - [x] Preserve grade-specific marking, diagrams, bilingual answers and session progress.
 - [x] Integrate all P1–P4 library links and retain existing direct core practice URLs.
 - [x] Run local automated verification.
-- [ ] Verify the published Smart practice release.
+- [x] Verify the published Smart practice release.
 - [ ] Deferred human review: pupil calibration, translation, physical printing and full screen-reader assessment.
 
 <!-- smart-release-status -->
-Local Smart practice checks passed 65/65 and shared UI checks passed 193/193. Five static gates passed, including all 5,940 bank answers and the progression rules. Public verification is pending.
+**Published and verified:** [Smart practice release 3cdba67](https://github.com/kochiuyu/mathquiz/commit/3cdba679ab3b0d2d99a26d2ecfa757a6f2504dd3) deployed successfully. All **355 distinct public cases** are verified across the full runs and the exact timeout reruns recorded in the evidence. All seven deployed runtime assets match the local build.
+
+All **355 distinct local cases** are verified: Smart practice 65/65, shared UI 193/193, and library 96/97 plus the exact navigation-timeout rerun 1/1. The original timeout remains in [release evidence](planning/smart-practice-evidence.json). Five static gates passed, including progression invariants and all 5,940 canonical bank answers. The 331 unchanged predecessor files include every question bank, original marking function, diagram and curriculum record. Manual reviews and mastery calibration remain deferred.
 <!-- /smart-release-status -->

@@ -2,7 +2,7 @@
   "release": "Smart practice for all P1–P4 skills",
   "date": "2026-11-18",
   "base_commit": "abc6a9840caa464294a5848d673567f75c5ae689",
-  "runtime_commit": null,
+  "runtime_commit": "3cdba679ab3b0d2d99a26d2ecfa757a6f2504dd3",
   "scope": {
     "skills": 165,
     "grade_counts": [
@@ -51,7 +51,51 @@
   ],
   "static_result": "all five passed",
   "public": {
-    "status": "pending"
+    "deployment": {
+      "run_id": 44298088543,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "smart": {
+      "passed": 65,
+      "failed": 0,
+      "failures": []
+    },
+    "resources": {
+      "passed": 96,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Levelled card opens the chosen skill P3",
+          "error": "Navigation timeout"
+        }
+      ]
+    },
+    "shared_ui": {
+      "passed": 193,
+      "failed": 0
+    },
+    "distinct_cases_verified": 355,
+    "reruns": [
+      {
+        "suite": "resources",
+        "name": "Levelled card opens the chosen skill P3",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "runtime_sha256": {
+      "coverage.html": "0627ae6e19ab60f9d227c51fc85bc029d4196923e255c7615430fb4dc1b7d943",
+      "index.html": "20350aebc6770dca233750a6f948b54326c98d37547a40aa1fbd1aec19f1b4ad",
+      "resource-browser.js": "98becaa20858b54474c6ef00b191a1aa266c79c3f359b0d3ddb7e795d2614f03",
+      "smart-engine.js": "04c36a93d5ad772ffd2c8364f1f83ee9d62ae2da1c2a5a883d1addee70dab892",
+      "smart-practice.css": "6d55bbeb566dca1d6023ed71529c78757e99a48387348e6d14572fce2c847fdf",
+      "smart-practice.html": "faa527e673701093ddfcd1ff698ac0173d80afb9246c3098c522147e2c4ed0e3",
+      "smart-practice.js": "710290cf95a62f60f2cdc9013af24764d7ca58239a98b548b393c32590ac0a27"
+    },
+    "tool_diagnostics": [
+      "The tool opening the public resource runner reported a navigation timeout, although the runner continued. A later evaluate call also timed out. A semantic snapshot confirmed the live runner and its counts; it was not restarted. The final full-run result and its exact case rerun are recorded separately. Timeout cause was not established."
+    ]
   },
   "limitations": [
     "Three correct answers is a provisional session target, not a validated mastery assessment.",
@@ -80,5 +124,15 @@
     "smart-practice.js": "710290cf95a62f60f2cdc9013af24764d7ca58239a98b548b393c32590ac0a27",
     "smart-practice.css": "6d55bbeb566dca1d6023ed71529c78757e99a48387348e6d14572fce2c847fdf",
     "smart-engine.js": "04c36a93d5ad772ffd2c8364f1f83ee9d62ae2da1c2a5a883d1addee70dab892"
-  }
+  },
+  "deployment": {
+    "run_id": 44298088543,
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "visual_review": [
+    "Local English column-addition layout",
+    "Local Traditional Chinese mobile fraction layout",
+    "Published Smart practice page and progress controls"
+  ]
 }
