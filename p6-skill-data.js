@@ -131,5 +131,8 @@ for(const [skill,s]of Object.entries(source.skills))for(const level of Object.ke
 const norm=s=>String(s).normalize('NFKC').trim();
 const matches=(f,v)=>f.options?norm(v)===f.answer:f.algebra6Spec?graders.scoreAlgebra6(String(v),f.algebra6Spec):f.numberSpec?graders.scoreNumber6(String(v),f.numberSpec).correct:f.measureSpec?graders.measureAnswer(String(v),+f.answer):f.legacyNumericSpec?graders.numericAnswer(String(v),+f.answer,false):false;
 const assess=(q,v)=>q.fields.map((f,i)=>matches(f,v[i])),pick=(skill,level,set)=>questions.filter(q=>q.skill===skill&&q.level===level).filter((_,i)=>set==='all'||i%4===+set);
-root.P6Skills={version:1,skills:source.skills,units:source.units,levels,questions,pick,matches,assess};if(typeof module!=='undefined')module.exports=root.P6Skills;
+root.P6Skills={version:2,skills:{...source.skills},units:{...source.units},levels,questions,pick,matches,assess};
+(typeof module!=='undefined'?require('./p6-tsa.js'):root.MathQuizP6TSA).extend(root.P6Skills);
+if(typeof module!=='undefined')module.exports=root.P6Skills;
 })(typeof globalThis!=='undefined'?globalThis:this);
+

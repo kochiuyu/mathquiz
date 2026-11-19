@@ -8,7 +8,7 @@ for(const q of B.questions.filter(q=>q.meta?.tsa2026)){
  for(const l of ['en','zh']){const note=T.sourceNote(q,l);a(note.includes('HKEAA'));a(note.includes(B.skills[q.skill].reference.basicCompetencies[0]));a(note.includes(l==='en'?'MathQuiz':'MathQuiz'));if(extension)a(note.includes(l==='en'?'extension practice':'延伸練習'));}
 }
 const core=B.questions.find(q=>!q.meta?.tsa2026);a.equal(T.scope(core),null);a.equal(T.sourceNote(core,'en'),'');
-for(const p of ['p3-skill-levels.js','smart-practice.js']){a(read(p).includes('MathQuizP3TSA.sourceNote(q,lang)'));a(read(p).includes('data-source-scope'));new vm.Script(read(p));}
+for(const p of ['p3-skill-levels.js','smart-practice.js']){a(read(p).includes(p==='smart-practice.js'?"window['MathQuizP'+grade+'TSA'].sourceNote(q,lang)":'MathQuizP3TSA.sourceNote(q,lang)'));a(read(p).includes('data-source-scope'));new vm.Script(read(p));}
 const h=read('skill-levels-hub.js');a(h.includes('data-source-guide="p3"'));a(h.includes('HKEAA TSA reference'));a(!h.includes('Every level stays within the skill’s curriculum scope.'));new vm.Script(h);
 const c={window:{}};vm.runInNewContext(read('skill-directory.js'),c);a.equal(JSON.stringify(c.window.MathQuizSkillDirectory.find(g=>g.grade===3).skills),JSON.stringify(B.skills));a(read('skill-directory.js').length<50000);
 const md=read('README.md');a(md.includes('35 existing curriculum-linked types plus 15 TSA-informed types'));a(md.includes('on behalf of EDB'));a(md.includes('not an official EDB or HKEAA code'));a(md.includes('p3-source-classification.md'));

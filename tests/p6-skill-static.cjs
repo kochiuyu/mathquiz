@@ -1,4 +1,4 @@
-const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),a=require('node:assert/strict'),root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8'),B=require('../p6-skill-data.js'),S=require('../p6-skill-seeds.js');
+const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),a=require('node:assert/strict'),root=path.resolve(__dirname,'..'),read=f=>fs.readFileSync(path.join(root,f),'utf8'),Full=require('../p6-skill-data.js'),B={...Full,skills:Object.fromEntries(Object.entries(Full.skills).filter(([id])=>!id.startsWith('tsa'))),questions:Full.questions.filter(q=>q.meta?.tsaGrade!==6)},S=require('../p6-skill-seeds.js');
 const c={URLSearchParams,location:{search:''}};vm.createContext(c);vm.runInContext(read('builder.js')+';this.bank=families;',c);const core=c.bank.filter(f=>f.grade===6&&!f.retired);a.equal(core.length,52);a.deepEqual(Object.keys(B.skills).sort(),Array.from(core,x=>x.id).sort());a(!B.skills.pct1);a.equal(B.questions.length,1872);a.equal(S.seeds.length,624);a.equal(new Set(B.questions.map(q=>q.id)).size,1872);
 let parts=0,extras=0,invalid=0;
 for(const s of S.seeds){a.equal(s.adaptation,null);a.deepEqual(s.q,JSON.parse(JSON.stringify(core.find(f=>f.id===s.skill).make(s.index))),s.skill+' source fidelity');a.equal(s.pictures.length,2);a(s.pictures.every(x=>!x.includes('NaN')&&!x.includes('undefined')));if(s.q.figure)a(s.pictures.every(x=>x.includes('<svg')&&x.includes('role="img"')));}
@@ -19,3 +19,5 @@ for(const f of ['p6-skill-data.js','p6-skill-levels.js','p6-skill-pictures.js','
 a(read('smart-practice.js').includes("grade===6?['number6.js','algebra6.js']"));a(read('skill-session-ui.js').includes('p([1-6])'));
 for(const f of ['p6-skill-levels.html','tests/p6-skill-levels.html'])for(const asset of ['number6.js','algebra6.js','p6-skill-seeds.js','p6-skill-data.js'])a(read(f).includes(asset+'?'));
 console.log(`PASS P6 levels:52 skills,624 exact contexts,1872 bilingual tasks,${parts} fields,718 contextual extras,${invalid} malformed probes; representations/subtypes/routes.`);
+
+
