@@ -6,9 +6,9 @@
  const error=message=>{app.innerHTML='<h1>'+t('Smart practice','智能練習')+'</h1><p class="page-error">'+E(message)+'</p><a href="./?view=browse&mode=practice&lang='+lang+'">'+t('Choose a skill','選擇技能')+'</a>';app.dataset.ready='error';};
  if(![1,2,3,4,5,6].includes(grade)||!skill){error(t('Choose a P1–P6 skill to start at Easy.','請選擇小一至小六技能，由容易開始。'));return;}
  try{
-  const css=document.createElement('link');css.rel='stylesheet';css.href='p'+grade+'-skill-levels.css?v='+(grade===3?'tsa2026-r1':'1');document.head.insertBefore(css,document.querySelector('link[href^="smart-practice"]'));
+  const css=document.createElement('link');css.rel='stylesheet';css.href='p'+grade+'-skill-levels.css?v='+(grade===3?'tsa2026-r2':'1');document.head.insertBefore(css,document.querySelector('link[href^="smart-practice"]'));
   const assets=grade===1?['p1-skill-data.js','p1-skill-number.js','p1-skill-operations.js','p1-skill-measures.js','p1-skill-shapes.js','p1-level-pictures.js','p1-skill-pictures.js']:['p'+grade+'-skill-seeds.js',...(grade>=4?['marking.js']:[]),...(grade===5?['algebra5.js']:grade===6?['number6.js','algebra6.js']:[]),...(grade===3?['p3-tsa.js']:[]),'p'+grade+'-skill-data.js','p'+grade+'-skill-pictures.js'];
-  for(const file of assets)await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=file+'?smart='+(grade===3?'tsa2026-r1':grade===6?'p6-levels-r1':grade===5?'p5-final-r3':'1');s.onload=resolve;s.onerror=()=>reject(Error('asset'));document.head.append(s);});
+  for(const file of assets)await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=file+'?smart='+(grade===3?'tsa2026-r2':grade===6?'p6-levels-r1':grade===5?'p5-final-r3':'1');s.onload=resolve;s.onerror=()=>reject(Error('asset'));document.head.append(s);});
  }catch{error(t('The practice files could not load. Reload this page to try again.','未能載入練習檔案，請重新載入此頁再試。'));return;}
  const bank=window['P'+grade+'Skills'],picture=window['P'+grade+'SkillPicture'],engine=MathQuizSmart,paper=false,view='quiz';
  if(!bank.skills[skill]){error(t('This skill is unavailable. No other skill has been substituted.','找不到此技能，系統沒有用其他技能代替。'));return;}
