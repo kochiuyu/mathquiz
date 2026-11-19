@@ -11,7 +11,24 @@
  const svg=(body,w,h,title)=>`<svg class="figure tsa-figure" viewBox="0 0 ${w} ${h}" role="img" aria-label="${E(title)}" xmlns="http://www.w3.org/2000/svg"><title>${E(title)}</title><g fill="none" stroke-linecap="round" stroke-linejoin="round">${body}</g></svg>`;
  const table=(headers,rows,caption)=>`<div class="tsa-table-wrap"><table class="tsa-table"><caption>${E(caption)}</caption><thead><tr>${headers.map(h=>`<th scope="col">${E(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>'<tr>'+r.map(v=>`<td>${E(v)}</td>`).join('')+'</tr>').join('')}</tbody></table></div>`;
  const skills={},builders={};
- function define(id,unit,label,guide,make){skills[id]={unit,label:pair('TSA · '+label[0],'TSA · '+label[1])};builders[id]={guide,make};}
+ const referenceRows={
+  tsawords3a:[['KS1-N1-1'],['3ME2 Q2','3ME3 Q1']],
+  tsabetween3a:[['KS1-N1-1'],['3ME1 Q2','3ME4 Q2']],
+  tsaequivalent3a:[['KS1-N3-1'],['3ME1 Q13'],'Symbolic equivalence and multiplying numerator/denominator extend the diagram-based TSA focus.','符號等值判斷及分子分母同乘的要求，延伸了TSA以圖像辨認等值分數的重點。'],
+  tsamoney3a:[['KS1-M1-2','KS1-M1-3','KS1-N2-4'],['3ME1 Q16','3ME3 Q10','3ME4 Q17']],
+  tsacalendar3a:[['KS1-M3-1'],['3ME2 Q24','3ME3 Q18','3ME4 Q18']],
+  tsabalance3a:[['KS1-M4-1','KS1-M4-2'],['3ME1 Q20','3ME4 Q21']],
+  tsadial3a:[['KS1-M4-3'],['3ME1 Q22','3ME2 Q19','3ME3 Q22']],
+  tsapour3a:[['KS1-M5-2','KS1-M5-3'],['3ME2 Q21','3ME3 Q24'],'Chained fill relationships and conversion to mL combine demands beyond the cited single-competency task.','連續注滿關係及換算毫升結合多項要求，超出所引單一基本能力題的形式。'],
+  tsaroute3a:[['KS1-M2-4'],['3ME4 Q20']],
+  tsamap3a:[['KS1-S5-2'],['3ME1 Q31','3ME3 Q31']],
+  tsaangles3a:[['KS1-S4-2','KS1-S4-1'],['3ME2 Q26','3ME3 Q30','3ME4 Q30']],
+  tsalines3a:[['KS1-S3-1'],['3ME1 Q29','3ME2 Q29','3ME4 Q29']],
+  tsasort3a:[['KS1-S3-1'],['3ME3 Q29','3ME4 Q28']],
+  tsasolids3a:[['KS1-S1-1'],['3ME1 Q26','3ME2 Q25','3ME4 Q25']],
+  tsachart3a:[['KS1-D1-2','KS1-D2-2'],['3ME1 Q33','3ME3 Q33'],'Includes MathQuiz extensions: pictograms with 2 or 3 per symbol, and bar charts with 3 per interval. TSA KS1 specifies pictograms 1:1 and bar charts 1:1, 1:2 or 1:5.','含MathQuiz延伸：每圖代表2或3個單位的象形圖，以及每格代表3個單位的棒形圖。TSA第一學習階段指定象形圖一對一，棒形圖一對一、一對二或一對五。']
+ };
+ function define(id,unit,label,guide,make){const [bc,items,en,zh]=referenceRows[id];skills[id]={unit,label:pair('TSA-informed · '+label[0],'TSA參考 · '+label[1]),reference:{authority:'HKEAA',year:2026,basicCompetencies:bc,items,scope:en?'includes-extension':'informed-adaptation',extension:en?pair(en,zh):null}};builders[id]={guide,make};}
  const englishSmall=['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen'],tens=['','','twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety'];
  function enWords(n){if(n<20)return englishSmall[n];if(n<100)return tens[Math.floor(n/10)]+(n%10?'-'+englishSmall[n%10]:'');if(n<1000)return englishSmall[Math.floor(n/100)]+' hundred'+(n%100?' and '+enWords(n%100):'');return enWords(Math.floor(n/1000))+' thousand'+(n%1000?(n%1000<100?' and ':' ')+enWords(n%1000):'');}
  function zhWords(n){let out='',zero=false;const ds=String(n),units=['','十','百','千','萬'];for(let j=0;j<ds.length;j++){const d=+ds[j],pos=ds.length-j-1;if(d===0){if(out)zero=true;continue;}if(zero){out+='零';zero=false;}out+=('零一二三四五六七八九'[d])+units[pos];}return out.replace(/^一十/,'十');}
@@ -95,6 +112,19 @@
   const titles=[pair('Number of balloons by colour','各種顏色氣球的數量'),pair('Favourite sports','最喜愛的運動'),pair('Number of books by class','各班圖書數量')];
   return {prompt:pair(`Complete the missing ${names[missing][0]} category using the table. Then choose a suitable title.`,`依統計表補全${names[missing][1]}的一項，再選出合適標題。`),fields:[N(picto?'Missing circles to draw':'Missing bar height (balloons)',picto?'應畫圓圈數':'缺少棒的高度（氣球個數）',picto?values[missing]/scale:values[missing]),C('Chart title','統計圖標題',titles,0,i)],extra:[N('Total number of balloons','氣球總數',values.reduce((a,b)=>a+b,0))],pictures:[pic(0),pic(1)],why:pair(`The ${names[missing][0]} count is ${values[missing]}. ${picto?`At ${scale} per circle, draw ${values[missing]/scale} circles.`:'Use the count for the bar height.'} The title must describe balloons and colours.`,`${names[missing][1]}有${values[missing]}個氣球。${picto?`每圈代表${scale}個，須畫${values[missing]/scale}圈。`:'棒高須對應這個數量。'}標題須描述氣球及顏色。`),model:{kind:'chart',scale,values,missing,picto}};
  });
+ function scope(q){if(!q.meta?.tsa2026)return null;const m=q.meta.model,level=q.level;
+  const extended=level==='difficult'||m.kind==='equivalent'||m.kind==='pour'||(m.kind==='chart'&&(m.picto?m.scale!==1:![1,2,5].includes(m.scale)));
+  return extended?'mathquiz-extension':'tsa-informed-adaptation';
+ }
+ function sourceNote(q,lang){if(!q.meta?.tsa2026)return '';const l=lang==='zh'?1:0,r=skills[q.skill].reference,extension=scope(q)==='mathquiz-extension';
+  let s=l?'參考：香港考試及評核局（HKEAA）2026小三TSA評估設計。':'Reference: HKEAA 2026 P3 TSA Assessment Design. ';
+  s+=(l?'相關基本能力：':'Related BCs: ')+r.basicCompetencies.join(', ')+'. ';
+  s+=extension?(l?'MathQuiz延伸練習，並非官方TSA題目或新增教育局課程要求。':'MathQuiz extension practice; not an official TSA item or an additional EDB curriculum requirement.'):(l?'MathQuiz原創改編練習，並非官方TSA題目。':'Original MathQuiz adaptation; not an official TSA item.');
+  const m=q.meta.model;if(r.extension&&m.kind!=='chart')s+=' '+r.extension[l];
+  if(m.kind==='chart'&&(m.picto?m.scale!==1:![1,2,5].includes(m.scale)))s+=l?'此題的統計圖比例超出所引第一學習階段TSA指定比例。':' This chart scale extends the cited KS1 TSA representation limits.';
+  if(q.level==='difficult')s+=l?'較難級的額外核對由MathQuiz設計，可能結合評估重點。':' The extra Difficult check is designed by MathQuiz and may combine assessment focuses.';
+  return s;
+ }
  function extend(bank){if(bank.questions.some(q=>q.meta?.tsa2026))return bank;
   Object.assign(bank.skills,skills);bank.units['3R1']=pair('P3 assessment review: earlier learning','小三評估溫習：已有知識');
   for(const [id,b]of Object.entries(builders))for(const level of Object.keys(bank.levels))for(let i=0;i<12;i++){
@@ -106,5 +136,5 @@
    bank.guides[id]=b.guide;bank.progressions[id]=q.extra.map(f=>f.label);
   }return bank;
  }
- root.MathQuizP3TSA={skills,extend};if(typeof module!=='undefined')module.exports=root.MathQuizP3TSA;
+ root.MathQuizP3TSA={skills,extend,scope,sourceNote};if(typeof module!=='undefined')module.exports=root.MathQuizP3TSA;
 })(typeof globalThis!=='undefined'?globalThis:this);

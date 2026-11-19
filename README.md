@@ -1,6 +1,24 @@
 # MathQuiz · Hong Kong primary mathematics
 
-**P6 resources verified:** All 16 P6 units are resource complete following live verification of `11eb4a1d7fd6652a55acddc4c3cdb6992c225013`. All 85 units are resource complete: 297 numbered objectives plus 6 inquiry statements. Inventory: 271 permanent families / 4,035 variants; 270 selectable / 4,020; 77 selectable units, 85 resource-bearing units, 85 activities and zero open units. P1–P6 has 9,720 level tasks. Resource completeness is not pupil mastery or observed classroom performance. Physical printing, classroom trials, independent translation and screen-reader validation remain unverified. [Live evidence](planning/p6-live-closure-evidence.json).
+## Curriculum, assessment references and extensions
+
+**EDB curriculum objectives remain the curriculum framework. HKEAA TSA materials are assessment references. MathQuiz writes the practice tasks and optional extensions.**
+
+| Source | What it establishes | MathQuiz label |
+| --- | --- | --- |
+| [Education Bureau curriculum documents](https://www.edb.gov.hk/en/curriculum-development/kla/ma/curr/index2.html) | Teaching units and learning objectives, with curriculum codes such as 3N1 | Curriculum-linked practice |
+| Hong Kong Examinations and Assessment Authority (HKEAA): supplied `2026_3ME_final.pdf` / `2026_3MC_final.pdf` assessment designs, [official TSA papers](https://bca.hkeaa.edu.hk/web/TSA/en/2026priPaper/P3Index.html) and [basic competency descriptors](https://www.bca.hkeaa.edu.hk/web/TSA/en/BC/P_BC_M.pdf) | P1–P3 assessment focuses at the end of Key Stage 1; BC codes such as KS1-N1-1 | HKEAA TSA-informed, original MathQuiz adaptations |
+| MathQuiz | Original question formats, Easy/Normal/Difficult teaching levels and extra reasoning checks | Clearly labelled MathQuiz adaptations or extensions |
+
+HKEAA develops and administers TSA **on behalf of EDB**; it does not replace the EDB curriculum. Its P3 assessment covers learning from **P1–P3**. MathQuiz questions are not official HKEAA items or additional EDB requirements.
+
+**The P3 catalogue's 50 “skills” are 50 MathQuiz practice types: 35 existing curriculum-linked types plus 15 TSA-informed types.** This does not mean 50 official curriculum objectives or basic competencies. The official curriculum inventory is unchanged, and `3R1` is a local cumulative-review group, not an official EDB or HKEAA code.
+
+The assessment designs specify one BC per official item and minimise linked problems. Our combined tasks and added Difficult checks are labelled teaching extensions. Symbolic equivalence extends the cited diagram-based focus; chained capacity calculations combine demands; pictogram keys of 2 or 3 and bar-chart intervals of 3 extend the cited KS1 representation limits. These remain available as optional MathQuiz practice. An assessment-design extension is not automatically outside the EDB curriculum: that requires a separate objective-level check.
+
+[BC mapping and exact boundaries](planning/p3-source-classification.md).
+
+**P6 resources verified:** All 16 P6 units are resource complete following live verification of `11eb4a1d7fd6652a55acddc4c3cdb6992c225013`. All 85 units are resource complete: 297 numbered objectives plus 6 inquiry statements. Inventory: 271 permanent families / 4,035 variants; 270 selectable / 4,020; 77 selectable units, 85 resource-bearing units, 85 activities and zero open units. The curriculum-linked banks retain 9,720 levelled tasks; the separate HKEAA TSA-informed addition contributes 540 MathQuiz tasks (10,260 overall). Resource completeness is not pupil mastery or observed classroom performance. Physical printing, classroom trials, independent translation and screen-reader validation remain unverified. [Live evidence](planning/p6-live-closure-evidence.json).
 
 **P5 resources verified:** All 13 P5 units are resource complete following live verification of code release `504a2ea0a383b34fc5fe76f037860bb4a88bea23`. Total 69/85 units, 254 numbered objectives plus 5 inquiry statements. P5 includes 53 selectable skills, 759 core variants, 1,908 level tasks and 13 bilingual practical resources. Whole-site inventory remains 222 permanent families / 3,351 variants; 221 selectable / 3,336; 65 selectable units; 72 resource-bearing units; 69 activities; 3 open resource-bearing units and 13 planned units. All P6 completion flags remain false. The unchanged computational runtime retains the local full 818-check proof; fresh live P5 core verification covers 193 checks with 625 other-grade checks explicitly outside that fresh scope, alongside the live level, Smart, shared, UI and resource checks. Resource completeness is not pupil mastery or observed classroom performance. [Live verification](planning/p5-live-closure-evidence.json).
 
@@ -54,7 +72,7 @@ Teachers can build a quiz in English or Traditional Chinese, share it with pupil
 
 ## TSA 2026 review and lower-primary improvement priorities
 
-**Reviewed 19 November 2026.** The official [P3 question-paper index](https://bca.hkeaa.edu.hk/web/TSA/en/2026priPaper/P3Index.html) and [marking schemes](https://bca.hkeaa.edu.hk/web/TSA/en/2026priMarking/P3Index.html) provide a useful assessment reference for the completed P1–P3 resources. Review scope includes the text of all four English mathematics sub-papers and their schemes, plus the Chinese first paper. Diagram rendering and the other three Chinese papers still need a visual/bilingual review. These priorities extend the current resource-complete baseline. Each proposed task below requires an audit against existing families and activities before implementation.
+**Reviewed 19 November 2026.** The official [P3 question-paper index](https://bca.hkeaa.edu.hk/web/TSA/en/2026priPaper/P3Index.html) and [marking schemes](https://bca.hkeaa.edu.hk/web/TSA/en/2026priMarking/P3Index.html) provide a useful assessment reference for the completed P1–P3 resources. The later question-variety release reviewed all eight English/Chinese papers in text. The source-classification review also read both supplied HKEAA 2026 P3 Mathematics Assessment Design documents. Full independent translation and visual validation of every source diagram are not claimed. These priorities extend the current resource-complete baseline. Each proposed task below requires an audit against existing families and activities before implementation.
 
 ### Ordered improvements
 
@@ -593,10 +611,12 @@ These fixed selections sample topics; they do not claim whole-unit assessment or
 
 ## P3 TSA question variety — 19 November 2026
 
-The eight supplied English/Chinese TSA 2026 P3 papers informed **15 new skill types**: number names, combined order/parity, all-equivalent fractions, money/change, calendars, balances, dial scales, capacity relationships, route distances, directions, angle ordering, parallel/perpendicular lines, boundary classification, solid classification and chart completion values/titles.
+The eight supplied English/Chinese TSA 2026 P3 papers informed **15 new MathQuiz practice types informed by HKEAA TSA**: number names, combined order/parity, all-equivalent fractions, money/change, calendars, balances, dial scales, capacity relationships, route distances, directions, angle ordering, parallel/perpendicular lines, boundary classification, solid classification and chart completion values/titles.
 
-P3 now has **50 skills / 1,800 levelled tasks**. The addition contains 180 contexts presented at three levels (**540 tasks**), with bilingual prompts, diagrams, worked keys, printable pupil papers and Smart practice. All 1,260 existing P3 tasks retain their payloads and IDs. Earlier-grade topics assessed at P3 sit in an explicit cumulative-review group; the separate mixed-quiz builder keeps its existing question families.
+P3 now has **50 MathQuiz practice types / 1,800 levelled tasks**: 35 existing curriculum-linked types plus 15 HKEAA TSA-informed additions. The addition contains 180 contexts presented at three levels (**540 tasks**), with bilingual prompts, diagrams, worked keys, printable pupil papers and Smart practice. All 1,260 existing P3 tasks retain their payloads and IDs. Earlier-grade topics assessed at P3 sit in an explicit cumulative-review group; the separate mixed-quiz builder keeps its existing question families.
 
 [Open the new TSA skills](https://kochiuyu.github.io/mathquiz/skill-levels.html?p=3&q=TSA) · [Source mapping, implementation and limits](planning/p3-tsa-2026.md) · [Focused browser checks](tests/p3-skill-levels.html?scope=tsa).
 
 **Published and verified:** [initial release 44bc11b5](https://github.com/kochiuyu/mathquiz/commit/44bc11b55b301a794b89915ee995f8be94c7b006), followed by [the short-set refinement f8d28c9a](https://github.com/kochiuyu/mathquiz/commit/f8d28c9a07447134b8c31e7010d1e8cb2186d337). **All 133 distinct live browser cases are verified:** the initial full run passed 133/133, and all 36 cases affected by the refinement passed again. New and original P3 static checks pass; shared Smart checks cover all 285 skills / 10,260 canonical answers. [Release evidence and limits](planning/p3-tsa-evidence.json).
+
+
