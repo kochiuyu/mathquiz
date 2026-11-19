@@ -1,0 +1,116 @@
+{
+  "date": "2026-11-19",
+  "timezone": "Asia/Hong_Kong",
+  "runtimeCommit": "a2c072505a30347a3e785bdf313adee5a9f02d5b",
+  "predecessor": "f6ce198d3251cee8d54ce13d57321fe3e3600804",
+  "sourceReview": {
+    "papers": [
+      "TSA2026_6ME1.pdf",
+      "TSA2026_6ME2.pdf",
+      "TSA2026_6ME3.pdf",
+      "TSA2026_6ME4.pdf",
+      "TSA2026_6MC1.pdf",
+      "TSA2026_6MC2.pdf",
+      "TSA2026_6MC3.pdf",
+      "TSA2026_6MC4.pdf"
+    ],
+    "read": "all eight extracted texts in full",
+    "assessmentDesign": "No P6 design supplied; no unverified BC codes assigned",
+    "officialMarkingReference": "https://www.bca.hkeaa.edu.hk/web/Common/res/2026priMarking/P6/TSA2026_6ME1_MS.pdf",
+    "context": "2026 P6 TSA suspended; voluntary-participation materials according to paper covers",
+    "roles": "EDB curriculum; HKEAA assessment references; original MathQuiz adaptations and optional Difficult extensions"
+  },
+  "inventory": {
+    "p6OriginalTypes": 52,
+    "p6OriginalTasks": 1872,
+    "p6AddedTypes": 15,
+    "p6AddedContexts": 180,
+    "p6AddedLevelledTasks": 540,
+    "p6TotalTypes": 67,
+    "p6TotalTasks": 2412,
+    "allGradeTypes": 300,
+    "allGradeTasks": 10800,
+    "officialCurriculumUnits": 85,
+    "officialInventoryChanged": false
+  },
+  "preservation": {
+    "originalP6QuestionPayloads": 1872,
+    "SHA256": "5732517961cc8eb1abe92a151fca219f4f4079183ea974d90f780783c3e7cac3",
+    "result": "exact match",
+    "originalP3Tasks": 1260,
+    "resultP3": "exact match; 1800 total P3 stable IDs"
+  },
+  "staticChecks": [
+    {
+      "script": "tests/p6-tsa-static.cjs",
+      "result": "PASS",
+      "scope": "540 additions; independent arithmetic/geometry oracles; 45 bilingual twelve-context levels; strict marking; 1872 original payloads preserved"
+    },
+    {
+      "script": "tests/p6-skill-static.cjs",
+      "result": "PASS",
+      "scope": "52 core types; 624 contexts; 1872 tasks; 2698 fields; 718 extras; 24282 malformed responses"
+    },
+    {
+      "script": "tests/p3-tsa-static.cjs",
+      "result": "PASS",
+      "scope": "540 P3 additions, 1800 stable IDs, 1260 original payloads preserved"
+    },
+    {
+      "script": "tests/p3-source-classification.cjs",
+      "result": "PASS",
+      "scope": "P3 source mappings, bilingual scope labels, catalogue and authority boundaries"
+    },
+    {
+      "script": "tests/smart-static.cjs",
+      "result": "PASS",
+      "scope": "300 practice types / 10800 canonical answers; progression, lock, help, exhaustion and syntax"
+    },
+    {
+      "script": "tests/levels-ui-static.cjs",
+      "result": "PASS",
+      "scope": "exact six-grade navigation metadata, HTML integration/assets, print and reduced-motion rules"
+    }
+  ],
+  "liveBrowser": {
+    "harness": "https://kochiuyu.github.io/mathquiz/tests/p6-skill-levels.html?scope=tsa",
+    "initialRuntimeCommit": "28de071da8e1a895df44dd331c4262be8fede115",
+    "initial": {
+      "passed": 155,
+      "failed": 1
+    },
+    "initialFailure": "English grid caption clipped in smallest SVG viewBox",
+    "remedy": "Shortened caption to '1 cm square grid'; capped TSA figure screen height at 340px and print height at 75mm",
+    "rerunQuery": "scope=tsa&only=320px,tsagrid6a,Smart%20P6",
+    "targetedRerun": {
+      "runtimeCommit": "a2c072505a30347a3e785bdf313adee5a9f02d5b",
+      "passed": 66,
+      "failed": 0,
+      "scope": "all 30 Smart P6 family/language sessions, all 30 narrow field/SVG family/language cases and all six grid level/language quiz-paper-key cases"
+    },
+    "effectiveCoverage": {
+      "distinctCases": 156,
+      "passed": 156,
+      "unresolvedFailures": 0,
+      "carriedPassingCases": 90,
+      "rerunCases": 66,
+      "note": "156 distinct checks reconciled across initial run and targeted rerun; not a claim that all 156 were rerun on the final commit"
+    },
+    "manualObservations": [
+      "English and Traditional Chinese P6 catalogue contain all 15 additions and clear EDB/HKEAA/MathQuiz boundaries",
+      "Homepage resource browser links to both P3 and P6 additions",
+      "Chinese cube questions render compact diagrams at 340px screen height",
+      "Final browser harness loaded p6-tsa.js?v=p6-tsa-r3"
+    ]
+  },
+  "limits": [
+    "Physical printing and classroom trials were not performed",
+    "No claim of official TSA marking equivalence, HKEAA difficulty classifications or pupil mastery",
+    "Online chart and equation tasks adapt drawing/working demands to structured response fields; paper working is for teacher review"
+  ],
+  "deployment": {
+    "id": 44557085158,
+    "status": "completed",
+    "conclusion": "success"
+  }
+}
