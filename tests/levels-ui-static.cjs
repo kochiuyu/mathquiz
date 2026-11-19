@@ -19,6 +19,6 @@ assert(read('tests/levels-ui-regression.js').includes("d.querySelectorAll('.skil
 const p6SkillCount=Object.keys(directory.find(g=>g.grade===6).skills).length;
 assert.equal(p6SkillCount,67);
 const p6CoreSkillCount=Object.values(directory.find(g=>g.grade===6).skills).filter(s=>!s.reference).length;assert.equal(p6CoreSkillCount,52);
-assert(read('tests/levels-ui-regression.js').includes("d.querySelectorAll('.skill-level-link').length==="+p6CoreSkillCount+"&&d.querySelector('.levels-entry')"),'browser P6 grade-change count matches generated directory');
+assert(read('tests/levels-ui-regression.js').includes("d.querySelectorAll('.skill-level-link').length==="+p6SkillCount+"&&d.querySelector('.levels-entry')"),'browser P6 grade-change count matches generated directory');
 
 

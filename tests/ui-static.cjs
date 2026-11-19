@@ -20,7 +20,7 @@ assert(read('tests/ui-regression.js').includes('paths.length==='+activities.leng
 
 assert(fs.readFileSync(path.join(root,"tests/regression.js"),"utf8").includes("doc.querySelectorAll('.badge.complete').length===85"),"main regression completion count matches85 closure");
 
-const rebaseReg=read("tests/regression.js");assert(rebaseReg.includes('links.length===families.filter(f=>!f.retired).length && new Set(links.map(a=>a.href)).size===families.filter(f=>!f.retired).length'),"rebased exact187 practice links");assert(rebaseReg.includes('doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===families.filter(f=>!f.retired).length'),"rebased exact85/187 coverage");
+const rebaseReg=read('tests/regression.js');assert(rebaseReg.includes("doc.querySelectorAll(\"[data-unit]:not([data-review-group])\").length===85 && doc.querySelectorAll('[data-family]:not([data-source=\"hkeaa-tsa\"])').length===families.filter(f=>!f.retired).length"),"exact85 curriculum units and frozen core families alongside separate TSA additions");
 
 // Closure metadata is tied to the completed deployed-candidate runs, not a target.
 const closureProof=JSON.parse(read('planning/remaining-p4-live-evidence.json'));
@@ -46,14 +46,14 @@ assert.equal(frozenRows.length,271);assert.equal(frozenRows.reduce((n,f)=>n+f[2]
 assert(rebaseReg.includes('expectedFamilies.reduce((n,f)=>n+f[2],0)===4035'),'exact frozen fixture total');
 
 // Audit the actual UI browser runner, including catalogue and reset paths.
-const uiRunner=read('tests/ui-regression.js');assert.equal((uiRunner.match(/querySelectorAll\('\[data-family\]'\).length===270/g)||[]).length,2);
+const uiRunner=read('tests/ui-regression.js');assert.equal((uiRunner.match(/querySelectorAll\('\[data-family\]'\).length===300/g)||[]).length,2);
 assert(uiRunner.includes("practiceCatalogue.length')===270"));assert(uiRunner.includes(".size===85,'85 activities'"));
 assert(uiRunner.includes("querySelectorAll('.badge.complete').length===85"));
 assert(!uiRunner.includes('===174'),'no stale UI family count');
 
 for(const file of ['index.html','coverage.html','tests/regression.html'])assert(read(file).includes('builder.js?v=p6-core-r1'),'current reviewed builder cache');
-assert(read('tests/regression.html').includes('regression.js?v=p6-closure85-r2'));
-assert(read('tests/ui-regression.html').includes('ui-regression.js?v=p6-closure85-r2'));
+assert(read('tests/regression.html').includes('regression.js?v=ui-refresh-r1'));
+assert(read('tests/ui-regression.html').includes('ui-regression.js?v=ui-refresh-r1'));
 
 // Current all85 closure must validate each individual unit, not just total badges.
 const completionRunner=read("tests/regression.js");
@@ -61,3 +61,5 @@ assert(completionRunner.includes("complete=Number(unit.dataset.unit[0])>=1&&Numb
 assert(!completionRunner.includes("complete=Number(unit.dataset.unit[0])<=5"),"reject stale P1–P5 completion boundary");
 assert(completionRunner.includes("badge.classList.contains('complete')===complete"),"retain per-unit badge flag equality");
 for(const unit of units)assert(Number(unit.code[0])>=1&&Number(unit.code[0])<=6&&unit.complete,"each of85 units has verified completion");
+
+assert(rebaseReg.includes('links.length===families.filter(f=>!f.retired).length && new Set(links.map(a=>a.href)).size===families.filter(f=>!f.retired).length'),'retain exact core practice-route and uniqueness assertion');

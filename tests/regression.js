@@ -3024,11 +3024,11 @@
       assert([...home.contentDocument.querySelectorAll("a")].some(a=>a.href.includes("coverage.html?lang=en")),"coverage link missing from home");
       const page=await shapeFrame("coverage.html?lang=en&coverageCheck="+Date.now());frames.push(page);
       const doc=page.contentDocument;
-      assert(doc.querySelectorAll("[data-unit]").length===85 && doc.querySelectorAll("[data-family]").length===families.filter(f=>!f.retired).length,"grade coverage counts wrong");
+      assert(doc.querySelectorAll("[data-unit]:not([data-review-group])").length===85 && doc.querySelectorAll('[data-family]:not([data-source="hkeaa-tsa"])').length===families.filter(f=>!f.retired).length,"grade coverage counts wrong");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-i.html?lang=en"]'),"P1 practical activity link missing");
       assert(doc.querySelector('.resource-card a[href*="p1-length-distance-ii.html?lang=en"]'),"P1 centimetre activity link missing");
       for(const file of ['p1-early-number-review','p1-number-sense-review','p1-addition-subtraction-review','p1-money','p1-time','p1-length-distance-i','p1-length-distance-ii','p1-3d-shapes','p1-2d-shapes','p1-directions','p1-inquiry'])assert(doc.querySelector('a[href*="'+file+'.html?lang=en"]'),'missing P1 unit resource '+file);
-      const unitGroups=[...doc.querySelectorAll('.unit-group[data-unit]')];
+      const unitGroups=[...doc.querySelectorAll('.unit-group[data-unit]:not([data-review-group])')];
       let planned=0;
       for(const unit of unitGroups){
         const badge=unit.querySelector(':scope > .unit-heading > .badge'),hasResources=Boolean(unit.querySelector('[data-family],[data-activity]')),complete=Number(unit.dataset.unit[0])>=1&&Number(unit.dataset.unit[0])<=6;
@@ -3106,7 +3106,7 @@
   await check("Practice catalogue · all distinct live resource-browser links",async()=>{
     const frame=await shapeFrame("?lang=en&view=browse&regressionRun="+Date.now()+"-practice-catalogue");
     try{
-      const links=[...frame.contentDocument.querySelectorAll(".practice-link")];
+      const links=[...frame.contentDocument.querySelectorAll('.resource-card:not([data-source="hkeaa-tsa"]) .practice-link')];
       assert(links.length===families.filter(f=>!f.retired).length && new Set(links.map(a=>a.href)).size===families.filter(f=>!f.retired).length,"practice links missing or repeated");
       for(const family of families.filter(f=>!f.retired))
         assertResourcePracticeLink(frame.contentDocument,family.id,family.grade,'en');
@@ -3352,5 +3352,3 @@
   document.documentElement.dataset.result = failed?"fail":"pass";
 document.title = (failed?"FAIL":"PASS")+" · MathQuiz regression checks";
 })();
-
-
