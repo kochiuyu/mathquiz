@@ -6,8 +6,71 @@
   "new_levelled_tasks": 540,
   "total_p3_skills": 50,
   "total_p3_levelled_tasks": 1800,
-  "static_checks": {"new_independent_answers": "pass", "original_35_skills": "pass", "original_1260_payload_hash": "pass"},
-  "local_browser": "Unavailable: local socket access is restricted by the execution environment.",
-  "public_browser": "pending deployment",
-  "limits": ["No physical-print validation", "No classroom calibration", "Online chart completion uses values and title choices rather than freehand drawing", "New skills are separate from mixed-quiz builder families"]
+  "runtime_commits": {
+    "initial": "44bc11b55b301a794b89915ee995f8be94c7b006",
+    "final_refinement": "f8d28c9a07447134b8c31e7010d1e8cb2186d337"
+  },
+  "deployments": [
+    {
+      "id": 44424766200,
+      "conclusion": "success"
+    },
+    {
+      "id": 44425584746,
+      "conclusion": "success"
+    }
+  ],
+  "static_checks": {
+    "new_independent_answers": "pass: all 540 additions and variety invariants",
+    "original_35_skills": "pass: all 1260 original tasks and exact source contexts",
+    "original_1260_payload_hash": "pass",
+    "smart_practice_all_grades": "pass: 285 skills / 10260 canonical answers and progression rules",
+    "directory_all_grades": "pass: exact skill labels and units for all six banks"
+  },
+  "public_browser": {
+    "full_run": {
+      "passed": 133,
+      "failed": 0,
+      "commit": "44bc11b55b301a794b89915ee995f8be94c7b006",
+      "route": "tests/p3-skill-levels.html?scope=tsa"
+    },
+    "final_refinement_rerun": {
+      "passed": 36,
+      "failed": 0,
+      "commit": "f8d28c9a07447134b8c31e7010d1e8cb2186d337",
+      "route": "tests/p3-skill-levels.html?scope=tsa&only=tsaroute3a,tsasort3a,tsasolids3a,tsachart3a",
+      "scope": "All changed route, boundary, solid and chart cases in both languages, all three levels and quiz/paper/key views; their Smart progression and applicable narrow-screen cases."
+    },
+    "distinct_cases_verified": 133,
+    "interpretation": "36 final reruns overlap the 133-case run; these are 133 distinct verified cases, not 169.",
+    "runner_retry_policy": "The runner permits one retry after a navigation timeout. Retry details were not captured in the DOM summary."
+  },
+  "coverage": {
+    "bilingual_skill_level_quiz_paper_key_cases": 90,
+    "smart_sessions_through_all_three_levels": 30,
+    "directory_cases": 2,
+    "narrow_screen_cases": 10,
+    "language_transfer_partial_credit_case": 1
+  },
+  "local_browser": "Unavailable: local socket access is restricted by the execution environment. Live checks used the published GitHub Pages site.",
+  "visual_review": [
+    "Traditional Chinese dial weighing-scale question",
+    "English incomplete chart question",
+    "Traditional Chinese directory with all 15 new skills"
+  ],
+  "pre_release_fixes": [
+    "Made equivalent-fraction contexts distinct.",
+    "Corrected the capacity unit mapping to 3M3.",
+    "Mixed chart formats and missing categories within every short set.",
+    "Included either route being shortest and equal-length routes in every short set.",
+    "Preserved concurrent example-quiz documentation and cache versions."
+  ],
+  "limits": [
+    "No physical-print validation",
+    "No classroom difficulty calibration",
+    "No independent translation or full screen-reader audit",
+    "Online chart completion uses values and title choices rather than freehand drawing",
+    "New skills are separate from mixed-quiz builder families",
+    "Full historical browser suites for unchanged skills and other grades were not rerun"
+  ]
 }

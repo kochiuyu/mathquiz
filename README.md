@@ -599,4 +599,4 @@ P3 now has **50 skills / 1,800 levelled tasks**. The addition contains 180 conte
 
 [Open the new TSA skills](https://kochiuyu.github.io/mathquiz/skill-levels.html?p=3&q=TSA) · [Source mapping, implementation and limits](planning/p3-tsa-2026.md) · [Focused browser checks](tests/p3-skill-levels.html?scope=tsa).
 
-Validation: the new independent answer/contract checks and the original P3 static checks pass. Live-browser results are recorded in [release evidence](planning/p3-tsa-evidence.json).
+**Published and verified:** [initial release 44bc11b5](https://github.com/kochiuyu/mathquiz/commit/44bc11b55b301a794b89915ee995f8be94c7b006), followed by [the short-set refinement f8d28c9a](https://github.com/kochiuyu/mathquiz/commit/f8d28c9a07447134b8c31e7010d1e8cb2186d337). **All 133 distinct live browser cases are verified:** the initial full run passed 133/133, and all 36 cases affected by the refinement passed again. New and original P3 static checks pass; shared Smart checks cover all 285 skills / 10,260 canonical answers. [Release evidence and limits](planning/p3-tsa-evidence.json).
