@@ -1,0 +1,150 @@
+{
+  "release": "Whole-site UI refresh",
+  "date": "2026-11-19",
+  "timezone": "Asia/Hong_Kong",
+  "baselineCommit": "a9dadb9df5f4941ad64005d9125f932978c985f1",
+  "initialRuntimeCommit": "c9414a91eb40ee59b4944472349110e35c0498ce",
+  "paperAndLegacyCorrectionCommit": "c4d1ce7f7387e14938cf486297b79794d4472fb6",
+  "finalRuntimeCommit": "7f5abce4920332debbaa0bedb73fe3386f1b4ab1",
+  "deployment": {
+    "id": 44566756157,
+    "status": "completed",
+    "conclusion": "success",
+    "commit": "7f5abce4920332debbaa0bedb73fe3386f1b4ab1"
+  },
+  "catalogue": {
+    "practiceTypes": 300,
+    "curriculumLinked": 270,
+    "tsaInformed": 30,
+    "officialUnits": 85,
+    "activities": 85,
+    "localReviewGroups": 2,
+    "officialInventoryChanged": false
+  },
+  "questionBanks": {
+    "filesChanged": false,
+    "markingRulesChanged": false,
+    "canonicalSmartAnswersChecked": 10800,
+    "originalP6PayloadsPreserved": 1872,
+    "originalP3PayloadsPreserved": 1260
+  },
+  "staticChecks": [
+    {
+      "script": "tests/ui-refresh-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/resources-ui-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/ui-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/levels-ui-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/p3-source-classification.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/p6-skill-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/p6-tsa-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/p3-tsa-static.cjs",
+      "result": "PASS"
+    },
+    {
+      "script": "tests/smart-static.cjs",
+      "result": "PASS"
+    }
+  ],
+  "browser": {
+    "initialMain": {
+      "passed": 94,
+      "failed": 2,
+      "total": 96
+    },
+    "initialActivities": {
+      "passed": 166,
+      "failed": 5,
+      "total": 171
+    },
+    "resolvedFindings": [
+      "Duplicate paper/key switch after asynchronous presentation refresh",
+      "Legacy P1 oral-number teacher sheets had no disclosure control",
+      "Long teacher-key text overflowed narrow P4 multiples/factors and bar-chart worksheets"
+    ],
+    "targetedReruns": {
+      "main": {
+        "passed": 2,
+        "failed": 0
+      },
+      "activities": {
+        "passed": 7,
+        "failed": 0
+      },
+      "commit": "7f5abce4920332debbaa0bedb73fe3386f1b4ab1",
+      "note": "Includes the manifest setup, both languages of three affected activity pages, and both paper/key language cases; each paper case also repeats presentation refresh twice."
+    },
+    "effectiveWholeSite": {
+      "passed": 267,
+      "failed": 0,
+      "carriedPassingCases": 258,
+      "rerunCases": 9
+    },
+    "p6TSA": {
+      "passed": 156,
+      "failed": 0,
+      "scope": "all 15 types, three levels, both languages, quiz/paper/key, Smart progression, source labels, 320px SVG/field bounds, partial credit and language transfer"
+    },
+    "resourceRegression": {
+      "passed": 101,
+      "failed": 0,
+      "scope": "catalogue, filters, routes, source-safe escaping, history/language, layout and reset"
+    },
+    "scopeNote": "Passing cases are reconciled across the initial release and affected-case reruns; this does not claim every case was rerun on the final commit.",
+    "levelNavigation": {
+      "passed": 387,
+      "failed": 0,
+      "commit": "7f5abce4920332debbaa0bedb73fe3386f1b4ab1",
+      "scope": "All 300 practice types at phone width; all six grade directories; marking, quiz/paper/key correspondence, draft and marked language transfer, invalid routes, 200% text and active-view preservation"
+    },
+    "effectiveTotal": {
+      "passed": 911,
+      "failed": 0,
+      "wholeSite": 267,
+      "p6TSA": 156,
+      "resourceLibrary": 101,
+      "levelNavigation": 387,
+      "affectedRerunCases": 9,
+      "note": "Aggregate passing coverage across suites after corrections. The nine affected whole-site cases were rerun on the final runtime; unaffected earlier passes are carried forward. The 387-case level-navigation sweep ran on the final runtime."
+    }
+  },
+  "manualMobileMeasurements": {
+    "viewport": {
+      "width": 375,
+      "height": 812
+    },
+    "chineseHomepageYearSection": {
+      "beforeY": 1843,
+      "afterY": 458
+    },
+    "englishP3ComposeFiveDigitFirstInput": {
+      "beforeY": 950,
+      "afterY": 531
+    },
+    "note": "Sampled page coordinates near the top of the document, rounded to whole pixels; not a claim about every question."
+  },
+  "limits": [
+    "Browser print/paper/key views and beforeprint/afterprint state were checked; physical printing was not performed",
+    "Classroom trials and a full screen-reader audit were not performed"
+  ]
+}

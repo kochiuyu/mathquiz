@@ -26,6 +26,12 @@ Example quizzes retain their topic names in pupil, paper and key views. Paper/ke
 
 ## Verification
 
+Published runtime: `7f5abce4920332debbaa0bedb73fe3386f1b4ab1`. Nine static suites pass. Browser coverage has **911 passing cases and zero unresolved failures**: 267 dedicated whole-site cases, 156 P6 TSA cases, 101 resource-library cases and 387 level-navigation/session cases. The final grade sweep includes phone layouts for all 300 practice types, all six grades, language transfer and 200% text. [Detailed evidence and scope](ui-refresh-live-evidence.json).
+
+The initial whole-site run found seven failed cases: duplicate paper/key switches, the legacy P1 oral-number activity lacking a teacher-key control, and long teacher text overflowing on two P4 worksheets. The two paper-language cases and six affected activity-language cases, plus activity-manifest setup, passed after correction. Other passing cases are carried forward; this does not claim all 911 were rerun on the final commit. The complete 387-case level sweep ran on the final runtime.
+
+At a 375×812px viewport, the sampled Chinese homepage year section moved from approximately y=1,843px to y=458px, and the English P3 five-digit composition answer field moved from approximately y=950px to y=531px. These are measurements of those sampled pages, not universal height guarantees.
+
 `tests/ui-refresh-static.cjs` checks catalogue identity, official/local unit separation, existing core routes, notation boundaries, shared assets and all 85 activity integrations. Existing resource/navigation and P3/P6/Smart static checks are retained. Earlier UI browser runners were aligned with the expanded catalogue and compact year summaries; their original mathematical assertions remain intact.
 
 The dedicated [browser harness](https://kochiuyu.github.io/mathquiz/tests/ui-refresh.html) checks both languages, all six grades, 320/375/768/1280px layouts, search/source/reset behaviour, paper/key correspondence, Smart marking and progress, and every activity’s language/key behaviour. Use `scope=main` or `scope=activities` for separate runs. Live results are recorded after verification. These are browser-view and functional checks, not a claim of physical printing or classroom trials.
