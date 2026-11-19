@@ -1,0 +1,63 @@
+{
+  "release": "P3 source attribution and extension boundaries",
+  "date_hong_kong": "2026-11-19",
+  "runtime_commit": "38f2bc57baf6e7115967b769e3603cb4699cb81e",
+  "deployment": {
+    "id": 44544642763,
+    "conclusion": "success"
+  },
+  "sources_read": [
+    {
+      "name": "2026_3ME_final.pdf",
+      "pages": 84,
+      "scope": "Complete extracted text, including the design rationale and item/BC tables"
+    },
+    {
+      "name": "2026_3MC_final.pdf",
+      "pages": 82,
+      "scope": "Complete extracted text, including the design rationale and item/BC tables"
+    }
+  ],
+  "authority_distinction": {
+    "curriculum": "EDB curriculum objectives remain the teaching framework",
+    "assessment": "HKEAA develops/administers TSA on behalf of EDB; P3 TSA covers P1–P3",
+    "authoring": "MathQuiz authors the original adaptations, optional extensions and teaching levels"
+  },
+  "counts": {
+    "original_curriculum_linked_practice_types": 35,
+    "added_tsa_informed_practice_types": 15,
+    "total_p3_practice_types": 50,
+    "total_p3_question_payloads": 1800,
+    "official_curriculum_inventory_changed": false,
+    "added_task_labels": {
+      "tsa_informed_adaptation": 300,
+      "mathquiz_extension_relative_to_design": 240
+    }
+  },
+  "static_checks": {
+    "source_classification": "pass: 15 mappings and 540 bilingual variant notes",
+    "new_tsa_oracles": "pass",
+    "original_p3_oracles": "pass",
+    "shared_smart_practice": "pass: 285 types / 10260 canonical answers",
+    "all_1800_question_payloads_exactly_match_predecessor": true,
+    "question_payload_sha256": "73139ba4b4bb89c0033c7e5925426af449f53065910bb63b9b0e90dd31cffcb2"
+  },
+  "public_browser": {
+    "passed": 133,
+    "failed": 0,
+    "route": "tests/p3-skill-levels.html?scope=tsa",
+    "checks": "All 15 types at three levels and two languages in quiz/paper/key views, source/scope notes, 30 Smart sessions, bilingual directory source guide/badges, mobile fields and partial-credit/language transfer.",
+    "navigation_retry_policy": "One retry is permitted after a navigation timeout; retry details were not extracted from the DOM summary."
+  },
+  "visual_review": [
+    "English directory attribution guide and HKEAA/BC badges",
+    "Traditional Chinese directory source guide and badges"
+  ],
+  "interpretation": "Related BC codes are reference mappings, not official certification. An extension relative to TSA design is not automatically beyond the EDB curriculum.",
+  "limits": [
+    "Physical printing and full screen-reader assessment not performed",
+    "Independent translation review not performed",
+    "No claim that these are official HKEAA questions or proficiency levels",
+    "No new official EDB learning units or requirements were added"
+  ]
+}

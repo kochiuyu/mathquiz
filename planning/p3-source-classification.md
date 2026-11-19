@@ -46,3 +46,13 @@ The design specifies one basic competency per official item, minimises linked pr
 - Labels identify the authority and the authorship separately: **HKEAA TSA reference; MathQuiz original practice**.
 
 No mathematical operands, answers, marks, IDs, progression rules or original 1,260 P3 tasks change in this clarification.
+
+## Verification
+
+`tests/p3-source-classification.cjs` checks all 15 authority/BC mappings and all 540 bilingual variant-level labels, including original-core exclusion and the directory/README boundaries. The new TSA, original P3 and shared Smart practice static checks also pass.
+
+An exact comparison with the published predecessor confirms that **all 1,800 full P3 question payloads are unchanged**. The SHA-256 of their JSON representation is `73139ba4b4bb89c0033c7e5925426af449f53065910bb63b9b0e90dd31cffcb2`.
+
+The focused browser suite now also verifies the source notes in quiz, paper, key and Smart views, and the source guide and authority/BC badges in both directory languages. Final results are recorded in [source-clarification evidence](p3-source-evidence.json).
+
+**Published and verified:** runtime clarification [38f2bc57](https://github.com/kochiuyu/mathquiz/commit/38f2bc57baf6e7115967b769e3603cb4699cb81e) deployed successfully; the updated live suite passed **133/133 cases**, with zero failed cases. English and Traditional Chinese source guides and HKEAA/BC badges were inspected.
