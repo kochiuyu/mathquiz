@@ -8,7 +8,7 @@
  document.body.prepend(header);
  const languages=header.querySelector('.activity-languages');
  for(const l of ['en','zh']){const a=document.createElement('a'),url=new URL(location.href);url.searchParams.set('lang',l);a.href=url.href;a.lang=l==='zh'?'zh-HK':'en';a.textContent=l==='zh'?'繁體中文':'English';a.id='activity-'+l;a.setAttribute('aria-current',String(l===lang));a.onclick=()=>{const u=new URL(a.href);if(document.getElementById('key-toggle')?.getAttribute('aria-expanded')==='true')u.searchParams.set('key','1');else u.searchParams.delete('key');a.href=u.href;};languages.append(a);}
- original?.querySelectorAll('a[href*="lang="],#back').forEach(a=>a.remove());
+ original?.querySelectorAll('a[href*="lang="],a[href*="coverage.html"],#back').forEach(a=>a.remove());
  const section=document.getElementById(lang);if(section){section.tabIndex=-1;const skip=document.createElement('a');skip.className='activity-skip';skip.href='#'+section.id;skip.textContent=t('Skip to pupil activity','跳至學生活動');header.before(skip);}
  let key=document.getElementById('key-toggle');const print=document.getElementById('print');
  if(!key&&document.querySelector('.key')){key=document.createElement('button');key.id='key-toggle';key.type='button';key.setAttribute('aria-expanded','false');key.textContent=t('Show teacher key','顯示教師解答');original?.append(key);key.onclick=()=>{const show=key.getAttribute('aria-expanded')!=='true';document.querySelectorAll('.key').forEach(k=>k.hidden=!show);key.setAttribute('aria-expanded',String(show));key.textContent=show?t('Hide teacher key','隱藏教師解答'):t('Show teacher key','顯示教師解答');};}
