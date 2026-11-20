@@ -33,9 +33,43 @@ const lessons=[
   {title:pair('Find a missing part','找出欠缺部分'),text:pair('We have six and want ten. Count on: 7, 8, 9, 10 — four more. Check: 6 + 4 = 10.','已有六，要合成十。接著數7、8、9、10，共四個。驗算：6 + 4 = 10。'),visual:{kind:'counters',a:6,b:4}}
  ]}
 ];
+
+// Each challenge changes the reasoning or support, never the pupil's identity or pace.
+const levels=['easy','normal','difficult'];
+const challenges={
+ count:{normal:[
+  ['There are 7 counters in a row. Move them into a circle without adding or taking any away. How many now?','一行有7個圓片。不加也不拿走，只排成圓形。現在有多少個？',7,'Moving counters does not change the total: seven.','移動位置不改變總數，仍是七個。'],
+  ['The tray is empty. How many counters are in it?','盤內是空的，有多少個圓片？',0,'Nothing to count means zero.','沒有東西可數，就是零。'],
+  ['You count each counter once: 1, 2, 3, 4, 5, 6, 7, 8, 9. How many counters?','每個圓片只數一次：1、2、3、4、5、6、7、8、9。一共有多少個？',9,'The last number, nine, tells the total.','最後數到九，所以共有九個。']
+ ],difficult:[
+  ['There are 5 counters. Kai counts one of them twice and says 6. What is the correct total?','有5個圓片。小佳把其中一個數了兩次，說共有6個。正確總數是多少？',5,'Count each counter once. Counting one twice does not create an extra counter: five.','每個只數一次。重複數不會多出圓片，正確是五個。'],
+  ['You have counted 6 counters. There are 3 more counters not counted yet. Continue counting. How many altogether?','已數了6個圓片，還有3個未數。接著數，一共有多少個？',9,'Continue with 7, 8, 9. There are nine counters.','接著數7、8、9，共九個。'],
+  ['You counted all 8 counters once. Then you started counting the same counters again from 1. How many counters are there still?','全部8個圓片已逐一數過，再由1開始重數同一批圓片。圓片仍有多少個？',8,'Counting again does not add counters. The same eight remain.','重數不會增加圓片，仍是原來的八個。']
+ ]},
+ tens:{normal:[
+  ['One ten and 5 ones make which number?','一個十和5個一合成甚麼數？',15,'10 + 5 = 15.','10 + 5 = 15。'],
+  ['17 is one ten and how many ones?','17是一個十和多少個一？',7,'Keep ten together. Count on 11 to 17: seven ones.','保留一個十，由11數到17，還有七個一。'],
+  ['Two full frames each hold ten counters. How many counters altogether?','兩個十格框都填滿，每框十個圓片。一共有多少個？',20,'10 + 10 = 20: two tens.','10 + 10 = 20，就是兩個十。']
+ ],difficult:[
+  ['Mia has one ten and 4 ones, but writes 41. What number should Mia write?','小美有一個十和4個一，卻寫成41。應寫甚麼數？',14,'The ten is worth 10, not 40. 10 + 4 = 14.','一個十是10，不是40。10 + 4 = 14。'],
+  ['There are 18 counters. Put ten in a full frame and 5 in another frame. How many are still outside the frames?','有18個圓片，十個放滿一框，另一框放5個。框外還有多少個？',3,'Ten and five make 15. Count on 16, 17, 18: three remain.','十和五合成15，接著數16、17、18，還有三個。'],
+  ['A full frame and 6 ones make 16. Move one of those 6 into a different tray, without removing it. How many counters altogether now?','一個滿框和6個一合成16。把這6個中的一個移到另一盤，沒有拿走。現在一共有多少個圓片？',16,'Only its position changes. The full ten and all six ones still total 16.','只改變位置。一個十和全部六個一仍合成16。']
+ ]},
+ add:{normal:[
+  ['There are 7 books and 5 more arrive. How many books now?','有7本書，再送來5本。現在有多少本？',12,'Count on five from 7: 8, 9, 10, 11, 12.','由7接著數五個：8、9、10、11、12。'],
+  ['8 + □ = 14. Which number belongs in the box?','8 + □ = 14。方格內是甚麼數？',6,'Count from 8 up to 14: six more. 8 + 6 = 14.','由8數到14，要再數六個。8 + 6 = 14。'],
+  ['There are 9 red beads and 8 blue beads. How many altogether?','有9粒紅珠和8粒藍珠，一共有多少粒？',17,'9 + 1 = 10, then add the remaining seven: 17.','9加1是10，再加餘下七粒，就是17。']
+ ],difficult:[
+  ['A tray has 6 counters. Add 4, then some more to reach 13. How many were added AFTER the first 4?','盤內有6個圓片，先加4個，再加一些便有13個。加了最初4個之後，再加了多少個？',3,'6 + 4 = 10. Count on 11, 12, 13: three more.','6 + 4 = 10，接著數11、12、13，再加三個。'],
+  ['Bo says 8 + 7 = 14. Check the addition. What is the correct total?','小寶說8 + 7 = 14。檢查加法，正確總數是多少？',15,'8 + 2 = 10. Five of the seven remain, so 10 + 5 = 15.','8加2是10，七個還剩五個，所以10 + 5 = 15。'],
+  ['9 + 4 and 8 + □ have the same total. What is the missing number?','9 + 4和8 + □的總數相同。欠缺的數是多少？',5,'9 + 4 = 13. Count on from 8 to 13: five. Check 8 + 5 = 13.','9 + 4 = 13。由8數到13要加五，驗算8 + 5 = 13。']
+ ]}
+};
+function practice(lesson,level){if(!levels.includes(level))level='easy';return level==='easy'?[2,3,4].map(i=>question(lesson,i)):challenges[lesson][level].map((x,i)=>item(lesson+'-'+level+'-'+i,lesson,pair(x[0],x[1]),x[2],pair(x[3],x[4]),null));}
+
 const quiz=attempt=>lessons.flatMap(l=>[question(l.id,6,(attempt*2)%6),question(l.id,8,(attempt*2)%6)]);
 const valid=s=>/^\d{1,2}$/.test(String(s).trim());
 const correct=(q,s)=>valid(s)&&Number(String(s).trim())===q.answer;
-root.MathQuizLearnData={lessons,question,quiz,valid,correct};
+root.MathQuizLearnData={lessons,question,practice,levels,quiz,valid,correct};
 if(typeof module!=='undefined')module.exports=root.MathQuizLearnData;
 })(typeof window!=='undefined'?window:globalThis);

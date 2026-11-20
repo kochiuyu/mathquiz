@@ -2,6 +2,8 @@
 
 20 November 2026
 
+**Subsequent revision:** see [Learning journey revision](journey-revision.md) for the new per-lesson Easy → Normal → Difficult flow and compatible saved-progress upgrade. The original release results below remain historical.
+
 ## Pupil experience
 
 The default homepage now starts with one **Start learning / Continue learning** action and a small learning pathway. Parents & teachers remains a visible header link and a dedicated area. The former homepage is available at `?view=teacher`, preserving resource browsing, year choices, quiz creation, adaptations, examples and activities. Existing pupil quiz URLs, print views and resource links continue to work.

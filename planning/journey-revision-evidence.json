@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-20",
+  "base": "2802aaf78e6f30e3f7e037652e40ac81f8eccb77",
+  "scope": "Three P1 pilot lessons; learner controls and difficulty progression",
+  "local": {
+    "browser": {
+      "passed": 18,
+      "failed": 0
+    },
+    "staticGates": 3,
+    "items": 27,
+    "newItems": 18
+  },
+  "public": {
+    "status": "pending"
+  },
+  "developmentNotes": [
+    "Initial local 17/18: next-level resume assertion; isolated and subsequent full run passed. Prior iframe now cleared between cases.",
+    "Two static cache-tag assertions initially failed; restored unchanged shared-script tags, both passed."
+  ],
+  "limitations": [
+    "Three-lesson pilot only",
+    "Difficulty and progression not calibrated with pupils",
+    "No independent translation or assistive-technology listening review",
+    "267-case shared browser suite not rerun in this revision"
+  ],
+  "hashes": {
+    "index.html": "ec20d1c116029695fef6535e7a0b6c3aae88c7b77826649088cd5f112a5c1f9c",
+    "learn-data.js": "419c6d2e7d51b2c69a21f83e27699ddb11b05aa1db15445e074fdeaf3cbe2ecc",
+    "learn-store.js": "f53ef1d2398f264854ea2510c7cc80ea62dbc3ac786ca445164716d7221666b5",
+    "learn.css": "253bbed8be95eafcc069a5e29ca06277c6013aaf3dc7e67c8f652f54dc8b07dd",
+    "learn.html": "6bb93234bbda0cb40f6b087193ec86c40711523f1c9525a9554502d451e5abbe",
+    "learn.js": "5666ae1a69389250075097ef34e2e4c75a05fb6500ece33a189a4302cea4c5ce",
+    "tests/student-blocked.html": "9ff0411a4dc43622dc13f96f2956fcb547304d65ee546f39ac3e90f378ebd6eb",
+    "tests/student-browser.js": "6930d6a106da4b5c3a1a53a3414dfecaf910ad116ceb1bd24ad6ae4bdaa348e4",
+    "tests/student-static.cjs": "bfb506bb8433b92008b21eea2fac34462ee58401c3374dab3670f01902e8c491",
+    "tests/student.html": "4cb4e4018e3b916d7aa0cceb98d03bb1618b4d19ef0588621db662d6181c010d"
+  }
+}

@@ -675,3 +675,12 @@ Three separate learner slots remember progress in this browser without accounts.
 [Parents & teachers](https://kochiuyu.github.io/mathquiz/?view=teacher) retains the resource library, builder, examples, activities and printing routes. Existing curriculum and question banks remain unchanged. [Pilot design, limitations and extension workflow](planning/student-pathway.md) · [Verification evidence](planning/student-pathway-evidence.json).
 
 Local focused browser checks passed **17/17**; independent answer and storage checks and two existing static gates passed. All 267 shared UI/activity browser checks passed locally with no retries. **Published and verified:** [runtime 9cc164fc](https://github.com/kochiuyu/mathquiz/commit/9cc164fc5446f97be383aab48fe62e3165ab68c1). The local and public runs both passed **17/17 student-flow cases and 267/267 shared UI/activity cases**. Public shared-run retries: 1; exact retry routes are retained in the evidence. All 20 published files matched tested bytes through browser SHA-256 readback. The runtime Pages deployment succeeded. Supplemental public checks confirmed unfinished quiz answers survive a language/reload change without early feedback, and submitted results reopen correctly. Classroom calibration, independent translation, screen-reader use and physical printing remain unverified.
+
+
+## Student journey: learner identity and difficulty
+
+The homepage now prioritises Start / Continue; optional Switch learner is below the pathway. Profiles remain separate pupils on a shared browser. The three P1 pilot lessons now each offer Easy → Normal → Difficult practice, with three questions per level (27 total, 18 new bilingual items). Teaching and guided practice come first; a six-question core understanding check follows the completed levels. Difficulty describes challenge, never speed.
+
+Existing saved practice becomes Easy progress. Teaching, learner slots and quiz records are retained; answers and continuation now remain separate by difficulty within each learner. Parents/teacher tools and existing resource banks remain available.
+
+Local verification: 18/18 focused browser cases and three static gates passed. Public verification is pending. [Revision details, compatibility and next steps](planning/journey-revision.md) · [Evidence](planning/journey-revision-evidence.json). The wider P1 teaching rollout and pupil calibration remain pending.

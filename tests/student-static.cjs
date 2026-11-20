@@ -9,3 +9,10 @@ const denied={getItem(){throw Error('denied');},setItem(){throw Error('denied');
 const clean=S.cleanProfile({cursor:{lesson:'<script>',stage:'evil'},attempt:Infinity,quiz:{answers:['<script>','12'],submitted:1},lessons:{count:{step:100,practice:'true'}}});A.equal(clean.cursor.lesson,'count');A.equal(clean.attempt,0);A.equal(clean.quiz.submitted,false);A.equal(clean.lessons.count.practice,false);
 for(const f of ['learn.js','learn-data.js','learn-store.js','site-ui.js','ui.js'])new vm.Script(fs.readFileSync(require('node:path').join(__dirname,'..',f),'utf8'));
 console.log(`PASS: ${n} independent question checks; 12 quiz forms; saved profiles, reset isolation, blocked/corrupt storage, input validation and syntax.`);
+
+// Independently derived expected totals/parts for the 18 new challenge prompts.
+const expected={count:{normal:[7,0,9],difficult:[5,6+3,8]},tens:{normal:[10+5,17-10,10+10],difficult:[10+4,18-10-5,10+6]},add:{normal:[7+5,14-8,9+8],difficult:[13-(6+4),8+7,(9+4)-8]}};
+let levelCases=0;for(const lesson of D.lessons)for(const level of D.levels){const qs=D.practice(lesson.id,level);A.equal(qs.length,3);qs.forEach((q,i)=>{if(level!=='easy')A.equal(q.answer,expected[lesson.id][level][i]);A(q.prompt.every(Boolean)&&q.why.every(Boolean));A(q.answer>=0&&q.answer<=20);A(D.correct(q,String(q.answer)));levelCases++;});}
+const old=S.cleanProfile({lessons:{count:{practice:true,practiceAnswers:['0','6','9']}},quiz:{answers:['1'],submitted:true}});A(old.lessons.count.levels.easy.done);A(!old.lessons.count.practice);A.deepEqual(old.lessons.count.levels.easy.answers,['0','6','9']);A(old.quiz.submitted);
+const upgraded=S.cleanProfile({lessons:{count:{levels:{easy:{done:true,answers:['0']},normal:{done:true,answers:['7']},difficult:{done:true,answers:['5']}}}},cursor:{lesson:'count',stage:'practice',level:'normal'}});A(upgraded.lessons.count.practice);A.equal(upgraded.cursor.level,'normal');A.equal(upgraded.lessons.count.levels.easy.answers[0],'0');A.equal(upgraded.lessons.count.levels.normal.answers[0],'7');
+console.log('PASS: '+levelCases+' levelled items; legacy practice migration, quiz retention, level answers and resume.');
