@@ -30,7 +30,22 @@
     "Final local navigation call timed out while runner continued; result read without reload."
   ],
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctBrowserCases": 42,
+    "fullRun": {
+      "passed": 41,
+      "failed": 1,
+      "case": "Quiz gate and malformed route",
+      "error": "Navigation timeout learn.html?lesson=evil&stage=evil"
+    },
+    "exactRerun": {
+      "case": "Quiz gate and malformed route",
+      "passed": 1,
+      "failed": 0
+    },
+    "hashMatches": 12,
+    "runnerNavigation": "The initial navigation call timed out while the full suite continued; result read without reloading. The first attempt to navigate to the exact rerun timed out without changing the page. A subsequent navigation loaded the exact case and passed.",
+    "visualCheck": "Public Chinese mobile teaching at 360 x 812: part/whole diagram, bilingual navigation and next-step action visible without horizontal overflow."
   },
   "hashEncoding": "UTF-8/LF as uploaded",
   "hashes": {
@@ -52,5 +67,10 @@
     "Difficulty and threshold not pupil-calibrated",
     "No independent translation, screen-reader listening or physical-object classroom review",
     "Broader 267-case shared browser suite not rerun"
-  ]
+  ],
+  "runtimeCommit": "5e9d539b810c4fe82d30971c9fc60a03aa9de091",
+  "deployment": {
+    "runId": 44695916104,
+    "conclusion": "success"
+  }
 }
