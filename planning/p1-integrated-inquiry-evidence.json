@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-20",
+  "base": "d06bdbf6e897a45252d813c4791b16247e8f7186",
+  "scope": "P1 1F1 integrated inquiry, not a new independent pathway",
+  "added": {
+    "integratedInvestigations": 13,
+    "optionalNotesPerPath": 3,
+    "charactersPerNote": 240
+  },
+  "unchangedTotals": {
+    "pathways": 13,
+    "lessons": 39,
+    "levelledPracticeItems": 351
+  },
+  "storage": {
+    "version": 1,
+    "readCap": 236224,
+    "fullWorstEscapedFixture": 101968,
+    "separatePupils": 3,
+    "scoresAndCursorsUnchanged": true
+  },
+  "local": {
+    "staticGates": 16,
+    "inquiry": {
+      "done": true,
+      "passed": 16,
+      "failed": 0,
+      "failures": []
+    },
+    "status": "verified",
+    "student": {
+      "done": true,
+      "passed": 187,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Subtraction layout en 1280",
+          "error": "Navigation timeout learn.html?path=subtract&lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Subtraction layout en 1280",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 204
+  },
+  "public": {
+    "status": "pending"
+  },
+  "limits": [
+    "No automatic inquiry grade or mastery claim",
+    "I tried this is pupil self-report, not adult observation",
+    "Oral/drawn responses and adult typing support are allowed",
+    "Classroom trials, independent translation, screen-reader listening and physical printing pending",
+    "Broader267-case shared/adult UI browser suite not repeated",
+    "No fullP1completion or prescribed-hours claim"
+  ],
+  "hashes": {
+    "index.html": "74373b30fb76d9b6391b688d8bac3993709453be26ffa0d6cf980ba54f3a7450",
+    "learn-inquiry.js": "6024002a35777f556895c4f320dbd2cbcab7773ff5d352b47d75b696597ef2e8",
+    "learn-store.js": "81d9bbfa8778507c42d3fabcaa245e5e436d4e8e67c743334e8458e214f88382",
+    "learn.css": "893e4371dbf69f19d0176ccfc517d2a4a2b7eec7e7fd0137db329a4cae6814db",
+    "learn.html": "b652c589a19701da0a28c16fd695763491fd75a371b119e5614deeb8fd054d3b",
+    "learn.js": "8f2ea581c3ed07c515774c34f4700c18211a5ae856a8b76c176ddc3289e5698d",
+    "tests/inquiry-browser.js": "925f41eb24631410108876982f17fc564eb19eaf1167a1665522b73b4d8642b4",
+    "tests/inquiry-static.cjs": "d6cc1182ac407e692a5f5a7b4097e5ebb4e77990e6175a14c2720a29b888c18e",
+    "tests/inquiry.html": "b35faf9f4589f554bc05a738465beb8412decf2dd6c6971c652ff23b2d5d2a15",
+    "tests/student-blocked.html": "8d8850c318a10b84bb75d01c022a994248b0263420b0d238636b97f1f73064db",
+    "tests/student.html": "76f9e8e3094549a55c5b720186b34f2dee17469151202fb2ff20504c592d01e1"
+  },
+  "development": {
+    "initialInquiry": {
+      "done": true,
+      "passed": 15,
+      "failed": 0
+    },
+    "initialStudent": {
+      "done": true,
+      "passed": 185,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Complete pathway en",
+          "error": "quiz hints"
+        },
+        {
+          "name": "Complete pathway zh",
+          "error": "quiz hints"
+        },
+        {
+          "name": "Separate pathway resumes and saved 100",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal"
+        }
+      ]
+    },
+    "fix": "Hide optional inquiry guidance and notes during checks, restore on results; all13 paths covered by an additional test"
+  },
+  "visualSamples": {
+    "width": 320,
+    "height": 812,
+    "englishMeasureFirstNoteBottom": 581.7109375,
+    "chineseMoneyFirstNoteBottom": 499.1875,
+    "horizontalOverflow": false,
+    "adultNotesInitiallyClosed": true
+  },
+  "verificationText": "All **204 local browser cases are verified**:16/16 inquiry cases, plus187/188 student-flow cases in the final full run and1 successful exact timeout rerun(s). Sixteen static gates passed. Public verification is pending."
+}

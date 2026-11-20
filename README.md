@@ -794,3 +794,16 @@ The **27 new practice items** bring the journey to **thirteen pathways, 39 lesso
 All **188 local browser cases are verified**: 187 passed in the final full run; one timeout passed its exact rerun. Fifteen static gates passed. All **188 public browser cases are verified**: 186 passed in the full run; two timeouts passed exact reruns. Runtime deployment succeeded and all twenty-two changed runtime/test files matched their tested hashes.
 
 [Scope, compatibility and next steps](planning/p1-positions-pathway.md) · [Evidence](planning/p1-positions-evidence.json). Next: integrated inquiry activities under 1F1, linked to existing pathways. Pupil calibration and independent human reviews remain pending; online choices do not demonstrate real-object descriptions or full P1 completion.
+
+
+## P1 learning: integrated investigations
+
+[Try an investigation](https://kochiuyu.github.io/mathquiz/learn.html?path=measure&investigate=1). All **13 existing P1 pathways** now include an optional bilingual activity: predict, try and notice, then explain or extend. A secondary “Investigate this topic” action opens it; teaching and practice remain the primary route.
+
+Pupils can save three short notes and an “I tried this” self-report separately for each topic and learner. Notes survive language changes and remain on this browser. They do not change quiz scores, lesson completion or the next learning step. Oral/drawn responses and adult help are welcome; no automatic inquiry grade is assigned.
+
+Teaching totals remain **13 pathways,39 lessons and351 levelled practice items**, now supported by **13 integrated investigations**. Adult guidance and the existing printable inquiry packet are available. Existing saved lessons and quiz results are preserved.
+
+All **204 local browser cases are verified**:16/16 inquiry cases, plus187/188 student-flow cases in the final full run and1 successful exact timeout rerun(s). Sixteen static gates passed. Public verification is pending.
+
+[Design, scope and next steps](planning/p1-integrated-inquiry.md) · [Evidence](planning/p1-integrated-inquiry-evidence.json). Next: review P1 journey navigation and objective coverage before extending guided teaching into P2. Classroom trials and independent human reviews remain pending; self-reported notes do not certify observed practical inquiry or full P1 completion.
