@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-20",
+  "base": "377ee573bfbc409d9b90b34a7b8d74953bf9c7e8",
+  "scope": "P1 ordinal positions, odd/even and comparison-as-subtraction",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "local": {
+    "status": "verified",
+    "fullRun": {
+      "passed": 67,
+      "failed": 0
+    },
+    "reruns": 0,
+    "staticGates": 7,
+    "independentGeneratedChecks": 216,
+    "fullStorageRecordCharacters": 16582,
+    "visualCheck": {
+      "page": "English Difficult position",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 711.8,
+      "horizontalOverflow": false,
+      "twentyTokenRowInspected": true
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "263bac68335ecedf3cc1225e68f6e396013bb50d71ef73a6f0b29cb33dd5792d",
+    "learn-data.js": "0e5719508f0e648a1bf7ba0c7d219c71858fa66f303debe3236805c3c8dda743",
+    "learn-store.js": "4c19ffbec6b0dc0129f0598fdefe3600e5782ec1c97f5041decc291773858737",
+    "learn-relations.js": "713225384f01265862b7946019a99099dd6218d799a5cc90385f8c5c2c827513",
+    "learn.css": "56d1bd2c881d839406a5e3127f1dd921ba3a7afa261be47439e8b55aa1cfbdb6",
+    "learn.html": "c0a3d90c8564a37e216f29c93e51ab8f8308046eb43bcdb3f631a20552a2ada6",
+    "learn.js": "63d81d3476f5005b66e78a4d2cc8b6ca7e0c4f3348e4d4ddabf30bdc0f4ccadb",
+    "tests/hundred-static.cjs": "1ee60d7c766ec79ae031bfed911402d4c05f4b181b713cc4297c2475e0bdb8e0",
+    "tests/subtract-static.cjs": "5da16a73d0b7dd384ffefbbb098f9269f399609083987da78321fd1397127ce3",
+    "tests/groups-static.cjs": "c8b29cba47d1fb294317bcded9d4205beb9250d5d88790f9ca9b9db023c4d6f9",
+    "tests/relations-static.cjs": "156443efff92eb94e2e85e965c112fcf0c08a988d00fda67569069efc86ccf16",
+    "tests/student-blocked.html": "c454121cd986bc7392d3807e5d765ef4d93afaa7738b3f22d6fc4368d1913ffe",
+    "tests/student-browser.js": "60ff8eee0d59d1b297f44349e18691e2df64c24d4072a1379137525a84a853cf",
+    "tests/student.html": "fbf7907c1b86d0fdf6cdad78f625a993f75f5c3a68ab3c0a0ed29af22b0625dc"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Classification answers choose a stated number, not a verbal explanation",
+    "Difficulty and threshold not pupil-calibrated",
+    "Independent translation, screen-reader listening and real-object classroom review not performed",
+    "Broader 267-case shared browser suite not rerun"
+  ]
+}

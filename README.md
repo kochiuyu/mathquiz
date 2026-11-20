@@ -711,3 +711,12 @@ Local and public verification: **all 42 distinct browser cases verified in each 
 All grouping and estimation quantities are below 100. Estimation tasks ask pupils to choose a reasonable estimate from two stated alternatives; feedback distinguishes an estimate from the exact count. Earlier learner progress and quiz identities remain preserved. Numbers to 100 now leads into this pathway.
 
 All 54 local browser cases are verified, including one exact navigation-timeout rerun; six static gates passed. The public suite passed **54/54 with no retries**. Runtime deployment succeeded and all thirteen changed runtime/test assets matched. [Teaching scope, compatibility and next steps](planning/p1-groups-pathway.md) · [Evidence](planning/p1-groups-evidence.json). Next: ordinal numbers, odd/even numbers and comparison-as-subtraction. Full P1 teaching coverage and pupil calibration remain pending.
+
+
+## P1 teaching: positions, pairs and differences
+
+[Start Positions, pairs and differences](https://kochiuyu.github.io/mathquiz/learn.html?path=relations). Three new bilingual lessons teach positions from either end, odd/even through pairing and the ones digit, and how many more/fewer through aligned rows. Teaching, guided practice and three difficulty levels lead to a separate six-question check.
+
+The **27 new practice items** bring the teaching collection to **five pathways, fifteen lessons and 135 levelled practice items**. Earlier questions, saved progress and quiz results remain unchanged. Grouping/estimation now leads into this pathway. Boundary cases include zero, equal quantities and twentieth positions.
+
+Local verification passed **67/67 browser cases and seven static gates**, with no retries. Public verification is pending. [Scope, saved-work compatibility and next steps](planning/p1-relations-pathway.md) · [Evidence](planning/p1-relations-evidence.json). Next: addition/subtraction within 100 under 1N4, with a storage-capacity check before further expansion. Full P1 teaching coverage and pupil calibration remain pending.
