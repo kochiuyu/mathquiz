@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-20",
+  "base": "7fb48c25f58dec049c58433e50ffd57260250bf1",
+  "scope": "P1 1M4 hours/half-hours, whole-hour intervals, days/months and calendar reading",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "totals": {
+    "pathways": 10,
+    "lessons": 30,
+    "levelledPracticeItems": 270
+  },
+  "local": {
+    "status": "verified",
+    "fullRun": {
+      "done": true,
+      "passed": 142,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Subtraction complete en",
+          "error": "Test frame reset timeout"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Subtraction complete en",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 143,
+    "developmentRuns": [
+      {
+        "case": "Time mobile teaching en",
+        "passed": 0,
+        "failed": 1,
+        "error": "next action low calendays 2 bottom=830.453125",
+        "resolution": "shorter heading; first text replacement did not apply"
+      },
+      {
+        "cases": [
+          {
+            "name": "Time mobile teaching en",
+            "passed": 0,
+            "failed": 1,
+            "error": "next action low calendays 2 bottom=830.453125"
+          },
+          {
+            "name": "Time mobile teaching zh",
+            "passed": 1,
+            "failed": 0
+          }
+        ],
+        "resolution": "shortened English teaching text with exact patch"
+      },
+      {
+        "case": "Time mobile teaching en",
+        "passed": 0,
+        "failed": 1,
+        "error": "first answer low calendays easy",
+        "resolution": "shorter prompts, compact calendar cells and inline weekday choices"
+      },
+      {
+        "case": "Time mobile teaching en",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "case": "Time mobile teaching zh",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "staticGates": 12,
+    "independentGeneratedChecks": 216,
+    "fullRecordFixtureCharacters": 33184,
+    "largestOtherFullRecordFixtureCharacters": 33199,
+    "readBoundCharacters": 59776,
+    "visualCheck": {
+      "page": "English Difficult half past twelve",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 768.84375,
+      "horizontalOverflow": false,
+      "screenshot": "browser-screenshots/screenshot-2026-11-20T11-09-46-755Z-f7f5dc6c.png"
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "sources": [
+    {
+      "name": "EDB Key Stage1 explanatory notes,1M4 printed pages12-13",
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=18",
+      "checked": "2026-11-20"
+    }
+  ],
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "8f0a6164d2417199cd9448d966f4f5c856979a372869ea1f970c4e609bf33fba",
+    "learn-data.js": "0d4d3e70558746e0c4f872a00dbb3db968578a51c3d8bc3ffd5120a1377adb43",
+    "learn-store.js": "343f937f661dcc2521d52a6e5369aeab3f7447e69877ed6330852f9ff84a6a2e",
+    "learn-time.js": "f0facfc4e0708e6ca87e3fcbf77062ebb6971c61bd5b1d69259e9ebe511dfd96",
+    "learn.css": "32edcbf930a6e769a29e3e50e3625e40d072e69ee8e0a4c473de74f9d6fd8ec4",
+    "learn.html": "2e9ce68c1d6ea888278cc4b753e18a660fb9ad29d8e31f1414ba580636701477",
+    "learn.js": "ee1f5df21e3bfc2c910392b7471683b5844b91df1fd8c9df46e83a497cc77406",
+    "tests/hundred-static.cjs": "85d218b2363a9997a3e8fb782af3a45ceb9e83d96e5888eb6520bc89cec03671",
+    "tests/subtract-static.cjs": "1d932a255b086c23a9e5cc814c0498aa7e24d020bb9936f196a84b68e7e8b9e0",
+    "tests/groups-static.cjs": "0b8212971e37f228812c81b2b3e8c8caf486788ae7cc757f0f5e8b4a5cf43d9f",
+    "tests/relations-static.cjs": "73778788ebb9562bb63311b9eda7d717dcfceb956b44ceea78e014edd68a431a",
+    "tests/calculate-static.cjs": "00efc6f073f5f0169429a4b8e088445fcaad1b6d9ac342805cdf78c089b5a48b",
+    "tests/measure-static.cjs": "f36ded845dd84149975fea302f402c7d29af9f0288a5c0534c8bc1350ac85f75",
+    "tests/ruler-static.cjs": "492bda31e5e678491f1cb34a5daba1c3ac2cddc27d7260e1711ad0a38a6bcb9c",
+    "tests/money-static.cjs": "c41fa0bffa25df85f4a38c35ed598088870b5a335d034d5d4aae2edbcd711457",
+    "tests/time-static.cjs": "10e8230fa577359116560b8561e5dda9ef8fe21818ad5ebbe631507e807eaf45",
+    "tests/student-blocked.html": "707cbc421553e84507ce2b7e8c472250df72201516d9d076ec13a13a7e2e9e1c",
+    "tests/student-browser.js": "1e1c7acbf94b3220f3008d82b8aad1e5a842f231f7213e58b644ae7b121514cb",
+    "tests/student.html": "da4979c91cd9f9d82b7c0aee290091f0d4deeb4a055ec67416cb66457acb0fec"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Actual experience of one hour and measurement/comparison require adult observation; not performed",
+    "No minutes arithmetic, hand drawing,24-hour notation,leap-year rules or date-interval calculations",
+    "Fixed November2026 sample calendar, not current-date or holiday data",
+    "Practice may complete after correction;5/6 recommendation is not calibrated mastery",
+    "Three overlapping deterministic check configurations",
+    "Pupil trials,independent translation,screen-reader listening and physical printing remain pending",
+    "Broader267-case shared UI/activity browser suite not repeated"
+  ]
+}

@@ -756,3 +756,12 @@ Local checks passed **113/113 without retries**, plus ten static gates. All **11
 The **27 new practice items** bring the student journey to **nine pathways, 27 lessons and 243 levelled practice items**. Pupils choose dollar-and-cent readings without entering decimal prices. Clearly labelled tokens support practice; the linked real-coin activity supports physical recognition and adult observation. Earlier questions and saved progress are retained.
 
 All **128 local browser cases are verified**: 126 passed in the final full run; two page-load timeouts passed exact reruns. Eleven static gates passed. All **128 public cases are verified**: 125 passed in the full run; 3 page-load timeout cases passed exact reruns. Runtime deployment succeeded and all eighteen changed runtime/test files matched their tested hashes. [Scope, compatibility and next steps](planning/p1-money-pathway.md) · [Evidence](planning/p1-money-evidence.json). Next: time under 1M4. Pupil trials and independent human reviews remain pending; online completion cannot demonstrate recognition of real coins.
+
+
+## P1 teaching: time and calendars
+
+[Start Time and calendars](https://kochiuyu.github.io/mathquiz/learn.html?path=time). Three bilingual lessons teach reading analogue clocks at o’clock and half past, counting whole-hour intervals up to 12 hours, and using weekday/month names and calendar columns. Teaching and guided examples lead to three difficulty levels and a separate six-question check.
+
+The **27 new practice items** bring the student journey to **ten pathways, 30 lessons and 270 levelled practice items**. Clock hands show the half-hour position correctly, including half past twelve. Both Monday-first and Sunday-first sample calendars are included. Earlier questions, learner slots and saved results are retained. A real-clock activity supports practical observation.
+
+All **143 local browser cases are verified**: 142 passed in the full run; one test-frame reset timeout passed its exact rerun. Twelve static gates passed. Public verification is pending. [Scope, compatibility and next steps](planning/p1-time-pathway.md) · [Evidence](planning/p1-time-evidence.json). Next: 3-D shapes under 1S1. Pupil trials and independent human reviews remain pending; online tasks cannot observe a pupil’s actual experience or measurement of time.
