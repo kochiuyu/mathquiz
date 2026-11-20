@@ -74,7 +74,41 @@
     "runnerTransport": "Initial final-suite navigation timed out; completed result read without reload"
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctBrowserCases": 98,
+    "fullRun": {
+      "passed": 97,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal&lang=zh"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "runtimeCommit": "d6bc8205121656ed69cd1cf0b6f291760848df0e",
+    "pagesRun": 44714170123,
+    "pagesConclusion": "success",
+    "runtimeAssetsMatched": 16,
+    "runnerTransport": "Initial navigation timed out while runner continued; completion read without reload",
+    "visualCheck": {
+      "page": "Chinese Difficult informal-units practice",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 702.93,
+      "horizontalOverflow": false,
+      "pathways": 7,
+      "lessons": 21,
+      "gappedAndTouchingRowsInspected": true,
+      "activityLanguage": "zh"
+    }
   },
   "hashEncoding": "UTF-8/LF as uploaded",
   "hashes": {
