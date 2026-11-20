@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-20",
+  "baselineCommit": "b2b6786d9aecf05c87e4abe6abfffc39fb444981",
+  "status": "local verified; deployment pending",
+  "scope": "Bilingual adaptation naming, search aliases, source disclosure and research workflow; no question bank changes",
+  "local": {
+    "browser": {
+      "passed": 105,
+      "failed": 0,
+      "started": "2026-11-20T03:33:16.575Z",
+      "finished": "2026-11-20T03:33:58.172Z"
+    },
+    "static": [
+      "399 tasks, 396 marked + 3 teacher prompts, 1032 fields; independent oracles passed",
+      "Resource UI static checks passed: 270 core, 300 levelled, 85 activities and unit references"
+    ],
+    "draftAnswerModels": 6
+  },
+  "research": {
+    "newDrafts": 6,
+    "totalHongKongDrafts": 10,
+    "publishedNewQuestions": 0
+  },
+  "correctedDuringLocalDevelopment": [
+    "Fixed unescaped apostrophe in source description before browser verification; initial syntax check failed."
+  ],
+  "limitations": [
+    "Drafts need full bank duplicate and prerequisite reviews",
+    "No pupil difficulty calibration, independent translation, physical printing or screen-reader review"
+  ]
+}

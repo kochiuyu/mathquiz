@@ -10,7 +10,7 @@ Record separately: official curriculum units; curriculum-linked practice types; 
 
 ## 2. Search for mathematical structures
 
-Start with a small, bounded batch across the requested grades and topics. Search for a missing way of reasoning, not just more worksheets. Useful query patterns include:
+Start with a small, bounded batch across the requested grades and topics. Search for gaps in basic practice, application, reasoning and investigation. More worksheets are useful when they add a missing representation, misconception check or practical context; do not classify every adaptation as reasoning. Useful query patterns include:
 
 - `site:nrich.maths.org primary [topic] all possibilities`
 - `site:tasks.illustrativemathematics.org [topic] explain compare`
@@ -19,6 +19,14 @@ Start with a small, bounded batch across the requested grades and topics. Search
 - `site:bca.hkeaa.edu.hk [grade] mathematics [year]` when assessment references are relevant.
 
 Open the actual task, teacher notes and relevant diagrams. Record the exact source title, page URL, access date, and item/page number for a PDF. A search snippet alone is insufficient. Prefer primary sources. Check the current source terms before using material; free access does not establish reuse rights.
+
+### Hong Kong source and quality checks
+
+- Search local university teaching projects, identifiable school resource pages and EDB materials as well as overseas task libraries. Useful queries: `site:eduhk.hk primary mathematics lesson plan`, `site:edu.hk 小學 數學 題目`, and `site:edb.gov.hk 小學 數學 工作紙`.
+- Read the actual example and answer, not only a directory or search snippet. Mark inaccessible and index-only sources as leads. Map historical unit codes to current prerequisites.
+- Independently check source answers. Record apparent errors and write a corrected independent task; a reputable host is not proof that every answer is correct.
+- Use **MathQuiz adaptations / MathQuiz改編練習** as the collection origin label. Keep year, topic, difficulty and task format separate. Retain the named source and original-adaptation explanation; the label does not imply a licence to copy.
+- Separate published tasks from the research queue. Do not increase live catalogue totals for unimplemented drafts.
 
 ## 3. Keep a research register
 
