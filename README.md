@@ -655,3 +655,12 @@ See the [release report and candidate decisions](planning/research-to-practice-r
 
 
 Release verification: **190 distinct browser cases verified locally and publicly** (85 new-example + 105 existing-collection cases), with one local and one public page-load timeout passing exact reruns. All 20 new independent answer checks and the existing 399-record checks passed; resource/shared-UI static gates passed. Pages deployment succeeded and all 25 initial release assets matched. See the evidence for development test fixes, exact runs and limits.
+
+
+## Substantial adaptation banks · 20 November 2026
+
+[Try MathQuiz adaptations](https://kochiuyu.github.io/mathquiz/reasoning.html): **16 additional levelled collections, 576 new bilingual questions** — twelve questions per level. Fourteen collections are Hong Kong-informed (504 questions); one is UK-informed and one Singapore-informed (36 each). Twelve existing single examples now have full banks; four collections use newly reviewed sources. The 192 seed contexts each have three distinct thinking demands, not merely larger numbers.
+
+The catalogue now offers **28 levelled collections plus 20 single examples**. Practice, pupil papers and worked answers are included, with links between introductory examples and their full banks. The separate curriculum totals remain **270 curriculum-linked + 30 TSA-informed types**.
+
+All 576 new questions and 1,224 answer fields passed independent checking. Local browser checks passed **233/233 + 85/85**. Public verification is pending. See the [progression and source report](planning/adaptation-bank-expansion.md), [exact evidence](planning/adaptation-bank-evidence.json), and [repeatable workflow](planning/question-research-workflow.md). Difficulty calibration, independent translation, screen-reader use and physical printing remain pending.

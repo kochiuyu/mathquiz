@@ -119,3 +119,18 @@ Reference implementation: [first reasoning release](reasoning-collection.md), [q
 - After deployed verification, change each candidate to published or resolved-covered, with its exact destination. Preserve historical research notes with a prominent status update.
 
 The 22-candidate batch is implemented as 20 single examples and two existing-practice links; see [the release report](research-to-practice-release.md). These are separate from the original 12 levelled collections and from the 300 curriculum/TSA practice types.
+
+
+## Scaling a reviewed example into a full bank
+
+Use [the sixteen-bank expansion](adaptation-bank-expansion.md) as the next reference implementation. A larger release should increase usable practice and reasoning variety, not just the number of source links.
+
+1. Select reviewed candidates whose structure supports varied contexts. Keep the source URL, actual review depth, closest existing skill and HK prerequisites. Add a new source/candidate only for a genuinely new reviewed entry; update an existing candidate when expanding it.
+2. Define Easy, Normal and Difficult demands before writing variants. Include changed unknowns, alternative constraints, complete bounded sets, error checks or contrasting valid/invalid cases. State where an advanced source has been deliberately bounded for younger pupils.
+3. Create twelve distinct seed contexts per bank. Check unique parameters and question fingerprints. Report seed contexts and levelled task counts separately: 12 contexts × 3 levels = 36 tasks, with translations counted once. Do not count those 36 as new source ideas.
+4. Write independent answer oracles and enumerate the entire bank. When enumeration and generator logic resemble each other, use a different representation: dynamic programming versus pack loops, boundary edges versus perimeter formula, a payment calendar versus direct multiplication. Test plausible errors and equivalent valid inputs.
+5. Preserve useful single examples as introductions, cross-link the full bank, and keep singles outside the levelled filter. Update directory, library, homepage and grade entry counts from the same catalogue. Keep official curriculum/TSA totals separate.
+6. Run full affected browser suites locally and publicly, with exact timeout reruns retained. Inspect actual diagrams, keys and narrow bilingual pages. Record source rights, review depth, regional totals, newly researched versus expanded candidates and unperformed human checks.
+7. Publish within existing authorization, verify live bytes and deployment, then mark candidates verified with their exact bank paths. Attach the release report and keep historical evidence intact.
+
+The sixteen-bank round adds 576 questions from 192 seed contexts: fourteen Hong Kong collections, one UK and one Singapore. Four are newly researched collections; twelve expand prior examples. Source review, implementation and pupil calibration are separate milestones.

@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-20",
+  "status": "Local verified; publication pending",
+  "base": "0c2211c26274133b83cb4f529e71eb8b3444c026",
+  "newCollections": 16,
+  "newQuestions": 576,
+  "newFields": 1224,
+  "seedContexts": 192,
+  "regions": {
+    "HK": 14,
+    "UK": 1,
+    "SG": 1
+  },
+  "expandedPriorCandidates": 12,
+  "newlyResearchedCandidates": 4,
+  "catalogue": {
+    "levelledCollections": 28,
+    "singleExamples": 20,
+    "resources": 48,
+    "taskRecords": 995,
+    "markedTasks": 991,
+    "teacherPrompts": 4,
+    "markedFields": 2322,
+    "curriculumLinked": 270,
+    "TSAInformed": 30
+  },
+  "static": {
+    "newQuestions": 576,
+    "newFields": 1224,
+    "independentOracles": 16,
+    "originalRecords": 399,
+    "singleExamples": 20,
+    "gates": [
+      "adaptation-banks-static",
+      "reasoning-static",
+      "adaptation-examples-static",
+      "resources-ui-static",
+      "ui-refresh-static"
+    ]
+  },
+  "local": {
+    "collections": {
+      "passed": 233,
+      "failed": 0,
+      "finished": "2026-11-20T05:06:28.178Z"
+    },
+    "singleExamples": {
+      "passed": 85,
+      "failed": 0,
+      "finished": "2026-11-20T05:05:08.337Z"
+    }
+  },
+  "developmentCorrections": [
+    "Removed duplicate whole-pack seed parameters before browser verification",
+    "Normal tally view uses a blank table instead of revealing category counts",
+    "Normalised Unicode source URLs in browser assertions",
+    "Clarified HK020 Chinese billing-cycle heading and level-specific worked explanation after visual inspection"
+  ],
+  "visualSamples": [
+    "Chinese mobile recurring costs",
+    "Chinese mobile raw-record tally",
+    "English rectangle worked key",
+    "English budget-sector worked key"
+  ],
+  "limitations": [
+    "Classroom difficulty calibration",
+    "Independent human translation review",
+    "Physical printing",
+    "Screen-reader use",
+    "Cross-device checks"
+  ]
+}

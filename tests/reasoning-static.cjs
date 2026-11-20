@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const original=require('../reasoning-data.js');const B={...original,topics:original.topics.filter(t=>!t.single)};let tasks=0,fields=0;const ids=new Set();
+const original=require('../reasoning-data.js');const B={...original,topics:original.topics.filter(t=>!t.single&&!t.bank)};let tasks=0,fields=0;const ids=new Set();
 const eq=(a,b,msg)=>assert.deepEqual(a,b,msg),num=B.numeric;
 eq(B.topics.length,12);eq(B.topics.filter(t=>t.kind==='new').length,9);eq(B.topics.filter(t=>t.kind==='extension').length,2);
 function allPairs(digits){const pairs=[];for(let a=10;a<100;a++)for(let b=a;b<100;b++)if([...String(a)+String(b)].sort().join('')===[...digits].sort().join(''))pairs.push([a,b]);return pairs;}
