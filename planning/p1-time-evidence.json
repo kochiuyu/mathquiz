@@ -88,10 +88,58 @@
       "firstAnswerBottom": 768.84375,
       "horizontalOverflow": false,
       "screenshot": "browser-screenshots/screenshot-2026-11-20T11-09-46-755Z-f7f5dc6c.png"
+    },
+    "additionalVisualCheck": {
+      "page": "Chinese Difficult Sunday-first calendar",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 728.4453125,
+      "horizontalOverflow": false,
+      "screenshot": "browser-screenshots/screenshot-2026-11-20T11-12-10-742Z-3fb4230f.png"
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "runtimeCommit": "e6f9b7b649b64c8578d6aed67e909ffa822b2cb1",
+    "pagesRun": 44725596241,
+    "deployment": "success",
+    "fullRun": {
+      "done": true,
+      "passed": 141,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal"
+        },
+        {
+          "name": "Ruler mobile teaching en",
+          "error": "Test frame reset timeout"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Ruler mobile teaching en",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "entryReadback": {
+      "language": "zh",
+      "pathways": 10,
+      "lessons": 30,
+      "title": "\u00e6\u2122\u201a\u00e9\u2013\u201c\u00e8\u02c6\u2021\u00e6\u0153\u02c6\u00e6\u203a\u2020",
+      "firstLesson": "readclock"
+    },
+    "runnerNotes": "Navigation/evaluation calls timed out while the runner continued. It was read without reloading until completion. No partial run is recorded as passed.",
+    "distinctCasesVerified": 143,
+    "runtimeAssetsMatched": 19
   },
   "sources": [
     {
