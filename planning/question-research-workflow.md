@@ -28,6 +28,14 @@ Open the actual task, teacher notes and relevant diagrams. Record the exact sour
 - Use **MathQuiz adaptations / MathQuiz改編練習** as the collection origin label. Keep year, topic, difficulty and task format separate. Retain the named source and original-adaptation explanation; the label does not imply a licence to copy.
 - Separate published tasks from the research queue. Do not increase live catalogue totals for unimplemented drafts.
 
+### UK and Singapore sources
+
+- Use NCETM and Cambridge NRICH for varied representations and explanations; use identifiable Singapore school teaching materials for bar models and problem-solving methods. Start with the [reviewed regional source shortlist](hk-uk-singapore-sources.md).
+- Search patterns include `site:ncetm.org.uk primary assessment [topic]`, `site:nrich.maths.org [topic]`, and `site:moe.edu.sg mathematics model drawing parents`. Open the actual resource: indexed PDFs can be removed or replaced.
+- Record whether a source is a question, a worked example, a method page or only a directory. Do not count a teaching-method page as collected questions.
+- Keep source country and source year label separate from the suggested HK grade. Review prerequisites before adopting either the task or its claimed difficulty.
+- Record copyright ownership for text and diagrams separately where the source distinguishes them. Original adaptation is the default; accessible does not mean freely reusable.
+
 ## 3. Keep a research register
 
 Use the existing shared `mathquiz_question_candidates` table. Its stable candidate key links research to implementation. Record title, suggested grade, source title/URL, review date, status, overlap notes, original English/Traditional Chinese example, answer, progression and adaptation notes. Never store credentials or pupil data.
