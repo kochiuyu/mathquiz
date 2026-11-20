@@ -1,7 +1,7 @@
 {
   "date": "2026-11-20",
   "baselineCommit": "b2b6786d9aecf05c87e4abe6abfffc39fb444981",
-  "status": "local verified; deployment pending",
+  "status": "published and verified",
   "scope": "Bilingual adaptation naming, search aliases, source disclosure and research workflow; no question bank changes",
   "local": {
     "browser": {
@@ -27,5 +27,78 @@
   "limitations": [
     "Drafts need full bank duplicate and prerequisite reviews",
     "No pupil difficulty calibration, independent translation, physical printing or screen-reader review"
-  ]
+  ],
+  "runtimeCommit": "2e1fb0091d5ea87ad88b9e5d1e6e074148bd5e3e",
+  "deployment": {
+    "id": 44668994621,
+    "conclusion": "success"
+  },
+  "public": {
+    "browser": {
+      "done": true,
+      "passed": 105,
+      "failed": 0,
+      "failures": [],
+      "started": "2026-11-20T03:38:48.315Z",
+      "finished": "2026-11-20T03:39:38.182Z"
+    },
+    "publishedFileHashes": [
+      {
+        "path": "coverage.html",
+        "matched": true,
+        "sha256": "a306b2d626c351d321abecf12ea96fab6619c3eb9a19174ae831599bab891878"
+      },
+      {
+        "path": "index.html",
+        "matched": true,
+        "sha256": "de73e2f45493aab1e95fccbe97893440e31ff08f0db1bb95054a5a7a66c036f7"
+      },
+      {
+        "path": "README.md",
+        "matched": true,
+        "sha256": "95ed5207d51d4f2b1c67c7098d6af76ee0026f2a8a6253bbf763a50da6c178e0"
+      },
+      {
+        "path": "reasoning.html",
+        "matched": true,
+        "sha256": "67b1f6046e792e372cda5b438d7dd4ffd30ff04c4fdbabbfd94e4fb12f6c44fc"
+      },
+      {
+        "path": "reasoning.js",
+        "matched": true,
+        "sha256": "0ff2acfe62b0905c5a6b42afcbc2c9b478d126940e28c6abea1cb380bbb0086d"
+      },
+      {
+        "path": "resource-browser.js",
+        "matched": true,
+        "sha256": "cc5f1e5c1f0bc4eb1203b97d738f4a268f9e4fe3901466e1d538413ef34c7e29"
+      },
+      {
+        "path": "planning/adaptations-hk-research.md",
+        "matched": true,
+        "sha256": "9de50da4347ca632c8863c3545b79298047cc388ca692b53553ff0ffec6e6116"
+      },
+      {
+        "path": "planning/adaptations-release-evidence.json",
+        "matched": true,
+        "sha256": "3699ea01b2a6fab6a2cda105f36d1bb8d4d4feb65e16081aa95132bde374621b"
+      },
+      {
+        "path": "planning/question-research-workflow.md",
+        "matched": true,
+        "sha256": "9e90af2212de67ab1c2236d266b5a9ecfcc20d26fa858e9093c038dd19609355"
+      },
+      {
+        "path": "tests/reasoning-browser.js",
+        "matched": true,
+        "sha256": "e78a196a2a5431bf1a036f3c023ebb6582a629c9f31b97b3e6fb0ffde46dc906"
+      },
+      {
+        "path": "tests/resources-ui-static.cjs",
+        "matched": true,
+        "sha256": "e868e61b1a7b2318856c22ab0fcb0e44bf68aaf24386da129ffa081f0e6d388f"
+      }
+    ],
+    "mobileReview": "Chinese local and English live source filter/chip screenshots inspected; new text fits; language link retains source and search; 12 cards present."
+  }
 }

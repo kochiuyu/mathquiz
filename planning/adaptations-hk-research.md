@@ -83,6 +83,6 @@ Progression should move from a diagram or supplied case, to independent applicat
 
 ## Verification
 
-Local: all **105 collection browser cases passed**, including new bilingual naming and search assertions; resource static checks and all 399 task/1,032 answer-field checks passed. Source renaming does not change question generation or scoring. Public verification is pending deployment; see [release evidence](adaptations-release-evidence.json).
+Local: all **105 collection browser cases passed**, including new bilingual naming and search assertions; resource static checks and all 399 task/1,032 answer-field checks passed. Source renaming does not change question generation or scoring. Public: all **105 collection browser cases passed**, zero failures, on runtime `2e1fb0091d5ea87ad88b9e5d1e6e074148bd5e3e`; Pages deployment succeeded and all 11 published-file hashes matched. Chinese local and English public mobile labels were visually reviewed. See [release evidence](adaptations-release-evidence.json).
 
 Limitations: no pupil calibration, independent translation review, physical printing or screen-reader review. Full novelty and prerequisite review is still required for the draft candidates.
