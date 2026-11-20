@@ -64,7 +64,85 @@
     "distinctVerified": 238
   },
   "public": {
-    "status": "pending"
+    "foundations": {
+      "done": true,
+      "passed": 17,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Foundation complete partstart zh",
+          "error": "Navigation timeout learn.html?path=partstart&lang=zh"
+        }
+      ]
+    },
+    "student": {
+      "done": true,
+      "passed": 185,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Numbers to 100 complete en",
+          "error": "Test frame reset timeout"
+        },
+        {
+          "name": "Money mobile teaching zh",
+          "error": "Navigation timeout learn.html?lesson=coinvalues&stage=practice&level=difficult&lang=zh"
+        },
+        {
+          "name": "Solids diagrams and activity",
+          "error": "Navigation timeout learn.html?lesson=solidobjects&stage=practice&level=normal&lang=zh"
+        }
+      ]
+    },
+    "map": {
+      "done": true,
+      "passed": 16,
+      "failed": 0
+    },
+    "inquiry": {
+      "done": true,
+      "passed": 15,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Inquiry safe text and limits",
+          "error": "Navigation timeout learn.html?path=first"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Foundation complete partstart zh",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Numbers to 100 complete en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Money mobile teaching zh",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Solids diagrams and activity",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Inquiry safe text and limits",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctVerified": 238
   },
   "runtimeHashes": {
     "index.html": "433f9826511dfb02180fc0a56723ecbac7b0b3356f224397cc6ccd1bd2707c2d",
@@ -117,5 +195,251 @@
     "contentWidth": 320,
     "height": 812,
     "horizontalOverflow": false
-  }
+  },
+  "publication": {
+    "base": "3bcad2d33e35d1b89df697b9efffb169f607753e",
+    "baseTree": "7beee7c75da0aa53bb026f40b6d604ab7eebf303",
+    "runtime": "2a2e8b32065e87854e7b65278bb7232c7a798c9d",
+    "runtimeTree": "5a29e7e336a7ffba2527ce52401ec0e859b9297b",
+    "pagesRun": 44758095710,
+    "pagesConclusion": "success"
+  },
+  "deployedReadback": [
+    {
+      "path": "index.html",
+      "sha256": "433f9826511dfb02180fc0a56723ecbac7b0b3356f224397cc6ccd1bd2707c2d",
+      "expected": "433f9826511dfb02180fc0a56723ecbac7b0b3356f224397cc6ccd1bd2707c2d",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-data.js",
+      "sha256": "497e5374a943caff31eafbdfc53a1ab498b5294c7016757e3eddd8f4c51ce6aa",
+      "expected": "497e5374a943caff31eafbdfc53a1ab498b5294c7016757e3eddd8f4c51ce6aa",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-foundations.js",
+      "sha256": "e30de09e48705aaa4fb5311867f82b104a133ac19b4dd57b6fffa0917acc1873",
+      "expected": "e30de09e48705aaa4fb5311867f82b104a133ac19b4dd57b6fffa0917acc1873",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-inquiry.js",
+      "sha256": "616e67a9b588bdb50050532bd2199916b018859da3fcc802c86b3b8a3cb6db11",
+      "expected": "616e67a9b588bdb50050532bd2199916b018859da3fcc802c86b3b8a3cb6db11",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-map.js",
+      "sha256": "5fef4585a58fd399e19539475da243a79d0fc4cd7f663946f1cdb80a8695eeac",
+      "expected": "5fef4585a58fd399e19539475da243a79d0fc4cd7f663946f1cdb80a8695eeac",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-store.js",
+      "sha256": "a0de6fd72d50ada559af2c7ac342b73059994054977f72b11d76a167c11b094a",
+      "expected": "a0de6fd72d50ada559af2c7ac342b73059994054977f72b11d76a167c11b094a",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.css",
+      "sha256": "471945af0af56160b5c054dd695ecefcda9374af30709e26dbb41679b48271dc",
+      "expected": "471945af0af56160b5c054dd695ecefcda9374af30709e26dbb41679b48271dc",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.html",
+      "sha256": "56a79e66d3a5a3e4e4e5bd17eb017d06685e3a7c7c886051d7898df90c09e8dc",
+      "expected": "56a79e66d3a5a3e4e4e5bd17eb017d06685e3a7c7c886051d7898df90c09e8dc",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.js",
+      "sha256": "3d94a312379909ffd68bfc37d61fa77690945e1030ed9012c82b89339a61a1d9",
+      "expected": "3d94a312379909ffd68bfc37d61fa77690945e1030ed9012c82b89339a61a1d9",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/calculate-static.cjs",
+      "sha256": "ee08f43fbc162b3be244ee9bcee5f0b086a364ed64030dcbfc5e579408addd16",
+      "expected": "ee08f43fbc162b3be244ee9bcee5f0b086a364ed64030dcbfc5e579408addd16",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/flat-static.cjs",
+      "sha256": "9d92913827c4c29b921de0670334ba292587054b8fc93f453487357298964403",
+      "expected": "9d92913827c4c29b921de0670334ba292587054b8fc93f453487357298964403",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/foundations-browser.js",
+      "sha256": "952fb7fc6b726b060f9f844f6dd5d14f56bed2e25821f368592225decc572340",
+      "expected": "952fb7fc6b726b060f9f844f6dd5d14f56bed2e25821f368592225decc572340",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/foundations-static.cjs",
+      "sha256": "315a12bbd68e5ad132223dc91be0c9871e005f0c818263fdaeca81ed105d037f",
+      "expected": "315a12bbd68e5ad132223dc91be0c9871e005f0c818263fdaeca81ed105d037f",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/foundations.html",
+      "sha256": "b90fb2200e4b5b8e2bb2ae24788866beefd709f8acddbec9f10da1aa71611202",
+      "expected": "b90fb2200e4b5b8e2bb2ae24788866beefd709f8acddbec9f10da1aa71611202",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/groups-static.cjs",
+      "sha256": "83549308e7664a35316df0a37d3a3351b1bda206eb768c5c339ef78052fcce0f",
+      "expected": "83549308e7664a35316df0a37d3a3351b1bda206eb768c5c339ef78052fcce0f",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/hundred-static.cjs",
+      "sha256": "ee3176e7c24e40a60686a69783b40584a5149d7f5489b6d748f161edd8f668f0",
+      "expected": "ee3176e7c24e40a60686a69783b40584a5149d7f5489b6d748f161edd8f668f0",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/inquiry-static.cjs",
+      "sha256": "83f8f3bc16d70828a52d3eb1b823c40f02781017748b69104171ca61f761a661",
+      "expected": "83f8f3bc16d70828a52d3eb1b823c40f02781017748b69104171ca61f761a661",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/inquiry.html",
+      "sha256": "396b6f2532b9f78b429833fe996a26e9137b3a7a0f16d0a0eb85a20e0443dc71",
+      "expected": "396b6f2532b9f78b429833fe996a26e9137b3a7a0f16d0a0eb85a20e0443dc71",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/learning-map-browser.js",
+      "sha256": "8576b6cafe8a41b15803a7a5020bac4d4c998d1de85609e17548f4d83371c2d5",
+      "expected": "8576b6cafe8a41b15803a7a5020bac4d4c998d1de85609e17548f4d83371c2d5",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/learning-map-static.cjs",
+      "sha256": "db7d06bb8da353c83a79bb7173ae1f3fdad7c060cc1a5f529754fb791ecdb1ec",
+      "expected": "db7d06bb8da353c83a79bb7173ae1f3fdad7c060cc1a5f529754fb791ecdb1ec",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/learning-map.html",
+      "sha256": "cf0126861526e5c838d2e4f48183eedb9d33c3e95dc0f1738f91c4e23fbc8846",
+      "expected": "cf0126861526e5c838d2e4f48183eedb9d33c3e95dc0f1738f91c4e23fbc8846",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/measure-static.cjs",
+      "sha256": "af00422166aa5fffc8d9f0ce899063f052192b261aa3bc63f13322344053fd34",
+      "expected": "af00422166aa5fffc8d9f0ce899063f052192b261aa3bc63f13322344053fd34",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/money-static.cjs",
+      "sha256": "204e168ea1ce1c041880610906b2d77c20630f1d1c839e0f019d99f637cecd87",
+      "expected": "204e168ea1ce1c041880610906b2d77c20630f1d1c839e0f019d99f637cecd87",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/positions-static.cjs",
+      "sha256": "928dc0f8b2db1780871f02f08fc344a66e13da34d10269bcee9a49e1267f3413",
+      "expected": "928dc0f8b2db1780871f02f08fc344a66e13da34d10269bcee9a49e1267f3413",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/relations-static.cjs",
+      "sha256": "9578e0324d9652cdd2d36409476bfc7283b5c8b9a31218f01d10aba47c089cd9",
+      "expected": "9578e0324d9652cdd2d36409476bfc7283b5c8b9a31218f01d10aba47c089cd9",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/ruler-static.cjs",
+      "sha256": "908662aa98a09f28007f9a77e485c79912cbdec5666753d598c7d382def37310",
+      "expected": "908662aa98a09f28007f9a77e485c79912cbdec5666753d598c7d382def37310",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/solids-static.cjs",
+      "sha256": "78677b25d5cead6f47491d2d1c5884634d7cb331ac700b90da0bc936039faa6e",
+      "expected": "78677b25d5cead6f47491d2d1c5884634d7cb331ac700b90da0bc936039faa6e",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student-blocked.html",
+      "sha256": "aa2516446b512efe22617ee880ad667e179af510ea3d22c53efc567376fa2701",
+      "expected": "aa2516446b512efe22617ee880ad667e179af510ea3d22c53efc567376fa2701",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student-browser.js",
+      "sha256": "5373bca521912a8640f3f554d84aae0375689a26142175add395dc1980627785",
+      "expected": "5373bca521912a8640f3f554d84aae0375689a26142175add395dc1980627785",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student-static.cjs",
+      "sha256": "4ba892b07a43989873ace65d478eeac752b832af52a1210c949793e1b80127e3",
+      "expected": "4ba892b07a43989873ace65d478eeac752b832af52a1210c949793e1b80127e3",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student.html",
+      "sha256": "c545f9cf72bcdfabae4b0bc2de4979c123e50f8c3765c4b5d90e2c07598d2291",
+      "expected": "c545f9cf72bcdfabae4b0bc2de4979c123e50f8c3765c4b5d90e2c07598d2291",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/subtract-static.cjs",
+      "sha256": "07c5244af7aa8c9c3af4299d0b3bb1b6b161bea614f4f949e94d1783ee2dd172",
+      "expected": "07c5244af7aa8c9c3af4299d0b3bb1b6b161bea614f4f949e94d1783ee2dd172",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/time-static.cjs",
+      "sha256": "19f32aa6aa0305159ead94e6bb9619db9144acadb8d0122c72a635117017a601",
+      "expected": "19f32aa6aa0305159ead94e6bb9619db9144acadb8d0122c72a635117017a601",
+      "matches": true,
+      "retryErrors": []
+    }
+  ],
+  "capacity": {
+    "maxCharacters": 271936,
+    "fullWorstEscapedThreePupils": 117646
+  },
+  "preservedEarlierInvestigations": 13
 }

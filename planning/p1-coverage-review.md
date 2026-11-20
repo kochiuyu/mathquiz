@@ -8,7 +8,7 @@ Six additive lessons now address the guided gaps: `countsteps` (forward/backward
 
 After the existing count and tens lessons, new pupils are recommended these two foundation topics before `add`. The first-topic overview also displays this bridge. Existing pupils already working on addition keep their saved route; they can revisit the new topics. Earlier quizzes and all39 existing lesson/question payloads are unchanged. The inventory is now15 pathways,45 lessons,405 practice items and15 investigations.
 
-The early-number guided-teaching gaps identified below are now addressed by these additions. Physical numeral writing, actual handling, oral fluency, free estimation, independent column layout and transfer still require observation. The objective table below preserves the original audit context; this update supplies the follow-up evidence for1N1.2–1N1.5 and1N2.1–1N2.5. It is not a classroom validation or a claim of complete oral fact coverage. See [foundation release](p1-foundations.md).
+The early-number guided-teaching gaps identified in the original review are now addressed by these additions. Physical numeral writing, actual handling, oral fluency, free estimation, independent column layout and transfer still require observation. The objective table below includes the new evidence and retains the remaining limits. It is not a classroom validation or a claim of complete oral fact coverage. See [foundation release](p1-foundations.md).
 
 ## Decision about 3D and 2D
 
@@ -22,7 +22,7 @@ Source: [EDB explanatory notes](https://www.edb.gov.hk/attachment/en/curriculum-
 
 | Branch | Suggested connections | Entry and limits |
 |---|---|---|
-| Numbers and calculating | First numbers → parts/taking away → numbers to 100 → groups → positions/pairs/differences → calculation | This is the existing broad-topic order. Foundational teaching within it still needs the refinements below. Useful-first links offer targeted revisits. |
+| Numbers and calculating | Count/tens → counting, places and pairs → parts, joining and zero → addition/taking away → numbers to 100 → groups → later positions/pairs/differences → calculation | The new early-number bridge comes before addition for new pupils. Existing addition work resumes unchanged. Useful-first links offer targeted revisits. |
 | Shapes and positions | Real solids → flat outlines/shapes → relative positions | Available immediately; no requirement to finish arithmetic. Positions also accepts direct entry. |
 | Everyday maths | Compare lengths → centimetres; money and time have separate entry points | Counting supports measurement; tens/group counting supports coin values. Clocks do not require a completed money quiz. |
 | Inquiry | Predict, try, notice and explain within every topic | Optional notes are self-reports. Oral/drawn explanations and actual manipulation remain adult-observed. |
@@ -36,15 +36,15 @@ The grouped topic chooser is collapsed by default so the selected lessons appear
 | Objective | Focus | Guided lessons / screen evidence | Status and remaining evidence |
 |---|---|---|---|
 | 1N1.1 | Numbers 1–20 | `count`, `tens` | P: screen counting/reading; dictation, writing and taking a specified real quantity need early-number sheet A. |
-| 1N1.2 | Forward/backward counting | `add`; later `order` | P: forward counting is used; backward-by-one within 20 lacks its own guided sequence. Early-number A supplies oral tasks. |
-| 1N1.3 | Quantity and position | `position`, `difference` | G: digital samples; early-number B adds object ordering and more/fewer language. Introduce the within-20 part earlier. |
-| 1N1.4 | Odd/even to 20 | `parity` | G: pairing samples; early-number C supplies actual pairing. This lesson also extends to two-digit numbers, so early and later content should be separated. |
-| 1N1.5 | Parts and wholes | `bonds`, `tens` | G: part/whole samples; early-number D covers physical composition and spoken/symbol records. The main route currently reaches `add` before `bonds`; a useful-first link is mitigation, not a completed sequence repair. |
-| 1N2.1 | Addition/subtraction meanings | `add`, `takeaway`, `difference` | G: joining, adding, removing and comparison samples; early-number E asks for oral explanations before records. |
+| 1N1.2 | Forward/backward counting | `countsteps`; later `order` | G: dedicated by-one teaching within 20, across 10 and back from 20. Oral fluency still needs observation through early-number A. |
+| 1N1.3 | Quantity and position | `order20`; later `position`, `difference` | G: within-20 position versus quantity now appears early; early-number B adds real ordering and more/fewer language. |
+| 1N1.4 | Odd/even to 20 | `pair20`; later `parity` | G: early actual-pair diagrams within 20 are separate from later two-digit extension. Early-number C supplies real pairing. |
+| 1N1.5 | Parts and wholes | `split18`, `bonds`, `tens` | G: two one-digit parts with totals 2–18 taught before addition on the new-pupil route. Early-number D covers physical composition and spoken/symbol records. |
+| 1N2.1 | Addition/subtraction meanings | `split18`, `swapjoin`, `zeromoves`, `add`, `takeaway`, `difference` | G: move/say before symbols, joining, adding, removing and comparison samples; early-number E asks for oral explanations before records. |
 | 1N2.2 | Basic oral facts | `add`, `takeaway`, `partsback` | P: typed samples cannot establish oral facility or complete fact coverage. Early-number E provides spoken calculation samples; broader oral fact sampling remains needed. |
-| 1N2.3 | Zero | `count`, `takeaway` | P: empty set and subtraction cases taught. Explicit guided zero-addition cases are missing; early-number F includes them. |
+| 1N2.3 | Zero | `zeromoves`, `count`, `takeaway` | G: explicit 0+n, n+0, n−0 and n−n teaching and practice. Early-number F observes actual actions. |
 | 1N2.4 | Inverse relationship | `partsback` | G: within-ten relationships; early-number G observes rebuilding the whole. |
-| 1N2.5 | Addition order | `bonds`; subtract investigation | P: swapping parts is mentioned; no dedicated guided comparison of swapped addends and subtraction contrast. Early-number G supplies the practical task. |
+| 1N2.5 | Addition order | `swapjoin`, `bonds`; parts investigation | G: dedicated comparison of swapped addends and subtraction contrast, without negative numbers. Early-number G supplies the practical task. |
 | 1N3.1 | Numbers 21–100 | `bundles`, `order` | P: screen samples include 100; numbers-oral sheet adds reading, object counting and numeral dictation. |
 | 1N3.2 | Tens and ones | `bundles` | G: bundles, zeros and 100 boundary; actual bundling in number-sense sheet and hundred investigation. |
 | 1N3.3 | Comparison and ordering | `compare`, `order` | G: tens-first comparisons and both orders; spoken explanation still needs observation. |
@@ -80,7 +80,7 @@ The grouped topic chooser is collapsed by default so the selected lessons appear
 | 1S2.4 | Making flat shapes | `flatnames`, `joinshapes` | H: introduction only; draw/make all required families in 2D activity. |
 | 1S2.5 | Combining shapes | `joinshapes` | H: screen examples; actual construction, rotation and explanation in 2D activity. |
 | 1S3.1 | Relative position | `leftright`, `overunder`, `frontbetween` | G: own-viewpoint diagrams; describe real arrangements in directions activity. |
-| 1F1 | Integrated inquiry | All 13 pathway investigations | H: prompts and optional notes present; adult observes attempts, reasoning and communication. No hours or achievement certified. |
+| 1F1 | Integrated inquiry | All 15 pathway investigations | H: prompts and optional notes present; adult observes attempts, reasoning and communication. No hours or achievement certified. |
 
 ### Practical resources inspected
 
@@ -89,7 +89,7 @@ The grouped topic chooser is collapsed by default so the selected lessons appear
 - [Length I](../activities/p1-length-distance-i.html), [length II](../activities/p1-length-distance-ii.html), [money](../activities/p1-money.html), [time](../activities/p1-time.html).
 - [3D objects](../activities/p1-3d-shapes.html), [2D drawing/making](../activities/p1-2d-shapes.html), [positions](../activities/p1-directions.html), [inquiry](../activities/p1-inquiry.html).
 
-The adult catalogue also retains 38 P1 selectable skills and their fixed-level/Smart practice. Those banks supply additional exercises, not an automatically taught or assessed objective. The 13 pathway checks sample six questions each; they are not objective-complete examinations. Their 5/6 recommendation threshold and overlapping retake sets remain provisional.
+The adult catalogue also retains 38 P1 selectable skills and their fixed-level/Smart practice. Those banks supply additional exercises, not an automatically taught or assessed objective. The 15 pathway checks sample six questions each; they are not objective-complete examinations. Their 5/6 recommendation threshold and overlapping retake sets remain provisional.
 
 ## Work still needed, in priority order
 
