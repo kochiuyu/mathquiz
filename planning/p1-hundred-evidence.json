@@ -20,7 +20,24 @@
     "Initial local 29/30: resume test expected Difficult despite Easy unfinished. Fixed the test prerequisite; final full run 30/30."
   ],
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctCases": 30,
+    "initialRun": {
+      "passed": 29,
+      "failed": 1,
+      "failure": {
+        "case": "Quiz gate and malformed route",
+        "error": "Navigation timeout learn.html?lesson=add&stage=quiz"
+      }
+    },
+    "exactRerun": {
+      "case": "Quiz gate and malformed route",
+      "passed": 1,
+      "failed": 0
+    },
+    "hashMatches": 11,
+    "runnerNavigation": "The initial browser navigation timed out while tests continued. Read the running result without reloading.",
+    "visualCheck": "Public Chinese mobile overview: two choices, correct Numbers-to-100 start link and no horizontal overflow."
   },
   "hashEncoding": "UTF-8/LF as uploaded",
   "hashes": {
@@ -41,5 +58,10 @@
     "Difficulty and threshold not pupil-calibrated",
     "No independent translation or screen-reader listening review",
     "Broader 267-case shared browser suite not rerun"
-  ]
+  ],
+  "runtimeCommit": "22e61595c80246342eb04ba536400362774e7c15",
+  "deployment": {
+    "runId": 44689173593,
+    "conclusion": "success"
+  }
 }
