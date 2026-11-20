@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-20",
+  "base": "3bcad2d33e35d1b89df697b9efffb169f607753e",
+  "staticGates": 18,
+  "independentNewQuestionChecks": 864,
+  "local": {
+    "foundations": {
+      "done": true,
+      "passed": 18,
+      "failed": 0
+    },
+    "map": {
+      "done": true,
+      "passed": 16,
+      "failed": 0
+    },
+    "student": {
+      "done": true,
+      "passed": 186,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Subtraction layout zh 320",
+          "error": "Navigation timeout learn.html?path=subtract&lang=zh"
+        },
+        {
+          "name": "Full three-pupil record reload",
+          "error": "lessons lost",
+          "cause": "Test expected39; inventory45. Assertion corrected; actual storage preserved."
+        }
+      ]
+    },
+    "inquiry": {
+      "done": true,
+      "passed": 15,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Inquiry hidden during checks",
+          "error": "Navigation timeout learn.html?lesson=columnsubtract&stage=quiz"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Subtraction layout zh 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Full three-pupil record reload",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Inquiry hidden during checks",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctVerified": 238
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeHashes": {
+    "index.html": "433f9826511dfb02180fc0a56723ecbac7b0b3356f224397cc6ccd1bd2707c2d",
+    "learn-data.js": "497e5374a943caff31eafbdfc53a1ab498b5294c7016757e3eddd8f4c51ce6aa",
+    "learn-foundations.js": "e30de09e48705aaa4fb5311867f82b104a133ac19b4dd57b6fffa0917acc1873",
+    "learn-inquiry.js": "616e67a9b588bdb50050532bd2199916b018859da3fcc802c86b3b8a3cb6db11",
+    "learn-map.js": "5fef4585a58fd399e19539475da243a79d0fc4cd7f663946f1cdb80a8695eeac",
+    "learn-store.js": "a0de6fd72d50ada559af2c7ac342b73059994054977f72b11d76a167c11b094a",
+    "learn.css": "471945af0af56160b5c054dd695ecefcda9374af30709e26dbb41679b48271dc",
+    "learn.html": "56a79e66d3a5a3e4e4e5bd17eb017d06685e3a7c7c886051d7898df90c09e8dc",
+    "learn.js": "3d94a312379909ffd68bfc37d61fa77690945e1030ed9012c82b89339a61a1d9",
+    "tests/calculate-static.cjs": "ee08f43fbc162b3be244ee9bcee5f0b086a364ed64030dcbfc5e579408addd16",
+    "tests/flat-static.cjs": "9d92913827c4c29b921de0670334ba292587054b8fc93f453487357298964403",
+    "tests/foundations-browser.js": "952fb7fc6b726b060f9f844f6dd5d14f56bed2e25821f368592225decc572340",
+    "tests/foundations-static.cjs": "315a12bbd68e5ad132223dc91be0c9871e005f0c818263fdaeca81ed105d037f",
+    "tests/foundations.html": "b90fb2200e4b5b8e2bb2ae24788866beefd709f8acddbec9f10da1aa71611202",
+    "tests/groups-static.cjs": "83549308e7664a35316df0a37d3a3351b1bda206eb768c5c339ef78052fcce0f",
+    "tests/hundred-static.cjs": "ee3176e7c24e40a60686a69783b40584a5149d7f5489b6d748f161edd8f668f0",
+    "tests/inquiry-static.cjs": "83f8f3bc16d70828a52d3eb1b823c40f02781017748b69104171ca61f761a661",
+    "tests/inquiry.html": "396b6f2532b9f78b429833fe996a26e9137b3a7a0f16d0a0eb85a20e0443dc71",
+    "tests/learning-map-browser.js": "8576b6cafe8a41b15803a7a5020bac4d4c998d1de85609e17548f4d83371c2d5",
+    "tests/learning-map-static.cjs": "db7d06bb8da353c83a79bb7173ae1f3fdad7c060cc1a5f529754fb791ecdb1ec",
+    "tests/learning-map.html": "cf0126861526e5c838d2e4f48183eedb9d33c3e95dc0f1738f91c4e23fbc8846",
+    "tests/measure-static.cjs": "af00422166aa5fffc8d9f0ce899063f052192b261aa3bc63f13322344053fd34",
+    "tests/money-static.cjs": "204e168ea1ce1c041880610906b2d77c20630f1d1c839e0f019d99f637cecd87",
+    "tests/positions-static.cjs": "928dc0f8b2db1780871f02f08fc344a66e13da34d10269bcee9a49e1267f3413",
+    "tests/relations-static.cjs": "9578e0324d9652cdd2d36409476bfc7283b5c8b9a31218f01d10aba47c089cd9",
+    "tests/ruler-static.cjs": "908662aa98a09f28007f9a77e485c79912cbdec5666753d598c7d382def37310",
+    "tests/solids-static.cjs": "78677b25d5cead6f47491d2d1c5884634d7cb331ac700b90da0bc936039faa6e",
+    "tests/student-blocked.html": "aa2516446b512efe22617ee880ad667e179af510ea3d22c53efc567376fa2701",
+    "tests/student-browser.js": "5373bca521912a8640f3f554d84aae0375689a26142175add395dc1980627785",
+    "tests/student-static.cjs": "4ba892b07a43989873ace65d478eeac752b832af52a1210c949793e1b80127e3",
+    "tests/student.html": "c545f9cf72bcdfabae4b0bc2de4979c123e50f8c3765c4b5d90e2c07598d2291",
+    "tests/subtract-static.cjs": "07c5244af7aa8c9c3af4299d0b3bb1b6b161bea614f4f949e94d1783ee2dd172",
+    "tests/time-static.cjs": "19f32aa6aa0305159ead94e6bb9619db9144acadb8d0122c72a635117017a601"
+  },
+  "limitations": [
+    "Pupil calibration, independent translation, screen-reader listening and printing pending.",
+    "Practical prompts are not observed achievement.",
+    "No full P1 mastery claim; no guided P2 added."
+  ],
+  "developmentCorrections": [
+    "Compacted English parts diagram at320px.",
+    "Updated stale39-lesson assertion to45.",
+    "Kept ordinal diagrams and quantity text for picture-free questions; hid whole totals when they are the answer."
+  ],
+  "visual": {
+    "screenshot": "browser-screenshots/screenshot-2026-11-20T14-49-53-066Z-a13770d2.png",
+    "ChineseZeroActionBottom": 588.40625,
+    "contentWidth": 320,
+    "height": 812,
+    "horizontalOverflow": false
+  }
+}

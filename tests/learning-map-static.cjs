@@ -1,5 +1,5 @@
 const A=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),D=require('../learn-data.js'),J=require('../learn-map.js');
-const all=J.groups.flatMap(g=>g.paths);A.equal(all.length,13);A.equal(new Set(all).size,13);A.deepEqual([...all].sort(),D.paths.map(p=>p.id).sort());
+const all=J.groups.flatMap(g=>g.paths);A.equal(all.length,15);A.equal(new Set(all).size,15);A.deepEqual([...all].sort(),D.paths.map(p=>p.id).sort());
 for(const g of J.groups){A(g.title.every(Boolean)&&g.intro.every(Boolean));for(const id of g.paths){A(Array.isArray(J.before[id]));for(const lesson of J.before[id])A(D.allLessons.some(l=>l.id===lesson));if(J.next[id])A(g.paths.includes(J.next[id]),'cross-branch jump');let seen=new Set(),p=id;while(p){A(!seen.has(p),'recommendation cycle');seen.add(p);p=J.next[p];}}}
 A.equal(J.next.solids,'flat');A.equal(J.next.flat,'positions');A.equal(J.next.measure,'ruler');for(const id of ['calculate','ruler','money','time','positions'])A(!J.next[id]);
 for(const p of Object.values(J.packets))A(fs.existsSync(path.join(__dirname,'../activities',p+'.html')));

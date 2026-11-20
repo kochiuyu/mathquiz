@@ -2,6 +2,14 @@
 
 Reviewed 20 November 2026 against the EDB Key Stage 1 explanatory notes, printed pages 1–18. This review distinguishes **available resources**, **guided teaching samples**, and **evidence of a pupil doing the work**. These are different claims. The existing resource-complete flags describe the resource library; they do not certify a complete teaching sequence or pupil mastery.
 
+## Early-foundation follow-up (20 November 2026)
+
+Six additive lessons now address the guided gaps: `countsteps` (forward/backward by one), `order20` (position versus quantity), `pair20` (physical odd/even pairing), `split18` (two single-digit parts), `swapjoin` (swapped addends and subtraction contrast), and `zeromoves` (all four zero actions). Each has three teaching steps, guided practice, three practice levels and a specific say/move/write prompt with an adult. Two small checks and two investigations are provided.
+
+After the existing count and tens lessons, new pupils are recommended these two foundation topics before `add`. The first-topic overview also displays this bridge. Existing pupils already working on addition keep their saved route; they can revisit the new topics. Earlier quizzes and all39 existing lesson/question payloads are unchanged. The inventory is now15 pathways,45 lessons,405 practice items and15 investigations.
+
+The early-number guided-teaching gaps identified below are now addressed by these additions. Physical numeral writing, actual handling, oral fluency, free estimation, independent column layout and transfer still require observation. The objective table below preserves the original audit context; this update supplies the follow-up evidence for1N1.2–1N1.5 and1N2.1–1N2.5. It is not a classroom validation or a claim of complete oral fact coverage. See [foundation release](p1-foundations.md).
+
 ## Decision about 3D and 2D
 
 Keep **real solids → flat outlines → drawing and making**. EDB's shape guidance starts with familiar solid objects. The site's new bridge asks pupils to hold a box or cup and trace a flat face or rim before naming the outline. This makes the connection visible. It does not introduce formal face/edge counts, nets or prism subtypes.
@@ -85,7 +93,7 @@ The adult catalogue also retains 38 P1 selectable skills and their fixed-level/S
 
 ## Work still needed, in priority order
 
-1. **Repair the early-number teaching sequence before guided P2.** Add explicit forward/backward counting within 20, route through concrete parts/wholes before addition, and teach all zero cases and swapping addends. Separate early ordinals/pairing from later two-digit parity. Preserve existing lesson IDs, saved answers and quiz identities through a deliberate migration or additive route; do not reorder old question payloads silently.
+1. **Early-number guided repair implemented.** The six additive lessons and recommended bridge above cover the identified teaching gaps. Validate the route with pupils; all earlier saved work is retained.
 2. **Make practical work part of the pupil journey.** Offer short read/say/draw/make tasks at the relevant point. Keep adult-observed evidence distinct from a pupil's self-report; allow oral and drawn responses. Avoid compulsory typing for skills that should be demonstrated physically.
 3. **Check transfer and breadth.** Expand beyond recognition/typed-number samples, especially free estimation, independent written columns and oral explanations. Assess representative variations without claiming all facts or every numeral were tested.
 4. **Trial the branches with pupils and teachers.** Observe start/resume, shape-to-outline transfer, language, device layouts and the support needed. Adjust recommendations from evidence. Independent translation, screen-reader use and physical printing remain pending.

@@ -39,3 +39,5 @@
 .learning-map .learn-path-choices{margin-bottom:8px}.learning-map .learn-path-choices a{background:white}
 .learning-map .learn-path-choices [aria-current]{background:#e3ecd9}.learning-map .learn-path-choices small{white-space:normal}
 @media(max-width:600px){.learning-map .learn-path-choices a{display:block}.learning-map .learn-path-choices small{margin-top:3px}}
+
+@media(max-width:480px){[data-foundation="1"] .learn-parts{margin:6px 0;max-width:280px}[data-foundation="1"] .parts-whole{padding:2px;margin-bottom:5px}[data-foundation="1"] .parts-whole strong{display:inline;margin-left:6px}[data-foundation="1"] .parts-branches{padding-top:5px;gap:6px}[data-foundation="1"] .parts-branches>div{padding:5px}[data-foundation="1"] .learn-parts .sub-counter{width:12px;height:12px;flex-basis:12px}[data-foundation="1"] .learn-teaching h2{margin:8px 0}[data-foundation="1"] .learn-teaching p{margin:8px 0}}

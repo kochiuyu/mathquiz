@@ -1,0 +1,16 @@
+const A=require('node:assert/strict'),D=require('../learn-data.js'),X=require('../learn-foundations.js'),S=require('../learn-store.js'),I=require('../learn-inquiry.js'),fs=require('node:fs'),crypto=require('node:crypto');
+A.equal(D.allLessons.length,45);A.equal(D.paths.length,15);A.equal(X.lessons.length,6);let n=0;
+for(const l of X.lessons){A.equal(l.steps.length,3);A(l.real.every(Boolean));for(const s of l.steps)A(s.title.every(Boolean)&&s.text.every(Boolean));for(let seed=0;seed<12;seed++)for(let i=0;i<12;i++){const q=X.question(l.id,i,seed),m=q.math;let answer;
+if(m.type==='sequence'){answer=m.start+2*m.dir;A(q.visual.values.filter(x=>typeof x==='number').every(x=>x>=0&&x<=20));}
+if(m.type==='ordinal')answer=m.mode===2?m.n:m.mode===0?m.star:m.n-m.star+1;
+if(m.type==='pair'){answer=m.mode===2?(m.n%2?1:2):m.n-2*Math.floor(m.n/2);A(m.n>=1&&m.n<=20);}
+if(m.type==='parts'){answer=m.mode===0?m.a+m.b:m.b;A(m.a<=9&&m.b<=9&&m.a+m.b<=18);}
+if(m.type==='swap'){answer=m.mode===2?1:m.a+m.b;A(m.a+m.b<=10);}
+if(m.type==='zero')answer=m.op===3?0:m.n;
+A.equal(q.answer,answer);A(q.prompt.every(Boolean)&&q.why.every(Boolean));A(D.correct(q,String(answer)));A(!D.correct(q,String(answer+1)));n++;}
+for(const level of D.levels){const qs=X.practice(l.id,level);A.equal(qs.length,3);for(const q of qs){let expected=X.question(l.id,Number(q.id.split('-')[1])).answer;if(q.math.type==='pairchange')expected=(q.math.n+1)%2;if(q.math.type==='swapcontrast'){A(q.math.a>q.math.b);expected=0;}A.equal(q.answer,expected);if(l.id==='pair20'&&level==='normal')A(q.prompt[0].includes(String(q.math.n)));if(q.visual?.kind==='parts'&&!q.visual.hidden&&q.math.mode!==2)A(q.visual.hideWhole);if(level==='difficult'&&!['pair20','swapjoin'].includes(l.id))A(q.prompt[0].includes('gives '+(q.answer+1)), 'incorrect claim absent');}}}
+const oldPayload=D.allLessons.slice(0,39).map(l=>[l,D.levels.map(v=>D.practice(l.id,v)),Array.from({length:12},(_,s)=>Array.from({length:12},(_,i)=>D.question(l.id,i,s)))]);
+A.equal(crypto.createHash('sha256').update(JSON.stringify(oldPayload)).digest('hex'),'b696440699a36e6147c6455e80d8079fc4e60c0d7a90ea4219c0a690f9ea0328');
+for(const pa of ['numberstart','partstart'])for(let a=0;a<3;a++){A.equal(D.quiz(a,pa).length,6);A(I.activities[pa]);}
+const map=new Map(),st={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};let s=S.create(st);s.update(p=>{p.lessons.add={levels:{easy:{done:true,answers:['12','6','17']}}};p.quiz={answers:['1','2','3','4','5','6'],submitted:true};p.cursor={lesson:'add',stage:'practice',level:'normal'};p.checks.partstart={attempt:2,quiz:{answers:['7','4','8','1','6','0'],submitted:true}};p.lessons.zeromoves={levels:{normal:{done:true,answers:['0','8','2']}}};p.inquiries.partstart={notice:'I moved counters'};});s=S.create(st);A.equal(s.profile.cursor.lesson,'add');A.equal(s.profile.lessons.add.levels.easy.answers[2],'17');A.equal(s.profile.checks.partstart.attempt,2);A.equal(s.profile.lessons.zeromoves.levels.normal.answers[0],'0');A.equal(s.profile.inquiries.partstart.notice,'I moved counters');s.select(1);A(!s.profile.lessons.zeromoves);s.reset();s.select(0);A.equal(s.profile.cursor.lesson,'add');
+console.log('PASS: '+n+' independently calculated new questions; 54 practice items; old39 full payload hash; new checks/notes/save/reset isolation.');
