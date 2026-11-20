@@ -10,6 +10,12 @@ After the existing count and tens lessons, new pupils are recommended these two 
 
 The early-number guided-teaching gaps identified in the original review are now addressed by these additions. Physical numeral writing, actual handling, oral fluency, free estimation, independent column layout and transfer still require observation. The objective table below includes the new evidence and retains the remaining limits. It is not a classroom validation or a claim of complete oral fact coverage. See [foundation release](p1-foundations.md).
 
+## Practical and transfer follow-up (20 November 2026)
+
+All 45 guided lessons now provide a specific say/draw/make/measure task, a final-teaching-step action and a relevant worksheet link. The [P1 readiness review](../p1-review.html) separates six marked screen answers from six practical task groups and optional per-pupil observation notes. It targets free estimation, independently written columns, oral explanations and real-material transfer, with specific revisit links. No practical achievement or P2 promotion is inferred from a score or note. See [implementation and limits](p1-practical-review.md).
+
+The guided practical/transfer scaffolding is implemented. Actual observation and pupil validation remain outstanding; the statuses below continue to describe evidence limits rather than student attainment.
+
 ## Decision about 3D and 2D
 
 Keep **real solids → flat outlines → drawing and making**. EDB's shape guidance starts with familiar solid objects. The site's new bridge asks pupils to hold a box or cup and trace a flat face or rim before naming the outline. This makes the connection visible. It does not introduce formal face/edge counts, nets or prism subtypes.
@@ -94,8 +100,8 @@ The adult catalogue also retains 38 P1 selectable skills and their fixed-level/S
 ## Work still needed, in priority order
 
 1. **Early-number guided repair implemented.** The six additive lessons and recommended bridge above cover the identified teaching gaps. Validate the route with pupils; all earlier saved work is retained.
-2. **Make practical work part of the pupil journey.** Offer short read/say/draw/make tasks at the relevant point. Keep adult-observed evidence distinct from a pupil's self-report; allow oral and drawn responses. Avoid compulsory typing for skills that should be demonstrated physically.
-3. **Check transfer and breadth.** Expand beyond recognition/typed-number samples, especially free estimation, independent written columns and oral explanations. Assess representative variations without claiming all facts or every numeral were tested.
+2. **Practical work is now integrated.** Every guided lesson has a specific task and worksheet route. The readiness review keeps observation notes separate from automatic marks. Adults still need to observe the actual work; typing is optional for practical explanations.
+3. **Transfer prompts and a short review are now implemented.** Free estimation, independent written columns and oral explanations are explicit tasks. Trial unfamiliar variations with pupils; the six-question screen sample is not exhaustive fact or objective coverage.
 4. **Trial the branches with pupils and teachers.** Observe start/resume, shape-to-outline transfer, language, device layouts and the support needed. Adjust recommendations from evidence. Independent translation, screen-reader use and physical printing remain pending.
 
 ## Compatibility and verification

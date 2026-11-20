@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-20",
+  "base": "bfe4e22e9a07808858403316d1cebfa3af180dc4",
+  "staticGates": 19,
+  "local": {
+    "transfer": {
+      "done": true,
+      "passed": 47,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Practical flow solids zh",
+          "error": "Navigation timeout learn.html?lesson=solidnames&lang=zh"
+        }
+      ]
+    },
+    "student": {
+      "done": true,
+      "passed": 186,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Subtraction layout en 375",
+          "error": "Navigation timeout learn.html?lesson=partsback&stage=practice&level=difficult&lang=en"
+        },
+        {
+          "name": "Solids mobile teaching en",
+          "error": "Navigation timeout learn.html?lesson=solidnames&lang=en"
+        }
+      ]
+    },
+    "foundations": {
+      "done": true,
+      "passed": 18,
+      "failed": 0
+    },
+    "map": {
+      "done": true,
+      "passed": 16,
+      "failed": 0
+    },
+    "inquiry": {
+      "done": true,
+      "passed": 16,
+      "failed": 0
+    },
+    "reruns": [
+      {
+        "name": "Practical flow solids zh",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Subtraction layout en 375",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Solids mobile teaching en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctVerified": 286,
+    "notes": [
+      "Initial 46-case dedicated suite passed cleanly. Two additional print/cursor cases were added; the final 48-case suite is recorded above.",
+      "Full shared student run preceded only reset-copy and review-link-label refinements; final dedicated, foundation, map and inquiry checks cover those refinements. The Chinese reset-copy correction was also read back separately."
+    ]
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeHashes": {
+    "index.html": "71288626cc58b120c80b1c789d480d14407cac299970ce39d55610a447d9c950",
+    "learn-review.js": "1f9d296bbd0c65fc04905f0241f08946fea8edaa56e0b0698c4116c6188de560",
+    "learn-store.js": "5fe14378c36f3aea1342f6d728b5e9dd70ede1b4fb6b687428617eaa127b1dcd",
+    "learn-transfer.js": "48b919e447f1b22078b84473a5c68c5e3d9d01dfd7749b74ccc5ffbe6f95f067",
+    "learn.css": "328637b68a57ac2719967bc32701ee909730c557448d5833fc1431287d5e289e",
+    "learn.html": "f40c7a46d36ce73e63f72c7eb0dcbac8b5b5ee8d6fe5691feabf7778632bd140",
+    "learn.js": "d8b176e56eda95c0b95d6e1103ccdc2bd87cbba5656fdc1e7d41a888b4762726",
+    "p1-review.html": "964feeac61ddc75ebb3fe9b1f2cbc48793c68a53d1fe2e454722eb61e294f64d",
+    "tests/review-blocked.html": "338a53ded9b8c712d3e952f841354a5b9abff1499e7a7b5a03c726cd134d58d4",
+    "tests/student-blocked.html": "d22b576bc24ce187f3c137800fe7d11908d21082b6414c179712be11ef4c0879",
+    "tests/transfer-browser.js": "ca7c16e7cb87e3b5edfdee46235d17d07a5494830d1ef18e3438f86b0cd13018",
+    "tests/transfer-static.cjs": "444e5de6864f3532a2c6a31d8a0898153b16f1edce0bb405d629a8515d65a5f6",
+    "tests/transfer.html": "5e7c77e801da65be0399987fdac3e393c77dea6856d83bcb5123c6eff72337c0"
+  },
+  "inventory": {
+    "lessonsWithPracticalPrompts": 45,
+    "worksheetRoutes": 15,
+    "screenReviewQuestions": 6,
+    "practicalReviewGroups": 6
+  },
+  "storage": {
+    "key": "mathquiz-learning-v1",
+    "schema": 1,
+    "readCapacity": 300736,
+    "notesPerPupil": 6,
+    "charactersPerNote": 240
+  },
+  "limits": [
+    "No P2 promotion or full P1 mastery claim.",
+    "Practical notes are not automatic grades or verified observations.",
+    "Classroom trials, independent translation, screen-reader listening and physical printing unperformed.",
+    "Print control and note mirrors tested; physical pagination not manually verified.",
+    "Broader parent/teacher browser suite not rerun; resource and UI static gates passed."
+  ],
+  "visual": {
+    "localScreenshot": "browser-screenshots/screenshot-2026-11-20T15-33-05-607Z-12233636.png",
+    "firstAnswerTop": 503.375,
+    "width": 320,
+    "height": 812,
+    "horizontalOverflow": false
+  }
+}
