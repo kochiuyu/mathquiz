@@ -1,7 +1,7 @@
 {
   "date": "2026-11-20",
   "base": "1322be523c991a52a9439c1d33aaf569a152f3d8",
-  "status": "Local focused verified; public pending",
+  "status": "Published and verified; final documentation records completed checks",
   "scope": {
     "lessons": 3,
     "teachingSteps": 9,
@@ -53,5 +53,118 @@
     "Classroom trials and calibration",
     "Screen-reader use",
     "Physical printing"
-  ]
+  ],
+  "runtimeCommit": "9cc164fc5446f97be383aab48fe62e3165ab68c1",
+  "deployment": {
+    "id": 44683355770,
+    "conclusion": "success"
+  },
+  "public": {
+    "studentBrowser": {
+      "passed": 17,
+      "failed": 0
+    },
+    "sharedBrowser": {
+      "failed": 0,
+      "failures": [],
+      "passed": 267,
+      "retries": [
+        "coverage.html?&lang=en"
+      ],
+      "scope": "all"
+    },
+    "supplementary": [
+      "Quiz draft preserved across English\u2192Chinese reload with no early feedback",
+      "Submitted quiz restored after reload with 6/6 and six explanations",
+      "Live Chinese mobile homepage, visible teacher entry and no horizontal overflow"
+    ]
+  },
+  "assetVerification": {
+    "method": "Browser fetch with cache:no-store and Web Crypto SHA-256 compared with local tested bytes",
+    "matched": 20,
+    "total": 20,
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "c6c5416f40bcbfebb94c87deea26066205fec12c2f7453cfbaed75161917a660"
+      },
+      {
+        "path": "coverage.html",
+        "sha256": "7ea828b46291f3e6c68a67a1c318fcc385b178e9fc087b310118eaa25cfb0aed"
+      },
+      {
+        "path": "index.html",
+        "sha256": "23733159ce4780947428b051c015295205de9371f74cd6ef098004abfddd9ec7"
+      },
+      {
+        "path": "learn-data.js",
+        "sha256": "f49cac8205190c479b1af33a55d74c05d8c27cfff42873bfe1cf97247425c13b"
+      },
+      {
+        "path": "learn-store.js",
+        "sha256": "e3e6c64646f9f0578a3708235926e5458ab56da15b07263295e1f5a358cdad92"
+      },
+      {
+        "path": "learn.css",
+        "sha256": "9b06953c6e5873081afed5aea0c09df5a6537590204c0a3a95de7ed4e09bcf0c"
+      },
+      {
+        "path": "learn.html",
+        "sha256": "3ad119cddf156e0ce72883912263a56692f3160a662ffa5066d70c094556e579"
+      },
+      {
+        "path": "learn.js",
+        "sha256": "c66c59935dde35a5c90c1e17309cc8d65ac868520f799eb184143e8964492448"
+      },
+      {
+        "path": "planning/student-pathway-evidence.json",
+        "sha256": "82fde8d288f31f822e3a6d26f3aca8fe374992a7c143d1d7ac20132add521e2e"
+      },
+      {
+        "path": "planning/student-pathway.md",
+        "sha256": "bd0b12bc28a86974a3c85476375349c389ec6160115abceaaf1d4d1016e2dcc3"
+      },
+      {
+        "path": "site-ui.js",
+        "sha256": "f95103fe147a15887e60b89089ebc45c0c1a56cfdb032bdab5362c466cf95eac"
+      },
+      {
+        "path": "tests/resources-ui-static.cjs",
+        "sha256": "921e3a7c0b459693ea9d464fcc35726d29f091d0dc21bec36e886d8f3835d0bf"
+      },
+      {
+        "path": "tests/student-blocked.html",
+        "sha256": "3b65ebdb4d50a971c7cd8c120ab6ac15de59b6b91bb53aa48a3d70ec5657f622"
+      },
+      {
+        "path": "tests/student-browser.js",
+        "sha256": "7eede12467e4ab69248e703a447659ea2beeaa69e5d34ff1eaa9fa87eaf4cf61"
+      },
+      {
+        "path": "tests/student-static.cjs",
+        "sha256": "742ac8c428dab42ce8b4c16cab1157492fbbc320d751420d4ca2150418c86cd9"
+      },
+      {
+        "path": "tests/student.html",
+        "sha256": "cffaec924c90811f6e361bb3231ce035815d8bebf702afc3d0e58e180b1e363e"
+      },
+      {
+        "path": "tests/ui-refresh-browser.js",
+        "sha256": "d19c7a1cb0a1cdb6210e29e8e48dd497613b094b58812416a5a4ef7a13658906"
+      },
+      {
+        "path": "tests/ui-refresh-static.cjs",
+        "sha256": "3523204f3b24f0509b95bddecd4b67fc9c6d0aed732a82aac8b00879c9193bc7"
+      },
+      {
+        "path": "tests/ui-refresh.html",
+        "sha256": "20877a58f5475d59fcc2bd47901b75768fbd8f8a2e1ddd643f851dd9871ea3a7"
+      },
+      {
+        "path": "ui.js",
+        "sha256": "2ab6b25292e5183007990ec416097c155fce85d155641e5c8c305e235e4f1186"
+      }
+    ],
+    "earlierAttempts": "Two Python HTTPS verification attempts ended in remote connection resets; neither was treated as a pass. The browser readback verified all twenty files."
+  }
 }
