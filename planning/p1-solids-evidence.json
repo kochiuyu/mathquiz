@@ -85,7 +85,62 @@
     ]
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "fullRun": {
+      "done": true,
+      "passed": 154,
+      "failed": 4,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=garbage"
+        },
+        {
+          "name": "Subtraction layout zh 320",
+          "error": "Test frame reset timeout"
+        },
+        {
+          "name": "Ruler mobile teaching en",
+          "error": "Navigation timeout learn.html?lesson=estimatecm&stage=practice&level=easy&lang=en"
+        },
+        {
+          "name": "Time layout en 1280",
+          "error": "Navigation timeout learn.html?path=time&lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Subtraction layout zh 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Ruler mobile teaching en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Time layout en 1280",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 158,
+    "runtimeCommit": "bb885b69ac6fa186636d6bba1cfca9a4a00bc2dd",
+    "runtimeTree": "2b43bf064ac47aebe778a7230c5dfc5938e138dc",
+    "pagesRun": 44728973013,
+    "deployment": "success",
+    "runtimeHashesMatched": 20
   },
   "sources": [
     {

@@ -38,7 +38,7 @@ The schema-based read limit is 65,344 characters. A fully populated three-pupil 
 
 ## Verification
 
-All **158 local browser cases are verified**: the full run passed 155/158, and three navigation timeouts passed exact reruns. Thirteen static gates passed. English and Chinese mobile samples showed the first answer within 812 pixels with no horizontal overflow. Public verification is pending.
+All **158 local browser cases are verified**: the full run passed 155/158, and three navigation timeouts passed exact reruns. Thirteen static gates passed. English and Chinese mobile samples showed the first answer within 812 pixels with no horizontal overflow. All **158 public browser cases are verified**: 154 passed in the full run; 4 timeout cases passed exact reruns. Runtime deployment succeeded and all twenty changed runtime/test files matched their tested hashes.
 
 The new static gate independently checks 216 generated answers, all 27 practice answers, all five shape families and twelve check attempts. Thirteen static gates cover previous teaching paths, compatibility, resource routes and shared UI boundaries. The browser suite contains 158 cases: the preceding 143 plus 15 for bilingual completion, wrong/blank answers, retakes, progress isolation, denied storage, four widths, mobile teaching/actions, all diagrams and the activity link. Timeout failures and exact retries, if any, are recorded without calling a partial run passed.
 
