@@ -16,7 +16,7 @@ Six additional practical tasks cover oral number work, free estimation, independ
 
 Review answers, submission state and six notes (240 characters each) are saved under the current pupil in the existing device-only `mathquiz-learning-v1` record, schema 1. Three slots continue to mean separate pupils. Reading older records supplies an empty review without migrating or clearing old work. Completing a review does not move the lesson cursor, set lesson completion or alter topic quiz scores. Switching pupils and resetting one pupil keep the other pupils isolated. Reset wording now explicitly includes the P1 review.
 
-Saved records are bounded and cleaned; note HTML is escaped. The read capacity is 300,736 characters. Blocked storage still permits use for the current visit and shows a warning. A cross-tab change disables editing and offers reload. Language changes retain the same answers and notes. The print control uses browser printing; printed notes are full text mirrors rather than clipped textareas. Physical printing and screen-reader listening remain unperformed.
+Saved records are bounded and cleaned; note HTML is escaped. The read capacity is 300,736 characters. Blocked storage still permits use for the current visit and shows a warning. A cross-tab change disables editing and offers reload. Language changes retain the same answers and notes. The six review questions have a fixed persisted order: future replacements must use an explicit version/migration rather than silently reinterpreting saved answers. The print control uses browser printing; printed notes are full text mirrors rather than clipped textareas. Physical printing and screen-reader listening remain unperformed.
 
 The first answer remains within the sampled 812px-high mobile viewport; tests cover English/Traditional Chinese and widths 320, 375, 768 and 1280px. Practical panels remain collapsed until requested. Existing parent/teacher routes remain available.
 
@@ -24,7 +24,7 @@ The first answer remains within the sampled 812px-high mobile viewport; tests co
 
 19 static gates passed, including 45 bilingual practical prompts, 15 valid worksheet routes, six independently calculated answers, observation links, sanitization, pupil isolation/reset, storage limits and legacy content checks.
 
-All 286 distinct local browser cases verified: final practical/review 47/48, shared student 186/188, foundations 18/18, map 16/16 and inquiry 16/16 in full runs; all three navigation-timeout cases passed exact reruns. Public verification pending.
+All 286 distinct local browser cases verified: final practical/review 47/48, shared student 186/188, foundations 18/18, map 16/16 and inquiry 16/16 in full runs; all three navigation-timeout cases passed exact reruns. All 286 distinct public cases verified: 47/48 transfer, 187/188 student, 17/18 foundations, 16/16 map, 15/16 inquiry in full runs; 4 exact timeout reruns passed. Runtime deployment succeeded and all 13 runtime/test hashes matched.
 
 ## Curriculum and remaining evidence
 

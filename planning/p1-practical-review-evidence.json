@@ -71,7 +71,82 @@
     ]
   },
   "public": {
-    "status": "pending"
+    "transfer": {
+      "done": true,
+      "passed": 47,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Practical flow calculate en",
+          "error": "Navigation timeout learn.html?path=calculate&lang=en"
+        }
+      ]
+    },
+    "student": {
+      "done": true,
+      "passed": 187,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Hundred layout en 320",
+          "error": "Navigation timeout learn.html?lesson=compare&stage=practice&level=easy&lang=en"
+        }
+      ]
+    },
+    "foundations": {
+      "done": true,
+      "passed": 17,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Foundation legacy resume and pupils",
+          "error": "Navigation timeout learn.html?lesson=zeromoves&stage=practice&level=normal"
+        }
+      ]
+    },
+    "map": {
+      "done": true,
+      "passed": 16,
+      "failed": 0
+    },
+    "inquiry": {
+      "done": true,
+      "passed": 15,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Inquiry hidden during checks",
+          "error": "Navigation timeout learn.html?lesson=pair20&stage=quiz"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Practical flow calculate en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Hundred layout en 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Foundation legacy resume and pupils",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Inquiry hidden during checks",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctVerified": 286
   },
   "runtimeHashes": {
     "index.html": "71288626cc58b120c80b1c789d480d14407cac299970ce39d55610a447d9c950",
@@ -114,5 +189,106 @@
     "width": 320,
     "height": 812,
     "horizontalOverflow": false
-  }
+  },
+  "publication": {
+    "base": "bfe4e22e9a07808858403316d1cebfa3af180dc4",
+    "baseTree": "aff970cf6c4709af006898f4e08a0abfcec9e532",
+    "runtime": "c8a55d48cf329be81a65754b1a75e24e5fe260c9",
+    "runtimeTree": "f90db1a64d8f268f92c01efcba5c10881145767f",
+    "pagesRun": 44764987727,
+    "pagesConclusion": "success"
+  },
+  "deployedReadback": [
+    {
+      "path": "index.html",
+      "sha256": "71288626cc58b120c80b1c789d480d14407cac299970ce39d55610a447d9c950",
+      "expected": "71288626cc58b120c80b1c789d480d14407cac299970ce39d55610a447d9c950",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-review.js",
+      "sha256": "1f9d296bbd0c65fc04905f0241f08946fea8edaa56e0b0698c4116c6188de560",
+      "expected": "1f9d296bbd0c65fc04905f0241f08946fea8edaa56e0b0698c4116c6188de560",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-store.js",
+      "sha256": "5fe14378c36f3aea1342f6d728b5e9dd70ede1b4fb6b687428617eaa127b1dcd",
+      "expected": "5fe14378c36f3aea1342f6d728b5e9dd70ede1b4fb6b687428617eaa127b1dcd",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-transfer.js",
+      "sha256": "48b919e447f1b22078b84473a5c68c5e3d9d01dfd7749b74ccc5ffbe6f95f067",
+      "expected": "48b919e447f1b22078b84473a5c68c5e3d9d01dfd7749b74ccc5ffbe6f95f067",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.css",
+      "sha256": "328637b68a57ac2719967bc32701ee909730c557448d5833fc1431287d5e289e",
+      "expected": "328637b68a57ac2719967bc32701ee909730c557448d5833fc1431287d5e289e",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.html",
+      "sha256": "f40c7a46d36ce73e63f72c7eb0dcbac8b5b5ee8d6fe5691feabf7778632bd140",
+      "expected": "f40c7a46d36ce73e63f72c7eb0dcbac8b5b5ee8d6fe5691feabf7778632bd140",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.js",
+      "sha256": "d8b176e56eda95c0b95d6e1103ccdc2bd87cbba5656fdc1e7d41a888b4762726",
+      "expected": "d8b176e56eda95c0b95d6e1103ccdc2bd87cbba5656fdc1e7d41a888b4762726",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "p1-review.html",
+      "sha256": "964feeac61ddc75ebb3fe9b1f2cbc48793c68a53d1fe2e454722eb61e294f64d",
+      "expected": "964feeac61ddc75ebb3fe9b1f2cbc48793c68a53d1fe2e454722eb61e294f64d",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/review-blocked.html",
+      "sha256": "338a53ded9b8c712d3e952f841354a5b9abff1499e7a7b5a03c726cd134d58d4",
+      "expected": "338a53ded9b8c712d3e952f841354a5b9abff1499e7a7b5a03c726cd134d58d4",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student-blocked.html",
+      "sha256": "d22b576bc24ce187f3c137800fe7d11908d21082b6414c179712be11ef4c0879",
+      "expected": "d22b576bc24ce187f3c137800fe7d11908d21082b6414c179712be11ef4c0879",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/transfer-browser.js",
+      "sha256": "ca7c16e7cb87e3b5edfdee46235d17d07a5494830d1ef18e3438f86b0cd13018",
+      "expected": "ca7c16e7cb87e3b5edfdee46235d17d07a5494830d1ef18e3438f86b0cd13018",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/transfer-static.cjs",
+      "sha256": "444e5de6864f3532a2c6a31d8a0898153b16f1edce0bb405d629a8515d65a5f6",
+      "expected": "444e5de6864f3532a2c6a31d8a0898153b16f1edce0bb405d629a8515d65a5f6",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/transfer.html",
+      "sha256": "5e7c77e801da65be0399987fdac3e393c77dea6856d83bcb5123c6eff72337c0",
+      "expected": "5e7c77e801da65be0399987fdac3e393c77dea6856d83bcb5123c6eff72337c0",
+      "matches": true,
+      "retryErrors": []
+    }
+  ]
 }
