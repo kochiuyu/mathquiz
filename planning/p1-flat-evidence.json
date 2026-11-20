@@ -87,7 +87,42 @@
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "fullRun": {
+      "done": true,
+      "passed": 171,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal&lang=zh"
+        },
+        {
+          "name": "Nine pathway resume and gates",
+          "error": "Navigation timeout learn.html?lesson=pricetags&stage=practice&level=easy&lang=zh"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Nine pathway resume and gates",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 173,
+    "runtimeCommit": "ae372fcbd5665dc8bd3353891c3d376835d6928a",
+    "runtimeTree": "1071cdb6fcd6c52db76392ad61f7bb0e1e734c57",
+    "pagesRun": 44736259582,
+    "deployment": "success",
+    "runtimeHashesMatched": 21
   },
   "sources": [
     {

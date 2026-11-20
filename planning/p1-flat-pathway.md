@@ -38,7 +38,7 @@ The schema-based storage cap is 70,912 characters. The full three-pupil fixture 
 
 ## Verification
 
-All **173 local browser cases are verified**: 172 passed in the final full run; one timeout case passed its exact rerun. Fourteen static gates passed. Public verification is pending.
+All **173 local browser cases are verified**: 172 passed in the final full run; one timeout case passed its exact rerun. Fourteen static gates passed. All **173 public browser cases are verified**: 171 passed in the final full run; 2 timeout cases passed exact reruns. Runtime deployment succeeded and all twenty-one changed runtime/test files matched their tested hashes.
 
 Fourteen static gates cover existing pathways, new content, storage, resource routes and shared UI boundaries. The new gate checks 216 generated answers, all 27 practice answers, twelve check attempts, polygon validity and six exact composition unions. The three check rotations collectively cover all five flat-shape types. The browser suite contains **173 cases**, retaining all 158 earlier cases and adding 15 for bilingual completion, wrong/blank answers, retakes, four widths, mobile actions, saved continuation, denied storage, diagrams and the practical link. Exact failures and reruns are recorded. The development run found a test that rejected valid short Chinese descriptions; its excessive length threshold was corrected. Check sampling was expanded before the final full run, and an explicit five-type coverage assertion was added.
 
