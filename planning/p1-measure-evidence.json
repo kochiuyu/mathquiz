@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-20",
+  "base": "4a59e080f7ed90fa3575c242da53313cd794bc0b",
+  "scope": "P1 1M1 comparison and informal measurement teaching",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "local": {
+    "status": "verified",
+    "initialRun": {
+      "passed": 96,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Measurement mobile teaching en",
+          "error": "next action low alignlength 2"
+        },
+        {
+          "name": "Measurement diagrams and practical links",
+          "error": "Student runtime"
+        }
+      ]
+    },
+    "developmentCorrections": [
+      "Shortened English final length teaching paragraph",
+      "Allow standalone activity page in test loader; no activity code change"
+    ],
+    "correctionReruns": [
+      {
+        "name": "Measurement mobile teaching en",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Measurement diagrams and practical links",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "staticGates": 9,
+    "independentGeneratedChecks": 216,
+    "fullRecordFixtureCharacters": 23329,
+    "largestOtherFullRecordFixtureCharacters": 23341,
+    "readBoundCharacters": 43072,
+    "distinctBrowserCases": 98,
+    "fullRun": {
+      "passed": 97,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Subtraction layout en 1280",
+          "error": "Navigation timeout learn.html?path=subtract&lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Subtraction layout en 1280",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "visualCheck": {
+      "page": "English Difficult straight-distance practice",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 784.52,
+      "horizontalOverflow": false,
+      "straightAndBentRouteInspected": true
+    },
+    "runnerTransport": "Initial final-suite navigation timed out; completed result read without reload"
+  },
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "c75cd9a436b65b0874475e40620ab49c727984b33267f17a7bfdbecd1b86d92d",
+    "learn-data.js": "7eea23a55485904aa7fdd327e951e873371ef02a310652bb8bcdfa64d99ae6be",
+    "learn-store.js": "4ee3ff4c359a63ff01bc6472e06a385d29510bc1e6b66af5bb70ad5f44e363e6",
+    "learn-measure.js": "3a03d55b2a14c9a82d15943ebf5e4d6da68ac6f4209251e68e29a71ed867e45e",
+    "learn.css": "8372f94825584b1666ea7db19f684d1ba97f8bbfaf65f7b9e2dc695747efb4aa",
+    "learn.html": "c1f080423b9ce15aa7c728296707735d1a62b73fbf3a096c70cfe9069ea89088",
+    "learn.js": "957cf42cbc7094576947b9dbd7da0024d686f654cf284ff0e724d37ee3b14747",
+    "tests/hundred-static.cjs": "cc7c1a39045639d1dc154be39180880e5811c5f81a86f4c75b020d6df21a1c45",
+    "tests/subtract-static.cjs": "6affe344481aa121f3d1bbe293b3db544604c5f0ba1771bddae095c29a5dd293",
+    "tests/groups-static.cjs": "1e1f1bf46726c5526497b19b416de81ecf72a0db8c93d0ef50437bebb07220ae",
+    "tests/relations-static.cjs": "d6ad86a1e0762791165e3b0a0f6cb44d9e3fbee649ccff4fd43b0f58f8a6443f",
+    "tests/calculate-static.cjs": "996f0d210fe26cee148f7d348fe2e70633a92137e52c2d0f53e7876164ebe1eb",
+    "tests/measure-static.cjs": "3ae765788ce8cb4ada353a00736de747bf7ec5a93217718a2bc4dd9b8b4bedbe",
+    "tests/student-blocked.html": "b58683f77bfbfef6e952350c3a0531d6c4ad540d467a472316dafb24bdff6b86",
+    "tests/student-browser.js": "44e5e6ee36329819495c4cd3d4247c4ebf4b1b5def13cbae2326c703de9610ff",
+    "tests/student.html": "908af12647d01ab9906af93d0a76a79482fc1c6ce0613afec518f8752b60ca1f"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage; 1M1 real-object observations remain necessary",
+    "No calibrated mastery claim; practice may complete after correction",
+    "Three overlapping deterministic retake configurations",
+    "Pupil trials, independent translation, screen-reader listening and classroom observation not performed",
+    "Broader 267-case UI/activity browser suite not rerun"
+  ]
+}

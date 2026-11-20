@@ -729,3 +729,12 @@ Local verification passed **67/67 browser cases and seven static gates**, with n
 The **27 new practice items** bring the teaching collection to **six pathways, eighteen lessons and 162 levelled practice items**. Addition totals stay below 100, and word problems use two numbers. Earlier questions and saved results remain unchanged. A full three-pupil record now exceeds the previous storage read cap; a tested schema-based limit preserves it and allows future lesson expansion.
 
 All **83 local browser cases verified**, including two successful page-load-timeout reruns and a corrected mobile teaching layout. Eight static gates passed. All **83 public cases verified**: 81 passed in the full run and two page-load timeouts passed exact reruns. Runtime deployment succeeded and all fifteen changed runtime/test files matched. [Teaching scope, saved-work compatibility and next steps](planning/p1-calculate-pathway.md) · [Evidence](planning/p1-calculate-evidence.json). Next: measurement, starting with aligned lengths, straight distances and informal units. Pupil trials and independent human reviews remain pending; this is partial P1 teaching coverage.
+
+
+## P1 teaching: length and distance
+
+[Start Length and distance](https://kochiuyu.github.io/mathquiz/learn.html?path=measure). Three bilingual lessons teach comparing aligned lengths, straight distances versus walking routes, and measuring with equal informal units. Teaching, guided practice and three difficulty levels lead to a separate six-question check.
+
+The **27 new practice items** bring the journey to **seven pathways, twenty-one lessons and 189 levelled practice items**. Shifted starts, equal lengths, gaps, overlaps and different-sized units are included. A practical activity link supports real strips, cords and measuring units; screen completion does not replace adult observation. Earlier questions and saved results remain preserved.
+
+All **98 local browser cases verified**: 97 passed in the final full run and one page-load timeout passed its exact rerun. Nine static gates passed. Public verification is pending. [Scope, compatibility and next steps](planning/p1-measure-pathway.md) · [Evidence](planning/p1-measure-evidence.json). Next: centimetres and practical ruler use under 1M3. Pupil trials and independent human reviews remain pending.
