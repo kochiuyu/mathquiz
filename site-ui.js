@@ -5,6 +5,7 @@
  const grade=p.get('p')||(location.pathname.match(/p([1-6])-skill-levels\.html$/)||[])[1]||'',practice=/p[1-6]-skill-levels\.html$|smart-practice\.html$/.test(location.pathname),directory=/\/skill-levels\.html$/.test(location.pathname),activity=location.pathname.includes('/activities/');
  document.body.classList.add('site-refreshed');if(practice)document.body.classList.add('focused-practice');
  function navigation(){
+  if(document.body.classList.contains('student-home'))return;
   const header=document.querySelector('header');if(!header||header.dataset.sharedNav)return;header.dataset.sharedNav='true';header.classList.add('mq-header');
   if(practice){header.querySelector('.levels-navigation')?.remove();return;}
   if(activity||document.body.classList.contains('pupil-page')||document.body.classList.contains('paper-page'))return;

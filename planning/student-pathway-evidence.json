@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-20",
+  "base": "1322be523c991a52a9439c1d33aaf569a152f3d8",
+  "status": "Local focused verified; public pending",
+  "scope": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "independentPracticeQuestions": 9,
+    "quizLength": 6,
+    "rotatingQuizForms": 3,
+    "learnerSlots": 3
+  },
+  "local": {
+    "studentBrowser": {
+      "passed": 17,
+      "failed": 0
+    },
+    "sharedBrowser": {
+      "passed": 267,
+      "failed": 0,
+      "retries": [],
+      "scope": "core (runner includes main and activities)"
+    }
+  },
+  "static": {
+    "independentGenerationCases": 162,
+    "quizAttemptConfigurations": 12,
+    "profileAndStorageChecks": "passed",
+    "resourceGate": "passed",
+    "sharedUIGate": "passed"
+  },
+  "developmentFailures": [
+    {
+      "passed": 16,
+      "failed": 1,
+      "case": "Storage denied still completes in one visit",
+      "cause": "srcdoc navigation bypassed in-page route; fixture issue"
+    },
+    {
+      "passed": 16,
+      "failed": 1,
+      "case": "Storage denied still completes in one visit",
+      "cause": "document-rewrite fixture load timeout"
+    }
+  ],
+  "testIsolation": "Separate mathquiz-learning-test-v1 key; restored after suite",
+  "limitations": [
+    "P1 pilot only, not whole-year guided teaching",
+    "Browser/device-local progress only",
+    "Three overlapping quiz forms, not standardised assessment",
+    "Independent translation review",
+    "Classroom trials and calibration",
+    "Screen-reader use",
+    "Physical printing"
+  ]
+}

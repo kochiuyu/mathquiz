@@ -664,3 +664,14 @@ Release verification: **190 distinct browser cases verified locally and publicly
 The catalogue now offers **28 levelled collections plus 20 single examples**. Practice, pupil papers and worked answers are included, with links between introductory examples and their full banks. The separate curriculum totals remain **270 curriculum-linked + 30 TSA-informed types**.
 
 All 576 new questions and 1,224 answer fields passed independent checking. Local browser checks passed **233/233 + 85/85**. Public checks verified all **318 distinct cases**: 233/233 collections, plus 83/85 examples and two successful exact navigation-timeout reruns. [Runtime ea87116e](https://github.com/kochiuyu/mathquiz/commit/ea87116eec2cd6fd2330ffb3e6ed85cfe6aa801f) deployed successfully; all 21 release files matched the tested copies. See the [progression and source report](planning/adaptation-bank-expansion.md), [exact evidence](planning/adaptation-bank-evidence.json), and [repeatable workflow](planning/question-research-workflow.md). Difficulty calibration, independent translation, screen-reader use and physical printing remain pending.
+
+
+## Student-first learning · 20 November 2026
+
+[Open the student homepage](https://kochiuyu.github.io/mathquiz/) or [the P1 pathway](https://kochiuyu.github.io/mathquiz/learn.html). Pupils now get a clear Start/Continue action, three short lessons on counting, tens/ones and addition within 20, guided and independent practice, then a six-question understanding check with explanations and a recommended next step.
+
+Three separate learner slots remember progress in this browser without accounts. Progress is not shared across devices and clearing browser data removes it. When saving is unavailable, pupils can complete the pathway in one visit with a visible warning. Practice completion is not labelled mastery. Further year groups still offer existing practice; their guided lessons are not yet implemented.
+
+[Parents & teachers](https://kochiuyu.github.io/mathquiz/?view=teacher) retains the resource library, builder, examples, activities and printing routes. Existing curriculum and question banks remain unchanged. [Pilot design, limitations and extension workflow](planning/student-pathway.md) · [Verification evidence](planning/student-pathway-evidence.json).
+
+Local focused browser checks passed **17/17**; independent answer and storage checks and two existing static gates passed. All 267 shared UI/activity browser checks passed locally with no retries. Public verification is pending. Classroom calibration, independent translation, screen-reader use and physical printing remain unverified.
