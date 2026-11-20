@@ -802,8 +802,8 @@ All **188 local browser cases are verified**: 187 passed in the final full run; 
 
 Pupils can save three short notes and an “I tried this” self-report separately for each topic and learner. Notes survive language changes and remain on this browser. They do not change quiz scores, lesson completion or the next learning step. Oral/drawn responses and adult help are welcome; no automatic inquiry grade is assigned.
 
-Teaching totals remain **13 pathways,39 lessons and351 levelled practice items**, now supported by **13 integrated investigations**. Adult guidance and the existing printable inquiry packet are available. Existing saved lessons and quiz results are preserved.
+Teaching totals remain **13 pathways, 39 lessons and 351 levelled practice items**, now supported by **13 integrated investigations**. Adult guidance and the existing printable inquiry packet are available. Existing saved lessons and quiz results are preserved.
 
-All **204 local browser cases are verified**:16/16 inquiry cases, plus187/188 student-flow cases in the final full run and1 successful exact timeout rerun(s). Sixteen static gates passed. Public verification is pending.
+All **204 local browser cases are verified**: 16/16 inquiry cases; 187/188 student-flow cases in the final full run, with the remaining case verified by exact rerun. Sixteen static gates passed. All **204 public cases are verified**: 14/16 inquiry cases and 186/188 student-flow cases in full runs; all 4 remaining cases passed exact reruns. Runtime deployment succeeded; all eleven changed runtime/test files matched their tested hashes.
 
 [Design, scope and next steps](planning/p1-integrated-inquiry.md) · [Evidence](planning/p1-integrated-inquiry-evidence.json). Next: review P1 journey navigation and objective coverage before extending guided teaching into P2. Classroom trials and independent human reviews remain pending; self-reported notes do not certify observed practical inquiry or full P1 completion.

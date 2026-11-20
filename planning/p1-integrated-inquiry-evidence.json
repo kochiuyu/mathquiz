@@ -50,7 +50,145 @@
     "distinctCasesVerified": 204
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "student": {
+      "done": true,
+      "passed": 186,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Hundred layout en 320",
+          "error": "Navigation timeout learn.html?lesson=bundles&stage=learn&lang=en"
+        },
+        {
+          "name": "Time layout en 1280",
+          "error": "Navigation timeout learn.html?lesson=calendays&stage=practice&level=difficult&lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Hundred layout en 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Time layout en 1280",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "inquiry": {
+      "done": true,
+      "passed": 14,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Inquiry all pathways en",
+          "error": "Cannot read properties of undefined (reading 'paths')"
+        },
+        {
+          "name": "Inquiry all pathways zh",
+          "error": "Navigation timeout learn.html?lesson=solidexplore&lang=zh"
+        }
+      ]
+    },
+    "inquiryReruns": [
+      {
+        "name": "Inquiry all pathways en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Inquiry all pathways zh",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 204,
+    "assetReadback": [
+      {
+        "path": "index.html",
+        "sha256": "74373b30fb76d9b6391b688d8bac3993709453be26ffa0d6cf980ba54f3a7450",
+        "expected": "74373b30fb76d9b6391b688d8bac3993709453be26ffa0d6cf980ba54f3a7450",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "learn-inquiry.js",
+        "sha256": "6024002a35777f556895c4f320dbd2cbcab7773ff5d352b47d75b696597ef2e8",
+        "expected": "6024002a35777f556895c4f320dbd2cbcab7773ff5d352b47d75b696597ef2e8",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "learn-store.js",
+        "sha256": "81d9bbfa8778507c42d3fabcaa245e5e436d4e8e67c743334e8458e214f88382",
+        "expected": "81d9bbfa8778507c42d3fabcaa245e5e436d4e8e67c743334e8458e214f88382",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "learn.css",
+        "sha256": "893e4371dbf69f19d0176ccfc517d2a4a2b7eec7e7fd0137db329a4cae6814db",
+        "expected": "893e4371dbf69f19d0176ccfc517d2a4a2b7eec7e7fd0137db329a4cae6814db",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "learn.html",
+        "sha256": "b652c589a19701da0a28c16fd695763491fd75a371b119e5614deeb8fd054d3b",
+        "expected": "b652c589a19701da0a28c16fd695763491fd75a371b119e5614deeb8fd054d3b",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "learn.js",
+        "sha256": "8f2ea581c3ed07c515774c34f4700c18211a5ae856a8b76c176ddc3289e5698d",
+        "expected": "8f2ea581c3ed07c515774c34f4700c18211a5ae856a8b76c176ddc3289e5698d",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "tests/inquiry-browser.js",
+        "sha256": "925f41eb24631410108876982f17fc564eb19eaf1167a1665522b73b4d8642b4",
+        "expected": "925f41eb24631410108876982f17fc564eb19eaf1167a1665522b73b4d8642b4",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "tests/inquiry-static.cjs",
+        "sha256": "d6cc1182ac407e692a5f5a7b4097e5ebb4e77990e6175a14c2720a29b888c18e",
+        "expected": "d6cc1182ac407e692a5f5a7b4097e5ebb4e77990e6175a14c2720a29b888c18e",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "tests/inquiry.html",
+        "sha256": "b35faf9f4589f554bc05a738465beb8412decf2dd6c6971c652ff23b2d5d2a15",
+        "expected": "b35faf9f4589f554bc05a738465beb8412decf2dd6c6971c652ff23b2d5d2a15",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "tests/student-blocked.html",
+        "sha256": "8d8850c318a10b84bb75d01c022a994248b0263420b0d238636b97f1f73064db",
+        "expected": "8d8850c318a10b84bb75d01c022a994248b0263420b0d238636b97f1f73064db",
+        "matches": true,
+        "retryErrors": []
+      },
+      {
+        "path": "tests/student.html",
+        "sha256": "76f9e8e3094549a55c5b720186b34f2dee17469151202fb2ff20504c592d01e1",
+        "expected": "76f9e8e3094549a55c5b720186b34f2dee17469151202fb2ff20504c592d01e1",
+        "matches": true,
+        "retryErrors": []
+      }
+    ]
   },
   "limits": [
     "No automatic inquiry grade or mastery claim",
@@ -98,7 +236,7 @@
         }
       ]
     },
-    "fix": "Hide optional inquiry guidance and notes during checks, restore on results; all13 paths covered by an additional test"
+    "fix": "Hide optional inquiry guidance and notes during checks, restore on results; all 13 paths covered by an additional test"
   },
   "visualSamples": {
     "width": 320,
@@ -108,5 +246,12 @@
     "horizontalOverflow": false,
     "adultNotesInitiallyClosed": true
   },
-  "verificationText": "All **204 local browser cases are verified**:16/16 inquiry cases, plus187/188 student-flow cases in the final full run and1 successful exact timeout rerun(s). Sixteen static gates passed. Public verification is pending."
+  "verificationText": "All **204 local browser cases are verified**: 16/16 inquiry cases; 187/188 student-flow cases in the final full run, with the remaining case verified by exact rerun. Sixteen static gates passed. All **204 public cases are verified**: 14/16 inquiry cases and 186/188 student-flow cases in full runs; all 4 remaining cases passed exact reruns. Runtime deployment succeeded; all eleven changed runtime/test files matched their tested hashes.",
+  "publication": {
+    "base": "d06bdbf6e897a45252d813c4791b16247e8f7186",
+    "runtime": "2b077a5020ffe738c5e923c4c3afd17a8854dfad",
+    "tree": "89a1e817e4367219bf06319f6ca1d0471bd6f612",
+    "pagesRun": 44747949360,
+    "deployment": "success"
+  }
 }

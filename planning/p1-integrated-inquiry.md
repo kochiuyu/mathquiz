@@ -6,7 +6,7 @@
 
 ## Curriculum and pupil experience
 
-The [EDB Key Stage1 explanatory notes, printed page18](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=24) describe 1F1 as inquiry integrated into other mathematics units, rather than an isolated subject. The new activities therefore sit inside the13 existing pathways. They do not add a fourteenth path, a quiz pass condition or a claim that the prescribed learning time has been completed.
+The [EDB Key Stage 1 explanatory notes, printed page 18](https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=24) describe 1F1 as inquiry integrated into other mathematics units, rather than an isolated subject. The new activities therefore sit inside the 13 existing pathways. They do not add a fourteenth path, a quiz pass condition or a claim that the prescribed learning time has been completed.
 
 Each investigation asks pupils to predict, try and notice, then explain or extend. Ideas can be spoken, drawn on paper or typed with help. The main Start/Continue action remains first. A secondary “Investigate this topic” button opens the relevant activity. The same optional panel is available below lesson content and results, hidden during understanding checks, with its supporting-adult notes collapsed initially. `investigate=1` opens and focuses the panel for direct links.
 
@@ -30,21 +30,21 @@ All prompts are original. Adult guidance offers preparation and checking cues wi
 
 ## Notes and continuity
 
-Three optional fields—prediction, actual observation and explanation/next question—hold up to240 characters each. “I tried this activity” is explicitly a pupil self-report, not an assessment. Notes are saved independently for each pathway and each of the three existing pupils. Language changes retain the same notes; the site does not translate pupils' own words. Clearing one pupil's progress also clears that pupil's notes, with the existing confirmation text updated to say so.
+Three optional fields—prediction, actual observation and explanation/next question—hold up to 240 characters each. “I tried this activity” is explicitly a pupil self-report, not an assessment. Notes are saved independently for each pathway and each of the three existing pupils. Language changes retain the same notes; the site does not translate pupils' own words. Clearing one pupil's progress also clears that pupil's notes, with the existing confirmation text updated to say so.
 
-No inquiry scores, automatic correctness checks, mastery badges, mandatory writing or minimum speed are added. Notes never change quiz scores, lesson completion or the saved lesson cursor. The teaching totals remain **13 pathways,39 lessons and351 levelled practice items**. Curriculum/assessment banks and adult tools are unchanged.
+No inquiry scores, automatic correctness checks, mastery badges, mandatory writing or minimum speed are added. Notes never change quiz scores, lesson completion or the saved lesson cursor. The teaching totals remain **13 pathways, 39 lessons and 351 levelled practice items**. Curriculum/assessment banks and adult tools are unchanged.
 
-Storage retains the version1 device-local key. Old records migrate with empty inquiry notes. No accounts, analytics submission or cross-device sync are introduced. Typed notes are escaped before rendering, restricted to known pathway keys and bounded on both input and read. Control characters and lone surrogate fragments are removed; valid multilingual text and emoji are retained. The cap increases to236,224 characters; the fully populated three-pupil fixture with worst-case escaped notes occupies101,968 characters. Tests cover boundaries, unavailable storage, language changes, reset isolation and stale-tab writes.
+Storage retains the version 1 device-local key. Old records migrate with empty inquiry notes. No accounts, analytics submission or cross-device sync are introduced. Typed notes are escaped before rendering, restricted to known pathway keys and bounded on both input and read. Control characters and lone surrogate fragments are removed; valid multilingual text and emoji are retained. The cap increases to 236,224 characters; the fully populated three-pupil fixture with worst-case escaped notes occupies 101,968 characters. Tests cover boundaries, unavailable storage, language changes, reset isolation and stale-tab writes.
 
 ## Verification
 
-All **204 local browser cases are verified**:16/16 inquiry cases, plus187/188 student-flow cases in the final full run and1 successful exact timeout rerun(s). Sixteen static gates passed. Public verification is pending.
+All **204 local browser cases are verified**: 16/16 inquiry cases; 187/188 student-flow cases in the final full run, with the remaining case verified by exact rerun. Sixteen static gates passed. All **204 public cases are verified**: 14/16 inquiry cases and 186/188 student-flow cases in full runs; all 4 remaining cases passed exact reruns. Runtime deployment succeeded; all eleven changed runtime/test files matched their tested hashes.
 
-The new16-case browser suite checks all13 pathways in both languages, four viewport widths, direct opening, saved notes, separate pupils, reset, text injection,240-character limits, unavailable storage, stale-tab protection and the existing packet. The188-case student suite checks previous teaching/practice/check flows. Sixteen static gates check earlier content, numeric scope, storage and resource routes. Earlier complete lesson/question payloads are hashed against the positions release.
+The new 16-case browser suite checks all 13 pathways in both languages, four viewport widths, direct opening, saved notes, separate pupils, reset, text injection,240-character limits, unavailable storage, stale-tab protection and the existing packet. The 188-case student suite checks previous teaching/practice/check flows. Sixteen static gates check earlier content, numeric scope, storage and resource routes. Earlier complete lesson/question payloads are hashed against the positions release.
 
-Development regression checks found the optional guidance appearing during a quiz. Investigations are now hidden during all13 pathway checks and restored with saved notes on results; a dedicated regression case verifies this.
+Development regression checks found the optional guidance appearing during a quiz. Investigations are now hidden during all 13 pathway checks and restored with saved notes on results; a dedicated regression case verifies this.
 
-Representative English and Chinese mobile panels were visually inspected. The broader267-case adult/shared-UI browser suite is not repeated. Classroom usability, independent translation, screen-reader listening and physical printing remain pending. No full-P1-completion or observed-inquiry claim is made.
+Representative English and Chinese mobile panels were visually inspected. The broader 267-case adult/shared-UI browser suite is not repeated. Classroom usability, independent translation, screen-reader listening and physical printing remain pending. No full-P1-completion or observed-inquiry claim is made.
 
 ## Next phase and reusable workflow
 
