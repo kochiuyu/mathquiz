@@ -28,7 +28,29 @@
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctBrowserCases": 67,
+    "fullRun": {
+      "passed": 66,
+      "failed": 1,
+      "case": "Relations complete en",
+      "error": "Navigation timeout learn.html?path=relations&lang=en"
+    },
+    "exactRerun": {
+      "case": "Relations complete en",
+      "passed": 1,
+      "failed": 0
+    },
+    "runtimeHashMatches": 14,
+    "evidenceHashVerified": true,
+    "visualCheck": {
+      "page": "Chinese comparison teaching",
+      "width": 320,
+      "height": 812,
+      "nextButtonBottom": 665.07,
+      "horizontalOverflow": false
+    },
+    "runnerNavigation": "Initial navigation call timed out while the runner continued; the result was read without reloading."
   },
   "hashEncoding": "UTF-8/LF as uploaded",
   "hashes": {
@@ -53,5 +75,10 @@
     "Difficulty and threshold not pupil-calibrated",
     "Independent translation, screen-reader listening and real-object classroom review not performed",
     "Broader 267-case shared browser suite not rerun"
-  ]
+  ],
+  "runtimeCommit": "fd642ef95c28d8085169c4eb42ae9e52d1103fab",
+  "deployment": {
+    "runId": 44703973263,
+    "conclusion": "success"
+  }
 }
