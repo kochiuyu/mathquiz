@@ -41,6 +41,8 @@ The digit-arrangement grader accepts all optimal arrangements and either order. 
 
 ## Verification record
 
+Published runtime: [`ccd5f38`](https://github.com/kochiuyu/mathquiz/commit/ccd5f38f61ec0d27860062326f4fb64d3d68473c). All **105 collection cases were verified locally and publicly** (the final local run used one exact timeout rerun), and unchanged main UI checks passed **96/96 locally and publicly**. The public main UI runner retried one page-load timeout successfully. All 19 published-file hashes matched before this final documentation update. Home-link language and equal-tile fraction-diagram refinements were followed by local and public collection verification. The fresh-page runner avoids mixing cached older HTML with current assertions.
+
 See [machine-readable release evidence](reasoning-release-evidence.json) for the final local/live runs and deployment identifiers. Independent checks cover all 399 task records, 1,032 answer fields, 11 mathematical answer models, tied digit arrangements and 3D folding of the displayed cube net. The browser suite has 105 distinct cases covering both languages and all topic/level routes, paper/key views, filtering, old totals and draft continuity.
 
 The first local browser run exposed four narrow-screen choice overflows and two test-selector errors; these were corrected. A corrected full run and any navigation-timeout reruns are recorded explicitly. Existing resource/UI static gates are also run; a stale asset-version assertion was updated to the new release version.

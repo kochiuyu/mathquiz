@@ -2,7 +2,7 @@
   "release": "Original reasoning collection",
   "date": "2026-11-20",
   "baselineCommit": "0f8afbc5488d86f23e2c702eb3beb2c9f44e9514",
-  "status": "local verified; public verification pending",
+  "status": "published and verified",
   "counts": {
     "newStructures": 9,
     "extensions": 2,
@@ -57,16 +57,251 @@
           "finished": "2026-11-20T01:26:20.266Z"
         }
       }
-    ]
+    ],
+    "finalVerification": {
+      "passed": 105,
+      "failed": 0,
+      "started": "2026-11-20T01:39:49.554Z",
+      "finished": "2026-11-20T01:40:14.681Z"
+    },
+    "finalDiagramRun": {
+      "passed": 104,
+      "failed": 1,
+      "started": "2026-11-20T01:42:42.901Z",
+      "finished": "2026-11-20T01:43:26.123Z",
+      "failure": "shapes/zh/difficult page-load timeout",
+      "exactRerun": {
+        "passed": 1,
+        "failed": 0,
+        "finished": "2026-11-20T01:44:08.164Z"
+      },
+      "distinctCasesVerified": 105
+    },
+    "languageRefinement": {
+      "passed": 105,
+      "failed": 0,
+      "started": "2026-11-20T01:35:08.372Z",
+      "finished": "2026-11-20T01:35:34.292Z"
+    }
   },
   "notes": [
     "Final local run repeated all 105 cases after the typography, cube-net dimensions, source-unit and long-choice fixes.",
     "Existing resource static test had stale asset-version assertions updated; no mathematical assertions removed.",
-    "No legacy question banks, scoring modules or official-unit records were edited."
+    "No legacy question banks, scoring modules or official-unit records were edited.",
+    "Diagram review then found fraction wholes used different tile sizes. Corrected SVGs now preserve tile dimensions across unequal wholes; new browser assertions verify equal tiles and different whole widths. All mathematical answers are unchanged.",
+    "All counts refer to distinct cases, not the sum of repeated verification attempts.",
+    "Final refinement preserves language on the reasoning home link; all 105 collection cases repeated locally and publicly. Existing shared-main cases are carried forward because their files are unchanged."
   ],
   "limitations": [
     "Optional enrichment; grade and difficulty suggestions not pupil-calibrated.",
     "No independent translation, physical printing, screen-reader or cross-device listening review.",
     "New collection is separate from mixed-quiz builder and Smart progression."
-  ]
+  ],
+  "runtimeCommit": "ccd5f38f61ec0d27860062326f4fb64d3d68473c",
+  "languageRefinementCommit": "9f6dec0d02ef676d746379b5c8b16dacedfc23a9",
+  "verificationCommit": "ccd5f38f61ec0d27860062326f4fb64d3d68473c",
+  "initialRuntimeCommit": "dbb5359a6681fbc31fe8da42138d656626ed2e96",
+  "deployment": {
+    "runtimeRun": 44655796727,
+    "conclusion": "success",
+    "verificationRun": 44655796727
+  },
+  "public": {
+    "initialReasoning": {
+      "passed": 105,
+      "failed": 0,
+      "started": "2026-11-20T01:32:20.187Z",
+      "finished": "2026-11-20T01:33:34.329Z"
+    },
+    "sharedMainUI": {
+      "passed": 96,
+      "failed": 0,
+      "retries": [
+        "coverage.html?&lang=en"
+      ],
+      "commit": "dbb5359a6681fbc31fe8da42138d656626ed2e96",
+      "note": "One page-load timeout retried internally; all 96 cases passed. These unchanged shared UI files are retained in the final runtime."
+    },
+    "finalReasoning": {
+      "done": true,
+      "passed": 105,
+      "failed": 0,
+      "failures": [],
+      "started": "2026-11-20T01:45:51.691Z",
+      "finished": "2026-11-20T01:46:51.174Z",
+      "commit": "ccd5f38f61ec0d27860062326f4fb64d3d68473c"
+    },
+    "assetReadback": {
+      "files": 19,
+      "matched": 19,
+      "algorithm": "SHA-256",
+      "filesBeforeFinalDocumentation": [
+        {
+          "path": "coverage.html",
+          "matched": true,
+          "bytes": 2798,
+          "sha256": "6d86ebbdba84e1465ee82e76796475e5b3b74384551361298b881b891e87f628",
+          "retryErrors": []
+        },
+        {
+          "path": "index.html",
+          "matched": true,
+          "bytes": 2855,
+          "sha256": "e36e4c3f87b72e1cb57146dc9f59fcc987817eb28a21b7f59b46bdf0c25e4d55",
+          "retryErrors": []
+        },
+        {
+          "path": "README.md",
+          "matched": true,
+          "bytes": 119135,
+          "sha256": "5e2a55fef7c91638c169f75c0721606b45b3cd3eeea7ee1687ef85e9a960d1cd",
+          "retryErrors": []
+        },
+        {
+          "path": "reasoning-catalogue.js",
+          "matched": true,
+          "bytes": 2710,
+          "sha256": "ff4eebe4ea8caf07edb422c37f2c9a51aeb190afad91038fb00be4b871b024fd",
+          "retryErrors": []
+        },
+        {
+          "path": "reasoning-data.js",
+          "matched": true,
+          "bytes": 21979,
+          "sha256": "9e6d453e3038320812f5251f54f68fa588687fab08ff5da8556bf41e95ebcb5b",
+          "retryErrors": []
+        },
+        {
+          "path": "reasoning.css",
+          "matched": true,
+          "bytes": 5014,
+          "sha256": "e92f1a4b6a3cf6fe0947e32431af751610f90c43ec05d8d2d9d07533e642399b",
+          "retryErrors": []
+        },
+        {
+          "path": "reasoning.html",
+          "matched": true,
+          "bytes": 987,
+          "sha256": "652859625c2c22715389ca857d390f2be8d3a9b5b7c3413ed9117a4ec9589955",
+          "retryErrors": []
+        },
+        {
+          "path": "reasoning.js",
+          "matched": true,
+          "bytes": 14997,
+          "sha256": "50f6de103de15d84a1bd67287cdcffafd201d4009469539147e65cf2374a228d",
+          "retryErrors": []
+        },
+        {
+          "path": "resource-browser.js",
+          "matched": true,
+          "bytes": 24475,
+          "sha256": "d69d37b1bbc070aca6635fe1fa105e041d69939f241a4320a4520fd8cd864554",
+          "retryErrors": []
+        },
+        {
+          "path": "skill-levels-hub.js",
+          "matched": true,
+          "bytes": 10520,
+          "sha256": "5022a2437c78e129927df6fd51d9865c26e82e33eedb5687dca3631e538e7ff8",
+          "retryErrors": []
+        },
+        {
+          "path": "skill-levels.html",
+          "matched": true,
+          "bytes": 1446,
+          "sha256": "eb3529cc86e57c08198b42ca93ec6d0ead00f8a0de65469cc383aaf20aa80d0e",
+          "retryErrors": []
+        },
+        {
+          "path": "ui.js",
+          "matched": true,
+          "bytes": 10324,
+          "sha256": "3d3ae11d4494f2cc0304de65ef757b81a59be2f0685500ab77e8fdc7e1839aca",
+          "retryErrors": []
+        },
+        {
+          "path": "planning/question-research-workflow.md",
+          "matched": true,
+          "bytes": 8188,
+          "sha256": "b3a2926e7919a5cb333ae37ed88ce86f75edc07c62348c0c271d70068b2d3427",
+          "retryErrors": []
+        },
+        {
+          "path": "planning/reasoning-collection.md",
+          "matched": true,
+          "bytes": 6935,
+          "sha256": "ca8da462dd7d4a6e3fbba80d71773906595fc5bb66eb218c0e2c95c4c811e902",
+          "retryErrors": []
+        },
+        {
+          "path": "planning/reasoning-release-evidence.json",
+          "matched": true,
+          "bytes": 2154,
+          "sha256": "84f421754e04675b3f720d1670301cf1f357d8c8c0a3df679f5379ed2f6cbaf8",
+          "retryErrors": []
+        },
+        {
+          "path": "tests/reasoning-browser.js",
+          "matched": true,
+          "bytes": 7526,
+          "sha256": "7f5004fe2087c75dfe6a6a9ff9b861bb04ee3ce4f386650b1a0722d69d5ef463",
+          "retryErrors": []
+        },
+        {
+          "path": "tests/reasoning-static.cjs",
+          "matched": true,
+          "bytes": 5518,
+          "sha256": "824d524bb816403fc1cff1218da4878138a767135b088b8ebfe1a25f63191f83",
+          "retryErrors": []
+        },
+        {
+          "path": "tests/reasoning.html",
+          "matched": true,
+          "bytes": 476,
+          "sha256": "2b4b0102fef5ebc676fd76416a17d1dde99cdc8862cf40b746f9ed598d320016",
+          "retryErrors": []
+        },
+        {
+          "path": "tests/resources-ui-static.cjs",
+          "matched": true,
+          "bytes": 1960,
+          "sha256": "c6b3d605b646784d0a5faca9cabfb06c5778e7cc3185f009993b3e664fde356f",
+          "retryErrors": []
+        }
+      ],
+      "note": "Compared UTF-8 LF bytes actually uploaded; an initial comparison used local CRLF bytes and was corrected. Initial transient HTTP connection resets were retried."
+    },
+    "distinctCasesVerified": 201,
+    "cachedRefinementRun": {
+      "passed": 33,
+      "failed": 72,
+      "started": "2026-11-20T01:37:29.722Z",
+      "finished": "2026-11-20T01:38:47.182Z",
+      "errors": {
+        "Home link language": 71,
+        "shapes/en/difficult page-load timeout": 1
+      },
+      "resolution": "Browser reused first-deployment HTML. Verified deployed file hashes; changed runner to request a unique document URL for every navigation and repeated the full suite."
+    },
+    "freshPageVerification": {
+      "passed": 105,
+      "failed": 0,
+      "started": "2026-11-20T01:41:04.497Z",
+      "finished": "2026-11-20T01:42:27.175Z",
+      "commit": "da5337332cb3b8d42e8f0910a0f1ea6a58d41bf4"
+    }
+  },
+  "baselinePreservation": {
+    "unchangedFiles": 520,
+    "onlyIntendedFilesChanged": 19
+  },
+  "mobileSample": {
+    "route": "reasoning.html?topic=tower&lang=zh",
+    "width": 375,
+    "firstAnswerTop": 657.75,
+    "firstAnswerBottom": 701.75,
+    "horizontalOverflow": false,
+    "note": "Observed before the home-link-only refinement; layout bytes unchanged."
+  }
 }
