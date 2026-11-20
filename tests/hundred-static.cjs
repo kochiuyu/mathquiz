@@ -1,5 +1,5 @@
 const A=require('node:assert/strict'),D=require('../learn-data.js'),S=require('../learn-store.js'),fs=require('node:fs'),vm=require('node:vm');
-A.equal(D.paths.length,2);A.equal(D.allLessons.length,6);A.equal(new Set(D.allLessons.map(l=>l.id)).size,6);
+A.equal(D.paths.length,3);A.equal(D.allLessons.length,9);A.equal(new Set(D.allLessons.map(l=>l.id)).size,9);
 let n=0;for(const l of D.getPath('hundred').lessons){A.equal(l.steps.length,3);for(let seed=0;seed<6;seed++)for(let i=0;i<12;i++){
  const q=D.question(l.id,i,seed),v=q.visual;let answer;
  if(l.id==='bundles')answer=i%3===2?v.a%10:Math.floor(v.a/10)*10+v.a%10;

@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-20",
+  "base": "61aa17341c5d7a444f233d396f16520d76c18f66",
+  "scope": "P1 number bonds and subtraction; three learning pathways",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "local": {
+    "distinctBrowserCases": 42,
+    "fullRun": {
+      "passed": 41,
+      "failed": 1,
+      "case": "Subtraction layout en 768",
+      "error": "Navigation timeout learn.html?lesson=bonds&stage=practice&level=normal&lang=en"
+    },
+    "exactRerun": {
+      "case": "Subtraction layout en 768",
+      "passed": 1,
+      "failed": 0
+    },
+    "staticGates": 5,
+    "independentNewGenerationChecks": 216,
+    "fullStorageRecordCharacters": 10033
+  },
+  "development": [
+    "Initial local 40/42: first answers below target on English 320/375 layouts. Shortened repeated practice introduction; both passed in final full run.",
+    "Final local navigation call timed out while runner continued; result read without reload."
+  ],
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "c0daecdd171cc397dc01eb11831de81e9f7df3f912e0244e38161b854ac9b6bf",
+    "learn-data.js": "b4ed35419b0ea7a8365de49ee58e305d08d21db8767477f728413c9c41ec5b57",
+    "learn-store.js": "5c0dc074b5e8c4e0924b4a2e14a0766ff4424579d133ca60bc0eb8a25c4dac9c",
+    "learn-subtract.js": "1fe69635b308716867dc1a17c1a8c2bfb22e395692641bed90ae3dd7e5f9d565",
+    "learn.css": "1cdba7d006fac9493364c47fbace547863e99cee8aeca499f378d409a15eca12",
+    "learn.html": "46aaee8a43190811d7e692de52193fe69b4662c8de3d63c75f995b345392a749",
+    "learn.js": "9858a96fffe91f59e720d0ec17439c46320a943249a2ea91ec66baf5a4ff40c2",
+    "tests/hundred-static.cjs": "759bb6e246aaf2e6cf6e9606882d4b8f2fc4f7d8cbdcd14b74bd730c28a364b7",
+    "tests/student-blocked.html": "2c5ade061039206a7bbda5462d337606f7b3ba7bfd26277e39a97fa60b3af3fb",
+    "tests/student-browser.js": "aa96aa48d6f342a23896e68618f6704911d93fb027f73b43ab40b7943f6764eb",
+    "tests/student.html": "5e721fdcba4d101be22dff68dcafef636e758d17e0a55737c29284610e527848",
+    "tests/subtract-static.cjs": "42cb872d72a31afb6c07f0620af0af2a0305b90fa5d7fcc0d52d1e6d2e34e1a1"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Difficulty and threshold not pupil-calibrated",
+    "No independent translation, screen-reader listening or physical-object classroom review",
+    "Broader 267-case shared browser suite not rerun"
+  ]
+}

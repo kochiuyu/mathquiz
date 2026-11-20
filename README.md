@@ -693,3 +693,12 @@ Local verification: 18/18 focused browser cases and three static gates passed. A
 The homepage has two compact pathway choices. Each learner retains separate progress and quiz results for each pathway; existing work is preserved, including the original quiz identities. A successful first-pathway check offers the next pathway. This remains partial P1 teaching coverage; grouping, estimation, subtraction and later topics remain on the plan.
 
 Local verification: **30/30 focused browser cases and four static gates passed**. All 30 public cases were verified: 29 passed in the full run and one page-load timeout passed on exact rerun. Runtime deployment succeeded; all eleven changed runtime/test assets matched. [Lesson scope, compatibility and remaining P1 plan](planning/p1-hundred-pathway.md) · [Evidence](planning/p1-hundred-evidence.json). Pupil trials and independent manual reviews remain pending.
+
+
+## P1 teaching: number bonds and taking away
+
+[Start Number bonds and taking away](https://kochiuyu.github.io/mathquiz/learn.html?path=subtract). Three new bilingual lessons teach part/whole relationships, taking away (including zero) and putting the parts back together. Teaching and guided practice lead into Easy → Normal → Difficult practice and a separate six-question check.
+
+The new pathway adds **27 diagram-led practice items**. There are now **three pathways, nine lessons and 81 levelled practice items**. The new pathway sits between the first lessons and Numbers to 100; all earlier progress and quiz records are preserved. Following the specific 1N1/1N2 limits, bonds use one-digit parts with totals up to 18, and addition/subtraction relationships use numbers within 10.
+
+Local verification: **all 42 browser cases verified**, including one exact navigation-timeout rerun; five static gates passed. Public verification pending. [Scope, saved-work compatibility and remaining teaching plan](planning/p1-subtract-pathway.md) · [Evidence](planning/p1-subtract-evidence.json). Next: counting groups and estimation. Full P1 teaching coverage and pupil calibration remain pending.
