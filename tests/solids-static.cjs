@@ -1,0 +1,32 @@
+const A=require('node:assert/strict'),D=require('../learn-data.js'),S=require('../learn-store.js'),crypto=require('node:crypto'),fs=require('node:fs'),vm=require('node:vm');
+A.equal(D.paths.length,11);A.equal(D.allLessons.length,33);A.equal(new Set(D.allLessons.map(l=>l.id)).size,33);
+const baseline=D.allLessons.filter(l=>D.pathFor(l.id).id!=='solids').map(l=>[l.id,D.levels.map(v=>D.practice(l.id,v)),Array.from({length:12},(_,s)=>Array.from({length:12},(_,i)=>D.question(l.id,i,s)))]);
+A.equal(crypto.createHash('sha256').update(JSON.stringify(baseline)).digest('hex'),'28564dd7f8d282b4c10bd877efc3e55238cba01736f913c36ebb554a5c147d04');
+const names={prism:'prism',cylinder:'cylinder',pyramid:'pyramid',cone:'cone',sphere:'sphere'},seen=new Set();
+function scope(v){A.equal(v.kind,'solids');A(v.shapes.length>=1&&v.shapes.length<=2);v.shapes.forEach(s=>{A(s.shape in names);seen.add(s.shape);A(!s.turn||[20,25,90].includes(s.turn));});}
+let n=0;for(const l of D.getPath('solids').lessons){A.equal(l.steps.length,3);for(const step of l.steps){scope(step.visual);A(step.text.every(Boolean));}for(let seed=0;seed<6;seed++)for(let index=0;index<12;index++){
+ const q=D.question(l.id,index,seed),v=q.visual;scope(v);let expected;
+ if(l.id!=='solidexplore')expected=v.choices.findIndex(x=>x[0]===names[v.shapes[0].shape])+1;
+ else {const answers=['No: a cylinder can roll too','Lie it on its side','A flat round end','No: a pyramid has a tip too','Try safely and record what happens','Its colour, not its kind of shape'];expected=v.choices.findIndex(x=>x[0]===answers[(index+seed)%6])+1;}
+ A(expected>0);A.equal(q.answer,expected,q.id);A(D.correct(q,''+expected));for(const a of ['', '-1','1e1','100','1.0',String(3-expected)])A(!D.correct(q,a));A(q.prompt.every(Boolean)&&q.why.every(Boolean));n++;
+}}
+A.equal(seen.size,5);
+const answers={solidnames:{easy:['pyramid','cone','sphere'],normal:['cone','sphere','prism'],difficult:['pyramid','cylinder','prism']},solidobjects:{easy:['pyramid','cone','sphere'],normal:['sphere','cylinder','prism'],difficult:['cylinder','pyramid','sphere']},solidexplore:{easy:['A flat round end','No: a pyramid has a tip too','Try safely and record what happens'],normal:['Lie it on its side','A flat round end','Try safely and record what happens'],difficult:['No: a cylinder can roll too','No: a pyramid has a tip too','Its colour, not its kind of shape']}};
+for(const l of D.getPath('solids').lessons)for(const level of D.levels){const qs=D.practice(l.id,level);A.equal(qs.length,3);A.equal(new Set(qs.map(q=>q.id)).size,3);qs.forEach((q,i)=>{scope(q.visual);A.equal(q.visual.choices[q.answer-1][0],answers[l.id][level][i]);A(q.prompt.every(Boolean)&&q.why.every(Boolean));});}
+for(let i=0;i<12;i++){const qs=D.quiz(i,'solids');A.equal(qs.length,6);for(const l of D.getPath('solids').lessons)A.equal(qs.filter(q=>q.lesson===l.id).length,2);A.equal(new Set(qs.map(q=>q.id)).size,6);}
+const old={attempt:2,quiz:{answers:['3','5','12','5','7','7'],submitted:true},checks:Object.fromEntries(D.paths.filter(pa=>!['first','solids'].includes(pa.id)).map(pa=>[pa.id,{attempt:1,quiz:{answers:D.quiz(1,pa.id).map(q=>''+q.answer),submitted:true}}])),lessons:{takeaway:{levels:{easy:{answers:['0','6','2'],done:true}}},bundles:{levels:{normal:{answers:['62','80','100'],done:true}}}}};
+const map=new Map(),storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};map.set(S.key,JSON.stringify({version:1,active:0,profiles:[old,{},{}]}));let st=S.create(storage);const prior=JSON.stringify([st.profile.quiz,st.profile.checks]);st.update(p=>{p.checks.solids={attempt:2,quiz:{answers:['0'],submitted:false}};p.pathCursors.solids={lesson:'solidexplore',stage:'practice',level:'normal'};p.lessons.solidexplore={levels:{easy:{done:true,answers:['0','45','50']}}};});st=S.create(storage);A.equal(st.profile.lessons.solidexplore.levels.easy.answers[0],'0');A.equal(st.profile.pathCursors.solids.lesson,'solidexplore');A.deepEqual([st.profile.quiz,Object.fromEntries(Object.keys(old.checks).map(pa=>[pa,st.profile.checks[pa]]))],JSON.parse(prior));A.equal(st.profile.lessons.bundles.levels.normal.answers[2],'100');st.select(1);A(!st.profile.lessons.solidexplore);st.reset();st.select(0);A(st.profile.lessons.solidexplore.levels.easy.done);
+const full=S.cleanProfile(old);full.attempt=999;full.quiz={answers:Array(6).fill('100'),submitted:true};full.cursor={lesson:'solidexplore',stage:'practice',level:'difficult'};for(const l of D.allLessons)full.lessons[l.id]={learn:true,together:true,practice:true,step:2,togetherAnswers:['100','100'],practiceAnswers:['100','100','100'],levels:Object.fromEntries(D.levels.map(x=>[x,{done:true,answers:['100','100','100']}]))};for(const pa of D.paths){full.pathCursors[pa.id]={lesson:pa.lessons.at(-1).id,stage:'practice',level:'difficult'};if(pa.id!=='first')full.checks[pa.id]={attempt:999,quiz:{answers:Array(6).fill('100'),submitted:true}};}
+const record=JSON.stringify({version:1,active:2,profiles:[full,full,full]});A(record.length<S.maxRecordLength);map.set(S.key,record);st=S.create(storage);A.equal(st.notice,'');for(const pupil of st.state.profiles){A.equal(Object.keys(pupil.lessons).length,33);A.equal(pupil.checks.solids.quiz.answers.length,6);}
+// Valid whitespace pushes past the previous 20k cap, and near the new schema-based cap.
+map.set(S.key,record+' '.repeat(S.maxRecordLength-1-record.length));st=S.create(storage);A.equal(st.notice,'');A(st.profile.checks.solids.quiz.submitted);
+map.set(S.key,record+' '.repeat(S.maxRecordLength-record.length));st=S.create(storage);A.equal(st.notice,'read');A.equal(map.get(S.key).length,S.maxRecordLength,'read/probe overwrote stored work');
+map.set(S.key,'{broken');st=S.create(storage);A.equal(st.notice,'read');A.equal(map.get(S.key),'{broken');
+const bad=S.cleanProfile({checks:{solids:{attempt:-1,quiz:{answers:['123456'],submitted:'true'}}},pathCursors:{solids:{lesson:'parity',stage:'quiz'}}});A.equal(bad.checks.solids.attempt,0);A(!bad.checks.solids.quiz.submitted);A(!bad.pathCursors.solids);
+
+
+
+
+
+for(const f of ['learn-solids.js','learn-data.js','learn-store.js','learn.js','tests/student-browser.js'])new vm.Script(fs.readFileSync(require('node:path').join(__dirname,'..',f),'utf8'));
+console.log(`PASS: ${n} generated answers,27 practice items,12 attempts,five solids; prior content unchanged; full record ${record.length},bound ${S.maxRecordLength}.`);

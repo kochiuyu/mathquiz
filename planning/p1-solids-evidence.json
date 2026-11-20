@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-20",
+  "base": "c473e62ee54948717ae5aec019ace1baf8e9eb8f",
+  "scope": "P1 1S1 intuitive recognition of five solid families, objects and observations",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "totals": {
+    "pathways": 11,
+    "lessons": 33,
+    "levelledPracticeItems": 297
+  },
+  "local": {
+    "status": "verified",
+    "staticGates": 13,
+    "independentlyCheckedGeneratedAnswers": 216,
+    "practiceAnswers": 27,
+    "checkAttempts": 12,
+    "fullRecordCharacters": 36514,
+    "readBoundCharacters": 65344,
+    "fullRun": {
+      "done": true,
+      "passed": 155,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Separate pathway resumes and saved 100",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal"
+        },
+        {
+          "name": "Measurement diagrams and practical links",
+          "error": "Navigation timeout activities/p1-length-distance-i.html?lang=zh"
+        },
+        {
+          "name": "Solids mobile teaching en",
+          "error": "Navigation timeout learn.html?lesson=solidexplore&lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Separate pathway resumes and saved 100",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Measurement diagrams and practical links",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Solids mobile teaching en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 158,
+    "visuals": [
+      {
+        "language": "en",
+        "lesson": "solidnames",
+        "level": "difficult",
+        "width": 320,
+        "height": 812,
+        "firstAnswerBottom": 789.359375,
+        "overflow": false,
+        "screenshot": "browser-screenshots/screenshot-2026-11-20T11-34-45-605Z-e6dcf53c.png"
+      },
+      {
+        "language": "zh",
+        "lesson": "solidexplore",
+        "level": "difficult",
+        "width": 320,
+        "height": 812,
+        "firstAnswerBottom": 734.96875,
+        "overflow": false,
+        "screenshot": "browser-screenshots/screenshot-2026-11-20T11-34-58-246Z-b64921f8.png"
+      }
+    ]
+  },
+  "public": {
+    "status": "pending"
+  },
+  "sources": [
+    {
+      "name": "EDB KS1 explanatory notes,1S1 printed page14",
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=20",
+      "checked": "2026-11-20"
+    }
+  ],
+  "hashes": {
+    "index.html": "7d7c7a8873e2590c821b366b15f06f79db6ebef1d71aee887731dbb963728850",
+    "learn-data.js": "7593e92300ce475f756a5ad87a6639221e9c6f35b1cd038ccc2fa10877acddfb",
+    "learn-store.js": "e17121d706b5f4672239ccb86f54acbe43b04a3ebd0d24686c4ae65802548431",
+    "learn-solids.js": "5a9a1b2e3ee91beb3b41382a0f8409adf37ea26d3ea7ca3d9df94735c7972766",
+    "learn.css": "cde0d29aff8dfcc93d5b53c194982a7ac112bdd47aadbbb453546d742a9cc56b",
+    "learn.html": "c4e49a2f4947a1fc91fd901c5a4ad2523a3f0c95776771250066d9d38ce1ce44",
+    "learn.js": "00b1715bf780218f767402fc485f50c020bd3d45427da57d1d9bb7ecba729a63",
+    "tests/hundred-static.cjs": "c1650bae0ba7e03764e692618a9792065ba65f4896cf7eae3aae3218788d7ac6",
+    "tests/subtract-static.cjs": "8a309510582a07a318814e2724da7af074f9b241f5368a20342b3de0f4c89495",
+    "tests/groups-static.cjs": "af39b8a45ef0e40868b241305db777e6485e9a1b8fd3a3930727ea706cf07767",
+    "tests/relations-static.cjs": "fa8337143973cf330f1bfe987bfaf686b29865693c0de5f618bc15571fdd5e5e",
+    "tests/calculate-static.cjs": "3cd58a50a24a3c4e7dfa01c263b9c54deef3daf3d90733e8c4dd54d54b94db1a",
+    "tests/measure-static.cjs": "8a5e64241a1989ce0c5bce963a4050f2f138eb247395dd567aff0797ee489304",
+    "tests/ruler-static.cjs": "993003cdd564c83957f4e092510dfa560d149b86fb9be65948a576a92ef98813",
+    "tests/money-static.cjs": "7a4139b87faad79f728613f6deb41441d09d84a5192eda3bff13c90191c92749",
+    "tests/time-static.cjs": "d8bc682950d71b6a4a1d13adf7e41193d664546827333f7acc6020966401e5f2",
+    "tests/solids-static.cjs": "54193d92ff4e13f79a018362fa79da3301216dd6cd94e44b4ef28c6472d04b53",
+    "tests/student-blocked.html": "9cec869a124d5be730bdb25009e75b777256dede8129ce6bfdd40c6a50f5507e",
+    "tests/student-browser.js": "f6f8918636b5fea87cdfff50f65e79c85eea797d5942385f33d50f3d6bd3a489",
+    "tests/student.html": "830ac97791f60ee39de6e192a8e028c577ec069eff39c2bca3a00d65aeba479b"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "No formal face/edge/vertex counts, prism/pyramid subtype names, nets or solid construction",
+    "Pictures are schematic models, not real-object photographs",
+    "Physical rolling/stacking/handling must be observed by an adult; not performed",
+    "Practice may complete after correction;5/6 recommendation is provisional, not calibrated mastery",
+    "Three overlapping check configurations, not independent assessments",
+    "Pupil trials, independent translation review, screen-reader listening and physical printing pending",
+    "Broader267-case shared UI/activity browser suite not repeated"
+  ]
+}

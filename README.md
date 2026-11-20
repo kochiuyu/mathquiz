@@ -765,3 +765,12 @@ All **128 local browser cases are verified**: 126 passed in the final full run; 
 The **27 new practice items** bring the student journey to **ten pathways, 30 lessons and 270 levelled practice items**. Clock hands show the half-hour position correctly, including half past twelve. Both Monday-first and Sunday-first sample calendars are included. Earlier questions, learner slots and saved results are retained. A real-clock activity supports practical observation.
 
 All **143 local browser cases are verified**: 142 passed in the full run; one test-frame reset timeout passed its exact rerun. Twelve static gates passed. All **143 public cases are verified**: 141 passed in the full run; 2 timeout cases passed exact reruns. Runtime deployment succeeded and all nineteen changed runtime/test files matched their tested hashes. [Scope, compatibility and next steps](planning/p1-time-pathway.md) · [Evidence](planning/p1-time-evidence.json). Next: 3-D shapes under 1S1. Pupil trials and independent human reviews remain pending; online tasks cannot observe a pupil’s actual experience or measurement of time.
+
+
+## P1 teaching: explore 3-D shapes
+
+[Start Explore 3-D shapes](https://kochiuyu.github.io/mathquiz/learn.html?path=solids). Three bilingual lessons introduce five solid families, connect them to everyday objects, and use rolling/stacking observations carefully. Teaching and guided examples lead to three difficulty levels and a six-question check.
+
+The **27 new practice items** bring the journey to **eleven pathways, 33 lessons and 297 levelled practice items**. Rotated models, pointed-shape misconceptions and colour changes are included. Earlier questions and saved pupil progress are retained. Real handling continues through the existing adult-supported activity.
+
+All **158 local browser cases are verified**: the full run passed 155/158, and three navigation timeouts passed exact reruns. Thirteen static gates passed. English and Chinese mobile samples showed the first answer within 812 pixels with no horizontal overflow. Public verification is pending. [Scope, compatibility and next steps](planning/p1-solids-pathway.md) · [Evidence](planning/p1-solids-evidence.json). Next: 2-D shapes under 1S2. Pupil trials and independent human reviews remain pending; online answers cannot demonstrate physical rolling, stacking or model recognition.
