@@ -40,7 +40,23 @@
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctBrowserCases": 54,
+    "fullRun": {
+      "passed": 54,
+      "failed": 0
+    },
+    "reruns": 0,
+    "runtimeHashMatches": 13,
+    "evidenceHashVerified": true,
+    "visualCheck": {
+      "page": "Chinese fives teaching",
+      "width": 360,
+      "height": 812,
+      "nextButtonBottom": 599.21,
+      "horizontalOverflow": false
+    },
+    "runnerNavigation": "Navigation settled beyond the requested timeout, but returned the completed 54/54 result; no case retried."
   },
   "hashEncoding": "UTF-8/LF as uploaded",
   "hashes": {
@@ -64,5 +80,10 @@
     "Difficulty and threshold not pupil-calibrated",
     "Independent translation, screen-reader listening and real-object classroom review not performed",
     "Broader 267-case shared browser suite not rerun"
-  ]
+  ],
+  "runtimeCommit": "f37de541f20c4378c1710b0110b883fc6402a8fd",
+  "deployment": {
+    "runId": 44702152447,
+    "conclusion": "success"
+  }
 }
