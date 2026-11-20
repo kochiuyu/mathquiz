@@ -82,7 +82,49 @@
     "runnerTransport": "Initial navigation and one result-read timed out while final runner continued; completion read without reloading"
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctBrowserCases": 83,
+    "fullRun": {
+      "passed": 81,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal&lang=zh"
+        },
+        {
+          "name": "Relations diagrams, zero and directions",
+          "error": "Navigation timeout learn.html?lesson=parity&stage=practice&level=normal&lang=zh"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Relations diagrams, zero and directions",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "runtimeCommit": "e5d48cb8fc4941ab67015f045e55a56515137e21",
+    "pagesRun": 44706845957,
+    "pagesConclusion": "success",
+    "runtimeAssetsMatched": 15,
+    "runnerTransport": "Initial navigation and one result-read timed out while runner continued; completed result read without reload",
+    "visualCheck": {
+      "page": "Chinese three-number addition, teaching step 3",
+      "width": 320,
+      "height": 812,
+      "nextActionBottom": 728.94,
+      "horizontalOverflow": false,
+      "pathways": 6,
+      "lessons": 18,
+      "twoCarriedTensInspected": true
+    }
   },
   "hashEncoding": "UTF-8/LF as uploaded",
   "hashes": {
