@@ -774,3 +774,12 @@ All **143 local browser cases are verified**: 142 passed in the full run; one te
 The **27 new practice items** bring the journey to **eleven pathways, 33 lessons and 297 levelled practice items**. Rotated models, pointed-shape misconceptions and colour changes are included. Earlier questions and saved pupil progress are retained. Real handling continues through the existing adult-supported activity.
 
 All **158 local browser cases are verified**: the full run passed 155/158, and three navigation timeouts passed exact reruns. Thirteen static gates passed. English and Chinese mobile samples showed the first answer within 812 pixels with no horizontal overflow. All **158 public browser cases are verified**: 154 passed in the full run; 4 timeout cases passed exact reruns. Runtime deployment succeeded and all twenty changed runtime/test files matched their tested hashes. [Scope, compatibility and next steps](planning/p1-solids-pathway.md) · [Evidence](planning/p1-solids-evidence.json). Next: 2-D shapes under 1S2. Pupil trials and independent human reviews remain pending; online answers cannot demonstrate physical rolling, stacking or model recognition.
+
+
+## P1 teaching: explore 2-D shapes
+
+[Start Explore 2-D shapes](https://kochiuyu.github.io/mathquiz/learn.html?path=flat). Three bilingual lessons teach points and lines, recognise five flat-shape types and distinguish joined pieces from the whole outline. Teaching and guided examples lead to three practice levels and a separate six-question check.
+
+The **27 new practice items** bring the journey to **twelve pathways, 36 lessons and 324 levelled practice items**. Turned, indented and unequal-sided shapes help pupils look beyond familiar silhouettes. Earlier questions and saved progress are retained. The linked practical packet supports drawing, making and free composition with an adult.
+
+All **173 local browser cases are verified**: 172 passed in the final full run; one timeout case passed its exact rerun. Fourteen static gates passed. Public verification is pending. [Scope, compatibility and next steps](planning/p1-flat-pathway.md) · [Evidence](planning/p1-flat-evidence.json). Next: relative positions under 1S3. Pupil trials and independent human reviews remain pending; online answers cannot demonstrate actual drawing or making.

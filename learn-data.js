@@ -1,6 +1,7 @@
 /* Original P1 teaching pathway. Practice completion is not a mastery claim. */
 ((root)=>{
 'use strict';
+const F=typeof module!=='undefined'?require('./learn-flat.js'):root.MathQuizLearnFlat;
 const V=typeof module!=='undefined'?require('./learn-solids.js'):root.MathQuizLearnSolids;
 const Q=typeof module!=='undefined'?require('./learn-time.js'):root.MathQuizLearnTime;
 const K=typeof module!=='undefined'?require('./learn-money.js'):root.MathQuizLearnMoney;
@@ -13,6 +14,7 @@ const B=typeof module!=='undefined'?require('./learn-subtract.js'):root.MathQuiz
 const H=typeof module!=='undefined'?require('./learn-hundred.js'):root.MathQuizLearnHundred;
 const pair=(en,zh)=>[en,zh], item=(id,lesson,prompt,answer,why,visual)=>({id,lesson,prompt,answer,why,visual});
 function question(lesson,index,seed=0){
+ if(F.lessons.some(l=>l.id===lesson))return F.question(lesson,index,seed);
  if(V.lessons.some(l=>l.id===lesson))return V.question(lesson,index,seed);
  if(Q.lessons.some(l=>l.id===lesson))return Q.question(lesson,index,seed);
  if(K.lessons.some(l=>l.id===lesson))return K.question(lesson,index,seed);
@@ -85,9 +87,9 @@ const challenges={
   ['9 + 4 and 8 + □ have the same total. What is the missing number?','9 + 4和8 + □的總數相同。欠缺的數是多少？',5,'9 + 4 = 13. Count on from 8 to 13: five. Check 8 + 5 = 13.','9 + 4 = 13。由8數到13要加五，驗算8 + 5 = 13。']
  ]}
 };
-function practice(lesson,level){if(!levels.includes(level))level='easy';if(V.lessons.some(l=>l.id===lesson))return V.practice(lesson,level);if(Q.lessons.some(l=>l.id===lesson))return Q.practice(lesson,level);if(K.lessons.some(l=>l.id===lesson))return K.practice(lesson,level);if(U.lessons.some(l=>l.id===lesson))return U.practice(lesson,level);if(M.lessons.some(l=>l.id===lesson))return M.practice(lesson,level);if(C.lessons.some(l=>l.id===lesson))return C.practice(lesson,level);if(R.lessons.some(l=>l.id===lesson))return R.practice(lesson,level);if(G.lessons.some(l=>l.id===lesson))return G.practice(lesson,level);if(B.lessons.some(l=>l.id===lesson))return B.practice(lesson,level);if(H.lessons.some(l=>l.id===lesson))return H.practice(lesson,level);return level==='easy'?[2,3,4].map(i=>question(lesson,i)):challenges[lesson][level].map((x,i)=>item(lesson+'-'+level+'-'+i,lesson,pair(x[0],x[1]),x[2],pair(x[3],x[4]),null));}
+function practice(lesson,level){if(!levels.includes(level))level='easy';if(F.lessons.some(l=>l.id===lesson))return F.practice(lesson,level);if(V.lessons.some(l=>l.id===lesson))return V.practice(lesson,level);if(Q.lessons.some(l=>l.id===lesson))return Q.practice(lesson,level);if(K.lessons.some(l=>l.id===lesson))return K.practice(lesson,level);if(U.lessons.some(l=>l.id===lesson))return U.practice(lesson,level);if(M.lessons.some(l=>l.id===lesson))return M.practice(lesson,level);if(C.lessons.some(l=>l.id===lesson))return C.practice(lesson,level);if(R.lessons.some(l=>l.id===lesson))return R.practice(lesson,level);if(G.lessons.some(l=>l.id===lesson))return G.practice(lesson,level);if(B.lessons.some(l=>l.id===lesson))return B.practice(lesson,level);if(H.lessons.some(l=>l.id===lesson))return H.practice(lesson,level);return level==='easy'?[2,3,4].map(i=>question(lesson,i)):challenges[lesson][level].map((x,i)=>item(lesson+'-'+level+'-'+i,lesson,pair(x[0],x[1]),x[2],pair(x[3],x[4]),null));}
 
-const paths=[{id:'first',title:pair('Numbers and addition to 20','二十以內的數與加法'),lessons},{id:'subtract',title:pair('Number bonds and taking away','數的組合與減法'),lessons:B.lessons},{id:'hundred',title:pair('Numbers to 100','一百以內的數'),lessons:H.lessons},{id:'groups',title:pair('Counting groups and estimating','分組數數與估計'),lessons:G.lessons},{id:'relations',title:pair('Positions, pairs and differences','次序、配對與比較'),lessons:R.lessons},{id:'calculate',title:pair('Add and subtract below 100','一百以內的加減法'),lessons:C.lessons},{id:'measure',title:pair('Length and distance','長度與距離'),lessons:M.lessons},{id:'ruler',title:pair('Centimetres and rulers','厘米與尺'),lessons:U.lessons},{id:'money',title:pair('Hong Kong money','香港貨幣'),lessons:K.lessons},{id:'time',title:pair('Time and calendars','時間與月曆'),lessons:Q.lessons},{id:'solids',title:pair('Explore 3-D shapes','探索立體'),lessons:V.lessons}];
+const paths=[{id:'first',title:pair('Numbers and addition to 20','二十以內的數與加法'),lessons},{id:'subtract',title:pair('Number bonds and taking away','數的組合與減法'),lessons:B.lessons},{id:'hundred',title:pair('Numbers to 100','一百以內的數'),lessons:H.lessons},{id:'groups',title:pair('Counting groups and estimating','分組數數與估計'),lessons:G.lessons},{id:'relations',title:pair('Positions, pairs and differences','次序、配對與比較'),lessons:R.lessons},{id:'calculate',title:pair('Add and subtract below 100','一百以內的加減法'),lessons:C.lessons},{id:'measure',title:pair('Length and distance','長度與距離'),lessons:M.lessons},{id:'ruler',title:pair('Centimetres and rulers','厘米與尺'),lessons:U.lessons},{id:'money',title:pair('Hong Kong money','香港貨幣'),lessons:K.lessons},{id:'time',title:pair('Time and calendars','時間與月曆'),lessons:Q.lessons},{id:'solids',title:pair('Explore 3-D shapes','探索立體'),lessons:V.lessons},{id:'flat',title:pair('Explore 2-D shapes','探索平面圖形'),lessons:F.lessons}];
 const allLessons=paths.flatMap(p=>p.lessons),getPath=id=>paths.find(p=>p.id===id)||paths[0],pathFor=id=>paths.find(p=>p.lessons.some(l=>l.id===id))||paths[0];
 const quiz=(attempt,path='first')=>getPath(path).lessons.flatMap(l=>[question(l.id,6,(attempt*2)%6),question(l.id,8,(attempt*2)%6)]);
 const valid=s=>/^\d{1,3}$/.test(String(s).trim())&&Number(String(s).trim())<=100;

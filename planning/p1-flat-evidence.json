@@ -1,0 +1,132 @@
+{
+  "date": "2026-11-20",
+  "base": "2e95ddcefe8bf330d4f398a64f196a75cc6d3a5c",
+  "scope": "P1 1S2 points, lines, five flat-shape types and composition; drawing/making remain practical",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "totals": {
+    "pathways": 12,
+    "lessons": 36,
+    "levelledPracticeItems": 324
+  },
+  "local": {
+    "status": "verified",
+    "staticGates": 14,
+    "independentlyCheckedGeneratedAnswers": 216,
+    "practiceAnswers": 27,
+    "checkAttempts": 12,
+    "simpleFigures": 8,
+    "exactPolygonUnions": 6,
+    "fullRecordCharacters": 39796,
+    "readBoundCharacters": 70912,
+    "fullRun": {
+      "done": true,
+      "passed": 172,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Subtraction layout zh 320",
+          "error": "Navigation timeout learn.html?lesson=takeaway&stage=practice&level=easy&lang=zh"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Subtraction layout zh 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "visuals": [
+      {
+        "language": "en",
+        "lesson": "joinshapes",
+        "level": "difficult",
+        "width": 320,
+        "height": 812,
+        "firstAnswerBottom": 749.84375,
+        "overflow": false,
+        "screenshot": "browser-screenshots/screenshot-2026-11-20T12-28-26-769Z-df7291e7.png"
+      },
+      {
+        "language": "zh",
+        "lesson": "flatnames",
+        "level": "difficult",
+        "width": 320,
+        "height": 812,
+        "firstAnswerBottom": 695.453125,
+        "overflow": false,
+        "screenshot": "browser-screenshots/screenshot-2026-11-20T12-28-39-714Z-7f77ea3f.png"
+      }
+    ],
+    "distinctCasesVerified": 173,
+    "developmentRun": {
+      "done": true,
+      "passed": 170,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Hundred layout zh 375",
+          "error": "Navigation timeout learn.html?path=hundred&lang=zh"
+        },
+        {
+          "name": "Twelve pathway resume and gates",
+          "error": "Navigation timeout learn.html?path=flat"
+        },
+        {
+          "name": "Flat geometry and activity",
+          "error": "description absent"
+        }
+      ],
+      "resolution": "Replaced excessive minimum length with a nonempty short-Chinese-friendly accessibility description check. Expanded check rotations to cover all five shape types; added a coverage assertion. Reran all14 static gates and the full browser suite."
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "sources": [
+    {
+      "name": "EDB KS1 explanatory notes,1S2 printed pages15-16",
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=21",
+      "checked": "2026-11-20"
+    }
+  ],
+  "hashes": {
+    "index.html": "75bdd4e57e5ed45d5333fc6045245d628a37239f1f5334d19f2b553631e25286",
+    "learn-data.js": "44649159f337d376a3ca2c885c3349fdc2aa353264409363b72c8ce484ba6d6d",
+    "learn-store.js": "28fec02ee6ae38e742506924929aa360bca6cad4ece30ab8b76e8ba5476a5434",
+    "learn-flat.js": "142c9ef78f0832e0d60d525ddeb4ac0db79a2528ce6e3dbb845a53268e411bc3",
+    "learn.css": "6a9a782c78b5049749782efe05092b41bda0c07b0e8b20868c7834987652cb19",
+    "learn.html": "ac18cb8376f280be59b9014ed723c82ee3927474a287f6238f414ef85710ef9f",
+    "learn.js": "8b0c159d3180a7eeff97ea917044304e25e28a137d5de8f06dd16f8531b3f62b",
+    "tests/hundred-static.cjs": "30203593075436e10a05526e907c7fc8c2c5193fb8648fa66f9b5858be7c2728",
+    "tests/subtract-static.cjs": "6e435a1b3e7411171fcd1eddd3b67b437c6df86224501d881ef41fb88c2187f8",
+    "tests/groups-static.cjs": "a7b5fc6c010b37ed967081635a405d35afcdc54573e6605d64df42bff0b4b4c3",
+    "tests/relations-static.cjs": "593b8596230a8c83a125defae58b8c07c06d6ec6412333d6266a531a68756be0",
+    "tests/calculate-static.cjs": "1eb6090535bd73e37d3bbe16f9921827c66c00020cae3406477208212b756681",
+    "tests/measure-static.cjs": "103f9a1e2bf496b1d2a4bf43a2ed719d68c0f27027f36ad9d2bb4e6f1bae6e45",
+    "tests/ruler-static.cjs": "3f4939fdd7e7c5ceb322cba94e04571295d67703e0e0b177a3da084d4b55f41b",
+    "tests/money-static.cjs": "fddb1427f12371a5ea3d9f3d94e6bdee04d5a47daa0ff351485edf4104601eed",
+    "tests/time-static.cjs": "f823ee164768b4e9d9deb895a83f79520cfd044bb92949a2c9ce682eaa63bdc1",
+    "tests/solids-static.cjs": "32a5f84a5a6c824e8a836853df03be540cf952c80fcf8afd5e8058bad1cf95b0",
+    "tests/flat-static.cjs": "f3bfea5e204c5500884fed117e2417c5ce7bb30c664310b140ccbedf4edeb7a8",
+    "tests/student-blocked.html": "8d72734bffbc8cad013772f5992bbf1490e0110888d5244810ad658009d966aa",
+    "tests/student-browser.js": "164340e530f28b92e4e0e8c3c5d0433669874d9b4279d44c3068fa92e7f2ce78",
+    "tests/student.html": "363ef4ab04542cd13337da66ab39f1fa341a10f10f6b2f89ed7ba0d8eb194d6f"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "No equal-side or angle-measurement requirement, formal convex/concave vocabulary, perimeter or area calculation",
+    "Actual drawing, making and free composition need adult observation; not performed",
+    "Practice may complete after correction;5/6 recommendation provisional, not calibrated mastery",
+    "Three overlapping check configurations, not independent assessments",
+    "Final extra-practice link triangle1 is triangle recognition only",
+    "Pupil trials, independent translation review, screen-reader listening and physical printing pending",
+    "Broader267-case shared UI/activity browser suite not repeated"
+  ]
+}
