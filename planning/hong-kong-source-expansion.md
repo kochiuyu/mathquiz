@@ -1,5 +1,7 @@
 # Hong Kong question research: deeper school and EDB review
 
+> Implementation update, 20 November 2026: The eight drafts below are now resolved: six published as original worked examples and HK013/HK016 linked to existing equivalent practice. HK018 is now navigated under P4 after prerequisite review. See [release decisions and evidence](research-to-practice-release.md).
+
 Reviewed 20 November 2026. Research documentation only: these examples are **unpublished pupil-question drafts**, under the origin label **MathQuiz adaptations / MathQuiz改編練習**.
 
 This round reviews six additional Hong Kong resources and adds eight original bilingual drafts. The research queue is now **22 unpublished candidates: 19 Hong Kong, two UK and one Singapore**. The live catalogue remains 270 curriculum-linked plus 30 TSA-informed practice types, with 12 separate adaptation collections. Drafts are not additional official skills or live questions.

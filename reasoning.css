@@ -4,3 +4,5 @@
 
 .reason-fields label{min-width:0}.reason-fields select{min-width:0;width:100%}.reason-choice-list>span{display:block;margin:6px 0}.reason-choice-list:empty{display:none}
 .reasoning-page{font-family:system-ui,-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif;line-height:1.5;margin:0}.reasoning-page .skip-link{position:absolute;left:12px;top:-80px;background:white;padding:8px;z-index:10}.reasoning-page .skip-link:focus{top:4px}.reasoning-page .brand{font-weight:750;text-decoration:none}
+
+.example-calendar .reason-table{table-layout:fixed;font-size:.85rem}.example-calendar .reason-table th,.example-calendar .reason-table td{text-align:center;padding:7px 2px}.example-calendar{max-width:400px;margin:12px auto}

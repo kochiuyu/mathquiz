@@ -1,5 +1,7 @@
 # Hong Kong, UK and Singapore question-source expansion
 
+> Implementation update, 20 November 2026: The four original drafts below are now published as single worked examples. Earlier research counts are historical. See [release decisions and evidence](research-to-practice-release.md).
+
 Reviewed 20 November 2026. Research and documentation only: no new pupil questions or scoring changes are included in this update.
 
 ## Source shortlist

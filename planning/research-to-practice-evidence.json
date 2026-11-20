@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-20",
+  "status": "local verification complete; public verification pending",
+  "base": "aa5966925716ccd2b737f3706f3555df65ec5901",
+  "newExamples": 20,
+  "regions": {
+    "HK": 17,
+    "UK": 2,
+    "SG": 1
+  },
+  "markedTasks": 19,
+  "teacherTasks": 1,
+  "answerFields": 66,
+  "resolvedExisting": [
+    "MQ-HK013: divgroup2a",
+    "MQ-HK016: heightmatch5a"
+  ],
+  "static": {
+    "newIndependentChecks": 20,
+    "existingRecords": 399,
+    "existingFields": 1032,
+    "resourceGate": "passed",
+    "uiRefreshGate": "passed"
+  },
+  "developmentFailures": [
+    {
+      "suite": "new examples browser",
+      "passed": 83,
+      "failed": 2,
+      "cause": "test selected count element as well as resource cards; corrected selector",
+      "cases": [
+        "library/en",
+        "library/zh"
+      ]
+    },
+    {
+      "suite": "resource static",
+      "cause": "old cache-version assertion; aligned index, coverage and expectations"
+    }
+  ],
+  "local": {
+    "newExamples": {
+      "passed": 85,
+      "failed": 0
+    },
+    "existingCollections": {
+      "initial": {
+        "passed": 105,
+        "failed": 0
+      },
+      "finalFullRun": {
+        "passed": 104,
+        "failed": 1,
+        "failure": "shapes/zh/easy: page-load timeout"
+      },
+      "exactRerun": {
+        "name": "shapes/zh/easy",
+        "passed": 1,
+        "failed": 0
+      },
+      "distinctCasesVerified": 105
+    }
+  },
+  "limitations": [
+    "Independent human translation review",
+    "Physical printing",
+    "Screen-reader use",
+    "Classroom difficulty calibration",
+    "Practical observation"
+  ],
+  "visualSamples": [
+    "Chinese mobile pictogram",
+    "Chinese mobile calendar",
+    "English rectangle key",
+    "English corrected pie key"
+  ]
+}

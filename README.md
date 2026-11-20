@@ -643,3 +643,12 @@ P3 now has **50 MathQuiz practice types / 1,800 levelled tasks**: 35 existing cu
 All 399 generated task records and 1,032 answer fields passed independent checking. All **105 collection cases were verified locally and publicly**; existing main UI compatibility passed **96/96** locally and publicly. The public UI run retried one page-load timeout successfully; [evidence](planning/reasoning-release-evidence.json) records the complete scope and earlier corrected failures. Difficulty calibration, independent language review, physical printing and accessibility listening/review remain unverified.
 
 The [workflow](planning/question-research-workflow.md) records how to search, review source terms, compare existing questions, write original bilingual tasks, check all valid answers, publish within authorization and verify the deployed result.
+
+
+## Research drafts implemented — 20 November 2026
+
+[Open MathQuiz adaptations](https://kochiuyu.github.io/mathquiz/reasoning.html): **12 existing levelled collections + 20 new single worked examples**, comprising 17 Hong Kong, two UK and one Singapore example. Nineteen have automatic checks (66 answer fields); one is a teacher-assessed story task. All 22 previously queued drafts are resolved: two overlap candidates link to existing P2 grouping and P5 perpendicular-height practice instead of creating duplicates.
+
+The examples include original diagrams, English/Traditional Chinese practice, saved session answers, pupil papers and worked keys. They are searchable in Find resources by source and region (including 香港 / 英國 / 新加坡). Single examples do not pretend to have three difficulty levels. The curriculum catalogue remains **270 curriculum-linked + 30 TSA-informed types**, separate from these adaptations; Smart and mixed-quiz integration are unchanged.
+
+See the [release report and candidate decisions](planning/research-to-practice-release.md), [verification evidence](planning/research-to-practice-evidence.json), and [repeatable research workflow](planning/question-research-workflow.md). Historical research-queue counts above describe earlier stages. Classroom calibration, independent translation review, screen-reader use and physical printing remain pending.

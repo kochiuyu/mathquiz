@@ -13,6 +13,7 @@
  function assess(q,values){if(q.teacher)return null;const marks=q.fields.map((f,i)=>matches(f,values[i]));if(q.rule==='digits'){const a=numeric(values[0]),b=numeric(values[1]);const valid=Number.isInteger(a)&&Number.isInteger(b)&&a>=10&&a<=99&&b>=10&&b<=99&&[...String(a)+String(b)].sort().join('')===[...q.meta.digits].sort().join('')&&Math.abs(a+b-q.meta.target)===q.meta.best;marks[0]=marks[1]=valid;}return marks;}
  function make(id,level='easy',i=0){
   const topic=topics.find(t=>t.id===id);if(!topic||!['easy','normal','difficult'].includes(level)||!Number.isInteger(i)||i<0||i>11)throw Error('Unknown reasoning task');
+  if(topic.single){const bank=root.MathQuizAdaptationExamples||(typeof require==='function'?require('./adaptation-examples.js'):{});return JSON.parse(JSON.stringify(bank[id]));}
   const d=level==='difficult',e=level==='easy',q={id:`reason-${id}-${level}-${i+1}`,topic:id,level,index:i,fields:[],meta:{},prompt:[],why:[],guide:[]};
   const F=q.fields;
   switch(id){

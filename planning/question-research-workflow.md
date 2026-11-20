@@ -108,3 +108,14 @@ Update README and release evidence with exact counts, source mapping, local/live
 - README, evidence and research register updated; user receives links.
 
 Reference implementation: [first reasoning release](reasoning-collection.md), [question generator](../reasoning-data.js), [independent answer checks](../tests/reasoning-static.cjs), [browser runner](../tests/reasoning.html).
+
+
+## 20 November implementation refinement: resolve candidates without inflating counts
+
+- A single fully reviewed example may ship as one worked example; do not repeat it across three levels or twelve indices and count the duplicates as variants. Hide level/set controls for these tasks and exclude them from the levelled filter.
+- An already-covered candidate can be resolved by linking to the actual existing generated practice. Record the overlap, keep curriculum totals unchanged, and do not describe unchanged questions as newly implemented.
+- Check printed choice alternatives as well as empty answer lines. Verify source-region aliases in English and Traditional Chinese. Update every entry point's cache version, including curriculum/coverage views.
+- Keep an independent numerical checker separate from the question definitions. Re-run existing banks after renderer or marking changes. A teacher story remains unscored; a selected explanation does not certify an oral proof.
+- After deployed verification, change each candidate to published or resolved-covered, with its exact destination. Preserve historical research notes with a prominent status update.
+
+The 22-candidate batch is implemented as 20 single examples and two existing-practice links; see [the release report](research-to-practice-release.md). These are separate from the original 12 levelled collections and from the 300 curriculum/TSA practice types.
