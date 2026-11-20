@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "status": "local verification complete; public verification pending",
+  "status": "Runtime published and verified; release documentation records completed checks",
   "base": "aa5966925716ccd2b737f3706f3555df65ec5901",
   "newExamples": 20,
   "regions": {
@@ -73,5 +73,167 @@
     "Chinese mobile calendar",
     "English rectangle key",
     "English corrected pie key"
-  ]
+  ],
+  "runtimeCommit": "b1e888f3f642b636bcefd3a8b5aa21376f452b4b",
+  "deployment": {
+    "id": 44676628396,
+    "conclusion": "success"
+  },
+  "public": {
+    "newExamples": {
+      "fullRun": {
+        "passed": 84,
+        "failed": 1,
+        "failure": "hk005/en/paper-key: navigation timeout while loading key"
+      },
+      "exactRerun": {
+        "name": "hk005/en/paper-key",
+        "passed": 1,
+        "failed": 0
+      },
+      "distinctCasesVerified": 85
+    },
+    "existingCollections": {
+      "passed": 105,
+      "failed": 0
+    },
+    "coverageEntry": {
+      "adaptationResources": 32,
+      "workedExamples": 20
+    }
+  },
+  "initialPublicRunnerNavigation": "Browser navigate tool timed out, but the page and runner loaded; read its existing result without reloading",
+  "liveAssets": {
+    "commit": "b1e888f3f642b636bcefd3a8b5aa21376f452b4b",
+    "files": [
+      {
+        "path": "adaptation-examples.js",
+        "match": true,
+        "sha256": "e8e4ca4fd32ff497aac88425521af3ee5e72d64f6001e88ca257c6a35a117680"
+      },
+      {
+        "path": "adaptation-pictures.js",
+        "match": true,
+        "sha256": "8d15e681b216ece3c82e795591e190b769c174ed4c44fc386f30f392e20d8fed"
+      },
+      {
+        "path": "reasoning-catalogue.js",
+        "match": true,
+        "sha256": "9baf2dc3fd2cf02016f7d7250c06cd4c7da11659bececb2dac709446be056c97"
+      },
+      {
+        "path": "reasoning-data.js",
+        "match": true,
+        "sha256": "1f92a4d0213f0cb2d4799dc1a02a82f39ee1526131856781f37847395399c318"
+      },
+      {
+        "path": "reasoning.js",
+        "match": true,
+        "sha256": "20eb42c7484ce2b442238b534148a60f8addf0b27208409b309b21a97fe61d83"
+      },
+      {
+        "path": "reasoning.css",
+        "match": true,
+        "sha256": "a223469e8d0c1f361ce8433b20b1ce60765b91669ecd3f1ff786ffd04b70b56f"
+      },
+      {
+        "path": "reasoning.html",
+        "match": true,
+        "sha256": "026114f80f0e9902a14c3da4daba612a349daa2a2a344d15ed66c2c07921964d"
+      },
+      {
+        "path": "resource-browser.js",
+        "match": true,
+        "sha256": "c9401da465e675763cda4496826ec8c93afdeacbae69f47a52754a0a887237f8"
+      },
+      {
+        "path": "ui.js",
+        "match": true,
+        "sha256": "558f36314ed1ffe31ef3b04d6160589899c7f45146131edecc8bb88859589245"
+      },
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "b12de47ef04329baca1dd81bdda511088d6413ecdbe53e09e3577d64cc73290a"
+      },
+      {
+        "path": "coverage.html",
+        "match": true,
+        "sha256": "ae57f43322d970d486d367fafc81a6bb8b98009cbbaf5bda24548b2e2792fb9c"
+      },
+      {
+        "path": "skill-levels-hub.js",
+        "match": true,
+        "sha256": "36d859889194680a94fe29a83c592e57cbdb12d52c218d49a34639b307b7b6f2"
+      },
+      {
+        "path": "skill-levels.html",
+        "match": true,
+        "sha256": "4a49dd67970c66a00526dfd358a0638a7fc3da367db3c9195f92104f12caa8cb"
+      },
+      {
+        "path": "tests/adaptation-examples.html",
+        "match": true,
+        "sha256": "36a5971783ac142925750671fc6f19e175a79b94ba980ea25af57cf185063eb1"
+      },
+      {
+        "path": "tests/adaptation-examples-browser.js",
+        "match": true,
+        "sha256": "e7e0b76413988cf9223b9dd9c092e5488c3931c4152a64d9dfafdcd1cf3f3dde"
+      },
+      {
+        "path": "tests/adaptation-examples-static.cjs",
+        "match": true,
+        "sha256": "176318245dd80b648214fa1c1f0829479c0fa4f5df56c93d1b2c36b4c6b5808a"
+      },
+      {
+        "path": "tests/reasoning-browser.js",
+        "match": true,
+        "sha256": "8bf47c56d50fde49f59767103e171a3affd1be11b42bd7f2d7db14fb4df78302"
+      },
+      {
+        "path": "tests/reasoning-static.cjs",
+        "match": true,
+        "sha256": "dbe38bbc5b7657c93f1694839e04ab5df8d937e0ca4eb2f5169c14d5c263aac3"
+      },
+      {
+        "path": "tests/resources-ui-static.cjs",
+        "match": true,
+        "sha256": "df5fdbd9089aa5f89cadfa4b0062fa58bfccc3cd09e49a89e980b3be5adfb897"
+      },
+      {
+        "path": "README.md",
+        "match": true,
+        "sha256": "584d419343dfba2cda5bf2ffe0259fa015173ad122f049a0838175574bfd8601"
+      },
+      {
+        "path": "planning/question-research-workflow.md",
+        "match": true,
+        "sha256": "fc62c7956dfd28212424337da5705da17f1b2c5af97f2b95a9bbfbcf35e73878"
+      },
+      {
+        "path": "planning/research-to-practice-release.md",
+        "match": true,
+        "sha256": "5e16d4df9792b464af088dd78ebf4a8801e8eefe67157f857be6affa450d35eb"
+      },
+      {
+        "path": "planning/research-to-practice-evidence.json",
+        "match": true,
+        "sha256": "46e903a64df770608a6351c31e0355f9389130374312f5d2566c7e665d494fc9"
+      },
+      {
+        "path": "planning/hong-kong-source-expansion.md",
+        "match": true,
+        "sha256": "9edc3b8a51c007387062c9662fc3654a12531fefa6cafca20e06b0a61fd95127"
+      },
+      {
+        "path": "planning/hk-uk-singapore-sources.md",
+        "match": true,
+        "sha256": "6f53a8415b56ae10e9c44cf63910a38973dabd57a93396fae9a19d62710a9e6f"
+      }
+    ]
+  },
+  "changedFiles": 25,
+  "unexpectedChanges": 0,
+  "candidateStatus": "20 published, two resolved-covered; no remaining drafts in this 22-candidate batch"
 }

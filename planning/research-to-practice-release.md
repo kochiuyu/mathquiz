@@ -62,3 +62,15 @@ Visual inspection sampled the Chinese mobile pictogram and calendar and the Engl
 ## Repeatable workflow
 
 Follow the [research workflow](question-research-workflow.md): retrieve a real source, record review depth, check answers independently, compare existing payloads, map prerequisites, write original bilingual examples, create required figures, choose honest marking, test both languages and paper/key routes, publish with a branch-head check, then verify deployed assets and update the candidate status. A well-reviewed single example is acceptable; expand into a levelled bank only when genuinely different learning demands have been designed and checked.
+
+
+## Completed release results
+
+Runtime commit [`b1e888f3`](https://github.com/kochiuyu/mathquiz/commit/b1e888f3f642b636bcefd3a8b5aa21376f452b4b), Pages run 44676628396: **success**. All 25 deployed release files matched local bytes; the committed tree changed exactly the 25 intended paths.
+
+- New browser suite: **85 distinct cases verified locally and publicly**. Final local run 85/85; public full run 84 passed and one key-page navigation timeout, followed by an exact `hk005/en/paper-key` rerun passing 1/1.
+- Existing suite: **105 distinct cases verified locally and publicly**. Initial local full run 105/105; final local full run 104 passed and one `shapes/zh/easy` navigation timeout, followed by its exact rerun passing 1/1. Public full run 105/105.
+- Total: **190 distinct browser cases verified at each location**. Public curriculum-page readback also showed 32 adaptation resources, including 20 worked examples.
+- Four static suites passed: new independent answers, existing independent answers, resource integration and shared UI. All changed scripts passed syntax checks. The previous eight draft-answer checks also still pass; they are not counted as extra runtime cases.
+
+The initial public runner navigation itself timed out at the browser-control layer; the page had loaded and continued running, so its result was read without restarting it. All exact case failures and reruns are retained in [the evidence](research-to-practice-evidence.json). The research register now marks 20 candidates published and two resolved as covered; human review limitations above remain explicit.
