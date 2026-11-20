@@ -747,3 +747,12 @@ All **98 local browser cases verified**: 97 passed in the final full run and one
 The **27 new practice items** bring the journey to **eight pathways, twenty-four lessons and 216 levelled practice items**. Diagrams distinguish the ruler edge from zero and scale readings from screen size. A real-ruler activity supports tool choice, the pupil's own measured reference and adult observation. Earlier questions and saved results remain preserved.
 
 Local checks passed **113/113 without retries**, plus ten static gates. All **113 public cases verified**: 111 passed in the full run and two page-load timeouts passed exact reruns. The accessible diagram wording refinement also passed its focused local recheck. Runtime deployment succeeded; all seventeen changed runtime/test files matched. [Scope, compatibility and next steps](planning/p1-ruler-pathway.md) · [Evidence](planning/p1-ruler-evidence.json). Next: Hong Kong money under 1M2. Pupil trials and independent human reviews remain pending; screen diagrams are not physically calibrated rulers.
+
+
+## P1 teaching: Hong Kong money
+
+[Start Hong Kong money](https://kochiuyu.github.io/mathquiz/learn.html?path=money). Three bilingual lessons introduce coin values, reading prices/counting coins up to $10 and equal-value exchanges within the P1 coin groups. Teaching and guided examples lead to Easy, Normal and Difficult practice, then a separate six-question check.
+
+The **27 new practice items** bring the student journey to **nine pathways, 27 lessons and 243 levelled practice items**. Pupils choose dollar-and-cent readings without entering decimal prices. Clearly labelled tokens support practice; the linked real-coin activity supports physical recognition and adult observation. Earlier questions and saved progress are retained.
+
+All **128 local browser cases are verified**: 126 passed in the final full run; two page-load timeouts passed exact reruns. Eleven static gates passed. Public verification is pending. [Scope, compatibility and next steps](planning/p1-money-pathway.md) · [Evidence](planning/p1-money-evidence.json). Next: time under 1M4. Pupil trials and independent human reviews remain pending; online completion cannot demonstrate recognition of real coins.

@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-20",
+  "base": "448adf510289d5a0df03d8fa480413925297201c",
+  "scope": "P1 1M2 coin values, prices, counting and equal-value exchanges",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "totals": {
+    "pathways": 9,
+    "lessons": 27,
+    "levelledPracticeItems": 243
+  },
+  "local": {
+    "status": "verified",
+    "developmentRuns": [
+      {
+        "passed": 127,
+        "failed": 1,
+        "case": "Money mobile teaching en",
+        "error": "next action low coinequal 1",
+        "resolution": "shortened teaching step2"
+      },
+      {
+        "passed": 0,
+        "failed": 1,
+        "case": "Money mobile teaching en",
+        "error": "next action low coinequal 2",
+        "resolution": "shortened teaching step3"
+      },
+      {
+        "passed": 31,
+        "failed": 0,
+        "done": false,
+        "reason": "runner stalled at completed about:blank reset; no completion claimed",
+        "resolution": "bounded reset wait validates actual frame URL and ready state"
+      },
+      {
+        "passed": 126,
+        "failed": 2,
+        "done": true,
+        "failures": [
+          {
+            "name": "Subtraction layout en 375",
+            "error": "Navigation timeout learn.html?path=subtract&lang=en"
+          },
+          {
+            "name": "Money mobile teaching en",
+            "error": "Navigation timeout learn.html?lesson=pricetags&stage=practice&level=easy&lang=en"
+          }
+        ],
+        "reruns": [
+          {
+            "name": "Subtraction layout en 375",
+            "passed": 1,
+            "failed": 0
+          },
+          {
+            "name": "Money mobile teaching en",
+            "passed": 0,
+            "failed": 1,
+            "error": "next action low coinequal 2"
+          }
+        ]
+      },
+      {
+        "case": "Money mobile teaching en",
+        "passed": 0,
+        "failed": 1,
+        "error": "next action low coinequal 2",
+        "resolution": "token spacing alone was insufficient; reduced English lesson and step headings as well"
+      },
+      {
+        "case": "Money mobile teaching en",
+        "passed": 1,
+        "failed": 0,
+        "resolution": "compact tokens and headings; full suite restarted on final content"
+      }
+    ],
+    "staticGates": 11,
+    "independentGeneratedChecks": 216,
+    "fullRecordFixtureCharacters": 29896,
+    "largestOtherFullRecordFixtureCharacters": 29911,
+    "readBoundCharacters": 54208,
+    "fullRun": {
+      "passed": 126,
+      "failed": 2,
+      "done": true,
+      "failures": [
+        {
+          "name": "Subtraction layout en 320",
+          "error": "Navigation timeout learn.html?lesson=takeaway&stage=practice&level=easy&lang=en"
+        },
+        {
+          "name": "Measurement layout zh 768",
+          "error": "Navigation timeout learn.html?lesson=alignlength&stage=practice&level=normal&lang=zh"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Subtraction layout en 320",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Measurement layout zh 768",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 128,
+    "visualCheck": {
+      "page": "English exchange teaching, step3",
+      "width": 320,
+      "height": 812,
+      "nextActionBottom": 728.1484375,
+      "horizontalOverflow": false,
+      "screenshot": "browser-screenshots/screenshot-2026-11-20T10-43-53-021Z-8b4e65a3.png"
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "sources": [
+    {
+      "name": "EDB Key Stage1 explanatory notes,1M2 printed page10",
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=16",
+      "checked": "2026-11-20"
+    },
+    {
+      "name": "HKMA Coins",
+      "url": "https://www.hkma.gov.hk/eng/key-functions/money/hong-kong-currency/coins/",
+      "checked": "2026-11-20",
+      "retrieval": "search/open succeeded initially; later web open timed out; official HTML retrieved via urllib and read"
+    }
+  ],
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "4c2eda749168258ef1d2ac44741f685a1bf7e7d1671d8f3d3eb57b46fb46b3cd",
+    "learn-data.js": "327ced1bb39ab659ed5b13bfce243613e1f518ccad69418e471d058d4522e8f5",
+    "learn-store.js": "0db6c14758c9ba66bbe67da7893d14f49ce2c7d35211f7496ca18864aebd7954",
+    "learn-money.js": "9ab1073b912b63ac3af9dc4bc16b15c0f78c7b7598bfa936c97da9150cac512b",
+    "learn.css": "ad360408dcd93a019d820677127b96ad002b27f2c031a56d962887e2380cdf56",
+    "learn.html": "82d8772fabf8d0d3fb07232545d02f97cb9a5f1b5c67f91bf6d6a3e993b37c97",
+    "learn.js": "1b117a959593998af851fe57881063aa3f0db39f59948fdad1fc9ece7ccbc702",
+    "tests/hundred-static.cjs": "5ff29f8f482327302da780823101f5eabe4597ccb94c007a3386c34645e61792",
+    "tests/subtract-static.cjs": "952dd37bb022e96b8601e5b3796d50bd082ea191a21cef491dd512a796090686",
+    "tests/groups-static.cjs": "ecb0f4346f080507e93413822c34a027149f538f2cdfa00a60d00468a55ca489",
+    "tests/relations-static.cjs": "78ef4ab6e89e848072402c6bbf3d8db74945d3680324897347b8f947f013e55f",
+    "tests/calculate-static.cjs": "1642964e09ac55372631be56459dc7fafe959638e2d731eb56b9ff88b2c7ed9f",
+    "tests/measure-static.cjs": "da753b07def61e6eb5e7e4923177a4457d3a9e3440c5557b939461eddc289e9b",
+    "tests/ruler-static.cjs": "2477998ef340cd21b3afb34af90b298880f5c7f462923080ac913f3e748fbe58",
+    "tests/money-static.cjs": "8db8914cc093d54603a085c3dc698350359bb8aa593d9005b652bbddf32e0ffe",
+    "tests/student-blocked.html": "258c3deeaf4f71ee601461badaacdcad521aae3f3bf75e825d62bc0fe370105f",
+    "tests/student-browser.js": "eb60f64d3d6b77dc824409210df116bd8919c8cd7b1775a4d5944a940b156715",
+    "tests/student.html": "dfca37ecfee50f236139c59b7d60200f5cf2ade241afb319913b0f4f2b899c4f"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Labelled tokens do not assess recognising real coins; no physical classroom observation performed",
+    "Prices are read/matched, not entered as decimal notation; no cross-group exchanges or giving change",
+    "Practice may complete after correction; 5/6 next step is not calibrated mastery",
+    "Three overlapping deterministic check configurations",
+    "Pupil trials, independent translation and screen-reader listening remain pending",
+    "Broader267-case shared UI/activity browser suite not repeated"
+  ]
+}
