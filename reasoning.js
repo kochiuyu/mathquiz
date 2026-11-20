@@ -2,7 +2,7 @@
 (()=>{
  'use strict';const B=window.MathQuizReasoning,p=new URLSearchParams(location.search),zh=p.get('lang')==='zh',lang=zh?'zh':'en',t=(en,cn)=>zh?cn:en,L=a=>a[zh?1:0],app=document.getElementById('app');
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- document.documentElement.lang=zh?'zh-HK':'en';document.querySelector('.skip-link').textContent=t('Skip to content','跳至內容');
+ document.documentElement.lang=zh?'zh-HK':'en';document.querySelector('.brand').href='./?lang='+lang;document.querySelector('.skip-link').textContent=t('Skip to content','跳至內容');
  const url=changes=>{const u=new URL(location.href);for(const [k,v]of Object.entries(changes))v===null||v===''?u.searchParams.delete(k):u.searchParams.set(k,String(v));return u.pathname+u.search;};
  for(const l of ['en','zh']){const a=document.getElementById('reason-'+l);a.href=url({lang:l});if(l===lang)a.setAttribute('aria-current','true');}
  const kind=topic=>topic.kind==='teacher'?t('Teacher discussion','教師討論'):topic.kind==='extension'?t('Existing-skill extension','已有技能延伸'):t('Original reasoning challenge','原創推理挑戰');
