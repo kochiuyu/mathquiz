@@ -1,0 +1,72 @@
+{
+  "release": "Original reasoning collection",
+  "date": "2026-11-20",
+  "baselineCommit": "0f8afbc5488d86f23e2c702eb3beb2c9f44e9514",
+  "status": "local verified; public verification pending",
+  "counts": {
+    "newStructures": 9,
+    "extensions": 2,
+    "teacherCollections": 1,
+    "markedTasks": 396,
+    "teacherPrompts": 3,
+    "legacyCore": 270,
+    "legacyTSA": 30,
+    "officialUnits": 85,
+    "legacyActivities": 85
+  },
+  "static": {
+    "tasks": 399,
+    "answerFields": 1032,
+    "independentModels": 11,
+    "alternativeSolutions": true,
+    "cubeNetFolding": true,
+    "suites": [
+      "tests/reasoning-static.cjs",
+      "tests/ui-refresh-static.cjs",
+      "tests/resources-ui-static.cjs"
+    ]
+  },
+  "local": {
+    "finalReasoning": {
+      "passed": 105,
+      "failed": 0,
+      "started": "2026-11-20T01:28:10.599Z",
+      "finished": "2026-11-20T01:28:33.528Z"
+    },
+    "sharedMainUI": {
+      "passed": 96,
+      "failed": 0,
+      "retries": []
+    },
+    "earlierRuns": [
+      {
+        "passed": 99,
+        "failed": 6,
+        "findings": [
+          "4 long-choice mobile overflows fixed with lettered wrapping choices",
+          "2 source-filter test selector errors fixed to count cards, not the count element"
+        ]
+      },
+      {
+        "passed": 104,
+        "failed": 1,
+        "failure": "shapes/zh/easy page-load timeout",
+        "rerun": {
+          "passed": 1,
+          "failed": 0,
+          "finished": "2026-11-20T01:26:20.266Z"
+        }
+      }
+    ]
+  },
+  "notes": [
+    "Final local run repeated all 105 cases after the typography, cube-net dimensions, source-unit and long-choice fixes.",
+    "Existing resource static test had stale asset-version assertions updated; no mathematical assertions removed.",
+    "No legacy question banks, scoring modules or official-unit records were edited."
+  ],
+  "limitations": [
+    "Optional enrichment; grade and difficulty suggestions not pupil-calibrated.",
+    "No independent translation, physical printing, screen-reader or cross-device listening review.",
+    "New collection is separate from mixed-quiz builder and Smart progression."
+  ]
+}

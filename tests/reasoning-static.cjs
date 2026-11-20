@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const B=require('../reasoning-data.js');let tasks=0,fields=0;const ids=new Set();
+const eq=(a,b,msg)=>assert.deepEqual(a,b,msg),num=B.numeric;
+eq(B.topics.length,12);eq(B.topics.filter(t=>t.kind==='new').length,9);eq(B.topics.filter(t=>t.kind==='extension').length,2);
+function allPairs(digits){const pairs=[];for(let a=10;a<100;a++)for(let b=a;b<100;b++)if([...String(a)+String(b)].sort().join('')===[...digits].sort().join(''))pairs.push([a,b]);return pairs;}
+// Fold the actual net using orthogonal 3D bases; opposite normals independently validate the labels.
+function fold(labels,mirror){const neg=v=>v.map(x=>-x),cells=[[1,0,labels[4]],[0,1,labels[1]],[1,1,labels[0]],[2,1,labels[2]],[3,1,labels[5]],[1,2,labels[3]]].map(([x,y,l])=>[mirror?3-x:x,y,l]);const map=new Map(cells.map(([x,y,l])=>[`${x},${y}`,{x,y,l}])),q=[{...map.values().next().value,u:[1,0,0],v:[0,1,0],n:[0,0,1]}],done=new Map();while(q.length){const a=q.shift();if(done.has(a.l))continue;done.set(a.l,a);for(const [dx,dy]of [[1,0],[-1,0],[0,1],[0,-1]]){const b=map.get(`${a.x+dx},${a.y+dy}`);if(!b||done.has(b.l))continue;q.push({...b,...(dx===1?{u:neg(a.n),v:a.v,n:a.u}:dx===-1?{u:a.n,v:a.v,n:neg(a.u)}:dy===1?{u:a.u,v:neg(a.n),n:a.v}:{u:a.u,v:a.n,n:neg(a.v)})});}}eq(new Set([...done.values()].map(c=>c.n.join(','))).size,6);return l=>[...done.values()].find(c=>c.n.every((v,k)=>v===-done.get(l).n[k])).l;}
+for(const t of B.topics)for(const level of ['easy','normal','difficult'])for(let i=0;i<(t.kind==='teacher'?1:12);i++){
+ const q=B.make(t.id,level,i),m=q.meta,e=level==='easy',d=level==='difficult',ans=q.fields.map(f=>f.answer);assert(!ids.has(q.id));ids.add(q.id);tasks++;
+ for(const a of [q.prompt,q.guide,q.why])assert(a.length===2&&a.every(s=>typeof s==='string'&&s.length>8));
+ if(q.teacher){eq(q.fields.length,0);eq(B.assess(q,[]),null);continue;}
+ assert(B.assess(q,ans).every(Boolean),q.id);assert(B.assess(q,q.fields.map(()=>'' )).every(x=>!x),q.id+' blank');
+ q.fields.forEach(f=>{fields++;if(f.type==='choice'){assert(+f.answer>=0&&+f.answer<f.options.length);eq(new Set(f.options.map(a=>a[0])).size,f.options.length,q.id+' duplicate options');}else if(f.type==='set'){assert(B.setValue(f.answer).length);assert(B.matches(f,B.setValue(f.answer).reverse().join('、')));}else {assert(Number.isFinite(num(f.answer)));assert(!B.matches(f,'999999'));assert(!B.matches(f,'0/0'));}});
+ if(t.id==='tower'){const valid=[];for(let x=0;x<=20;x++)if(Math.abs(m.a-x)===m.left&&Math.abs(x-m.c)===m.right)valid.push(x);if(d)eq(B.setValue(ans[0]),valid);else eq(ans.map(num),e?[Math.abs(m.a-m.b)]:[Math.abs(m.a-m.b),Math.abs(m.b-m.c),Math.abs(Math.abs(m.a-m.b)-Math.abs(m.b-m.c))]);}
+ if(t.id==='digits'){const pairs=allPairs(m.digits),best=Math.min(...pairs.map(p=>Math.abs(p[0]+p[1]-100))),w=pairs.filter(p=>Math.abs(p[0]+p[1]-100)===best);eq(m.best,best);eq(m.winners.length,w.length);if(!e)for(const pair of w){for(const v of [pair,[...pair].reverse()])assert(B.assess(q,[...v,String(best),String(w.length)]).every(Boolean),'alternate valid pair');assert(!B.assess(q,['11','11',String(best),String(w.length)])[0]);}}
+ if(t.id==='sort')q.fields.slice(0,e?2:5).forEach((f,k)=>{const n=m.nums[k],label=f.options[+f.answer][0];assert(label.startsWith(n%2?'Odd':'Even'));assert(label.includes(n>=m.boundary?'at least':'below'));});
+ if(t.id==='clues'){const valid=[];for(let a=1;a<=m.max;a++)for(let b=1;b<=m.max;b++)for(let c=1;c<=m.max;c++)for(let d=1;d<=m.max;d++)if(new Set([a,b,c,d]).size===4&&a<d&&a+b===m.sums[0]&&b+c===m.sums[1]&&c+d===m.sums[2])valid.push([a,b,c,d]);eq(m.solutions,valid);if(d)eq(B.setValue(ans[0]),valid.map(v=>v[0]));}
+ if(t.id==='whole'){eq(num(ans[0]),m.shaded/m.wholeA);if(!e)eq(num(ans[1]),m.shaded/m.wholeB);assert(B.matches(q.fields[0],'2/4'));if(d){eq(q.fields[2].options[+ans[2]][0],'A');eq(num(ans[3]),4*m.shaded);}}
+ if(t.id==='garden'){const pairs=[];for(let a=1;a<m.p;a++)for(let b=a;b<m.p;b++)if(2*(a+b)===m.p)pairs.push([a,b]);eq(m.pairs,pairs);eq(m.area,Math.max(...pairs.map(p=>p[0]*p[1])));if(!e)eq(ans.slice(0,3).map(num),[...pairs.at(-1),m.area]);if(d)eq(num(ans[3]),pairs.length);}
+ if(t.id==='chain'){const valid=[];for(let x=2;x<=m.max;x++)if(x!==m.a&&x!==m.b&&[m.a,m.b].every(y=>Number.isInteger(Math.max(x,y)/Math.min(x,y))))valid.push(x);eq(m.valid,valid);if(d)eq(B.setValue(ans[0]),valid);if(level==='normal')eq(num(ans[0]),Math.min(...valid));}
+ if(t.id==='operations'){const off=e?0:2;assert(Math.abs(num(ans[off])-m.a/m.den/m.b)<1e-10);assert(Math.abs(num(ans[off+1])-(m.a/m.den-1/m.b))<1e-10);assert(num(ans[off+1])>=0);}
+ if(t.id==='cube'){const opposite=fold(m.labels,i>=6);q.fields.slice(0,e?1:3).forEach(f=>eq(f.options[+f.answer][0],opposite(f.label[0].split(' ').at(-1))));}
+ if(t.id==='mean'){const valid=[];for(let x=1;x<4*m.mean;x++)for(let y=x+1;y<4*m.mean;y++)if(new Set([x,y,m.a,m.b]).size===4&&x+y+m.a+m.b===4*m.mean)valid.push([x,y]);eq(m.pairs,valid);if(d)eq(B.setValue(ans[0]),valid.map(v=>v[0]));}
+ if(t.id==='match'){eq(num(ans[0]),m.n/m.b);if(!e)eq(num(ans[1]),100*m.n/m.b);}
+}
+eq(tasks,399);eq(ids.size,399);for(const f of ['reasoning.js','reasoning-data.js','reasoning-catalogue.js','resource-browser.js','ui.js','skill-levels-hub.js'])new Function(fs.readFileSync(path.join(__dirname,'..',f),'utf8'));
+console.log(JSON.stringify({passed:true,tasks,marked:396,teacherPrompts:3,answerFields:fields,independentOracles:11,alternativeDigitSolutions:true,cubeFolding:true}));

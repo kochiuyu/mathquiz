@@ -2,6 +2,8 @@
 
 ## Curriculum, assessment references and extensions
 
+**Original reasoning collection (20 November 2026):** [Try the 12 collections](https://kochiuyu.github.io/mathquiz/reasoning.html): nine challenge structures, two existing-skill extensions and one teacher discussion across P1–P6. Includes 396 marked bilingual tasks and three discussion prompts, with Easy/Normal/Difficult, pupil papers and worked answers. Searchable in the resource library; counted separately from the existing 270 curriculum-linked + 30 TSA-informed types. [Source map and verification](planning/reasoning-collection.md) · [Repeatable question-research workflow](planning/question-research-workflow.md).
+
 **Whole-site UI refresh:** The main catalogue includes all 300 practice types (270 curriculum-linked + 30 HKEAA TSA-informed), with bilingual search and a source filter. Year/topic navigation, mobile practice, worksheet language controls, source disclosures and paper/key presentation have been unified. The 85 official units, question payloads and marking rules are unchanged. [Implementation and verification](planning/ui-refresh-2026-11-19.md).
 
 **P6 TSA question-variety update (19 November 2026):** 15 new bilingual practice types add 180 contexts with three teaching levels (540 levelled tasks). P6 now offers 67 practice types / 2,412 tasks: the existing 52 curriculum-linked types / 1,872 tasks plus these additions. The six grade banks total 300 practice types / 10,800 tasks. [Open P6 additions](https://kochiuyu.github.io/mathquiz/skill-levels.html?p=6&q=TSA&lang=en) · [中文](https://kochiuyu.github.io/mathquiz/skill-levels.html?p=6&q=TSA&lang=zh) · [Source mapping and verification](planning/p6-tsa-2026.md).
@@ -626,3 +628,12 @@ P3 now has **50 MathQuiz practice types / 1,800 levelled tasks**: 35 existing cu
 **Published and verified:** [initial release 44bc11b5](https://github.com/kochiuyu/mathquiz/commit/44bc11b55b301a794b89915ee995f8be94c7b006), followed by [the short-set refinement f8d28c9a](https://github.com/kochiuyu/mathquiz/commit/f8d28c9a07447134b8c31e7010d1e8cb2186d337). **All 133 distinct live browser cases are verified:** the initial full run passed 133/133, and all 36 cases affected by the refinement passed again. New and original P3 static checks pass; shared Smart checks cover all 285 skills / 10,260 canonical answers. [Release evidence and limits](planning/p3-tsa-evidence.json).
 
 
+
+
+## Web-researched question collection and repeatable workflow
+
+**Original reasoning collection (20 November 2026):** [Try the 12 collections](https://kochiuyu.github.io/mathquiz/reasoning.html): nine challenge structures, two existing-skill extensions and one teacher discussion across P1–P6. Includes 396 marked bilingual tasks and three discussion prompts, with Easy/Normal/Difficult, pupil papers and worked answers. Searchable in the resource library; counted separately from the existing 270 curriculum-linked + 30 TSA-informed types. [Source map and verification](planning/reasoning-collection.md) · [Repeatable question-research workflow](planning/question-research-workflow.md).
+
+All 399 generated task records and 1,032 answer fields passed independent checking. Final local browser checks passed 105/105; existing main UI compatibility passed 96/96. Public verification is pending this release deployment; [evidence](planning/reasoning-release-evidence.json) records the complete scope and earlier corrected failures. Difficulty calibration, independent language review, physical printing and accessibility listening/review remain unverified.
+
+The [workflow](planning/question-research-workflow.md) records how to search, review source terms, compare existing questions, write original bilingual tasks, check all valid answers, publish within authorization and verify the deployed result.
