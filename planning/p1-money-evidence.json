@@ -119,10 +119,69 @@
       "nextActionBottom": 728.1484375,
       "horizontalOverflow": false,
       "screenshot": "browser-screenshots/screenshot-2026-11-20T10-43-53-021Z-8b4e65a3.png"
+    },
+    "additionalVisualCheck": {
+      "page": "Chinese Difficult price readings",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 710.890625,
+      "horizontalOverflow": false
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "runtimeCommit": "658cf8de1599ae7bd3f27f04b8aa5073fc6e815e",
+    "pagesRun": 44721955733,
+    "deployment": "success",
+    "fullRun": {
+      "done": true,
+      "passed": 125,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout learn.html?lesson=count&stage=practice&level=normal"
+        },
+        {
+          "name": "Five pathway resume and gates",
+          "error": "Navigation timeout learn.html?lesson=parity&stage=practice&level=easy&lang=zh"
+        },
+        {
+          "name": "Money layout en 768",
+          "error": "Navigation timeout learn.html?lesson=pricetags&stage=practice&level=normal&lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Five pathway resume and gates",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Money layout en 768",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "runnerNotes": "Navigation/evaluation calls timed out while the runner continued. The job was read without reloading until done. Outer test-tab viewport was enlarged during the run; each tested iframe retained its explicitly selected width.",
+    "distinctCasesVerified": 128,
+    "runtimeAssetsMatched": 18,
+    "visualCheck": {
+      "page": "Chinese Difficult price readings",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 710.890625,
+      "horizontalOverflow": false,
+      "pathways": 9,
+      "lessons": 27,
+      "screenshot": "browser-screenshots/screenshot-2026-11-20T10-53-03-985Z-2b3c9cc3.png"
+    }
   },
   "sources": [
     {
