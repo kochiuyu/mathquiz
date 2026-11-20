@@ -24,7 +24,7 @@ Three static gates passed: student content/storage, resource routes and shared U
 
 Development history: an initial local run passed 17/18 with a next-level-resume assertion failure; the isolated case and next full run passed. The test harness now clears the prior iframe before case setup to isolate its storage observer. The final complete run passed 18/18. Two initial static checks rejected an unnecessarily bumped cache tag for unchanged shared scripts; the unchanged script tags were restored and both gates passed. These were not hidden as clean first-run results.
 
-Public verification: pending deployment and live readback. Exact evidence is recorded in `journey-revision-evidence.json`.
+Public verification: **all 18 distinct cases verified**. The full public run passed 17 and had one page-load timeout in `Layout en 375` at `learn.html?lesson=tens&stage=learn&lang=en`; the exact case rerun passed 1/1. The initial browser navigation call also timed out while the runner continued; it was read without reloading. All ten changed runtime/test assets matched their uploaded UTF-8/LF SHA-256 content. [Runtime commit 4897472](https://github.com/kochiuyu/mathquiz/commit/489747201d94b1812c1da3e11ae5a73b03d9ba97) deployed successfully (Pages run 44687192397). Exact results and limitations are recorded in [the evidence](journey-revision-evidence.json).
 
 ## Continuing the revision plan
 

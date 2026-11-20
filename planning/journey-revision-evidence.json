@@ -12,7 +12,23 @@
     "newItems": 18
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "distinctCases": 18,
+    "initialRun": {
+      "passed": 17,
+      "failed": 1,
+      "failure": {
+        "case": "Layout en 375",
+        "error": "Navigation timeout learn.html?lesson=tens&stage=learn&lang=en"
+      }
+    },
+    "exactRerun": {
+      "case": "Layout en 375",
+      "passed": 1,
+      "failed": 0
+    },
+    "hashMatches": 10,
+    "initialRunnerNavigation": "Browser navigation call timed out; the runner remained active and was read without reloading."
   },
   "developmentNotes": [
     "Initial local 17/18: next-level resume assertion; isolated and subsequent full run passed. Prior iframe now cleared between cases.",
@@ -25,15 +41,21 @@
     "267-case shared browser suite not rerun in this revision"
   ],
   "hashes": {
-    "index.html": "ec20d1c116029695fef6535e7a0b6c3aae88c7b77826649088cd5f112a5c1f9c",
-    "learn-data.js": "419c6d2e7d51b2c69a21f83e27699ddb11b05aa1db15445e074fdeaf3cbe2ecc",
-    "learn-store.js": "f53ef1d2398f264854ea2510c7cc80ea62dbc3ac786ca445164716d7221666b5",
-    "learn.css": "253bbed8be95eafcc069a5e29ca06277c6013aaf3dc7e67c8f652f54dc8b07dd",
-    "learn.html": "6bb93234bbda0cb40f6b087193ec86c40711523f1c9525a9554502d451e5abbe",
-    "learn.js": "5666ae1a69389250075097ef34e2e4c75a05fb6500ece33a189a4302cea4c5ce",
-    "tests/student-blocked.html": "9ff0411a4dc43622dc13f96f2956fcb547304d65ee546f39ac3e90f378ebd6eb",
-    "tests/student-browser.js": "6930d6a106da4b5c3a1a53a3414dfecaf910ad116ceb1bd24ad6ae4bdaa348e4",
-    "tests/student-static.cjs": "bfb506bb8433b92008b21eea2fac34462ee58401c3374dab3670f01902e8c491",
-    "tests/student.html": "4cb4e4018e3b916d7aa0cceb98d03bb1618b4d19ef0588621db662d6181c010d"
-  }
+    "index.html": "59a438625781a92c6f8e893b97ad22eaf7324085a4a9a6bf49e0a9b40f4f9a44",
+    "learn-data.js": "ac1c01fdf14cc97cf84c006c9899d247c6c9bdfbf0683bd93ed2033c1fdaca64",
+    "learn-store.js": "163bcd4b2152d5bd4314f9988c8951555c973fbdda90d614f9e4ac4482b628e5",
+    "learn.css": "dbbd846e81c0c9d0ce9b9e1f3e58b82890f6ab286f579800fb13ba10d4753b67",
+    "learn.html": "8f0625960580bb226a4aabb782e09db404f17d1bb8fda062e821b93d74493387",
+    "learn.js": "337c6e1e7ef2c7170e097b6bebf787b22f4802e057b21286bd3c8e3b3fd5a4e4",
+    "tests/student-blocked.html": "58d1338aec7cf0c8937836496e48fa08759eb3def47b2387318499cd9bbfc032",
+    "tests/student-browser.js": "dbd7327141e763b7a9795d4cec001e4fec67bff100c1eba5eda80e0b747be9c3",
+    "tests/student-static.cjs": "4ba892b07a43989873ace65d478eeac752b832af52a1210c949793e1b80127e3",
+    "tests/student.html": "370afe7bbc6cfc25b32a4922c59c58559ffb1aa0fdb9622890f04009ed3b1986"
+  },
+  "runtimeCommit": "489747201d94b1812c1da3e11ae5a73b03d9ba97",
+  "deployment": {
+    "runId": 44687192397,
+    "conclusion": "success"
+  },
+  "hashEncoding": "UTF-8 with LF line endings, as sent to GitHub; local Windows CRLF is normalized during upload."
 }

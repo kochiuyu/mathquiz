@@ -683,4 +683,4 @@ The homepage now prioritises Start / Continue; optional Switch learner is below 
 
 Existing saved practice becomes Easy progress. Teaching, learner slots and quiz records are retained; answers and continuation now remain separate by difficulty within each learner. Parents/teacher tools and existing resource banks remain available.
 
-Local verification: 18/18 focused browser cases and three static gates passed. Public verification is pending. [Revision details, compatibility and next steps](planning/journey-revision.md) · [Evidence](planning/journey-revision-evidence.json). The wider P1 teaching rollout and pupil calibration remain pending.
+Local verification: 18/18 focused browser cases and three static gates passed. All 18 public cases were verified (17 passed initially; one page-load timeout passed on exact rerun). Runtime deployment succeeded and all ten changed runtime/test assets matched uploaded content. [Revision details, compatibility and next steps](planning/journey-revision.md) · [Evidence](planning/journey-revision-evidence.json). The wider P1 teaching rollout and pupil calibration remain pending.
