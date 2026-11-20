@@ -1,5 +1,11 @@
 # MathQuiz · Hong Kong primary mathematics
 
+## Current guided learning handoff
+
+**20 November 2026: P2 planning is complete; guided P2 implementation is next.** The [P2 guided learning plan](planning/p2-guided-learning-plan.md) maps 59 numbered objectives plus inquiry across 15 units, with prerequisite branches and practical evidence. Existing P2 practice and activity sheets remain available; they are distinct from the planned teaching layer.
+
+**Next unfinished step:** implement the five-lesson three-digit number-sense pathway (2N1), with P2 navigation and separate saved progress that preserves P1 work. The plan specifies answer/storage changes, an open learning map and release checks. Four-digit numbers precede money, then later subtraction/change; angles precede square/rectangle properties. Classroom and manual validation remain pending alongside development. This handoff supersedes older next-step notes below; this is a documentation-only change.
+
 ## Curriculum, assessment references and extensions
 
 **Deeper Hong Kong research (20 November 2026):** Six more Hong Kong school/EDB resources have been reviewed and eight original bilingual drafts added. The unpublished queue is now **22 candidates: 19 Hong Kong, two UK and one Singapore**. All eight new draft-answer checks pass; direct overlap means two drafts should merge into existing skills. These are research drafts, not new live practice types. [Sources, bilingual examples and implementation priorities](planning/hong-kong-source-expansion.md).
