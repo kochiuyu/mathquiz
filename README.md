@@ -702,3 +702,12 @@ Local verification: **30/30 focused browser cases and four static gates passed**
 The new pathway adds **27 diagram-led practice items**. There are now **three pathways, nine lessons and 81 levelled practice items**. The new pathway sits between the first lessons and Numbers to 100; all earlier progress and quiz records are preserved. Following the specific 1N1/1N2 limits, bonds use one-digit parts with totals up to 18, and addition/subtraction relationships use numbers within 10.
 
 Local and public verification: **all 42 distinct browser cases verified in each environment**. Each final full run passed 41/42; each remaining navigation-timeout case passed its exact rerun. Five static gates passed. Runtime deployment succeeded and all twelve changed runtime/test assets matched the tested content. [Scope, saved-work compatibility and remaining teaching plan](planning/p1-subtract-pathway.md) · [Evidence](planning/p1-subtract-evidence.json). Next: counting groups and estimation. Full P1 teaching coverage and pupil calibration remain pending.
+
+
+## P1 teaching: counting groups and estimating
+
+[Start Counting groups and estimating](https://kochiuyu.github.io/mathquiz/learn.html?path=groups). Three new bilingual lessons teach counting in twos, fives and tens, then estimating against a reference group of ten. Teaching and guided practice lead into three difficulty levels and a separate six-question check. The **27 new practice items** bring the teaching collection to **four pathways, twelve lessons and 108 levelled practice items**.
+
+All grouping and estimation quantities are below 100. Estimation tasks ask pupils to choose a reasonable estimate from two stated alternatives; feedback distinguishes an estimate from the exact count. Earlier learner progress and quiz identities remain preserved. Numbers to 100 now leads into this pathway.
+
+All 54 local browser cases are verified, including one exact navigation-timeout rerun; six static gates passed. Public verification is pending. [Teaching scope, compatibility and next steps](planning/p1-groups-pathway.md) · [Evidence](planning/p1-groups-evidence.json). Next: ordinal numbers, odd/even numbers and comparison-as-subtraction. Full P1 teaching coverage and pupil calibration remain pending.

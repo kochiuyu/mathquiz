@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-20",
+  "base": "ced65ff813e0eaae0c463d7f1c1bbeaea0527d3e",
+  "scope": "P1 counting groups and reference-based estimation",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "local": {
+    "status": "verified",
+    "staticGates": 6,
+    "independentGeneratedChecks": 216,
+    "fullStorageRecordCharacters": 13285,
+    "distinctBrowserCases": 54,
+    "initialRun": {
+      "passed": 54,
+      "failed": 0,
+      "note": "Before strengthening next-path/extra-practice link checks"
+    },
+    "finalFullRun": {
+      "passed": 53,
+      "failed": 1,
+      "case": "Subtraction layout en 768",
+      "error": "Navigation timeout learn.html?lesson=partsback&stage=practice&level=difficult&lang=en"
+    },
+    "exactRerun": {
+      "case": "Subtraction layout en 768",
+      "passed": 1,
+      "failed": 0
+    },
+    "runnerNavigation": "Navigation call timed out while final full runner continued; read without reloading.",
+    "visualCheck": {
+      "width": 360,
+      "height": 812,
+      "firstAnswerBottom": 776.57,
+      "horizontalOverflow": false,
+      "page": "English Difficult estimation"
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "be2fe9f73fa1bb853d51af937f63d47ba114ab4812ca63a71792267ebdb60474",
+    "learn-data.js": "db90a1c6e6a3b35cd3c29d31ccd516a4796be5d74230df8c50f5e90d7f3d5534",
+    "learn-store.js": "320e028b5b9505c3402ae91a0595645b36b9d2cb8197bc60ea96d7220a3e9a79",
+    "learn-groups.js": "11943657bd1827c2b8db28b84cd4eedb3cd9cc106dad164aa328d47823b44196",
+    "learn.css": "c5d9a66d151b49f205db411b272543b08b6cbcd604f4183ef1cdbf48d7e6571e",
+    "learn.html": "be9ac5c79c9dc090c3cd73937827888d36db55a35b23e193f56c2809e626409c",
+    "learn.js": "20967edb4bc2371b8655ed3988580dfd54148d3ad72b18e3f2848e5ce9022e46",
+    "tests/hundred-static.cjs": "7669fa931d2881618fedd89aff4a680ee45aed06ef134e56ad31376353de39e2",
+    "tests/subtract-static.cjs": "896cfbba64c53634f73bab4dff1ff34582839edf440a8eb345cfa4e430090158",
+    "tests/groups-static.cjs": "148cb2bfb947b02ad3627cf7f2ebf5cb12525d9feb810e4de4bf229fc8514edf",
+    "tests/student-blocked.html": "8ced8f149d283598326a08f6743acbae2aace4cd149b5ea8c69c43f6e7059c3a",
+    "tests/student-browser.js": "037f804acf44b8f0480d3c48e38af5719cbc5bc7cfc487300fe0ea31312963fb",
+    "tests/student.html": "f6f7997358e7e96526bbc25fe8957cc5202b98d8beb90cef8cf858c491fd2d8a"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Estimation assessment selects from two alternatives, not unrestricted estimates",
+    "Difficulty and threshold not pupil-calibrated",
+    "Independent translation, screen-reader listening and real-object classroom review not performed",
+    "Broader 267-case shared browser suite not rerun"
+  ]
+}
