@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-20",
+  "base": "a81bd2526eb4328c2fbc0e51a6736c3809fa0143",
+  "scope": "P1 numbers-to-100 teaching pathway and two-pathway progress",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeQuestions": 27
+  },
+  "local": {
+    "browser": {
+      "passed": 30,
+      "failed": 0
+    },
+    "staticGates": 4,
+    "independentNewGenerationChecks": 216
+  },
+  "development": [
+    "Initial local 29/30: resume test expected Difficult despite Easy unfinished. Fixed the test prerequisite; final full run 30/30."
+  ],
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "6c3301101448169d651a4ce98f4a8f7365625e5610a8c97677a69bb843c84bc0",
+    "learn-data.js": "ee500398272344b50eacd7b128284de2d979f256f01003642eb6834063a5e7bf",
+    "learn-hundred.js": "91ba63be67e0d082f1034fce4e8f3aab896620961c96250ae345e125ead3a46f",
+    "learn-store.js": "7ae156dacaf52d89e4838b189bcf8dd84667ffaca0c68b6a1db3391af9220c38",
+    "learn.css": "6a557af1466a302cd40a028099a73c90d0ed20d6f70cc271b5b7e412f3b55eb4",
+    "learn.html": "f49dde178376f78b7b90a53ec29cac0035fd3a8563ec6256630c02a18ba307ed",
+    "learn.js": "85e1f4872bbe7156d663d1d944036bd999a909cb21113f851d2dbb7179b65397",
+    "tests/hundred-static.cjs": "925e4b83d88b60ca6850b46eb54c80ddd8c2f2d71bc3ac0259445a24910c828f",
+    "tests/student-blocked.html": "45721e6285f3ca3910e0c26e778b5a39988bf7de8167dc81fb6ff912fc5b3566",
+    "tests/student-browser.js": "e0e2ea72ab707cd20511358cdefe30013a353a3637d9b58215bee7852007404c",
+    "tests/student.html": "28e08f1beb8a2a4cbe2feeddf1a3b787e507961edb92cbe9bba6d5d7b66a91e9"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Difficulty and threshold not pupil-calibrated",
+    "No independent translation or screen-reader listening review",
+    "Broader 267-case shared browser suite not rerun"
+  ]
+}

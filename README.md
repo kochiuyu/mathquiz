@@ -684,3 +684,12 @@ The homepage now prioritises Start / Continue; optional Switch learner is below 
 Existing saved practice becomes Easy progress. Teaching, learner slots and quiz records are retained; answers and continuation now remain separate by difficulty within each learner. Parents/teacher tools and existing resource banks remain available.
 
 Local verification: 18/18 focused browser cases and three static gates passed. All 18 public cases were verified (17 passed initially; one page-load timeout passed on exact rerun). Runtime deployment succeeded and all ten changed runtime/test assets matched uploaded content. [Revision details, compatibility and next steps](planning/journey-revision.md) · [Evidence](planning/journey-revision-evidence.json). The wider P1 teaching rollout and pupil calibration remain pending.
+
+
+## P1 teaching: a second pathway, numbers to 100
+
+[Start Numbers to 100](https://kochiuyu.github.io/mathquiz/learn.html?path=hundred): three new bilingual lessons teach tens/ones through 100, comparison, ordering and sequences across tens. Each has teaching, worked examples, guided practice and Easy → Normal → Difficult practice, followed by a separate six-question pathway check. The two pathways now total **six lessons and 54 levelled practice questions**.
+
+The homepage has two compact pathway choices. Each learner retains separate progress and quiz results for each pathway; existing work is preserved, including the original quiz identities. A successful first-pathway check offers the next pathway. This remains partial P1 teaching coverage; grouping, estimation, subtraction and later topics remain on the plan.
+
+Local verification: **30/30 focused browser cases and four static gates passed**. Public verification pending. [Lesson scope, compatibility and remaining P1 plan](planning/p1-hundred-pathway.md) · [Evidence](planning/p1-hundred-evidence.json). Pupil trials and independent manual reviews remain pending.
