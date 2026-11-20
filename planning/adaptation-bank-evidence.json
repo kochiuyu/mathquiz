@@ -1,6 +1,6 @@
 {
   "date": "2026-11-20",
-  "status": "Local verified; publication pending",
+  "status": "Runtime published and verified; final documentation records completed checks",
   "base": "0c2211c26274133b83cb4f529e71eb8b3444c026",
   "newCollections": 16,
   "newQuestions": 576,
@@ -48,6 +48,12 @@
       "passed": 85,
       "failed": 0,
       "finished": "2026-11-20T05:05:08.337Z"
+    },
+    "wordingRefinement": {
+      "case": "bank-hk020/zh/difficult",
+      "passed": 1,
+      "failed": 0,
+      "finished": "2026-11-20T05:11:46.359Z"
     }
   },
   "developmentCorrections": [
@@ -68,5 +74,165 @@
     "Physical printing",
     "Screen-reader use",
     "Cross-device checks"
+  ],
+  "runtimeCommit": "ea87116eec2cd6fd2330ffb3e6ed85cfe6aa801f",
+  "deployment": {
+    "id": 44679485689,
+    "conclusion": "success"
+  },
+  "public": {
+    "collections": {
+      "passed": 233,
+      "failed": 0,
+      "started": "2026-11-20T05:13:36.678Z",
+      "finished": "2026-11-20T05:15:45.044Z"
+    },
+    "singleExamples": {
+      "fullRun": {
+        "passed": 83,
+        "failed": 2,
+        "finished": "2026-11-20T05:15:02.561Z",
+        "failures": [
+          {
+            "case": "hk007/en/paper-key",
+            "cause": "Navigation timeout loading paper"
+          },
+          {
+            "case": "hk017/zh/practice",
+            "cause": "Navigation timeout loading practice"
+          }
+        ]
+      },
+      "exactReruns": [
+        {
+          "case": "hk007/en/paper-key",
+          "passed": 1,
+          "failed": 0,
+          "finished": "2026-11-20T05:15:32.839Z"
+        },
+        {
+          "case": "hk017/zh/practice",
+          "passed": 1,
+          "failed": 0,
+          "finished": "2026-11-20T05:15:34.316Z"
+        }
+      ],
+      "distinctCasesVerified": 85
+    },
+    "supplementaryReadback": [
+      "English and Chinese example→full-bank links",
+      "English and Chinese full-bank→example links",
+      "No horizontal overflow on four cross-link sample pages"
+    ]
+  },
+  "browserControlNotes": [
+    "The public single-example runner navigation and an early evaluate call timed out at the tool layer. A later snapshot/read confirmed the same runner had completed 83/85; both case failures were preserved and passed exact reruns."
+  ],
+  "liveFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "09eaae70a12e74c85d5f806efee9cb9e19eb67d875cdd6031f819b005952b40a"
+    },
+    {
+      "path": "adaptation-bank-pictures.js",
+      "match": true,
+      "sha256": "ffce96d8d22408d4eaae521c965d102c54d33eb29681d112cc531cdc9ec5aefd"
+    },
+    {
+      "path": "adaptation-banks.js",
+      "match": true,
+      "sha256": "437e0e375a5a5e3c6015274d51e998dd7c2799efd73078d275949103c564f120"
+    },
+    {
+      "path": "coverage.html",
+      "match": true,
+      "sha256": "b5606358204061ba9f3824db4537492c263aed46fbbd1eb1e9f393477f5fdfaa"
+    },
+    {
+      "path": "index.html",
+      "match": true,
+      "sha256": "cc2fbdbd6819115552bedf07290e1f104040cc70089eb34971f00d37446798f7"
+    },
+    {
+      "path": "planning/adaptation-bank-evidence.json",
+      "match": true,
+      "sha256": "4226303f68aee90fe03d2c789a6d6c061687e006b5c4dd0cc06fccaa3512e553"
+    },
+    {
+      "path": "planning/adaptation-bank-expansion.md",
+      "match": true,
+      "sha256": "546645da091f4794b4838dbaf4d5197798470e9f66a146122eea371886149f3d"
+    },
+    {
+      "path": "planning/question-research-workflow.md",
+      "match": true,
+      "sha256": "eff6bb2db741bf015d30e4b19e4d4ec0687490c76ca27211c12e51c356854b26"
+    },
+    {
+      "path": "reasoning-catalogue.js",
+      "match": true,
+      "sha256": "d055b0b42f5c653d816be0457f97532f22e09c9c38d661f841fb817ea3a50894"
+    },
+    {
+      "path": "reasoning-data.js",
+      "match": true,
+      "sha256": "aa799c7c443de82ed97b41d4c0dee1609ef16c08614975f56be3b9e10fa570d4"
+    },
+    {
+      "path": "reasoning.html",
+      "match": true,
+      "sha256": "6688e4e3015aaf533629857cfb145f598e1bdce759e2af9ca61ee62c04c35ba2"
+    },
+    {
+      "path": "reasoning.js",
+      "match": true,
+      "sha256": "edb688a7888622ddf20e286e808befda9beb6863e99c597cdbc7c2e8e39aefe4"
+    },
+    {
+      "path": "skill-levels-hub.js",
+      "match": true,
+      "sha256": "b80c1ab2604752bf877d4f38e5351c3fd25b1b8c681b98784139cb612d89b018"
+    },
+    {
+      "path": "skill-levels.html",
+      "match": true,
+      "sha256": "c77f2d69a8e1705b47f02916910d5be67d360ed43abb3d7f1631fa0403147b94"
+    },
+    {
+      "path": "tests/adaptation-banks-static.cjs",
+      "match": true,
+      "sha256": "b0f0e072eb87dd693de212cb2a6ef048b50614a3fa8c6178127c47ab2d88beb3"
+    },
+    {
+      "path": "tests/adaptation-examples-browser.js",
+      "match": true,
+      "sha256": "f7b2cfac6a70b78d51f025394206e81d8a40cd05beb42fdc309924bf7b99a7e3"
+    },
+    {
+      "path": "tests/adaptation-examples.html",
+      "match": true,
+      "sha256": "f006b93448df6276964cadb93788163671924a31f0214f3ba0b93d4633b825d6"
+    },
+    {
+      "path": "tests/reasoning-browser.js",
+      "match": true,
+      "sha256": "e3c1de1424d02a21ec7b1f910d163544d09b9bb171b54843b721ac5c172c7078"
+    },
+    {
+      "path": "tests/reasoning-static.cjs",
+      "match": true,
+      "sha256": "dfae12ced5d1e82db9035114998f94fa7bca0649a1e6da17baef400a44432f92"
+    },
+    {
+      "path": "tests/resources-ui-static.cjs",
+      "match": true,
+      "sha256": "d7c94cdbda3eb18ef3afe64db395746e58431278cd6473f806c04edcbe4be70c"
+    },
+    {
+      "path": "ui.js",
+      "match": true,
+      "sha256": "12b7d7dde4132febccb35ca716ab20347e24eb3151e6120453dc3e3d7acc3e74"
+    }
   ]
 }
