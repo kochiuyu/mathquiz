@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-20",
+  "base": "b00caac25a80e55cd893db7b39f6080ad88fc317",
+  "scope": "P1 1N4 calculation teaching pathway",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "local": {
+    "status": "verified",
+    "initialBrowserRun": {
+      "passed": 81,
+      "failed": 0
+    },
+    "staticGates": 8,
+    "independentGeneratedChecks": 216,
+    "fullThreePupilRecordCharacters": 20026,
+    "readBoundCharacters": 37504,
+    "visualCheck": {
+      "page": "Chinese Difficult column addition",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 716.55,
+      "horizontalOverflow": false
+    },
+    "developmentCorrections": [
+      "New browser test fixture missing brace corrected",
+      "Object-order-dependent assertion replaced with structural equality",
+      "Two English teaching explanations shortened after mobile inspection; teaching action layout tests added",
+      "English teaching step remained 9px below first screen after paragraph edit; shorter headings fixed it; both language teaching cases passed again"
+    ],
+    "distinctBrowserCases": 83,
+    "fullRun": {
+      "passed": 80,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Subtraction layout en 375",
+          "error": "Navigation timeout learn.html?lesson=takeaway&stage=practice&level=easy&lang=en"
+        },
+        {
+          "name": "Relations layout zh 1280",
+          "error": "Navigation timeout learn.html?lesson=difference&stage=practice&level=difficult&lang=zh"
+        },
+        {
+          "name": "Calculation mobile teaching en",
+          "error": "next action below first screen columnadd step 1"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Calculation mobile teaching en",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Calculation mobile teaching zh",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Subtraction layout en 375",
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Relations layout zh 1280",
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "teachingVisualCheck": {
+      "page": "English carried addition teaching step 2",
+      "width": 320,
+      "height": 812,
+      "nextActionBottom": 793.05,
+      "horizontalOverflow": false
+    },
+    "runnerTransport": "Initial navigation and one result-read timed out while final runner continued; completion read without reloading"
+  },
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "5ceaf234b8b1da7da7b52a9aecf3e1b98cc0c43fea9833ed9d99c45d80e09a91",
+    "learn-data.js": "fdac2b44fe90c2cd130b286e9b993589d66d652cdf9529ed672e2c39995c3d94",
+    "learn-store.js": "3fbddc5c99dc84dcb2787c00389afcf47bbbfb3e39ac6e3371c2025a71b12a19",
+    "learn-calculate.js": "b5681d54b5377612d92a7a3cd13fe42a1c37cebeaf6ec983c2077b6132d1e744",
+    "learn.css": "6aececeabdeefd8fc2be5653c8b1ce36711b15a5e4abde4efb34478bbd1cd266",
+    "learn.html": "e8edf8a8d30cac76195962681997fe41c479bd8e39f57bb614c384a165bd56d9",
+    "learn.js": "0ffda9e8f1d9db336e82eff7651d210fd3050fffd1e7cf19e127eff4d7ecaed3",
+    "tests/hundred-static.cjs": "039a58af53eba4af4069a7f6d17b74440242bf93f9f2c3854af10f6f18387d92",
+    "tests/subtract-static.cjs": "8a73eddb10981340ff5f95423aebf885f929d8c01f1cf9a5ea98f6b56379d4e5",
+    "tests/groups-static.cjs": "8fb853e0b33bf39e4b31ec1f4e4bcd6613e400cb71ac73b03a8cb8f7b32e7786",
+    "tests/relations-static.cjs": "98b034b430e9ecec906859c1115021b6aa12c6f0757c2f551649ec31f53876d9",
+    "tests/calculate-static.cjs": "f26a4af2caacd29f9b7de25c970425aa8c26772a0ae1be03bcca516a0d2fee16",
+    "tests/student-blocked.html": "01c0ed785fa5629188ab52141e33c110e0111b647b7dede6212839529a4ef65f",
+    "tests/student-browser.js": "2cf3b5957d3d21d16d7ea40231516bf0d09e2d9712191cdd33c4d234823e447f",
+    "tests/student.html": "50fdb742ca54460f5e5bff708428c572f0e75d6738db18fb49b0dfa7562cf942"
+  },
+  "limitations": [
+    "Partial P1 teaching coverage",
+    "Practice completion can follow corrected feedback; no calibrated mastery claim",
+    "Retakes rotate three overlapping deterministic configurations",
+    "Pupil trials, independent translation, screen-reader listening and real-object classroom review not performed",
+    "Broader 267-case shared UI/activity browser suite not rerun"
+  ]
+}

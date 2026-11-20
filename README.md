@@ -720,3 +720,12 @@ All 54 local browser cases are verified, including one exact navigation-timeout 
 The **27 new practice items** bring the teaching collection to **five pathways, fifteen lessons and 135 levelled practice items**. Earlier questions, saved progress and quiz results remain unchanged. Grouping/estimation now leads into this pathway. Boundary cases include zero, equal quantities and twentieth positions.
 
 Local verification passed **67/67 browser cases and seven static gates**, with no retries. All 67 public cases are verified: 66 passed in the full run and one page-load timeout passed on exact rerun. Runtime deployment succeeded; all fourteen changed runtime/test assets matched. [Scope, saved-work compatibility and next steps](planning/p1-relations-pathway.md) · [Evidence](planning/p1-relations-evidence.json). Next: addition/subtraction within 100 under 1N4, with a storage-capacity check before further expansion. Full P1 teaching coverage and pupil calibration remain pending.
+
+
+## P1 teaching: add and subtract below 100
+
+[Start Add and subtract below 100](https://kochiuyu.github.io/mathquiz/learn.html?path=calculate). Three new bilingual lessons teach aligned tens/ones, carrying addition, addition of three numbers, subtraction without borrowing and checking by adding back. Teaching and guided practice lead into three difficulty levels and a separate six-question check.
+
+The **27 new practice items** bring the teaching collection to **six pathways, eighteen lessons and 162 levelled practice items**. Addition totals stay below 100, and word problems use two numbers. Earlier questions and saved results remain unchanged. A full three-pupil record now exceeds the previous storage read cap; a tested schema-based limit preserves it and allows future lesson expansion.
+
+All **83 local browser cases verified**, including two successful page-load-timeout reruns and a corrected mobile teaching layout. Eight static gates passed. Public verification is pending. [Teaching scope, saved-work compatibility and next steps](planning/p1-calculate-pathway.md) · [Evidence](planning/p1-calculate-evidence.json). Next: measurement, starting with aligned lengths, straight distances and informal units. Pupil trials and independent human reviews remain pending; this is partial P1 teaching coverage.
