@@ -67,7 +67,81 @@
     "distinctCasesVerified": 220
   },
   "public": {
-    "status": "pending"
+    "learningMap": {
+      "done": true,
+      "passed": 15,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Map teacher tools retained",
+          "error": "Navigation timeout index.html?lang=zh"
+        }
+      ]
+    },
+    "student": {
+      "done": true,
+      "passed": 185,
+      "failed": 3,
+      "failures": [
+        {
+          "name": "Hundred layout zh 320",
+          "error": "Test frame reset timeout"
+        },
+        {
+          "name": "Money mobile teaching en",
+          "error": "Navigation timeout learn.html?lesson=coinequal&stage=practice&level=normal&lang=en"
+        },
+        {
+          "name": "Flat mobile teaching zh",
+          "error": "Navigation timeout learn.html?lesson=joinshapes&stage=practice&level=easy&lang=zh"
+        }
+      ]
+    },
+    "inquiry": {
+      "done": true,
+      "passed": 15,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Inquiry packet languages",
+          "error": "Navigation timeout activities/p1-inquiry.html?lang=en"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Map teacher tools retained",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Hundred layout zh 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Money mobile teaching en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Flat mobile teaching zh",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Inquiry packet languages",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 220,
+    "adultEntryReadback": "Live parent/teacher home rendered with year choices, quiz builder, activity links and 270 curriculum-linked + 30 TSA-informed practice types; student-home false."
   },
   "runtimeHashes": {
     "index.html": "e46e0422dc02a4cc51205965d0e5fd601f5d655c7d24ced27dc28373887b661c",
@@ -92,6 +166,119 @@
   "visual": {
     "sample": "Chinese flat-shapes home at requested 320x812; browser content width305 due scrollbar",
     "screenshot": "browser-screenshots/screenshot-2026-11-20T14-17-00-995Z-bb7bd802.png",
-    "observations": "Start, selected topic and first lesson visible; map and prerequisites collapsed."
-  }
+    "observations": "Start, selected topic and first lesson visible; map and prerequisites collapsed.",
+    "publicEnglishBridge": "browser-screenshots/screenshot-2026-11-20T14-22-03-300Z-b65b6558.png",
+    "publicObservations": "English solid-to-outline bridge verified on live site; 39 lessons and no horizontal overflow. Homepage reading and opening details did not reset saved work."
+  },
+  "publication": {
+    "base": "f16822260bd2b81b91a602111b2309b884d6fc99",
+    "baseTree": "b156e892d63d86917154160b45e98cf5910f7abf",
+    "runtimeCommit": "e3b48e855a6feff7a63329df2f384f7fd465d00e",
+    "runtimeTree": "fc622cb60d1aadba3a9c72a4a3d5607319e1bd85",
+    "pagesRun": 44752302047,
+    "pagesConclusion": "success",
+    "files": [
+      "README.md",
+      "index.html",
+      "learn-map.js",
+      "learn.css",
+      "learn.html",
+      "learn.js",
+      "planning/p1-coverage-evidence.json",
+      "planning/p1-coverage-review.md",
+      "tests/inquiry.html",
+      "tests/learning-map-browser.js",
+      "tests/learning-map-static.cjs",
+      "tests/learning-map.html",
+      "tests/student-blocked.html",
+      "tests/student-browser.js",
+      "tests/student.html"
+    ]
+  },
+  "deployedRuntimeReadback": [
+    {
+      "path": "index.html",
+      "sha256": "e46e0422dc02a4cc51205965d0e5fd601f5d655c7d24ced27dc28373887b661c",
+      "expected": "e46e0422dc02a4cc51205965d0e5fd601f5d655c7d24ced27dc28373887b661c",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn-map.js",
+      "sha256": "337bbf9fca633eff704f1a9efcf3778614c2905bcb3c409ba4f54d372a7f006a",
+      "expected": "337bbf9fca633eff704f1a9efcf3778614c2905bcb3c409ba4f54d372a7f006a",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.css",
+      "sha256": "279c9abdfc6d95fe1b90355c69b1716451ffcbaad74686f7be919e958d3314e7",
+      "expected": "279c9abdfc6d95fe1b90355c69b1716451ffcbaad74686f7be919e958d3314e7",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.html",
+      "sha256": "35a8b31e364c35900fbf8e9967fef738730b8cf3895cf907cfb74623d90dc18a",
+      "expected": "35a8b31e364c35900fbf8e9967fef738730b8cf3895cf907cfb74623d90dc18a",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "learn.js",
+      "sha256": "40c236af6f9d6417eff2fbfb6216595dadc77913c2fa80e8b550331f93a3d10a",
+      "expected": "40c236af6f9d6417eff2fbfb6216595dadc77913c2fa80e8b550331f93a3d10a",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/inquiry.html",
+      "sha256": "562db77b48eca7b3f02881f3f1526d3a3073754d92923376fd2b211d6e05baef",
+      "expected": "562db77b48eca7b3f02881f3f1526d3a3073754d92923376fd2b211d6e05baef",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/learning-map-browser.js",
+      "sha256": "729291cf5d101b86097471d26697cf6abb95ae5839a65e627981f91a1c8c12ee",
+      "expected": "729291cf5d101b86097471d26697cf6abb95ae5839a65e627981f91a1c8c12ee",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/learning-map-static.cjs",
+      "sha256": "a154d457a1848c4c9064363dc6a15812327530cdb87a5132d0825c2c594d2869",
+      "expected": "a154d457a1848c4c9064363dc6a15812327530cdb87a5132d0825c2c594d2869",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/learning-map.html",
+      "sha256": "479711eddfe95d5f6d516f35104d9b618f8641d8d4feea4a9a52d93a2955c030",
+      "expected": "479711eddfe95d5f6d516f35104d9b618f8641d8d4feea4a9a52d93a2955c030",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student-blocked.html",
+      "sha256": "9446e116f8bc9c5f10a56d389a270d0a9311f7051a4625e23950005988012ab7",
+      "expected": "9446e116f8bc9c5f10a56d389a270d0a9311f7051a4625e23950005988012ab7",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student-browser.js",
+      "sha256": "2963a46c4622fe6b6a03811b8f4c5d1655de985fe8f76121688ef8f0dfe5de30",
+      "expected": "2963a46c4622fe6b6a03811b8f4c5d1655de985fe8f76121688ef8f0dfe5de30",
+      "matches": true,
+      "retryErrors": []
+    },
+    {
+      "path": "tests/student.html",
+      "sha256": "568d0e072906afaca038dea5d21ff73da38038b44328eb567958235eefe5ec45",
+      "expected": "568d0e072906afaca038dea5d21ff73da38038b44328eb567958235eefe5ec45",
+      "matches": true,
+      "retryErrors": []
+    }
+  ]
 }
