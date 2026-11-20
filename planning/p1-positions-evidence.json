@@ -44,7 +44,171 @@
     "distinctCasesVerified": 188
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "fullRun": {
+      "done": true,
+      "passed": 186,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Difficulty resume, isolation and migration",
+          "error": "Navigation timeout ?lang=zh"
+        },
+        {
+          "name": "Flat layout zh 320",
+          "error": "Navigation timeout learn.html?lesson=flatnames&stage=practice&level=normal&lang=zh"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Difficulty resume, isolation and migration",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Flat layout zh 320",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 188,
+    "assetReadback": [
+      {
+        "path": "index.html",
+        "sha256": "db31b78bd53d7b1c3e0bedc46f7e5aa45a61409cd67f3205e4b3cfff24f9cfb5",
+        "expected": "db31b78bd53d7b1c3e0bedc46f7e5aa45a61409cd67f3205e4b3cfff24f9cfb5",
+        "matches": true
+      },
+      {
+        "path": "learn-data.js",
+        "sha256": "e22799020b4a67f4d1f74de660fef443a89a9471c21f58dd78d1615aa242bf0c",
+        "expected": "e22799020b4a67f4d1f74de660fef443a89a9471c21f58dd78d1615aa242bf0c",
+        "matches": true
+      },
+      {
+        "path": "learn-positions.js",
+        "sha256": "36424b37b2a6667e0670e8c23fa3feb4b7207de6bf5b984ba128a52ed9ab16b1",
+        "expected": "36424b37b2a6667e0670e8c23fa3feb4b7207de6bf5b984ba128a52ed9ab16b1",
+        "matches": true
+      },
+      {
+        "path": "learn-store.js",
+        "sha256": "d996ff473dc8fe6d124021bfc077065418a2c62f7cef1715507e0b2be123c519",
+        "expected": "d996ff473dc8fe6d124021bfc077065418a2c62f7cef1715507e0b2be123c519",
+        "matches": true
+      },
+      {
+        "path": "learn.css",
+        "sha256": "54898021dca3a9cd5630239df6fe250b637a1283ae48ce105dd81c50accf5813",
+        "expected": "54898021dca3a9cd5630239df6fe250b637a1283ae48ce105dd81c50accf5813",
+        "matches": true
+      },
+      {
+        "path": "learn.html",
+        "sha256": "d934cf5f0ae2d0dbcdd7751d654abf2be614a38693cd23dac4c3ec0a86426a92",
+        "expected": "d934cf5f0ae2d0dbcdd7751d654abf2be614a38693cd23dac4c3ec0a86426a92",
+        "matches": true
+      },
+      {
+        "path": "learn.js",
+        "sha256": "6fa84e726e3e1b411ec1933f24e24b02b7d1c6dea3bbdea4e350980de2d233c8",
+        "expected": "6fa84e726e3e1b411ec1933f24e24b02b7d1c6dea3bbdea4e350980de2d233c8",
+        "matches": true
+      },
+      {
+        "path": "tests/calculate-static.cjs",
+        "sha256": "15005f27634214abf1852e8d47d7bf5213f69dd182e2928798a10f6eda1e95cc",
+        "expected": "15005f27634214abf1852e8d47d7bf5213f69dd182e2928798a10f6eda1e95cc",
+        "matches": true
+      },
+      {
+        "path": "tests/flat-static.cjs",
+        "sha256": "a66f847e2812f5702643b47e84346bca182f0fa72888d540980af2529781926a",
+        "expected": "a66f847e2812f5702643b47e84346bca182f0fa72888d540980af2529781926a",
+        "matches": true
+      },
+      {
+        "path": "tests/groups-static.cjs",
+        "sha256": "e0eb190e40c4ea54cbdf38e33034f186b21485fa7baed62c5e8b394e97e4d556",
+        "expected": "e0eb190e40c4ea54cbdf38e33034f186b21485fa7baed62c5e8b394e97e4d556",
+        "matches": true
+      },
+      {
+        "path": "tests/hundred-static.cjs",
+        "sha256": "05fb0b4ed1e0b2117a8ec2245a4f25e917e45664dca3d3631e310182d690b71f",
+        "expected": "05fb0b4ed1e0b2117a8ec2245a4f25e917e45664dca3d3631e310182d690b71f",
+        "matches": true
+      },
+      {
+        "path": "tests/measure-static.cjs",
+        "sha256": "326471f93625d6aac0dc035367de04d8f07640f72595a050744edc6c6870472a",
+        "expected": "326471f93625d6aac0dc035367de04d8f07640f72595a050744edc6c6870472a",
+        "matches": true
+      },
+      {
+        "path": "tests/money-static.cjs",
+        "sha256": "eab44f928519365e1e35de3f5327c84ef48f2e9a4c93a0b712bb9c0330685669",
+        "expected": "eab44f928519365e1e35de3f5327c84ef48f2e9a4c93a0b712bb9c0330685669",
+        "matches": true
+      },
+      {
+        "path": "tests/positions-static.cjs",
+        "sha256": "546ad299351b1ed1db920740617434421548543a8b68a52bf4a524e8d7aee0f3",
+        "expected": "546ad299351b1ed1db920740617434421548543a8b68a52bf4a524e8d7aee0f3",
+        "matches": true
+      },
+      {
+        "path": "tests/relations-static.cjs",
+        "sha256": "b453eeb0b5c3270cf36715788050c1cd271ab287ec8d2dd4cccc9e5d6f13f739",
+        "expected": "b453eeb0b5c3270cf36715788050c1cd271ab287ec8d2dd4cccc9e5d6f13f739",
+        "matches": true
+      },
+      {
+        "path": "tests/ruler-static.cjs",
+        "sha256": "f524184f883412729eceb8638a1c03953866c8b04ba8b221dff2296b26f3e9a1",
+        "expected": "f524184f883412729eceb8638a1c03953866c8b04ba8b221dff2296b26f3e9a1",
+        "matches": true
+      },
+      {
+        "path": "tests/solids-static.cjs",
+        "sha256": "9a5ecc18301643654c220424bf01bdd0a7d17ead287d7b5f3d1ec37dccbc9f94",
+        "expected": "9a5ecc18301643654c220424bf01bdd0a7d17ead287d7b5f3d1ec37dccbc9f94",
+        "matches": true
+      },
+      {
+        "path": "tests/student-blocked.html",
+        "sha256": "e385cb978b6d7a7d780df6464245a20a268eeeb9679618af0ae8c15fb6c6a523",
+        "expected": "e385cb978b6d7a7d780df6464245a20a268eeeb9679618af0ae8c15fb6c6a523",
+        "matches": true
+      },
+      {
+        "path": "tests/student-browser.js",
+        "sha256": "f1290898b1b2f70450caf6741e072dfb43d6222b9ec8f75afdad5f321e32ad6f",
+        "expected": "f1290898b1b2f70450caf6741e072dfb43d6222b9ec8f75afdad5f321e32ad6f",
+        "matches": true
+      },
+      {
+        "path": "tests/student.html",
+        "sha256": "f8ee8b9ec24dda7c851921f0c28fd8ebe0909f3f13d8bfdb0b5e1bae04353d05",
+        "expected": "f8ee8b9ec24dda7c851921f0c28fd8ebe0909f3f13d8bfdb0b5e1bae04353d05",
+        "matches": true
+      },
+      {
+        "path": "tests/subtract-static.cjs",
+        "sha256": "ac3b1be957a531f2aedb709e2f9656ce2f3d0ca980ef14e0bdaf54be70e8719b",
+        "expected": "ac3b1be957a531f2aedb709e2f9656ce2f3d0ca980ef14e0bdaf54be70e8719b",
+        "matches": true
+      },
+      {
+        "path": "tests/time-static.cjs",
+        "sha256": "be70efcd462053b290e846b0790abf93807e1cdbee6935a9a208239cb07837c7",
+        "expected": "be70efcd462053b290e846b0790abf93807e1cdbee6935a9a208239cb07837c7",
+        "matches": true
+      }
+    ]
   },
   "limits": [
     "Three overlapping deterministic retake configurations; not independent assessments",
@@ -57,9 +221,9 @@
   "hashes": {
     "index.html": "db31b78bd53d7b1c3e0bedc46f7e5aa45a61409cd67f3205e4b3cfff24f9cfb5",
     "learn-data.js": "e22799020b4a67f4d1f74de660fef443a89a9471c21f58dd78d1615aa242bf0c",
-    "learn-positions.js": "b409c2aae6a7601a3dba6c4343622be336acbe3595fcfb26d415dd27e0afc1d7",
+    "learn-positions.js": "36424b37b2a6667e0670e8c23fa3feb4b7207de6bf5b984ba128a52ed9ab16b1",
     "learn-store.js": "d996ff473dc8fe6d124021bfc077065418a2c62f7cef1715507e0b2be123c519",
-    "learn.css": "b71722d4e50775ac011fa62b18ae7f6efdd2b7da1e39a8be288fb9b69813620a",
+    "learn.css": "54898021dca3a9cd5630239df6fe250b637a1283ae48ce105dd81c50accf5813",
     "learn.html": "d934cf5f0ae2d0dbcdd7751d654abf2be614a38693cd23dac4c3ec0a86426a92",
     "learn.js": "6fa84e726e3e1b411ec1933f24e24b02b7d1c6dea3bbdea4e350980de2d233c8",
     "tests/calculate-static.cjs": "15005f27634214abf1852e8d47d7bf5213f69dd182e2928798a10f6eda1e95cc",
@@ -68,12 +232,12 @@
     "tests/hundred-static.cjs": "05fb0b4ed1e0b2117a8ec2245a4f25e917e45664dca3d3631e310182d690b71f",
     "tests/measure-static.cjs": "326471f93625d6aac0dc035367de04d8f07640f72595a050744edc6c6870472a",
     "tests/money-static.cjs": "eab44f928519365e1e35de3f5327c84ef48f2e9a4c93a0b712bb9c0330685669",
-    "tests/positions-static.cjs": "afb1f5098da28dc7c42b4134490dbe7be305479d63994e6a05946d081c06b0a2",
+    "tests/positions-static.cjs": "546ad299351b1ed1db920740617434421548543a8b68a52bf4a524e8d7aee0f3",
     "tests/relations-static.cjs": "b453eeb0b5c3270cf36715788050c1cd271ab287ec8d2dd4cccc9e5d6f13f739",
     "tests/ruler-static.cjs": "f524184f883412729eceb8638a1c03953866c8b04ba8b221dff2296b26f3e9a1",
     "tests/solids-static.cjs": "9a5ecc18301643654c220424bf01bdd0a7d17ead287d7b5f3d1ec37dccbc9f94",
     "tests/student-blocked.html": "e385cb978b6d7a7d780df6464245a20a268eeeb9679618af0ae8c15fb6c6a523",
-    "tests/student-browser.js": "52418d6758c28063d06a4dec36f119d21327b3bae565aac8966eda53d6a5bf33",
+    "tests/student-browser.js": "f1290898b1b2f70450caf6741e072dfb43d6222b9ec8f75afdad5f321e32ad6f",
     "tests/student.html": "f8ee8b9ec24dda7c851921f0c28fd8ebe0909f3f13d8bfdb0b5e1bae04353d05",
     "tests/subtract-static.cjs": "ac3b1be957a531f2aedb709e2f9656ce2f3d0ca980ef14e0bdaf54be70e8719b",
     "tests/time-static.cjs": "be70efcd462053b290e846b0790abf93807e1cdbee6935a9a208239cb07837c7"
@@ -144,7 +308,12 @@
         "failed": 0,
         "reason": "Final compact true/false prompt passes"
       }
-    ]
+    ],
+    "assetVerification": {
+      "initial": "TLS handshake timeout, no certificate verification bypass",
+      "retry": "18/22 raw hashes matched; four mismatches confirmed solely CRLF vs LF after connector text normalisation",
+      "resolution": "All22 public raw hashes from the completed readback match local LF bytes. Original failed comparison retained locally. Further network recheck hit connection reset; no content differences or certificate bypass."
+    }
   },
   "visualSamples": {
     "width": 320,
@@ -154,5 +323,12 @@
     "horizontalOverflow": false,
     "review": "Original diagrams and pupil labels inspected in English and Chinese; full mobile cases also required."
   },
-  "verificationText": "All **188 local browser cases are verified**: 187 passed in the final full run; 1 timeout cases passed exact reruns. Fifteen static gates passed. Public verification is pending."
+  "verificationText": "All **188 local browser cases are verified**: 187 passed in the final full run; one timeout passed its exact rerun. Fifteen static gates passed. All **188 public browser cases are verified**: 186 passed in the full run; two timeouts passed exact reruns. Runtime deployment succeeded and all twenty-two changed runtime/test files matched their tested hashes.",
+  "publication": {
+    "base": "57f0cddf6a24e7837879f95d1387bedd4185e01b",
+    "runtime": "31c62d3e4373dcfa424c0f34f4af56e437eaa9d8",
+    "tree": "26e34a60b7200e6f7698c84f07fead95e0e5d2bf",
+    "pagesRun": 44743461227,
+    "deployment": "success"
+  }
 }

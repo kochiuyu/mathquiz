@@ -791,6 +791,6 @@ All **173 local browser cases are verified**: 172 passed in the final full run; 
 
 The **27 new practice items** bring the journey to **thirteen pathways, 39 lessons and 351 levelled practice items**. Simple labelled diagrams distinguish floor distance from height; Difficult questions ask pupils to check claims. Earlier questions, pupil profiles and saved progress are preserved. The practical continuation supports spoken descriptions of real arrangements with an adult.
 
-All **188 local browser cases are verified**: 187 passed in the final full run; 1 timeout cases passed exact reruns. Fifteen static gates passed. Public verification is pending.
+All **188 local browser cases are verified**: 187 passed in the final full run; one timeout passed its exact rerun. Fifteen static gates passed. All **188 public browser cases are verified**: 186 passed in the full run; two timeouts passed exact reruns. Runtime deployment succeeded and all twenty-two changed runtime/test files matched their tested hashes.
 
 [Scope, compatibility and next steps](planning/p1-positions-pathway.md) · [Evidence](planning/p1-positions-evidence.json). Next: integrated inquiry activities under 1F1, linked to existing pathways. Pupil calibration and independent human reviews remain pending; online choices do not demonstrate real-object descriptions or full P1 completion.

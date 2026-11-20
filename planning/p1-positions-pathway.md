@@ -30,9 +30,11 @@ The schema-based read cap is **76,480 characters**; the fully populated three-pu
 
 ## Verification
 
-All **188 local browser cases are verified**: 187 passed in the final full run; 1 timeout cases passed exact reruns. Fifteen static gates passed. Public verification is pending.
+All **188 local browser cases are verified**: 187 passed in the final full run; one timeout passed its exact rerun. Fifteen static gates passed. All **188 public browser cases are verified**: 186 passed in the full run; two timeouts passed exact reruns. Runtime deployment succeeded and all twenty-two changed runtime/test files matched their tested hashes.
 
 Fifteen static gates cover all pathways and shared resource/UI boundaries. New answer checks independently derive relations from coordinates, test 216 generated items, all 27 practice items and twelve checks, including all seven terms and not-between. The 188-case student browser suite retains 173 earlier cases and adds 15 covering both languages, blank/wrong answers, retakes, four widths, mobile actions, continued learning, denied storage, scene descriptions and the activity link. Exact timeout failures and retries are recorded, rather than representing a partial run as a pass.
+
+Development checks caught an incorrect lesson ID in copied test routes and an English mobile layout that placed actions too low. The routes were corrected, a literal-route guard was added, and the title, claim prompt and observer caption spacing were shortened. The final full suite was then run on the corrected version. Public hash comparison also identified connector line-ending normalisation; all22 collected public hashes match canonical LF source, with unchanged text. Exact development failures and network retries remain in the evidence.
 
 The broader 267-case shared UI/activity browser suite is not repeated. Pupil calibration, independent translation review, screen-reader listening, physical printing and observed real-object descriptions remain pending. This is not a claim of full P1 completion.
 
