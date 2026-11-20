@@ -1,0 +1,31 @@
+const A=require('node:assert/strict'),D=require('../learn-data.js'),P=require('../learn-positions.js'),S=require('../learn-store.js'),crypto=require('node:crypto'),fs=require('node:fs'),vm=require('node:vm');
+A.equal(D.paths.length,13);A.equal(D.allLessons.length,39);A.equal(new Set(D.allLessons.map(l=>l.id)).size,39);
+const baseline=D.allLessons.filter(l=>D.pathFor(l.id).id!=='positions').map(l=>[l.id,D.levels.map(v=>D.practice(l.id,v)),Array.from({length:12},(_,s)=>Array.from({length:12},(_,i)=>D.question(l.id,i,s)))]);
+A.equal(crypto.createHash('sha256').update(JSON.stringify(baseline)).digest('hex'),'dc3ad85296590e26fcfb38491936a2b337021802f90e32f4e99118b6a72676b0');
+const seen=new Set();function check(q){const v=q.visual;A.equal(v.kind,'positions');A.equal(new Set(v.objects.map(o=>o.id)).size,v.objects.length);A(v.objects.length>=2&&v.objects.length<=3);const a=v.objects.find(o=>o.id===v.target),b=v.objects.find(o=>o.id===v.ref);let rel;
+ if(v.mode==='row')rel=a.x<b.x?'left':'right';else if(v.mode==='vertical')rel=a.y<b.y?'over':'under';else if(v.mode==='depth')rel=a.y>b.y?'front':'behind';else {A.equal(v.mode,'between');const ordered=[...v.objects].sort((a,b)=>a.x-b.x);rel=ordered[1].id===a.id?'between':'notbetween';}
+ seen.add(rel);const answer=v.claim?(v.claim===rel?1:2):v.choices.findIndex(t=>t[0]===P.terms[rel][0])+1;A(answer>0);A.equal(q.answer,answer,q.id);A(D.correct(q,''+answer));for(const s of ['', '99','1e0','1.0',String(3-answer)])A(!D.correct(q,s));A(q.prompt.every(Boolean)&&q.why.every(Boolean));
+ for(const o of v.objects){A(o.x>=20&&o.x<=190);A(o.y>=20&&o.y<=100);}
+}
+let n=0;for(const l of P.lessons){A.equal(l.steps.length,3);for(const s of l.steps){A(s.text.every(Boolean));A.equal(s.visual.kind,'positions');}for(let seed=0;seed<6;seed++)for(let i=0;i<12;i++){check(D.question(l.id,i,seed));n++;}for(const level of D.levels){const qs=D.practice(l.id,level);A.equal(qs.length,3);A.equal(new Set(qs.map(q=>q.id)).size,3);qs.forEach(check);}}
+A.equal(seen.size,8);const checkTerms=new Set();for(let i=0;i<12;i++){const qs=D.quiz(i,'positions');A.equal(qs.length,6);A.equal(new Set(qs.map(q=>q.id)).size,6);qs.forEach(q=>{check(q);checkTerms.add(q.visual.choices[q.answer-1][0]);});for(const l of P.lessons)A.equal(qs.filter(q=>q.lesson===l.id).length,2);}
+A(checkTerms.has('between')&&checkTerms.has('in front of')&&checkTerms.has('behind'));
+const old={attempt:2,quiz:{answers:['3','5','12','5','7','7'],submitted:true},checks:Object.fromEntries(D.paths.filter(pa=>!['first','positions'].includes(pa.id)).map(pa=>[pa.id,{attempt:1,quiz:{answers:D.quiz(1,pa.id).map(q=>''+q.answer),submitted:true}}])),lessons:{takeaway:{levels:{easy:{answers:['0','6','2'],done:true}}},bundles:{levels:{normal:{answers:['62','80','100'],done:true}}}}};
+const map=new Map(),storage={getItem:k=>map.get(k)||null,setItem:(k,v)=>map.set(k,v),removeItem:k=>map.delete(k)};map.set(S.key,JSON.stringify({version:1,active:0,profiles:[old,{},{}]}));let st=S.create(storage);const prior=JSON.stringify([st.profile.quiz,st.profile.checks]);st.update(p=>{p.checks.positions={attempt:2,quiz:{answers:['0'],submitted:false}};p.pathCursors.positions={lesson:'frontbetween',stage:'practice',level:'normal'};p.lessons.frontbetween={levels:{easy:{done:true,answers:['0','45','50']}}};});st=S.create(storage);A.equal(st.profile.lessons.frontbetween.levels.easy.answers[0],'0');A.equal(st.profile.pathCursors.positions.lesson,'frontbetween');A.deepEqual([st.profile.quiz,Object.fromEntries(Object.keys(old.checks).map(pa=>[pa,st.profile.checks[pa]]))],JSON.parse(prior));A.equal(st.profile.lessons.bundles.levels.normal.answers[2],'100');st.select(1);A(!st.profile.lessons.frontbetween);st.reset();st.select(0);A(st.profile.lessons.frontbetween.levels.easy.done);
+const full=S.cleanProfile(old);full.attempt=999;full.quiz={answers:Array(6).fill('100'),submitted:true};full.cursor={lesson:'frontbetween',stage:'practice',level:'difficult'};for(const l of D.allLessons)full.lessons[l.id]={learn:true,together:true,practice:true,step:2,togetherAnswers:['100','100'],practiceAnswers:['100','100','100'],levels:Object.fromEntries(D.levels.map(x=>[x,{done:true,answers:['100','100','100']}]))};for(const pa of D.paths){full.pathCursors[pa.id]={lesson:pa.lessons.at(-1).id,stage:'practice',level:'difficult'};if(pa.id!=='first')full.checks[pa.id]={attempt:999,quiz:{answers:Array(6).fill('100'),submitted:true}};}
+const record=JSON.stringify({version:1,active:2,profiles:[full,full,full]});A(record.length<S.maxRecordLength);map.set(S.key,record);st=S.create(storage);A.equal(st.notice,'');for(const pupil of st.state.profiles){A.equal(Object.keys(pupil.lessons).length,39);A.equal(pupil.checks.positions.quiz.answers.length,6);}
+// Valid whitespace pushes past the previous 20k cap, and near the new schema-based cap.
+map.set(S.key,record+' '.repeat(S.maxRecordLength-1-record.length));st=S.create(storage);A.equal(st.notice,'');A(st.profile.checks.positions.quiz.submitted);
+map.set(S.key,record+' '.repeat(S.maxRecordLength-record.length));st=S.create(storage);A.equal(st.notice,'read');A.equal(map.get(S.key).length,S.maxRecordLength,'read/probe overwrote stored work');
+map.set(S.key,'{broken');st=S.create(storage);A.equal(st.notice,'read');A.equal(map.get(S.key),'{broken');
+const bad=S.cleanProfile({checks:{positions:{attempt:-1,quiz:{answers:['123456'],submitted:'true'}}},pathCursors:{positions:{lesson:'parity',stage:'quiz'}}});A.equal(bad.checks.positions.attempt,0);A(!bad.checks.positions.quiz.submitted);A(!bad.pathCursors.positions);
+
+
+
+
+
+
+
+for(const f of ['learn-positions.js','learn-data.js','learn-store.js','learn.js','tests/student-browser.js'])new vm.Script(fs.readFileSync(require('node:path').join(__dirname,'..',f),'utf8'));
+const browser=fs.readFileSync(require('node:path').join(__dirname,'student-browser.js'),'utf8');for(const match of browser.matchAll(/lesson=([a-z]+)&/g))A(match[1]==='evil'||D.allLessons.some(l=>l.id===match[1]),'unknown literal test lesson '+match[1]);
+console.log(`PASS: ${n} generated answers,27 practice items,12 checks; all seven relations plus not-between; prior payload unchanged; full record ${record.length},bound ${S.maxRecordLength}.`);

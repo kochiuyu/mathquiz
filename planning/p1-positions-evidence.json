@@ -1,0 +1,158 @@
+{
+  "date": "2026-11-20",
+  "base": "57f0cddf6a24e7837879f95d1387bedd4185e01b",
+  "scope": "P1 1S3 simple observer-viewpoint relative positions; real-object expressive descriptions remain practical",
+  "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/en_ks1_e.pdf#page=23",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "totals": {
+    "pathways": 13,
+    "lessons": 39,
+    "levelledPracticeItems": 351
+  },
+  "local": {
+    "status": "verified",
+    "staticGates": 15,
+    "independentlyCheckedGeneratedAnswers": 216,
+    "practiceAnswers": 27,
+    "checkAttempts": 12,
+    "fullRecordCharacters": 43129,
+    "readBoundCharacters": 76480,
+    "fullRun": {
+      "done": true,
+      "passed": 187,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Three pathway resume, zero and gates",
+          "error": "Navigation timeout learn.html?lesson=takeaway&stage=practice&level=easy"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Three pathway resume, zero and gates",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 188
+  },
+  "public": {
+    "status": "pending"
+  },
+  "limits": [
+    "Three overlapping deterministic retake configurations; not independent assessments",
+    "5/6 next-step recommendation provisional, not calibrated mastery",
+    "Plan-view comprehension and pupil difficulty calibration pending",
+    "Independent translation, screen-reader listening, physical printing and observed real-object descriptions pending",
+    "Broader267-case shared UI/activity browser suite not rerun",
+    "No full P1 completion claim"
+  ],
+  "hashes": {
+    "index.html": "db31b78bd53d7b1c3e0bedc46f7e5aa45a61409cd67f3205e4b3cfff24f9cfb5",
+    "learn-data.js": "e22799020b4a67f4d1f74de660fef443a89a9471c21f58dd78d1615aa242bf0c",
+    "learn-positions.js": "b409c2aae6a7601a3dba6c4343622be336acbe3595fcfb26d415dd27e0afc1d7",
+    "learn-store.js": "d996ff473dc8fe6d124021bfc077065418a2c62f7cef1715507e0b2be123c519",
+    "learn.css": "b71722d4e50775ac011fa62b18ae7f6efdd2b7da1e39a8be288fb9b69813620a",
+    "learn.html": "d934cf5f0ae2d0dbcdd7751d654abf2be614a38693cd23dac4c3ec0a86426a92",
+    "learn.js": "6fa84e726e3e1b411ec1933f24e24b02b7d1c6dea3bbdea4e350980de2d233c8",
+    "tests/calculate-static.cjs": "15005f27634214abf1852e8d47d7bf5213f69dd182e2928798a10f6eda1e95cc",
+    "tests/flat-static.cjs": "a66f847e2812f5702643b47e84346bca182f0fa72888d540980af2529781926a",
+    "tests/groups-static.cjs": "e0eb190e40c4ea54cbdf38e33034f186b21485fa7baed62c5e8b394e97e4d556",
+    "tests/hundred-static.cjs": "05fb0b4ed1e0b2117a8ec2245a4f25e917e45664dca3d3631e310182d690b71f",
+    "tests/measure-static.cjs": "326471f93625d6aac0dc035367de04d8f07640f72595a050744edc6c6870472a",
+    "tests/money-static.cjs": "eab44f928519365e1e35de3f5327c84ef48f2e9a4c93a0b712bb9c0330685669",
+    "tests/positions-static.cjs": "afb1f5098da28dc7c42b4134490dbe7be305479d63994e6a05946d081c06b0a2",
+    "tests/relations-static.cjs": "b453eeb0b5c3270cf36715788050c1cd271ab287ec8d2dd4cccc9e5d6f13f739",
+    "tests/ruler-static.cjs": "f524184f883412729eceb8638a1c03953866c8b04ba8b221dff2296b26f3e9a1",
+    "tests/solids-static.cjs": "9a5ecc18301643654c220424bf01bdd0a7d17ead287d7b5f3d1ec37dccbc9f94",
+    "tests/student-blocked.html": "e385cb978b6d7a7d780df6464245a20a268eeeb9679618af0ae8c15fb6c6a523",
+    "tests/student-browser.js": "52418d6758c28063d06a4dec36f119d21327b3bae565aac8966eda53d6a5bf33",
+    "tests/student.html": "f8ee8b9ec24dda7c851921f0c28fd8ebe0909f3f13d8bfdb0b5e1bae04353d05",
+    "tests/subtract-static.cjs": "ac3b1be957a531f2aedb709e2f9656ce2f3d0ca980ef14e0bdaf54be70e8719b",
+    "tests/time-static.cjs": "be70efcd462053b290e846b0790abf93807e1cdbee6935a9a208239cb07837c7"
+  },
+  "development": {
+    "firstFullRun": {
+      "done": true,
+      "passed": 174,
+      "failed": 14,
+      "timeouts": [
+        {
+          "name": "Subtraction layout zh 320",
+          "error": "Test frame reset timeout"
+        },
+        {
+          "name": "Ruler layout en 320",
+          "error": "Navigation timeout learn.html?lesson=readcm&stage=practice&level=normal&lang=en"
+        },
+        {
+          "name": "Money units, choices and activity",
+          "error": "Navigation timeout learn.html?lesson=pricetags&stage=practice&level=difficult&lang=zh"
+        }
+      ],
+      "testFixtureFailures": {
+        "count": 11,
+        "cases": "Positions layout en/zh at320,375,768,1280; Thirteen pathway resume and gates; Positions mobile teaching en/zh",
+        "cause": "Copied test routes used nonexistent positionsnames instead of overunder; completion flows in both languages passed.",
+        "fix": "Corrected literal route and added a static check for all literal lesson IDs. Full rerun required."
+      }
+    },
+    "secondFullRun": {
+      "done": true,
+      "passed": 184,
+      "failed": 4,
+      "failures": [
+        {
+          "name": "Subtraction layout en 320",
+          "error": "Test frame reset timeout"
+        },
+        {
+          "name": "Positions layout en 320",
+          "error": "first answer low learn.html?lesson=frontbetween&stage=practice&level=difficult"
+        },
+        {
+          "name": "Positions mobile teaching en",
+          "error": "next action low frontbetween1 bottom887.2421875"
+        },
+        {
+          "name": "Positions mobile teaching zh",
+          "error": "Navigation timeout learn.html?lesson=leftright&stage=practice&level=difficult&lang=zh"
+        }
+      ],
+      "fix": "Shortened English title and explanations; removed inherited paragraph margins in observer caption. Static route guard exempts deliberate evil malformed-route fixture."
+    },
+    "focusedMobileRetries": [
+      {
+        "passed": 0,
+        "failed": 1,
+        "reason": "First answer still below812 after title/caption change"
+      },
+      {
+        "passed": 0,
+        "failed": 1,
+        "reason": "First shorter prompt still too long"
+      },
+      {
+        "passed": 1,
+        "failed": 0,
+        "reason": "Final compact true/false prompt passes"
+      }
+    ]
+  },
+  "visualSamples": {
+    "width": 320,
+    "height": 812,
+    "englishFirstAnswerBottom": 793.5546875,
+    "chineseFirstAnswerBottom": 766.359375,
+    "horizontalOverflow": false,
+    "review": "Original diagrams and pupil labels inspected in English and Chinese; full mobile cases also required."
+  },
+  "verificationText": "All **188 local browser cases are verified**: 187 passed in the final full run; 1 timeout cases passed exact reruns. Fifteen static gates passed. Public verification is pending."
+}

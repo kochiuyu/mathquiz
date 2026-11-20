@@ -783,3 +783,14 @@ All **158 local browser cases are verified**: the full run passed 155/158, and t
 The **27 new practice items** bring the journey to **twelve pathways, 36 lessons and 324 levelled practice items**. Turned, indented and unequal-sided shapes help pupils look beyond familiar silhouettes. Earlier questions and saved progress are retained. The linked practical packet supports drawing, making and free composition with an adult.
 
 All **173 local browser cases are verified**: 172 passed in the final full run; one timeout case passed its exact rerun. Fourteen static gates passed. All **173 public browser cases are verified**: 171 passed in the final full run; 2 timeout cases passed exact reruns. Runtime deployment succeeded and all twenty-one changed runtime/test files matched their tested hashes. [Scope, compatibility and next steps](planning/p1-flat-pathway.md) · [Evidence](planning/p1-flat-evidence.json). Next: relative positions under 1S3. Pupil trials and independent human reviews remain pending; online answers cannot demonstrate actual drawing or making.
+
+
+## P1 teaching: where are things?
+
+[Start Where are things?](https://kochiuyu.github.io/mathquiz/learn.html?path=positions). Three bilingual lessons teach left/right from the pupil's viewpoint, over/under, and in front/behind/between. Teaching and guided examples lead to three practice levels and a separate six-question check.
+
+The **27 new practice items** bring the journey to **thirteen pathways, 39 lessons and 351 levelled practice items**. Simple labelled diagrams distinguish floor distance from height; Difficult questions ask pupils to check claims. Earlier questions, pupil profiles and saved progress are preserved. The practical continuation supports spoken descriptions of real arrangements with an adult.
+
+All **188 local browser cases are verified**: 187 passed in the final full run; 1 timeout cases passed exact reruns. Fifteen static gates passed. Public verification is pending.
+
+[Scope, compatibility and next steps](planning/p1-positions-pathway.md) · [Evidence](planning/p1-positions-evidence.json). Next: integrated inquiry activities under 1F1, linked to existing pathways. Pupil calibration and independent human reviews remain pending; online choices do not demonstrate real-object descriptions or full P1 completion.
