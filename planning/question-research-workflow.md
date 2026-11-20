@@ -28,6 +28,16 @@ Open the actual task, teacher notes and relevant diagrams. Record the exact sour
 - Use **MathQuiz adaptations / MathQuiz改編練習** as the collection origin label. Keep year, topic, difficulty and task format separate. Retain the named source and original-adaptation explanation; the label does not imply a licence to copy.
 - Separate published tasks from the research queue. Do not increase live catalogue totals for unimplemented drafts.
 
+### Going deeper into Hong Kong resources
+
+- Use the [deeper Hong Kong review](hong-kong-source-expansion.md) as a starting point: follow named school lessons through CUHK's financial-literacy collection, EDB school-based curriculum sharing and QEF project archives. Count reviewed resources separately from websites and publishers.
+- Record one-based PDF page numbers including covers. For scanned PDFs, inspect rendered pages; a successful download or empty text extraction is not a completed review. Read only the relevant sections and state that scope.
+- Check task provenance: a school-hosted PDF may embed publisher textbook pages. Write original tasks and diagrams; do not assume hosting grants republication rights.
+- Prioritise everyday applications, misconception diagnosis, representations and practical work as well as puzzles. Keep suggested grade, source grade and task format separate.
+- Search existing generated explanations before claiming novelty. If a misconception is already taught, merge the proposed variant into that skill; a new source does not automatically mean a new question type.
+- Prefer fictional budgets and records over pupils' personal finances or identifiable work. Preserve the source's historical date and do not pass old data off as current.
+- Record broken links, HTTP 429, maintenance pages and unreadable legacy files as unresolved leads. Do not count them as reviewed questions or bypass access controls.
+
 ### UK and Singapore sources
 
 - Use NCETM and Cambridge NRICH for varied representations and explanations; use identifiable Singapore school teaching materials for bar models and problem-solving methods. Start with the [reviewed regional source shortlist](hk-uk-singapore-sources.md).
