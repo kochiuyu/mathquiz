@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-20",
+  "base": "d4dee82e0584d2b64a866ea60b46fe388dbc2d5c",
+  "scope": "P1 1M3 centimetres, ruler readings and reference-based estimation",
+  "added": {
+    "lessons": 3,
+    "teachingSteps": 9,
+    "guidedQuestions": 6,
+    "levelledPracticeItems": 27
+  },
+  "local": {
+    "status": "verified",
+    "fullRun": {
+      "passed": 113,
+      "failed": 0
+    },
+    "reruns": [],
+    "staticGates": 10,
+    "independentGeneratedChecks": 216,
+    "fullRecordFixtureCharacters": 26611,
+    "largestOtherFullRecordFixtureCharacters": 26623,
+    "readBoundCharacters": 48640,
+    "visualCheck": {
+      "page": "English Difficult zero-alignment setups",
+      "width": 320,
+      "height": 812,
+      "firstAnswerBottom": 763.27,
+      "horizontalOverflow": false
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "hashEncoding": "UTF-8/LF as uploaded",
+  "hashes": {
+    "index.html": "d38a03ad329b2e56650a946f8488fe89d66645ab8ad67a196d88236867d92d5e",
+    "learn-data.js": "ee3129d9ef6cf3095bda38596ca6703e4f372bdf24c14347fb6e5dad62bde534",
+    "learn-store.js": "af02fb1b51618c6d6cd57b4a0ff5d64c37894bac39e24fd8f8baa91d8af24b38",
+    "learn-ruler.js": "05005aa91f4327b55bcbcd086d946212194adbcaa77e540c752daea5d3a38812",
+    "learn.css": "28067c36332ac811c0d0b9d644258aa6f8d0f58b142292973bc952c6617121cb",
+    "learn.html": "41fec3c7e1348cf5fcd9e8d13fa53b2c6b7e1fd3cf539b6897657c3d29b7b0ff",
+    "learn.js": "8342895bde796f512d9e525e1f1e20537cd14b98006dccc57b5742cb2a33dc65",
+    "tests/hundred-static.cjs": "88b13faf8ef85594fa27599d35152842c48c4202f8cde54352322a2f54d60371",
+    "tests/subtract-static.cjs": "0793eb716c1626388de921a84e335fd33b2936b44b729b5b8d8c6a840e3e24a6",
+    "tests/groups-static.cjs": "f470316337c7fe2e8bc19f214f18f4a11482c110d0f380417aef4a8bc5c2ca3f",
+    "tests/relations-static.cjs": "f95d140b2885f190c8515718f48f97cae43401c9b840771ea5ce1edbdac748b9",
+    "tests/calculate-static.cjs": "50d0cfbc84e194830e4cb8c884b7a86fa5b5ac9dd2c07811f7616dc2fc3423bd",
+    "tests/measure-static.cjs": "82298cfbc9d10139034e0ed7a36fd73c549dd96ce177319c53d9421578b8a838",
+    "tests/ruler-static.cjs": "eefdb7901b6d83f377a505bd994bfce9f2f034b643d7d701d37eeca6f2bcac00",
+    "tests/student-blocked.html": "a5117386f5c681a2c10b8fe23a60fccf581bc16bc96462e61a8fce9283cd74e5",
+    "tests/student-browser.js": "2c420161934f78306c2c0c2f89a2bb659334a0e56b71b1e4a2ced443a8099209",
+    "tests/student.html": "78c7e005ea18ac6e9008141f2e99c945942fd08d3cb1e5d1cfbb81aff4d3f8c4"
+  },
+  "limitations": [
+    "Partial P1 coverage; real ruler observation remains necessary",
+    "No calibrated mastery claim; practice may complete after correction",
+    "Three overlapping deterministic retake configurations",
+    "Estimate answers are choices, not exact target measurements or observed pupil estimation",
+    "Pupil trials, independent translation, screen-reader listening and classroom observations not performed",
+    "Broader 267-case UI/activity browser suite not rerun"
+  ]
+}

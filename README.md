@@ -738,3 +738,12 @@ All **83 local browser cases verified**, including two successful page-load-time
 The **27 new practice items** bring the journey to **seven pathways, twenty-one lessons and 189 levelled practice items**. Shifted starts, equal lengths, gaps, overlaps and different-sized units are included. A practical activity link supports real strips, cords and measuring units; screen completion does not replace adult observation. Earlier questions and saved results remain preserved.
 
 All **98 local browser cases verified**: 97 passed in the final full run and one page-load timeout passed its exact rerun. Nine static gates passed. All **98 public cases verified**: 97 passed in the full run; one page-load timeout passed its exact rerun. Runtime deployment succeeded and all sixteen changed runtime/test files matched. [Scope, compatibility and next steps](planning/p1-measure-pathway.md) · [Evidence](planning/p1-measure-evidence.json). Next: centimetres and practical ruler use under 1M3. Pupil trials and independent human reviews remain pending.
+
+
+## P1 teaching: centimetres and rulers
+
+[Start Centimetres and rulers](https://kochiuyu.github.io/mathquiz/learn.html?path=ruler). Three bilingual lessons teach reading centimetre scales from zero, comparing lengths/straight distances and estimating from a measured reference before checking with a ruler.
+
+The **27 new practice items** bring the journey to **eight pathways, twenty-four lessons and 216 levelled practice items**. Diagrams distinguish the ruler edge from zero and scale readings from screen size. A real-ruler activity supports tool choice, the pupil's own measured reference and adult observation. Earlier questions and saved results remain preserved.
+
+Local checks passed **113/113 without retries**, plus ten static gates. Public verification is pending. [Scope, compatibility and next steps](planning/p1-ruler-pathway.md) · [Evidence](planning/p1-ruler-evidence.json). Next: Hong Kong money under 1M2. Pupil trials and independent human reviews remain pending; screen diagrams are not physically calibrated rulers.
