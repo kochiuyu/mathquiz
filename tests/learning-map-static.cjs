@@ -1,0 +1,9 @@
+const A=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),D=require('../learn-data.js'),J=require('../learn-map.js');
+const all=J.groups.flatMap(g=>g.paths);A.equal(all.length,13);A.equal(new Set(all).size,13);A.deepEqual([...all].sort(),D.paths.map(p=>p.id).sort());
+for(const g of J.groups){A(g.title.every(Boolean)&&g.intro.every(Boolean));for(const id of g.paths){A(Array.isArray(J.before[id]));for(const lesson of J.before[id])A(D.allLessons.some(l=>l.id===lesson));if(J.next[id])A(g.paths.includes(J.next[id]),'cross-branch jump');let seen=new Set(),p=id;while(p){A(!seen.has(p),'recommendation cycle');seen.add(p);p=J.next[p];}}}
+A.equal(J.next.solids,'flat');A.equal(J.next.flat,'positions');A.equal(J.next.measure,'ruler');for(const id of ['calculate','ruler','money','time','positions'])A(!J.next[id]);
+for(const p of Object.values(J.packets))A(fs.existsSync(path.join(__dirname,'../activities',p+'.html')));
+const doc=fs.readFileSync(path.join(__dirname,'../planning/p1-coverage-review.md'),'utf8');const matches=[...doc.matchAll(/^\| (1[NMS]\d\.\d) \|/gm)].map(m=>m[1]);const counts={N1:5,N2:5,N3:5,N4:6,M1:4,M2:3,M3:3,M4:7,S1:1,S2:5,S3:1};const wanted=Object.entries(counts).flatMap(([u,n])=>Array.from({length:n},(_,i)=>'1'+u+'.'+(i+1)));A.deepEqual(matches,wanted);A.equal(matches.length,45);A.equal((doc.match(/^\| 1F1 \|/gm)||[]).length,1);
+for(const f of ['index.html','learn.html','tests/student-blocked.html']){const s=fs.readFileSync(path.join(__dirname,'..',f),'utf8');A(s.indexOf('learn-map.js')<s.indexOf('src="learn.js'),'map must load first');}
+new vm.Script(fs.readFileSync(path.join(__dirname,'../learn.js'),'utf8'));
+console.log('PASS: 13 unique topics; valid prerequisite links; acyclic within-branch suggestions; 45 numbered objectives plus inquiry; activity links and script loading.');

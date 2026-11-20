@@ -807,3 +807,14 @@ Teaching totals remain **13 pathways, 39 lessons and 351 levelled practice items
 All **204 local browser cases are verified**: 16/16 inquiry cases; 187/188 student-flow cases in the final full run, with the remaining case verified by exact rerun. Sixteen static gates passed. All **204 public cases are verified**: 14/16 inquiry cases and 186/188 student-flow cases in full runs; all 4 remaining cases passed exact reruns. Runtime deployment succeeded; all eleven changed runtime/test files matched their tested hashes.
 
 [Design, scope and next steps](planning/p1-integrated-inquiry.md) · [Evidence](planning/p1-integrated-inquiry-evidence.json). Next: review P1 journey navigation and objective coverage before extending guided teaching into P2. Classroom trials and independent human reviews remain pending; self-reported notes do not certify observed practical inquiry or full P1 completion.
+
+
+## P1 coverage review and connected learning map
+
+[Open the P1 learning map](https://kochiuyu.github.io/mathquiz/learn.html?map=1). The 13 topics are now grouped into **Numbers and calculating**, **Shapes and positions**, and **Everyday maths**. The chooser starts collapsed so the selected lessons appear sooner. Useful-first links support revisiting; topics remain open, with existing saved progress and all parent/teacher tools preserved. Suggested-next links no longer move automatically from calculation, rulers, money or time into an unrelated branch.
+
+**3D before 2D is retained deliberately:** start with familiar real objects, then trace their flat faces or rims and explore the resulting outlines. This follows the EDB shape-learning guidance. The grouped routes are suggestions, not a compulsory year-long order.
+
+The [objective-by-objective review](planning/p1-coverage-review.md) accounts for **45 numbered P1 objectives plus integrated inquiry**. Resource availability does not establish full guided-teaching coverage. Priorities before P2: backward counting within 20; parts/wholes before addition; explicit zero-addition and swapped-addend teaching; separating early ordinals/pairing from later two-digit work; and practical/oral evidence within the pupil journey. Existing worksheets support these areas, but are not a substitute for those teaching improvements.
+
+All **220 distinct local browser cases verified**, with three timeout cases passing exact reruns; **17 static gates passed**. Public verification is pending. The 39 lesson bodies, 351 practice items, quiz payloads, inquiry prompts and storage module remain unchanged. [Release evidence](planning/p1-coverage-evidence.json). Classroom trials, independent translation, screen-reader listening and physical printing remain pending. **Next: repair the early-number guided sequence before expanding guided teaching into P2.**

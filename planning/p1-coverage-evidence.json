@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-20",
+  "base": "f16822260bd2b81b91a602111b2309b884d6fc99",
+  "scope": "P1 objective review and grouped learning-map navigation",
+  "inventory": {
+    "numberedObjectivesMapped": 45,
+    "inquiryStatementsMapped": 1,
+    "paths": 13,
+    "lessons": 39,
+    "practiceItems": 351,
+    "investigations": 13
+  },
+  "staticGates": 17,
+  "preservedModules": 15,
+  "local": {
+    "learningMap": {
+      "done": true,
+      "passed": 16,
+      "failed": 0
+    },
+    "student": {
+      "done": true,
+      "passed": 186,
+      "failed": 2,
+      "failures": [
+        {
+          "name": "Hundred layout zh 375",
+          "error": "Navigation timeout learn.html?lesson=bundles&stage=learn&lang=zh"
+        },
+        {
+          "name": "Money mobile teaching en",
+          "error": "Test frame reset timeout"
+        }
+      ]
+    },
+    "inquiry": {
+      "done": true,
+      "passed": 15,
+      "failed": 1,
+      "failures": [
+        {
+          "name": "Inquiry hidden during checks",
+          "error": "Navigation timeout learn.html?lesson=calendays&stage=quiz"
+        }
+      ]
+    },
+    "reruns": [
+      {
+        "name": "Hundred layout zh 375",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Money mobile teaching en",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "name": "Inquiry hidden during checks",
+        "done": true,
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "distinctCasesVerified": 220
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeHashes": {
+    "index.html": "e46e0422dc02a4cc51205965d0e5fd601f5d655c7d24ced27dc28373887b661c",
+    "learn-map.js": "337bbf9fca633eff704f1a9efcf3778614c2905bcb3c409ba4f54d372a7f006a",
+    "learn.css": "279c9abdfc6d95fe1b90355c69b1716451ffcbaad74686f7be919e958d3314e7",
+    "learn.html": "35a8b31e364c35900fbf8e9967fef738730b8cf3895cf907cfb74623d90dc18a",
+    "learn.js": "40c236af6f9d6417eff2fbfb6216595dadc77913c2fa80e8b550331f93a3d10a",
+    "tests/inquiry.html": "562db77b48eca7b3f02881f3f1526d3a3073754d92923376fd2b211d6e05baef",
+    "tests/learning-map-browser.js": "729291cf5d101b86097471d26697cf6abb95ae5839a65e627981f91a1c8c12ee",
+    "tests/learning-map-static.cjs": "a154d457a1848c4c9064363dc6a15812327530cdb87a5132d0825c2c594d2869",
+    "tests/learning-map.html": "479711eddfe95d5f6d516f35104d9b618f8641d8d4feea4a9a52d93a2955c030",
+    "tests/student-blocked.html": "9446e116f8bc9c5f10a56d389a270d0a9311f7051a4625e23950005988012ab7",
+    "tests/student-browser.js": "2963a46c4622fe6b6a03811b8f4c5d1655de985fe8f76121688ef8f0dfe5de30",
+    "tests/student.html": "568d0e072906afaca038dea5d21ff73da38038b44328eb567958235eefe5ec45"
+  },
+  "limits": [
+    "Editorial/content audit, not independent pedagogical validation.",
+    "Guided early-number gaps remain documented; no full P1 teaching or mastery claim.",
+    "Classroom trials, independent translation, screen-reader listening and physical printing remain pending.",
+    "The broader adult/shared UI browser suite was not repeated; its static gate passed."
+  ],
+  "visual": {
+    "sample": "Chinese flat-shapes home at requested 320x812; browser content width305 due scrollbar",
+    "screenshot": "browser-screenshots/screenshot-2026-11-20T14-17-00-995Z-bb7bd802.png",
+    "observations": "Start, selected topic and first lesson visible; map and prerequisites collapsed."
+  }
+}

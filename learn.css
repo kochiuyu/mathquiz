@@ -31,3 +31,11 @@
 .learn-positions{max-width:360px;background:#f2f5ee;border-radius:10px;margin:8px 0;padding:4px 8px}.learn-positions svg{display:block;width:210px;max-width:100%;height:auto;max-height:139px;margin:auto;stroke:#325d4b;stroke-width:1.8;stroke-linejoin:round}.learn-positions text{fill:#244e40;stroke:none;font:13px Arial,"Microsoft JhengHei",sans-serif}.position-lane{stroke:#8ca597;stroke-dasharray:3 4;fill:none}.learn-page .position-view{font-size:.72rem;margin:0;text-align:center}.position-choices{list-style:none;padding:0;margin:3px 0;font-size:.84rem;line-height:1.3;display:flex;gap:10px;flex-wrap:wrap}.position-choices li{margin:2px 0}
 
 .learn-inquiry{border:1px solid #c1d2c3;border-radius:12px;background:#fff;padding:14px;margin:18px 0;scroll-margin-top:10px}.learn-inquiry>summary{cursor:pointer;font-weight:650;min-height:32px}.learn-inquiry section{margin:18px 0}.learn-inquiry label{display:block;font-size:.9rem;font-weight:600}.learn-inquiry textarea{display:block;font:inherit;line-height:1.5;width:100%;max-width:100%;box-sizing:border-box;min-height:84px;padding:9px;border:1px solid #799887;border-radius:8px;resize:vertical}.inquiry-tried input{width:22px;height:22px;vertical-align:middle}.inquiry-adult{border-top:1px solid #d3dfd3;padding-top:12px}.inquiry-adult summary{cursor:pointer}.learn-welcome button.inquiry-open{font-size:.85rem;min-height:40px;padding:6px 12px}.learn-inquiry p{overflow-wrap:anywhere}
+
+/* Topic choices stay available without pushing the selected lessons below thirteen cards. */
+.learning-map,.learn-readiness{border:1px solid #bacdbd;border-radius:12px;padding:10px 14px;margin:10px 0;background:#f0f5ec;font-size:.9rem}
+.learning-map>summary,.learn-readiness>summary{cursor:pointer;min-height:28px;font-weight:650;padding:4px 0}
+.learning-map section+section{border-top:1px solid #c7d6c7;margin-top:18px;padding-top:6px}
+.learning-map .learn-path-choices{margin-bottom:8px}.learning-map .learn-path-choices a{background:white}
+.learning-map .learn-path-choices [aria-current]{background:#e3ecd9}.learning-map .learn-path-choices small{white-space:normal}
+@media(max-width:600px){.learning-map .learn-path-choices a{display:block}.learning-map .learn-path-choices small{margin-top:3px}}
