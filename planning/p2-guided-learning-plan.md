@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5, 2N6 and 2S2 are implemented across twelve topics and 67 lessons. The remaining guided units are planned.** See the [angles release](p2-angles-guided-release.md) and [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5, 2N6, 2S2 and 2S4 are implemented across thirteen topics and 73 lessons. The remaining guided units are planned.** See the [square/rectangle release](p2-quads-guided-release.md) and [angles release](p2-angles-guided-release.md) and [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -135,7 +135,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver 2N5 three-digit subtraction, mixed operations and dollar/cent change, with estimate-first records.
 - [x] Deliver 2N6 sharing and grouping, quotient/remainder, multiplication checks and contextual leftovers.
 - [x] Deliver 2S2 angle comparison, right/acute/obtuse angles, perpendicular construction and shortest distance.
-- [ ] Next: square and rectangle properties (2S4), building on 2S2.
+- [x] Deliver 2S4 segments, adjacent/opposite sides, square/rectangle properties and practical drawing/making.
+- [ ] Next: Time (II), 2M2; begin with minutes and real interval experiences, staging the ten objectives as needed.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -231,3 +232,12 @@ Six bilingual 2S2 lessons now supply guided materials for all six numbered objec
 P2 now has twelve topics, 67 lessons and 603 practice tasks. Earlier data and pupil records are preserved. [Release report](p2-angles-guided-release.md) · [1,543-case local/public evidence](p2-angles-guided-evidence.json).
 
 Next: **2S4 square and rectangle properties**, following angle and perpendicular work. Time, compass directions and integrated inquiry remain planned. Classroom and manual validation remain pending.
+
+
+## Thirteenth guided checkpoint · 21 November 2026
+
+Six bilingual 2S4 lessons supply guided materials for all four numbered objectives. Segments and side pairs precede square/rectangle properties, followed by actual drawing/making prompts and interactive deformation/repair. Rectangle examples have unequal adjacent sides; P4 inclusion is deferred without a false exclusive-category rule. Screen choices do not certify physical construction or tool handling. There are 54 practice tasks, 12 guided tasks and a separate 12-item sample check.
+
+P2 now has thirteen topics, 73 lessons and 657 practice tasks. Earlier data and pupil records are preserved. An expandable topic chooser keeps phone headings near the top. [Release report](p2-quads-guided-release.md) · [1,648-case local/public evidence](p2-quads-guided-evidence.json).
+
+Next: **2M2 Time (II)**, beginning with minutes and measured time experiences. Stage the ten objectives into manageable releases if needed. Compass directions and integrated inquiry remain planned. Classroom and manual validation remain pending.

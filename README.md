@@ -50,7 +50,11 @@ Earlier P1/P2 progress is preserved. Models award no marks and reset on leaving;
 
 Earlier P1/P2 progress is preserved. Digital recognition does not certify drawing or tool handling. All **1,543 distinct local and public browser cases verified**, with documented timeout reruns and final folding-wording checks. All 31 static suites passed and twenty-one deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **square and rectangle properties (2S4)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Build on angles and perpendicular lines; time, compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
+**21 November 2026: the thirteenth P2 guided topic is implemented.** [Squares and rectangles](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=quads) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a separate 12-question sample check. Pupils explore segments and side pairs, check lengths and right angles, and draw, make and repair shapes. P2 now has **13 topics, 73 lessons and 657 practice tasks**. [Release report](planning/p2-quads-guided-release.md) and [evidence](planning/p2-quads-guided-evidence.json).
+
+Earlier progress is preserved. A collapsible topic chooser keeps phone lesson headings near the top. Screen work does not certify drawing, making or tool use. All **1,648 distinct local and public browser cases verified**, including documented fixes and exact reruns. All 32 static suites passed and twenty-two deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** implement guided **Time (II), 2M2**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Begin with reading minutes and experiencing/measuring time; split the ten-objective unit into manageable releases if needed. Compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
