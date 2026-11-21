@@ -1,5 +1,5 @@
 /* Select a topic before initializing storage. Existing number IDs/key stay frozen. */
 (()=>{'use strict';const D=window.MathQuizP2Data;
 Object.assign(D,{path:'numbers',code:'2N1',title:['Hundreds and numbers to 999','百位與999以內的數'],checkTitle:['Three-digit number check','三位數小測'],intro:['Start with hundreds. Choose any lesson or revisit P1; there is no entry score.','從百位開始，可選任何課節或重溫小一，沒有入門分數要求。'],activity:'activities/p2-3digit-numbers.html',checkRevisits:[0,0,1,1,1,2,2,2,3,4]});
-const p=new URLSearchParams(location.search);if(p.get('path')==='arithmetic')window.MathQuizP2Data=window.MathQuizP2Arithmetic;else if(p.get('path')==='faces')window.MathQuizP2Data=window.MathQuizP2Faces;else if(p.get('path')==='multiply')window.MathQuizP2Data=window.MathQuizP2Multiply;
+const p=new URLSearchParams(location.search);if(p.get('path')==='arithmetic')window.MathQuizP2Data=window.MathQuizP2Arithmetic;else if(p.get('path')==='faces')window.MathQuizP2Data=window.MathQuizP2Faces;else if(p.get('path')==='multiply')window.MathQuizP2Data=window.MathQuizP2Multiply;else if(p.get('path')==='facts')window.MathQuizP2Data=window.MathQuizP2Facts;
 })();
