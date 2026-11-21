@@ -1,12 +1,12 @@
 /* Separate versioned records: an old P1 tab cannot erase P2 work. */
 ((root)=>{
 'use strict';const D=root.MathQuizP2Data||(typeof require==='function'?require('./p2-learn-data.js'):null),ids=new Set(D.all.map(q=>q.id)),lessonIds=D.lessons.map(l=>l.id),stages=['learn','together','easy','normal','difficult','check','map'];
-const KEY='mathquiz-p2-learning-v1',MAX=4096+D.all.length*4096;
+const KEY=D.storageKey||'mathquiz-p2-learning-v1',MAX=4096+D.all.length*4096;
 const text=(s,n=800)=>typeof s==='string'?s.replace(/[\u0000-\u0008\u000b-\u001f\u007f]/g,'').slice(0,n):'';
-const empty=()=>({version:1,cursor:{lesson:lessonIds[0],stage:'learn'},answers:{},estimates:{},notes:{},done:{},hints:{},checkSubmitted:false});
+const empty=()=>({version:1,cursor:{lesson:lessonIds[0],stage:'learn'},answers:{},explanations:{},estimates:{},notes:{},done:{},hints:{},checkSubmitted:false});
 function clean(raw){if(!raw||raw.version!==1||Array.isArray(raw))throw Error('format');const p=empty();
  if(lessonIds.includes(raw.cursor?.lesson)&&stages.includes(raw.cursor?.stage))p.cursor={lesson:raw.cursor.lesson,stage:raw.cursor.stage};
- for(const id of ids){if(typeof raw.answers?.[id]==='string')p.answers[id]=text(raw.answers[id],32);if(raw.hints?.[id]===true)p.hints[id]=true;const e=raw.estimates?.[id];if(e&&/^\d{1,3}$/.test(e.original)&&Number(e.original)>0)p.estimates[id]={original:e.original,reason:text(e.reason),revealed:e.revealed===true,reflection:text(e.reflection)};}
+ for(const id of ids){if(typeof raw.answers?.[id]==='string')p.answers[id]=text(raw.answers[id],32);if(typeof raw.explanations?.[id]==='string')p.explanations[id]=text(raw.explanations[id]);if(raw.hints?.[id]===true)p.hints[id]=true;const e=raw.estimates?.[id];if(e&&/^\d{1,3}$/.test(e.original)&&Number(e.original)>=(D.all.find(q=>q.id===id)?.mode==='calculation'?0:1))p.estimates[id]={original:e.original,reason:text(e.reason),revealed:e.revealed===true,reflection:text(e.reflection)};}
  for(const id of lessonIds){p.notes[id]=text(raw.notes?.[id]);p.done[id]={};for(const s of stages)if(raw.done?.[id]?.[s]===true)p.done[id][s]=true;}
  p.checkSubmitted=raw.checkSubmitted===true;return p;
 }
