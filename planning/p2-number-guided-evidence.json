@@ -1,0 +1,210 @@
+{
+  "date": "2026-11-21",
+  "runtimeCommit": "44600c1913b59ad13ff83b8f8bac77be2b5bfcc8",
+  "inventory": {
+    "lessons": 5,
+    "teachingSteps": 15,
+    "guidedTasks": 10,
+    "practiceTasks": 45,
+    "checkQuestions": 10,
+    "ungradedEstimateTasksIncludedInGuidedAndPractice": 11
+  },
+  "static": {
+    "inheritedSuitesPassed": 19,
+    "newGatesPassed": 11
+  },
+  "developmentFindings": [
+    {
+      "run": "initial P2",
+      "passed": 97,
+      "failed": 2,
+      "reason": "Score assertions selected a displayed teaching numeral rather than final check score. Added explicit check-score ID and corrected selector."
+    },
+    {
+      "run": "first integrated regression",
+      "p2Passed": 99,
+      "studentPassed": 178,
+      "studentFailed": 10,
+      "reason": "One page-load timeout passed exact rerun. Nine genuine P1 mobile layout failures persisted on rerun: the added year-link row pushed controls below first screen. Fixed by integrating year links into the existing header row.",
+      "persistentCases": [
+        "Subtraction layout en 320",
+        "Calculation mobile teaching en",
+        "Measurement mobile teaching en",
+        "Ruler mobile teaching en",
+        "Money mobile teaching en",
+        "Time mobile teaching en",
+        "Time mobile teaching zh",
+        "Solids mobile teaching en",
+        "Positions mobile teaching en"
+      ]
+    }
+  ],
+  "local": {
+    "distinctCasesVerified": 385,
+    "suites": [
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0
+      }
+    ],
+    "exactReruns": [
+      {
+        "suite": "student",
+        "case": "Resume language profiles en",
+        "originalError": "Navigation timeout learn.html?lesson=tens&stage=learn&lang=en",
+        "passed": true
+      }
+    ]
+  },
+  "live": {
+    "status": "verified",
+    "distinctCasesVerified": 385,
+    "suites": [
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0
+      },
+      {
+        "name": "student",
+        "passed": 188,
+        "failed": 0
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0
+      }
+    ],
+    "exactReruns": [],
+    "runtimeFiles": [
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "64eff26d7a91222ae701eb13c10dfb5cb47c0de3fb861e9080e441750d271208",
+        "expected": "64eff26d7a91222ae701eb13c10dfb5cb47c0de3fb861e9080e441750d271208"
+      },
+      {
+        "path": "p2-learn.css",
+        "match": true,
+        "sha256": "b2f5c47c59b0a251646bc88c01c784f92b820bd93d3f4f642ed7aecbca669fe4",
+        "expected": "b2f5c47c59b0a251646bc88c01c784f92b820bd93d3f4f642ed7aecbca669fe4"
+      },
+      {
+        "path": "p2-learn-data.js",
+        "match": true,
+        "sha256": "ad7ac84b5b126cd613b2116d23bbdc47e1d0f3b87e29707fe91082ef376f4e32",
+        "expected": "ad7ac84b5b126cd613b2116d23bbdc47e1d0f3b87e29707fe91082ef376f4e32"
+      },
+      {
+        "path": "p2-learn-store.js",
+        "match": true,
+        "sha256": "0ad6e8ec2a643613494f9e8b61b5a30935fa445ff684392e3ec0bac6e485674f",
+        "expected": "0ad6e8ec2a643613494f9e8b61b5a30935fa445ff684392e3ec0bac6e485674f"
+      },
+      {
+        "path": "p2-learn.js",
+        "match": true,
+        "sha256": "95dbfa49b7260af12fbb499108e3f313ab654137af181f4b355a51fc496a5553",
+        "expected": "95dbfa49b7260af12fbb499108e3f313ab654137af181f4b355a51fc496a5553"
+      },
+      {
+        "path": "learn.js",
+        "match": true,
+        "sha256": "8eee9cd91ebf04e75a534158715df01614e5272ee88e085be450841c5ef2bfaa",
+        "expected": "8eee9cd91ebf04e75a534158715df01614e5272ee88e085be450841c5ef2bfaa"
+      },
+      {
+        "path": "learn.html",
+        "match": true,
+        "sha256": "86d62d8670cb3adf9334602d1d73d80c9e88da2f26945898a64c47fe7e33586a",
+        "expected": "86d62d8670cb3adf9334602d1d73d80c9e88da2f26945898a64c47fe7e33586a"
+      },
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "ff3572715c75e67143850d131d478b20aeead8e3bbcef15a92f47bf69aa438eb",
+        "expected": "ff3572715c75e67143850d131d478b20aeead8e3bbcef15a92f47bf69aa438eb"
+      },
+      {
+        "path": "tests/p2-learn-static.cjs",
+        "match": true,
+        "sha256": "5fb076f3c6e7385635a8d31f898fc5780d64bfb07442bcfec8878eb7f730be41",
+        "expected": "5fb076f3c6e7385635a8d31f898fc5780d64bfb07442bcfec8878eb7f730be41"
+      },
+      {
+        "path": "tests/p2-learn.html",
+        "match": true,
+        "sha256": "b0bdc6b060625385dd6aa986d2525654d13646d8885aa0387a816aea6f200968",
+        "expected": "b0bdc6b060625385dd6aa986d2525654d13646d8885aa0387a816aea6f200968"
+      },
+      {
+        "path": "tests/p2-learn-browser.js",
+        "match": true,
+        "sha256": "2bef15e80f22a3e35c3e06be3631a98c6438438129ad26a9ecf200c92385d55f",
+        "expected": "2bef15e80f22a3e35c3e06be3631a98c6438438129ad26a9ecf200c92385d55f"
+      },
+      {
+        "path": "tests/p2-release.html",
+        "match": true,
+        "sha256": "60bd2e8c7cf126b50ae3e24b268252bfcf4b954f33f1be59469cb6b68a9d6f84",
+        "expected": "60bd2e8c7cf126b50ae3e24b268252bfcf4b954f33f1be59469cb6b68a9d6f84"
+      }
+    ],
+    "publicationNote": "The initial pre-deployment read returned old files/404. After Pages updated, all 12 files matched the UTF-8/LF commit payload. Local Windows newlines were normalized without changing text."
+  },
+  "manual": {
+    "ChineseMobileTeaching": "Inspected 360px-wide hundred exchange lesson; no overflow",
+    "EnglishKeyboardComparison": "Native select ArrowDown/Enter, Tab/Enter submitted correct response; no overflow",
+    "PublicEnglishMobileMap": "Inspected 360px live map: five lessons, three branches, no horizontal overflow."
+  },
+  "pending": [
+    "Classroom trials and real-object observations",
+    "Independent translation",
+    "Screen-reader listening",
+    "Physical printing",
+    "Difficulty calibration"
+  ],
+  "compatibility": "P1 data/generator/store unchanged; navigation carries learner slot; P2 writes its separate versioned per-pupil keys."
+}

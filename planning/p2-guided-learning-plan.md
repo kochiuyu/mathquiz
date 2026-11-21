@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-20 November 2026. **Planning complete; guided P2 lessons are not yet implemented.** Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+20 November 2026. **The first five-lesson 2N1 guided pathway is implemented; the remaining guided units are planned.** See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -41,7 +41,7 @@ Arrows recommend useful preparation; they do not lock topics. Metres also benefi
 
 ## Coverage and proposed teaching blocks
 
-Each row is a delivery scope, not a promise of three lessons. Split lessons whenever one explanation would introduce several new ideas. Objective numbers refer to the linked unit brief; all rows currently have resources but **guided teaching remains planned**.
+Each row is a delivery scope, not a promise of three lessons. Split lessons whenever one explanation would introduce several new ideas. Objective numbers refer to the linked unit brief; all rows have resources; **2N1 now has guided teaching, while the other rows remain planned**.
 
 | Unit and objectives | Proposed teaching progression | Practical evidence and existing resource |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ Give each lesson a practical prompt and a precise existing activity link. Offer 
 
 ## First implementation slice
 
-**Next task: implement 2N1, Three-digit number sense, with the minimum P2 navigation and storage support.** Proposed pupil title: **Hundreds and numbers to 999 / 百位與999以內的數**. Five short lessons allow the practical objectives to receive explicit teaching:
+**First slice implemented: 2N1, Three-digit number sense, with separate P2 navigation and storage.** Pupil title: **Hundreds and numbers to 999 / 百位與999以內的數**. Five short lessons allow the practical objectives to receive explicit teaching:
 
 | Lesson | Teaching and representation | Evidence to collect |
 | --- | --- | --- |
@@ -123,8 +123,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Review the P1 handoff and existing P2 resources.
 - [x] Map all 15 P2 units and choose prerequisite connections.
 - [x] Specify the first teaching slice and compatibility requirements.
-- [ ] Implement and verify the first slice above.
+- [x] Implement and verify the first slice above; see its dated release evidence.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
-This planning change adds no lesson, question family, learner migration or new test-pass claim. Existing P1 teaching and P2 practice remain as released.
+The first implementation adds five lessons, 45 practice tasks, 10 guided tasks and a 10-question check, with separate P2 progress. Existing P1 content and P2 practice banks remain as released. Verification details and remaining manual limits are recorded in the first release report.
