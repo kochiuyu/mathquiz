@@ -38,7 +38,11 @@ Group tasks retain every running total in up to six fields. Four-digit answers a
 
 Prices and counted totals stop at $1000. Labelled tokens support value reasoning; authentic-note recognition and oral reading require separate observation. Price writing, decimal operations and giving change are not required here. Earlier progress and input limits are preserved. All **1,222 distinct local and public browser cases verified**, with one exact local timeout rerun and ten exact public timeout reruns. Original outcomes are retained in the evidence. All 28 static suites passed and eighteen deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **three-digit subtraction, mixed addition/subtraction and money change (2N5)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Keep money reasoning in dollars/cents without decimal arithmetic. Division follows multiplication foundations; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
+**21 November 2026: the tenth P2 guided topic is implemented.** [Three-digit subtraction and change](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=change) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a 12-question sample check. It covers borrowing across zeros, left-to-right mixed operations, sequential stories, dollar/cent change and estimate-before-reveal records. P2 now has **ten guided topics, 55 lessons and 495 practice tasks**. [Release report](planning/p2-change-guided-release.md) and [evidence](planning/p2-change-guided-evidence.json).
+
+Earlier P1/P2 progress is preserved. Practical explanations and the eleven estimation records remain separate from check marks; a multi-field check item requires every field to match. All **1,328 distinct local and public browser cases verified**, with documented timeout reruns, the corrected initial phone-navigation regression and test-authoring fix. All 29 static suites passed and nineteen deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** implement guided **basic division (2N6)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Start with sharing and grouping, then quotient/remainder and multiplication checks. Keep angles before quadrilateral properties. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
