@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1 and 2N3 are implemented across five topics and 28 lessons. The remaining guided units are planned.** See the [latest multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3 and 2M1 are implemented across six topics and 34 lessons. The remaining guided units are planned.** See the [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -128,7 +128,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver 2S1 solid faces/bases as the third P2 topic, alternating branches.
 - [x] Deliver the first 2N3 slice: equal groups, arrays and initial 2/5/10 facts.
 - [x] Deliver remaining 2–10 facts across sessions, then multiplication by 1 and 0, with a complete construction workshop.
-- [ ] Next: guided metres and distance (2M1), then the pictogram branch.
+- [x] Deliver guided metres and distance (2M1), including separate personal-reference and estimate/measure records.
+- [ ] Next: the guided pictogram branch (2D1).
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -161,3 +162,12 @@ This fourth checkpoint was partial guided coverage of 2N3. The fifth checkpoint 
 Both multiplication topics together provide guided materials for the five 2N3 objectives. Construction records, self-reported methods, sampled check scores, written explanations and adult observations remain distinct. No automatic whole-table recall or pupil mastery claim is made. Progress in all earlier topics is preserved. See the [release report](p2-facts-guided-release.md) and [828-case local/public evidence](p2-facts-guided-evidence.json).
 
 Next deliver guided metres and distance (2M1), then pictograms. Keep the later number/money and angle/quadrilateral prerequisite connections; pupils can enter appropriate branches without completing all arithmetic.
+
+
+## Sixth implementation checkpoint
+
+[Metres, lengths and distances](../p2-learn.html?path=metres) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a 12-question sample check. The route starts with a real one-metre reference, tools and actual measurement experience, then mixed-unit records, personal-reference calibration and estimate-before-measure trials. All four 2M1 objectives have guided materials; observed physical performance remains separate and pending.
+
+The practical notebook records prior measuring experience, two reference readings and an approximate reference. Object-length and straight-distance trials preserve their first estimate and reference snapshot when measured results are recorded. No practical accuracy score or independent tool-skill claim is inferred. More trials use the linked existing worksheet. Earlier progress remains preserved.
+
+P2 now has six topics, 34 lessons and 306 practice tasks. See the [release report](p2-metres-guided-release.md) and [940-case local/public evidence](p2-metres-guided-evidence.json). Next deliver **pictograms (2D1)**, keeping the data branch available independently of arithmetic completion. Later four-digit numbers precede money/subtraction, and angles precede quadrilateral properties.

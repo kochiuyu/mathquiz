@@ -22,7 +22,11 @@ Earlier P1/P2 work is preserved with an independent faces-topic record for each 
 
 The two multiplication topics now provide guided materials for all five 2N3 objectives. Completed construction, self-recorded methods and a sampled check do not certify unaided whole-table recall. Earlier progress is preserved through a separate topic record. All **828 distinct local and public browser cases verified**, including 1 exact public timeout rerun(s); all 24 static suites passed, and thirteen deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **metres and distance (2M1)**, then pictograms as an early parallel branch in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
+**21 November 2026: the sixth P2 guided topic is implemented.** [Metres, lengths and distances](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=metres) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a 12-question sample check. Pupils build a metre, choose and use tools, compare object lengths and distances, record m/cm, calibrate a personal reference and estimate before measuring. P2 now has **six guided topics, 34 lessons and 306 practice tasks**. [Release report](planning/p2-metres-guided-release.md) and [evidence](planning/p2-metres-guided-evidence.json).
+
+A separate practical notebook retains two reference readings, the chosen approximation and one object-length/one straight-distance trial per learner. Original estimates and reference snapshots stay intact when measured results are added. These self-reported records do not award marks or certify tool use. Earlier P1/P2 progress is preserved. All **940 distinct local and public browser cases verified**, with two exact local timeout reruns and 4 exact public timeout rerun(s); all 25 static suites passed and fifteen deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** implement guided **pictograms (2D1)** as an early parallel branch in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
