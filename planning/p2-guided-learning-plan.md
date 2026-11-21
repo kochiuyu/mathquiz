@@ -126,7 +126,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Implement and verify the first slice above; see its dated release evidence.
 - [x] Deliver 2N2 with six guided lessons and separate arithmetic progress.
 - [x] Deliver 2S1 solid faces/bases as the third P2 topic, alternating branches.
-- [ ] Next: multiplication meaning through equal groups and arrays (2N3), with staged facts sessions.
+- [x] Deliver the first 2N3 slice: equal groups, arrays and initial 2/5/10 facts.
+- [ ] Next: remaining 2–10 facts across sessions, then multiplication by 1 and 0.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -142,4 +143,11 @@ The first implementation adds five lessons, 45 practice tasks, 10 guided tasks a
 
 2S1 now has five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question check. It follows P1 real solids → traced outlines → P2 selected bases/lateral faces → names → turn and explain. The new topic is open independently of arithmetic and preserves all earlier saved work. The [release report](p2-faces-guided-release.md) distinguishes supplied-family screen tasks from real-object observation; [evidence](p2-faces-guided-evidence.json) records 596 verified local/public cases and remaining manual limits.
 
-Next implement equal groups and arrays as the start of 2N3, then stage facts practice alongside metres and pictograms. The later number/money and angle/quadrilateral prerequisite connections remain unchanged.
+The fourth checkpoint below delivers the start of 2N3; staged fact work and the metres/pictogram branches remain. The later number/money and angle/quadrilateral prerequisite connections remain unchanged.
+
+
+## Fourth implementation checkpoint
+
+The first guided 2N3 slice has five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question check. It connects equal groups and repeated addition, accepts both relevant factor orders, turns arrays and starts 2/5/10 facts with explained stories. Group-count/group-size fields remain ordered; unrelated factor pairs with the same total are rejected. See the [release report](p2-multiply-guided-release.md) and [691-case local/public evidence](p2-multiply-guided-evidence.json).
+
+This is partial guided coverage of 2N3, not complete table teaching or recall evidence. Next build the remaining 2–10 facts over short sessions, then 1 and 0, keeping strategies, explanations and practical observations distinct from automatic marks. Metres and pictograms remain early parallel releases.

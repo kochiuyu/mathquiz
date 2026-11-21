@@ -14,7 +14,11 @@ Arithmetic progress is isolated from the original P2 number topic and P1 work, i
 
 Earlier P1/P2 work is preserved with an independent faces-topic record for each learner. All **596 distinct local and public browser cases verified**, with original test-script errors and timeout reruns recorded. All 22 static suites passed; eleven deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** multiplication meaning through equal groups and arrays (2N3), with facts taught in staged sessions. Metres and pictograms remain early parallel branches in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
+**21 November 2026: the fourth P2 guided topic is implemented.** [Multiplication: equal groups and arrays](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=multiply) adds five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question check. It connects equal groups, repeated addition, arrays, initial 2/5/10 facts and one-step stories. Both relevant factor orders are accepted; unrelated pairs with the same product are not. P2 now has **four topics, 21 guided lessons and 189 practice tasks**. [Release report](planning/p2-multiply-guided-release.md) and [evidence](planning/p2-multiply-guided-evidence.json).
+
+**Guided 2N3 remains partial:** the complete table, remaining facts and multiplication by 1 and 0 are still to come. Existing whole-unit practice resources are separate from this teaching checkpoint. Earlier P1/P2 progress is preserved. All **691 distinct local and public browser cases verified**, with timeout reruns recorded; all 23 static suites passed and twelve deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** build the remaining 2–10 multiplication facts across short sessions, then teach multiplication by 1 and 0. Keep construction, recall/derivation and story explanations separate. Metres and pictograms remain early parallel branches in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 

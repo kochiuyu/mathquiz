@@ -1,0 +1,334 @@
+{
+  "date": "2026-11-21",
+  "baselineCommit": "1c3cf5cc484646bc46db7e2e3efe8c8fd568359b",
+  "runtimeCommit": "8f5c04b5927d1bc40c39aa29abdfcb0467040186",
+  "runtimeDeployment": {
+    "runId": 44869664690,
+    "conclusion": "success"
+  },
+  "inventory": {
+    "newLessons": 5,
+    "teachingExplanations": 15,
+    "guidedTasks": 10,
+    "practiceTasks": 45,
+    "checkQuestions": 10,
+    "totalP2Topics": 4,
+    "totalP2Lessons": 21,
+    "totalP2PracticeTasks": 189
+  },
+  "scope": "First guided 2N3 slice; full 0-10 table, remaining facts and multiplication by 1/0 remain unfinished.",
+  "static": {
+    "suites": 23,
+    "allPassed": true,
+    "newMultiplyGates": 11,
+    "suitesPassed": [
+      "student",
+      "hundred",
+      "subtract",
+      "groups",
+      "relations",
+      "calculate",
+      "measure",
+      "ruler",
+      "money",
+      "time",
+      "solids",
+      "flat",
+      "positions",
+      "inquiry",
+      "learning-map",
+      "foundations",
+      "resources-ui",
+      "ui-refresh",
+      "transfer",
+      "p2-learn",
+      "p2-arithmetic",
+      "p2-faces",
+      "p2-multiply"
+    ]
+  },
+  "local": {
+    "done": true,
+    "distinctCasesVerified": 691,
+    "suites": [
+      {
+        "name": "p2-multiply",
+        "passed": 95,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-faces",
+        "passed": 92,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-arithmetic",
+        "passed": 119,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Measurement mobile teaching zh",
+            "pass": false,
+            "error": "Navigation timeout learn.html?lesson=equalunits&stage=practice&level=difficult&lang=zh"
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0,
+        "failures": []
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "student",
+        "original": {
+          "name": "Measurement mobile teaching zh",
+          "pass": false,
+          "error": "Navigation timeout learn.html?lesson=equalunits&stage=practice&level=difficult&lang=zh"
+        },
+        "passed": 1,
+        "failed": 0
+      }
+    ],
+    "observerEvents": [
+      "Browser open reported a detached child frame during rapid test navigation.",
+      "One result evaluate timed out; later read returned the complete result."
+    ]
+  },
+  "public": {
+    "done": true,
+    "distinctCasesVerified": 691,
+    "observerEvents": {
+      "navigationTimeouts": 1,
+      "evaluationTimeouts": 1,
+      "recovery": "Fresh snapshots confirmed progressing suites; later read returned complete results."
+    },
+    "suites": [
+      {
+        "name": "p2-multiply",
+        "passed": 94,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Multiply ten-question check accepts reversed factors and revisits en",
+            "pass": false,
+            "error": "Navigation timeout lang=en&stage=check"
+          }
+        ]
+      },
+      {
+        "name": "p2-faces",
+        "passed": 92,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-arithmetic",
+        "passed": 119,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Positions layout zh 320",
+            "pass": false,
+            "error": "Navigation timeout learn.html?path=positions&lang=zh"
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0,
+        "failures": []
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "p2-multiply",
+        "original": {
+          "name": "Multiply ten-question check accepts reversed factors and revisits en",
+          "pass": false,
+          "error": "Navigation timeout lang=en&stage=check"
+        },
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "suite": "student",
+        "original": {
+          "name": "Positions layout zh 320",
+          "pass": false,
+          "error": "Navigation timeout learn.html?path=positions&lang=zh"
+        },
+        "passed": 1,
+        "failed": 0
+      }
+    ]
+  },
+  "runtimeHashes": [
+    {
+      "path": "p2-multiply-data.js",
+      "match": true,
+      "sha256": "f2c4ef1c1461d53061d49f11532c6a2ff8f52e18019f131932c6bfdab0a31ad5",
+      "expected": "f2c4ef1c1461d53061d49f11532c6a2ff8f52e18019f131932c6bfdab0a31ad5"
+    },
+    {
+      "path": "p2-multiply-visuals.js",
+      "match": true,
+      "sha256": "16ac1b76aad1fd21173bc31dec259fcb0b695676e9483e5d10c16e8a61dd7534",
+      "expected": "16ac1b76aad1fd21173bc31dec259fcb0b695676e9483e5d10c16e8a61dd7534"
+    },
+    {
+      "path": "p2-learn-topics.js",
+      "match": true,
+      "sha256": "95f020cfdf524532ab9aa30d4a935d7840b0113214f3c115cb4073984476e617",
+      "expected": "95f020cfdf524532ab9aa30d4a935d7840b0113214f3c115cb4073984476e617"
+    },
+    {
+      "path": "p2-learn.css",
+      "match": true,
+      "sha256": "087665299f9a73016b41217e60ea991a77060058f6f3b98d0387625f83c0728f",
+      "expected": "087665299f9a73016b41217e60ea991a77060058f6f3b98d0387625f83c0728f"
+    },
+    {
+      "path": "p2-learn.html",
+      "match": true,
+      "sha256": "c9db5a7c3e883a262102907b10101d472e010bf586f35bfbf3e833e8df4e36e9",
+      "expected": "c9db5a7c3e883a262102907b10101d472e010bf586f35bfbf3e833e8df4e36e9"
+    },
+    {
+      "path": "p2-learn.js",
+      "match": true,
+      "sha256": "b2abead9c22da31737626c1ea15f99a6bcb7372b13fd7d75e0a16287235b560f",
+      "expected": "b2abead9c22da31737626c1ea15f99a6bcb7372b13fd7d75e0a16287235b560f"
+    },
+    {
+      "path": "tests/p2-arithmetic-browser.js",
+      "match": true,
+      "sha256": "d16293543ae6c540907ab18e01cd72fe8332199e4064c4a3455c6de13cfea0ff",
+      "expected": "d16293543ae6c540907ab18e01cd72fe8332199e4064c4a3455c6de13cfea0ff"
+    },
+    {
+      "path": "tests/p2-faces-browser.js",
+      "match": true,
+      "sha256": "71c0286d0b25595bf0a78d02d6f71ba58d8e2a78bacfc6e6d32eec8046b710f7",
+      "expected": "71c0286d0b25595bf0a78d02d6f71ba58d8e2a78bacfc6e6d32eec8046b710f7"
+    },
+    {
+      "path": "tests/p2-multiply-browser.js",
+      "match": true,
+      "sha256": "d30edc1e5089501da73dfe8419a49aec7a8c10e9ea17a38c375f329fdd92ca95",
+      "expected": "d30edc1e5089501da73dfe8419a49aec7a8c10e9ea17a38c375f329fdd92ca95"
+    },
+    {
+      "path": "tests/p2-multiply-static.cjs",
+      "match": true,
+      "sha256": "945fa099b76a0597f3ec836c2bd3a5c5d3f78d73feeb93adc288f789904cccd0",
+      "expected": "945fa099b76a0597f3ec836c2bd3a5c5d3f78d73feeb93adc288f789904cccd0"
+    },
+    {
+      "path": "tests/p2-multiply.html",
+      "match": true,
+      "sha256": "02a130a45dfefc3fbe450a2a81dfdd872ddc1e4e27303719a666d6e2a0739b25",
+      "expected": "02a130a45dfefc3fbe450a2a81dfdd872ddc1e4e27303719a666d6e2a0739b25"
+    },
+    {
+      "path": "tests/p2-release.html",
+      "match": true,
+      "sha256": "625d62d05a48be6fc08f9f0d67405deabfac0ed3355d86a627a9ed3b0238d48d",
+      "expected": "625d62d05a48be6fc08f9f0d67405deabfac0ed3355d86a627a9ed3b0238d48d"
+    }
+  ],
+  "manual": {
+    "desktop": "English array lesson inspected; Enter turned 3 rows of 4 into 4 rows of 3, retained 12 counters and button focus.",
+    "mobile": "Chinese multiplication statement fields inspected at actual innerWidth 375 with no horizontal overflow. Environment initially reported 360 before navigation.",
+    "automaticWidths": [
+      320,
+      375,
+      768,
+      1280
+    ]
+  },
+  "pending": [
+    "complete guided 2N3 table/facts",
+    "guided multiplication by 1 and 0",
+    "classroom trials",
+    "difficulty calibration",
+    "independent translation",
+    "screen-reader listening",
+    "physical printing",
+    "observed practical performance"
+  ],
+  "assessmentLimits": [
+    "Correct factor pair and total are required; unrelated pairs with equal products are rejected.",
+    "Labelled group-count and group-size fields remain ordered.",
+    "Written explanations and practical observations stay separate from screen marks.",
+    "Sampled facts do not certify complete 0-10 recall."
+  ],
+  "sourceReferences": [
+    "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=28"
+  ]
+}
