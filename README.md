@@ -10,7 +10,11 @@ P1/P2 navigation keeps separate Continue routes and saved work for each learner.
 
 Arithmetic progress is isolated from the original P2 number topic and P1 work, including older open tabs. Each topic resumes independently; reset affects only the current topic and learner. All **504 distinct local and public browser cases are verified**, including one exact public timeout rerun. All 21 static suites passed; ten deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** P2 solid faces and bases (2S1), alternating branches as set out in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Multiplication meaning, metres and pictograms follow as early parallel releases. Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
+**21 November 2026: the third P2 guided topic is implemented.** [Solid faces and bases](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=faces) adds five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question check. Pupils explore flat/curved surfaces, selected bases and lateral faces, all eight prism/pyramid names and turned models. Practical prompts and explanations remain separate from screen marks. P2 now has **three guided topics, 16 lessons and 144 practice tasks**. [Release report](planning/p2-faces-guided-release.md) and [evidence](planning/p2-faces-guided-evidence.json).
+
+Earlier P1/P2 work is preserved with an independent faces-topic record for each learner. All **596 distinct local and public browser cases verified**, with original test-script errors and timeout reruns recorded. All 22 static suites passed; eleven deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** multiplication meaning through equal groups and arrays (2N3), with facts taught in staged sessions. Metres and pictograms remain early parallel branches in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 

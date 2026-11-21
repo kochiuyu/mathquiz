@@ -1,0 +1,390 @@
+{
+  "date": "2026-11-21",
+  "baselineCommit": "30779520765bcf46f021602188c0432f874a7d07",
+  "runtimeCommit": "735f8eea4160d6e4ba21067693aaa51b5e55ded8",
+  "runtimeDeployment": {
+    "runId": 44864681709,
+    "conclusion": "success"
+  },
+  "inventory": {
+    "newLessons": 5,
+    "teachingExplanations": 15,
+    "guidedTasks": 10,
+    "practiceTasks": 45,
+    "checkQuestions": 10,
+    "totalP2Topics": 3,
+    "totalP2Lessons": 16,
+    "totalP2PracticeTasks": 144
+  },
+  "static": {
+    "suites": 22,
+    "allPassed": true,
+    "newFacesGates": 10,
+    "suitesPassed": [
+      "student",
+      "hundred",
+      "subtract",
+      "groups",
+      "relations",
+      "calculate",
+      "measure",
+      "ruler",
+      "money",
+      "time",
+      "solids",
+      "flat",
+      "positions",
+      "inquiry",
+      "learning-map",
+      "foundations",
+      "resources-ui",
+      "ui-refresh",
+      "transfer",
+      "p2-learn",
+      "p2-arithmetic",
+      "p2-faces"
+    ]
+  },
+  "local": {
+    "distinctCasesVerified": 596,
+    "initialRun": [
+      {
+        "name": "p2-faces",
+        "passed": 82,
+        "failed": 10
+      },
+      {
+        "name": "p2-arithmetic",
+        "passed": 119,
+        "failed": 0
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0
+      }
+    ],
+    "initialFacesFailure": {
+      "cases": [
+        "Faces teaching p2-surfaces en",
+        "Faces teaching p2-prismfaces en",
+        "Faces teaching p2-pyramidfaces en",
+        "Faces teaching p2-basenames en",
+        "Faces teaching p2-turnsolids en",
+        "Faces teaching p2-surfaces zh",
+        "Faces teaching p2-prismfaces zh",
+        "Faces teaching p2-pyramidfaces zh",
+        "Faces teaching p2-basenames zh",
+        "Faces teaching p2-turnsolids zh"
+      ],
+      "error": "Assignment to constant variable.",
+      "initialExactRerunsFailed": 10,
+      "fix": "Test harness reload variables changed from const to let; application was not the cause.",
+      "correctedFacesFullRun": {
+        "passed": 92,
+        "failed": 0
+      }
+    },
+    "studentExactRerun": {
+      "name": "Money layout zh 768",
+      "originalError": "Navigation timeout learn.html?lesson=pricetags&stage=practice&level=normal&lang=zh",
+      "passed": 1,
+      "failed": 0
+    },
+    "observerError": "One status evaluate timed out; a later read returned the completed results.",
+    "refinements": "Oblique viewing angle for right solid diagrams avoids flat-looking triangular profiles; largest visible lateral face gets L label. The final faces suite passed after both changes."
+  },
+  "public": {
+    "done": true,
+    "distinctCasesVerified": 596,
+    "observerEvents": {
+      "navigationTimeouts": 1,
+      "evaluationTimeouts": 2,
+      "recovery": "Fresh snapshot confirmed the suite was progressing; later reads returned completed results."
+    },
+    "suites": [
+      {
+        "name": "p2-faces",
+        "passed": 91,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Faces layout en 320 stage=map",
+            "pass": false,
+            "error": "Navigation timeout lang=en&stage=map"
+          }
+        ]
+      },
+      {
+        "name": "p2-arithmetic",
+        "passed": 118,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Arithmetic responses p2-smartadd easy zh",
+            "pass": false,
+            "error": "Navigation timeout lang=zh&lesson=p2-smartadd&stage=easy"
+          }
+        ]
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Measurement mobile teaching en",
+            "pass": false,
+            "error": "Navigation timeout learn.html?lesson=alignlength&stage=practice&level=easy&lang=en"
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0,
+        "failures": []
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "p2-faces",
+        "original": {
+          "name": "Faces layout en 320 stage=map",
+          "pass": false,
+          "error": "Navigation timeout lang=en&stage=map"
+        },
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "suite": "p2-arithmetic",
+        "original": {
+          "name": "Arithmetic responses p2-smartadd easy zh",
+          "pass": false,
+          "error": "Navigation timeout lang=zh&lesson=p2-smartadd&stage=easy"
+        },
+        "passed": 1,
+        "failed": 0
+      },
+      {
+        "suite": "student",
+        "original": {
+          "name": "Measurement mobile teaching en",
+          "pass": false,
+          "error": "Navigation timeout learn.html?lesson=alignlength&stage=practice&level=easy&lang=en"
+        },
+        "passed": 1,
+        "failed": 0
+      }
+    ]
+  },
+  "runtimeHashes": [
+    {
+      "path": "p2-faces-data.js",
+      "match": true,
+      "sha256": "1275d04d560f1e4e569aa51426cc398ef3fe86e6ee9554dc269c9b2772797fb5",
+      "expected": "1275d04d560f1e4e569aa51426cc398ef3fe86e6ee9554dc269c9b2772797fb5"
+    },
+    {
+      "path": "p2-faces-visuals.js",
+      "match": true,
+      "sha256": "2f55980670002ba39ca2151e351f5da51413c857d2e04e433377f68de7d9e96e",
+      "expected": "2f55980670002ba39ca2151e351f5da51413c857d2e04e433377f68de7d9e96e"
+    },
+    {
+      "path": "p2-learn-topics.js",
+      "match": true,
+      "sha256": "f5b253f9a1c2fd66c6941ee94c12fc88a16e544cbdc3db121d30202c12027b26",
+      "expected": "f5b253f9a1c2fd66c6941ee94c12fc88a16e544cbdc3db121d30202c12027b26"
+    },
+    {
+      "path": "p2-learn.css",
+      "match": true,
+      "sha256": "6ef8972c1681b332685e90174aa8780508625e22c0535689a6344c7ad9962bcc",
+      "expected": "6ef8972c1681b332685e90174aa8780508625e22c0535689a6344c7ad9962bcc"
+    },
+    {
+      "path": "p2-learn.html",
+      "match": true,
+      "sha256": "5bb434b86c79361f09db1eb0b2b383260dde098574616bc182f99ca18959eb68",
+      "expected": "5bb434b86c79361f09db1eb0b2b383260dde098574616bc182f99ca18959eb68"
+    },
+    {
+      "path": "p2-learn.js",
+      "match": true,
+      "sha256": "87c8bb800f5dd921483a7a0f56da2737507e27e11196f4cc421c6f2d6e699e63",
+      "expected": "87c8bb800f5dd921483a7a0f56da2737507e27e11196f4cc421c6f2d6e699e63"
+    },
+    {
+      "path": "tests/p2-arithmetic-browser.js",
+      "match": true,
+      "sha256": "3cc2e64727c79e8a44eb92703edfbd762a08dabf4a24c4b88f23a7bf4dd1b671",
+      "expected": "3cc2e64727c79e8a44eb92703edfbd762a08dabf4a24c4b88f23a7bf4dd1b671"
+    },
+    {
+      "path": "tests/p2-faces-browser.js",
+      "match": true,
+      "sha256": "7dfd6ae5b591594bc464175d2372fcd4e518b7a6c4097e109fa058598e4eb5ad",
+      "expected": "7dfd6ae5b591594bc464175d2372fcd4e518b7a6c4097e109fa058598e4eb5ad"
+    },
+    {
+      "path": "tests/p2-faces-static.cjs",
+      "match": true,
+      "sha256": "2f1dc7fc91b2cc841c6585a1b46f60b94c196a73d088f83f1a93e6b6a637925f",
+      "expected": "2f1dc7fc91b2cc841c6585a1b46f60b94c196a73d088f83f1a93e6b6a637925f"
+    },
+    {
+      "path": "tests/p2-faces.html",
+      "match": true,
+      "sha256": "14ff0d62bc35181263e2945fbc1bd308fa976f4ddf453849154758414109a52c",
+      "expected": "14ff0d62bc35181263e2945fbc1bd308fa976f4ddf453849154758414109a52c"
+    },
+    {
+      "path": "tests/p2-release.html",
+      "match": true,
+      "sha256": "b7a1b16ed95d135d8208798918b1178bd7aa32227ef536b6da217968f68d8571",
+      "expected": "b7a1b16ed95d135d8208798918b1178bd7aa32227ef536b6da217968f68d8571"
+    }
+  ],
+  "initialReadbackBeforeDeploymentComplete": [
+    {
+      "path": "p2-faces-data.js",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "p2-faces-visuals.js",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "p2-learn-topics.js",
+      "match": true,
+      "sha256": "f5b253f9a1c2fd66c6941ee94c12fc88a16e544cbdc3db121d30202c12027b26",
+      "expected": "f5b253f9a1c2fd66c6941ee94c12fc88a16e544cbdc3db121d30202c12027b26"
+    },
+    {
+      "path": "p2-learn.css",
+      "match": false,
+      "sha256": "013a9558534e4c626d99ab2e6663e5c826e12bf7e2d9dee1116e58baf3627f00",
+      "expected": "6ef8972c1681b332685e90174aa8780508625e22c0535689a6344c7ad9962bcc"
+    },
+    {
+      "path": "p2-learn.html",
+      "match": false,
+      "sha256": "7aa968f3acf22e2c0f824a6a94595ac5b54b8520474c7899b291eb1716c18b5d",
+      "expected": "5bb434b86c79361f09db1eb0b2b383260dde098574616bc182f99ca18959eb68"
+    },
+    {
+      "path": "p2-learn.js",
+      "match": false,
+      "sha256": "3e5512d5b0407d5be654a938dbe6deb315d016fa42226c89e06520b65ea5f527",
+      "expected": "87c8bb800f5dd921483a7a0f56da2737507e27e11196f4cc421c6f2d6e699e63"
+    },
+    {
+      "path": "tests/p2-arithmetic-browser.js",
+      "match": true,
+      "sha256": "3cc2e64727c79e8a44eb92703edfbd762a08dabf4a24c4b88f23a7bf4dd1b671",
+      "expected": "3cc2e64727c79e8a44eb92703edfbd762a08dabf4a24c4b88f23a7bf4dd1b671"
+    },
+    {
+      "path": "tests/p2-faces-browser.js",
+      "match": true,
+      "sha256": "7dfd6ae5b591594bc464175d2372fcd4e518b7a6c4097e109fa058598e4eb5ad",
+      "expected": "7dfd6ae5b591594bc464175d2372fcd4e518b7a6c4097e109fa058598e4eb5ad"
+    },
+    {
+      "path": "tests/p2-faces-static.cjs",
+      "match": true,
+      "sha256": "2f1dc7fc91b2cc841c6585a1b46f60b94c196a73d088f83f1a93e6b6a637925f",
+      "expected": "2f1dc7fc91b2cc841c6585a1b46f60b94c196a73d088f83f1a93e6b6a637925f"
+    },
+    {
+      "path": "tests/p2-faces.html",
+      "match": true,
+      "sha256": "14ff0d62bc35181263e2945fbc1bd308fa976f4ddf453849154758414109a52c",
+      "expected": "14ff0d62bc35181263e2945fbc1bd308fa976f4ddf453849154758414109a52c"
+    },
+    {
+      "path": "tests/p2-release.html",
+      "match": true,
+      "sha256": "b7a1b16ed95d135d8208798918b1178bd7aa32227ef536b6da217968f68d8571",
+      "expected": "b7a1b16ed95d135d8208798918b1178bd7aa32227ef536b6da217968f68d8571"
+    }
+  ],
+  "manual": {
+    "desktop": "English solid/base comparison inspected; multiple visible faces and distinct trace panel.",
+    "mobile": "Chinese turned-pyramid inspected at actual innerWidth 375; no overflow; turn button focus and announcement verified. Environment first reported 360 before navigation.",
+    "automaticWidths": [
+      320,
+      375,
+      768,
+      1280
+    ]
+  },
+  "pending": [
+    "classroom trials",
+    "difficulty calibration",
+    "independent translation",
+    "screen-reader listening",
+    "physical printing",
+    "observed real-object performance"
+  ],
+  "assessmentLimits": [
+    "Supplied family plus base outline naming does not certify independent whole-solid recognition.",
+    "Text alternatives may supply base side counts; equivalent visual or tactile attainment is not claimed.",
+    "Written explanations and practical observations remain separate from automated marks."
+  ],
+  "sourceReferences": [
+    "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=41",
+    "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf#page=37"
+  ]
+}

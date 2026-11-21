@@ -125,7 +125,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Specify the first teaching slice and compatibility requirements.
 - [x] Implement and verify the first slice above; see its dated release evidence.
 - [x] Deliver 2N2 with six guided lessons and separate arithmetic progress.
-- [ ] Next: 2S1 solid faces/bases, alternating branches before more arithmetic.
+- [x] Deliver 2S1 solid faces/bases as the third P2 topic, alternating branches.
+- [ ] Next: multiplication meaning through equal groups and arrays (2N3), with staged facts sessions.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -134,4 +135,11 @@ The first implementation adds five lessons, 45 practice tasks, 10 guided tasks a
 
 ## Second implementation checkpoint
 
-2N2 now has six lessons, 54 practice tasks, 12 guided tasks and a separate 12-question check. Its arithmetic records cannot be erased by older number-topic tabs. Addition stays below 1000; subtraction operands stay within two digits. See the [release report and manual limits](p2-arithmetic-guided-release.md). Next implement 2S1 faces/bases, then continue the planned early parallel releases.
+2N2 now has six lessons, 54 practice tasks, 12 guided tasks and a separate 12-question check. Its arithmetic records cannot be erased by older number-topic tabs. Addition stays below 1000; subtraction operands stay within two digits. See the [release report and manual limits](p2-arithmetic-guided-release.md). The subsequent shapes checkpoint below completes the next branch release.
+
+
+## Third implementation checkpoint
+
+2S1 now has five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question check. It follows P1 real solids → traced outlines → P2 selected bases/lateral faces → names → turn and explain. The new topic is open independently of arithmetic and preserves all earlier saved work. The [release report](p2-faces-guided-release.md) distinguishes supplied-family screen tasks from real-object observation; [evidence](p2-faces-guided-evidence.json) records 596 verified local/public cases and remaining manual limits.
+
+Next implement equal groups and arrays as the start of 2N3, then stage facts practice alongside metres and pictograms. The later number/money and angle/quadrilateral prerequisite connections remain unchanged.
