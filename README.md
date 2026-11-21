@@ -42,7 +42,11 @@ Prices and counted totals stop at $1000. Labelled tokens support value reasoning
 
 Earlier P1/P2 progress is preserved. Practical explanations and the eleven estimation records remain separate from check marks; a multi-field check item requires every field to match. All **1,328 distinct local and public browser cases verified**, with documented timeout reruns, the corrected initial phone-navigation regression and test-authoring fix. All 29 static suites passed and nineteen deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **basic division (2N6)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Start with sharing and grouping, then quotient/remainder and multiplication checks. Keep angles before quadrilateral properties. This handoff supersedes historical next-step notes below.
+**21 November 2026: the eleventh P2 guided topic is implemented.** [Share, group and divide](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=division) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a 12-question sample check. It includes interactive sharing/grouping models, quotient/remainder, multiplication checks, zero and one, and contextual handling of leftovers. P2 now has **eleven guided topics, 61 lessons and 549 practice tasks**. [Release report](planning/p2-division-guided-release.md) and [evidence](planning/p2-division-guided-evidence.json).
+
+Earlier P1/P2 progress is preserved. Models award no marks and reset on leaving; practical explanations persist separately. All **1,438 distinct local and public browser cases verified**, including documented timeout reruns. All 30 static suites passed and twenty deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** implement guided **angles and perpendicular lines (2S2)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Return to the shapes branch and teach angles before square/rectangle properties. Time, compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 

@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3 and 2N5 are implemented across ten topics and 55 lessons. The remaining guided units are planned.** See the [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5 and 2N6 are implemented across eleven topics and 61 lessons. The remaining guided units are planned.** See the [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -133,7 +133,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver four-digit numbers (2N4), including boundary counting and larger-group running totals.
 - [x] Deliver Money (II), 2M3, with adult-mediated note observation and separate dollar/cent quantities.
 - [x] Deliver 2N5 three-digit subtraction, mixed operations and dollar/cent change, with estimate-first records.
-- [ ] Next: basic division (2N6), beginning with sharing and grouping.
+- [x] Deliver 2N6 sharing and grouping, quotient/remainder, multiplication checks and contextual leftovers.
+- [ ] Next: angles and perpendicular lines (2S2), before square and rectangle properties.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -211,3 +212,12 @@ Next implement **2N5 three-digit subtraction, mixed addition/subtraction and mon
 P2 now has ten topics, 55 lessons and 495 practice tasks. Earlier records and question-bank payloads are preserved. [Release report](p2-change-guided-release.md) · [1,328-case local/public evidence](p2-change-guided-evidence.json).
 
 Next implement **2N6 basic division**, connecting sharing/grouping to multiplication facts and including remainders. Keep angles before quadrilateral properties. Classroom and manual validation remain pending.
+
+
+## Eleventh guided checkpoint · 21 November 2026
+
+2N6 now has six bilingual lessons, 54 practice tasks, 12 guided tasks and a separate 12-item sample check. All four numbered objectives have guided materials. Interactive sharing and grouping conserve objects at each step, include leftovers in both meanings, and connect drawings/words to symbols. Quotient/remainder fields enforce appropriate bounds. Multiplication checks reconstruct the total; contextual stories distinguish full packs from enough tables. Models award no marks; oral, written and physical evidence still needs observation.
+
+P2 now has eleven topics, 61 lessons and 549 practice tasks. Earlier records and question-bank payloads are preserved. [Release report](p2-division-guided-release.md) · [1,438-case local/public evidence](p2-division-guided-evidence.json).
+
+Next implement **2S2 angles and perpendicular lines**, returning to the shapes branch before 2S4 square/rectangle properties. Time, compass directions and integrated inquiry remain planned. Classroom and manual validation remain pending.
