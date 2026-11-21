@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-20 November 2026. **The five-lesson 2N1 and six-lesson 2N2 guided pathways are implemented; the remaining guided units are planned.** See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1 and 2N3 are implemented across five topics and 28 lessons. The remaining guided units are planned.** See the [latest multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -127,7 +127,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver 2N2 with six guided lessons and separate arithmetic progress.
 - [x] Deliver 2S1 solid faces/bases as the third P2 topic, alternating branches.
 - [x] Deliver the first 2N3 slice: equal groups, arrays and initial 2/5/10 facts.
-- [ ] Next: remaining 2–10 facts across sessions, then multiplication by 1 and 0.
+- [x] Deliver remaining 2–10 facts across sessions, then multiplication by 1 and 0, with a complete construction workshop.
+- [ ] Next: guided metres and distance (2M1), then the pictogram branch.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -150,4 +151,13 @@ The fourth checkpoint below delivers the start of 2N3; staged fact work and the 
 
 The first guided 2N3 slice has five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question check. It connects equal groups and repeated addition, accepts both relevant factor orders, turns arrays and starts 2/5/10 facts with explained stories. Group-count/group-size fields remain ordered; unrelated factor pairs with the same total are rejected. See the [release report](p2-multiply-guided-release.md) and [691-case local/public evidence](p2-multiply-guided-evidence.json).
 
-This is partial guided coverage of 2N3, not complete table teaching or recall evidence. Next build the remaining 2–10 facts over short sessions, then 1 and 0, keeping strategies, explanations and practical observations distinct from automatic marks. Metres and pictograms remain early parallel releases.
+This fourth checkpoint was partial guided coverage of 2N3. The fifth checkpoint below supplies the remaining table teaching; neither checkpoint is evidence of pupil recall. Metres and pictograms remain early parallel releases.
+
+
+## Fifth implementation checkpoint
+
+[Build and use multiplication facts](../p2-learn.html?path=facts) adds seven bilingual lessons, 63 practice tasks, 14 guided tasks and a 12-question sample check. The recommended route builds 3/4, 6/8 and 7/9 across short sessions, constructs the 2–10 table, then explores one and zero. The workshop exposes 81 core cells, 19 additional one cells and 21 zero cells: all 121 ordered pairs, without prefilled answers. A final full workshop supports revisits.
+
+Both multiplication topics together provide guided materials for the five 2N3 objectives. Construction records, self-reported methods, sampled check scores, written explanations and adult observations remain distinct. No automatic whole-table recall or pupil mastery claim is made. Progress in all earlier topics is preserved. See the [release report](p2-facts-guided-release.md) and [828-case local/public evidence](p2-facts-guided-evidence.json).
+
+Next deliver guided metres and distance (2M1), then pictograms. Keep the later number/money and angle/quadrilateral prerequisite connections; pupils can enter appropriate branches without completing all arithmetic.
