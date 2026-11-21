@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-21",
+  "baselineCommit": "b8fd5ea4dcbff686056d266fd2d1150015de60fb",
+  "runtimeCommit": "1099f36b68af16abc721f0f22114a0d9efb73c70",
+  "inventory": {
+    "newLessons": 6,
+    "teachingExplanations": 18,
+    "guidedTasks": 12,
+    "practiceTasks": 54,
+    "checkQuestions": 12,
+    "ungradedEstimationTasksIncluded": 11,
+    "totalP2Lessons": 11,
+    "totalP2PracticeTasks": 99
+  },
+  "static": {
+    "suites": 21,
+    "allPassed": true,
+    "originalP2Gates": 11,
+    "newArithmeticGates": 10
+  },
+  "local": {
+    "distinctCasesVerified": 504,
+    "fullRun": [
+      {
+        "name": "p2-arithmetic",
+        "passed": 117,
+        "failed": 0
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0
+      },
+      {
+        "name": "student",
+        "passed": 188,
+        "failed": 0
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0
+      }
+    ],
+    "additionalFocusedCases": [
+      {
+        "name": "Sixth lesson completion opens the arithmetic check",
+        "passed": true
+      },
+      {
+        "name": "Each topic Continue keeps its own saved cursor",
+        "passed": true
+      }
+    ],
+    "failures": []
+  },
+  "live": {
+    "status": "verified",
+    "distinctCasesVerified": 504,
+    "suites": [
+      {
+        "name": "p2-arithmetic",
+        "passed": 119,
+        "failed": 0
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0
+      }
+    ],
+    "exactReruns": [
+      {
+        "suite": "student",
+        "name": "Solids diagrams and activity",
+        "originalError": "Navigation timeout learn.html?lesson=solidnames&stage=practice&level=easy&lang=en",
+        "passed": true
+      }
+    ],
+    "runtimeFiles": [
+      {
+        "path": "p2-arithmetic-data.js",
+        "match": true,
+        "sha256": "9e54e329fd2f175713c7a8daa4043595df7c38c06d9d4e295a0337260565e9ba",
+        "expected": "9e54e329fd2f175713c7a8daa4043595df7c38c06d9d4e295a0337260565e9ba"
+      },
+      {
+        "path": "p2-learn-store.js",
+        "match": true,
+        "sha256": "c078c7e83f66286c5e14934425ca350c8376510ede6cff58aee7593a12dd5c18",
+        "expected": "c078c7e83f66286c5e14934425ca350c8376510ede6cff58aee7593a12dd5c18"
+      },
+      {
+        "path": "p2-learn-topics.js",
+        "match": true,
+        "sha256": "a56f7d39b08b0ddb9077e4dee730f1a82f8a8299a617d836d6a5a66e33518868",
+        "expected": "a56f7d39b08b0ddb9077e4dee730f1a82f8a8299a617d836d6a5a66e33518868"
+      },
+      {
+        "path": "p2-learn.css",
+        "match": true,
+        "sha256": "013a9558534e4c626d99ab2e6663e5c826e12bf7e2d9dee1116e58baf3627f00",
+        "expected": "013a9558534e4c626d99ab2e6663e5c826e12bf7e2d9dee1116e58baf3627f00"
+      },
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "7aa968f3acf22e2c0f824a6a94595ac5b54b8520474c7899b291eb1716c18b5d",
+        "expected": "7aa968f3acf22e2c0f824a6a94595ac5b54b8520474c7899b291eb1716c18b5d"
+      },
+      {
+        "path": "p2-learn.js",
+        "match": true,
+        "sha256": "3e5512d5b0407d5be654a938dbe6deb315d016fa42226c89e06520b65ea5f527",
+        "expected": "3e5512d5b0407d5be654a938dbe6deb315d016fa42226c89e06520b65ea5f527"
+      },
+      {
+        "path": "tests/p2-arithmetic-browser.js",
+        "match": true,
+        "sha256": "7a7eb93116e76e45df66440ba62eee420ae51cc8998ddce7a9936cf0005ea64a",
+        "expected": "7a7eb93116e76e45df66440ba62eee420ae51cc8998ddce7a9936cf0005ea64a"
+      },
+      {
+        "path": "tests/p2-arithmetic-static.cjs",
+        "match": true,
+        "sha256": "1211ceaa1e8470586d0032ea8a316703b9a9f30c3ebe5a5ad390de7cdea3913f",
+        "expected": "1211ceaa1e8470586d0032ea8a316703b9a9f30c3ebe5a5ad390de7cdea3913f"
+      },
+      {
+        "path": "tests/p2-arithmetic.html",
+        "match": true,
+        "sha256": "f1ef3ce5e9ca93be318fd8573361389b90ac2e030ec5eb7dea5841ccca449d3c",
+        "expected": "f1ef3ce5e9ca93be318fd8573361389b90ac2e030ec5eb7dea5841ccca449d3c"
+      },
+      {
+        "path": "tests/p2-release.html",
+        "match": true,
+        "sha256": "ad9c906d343f4fc07ecfd7fd50fbf6bb246dd91b102ed34b4733c32bd66578f3",
+        "expected": "ad9c906d343f4fc07ecfd7fd50fbf6bb246dd91b102ed34b4733c32bd66578f3"
+      }
+    ],
+    "observerNote": "One browser evaluate status-read timed out. A fresh snapshot showed the runner had finished; a second read retrieved the completed results. This did not change case results."
+  },
+  "manual": {
+    "ChineseMobileBorrowing": "Before/after exchange model inspected at 360px viewport",
+    "EnglishKeyboardParts": "44 and 25 entered using keyboard and Enter; correct feedback; focus returned to first field; no overflow",
+    "PublicMobileMap": "Six lessons and both topic links present; no horizontal overflow at 360px."
+  },
+  "pending": [
+    "Classroom and practical observations",
+    "Independent translation",
+    "Screen-reader listening",
+    "Physical printing",
+    "Difficulty calibration"
+  ],
+  "next": "P2 2S1 solid faces and bases"
+}

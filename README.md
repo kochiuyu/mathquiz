@@ -6,7 +6,11 @@
 
 P1/P2 navigation keeps separate Continue routes and saved work for each learner. P2 accepts larger and ordered answers, keeps original estimates, and separates practical notes and practice-bank results from its check. [Release report](planning/p2-number-guided-release.md) and [verification evidence](planning/p2-number-guided-evidence.json). P1's 45 lessons and existing practice banks are preserved. All **385 local and 385 public browser cases verified**; the public run needed no retries. The 19 inherited static suites and 11 new static gates passed. Manual and classroom validation remain pending.
 
-**Next unfinished step:** deliver the early parallel branches in the [P2 guided learning plan](planning/p2-guided-learning-plan.md): addition/two-digit borrowing, multiplication meaning, solid faces/bases, metres and pictograms. Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
+**21 November 2026: the second P2 guided topic is implemented.** [Add, subtract and explain](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=arithmetic) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a 12-question check. It teaches carrying, useful addition pairs, two-digit borrowing, successive subtraction, explained stories and estimation. Written explanations and practical observations stay separate from screen marks. P2 now has 11 guided lessons across two topics and 99 practice tasks. [Release report](planning/p2-arithmetic-guided-release.md) and [evidence](planning/p2-arithmetic-guided-evidence.json).
+
+Arithmetic progress is isolated from the original P2 number topic and P1 work, including older open tabs. Each topic resumes independently; reset affects only the current topic and learner. All **504 distinct local and public browser cases are verified**, including one exact public timeout rerun. All 21 static suites passed; ten deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** P2 solid faces and bases (2S1), alternating branches as set out in the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Multiplication meaning, metres and pictograms follow as early parallel releases. Later, four-digit numbers precede money and subtraction/change; angles precede quadrilateral properties. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 

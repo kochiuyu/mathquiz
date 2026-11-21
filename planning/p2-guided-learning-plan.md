@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-20 November 2026. **The first five-lesson 2N1 guided pathway is implemented; the remaining guided units are planned.** See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+20 November 2026. **The five-lesson 2N1 and six-lesson 2N2 guided pathways are implemented; the remaining guided units are planned.** See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -41,7 +41,7 @@ Arrows recommend useful preparation; they do not lock topics. Metres also benefi
 
 ## Coverage and proposed teaching blocks
 
-Each row is a delivery scope, not a promise of three lessons. Split lessons whenever one explanation would introduce several new ideas. Objective numbers refer to the linked unit brief; all rows have resources; **2N1 now has guided teaching, while the other rows remain planned**.
+Each row is a delivery scope, not a promise of three lessons. Split lessons whenever one explanation would introduce several new ideas. Objective numbers refer to the linked unit brief; all rows have resources; **2N1 and 2N2 now have guided teaching, while the other rows remain planned**.
 
 | Unit and objectives | Proposed teaching progression | Practical evidence and existing resource |
 | --- | --- | --- |
@@ -124,7 +124,14 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Map all 15 P2 units and choose prerequisite connections.
 - [x] Specify the first teaching slice and compatibility requirements.
 - [x] Implement and verify the first slice above; see its dated release evidence.
+- [x] Deliver 2N2 with six guided lessons and separate arithmetic progress.
+- [ ] Next: 2S1 solid faces/bases, alternating branches before more arithmetic.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
 The first implementation adds five lessons, 45 practice tasks, 10 guided tasks and a 10-question check, with separate P2 progress. Existing P1 content and P2 practice banks remain as released. Verification details and remaining manual limits are recorded in the first release report.
+
+
+## Second implementation checkpoint
+
+2N2 now has six lessons, 54 practice tasks, 12 guided tasks and a separate 12-question check. Its arithmetic records cannot be erased by older number-topic tabs. Addition stays below 1000; subtraction operands stay within two digits. See the [release report and manual limits](p2-arithmetic-guided-release.md). Next implement 2S1 faces/bases, then continue the planned early parallel releases.
