@@ -46,7 +46,11 @@ Earlier P1/P2 progress is preserved. Practical explanations and the eleven estim
 
 Earlier P1/P2 progress is preserved. Models award no marks and reset on leaving; practical explanations persist separately. All **1,438 distinct local and public browser cases verified**, including documented timeout reruns. All 30 static suites passed and twenty deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **angles and perpendicular lines (2S2)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Return to the shapes branch and teach angles before square/rectangle properties. Time, compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
+**21 November 2026: the twelfth P2 guided topic is implemented.** [Angles and perpendicular lines](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=angles) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a separate 12-question sample check. Interactive opening and overlay models support comparison; practical tasks cover making/drawing angles and perpendiculars through points on and off a line, and shortest distance. P2 now has **12 topics, 67 lessons and 603 practice tasks**. [Release report](planning/p2-angles-guided-release.md) and [evidence](planning/p2-angles-guided-evidence.json).
+
+Earlier P1/P2 progress is preserved. Digital recognition does not certify drawing or tool handling. All **1,543 distinct local and public browser cases verified**, with documented timeout reruns and final folding-wording checks. All 31 static suites passed and twenty-one deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** implement guided **square and rectangle properties (2S4)**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Build on angles and perpendicular lines; time, compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
