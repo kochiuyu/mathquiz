@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3 and 2M1 are implemented across six topics and 34 lessons. The remaining guided units are planned.** See the [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1 and 2D1 are implemented across seven topics and 39 lessons. The remaining guided units are planned.** See the [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -129,7 +129,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver the first 2N3 slice: equal groups, arrays and initial 2/5/10 facts.
 - [x] Deliver remaining 2–10 facts across sessions, then multiplication by 1 and 0, with a complete construction workshop.
 - [x] Deliver guided metres and distance (2M1), including separate personal-reference and estimate/measure records.
-- [ ] Next: the guided pictogram branch (2D1).
+- [x] Deliver the guided pictogram branch (2D1), with both construction forms.
+- [ ] Next: four-digit numbers (2N4), before money and later subtraction/change.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -171,3 +172,12 @@ Next deliver guided metres and distance (2M1), then pictograms. Keep the later n
 The practical notebook records prior measuring experience, two reference readings and an approximate reference. Object-length and straight-distance trials preserve their first estimate and reference snapshot when measured results are recorded. No practical accuracy score or independent tool-skill claim is inferred. More trials use the linked existing worksheet. Earlier progress remains preserved.
 
 P2 now has six topics, 34 lessons and 306 practice tasks. See the [release report](p2-metres-guided-release.md) and [940-case local/public evidence](p2-metres-guided-evidence.json). Next deliver **pictograms (2D1)**, keeping the data branch available independently of arithmetic completion. Later four-digit numbers precede money/subtraction, and angles precede quadrilateral properties.
+
+
+## Seventh implementation checkpoint
+
+[Organise and make pictograms](../p2-learn.html?path=pictograms) adds five bilingual lessons, 45 practice tasks, ten guided tasks, ten sample-check items and two blank chart builders. Mixed model cards introduce organisation before title/key/category recognition and interpretation in both orientations. Learners construct horizontal and vertical charts by placing whole symbols one at a time; each symbol represents one card. Counts, including zero and ties, remain small.
+
+The builders supply labels, key and alignment; adult review of title wording and independent paper construction remains necessary. Practical prompts link the existing activity sheet. Earlier P1/P2 progress is preserved. See the [release report](p2-pictograms-guided-release.md) and [1,034-case local/public evidence](p2-pictograms-guided-evidence.json).
+
+All early parallel branches now have guided materials. Next implement **2N4 four-digit numbers**, then 2M3 money and 2N5 subtraction/change. Division follows multiplication foundations; angles precede quadrilateral properties. Classroom validation remains pending, independently of development order.

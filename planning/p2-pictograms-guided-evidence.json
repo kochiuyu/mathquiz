@@ -1,0 +1,586 @@
+{
+  "date": "2026-11-21",
+  "baselineCommit": "d2a303839d2323f75db8a430e906785938988e18",
+  "runtimeCommit": "e38d347102558d64018d352fd0570f70585804ad",
+  "runtimeDeployment": {
+    "runId": 44883010342,
+    "conclusion": "success",
+    "verification": "Public Actions page showed matching commit and Success."
+  },
+  "inventory": {
+    "lessonsAdded": 5,
+    "teachingSteps": 15,
+    "guidedTasks": 10,
+    "practiceTasks": 45,
+    "checkTasks": 10,
+    "separateConstructions": 2,
+    "p2Topics": 7,
+    "p2Lessons": 39,
+    "p2PracticeTasks": 351
+  },
+  "static": [
+    {
+      "name": "student",
+      "exit": 0,
+      "output": "PASS: 162 independent question checks; 12 quiz forms; saved profiles, reset isolation, blocked/corrupt storage, input validation and syntax.\nPASS: 27 levelled items; legacy practice migration, quiz retention, level answers and resume."
+    },
+    {
+      "name": "hundred",
+      "exit": 0,
+      "output": "PASS: 216 independently checked new generation cases, 27 practice items, 12 quiz configurations, 100 input, two-pathway progress and legacy records."
+    },
+    {
+      "name": "subtract",
+      "exit": 0,
+      "output": "PASS: 216 independent generated-answer checks, 27 diagram-led practice items, 12 check configurations, zero, curriculum bounds, three-path progress and 46195-character full storage record."
+    },
+    {
+      "name": "groups",
+      "exit": 0,
+      "output": "PASS: 216 generated-answer checks, 27 new practice items, 12 quiz configurations, old question compatibility, four-path storage (49801 characters)."
+    },
+    {
+      "name": "relations",
+      "exit": 0,
+      "output": "PASS: 216 generated-answer checks, 27 practice items, 12 quiz configurations, earlier content unchanged, five-path storage (49801 characters)."
+    },
+    {
+      "name": "calculate",
+      "exit": 0,
+      "output": "PASS: 216 independent generated-answer checks, 27 practice items, 12 quiz configurations; earlier content unchanged; full three-pupil record 49939, schema read bound 300736; boundary and malformed storage checks."
+    },
+    {
+      "name": "measure",
+      "exit": 0,
+      "output": "PASS: 216 independent generated answers, 27 practice items, 12 check configurations; earlier content retained; full three-pupil record 49927 characters, bound 300736."
+    },
+    {
+      "name": "ruler",
+      "exit": 0,
+      "output": "PASS: 216 generated answer checks, 27 practice items, 12 attempts; preserved content; full record 49927, bound 300736."
+    },
+    {
+      "name": "money",
+      "exit": 0,
+      "output": "PASS: 216 generated answers, 27 practice items, 12 attempts, coin/price/exchange bounds; preserved prior content; full record 49924, bound 300736."
+    },
+    {
+      "name": "time",
+      "exit": 0,
+      "output": "PASS: 216 generated answers,27 practice items,12 attempts,clock/calendar/interval bounds; prior content unchanged; full record 49924,bound 300736."
+    },
+    {
+      "name": "solids",
+      "exit": 0,
+      "output": "PASS: 216 generated answers,27 practice items,12 attempts,five solids; prior content unchanged; full record 49933,bound 300736."
+    },
+    {
+      "name": "flat",
+      "exit": 0,
+      "output": "PASS: 216 generated answers,27 practice items,12 attempts,8 simple shapes and6 exact polygon unions; prior content unchanged; full record 49927,bound 300736."
+    },
+    {
+      "name": "positions",
+      "exit": 0,
+      "output": "PASS: 216 generated answers,27 practice items,12 checks; all seven relations plus not-between; prior payload unchanged; full record 49933,bound 300736."
+    },
+    {
+      "name": "inquiry",
+      "exit": 0,
+      "output": "PASS:13 bilingual integrated investigations; math boundaries; note sanitation, migration, isolation and read limits; full worst-escaped record 117805,cap 300736."
+    },
+    {
+      "name": "learning-map",
+      "exit": 0,
+      "output": "PASS: 13 unique topics; valid prerequisite links; acyclic within-branch suggestions; 45 numbered objectives plus inquiry; activity links and script loading."
+    },
+    {
+      "name": "foundations",
+      "exit": 0,
+      "output": "PASS: 864 independently calculated new questions; 54 practice items; old39 full payload hash; new checks/notes/save/reset isolation."
+    },
+    {
+      "name": "resources-ui",
+      "exit": 0,
+      "output": "PASS resource UI: JS syntax, both entry points, 270 core builder routes, 300 levelled routes, 85 unique activity paths and 85 unit references."
+    },
+    {
+      "name": "ui-refresh",
+      "exit": 0,
+      "output": "PASS UI refresh: exact 270 curriculum + 30 TSA routes, 85 unchanged official units/activities, two distinct local review groups, notation boundaries, all shared entry points, 85 worksheet integrations and JS syntax."
+    },
+    {
+      "name": "transfer",
+      "exit": 0,
+      "output": "PASS: 45 bilingual practical prompts, 15 valid worksheet routes, 6 independently calculated answers, 6 observed tasks; review storage, isolation/reset, sanitization, capacity (77559), blocked storage and syntax."
+    },
+    {
+      "name": "p2-learn",
+      "exit": 0,
+      "output": "PASS Five lessons; 45 practice tasks; 10 guided; 10 check; stable unique IDs\nPASS Independent authored answer oracle\nPASS Bilingual lessons, questions, values and estimation bounds\nPASS Larger and structured answers round trip with P1 bytes intact\nPASS Three pupils and reset isolation\nPASS Stale store merges latest saved fields, reset is not resurrected\nPASS Blocked storage remains usable in memory\nPASS Write failure preserves session work across updates\nPASS Malformed/future records stay untouched until explicit reset\nPASS Full supported record fits capacity and retains estimates, notes and answers\nPASS Script syntax and local resource links\n11 static gates passed"
+    },
+    {
+      "name": "p2-arithmetic",
+      "exit": 0,
+      "output": "PASS Six lessons; 54 practice, 12 guided and 12 check questions with stable IDs\nPASS Independent BigInt answers, intermediate values and 2N2 bounds\nPASS Every carry/borrow lesson task exercises an exchange\nPASS Check oracle and revisits\nPASS Bilingual teaching and deliberate explanation separation\nPASS Arithmetic uses independent key, number topic and P1 bytes unchanged\nPASS Three-pupil isolation, stale edits and reset\nPASS Blocked storage, future and malformed records\nPASS Maximum-size records retain all written observations and zero estimates\nPASS Unchanged first P2 data and shared syntax\n10 arithmetic gates passed"
+    },
+    {
+      "name": "p2-faces",
+      "exit": 0,
+      "output": "PASS Five lessons; 45 practice, 10 guided, 10 check; unique IDs\nPASS Independent check oracle and targeted revisits\nPASS Naming oracle covers all eight family/base pairs\nPASS All response options unique and bilingual, with one valid answer\nPASS Bilingual teaching, practical observations and scope\nPASS Polygon geometry: convex, correct sides, bounds and full rotation\nPASS Third topic key leaves all earlier topic and pupil bytes intact\nPASS Storage limits, escaping payloads, future/corrupt records and stale updates\nPASS Original number and arithmetic data byte-for-byte preserved\nPASS Runtime/test syntax and linked resource exist\n10 faces gates passed"
+    },
+    {
+      "name": "p2-multiply",
+      "exit": 0,
+      "output": "PASS Five lessons, 45 practice, ten guided and ten check with unique IDs\nPASS Independent repeated-addition oracle for every numeric answer and reversed factor pair\nPASS Independent check answer list and revisits\nPASS Equal/unequal grouping and repeated-addition option meaning\nPASS Scope: 2/5/10 initial fact tasks, partial table stated and stories use supplied pair\nPASS Bilingual teaching, hints, options and field labels\nPASS Diagram counters and row/column rotation preserve each object\nPASS Fourth topic isolation, three pupils, stale edits and reset\nPASS Full record, blocked writes and corrupt/future records\nPASS Earlier three-topic data and shared storage bytes preserved\nPASS Syntax, resource links and P1 prerequisites\n11 multiplication gates passed"
+    },
+    {
+      "name": "p2-facts",
+      "exit": 0,
+      "output": "PASS Seven sequenced lessons, 63 practice, 14 guided, 12 check, 121 workshop cells\nPASS Every product and split has an independent repeated-addition result\nPASS Complete ordered pair coverage, core 81, one 19, zero 21\nPASS Early lessons avoid zero/one multiplication; each remaining family is taught\nPASS Independent sample key, correct zero and one and lesson revisits\nPASS Bilingual teaching, practical prompts, labels, hints, choice keys\nPASS Split pictures show all counters and removal crosses a full group\nPASS Independent fifth-topic key protects earlier topics and other learners\nPASS Full 210-answer record, long notes, corrupt/future and denied storage\nPASS All older topic data and storage are unchanged bytes\nPASS Methods are separate from answers and score; sources and syntax exist\n11 facts gates passed"
+    },
+    {
+      "name": "p2-metres",
+      "exit": 0,
+      "output": "PASS Six lessons, 54 practice, 12 guided and 12 check with stable unique IDs\nPASS Independent addition oracle for conversions, intervals, strips and supplied examples\nPASS Independent complete response key including multiple valid tools\nPASS Bilingual teaching, practical prompts and input choice labels\nPASS Schematic units, object/distance endpoints and conversion direction\nPASS Notebook requires real-reference record before estimate and estimate before measurement\nPASS Original target, estimate, reason and reference snapshot survive calibration and measurement edits\nPASS Two trial types, three learners, old keys and topic reset isolation\nPASS Stale notebook merges both trials and cannot resurrect estimates after reset\nPASS Notebook validation: full-width digits, whole units, no zero lengths or decimal records\nPASS Damaged/future notebook protected; blocked/full storage retains session work\nPASS Maximum bounded notebook and ordinary topic records survive reload\nPASS Prior data/store bytes and syntax preserved\n13 metres gates passed"
+    },
+    {
+      "name": "p2-pictograms",
+      "exit": 0,
+      "output": "PASS Five lessons, all three objectives, 45 practice, 10 guided, 10 check and two constructions\nPASS Independent numeric answers and one-to-one chart data\nPASS Complete independent response keys\nPASS Bilingual labels, hints, teaching and practical prompts\nPASS Symbol counts, accessible repeated symbols, raw cards and empty categories\nPASS Bounded saved construction values, escaping and blank starting graph\nPASS Construction and titles persist, separate learners and old topics survive reset\nPASS Future corrupt blocked and full storage handling\nPASS Frozen earlier topic data, store and syntax\n9 pictogram gates passed"
+    }
+  ],
+  "local": {
+    "done": true,
+    "distinctCasesVerified": 1034,
+    "suites": [
+      {
+        "name": "p2-pictograms",
+        "passed": 94,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-metres",
+        "passed": 112,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-facts",
+        "passed": 137,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-multiply",
+        "passed": 95,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-faces",
+        "passed": 92,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-arithmetic",
+        "passed": 119,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-learn",
+        "passed": 99,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "student",
+        "passed": 186,
+        "failed": 2,
+        "failures": [
+          {
+            "name": "Ruler zero, zoom, reference and activity",
+            "pass": false,
+            "error": "Navigation timeout learn.html?lesson=comparecm&stage=practice&level=difficult&lang=en"
+          },
+          {
+            "name": "Time hands, calendars and activity",
+            "pass": false,
+            "error": "Navigation timeout learn.html?lesson=readclock&stage=practice&level=difficult&lang=en"
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0,
+        "failures": []
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "student",
+        "original": {
+          "name": "Ruler zero, zoom, reference and activity",
+          "pass": false,
+          "error": "Navigation timeout learn.html?lesson=comparecm&stage=practice&level=difficult&lang=en"
+        },
+        "done": true,
+        "passed": 1,
+        "failed": 0,
+        "cases": [
+          {
+            "name": "Ruler zero, zoom, reference and activity",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "suite": "student",
+        "original": {
+          "name": "Time hands, calendars and activity",
+          "pass": false,
+          "error": "Navigation timeout learn.html?lesson=readclock&stage=practice&level=difficult&lang=en"
+        },
+        "done": true,
+        "passed": 1,
+        "failed": 0,
+        "cases": [
+          {
+            "name": "Time hands, calendars and activity",
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "observerEvents": [
+      "One result-inspection call timed out while tests continued; final read succeeded."
+    ],
+    "preBrowserFix": "A syntax check caught an extra parenthesis in the new test script; corrected before browser execution.",
+    "finalRefinements": [
+      "Kept the same 4/2/3 collection throughout the vertical-to-horizontal teaching comparison.",
+      "Changed feedback for a protected, unmodifiable record to report that the chart could not change."
+    ],
+    "finalFocusedRerun": {
+      "done": true,
+      "passed": 94,
+      "failed": 0,
+      "scope": "Entire pictogram suite rerun after both refinements; new static gates rerun and passed."
+    }
+  },
+  "public": {
+    "done": true,
+    "distinctCasesVerified": 1034,
+    "suites": [
+      {
+        "name": "p2-pictograms",
+        "passed": 93,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Pictogram construction pict-build-v en",
+            "error": "Navigation timeout lang=en&lesson=p2-buildcharts&stage=learn",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "p2-metres",
+        "passed": 112,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-facts",
+        "passed": 137,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-multiply",
+        "passed": 95,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-faces",
+        "passed": 92,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-arithmetic",
+        "passed": 119,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "p2-learn",
+        "passed": 98,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "P1 bytes and cursor survive P2 browsing and answers",
+            "error": "app missing",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "student",
+        "passed": 187,
+        "failed": 1,
+        "failures": [
+          {
+            "name": "Flat layout zh 320",
+            "error": "Navigation timeout learn.html?lesson=joinshapes&stage=practice&level=difficult&lang=zh",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "passed": 18,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "learning-map",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "inquiry",
+        "passed": 16,
+        "failed": 0,
+        "failures": []
+      },
+      {
+        "name": "transfer",
+        "passed": 48,
+        "failed": 0,
+        "failures": []
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "p2-pictograms",
+        "original": {
+          "name": "Pictogram construction pict-build-v en",
+          "error": "Navigation timeout lang=en&lesson=p2-buildcharts&stage=learn",
+          "pass": false
+        },
+        "done": true,
+        "passed": 1,
+        "failed": 0,
+        "cases": [
+          {
+            "name": "Pictogram construction pict-build-v en",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "suite": "p2-learn",
+        "original": {
+          "name": "P1 bytes and cursor survive P2 browsing and answers",
+          "error": "app missing",
+          "pass": false
+        },
+        "done": true,
+        "passed": 1,
+        "failed": 0,
+        "cases": [
+          {
+            "name": "P1 bytes and cursor survive P2 browsing and answers",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "suite": "student",
+        "original": {
+          "name": "Flat layout zh 320",
+          "error": "Navigation timeout learn.html?lesson=joinshapes&stage=practice&level=difficult&lang=zh",
+          "pass": false
+        },
+        "done": true,
+        "passed": 1,
+        "failed": 0,
+        "cases": [
+          {
+            "name": "Flat layout zh 320",
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "extraExactRerun": {
+      "suite": "p2-learn",
+      "done": true,
+      "passed": 1,
+      "failed": 0,
+      "cases": [
+        {
+          "name": "P1 bytes and cursor survive P2 browsing and answers",
+          "pass": true
+        }
+      ],
+      "reason": "App-missing cause not reproduced; this second successful exact rerun is additional evidence, not another distinct case."
+    },
+    "observerEvents": [
+      "Opening the public runner timed out while tests continued.",
+      "One result-inspection call timed out; completed result read succeeded."
+    ]
+  },
+  "runtimeReadback": [
+    {
+      "path": "p2-pictograms-data.js",
+      "match": true,
+      "sha256": "3f59d62ef157bbbc007e96bfe3c9705757933a95258cad2c0fa993899a8c38f0",
+      "expected": "3f59d62ef157bbbc007e96bfe3c9705757933a95258cad2c0fa993899a8c38f0"
+    },
+    {
+      "path": "p2-pictograms-visuals.js",
+      "match": true,
+      "sha256": "3fa7d165a2df84a87242174d03acb3ba93a2038e340a84ca64857fc90b54d7e4",
+      "expected": "3fa7d165a2df84a87242174d03acb3ba93a2038e340a84ca64857fc90b54d7e4"
+    },
+    {
+      "path": "p2-learn-topics.js",
+      "match": true,
+      "sha256": "fb050a0a5699df6be760f4135f3ab03b199d9cd521498c6db25277b6b013795d",
+      "expected": "fb050a0a5699df6be760f4135f3ab03b199d9cd521498c6db25277b6b013795d"
+    },
+    {
+      "path": "p2-learn.css",
+      "match": true,
+      "sha256": "6945f3ecc1a02500f3500c475007e6a688c3bdcb9c8f993f46a8184d21a2305b",
+      "expected": "6945f3ecc1a02500f3500c475007e6a688c3bdcb9c8f993f46a8184d21a2305b"
+    },
+    {
+      "path": "p2-learn.html",
+      "match": true,
+      "sha256": "f12125fcb753aa7fc6b541ee70bac944922ff2475ef2e0a293fe1a658a49df7b",
+      "expected": "f12125fcb753aa7fc6b541ee70bac944922ff2475ef2e0a293fe1a658a49df7b"
+    },
+    {
+      "path": "p2-learn.js",
+      "match": true,
+      "sha256": "0e388e3b7ca4b46e995225d2fc9320bb1641d8f4b0ae344a54301b10b37ed887",
+      "expected": "0e388e3b7ca4b46e995225d2fc9320bb1641d8f4b0ae344a54301b10b37ed887"
+    },
+    {
+      "path": "tests/p2-arithmetic-browser.js",
+      "match": true,
+      "sha256": "d6091978e2cfe6e3981a4815e554fe056af967f4b4f4b9fb526c04b3303cd67e",
+      "expected": "d6091978e2cfe6e3981a4815e554fe056af967f4b4f4b9fb526c04b3303cd67e"
+    },
+    {
+      "path": "tests/p2-faces-browser.js",
+      "match": true,
+      "sha256": "8393015e4b684011e60090715b8a4812c10831c3b0854957219963ca962b84fa",
+      "expected": "8393015e4b684011e60090715b8a4812c10831c3b0854957219963ca962b84fa"
+    },
+    {
+      "path": "tests/p2-multiply-browser.js",
+      "match": true,
+      "sha256": "20f4b157191948540cece31b7bd4dffe35485d2f33b95f20c489d30746e79bee",
+      "expected": "20f4b157191948540cece31b7bd4dffe35485d2f33b95f20c489d30746e79bee"
+    },
+    {
+      "path": "tests/p2-facts-browser.js",
+      "match": true,
+      "sha256": "921080d86706c9780d2a88d77df487121c561d999c5ebde5530f1a869942dccd",
+      "expected": "921080d86706c9780d2a88d77df487121c561d999c5ebde5530f1a869942dccd"
+    },
+    {
+      "path": "tests/p2-metres-browser.js",
+      "match": true,
+      "sha256": "317a89a33ab1a9914e2fadb29877ae671b1c4fbe3d6815dd6666a77a5c681894",
+      "expected": "317a89a33ab1a9914e2fadb29877ae671b1c4fbe3d6815dd6666a77a5c681894"
+    },
+    {
+      "path": "tests/p2-pictograms-browser.js",
+      "match": true,
+      "sha256": "e7baa88687fc245bbffea01a88b35850fadf694552310202693912804792e98b",
+      "expected": "e7baa88687fc245bbffea01a88b35850fadf694552310202693912804792e98b"
+    },
+    {
+      "path": "tests/p2-pictograms-static.cjs",
+      "match": true,
+      "sha256": "669be9cc018ffbf72acc67434036224132d2a8e6f266280b26818509ddfabe96",
+      "expected": "669be9cc018ffbf72acc67434036224132d2a8e6f266280b26818509ddfabe96"
+    },
+    {
+      "path": "tests/p2-pictograms-baseline.json",
+      "match": true,
+      "sha256": "57c970dd84ee75b6409411e010e4e716ebc39c672409b3c31033344663286d3d",
+      "expected": "57c970dd84ee75b6409411e010e4e716ebc39c672409b3c31033344663286d3d"
+    },
+    {
+      "path": "tests/p2-pictograms.html",
+      "match": true,
+      "sha256": "7c2145ae05e3a85f8fcd534c929c6e3d0ea6ed56105faf91bd1d6e8fd66a7ea3",
+      "expected": "7c2145ae05e3a85f8fcd534c929c6e3d0ea6ed56105faf91bd1d6e8fd66a7ea3"
+    },
+    {
+      "path": "tests/p2-release.html",
+      "match": true,
+      "sha256": "4534d5c3e6961054f52ad7c36218214cb234058e8a05d34a845d31a4d24b2301",
+      "expected": "4534d5c3e6961054f52ad7c36218214cb234058e8a05d34a845d31a4d24b2301"
+    }
+  ],
+  "readbackNote": "Initial runtime byte comparison exposed Windows CRLF in local generated files versus the LF text payload sent to GitHub. Local line endings were normalised to the exact submitted text; all 16 file hashes then matched. No runtime change or republish was needed.",
+  "manual": {
+    "localEnglish": "Inspected labelled vertical chart and common baseline.",
+    "localChinese": "At innerWidth 375, title entry plus click/Enter constructed vertical 2/4/0. Correct feedback received focus; no horizontal overflow; empty category and baseline visually inspected. Synthetic test data only.",
+    "publicMap": "Read all five lessons, seven topic links and guided data-branch route; saved screenshot."
+  },
+  "storage": {
+    "key": "mathquiz-p2-pictograms-v1",
+    "learners": 3,
+    "preserved": "Six earlier topic data files, metre notebook and shared store unchanged. Separate construction IDs cannot change check answers.",
+    "testIsolation": "Browser suites restore prior test-key values. Manual work used local test mode only."
+  },
+  "assessmentLimits": [
+    "One-to-one whole symbols only; no scaled or fractional keys.",
+    "Builder labels/key/alignment are supplied; independent labelling and drawing require paper observation.",
+    "Title wording and explanations are not automatically scored.",
+    "A fixed ten-question check does not certify construction mastery."
+  ],
+  "pending": [
+    "classroom trials",
+    "difficulty calibration",
+    "independent translation review",
+    "screen-reader listening",
+    "physical printing",
+    "observed practical performance"
+  ],
+  "next": "Four-digit numbers (2N4), before money (2M3) and later subtraction/change (2N5).",
+  "sourceReferences": [
+    "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=47"
+  ]
+}
