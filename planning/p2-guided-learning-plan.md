@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1 and 2N4 are implemented across eight topics and 44 lessons. The remaining guided units are planned.** See the [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4 and 2M3 are implemented across nine topics and 49 lessons. The remaining guided units are planned.** See the [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -131,7 +131,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver guided metres and distance (2M1), including separate personal-reference and estimate/measure records.
 - [x] Deliver the guided pictogram branch (2D1), with both construction forms.
 - [x] Deliver four-digit numbers (2N4), including boundary counting and larger-group running totals.
-- [ ] Next: Money (II), 2M3, before later subtraction/change (2N5).
+- [x] Deliver Money (II), 2M3, with adult-mediated note observation and separate dollar/cent quantities.
+- [ ] Next: three-digit subtraction, mixed addition/subtraction and money change (2N5).
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -191,3 +192,12 @@ All early parallel branches now have guided materials. Next implement **2N4 four
 Only this topic enables four-digit answers. All earlier topic data and the shared store remain unchanged, including separate learner progress. Compact diagrams and typed answers do not replace oral reading, hidden dictation or physical-model observation. See the [release report](p2-thousands-guided-release.md) and [1,126-case local/public evidence](p2-thousands-guided-evidence.json).
 
 Next implement **Money (II), 2M3**, now that guided four-digit number materials are available; follow with three-digit subtraction/change (2N5). Division follows multiplication foundations and angles precede quadrilateral properties. Classroom validation remains pending.
+
+
+## Ninth implementation checkpoint
+
+[Hong Kong notes, prices and payments](../p2-learn.html?path=money) adds five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-question sample check. The route follows four-digit numbers. Note-value models and official links support adult-mediated observation; price tags use two cent digits; counted amounts use separate dollar/cent quantities. Both directions of exchanges stay inside one permitted set. Exact-payment tasks are kept distinct from exchanges.
+
+Prices and totals remain at most $1000. No price writing, decimal arithmetic or change-making is demanded. Real-note recognition, oral reading, physical counting and exchanges still require pupil observation. Earlier P1/P2 records and limits remain intact. See the [release report](p2-money-guided-release.md) and [1,222-case local/public evidence](p2-money-guided-evidence.json).
+
+Next implement **2N5 three-digit subtraction, mixed addition/subtraction and money change**, retaining dollar/cent reasoning without decimal operations. Division follows multiplication foundations and angles precede quadrilateral properties. Classroom validation remains pending.
