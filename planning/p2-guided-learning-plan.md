@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 21 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5, 2N6, 2S2 and 2S4 are implemented across thirteen topics and 73 lessons. The remaining guided units are planned.** See the [square/rectangle release](p2-quads-guided-release.md) and [angles release](p2-angles-guided-release.md) and [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 22 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5, 2N6, 2S2 and 2S4, plus 2M2 objectives 1–4, are implemented across fourteen topics and 79 lessons. The remaining Time (II) objectives and other unfinished guided units are planned.** See the [minutes/clock release](p2-minutes-guided-release.md) and [square/rectangle release](p2-quads-guided-release.md) and [angles release](p2-angles-guided-release.md) and [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -136,7 +136,8 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver 2N6 sharing and grouping, quotient/remainder, multiplication checks and contextual leftovers.
 - [x] Deliver 2S2 angle comparison, right/acute/obtuse angles, perpendicular construction and shortest distance.
 - [x] Deliver 2S4 segments, adjacent/opposite sides, square/rectangle properties and practical drawing/making.
-- [ ] Next: Time (II), 2M2; begin with minutes and real interval experiences, staging the ten objectives as needed.
+- [x] Deliver Time (II), 2M2 objectives 1–4: minute clocks, real timing records, finishing times and elapsed minutes.
+- [ ] Next: Time (II), 2M2 objectives 5–10: times of day and calendars.
 - [ ] Deliver the remaining branches with objective-level teaching evidence.
 - [ ] Conduct pupil/manual validation and revise from observations.
 
@@ -241,3 +242,12 @@ Six bilingual 2S4 lessons supply guided materials for all four numbered objectiv
 P2 now has thirteen topics, 73 lessons and 657 practice tasks. Earlier data and pupil records are preserved. An expandable topic chooser keeps phone headings near the top. [Release report](p2-quads-guided-release.md) · [1,648-case local/public evidence](p2-quads-guided-evidence.json).
 
 Next: **2M2 Time (II)**, beginning with minutes and measured time experiences. Stage the ten objectives into manageable releases if needed. Compass directions and integrated inquiry remain planned. Classroom and manual validation remain pending.
+
+
+## Fourteenth guided checkpoint · 22 November 2026
+
+Six bilingual lessons provide guided materials for **2M2 objectives 1–4**, with 54 practice tasks, 12 guided tasks and a 12-item sample check. Experience a real minute before reading clocks; connect digital notation and ordering, then measure/compare real intervals before finish/elapsed problems. Intervals are whole minutes and at most 60. A clock model advances displayed time instantly, not actual time. Two self-reported timing trials and assistance/observation notes remain separate from quiz marks.
+
+P2 now has fourteen topics, 79 lessons and 711 practice tasks. Earlier topic data and progress are preserved. [Release report](p2-minutes-guided-release.md) · [1,756-case local/public evidence](p2-minutes-guided-evidence.json).
+
+Next: **Time (II), 2M2 objectives 5–10: times of day and calendars**. This unit is still partial. Compass directions and integrated inquiry remain planned. Classroom trials and manual validation remain pending.

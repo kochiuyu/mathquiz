@@ -54,7 +54,11 @@ Earlier P1/P2 progress is preserved. Digital recognition does not certify drawin
 
 Earlier progress is preserved. A collapsible topic chooser keeps phone lesson headings near the top. Screen work does not certify drawing, making or tool use. All **1,648 distinct local and public browser cases verified**, including documented fixes and exact reruns. All 32 static suites passed and twenty-two deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **Time (II), 2M2**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Begin with reading minutes and experiencing/measuring time; split the ten-objective unit into manageable releases if needed. Compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
+**22 November 2026: the fourteenth P2 guided topic is implemented.** [Minutes, clocks and elapsed time](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=minutes) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a separate 12-item sample check. This first Time (II) release covers **2M2 objectives 1–4**: minute reading, real timing experiences, interval comparison, finishing times and elapsed minutes up to 60. P2 now has **14 topics, 79 lessons and 711 practice tasks**. [Release report](planning/p2-minutes-guided-release.md) and [evidence](planning/p2-minutes-guided-evidence.json).
+
+Earlier progress is preserved. A separate notebook holds two self-reported real timing trials per learner; these do not award quiz marks. The interactive clock advances displayed time instantly and is explicitly not a real timer. All **1,756 distinct local and public browser cases verified**, with the mobile clock-layout repair and exact reruns recorded. All 33 static suites passed and twenty-four deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** complete guided **Time (II), 2M2 objectives 5–10: times of day and calendars**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
