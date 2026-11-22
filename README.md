@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 guided planning complete.** The [P3 plan](planning/p3-guided-learning-plan.md) maps 54 numbered objectives across 13 content units plus integrated inquiry. It keeps open number, fraction, shape, measurement/time and data branches. Existing P3 practice (50 skills / 1,800 tasks, including TSA-informed additions) remains separate from new guided teaching.
+**22 November 2026: the first P3 guided topic is implemented.** [Five-digit numbers](p3-learn.html?path=numbers) has five bilingual lessons, 45 practice tasks, ten guided examples and ten new sample-check examples. Pupils build ten thousand, retain zero places, count across the boundary, explain odd/even and compare from the highest differing place. Practical records and a prediction-led number-card investigation accompany the route.
 
-**Next unfinished step:** implement the plan's **five-lesson five-digit-number pathway**. Add explicit five-digit input support and separate P3 guided progress, preserving every earlier learner record. Include practical work, a prediction-led investigation and fresh check contexts from the first release. [First-release contract](planning/p3-guided-learning-plan.md#first-implementation-contract-five-digit-numbers).
+First responses remain separate from one supported retry. A new P3 record is isolated by topic and learner; P1/P2 progress, observations, inquiry, P3 practice-bank and Smart-practice records are preserved. New check numbers differ from the teaching/practice/activity-sheet examples, but the response formats remain familiar: this is not a mastery certificate or a claim of wholly unfamiliar transfer.
 
-The [P2 application review](p2-review.html) is published and remains optional, with no P3 pass gate. Classroom trials, independent translation/accessibility review, physical printing and observed practical skills remain pending. This checkpoint changes documents only; no P3 guided lesson code has been released yet.
+**Next unfinished step:** implement **P3 multiplication by one digit**, beginning with meaningful partial products and carrying into written columns. Then open the parallel kilometre/millimetre route as a separate verified release. Fractions, shapes, measures/time and data keep the open branches in the [P3 guided plan](planning/p3-guided-learning-plan.md); no pass score gates access.
 
-[Planning evidence](planning/p3-guided-planning-evidence.json) · [P2 release and limits](planning/p2-readiness-release.md).
+[Release report](planning/p3-numbers-guided-release.md) · [Evidence](planning/p3-numbers-guided-evidence.json). Local verification is complete; public deployment checks are recorded in the release evidence when finished. The optional [P2 review](p2-review.html) remains available. Classroom trials, independent translation/accessibility review, physical printing and observed practical skills remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

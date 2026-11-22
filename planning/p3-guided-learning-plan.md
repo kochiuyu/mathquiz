@@ -1,6 +1,6 @@
 # P3 guided learning plan
 
-Prepared 22 November 2026 from the published P2 readiness handoff (`2a3e7123647dccd55749d57bbafb0b06734c9ad5`). **Planning only:** no P3 guided lessons or runtime changes are introduced by this document. Next release: five lessons on five-digit numbers.
+Prepared 22 November 2026 from the published P2 readiness handoff (`2a3e7123647dccd55749d57bbafb0b06734c9ad5`). **Updated after the first implementation:** the [five-digit pathway](../p3-learn.html?path=numbers) now supplies the five lessons specified below. The remaining P3 units are planned, not implemented guided teaching. Next release: multiplication by one digit; a separate kilometre/millimetre route follows in parallel. [Release evidence](p3-numbers-guided-evidence.json).
 
 ## Decision and source basis
 
@@ -16,7 +16,7 @@ The current [P3 skill directory](../p3-skill-levels.html) has **50 skills and 1,
 
 Existing [source classification](p3-source-classification.md) separates EDB scope, HKEAA assessment references and MathQuiz extensions. Do not make symbolic fraction scaling, expanded pictogram/chart scales or cumulative TSA coverage compulsory P3 prerequisites merely because they appear in this bank. Preserve all IDs, payloads, scoring contracts, links and source labels. The lesson journey should teach first, then link to selected existing practice with its limits clear.
 
-There are existing practical activities for all 14 curriculum units; these are resources, not recorded delivery or pupil performance. No `p3-learn.html` guided entry exists in the audited source. The new work is guided teaching and its separate progress, not another relabelling of the practice bank.
+There are existing practical activities for all 14 curriculum units; these are resources, not recorded delivery or pupil performance. At the planning audit, no `p3-learn.html` entry existed. The first implementation now adds that isolated guided entry and progress record; the practice-bank inventory above remains unchanged.
 
 ## Learning branches and prerequisites
 
@@ -156,7 +156,7 @@ This is an implementation queue, not a compulsory pupil schedule. Later objectiv
 
 ## First implementation contract: five-digit numbers
 
-Proposed entry `p3-learn.html?path=numbers`, with EN/Traditional Chinese, three existing learner slots, useful-first links to [P2 thousands](../p2-learn.html?path=thousands) and [P2 review](../p2-review.html?session=number). Keep P2 Continue independent. Proposed new IDs must be collision-checked against the repository before use:
+Implemented entry `p3-learn.html?path=numbers`, with EN/Traditional Chinese, three existing learner slots, useful-first links to [P2 thousands](../p2-learn.html?path=thousands) and [P2 review](../p2-review.html?session=number). Keep P2 Continue independent. The new IDs below were collision-checked against the pre-release runtime:
 
 | Proposed lesson | Teaching/practical task | Focused response/application |
 | --- | --- | --- |
@@ -166,7 +166,7 @@ Proposed entry `p3-learn.html?path=numbers`, with EN/Traditional Chinese, three 
 | `p3-oddevenfive` | Pairing/ones link; challenge a leading-digit argument | Determine parity and explain the deciding place |
 | `p3-comparefive` | Compare the highest differing place, including equality and near boundaries | Select symbols/order and justify a comparison |
 
-Planned teaching pattern per lesson: concise explanation and controllable model → two guided examples → three Easy, three Normal and three Difficult practice items → practical prompt and separate notes. This proposes 45 practice items and ten guided examples, not an executed inventory. Add a small ten-item topic check with different contexts from guided/practice; audit repetitions explicitly and preserve first attempts separately from supported retries. Do not call it a mastery certificate. Include a number-card investigation that preserves a prediction before testing and keeps evidence outside scores.
+Planned teaching pattern per lesson: concise explanation and controllable model → two guided examples → three Easy, three Normal and three Difficult practice items → practical prompt and separate notes. This inventory is implemented: 45 practice items and ten guided examples. Add a small ten-item topic check with different contexts from guided/practice; audit repetitions explicitly and preserve first attempts separately from supported retries. Do not call it a mastery certificate. Include a number-card investigation that preserves a prediction before testing and keeps evidence outside scores.
 
 Reuse the style and sound interaction patterns of P2, but **do not load the P2 topic loader and change its global data in place**. Choose explicit grade configuration or isolated P3 modules. The current P2 renderer whitelists `maxAnswer` values 1000/9999 and otherwise falls back to 999; setting 99999 on a new data object alone would silently reject legitimate five-digit answers. Add bounded five-digit support in the P3 contract, with tests at 9999/10000/99999 and rejection of 100000. Keep lower-grade limits unchanged.
 
@@ -186,4 +186,4 @@ Inputs, label text, diagrams and phone layouts must support five places without 
 
 ## Verification of this planning release
 
-The companion evidence records objective/unit counts, existing source inventory, relative-link validation and a runtime-preservation comparison. This release changes planning documents only; it does not claim any new lesson tests, pupil results or teaching delivery. Historical resource audits above remain useful but their old test totals are not new execution results.
+The original planning evidence records objective/unit counts, source inventory, relative links and runtime preservation for that documentation-only checkpoint. The separate first-pathway release report now records implementation checks. Neither evidence file claims pupil results or teaching delivery. Historical test totals are not new execution results.

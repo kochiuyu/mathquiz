@@ -1,4 +1,5 @@
 (()=>{
+ const entryParams=new URLSearchParams(location.search),entry=document.createElement('a');entry.href='p3-learn.html?'+new URLSearchParams({lang:entryParams.get('lang')==='zh'?'zh':'en',...(entryParams.has('learner')?{learner:entryParams.get('learner')}:{}),...(entryParams.get('learnTest')==='1'?{learnTest:'1'}:{})});entry.textContent=entryParams.get('lang')==='zh'?'小三引導學習':'P3 guided learning';document.querySelector('header').append(entry);
  const bank=P3Skills,p=new URLSearchParams(location.search),lang=p.get('lang')==='zh'?'zh':'en',loc=x=>x[lang==='zh'?1:0],t=(en,zh)=>loc([en,zh]);
  const E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const requestedUnit=p.get('unit'),skill=p.get('skill')||(requestedUnit?Object.keys(bank.skills).find(k=>bank.skills[k].unit===requestedUnit):'compose5digit3a'),level=p.get('level')||'normal',set=p.get('set')||'0',view=p.get('view')||'quiz',app=document.getElementById('app');

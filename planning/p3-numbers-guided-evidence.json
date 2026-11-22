@@ -1,0 +1,156 @@
+{
+  "release": "P3 five-digit guided pathway",
+  "date": "2026-11-22",
+  "baseline": "889c039825dcf81f569dd9e5f3f33dbb5efe3179",
+  "inventory": {
+    "lessons": 5,
+    "practice": 45,
+    "guided": 10,
+    "check": 10,
+    "investigations": 1,
+    "objectives": [
+      "3N1.1",
+      "3N1.2",
+      "3N1.3"
+    ]
+  },
+  "scopeSource": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=49",
+  "local": {
+    "p3": {
+      "distinct": 109,
+      "fullPassed": 108,
+      "failures": [
+        {
+          "name": "Layout zh 375 investigate",
+          "error": "Navigation timeout lang=zh&stage=investigate&lesson=p3-readfive"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Layout zh 375 investigate",
+          "pass": true
+        }
+      ]
+    },
+    "p2Review": {
+      "distinct": 81,
+      "passed": 81,
+      "failures": []
+    },
+    "distinctVerified": 190
+  },
+  "public": {
+    "status": "pending"
+  },
+  "static": {
+    "cases": [
+      {
+        "name": "Inventory and stable unique IDs",
+        "pass": true
+      },
+      {
+        "name": "Independent mathematical oracle for all 65 tasks",
+        "pass": true
+      },
+      {
+        "name": "English, Traditional Chinese and objective mapping",
+        "pass": true
+      },
+      {
+        "name": "Fresh check prompts and numerical contexts versus teaching, guided, practice and activity",
+        "pass": true
+      },
+      {
+        "name": "Numeric normalization, bounds and invalid forms",
+        "pass": true
+      },
+      {
+        "name": "First response immutable, one supported retry and separate score fields",
+        "pass": true
+      },
+      {
+        "name": "All tasks, all notes and full inquiry fit below record cap",
+        "pass": true
+      },
+      {
+        "name": "Learner, grade, production and test isolation with scoped reset",
+        "pass": true
+      },
+      {
+        "name": "Stale writes and deletion/recreation conflict",
+        "pass": true
+      },
+      {
+        "name": "Malformed, future and oversized records protected",
+        "pass": true
+      },
+      {
+        "name": "Blocked storage and failed writes remain honestly volatile",
+        "pass": true
+      },
+      {
+        "name": "Inquiry prediction is locked and separate from attempts",
+        "pass": true
+      },
+      {
+        "name": "Observations require task/date; notes do not award marks",
+        "pass": true
+      },
+      {
+        "name": "Earlier bank payload and lower-grade input limits unchanged",
+        "pass": true
+      }
+    ]
+  },
+  "earlierFilesUnchanged": 793,
+  "relativeLinksChecked": 219,
+  "runtimeSha256": {
+    "index.html": "ad8aad018003e0f8397a9abf34ab86a7305596ad15e3ab10748f3b097424d964",
+    "learn.html": "cf0ff35908061fc4d4c2a2b8d55a9edbadea8c17f58424a5253192ccd3905436",
+    "learn.js": "4d2c5a9c7533ce4f094cb6d3adc4b8588d3c38a788d94db385ac33b43da70f6e",
+    "p2-learn.html": "0d0436988c012256a428aeec06cbf75071f492dfceda3da1131aa17eb02033af",
+    "p2-learn.js": "c73263a80e7d6ec4e98a0ec8d9047677dd3ec580afd4fac50bba2fe4e73f31a7",
+    "p3-learn-data.js": "0881c4b0faafde6ec64b0a460fd6ce4e70d512ef6d809a3597f47e838d754f15",
+    "p3-learn-store.js": "9f59ec9b680fe978803ddbf6a8790da42a0418d790807e8093c9fa7576ef3faf",
+    "p3-learn.css": "a994d610e22a02cfcfa4003e41f3ce44f65f95837aebe9a752ce4461db8f461b",
+    "p3-learn.html": "a2ad46b189e76aed27fa2120f9cae346de172faa41f6de962eecfa6198a00718",
+    "p3-learn.js": "efb4bdf76930abe672f1d04216d7d055a8b1bfbbfd5eef386b9aad8657272b7a",
+    "p3-skill-levels.html": "4d0b06c66058aac24e0ec518d7c74f04efb737cd732cd9ff7ed2b3339088c6c4",
+    "p3-skill-levels.js": "5a983a386eb8754b6b4e89dc6a117cc5efa8480cf815cac6d0ec0727f52cab85",
+    "tests/p3-numbers-blocked.html": "efc2a73ee58768a58c5b1e66a22785d5c6dcfc118b87db89a2c16726ef5964e8",
+    "tests/p3-numbers-browser.js": "a2e965e30d434c976c79f661de238c2d463911411a065d2a8c9f8ba5bf9d2b90",
+    "tests/p3-numbers-static.cjs": "fa731af5377ff15624ddfb86bac87c8bcbea71a4610cd45a7b3ce7eaf3791a83",
+    "tests/p3-numbers.html": "8a181d4b1b9eeae37085e41b74fac71f9df7e21aabc286aeae780834db1c81f4"
+  },
+  "initialFindings": [
+    {
+      "kind": "static capacity failure",
+      "detail": "131072 characters could not hold every allowed explanation/retry; isolated P3 cap increased to 524288 and full-capacity gate passed."
+    },
+    {
+      "kind": "test correction",
+      "detail": "Chinese practical instructions were incorrectly held to English minimum length; language-appropriate checks corrected."
+    },
+    {
+      "kind": "browser preliminary run",
+      "detail": "106/106 passed before added learner/boundary/model/reload checks."
+    },
+    {
+      "kind": "outer navigation timeout",
+      "detail": "Final local runner continued; polled existing run instead of restarting. The one case timeout is separately listed."
+    }
+  ],
+  "manualSample": {
+    "language": "zh-HK",
+    "width": 320,
+    "keyboard": "Full-width ６１０４２ entered with keyboard Enter; recorded 61042, focus p3-status, no overflow. Exact test-key original restored.",
+    "visual": "Five places and controls readable at 320px; no overflow.",
+    "screenshot": "screenshot-2026-11-22T03-34-42-801Z-ab00d23c.png"
+  },
+  "limits": [
+    "No new full historical whole-site regression claim; selected shared navigation/storage regressions and unchanged-file comparison used.",
+    "New check numbers with familiar response formats, not proof of wholly unfamiliar transfer.",
+    "Pupil trials, independent translation, screen-reader listening, physical printing and observed practical activity pending."
+  ],
+  "next": "P3 multiplication by one digit, then a separate parallel kilometre/millimetre route."
+}
