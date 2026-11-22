@@ -31,7 +31,7 @@ Local browser suites: division 91/91, length 81/81, multiplication 91/91, number
 
 At a 320px outer viewport, Traditional Chinese full-width quotient/remainder entry with Enter recorded `42,0`, focused feedback and did not overflow. Its owned test record was removed afterward. The 432 ÷ 4 mobile column screenshot was inspected: 1,0,8 aligned to their places and exchange labels were readable. Automated suites restore their owned test keys and compare unrelated records.
 
-Public browser suites, deployment and content-hash verification: pending runtime publication. The [evidence file](p3-division-guided-evidence.json) records final status. Initial GitHub source read returned a transient fetch failure; retry confirmed the expected baseline.
+All **373 distinct public browser cases verified**, alongside the 373 local cases. Public full runs had 4 individual navigation timeouts; each exact case passed on rerun. Original failures and reruns are retained in the [evidence file](p3-division-guided-evidence.json). Runtime commit `dce611d31546e75a50108534f9fef5630748b7b4` deployed successfully in [run 44994385150](https://github.com/kochiuyu/mathquiz/actions/runs/44994385150). All fifteen published file hashes matched. Browser wrapper timeouts did not terminate the tests; existing runs were polled rather than restarted. The final documentation deployment is checked separately after this evidence update. Public keyboard entry and the zero-quotient model were also checked. Initial GitHub source read returned a transient fetch failure; retry confirmed the expected baseline.
 
 ## Remaining validation and next work
 

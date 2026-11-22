@@ -81,7 +81,61 @@
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "division": 91,
+    "length": 81,
+    "multiply": 91,
+    "numbers": 110,
+    "distinctVerified": 373,
+    "failures": [
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-exchangequotient together",
+        "error": "Navigation timeout lang=zh lesson=p3-exchangequotient stage=together"
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-kilometre difficult",
+        "error": "Navigation timeout lang=zh lesson=p3-kilometre stage=difficult"
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-carryproduct together",
+        "error": "Navigation timeout lang=zh lesson=p3-carryproduct stage=together"
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-crossfive easy",
+        "error": "Navigation timeout lang=zh&lesson=p3-crossfive&stage=easy"
+      }
+    ],
+    "exactReruns": [
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-exchangequotient together",
+        "pass": true
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-kilometre difficult",
+        "pass": true
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-carryproduct together",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-crossfive easy",
+        "pass": true
+      }
+    ],
+    "manual": {
+      "keyboard": "Full-width quotient/remainder ４２ and ０ submitted with Enter; stored 42,0 and focused p3-status; no overflow; owned test key removed.",
+      "model": "432 divided by 4 displays 108 remainder 0, zero tens aligned; mobile screenshot inspected.",
+      "screenshot": "screenshot-2026-11-22T06-40-49-056Z-f3a17f50.png"
+    }
   },
   "runtimeSha256": {
     "p3-division-data.js": "ef7922220da33a9b4400698e1dd269e8e9db854247ed8c300d2e9de6a0bbf498",
@@ -99,5 +153,94 @@
   "limits": [
     "Classroom trials, independent translation, screen-reader listening, physical printing and observed column work pending.",
     "Only current P3 suites run; other resources compared unchanged."
+  ],
+  "runtimeDeployment": {
+    "commit": "dce611d31546e75a50108534f9fef5630748b7b4",
+    "run": 44994385150,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "8e7eacaed5b5eeb43f45c2eef43a46983f1f34c80e4e3a5657a24f58919d1730"
+    },
+    {
+      "path": "p3-division-data.js",
+      "match": true,
+      "sha256": "ef7922220da33a9b4400698e1dd269e8e9db854247ed8c300d2e9de6a0bbf498"
+    },
+    {
+      "path": "p3-division-models.js",
+      "match": true,
+      "sha256": "c8d5d5a32f9b12a2426122b42b9cc0068d1de84f3e2bc68ccf405ac1985380f0"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "024e66f73d16de5b45edc46c79bca8d5c41f3cae94df2831e2628137f7b20393"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "a34b31508f06f758851dbbf775a82a241ddfdb753c7db705383aa88007e1e8ba"
+    },
+    {
+      "path": "p3-learn.css",
+      "match": true,
+      "sha256": "7a70090f0661cdd83532dffcc4cf9a99de6f6d29b921f45382615afd55d98bc9"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "f39b98b793f7e0be8982b2ee691fd0731665ea5af6b7def1f5b2ccaead15709a"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "f23967992e71c1630e3fc64fd8262fd61b28be3e1e161fb45e868fb714a829a2"
+    },
+    {
+      "path": "planning/p3-division-guided-evidence.json",
+      "match": true,
+      "sha256": "56082da58fe4bdc68d3bc3fae904293642cb8860703af1f181ce00e11d4ee4d4"
+    },
+    {
+      "path": "planning/p3-division-guided-release.md",
+      "match": true,
+      "sha256": "98f8ccbcdcb0ddf3606afe99618625f2c8d36ca5bfe6d66cb9db35eca81fa7f6"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "1c5404155230871a3ccd09008dd18440bd12871c95a6db9a160a7fc96a5c2a41"
+    },
+    {
+      "path": "tests/p3-division-blocked.html",
+      "match": true,
+      "sha256": "1e762070fd8ed84ba00d1d0080a48cae068cc3f9d21d988ce36943cd81838995"
+    },
+    {
+      "path": "tests/p3-division-browser.js",
+      "match": true,
+      "sha256": "6b4830e3e355748b737824dd9e7e301a274bd1ca267bde66b1388ec8d200302d"
+    },
+    {
+      "path": "tests/p3-division-static.cjs",
+      "match": true,
+      "sha256": "2c15fedb945c5ded393193f09d2bf2aa7d342e222d546230024aa22fbaa27c67"
+    },
+    {
+      "path": "tests/p3-division.html",
+      "match": true,
+      "sha256": "0494f6dd77861206403bd12e999db28087707a3117c6dff9738e714b44424395"
+    }
+  ],
+  "relativeLinksChecked": 227,
+  "manual": "Local 320px outer viewport: Traditional Chinese full-width two-field entry + Enter recorded 42,0 and focused p3-status, no overflow. Mobile 432/4 column screenshot inspected. Test record restored. Public model and keyboard readback checked separately.",
+  "transportNotes": [
+    "Initial GitHub source read failed transiently; retry confirmed baseline. One HTML readback failed then matched on retry.",
+    "Large local payload read was truncated before parsing; nothing was pushed by that failed attempt. Chunked read loaded the exact payload and one runtime push succeeded.",
+    "Browser wrapper navigation and wait timeouts were polled without interrupting the live suites. Individual case failures and exact reruns are recorded below."
   ]
 }

@@ -8,7 +8,7 @@ The four P3 guided topics contain **22 lessons and 198 practice tasks**. Divisio
 
 **Next unfinished step:** implement **P3 fraction foundations**, starting with equal parts of one object and one set, identifying the whole, zero and one, and model-based equivalence. Follow the [P3 guided plan](planning/p3-guided-learning-plan.md); the fractions branch has no division-score lock.
 
-[Division release and verification](planning/p3-division-guided-release.md) · [Evidence](planning/p3-division-guided-evidence.json). Local checks are complete; public verification is recorded in those documents after deployment. Classroom trials, independent translation/accessibility review, physical printing and observed practical performance remain pending.
+[Division release and verification](planning/p3-division-guided-release.md) · [Evidence](planning/p3-division-guided-evidence.json). All **373 distinct local and public browser cases verified**, with exact timeout reruns retained; ten static gates passed and all fifteen runtime-release files matched publicly. All 823 inherited files outside the seven explicit shared changes remain unchanged. Classroom trials, independent translation/accessibility review, physical printing and observed practical performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
