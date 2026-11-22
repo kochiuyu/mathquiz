@@ -40,15 +40,72 @@
         "pass": true
       }
     ],
-    "navigationToolTimeout": "Initial navigate call timed out while the harness was still running; completion was read separately."
+    "navigationToolTimeout": "Initial navigate call timed out while the harness was still running; completion was read separately.",
+    "additionalRuns": [
+      {
+        "reason": "chart spacing fix",
+        "distinct": 122,
+        "failure": "Bad record {broken — navigation timeout",
+        "resolved": "same case passed in final spacing-assertion run"
+      },
+      {
+        "reason": "final spacing and bar-quantity assertions",
+        "distinct": 122,
+        "initialPasses": 121,
+        "failure": "Stale tab refuses and retains draft — navigation timeout",
+        "exactRerun": "passed"
+      }
+    ]
   },
   "public": {
-    "status": "pending"
+    "done": true,
+    "distinct": 122,
+    "runtimeCommit": "ce2b836c49f64a7f43a0de3292ac7090af90cebc",
+    "runs": [
+      {
+        "commit": "4e31cfdaac70eac9e1658bb00c20ea290c064341",
+        "distinct": 122,
+        "initialPasses": 121,
+        "failures": [
+          {
+            "name": "Fresh expected response zh m2",
+            "error": "Navigation timeout lang=zh&session=packs"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Fresh expected response zh m2",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "commit": "ce2b836c49f64a7f43a0de3292ac7090af90cebc",
+        "distinct": 122,
+        "initialPasses": 121,
+        "failures": [
+          {
+            "name": "Map link zh mixed",
+            "error": "Navigation timeout lang=zh&path=mixed"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Map link zh mixed",
+            "pass": true
+          }
+        ],
+        "includes": "Final tick spacing and bar quantity assertions"
+      }
+    ]
   },
   "repairs": [
     "Corrected missing station geometry tags; static mapping now covers all 54 objectives.",
     "Changed m1 137×6 to 139×6, d1 173÷8 to 197÷8 and f1 3/4=6/8 to 5/6=10/12 after detecting prior tuples.",
-    "Final local browser run retained one timeout failure and successful exact rerun."
+    "Final local browser run retained one timeout failure and successful exact rerun.",
+    "Live visual inspection found crowded chart tick labels. Widened plot scale; tests now verify tick bounding boxes do not overlap and bar lengths represent 18/10/14 on scale 2.",
+    "First exact-byte readback reported CRLF versus LF differences in 15 local artifacts. Normalised only the changed local artifacts to published LF; all 18 then matched.",
+    "GitHub fetch failed on initial status and first chart-patch push. Confirmed branch unchanged, then retried successfully; no permission or authentication bypass."
   ],
   "visualReview": [
     "Chinese mobile layout and fraction strips inspected at 360 CSS px; no horizontal overflow.",
@@ -58,5 +115,131 @@
     "No observed pupil performance or readiness claim.",
     "Independent bilingual review, screen-reader listening, printing and actual tools/materials remain pending.",
     "Novelty audit is conservative and cannot establish unseen exposure for an individual."
+  ],
+  "distinctLocalAndPublicCases": 244,
+  "preservation": {
+    "unchangedInheritedFiles": 916,
+    "changedInherited": [
+      "README.md",
+      "planning/p3-guided-learning-plan.md",
+      "planning/p3-coverage-review.md",
+      "p3-learn.js",
+      "p3-learn.html"
+    ],
+    "resolvedDocumentationLinks": 367
+  },
+  "runtimeReadbacks": [
+    {
+      "file": "p3-learn.html",
+      "match": true,
+      "sha256": "9d0f1278f3aa6c1e1828b35b21886aa080dea740b63a0162897fa7087eed9149"
+    },
+    {
+      "file": "p3-learn.js",
+      "match": true,
+      "sha256": "dd0e2116cab7179a81fe3886ce7669a0b6fa92fbfdbadcee3e3f644aa91a5406"
+    },
+    {
+      "file": "p3-review-data.js",
+      "match": true,
+      "sha256": "d7b475a9008cfdd2b1b4ca8b16e54d06194edf0156f3a1c00e72a960d77a4166"
+    },
+    {
+      "file": "p3-review-store.js",
+      "match": true,
+      "sha256": "176ff32f707a5ad39727dbc26a660ac8ee104648da19a7bf2073a891ab9e1abd"
+    },
+    {
+      "file": "p3-review.css",
+      "match": true,
+      "sha256": "6e4ba2d4fe710c24240c62f09204864fa895635dde08d14c500b3e6e8ca7c96b"
+    },
+    {
+      "file": "p3-review.html",
+      "match": true,
+      "sha256": "918309f51c901fa992805bda678aaf507682fcecf05adccb263d4298a21c22a1"
+    },
+    {
+      "file": "p3-review.js",
+      "match": true,
+      "sha256": "c025c27f3ed2e5beda11b397eb8b835a84e20f65234b389b7c240610b4753b48"
+    },
+    {
+      "file": "README.md",
+      "match": true,
+      "sha256": "d24f95ebde5f15e9424e6ae72f5efe56948cde9d697f45e4b3742eaa5c2abaad"
+    },
+    {
+      "file": "planning/p3-coverage-review.md",
+      "match": true,
+      "sha256": "3b17e8d18587d544baccd6b873e313bcbf278b0709085e1e2930dc7c5626cebe"
+    },
+    {
+      "file": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "93e710cd826c7c105558b243b339a0c17702c7127995fcccde9bd2f687941d4f"
+    },
+    {
+      "file": "planning/p3-review-evidence.json",
+      "match": true,
+      "sha256": "53a2e84802f8cb9e44f446f89fd31b269849576a136d618d7f0926b956d05793"
+    },
+    {
+      "file": "planning/p3-review-novelty.json",
+      "match": true,
+      "sha256": "6a9802289c269a07b7e3acfed59861ca1f438ca89bc9ef9d0b4ae4fc9193ecbb"
+    },
+    {
+      "file": "planning/p3-review-release.md",
+      "match": true,
+      "sha256": "8f4eadcc699138b4198d6952155329ee5da77e1652b6dd986e6e76ef39dd1ea9"
+    },
+    {
+      "file": "tests/p3-review-blocked.html",
+      "match": true,
+      "sha256": "c01bb6088f4d30f3e1fa1c25be90b5575044a7aec51e623a622fecf5a63c85cf"
+    },
+    {
+      "file": "tests/p3-review-browser.js",
+      "match": true,
+      "sha256": "7ad6db45231aa1ee0e0b6b11327280086f6ece3653f23a947c01beb178082e04"
+    },
+    {
+      "file": "tests/p3-review-novelty.cjs",
+      "match": true,
+      "sha256": "b5e1b08600d9d7217df223ee27632ca388fa7956a3c76f4ddc2d84bd1ecee196"
+    },
+    {
+      "file": "tests/p3-review-static.cjs",
+      "match": true,
+      "sha256": "557322399950f2160c981a406ca612dec3644a6a98bed1def9f3cd57fb352a8e"
+    },
+    {
+      "file": "tests/p3-review.html",
+      "match": true,
+      "sha256": "ec1d3149f0d549712669e152e61a3846d9b964c507b0b6774d4db4beabdcf7e2"
+    }
+  ],
+  "runtimeDeployments": [
+    [
+      {
+        "id": 45044327899,
+        "head_sha": "4e31cfdaac70eac9e1658bb00c20ea290c064341",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/kochiuyu/mathquiz/actions/runs/45044327899",
+        "name": "pages build and deployment"
+      }
+    ],
+    [
+      {
+        "id": 45044977874,
+        "head_sha": "ce2b836c49f64a7f43a0de3292ac7090af90cebc",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/kochiuyu/mathquiz/actions/runs/45044977874",
+        "name": "pages build and deployment"
+      }
+    ]
   ]
 }

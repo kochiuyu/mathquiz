@@ -2,7 +2,7 @@
 
 ## Current guided learning handoff
 
-**23 November 2026: separate P3 application review implemented.** [Open the review](p3-review.html) · [Release and 54-objective map](planning/p3-review-release.md) · [Evidence](planning/p3-review-evidence.json).
+**23 November 2026: separate P3 application review published and verified.** [Open the review](p3-review.html) · [Release and 54-objective map](planning/p3-review-release.md) · [Evidence](planning/p3-review-evidence.json).
 
 **16 bilingual tasks in eight freely chosen sessions, nine practical stations and inquiry evidence review.** First responses and supported retries stay separate; original estimates, oral accounts and predictions are retained. Practical observations do not turn into screen scores. All earlier progress remains unchanged. Guided sample checks now explicitly allow familiar tasks.
 
