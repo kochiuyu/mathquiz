@@ -8,7 +8,7 @@ The eleven P3 guided topics contain **61 lessons and 549 practice tasks**. Writt
 
 **Next unfinished step: P3 bar charts.** Mixed calculations and remaining fraction comparison/operations follow in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Time IV release](planning/p3-clock24-guided-release.md) · [Evidence](planning/p3-clock24-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+[Time IV release](planning/p3-clock24-guided-release.md) · [Evidence](planning/p3-clock24-guided-evidence.json). **291 distinct local and public browser cases verified**, with exact reruns retained; eleven static suites passed after a preservation-fixture correction. All fifteen runtime files matched; 879 inherited files remain unchanged. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
