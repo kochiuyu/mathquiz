@@ -267,7 +267,82 @@
     }
   },
   "public": {
-    "status": "pending"
+    "distinctVerified": 308,
+    "suites": [
+      {
+        "name": "bars",
+        "cases": 107,
+        "failures": [
+          {
+            "name": "Tasks zh p3-barparts easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-barparts\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "clock24",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-twelve24 difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-twelve24\",\"stage\":\"difficult\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Tasks zh p3-crossfive together",
+            "error": "Navigation timeout lang=zh&lesson=p3-crossfive&stage=together",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "bars",
+        "name": "Tasks zh p3-barparts easy",
+        "pass": true
+      },
+      {
+        "suite": "clock24",
+        "name": "Tasks zh p3-twelve24 difficult",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-crossfive together",
+        "pass": true
+      }
+    ],
+    "native": {
+      "language": "zh",
+      "width": 320,
+      "orientation": "h",
+      "fullWidthCount": "４",
+      "normalized": "4",
+      "heights": [
+        28,
+        28,
+        28
+      ],
+      "widths": [
+        28,
+        56,
+        70
+      ],
+      "scale": 5,
+      "focus": "bar-builder-status",
+      "status": "次數與提供表相符，請成人審閱標題、單位與解釋，不計分。",
+      "overflow": false,
+      "savedRecord": null,
+      "screenshot": "browser-screenshots/screenshot-2026-11-22T13-45-03-255Z-1977434d.png"
+    }
   },
   "runtimeSha256": {
     "p3-bars-data.js": "7e34737e68f6ea7dfee8415faacf26f87e9953aa29d5a75d47a0010174a7861b",
@@ -285,5 +360,169 @@
   "limits": [
     "Classroom and independent manual validation pending.",
     "Only focused, Time IV and numbers browser suites fully rerun; shared navigation across all twelve topics checked."
-  ]
+  ],
+  "runtimeDeployment": {
+    "commit": "ccbab6ecee6cb905bfa08cb4441417173a198dd4",
+    "run": 45028600443,
+    "conclusion": "success"
+  },
+  "runtimeReadbacks": [
+    {
+      "path": "README.md",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "62964c327ab4394add6411d2fc72794700fe0fb8d638291796927896a0d41beb"
+        }
+      ]
+    },
+    {
+      "path": "p3-bars-data.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "7e34737e68f6ea7dfee8415faacf26f87e9953aa29d5a75d47a0010174a7861b"
+        }
+      ]
+    },
+    {
+      "path": "p3-bars-models.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "514cdafb5718b91cc226bab1f3cde36a5f7a99d85b4df479bdd0b8bf732cf33a"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "afdf9529b52308940f7a725e9e0426c8ba1085d241beda30e6d9fe72af322ea1"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "c1e2771da1922583ac14d560749bd1d4efa62dc11d3ab7594302c81c9f6c3fbf"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "34430f906a66472213c3577118dbbf35583c65c611d3fd95cbfc57ee8c20ff72"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "7292d3c2a211badd71090d9daec5abe2dd200f4c74cb6abc77a40b3cd6e43e61"
+        }
+      ]
+    },
+    {
+      "path": "planning/p3-bars-guided-evidence.json",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "c201e644e95f41d1c8a8ff141f16d504f2b5749b41c78ce988c7c558db6b2d07"
+        }
+      ]
+    },
+    {
+      "path": "planning/p3-bars-guided-release.md",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "7d3e76cada598dd57abf56da2f8f8ce0d8925374ee7cd5f979df0837981868c4"
+        }
+      ]
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "be0096e26a9089b573705031b4bd5ffc21342999c28376490c08235249e203f8"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-bars-blocked.html",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "9a94044ee4127624f2459d0aa1ef0525da5e87b7168b391596d9cd8b5bea5805"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-bars-guided-browser.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "70b67ef50ff05e1208c8648f8a773f60fb5c5f80ed0262f864c518042716db17"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-bars-guided-static.cjs",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "73ee2fd0646aadc9225787dfcd09abad425647f85fdbfb422796bf5f44b08160"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-bars-guided.html",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "13319a79d06a1c9bd4ed56b25bd6b280c4b1ba0b69ae36806adfe41c765bff2e"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-clock24-guided-browser.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "9f1223782f59f255f441e3104cd89ef5eaa58265b68906e67df4929acc361a94"
+        }
+      ]
+    }
+  ],
+  "githubReadbacks": [
+    "p3-bars-data.js",
+    "p3-bars-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
+  ],
+  "connectionRecovery": "Initial four OpenBot MCP comparisons returned no matching content; diagnostic model request reported fetch failed. Built-in server cannot be tested with test_mcp_server. Alternate GitHub connector returned four matching files. One deployment-status request timed out; exact retry confirmed success."
 }

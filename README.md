@@ -8,7 +8,7 @@ The twelve P3 guided topics contain **67 lessons and 603 practice tasks**. Horiz
 
 **Next unfinished step: P3 mixed calculations**, then remaining fraction comparison and pictured operations in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Bar-chart release](planning/p3-bars-guided-release.md) · [Evidence](planning/p3-bars-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+[Bar-chart release](planning/p3-bars-guided-release.md) · [Evidence](planning/p3-bars-guided-evidence.json). **308 distinct browser cases verified in each local/public environment**, with blank-form and test-selector corrections and exact timeout reruns retained. Three static suites (34 gates) passed; all fifteen runtime files matched and 887 inherited files remain unchanged. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
