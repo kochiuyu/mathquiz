@@ -1,6 +1,6 @@
 # P3 guided learning plan
 
-Prepared 22 November 2026 from the published P2 readiness handoff (`2a3e7123647dccd55749d57bbafb0b06734c9ad5`). **Updated after the first implementation:** the [five-digit pathway](../p3-learn.html?path=numbers) now supplies the five lessons specified below. The remaining P3 units are planned, not implemented guided teaching. Next release: multiplication by one digit; a separate kilometre/millimetre route follows in parallel. [Release evidence](p3-numbers-guided-evidence.json).
+Prepared 22 November 2026 from the published P2 readiness handoff (`2a3e7123647dccd55749d57bbafb0b06734c9ad5`). **Updated after the first implementation:** the [five-digit pathway](../p3-learn.html?path=numbers) now supplies the five lessons specified below. The remaining P3 units are planned, not implemented guided teaching. Multiplication by one digit is also now implemented as [six guided lessons](../p3-learn.html?path=multiply), with [separate evidence](p3-multiply-guided-evidence.json). Next release: the parallel kilometre/millimetre route. [Release evidence](p3-numbers-guided-evidence.json).
 
 ## Decision and source basis
 

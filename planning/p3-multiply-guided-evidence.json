@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-22",
+  "release": "P3 multiplication guided teaching",
+  "baseline": "01cf014598624f3df29f49f19f409a28596a2965",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "estimates": 3,
+    "investigations": 1,
+    "P3TotalLessons": 11,
+    "P3TotalPractice": 99
+  },
+  "objectives": [
+    "3N2.1",
+    "3N2.2",
+    "3N2.3"
+  ],
+  "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=50",
+  "static": {
+    "cases": [
+      {
+        "name": "Inventory, bilingual content, stable IDs and objectives",
+        "pass": true
+      },
+      {
+        "name": "Repeated-addition oracle and factor limits",
+        "pass": true
+      },
+      {
+        "name": "Checks differ from worked and practice factor tuples",
+        "pass": true
+      },
+      {
+        "name": "Number data and all other inherited files preserved except explicit shared engine/docs",
+        "pass": true
+      },
+      {
+        "name": "Topic and learner isolation including stale older number tab",
+        "pass": true
+      },
+      {
+        "name": "First/retry immutability and fresh check limits",
+        "pass": true
+      },
+      {
+        "name": "Prediction, estimates and observations never award marks",
+        "pass": true
+      },
+      {
+        "name": "Stale writes, corrupt/future/oversized records and explicit reset",
+        "pass": true
+      },
+      {
+        "name": "Blocked storage and full capacity with every field filled",
+        "pass": true
+      },
+      {
+        "name": "Column model arithmetic independent enumeration",
+        "pass": true
+      }
+    ]
+  },
+  "unchangedInheritedFiles": 807,
+  "relativeLinksChecked": 222,
+  "local": {
+    "multiplication": {
+      "distinct": 91,
+      "fullPassed": 90,
+      "failures": [
+        {
+          "name": "Layout zh 320 p3-threeproduct",
+          "error": "Navigation timeout lang=zh lesson=p3-threeproduct stage=learn"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Layout zh 320 p3-threeproduct",
+          "pass": true
+        }
+      ]
+    },
+    "numbers": {
+      "distinct": 110,
+      "fullPassed": 109,
+      "failures": [
+        {
+          "name": "Learner isolation, explicit route and continue",
+          "error": "Navigation timeout stage=map"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Learner isolation, explicit route and continue",
+          "pass": true
+        }
+      ]
+    },
+    "distinctVerified": 201
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-learn-store.js": "353a98b45f14141de8d9b9af225ec5ee70254dfa9b697b577812d2b123a4736f",
+    "p3-learn-topics.js": "cbbd29094a5a142514b80578b25db7a39a506f5b0129524978e8fe07a3e3e801",
+    "p3-learn.css": "48df98cec317da02a289395e737fa3415a615b51dd0b0b56109aaa563237cbc4",
+    "p3-learn.html": "d4cbe7b25d3353c6342324bd6d2e7ce4d121a4aa69009aacd620f84e748ebfb3",
+    "p3-learn.js": "e17aa157a5ff36f96c00b165df9303576f8411200832f3470898d907226e839d",
+    "p3-multiply-data.js": "874bd5338f13c8d84a88bd40b70e4d8eced3c00fc0baaaa5434bef211711f46a",
+    "p3-multiply-models.js": "35bfa18e7afd4333cfd0231968c80cf09e85d05c82960814e8003ee00d27af3a",
+    "tests/p3-multiply-blocked.html": "6896ed9be84843d7df38df3320512f6aa80de777fdc7ba974e19ce09d3cd5a68",
+    "tests/p3-multiply-browser.js": "7830f3ca7a8c98570b1a174c80710b458a3df06be44a0a813a92ca6afcf354cd",
+    "tests/p3-multiply-static.cjs": "bb400e7fa4133b647f33051de31ce571526adc3bcb7461f5a3e0045c76b59953",
+    "tests/p3-multiply.html": "5217ca2f9bd72b2034481d1ad4377b8ecb6f5561dbd98036460cf81da93b3a3f"
+  },
+  "observations": [
+    "Preliminary multiplication 91/91 passed; two story prompts were then strengthened to include three factors and intermediate units; final suite repeated.",
+    "Outer browser navigation/wait timeouts did not stop the test harness. Existing results were polled without restarting the running suite.",
+    "Native 320px Traditional Chinese full-width input ６３９ + Enter recorded 639 and focused p3-status without horizontal overflow. Original test record restored.",
+    "Chinese column-model screenshot inspected: aligned places and zero/carry explanations readable."
+  ],
+  "manualScreenshot": "screenshot-2026-11-22T04-48-58-456Z-5fd878b2.png",
+  "limits": [
+    "No new whole-site historical regression claim. Both shared P3 topic suites rerun; other inherited resources compared unchanged.",
+    "First-response matches do not grade explanations, column writing or practical handling.",
+    "Independent translation, screen-reader listening, physical printing, classroom trials and observed practical performance pending."
+  ],
+  "next": "P3 kilometre/millimetre pathway, as a parallel measures route."
+}

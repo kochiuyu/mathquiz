@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: the first P3 guided topic is implemented.** [Five-digit numbers](p3-learn.html?path=numbers) has five bilingual lessons, 45 practice tasks, ten guided examples and ten new sample-check examples. Pupils build ten thousand, retain zero places, count across the boundary, explain odd/even and compare from the highest differing place. Practical records and a prediction-led number-card investigation accompany the route.
+**22 November 2026: P3 multiplication is implemented.** [Multiply, exchange and explain](p3-learn.html?path=multiply) adds six bilingual lessons, 54 practice tasks, 12 guided examples and a 12-item sample check. Split values and carrying lead into three-digit columns (including zeros and four-digit products), helpful three-factor grouping, stories and then estimation after exact work.
 
-First responses remain separate from one supported retry. A new P3 record is isolated by topic and learner; P1/P2 progress, observations, inquiry, P3 practice-bank and Smart-practice records are preserved. New check numbers differ from the teaching/practice/activity-sheet examples, but the response formats remain familiar: this is not a mastery certificate or a claim of wholly unfamiliar transfer.
+The two P3 topics now contain **11 lessons and 99 practice tasks**. Multiplication has an independent Continue route and learner record. Original estimates, predictions, first answers and supported retries remain distinct; physical work and written-column explanations need separate observation. Earlier P1/P2 and P3 number work and practice-bank results are preserved.
 
-**Next unfinished step:** implement **P3 multiplication by one digit**, beginning with meaningful partial products and carrying into written columns. Then open the parallel kilometre/millimetre route as a separate verified release. Fractions, shapes, measures/time and data keep the open branches in the [P3 guided plan](planning/p3-guided-learning-plan.md); no pass score gates access.
+**Next unfinished step:** implement the parallel **P3 kilometre/millimetre pathway**, using physical references and real ruler measurements before estimates and records. It does not require completing every arithmetic topic. Later releases follow the open branches in the [P3 guided plan](planning/p3-guided-learning-plan.md).
 
-[Release report](planning/p3-numbers-guided-release.md) · [Evidence](planning/p3-numbers-guided-evidence.json). All **191 distinct local and public browser cases are verified**, including documented exact timeout reruns. Fourteen static gates passed; 793 inherited files remain unchanged. Runtime deployment and twenty initial file readbacks matched. The optional [P2 review](p2-review.html) remains available. Classroom trials, independent translation/accessibility review, physical printing and observed practical skills remain pending.
+[Multiplication release](planning/p3-multiply-guided-release.md) · [Evidence](planning/p3-multiply-guided-evidence.json). Local and public verification outcomes are recorded in the evidence. Classroom trials, independent translation/accessibility review, physical printing and observed practical work remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
