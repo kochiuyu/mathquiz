@@ -2,15 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 fraction foundations is implemented.** [Open the pathway](p3-learn.html?path=fractions): five bilingual lessons, 45 practice tasks, ten guided examples and ten fresh sample checks. Equal parts and a named whole lead into object/set fractions, numerator/denominator/line, zero and one, and model-based equivalence.
+**22 November 2026: P3 parallel lines and quadrilaterals is implemented.** [Open the pathway](p3-learn.html?path=quads): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve fresh sample checks. It covers all six **3S1 objectives**, with parallel-line extension and tool demonstrations, both opposite-side pairs, square/rectangle inclusion, trapezium bases and a blank construction grid.
 
-This release covers **3N5.1–2**, not the whole fraction unit. **3N5.3 comparison and 3N5.4 pictured addition/subtraction remain unfinished guided work**, queued later in the [P3 plan](planning/p3-guided-learning-plan.md). No division-score lock or simplest-form requirement is introduced. Picture-count questions explicitly request shown counts; equivalent amounts are acknowledged separately. Earlier practice-bank scoring is unchanged.
+The six P3 guided topics contain **33 lessons and 297 practice tasks**. First answers, supported retries, practical notes and original inquiry predictions remain separate per topic and learner. Models are temporary and unscored. Actual drawing, making and instrument handling need separate observations; a screen choice does not certify those actions. Earlier progress and practice-bank rules are preserved.
 
-The five P3 guided topics contain **27 lessons and 243 practice tasks**. First answers, supported retries, practical notes and original investigation predictions remain separate per topic and learner. Earlier progress is preserved.
+**Next unfinished step in the release queue:** **P3 triangle concepts, relationships and construction**. Fraction comparison and pictured operations (3N5.3–4), mixed calculations and later measure/time/data topics remain explicitly queued in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-**Next unfinished step in the release queue:** **P3 parallel lines and quadrilateral properties**, beginning with recognising, making and drawing parallel lines. Fraction comparisons and operations remain explicitly queued, not complete.
-
-[Fraction-foundation release](planning/p3-fractions-guided-release.md) · [Evidence](planning/p3-fractions-guided-evidence.json). All **454 distinct local and public P3 browser cases verified**, with exact timeout reruns retained; ten static gates passed and all fifteen published files matched. All 831 inherited files outside seven explicit shared changes remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and actual folding/manipulative performance remain pending.
+[Quadrilateral release](planning/p3-quads-guided-release.md) · [Evidence](planning/p3-quads-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and actual instrument/manipulative performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

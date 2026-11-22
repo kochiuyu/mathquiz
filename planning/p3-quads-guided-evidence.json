@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-22",
+  "baseline": "e06fd18cd2045504822e793094a4a272cfbadc5b",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "P3Topics": 6,
+    "P3Lessons": 33,
+    "P3Practice": 297
+  },
+  "guidedObjectives": [
+    "3S1.1",
+    "3S1.2",
+    "3S1.3",
+    "3S1.4",
+    "3S1.5",
+    "3S1.6"
+  ],
+  "static": {
+    "cases": [
+      {
+        "name": "Six bilingual lessons, 54 practice, 12 guided and 12 fresh checks",
+        "pass": true
+      },
+      {
+        "name": "Independent direction, opposite-length, bases and request oracle for every task",
+        "pass": true
+      },
+      {
+        "name": "SVG retains direction and both opposite pairs, labels and distinct endpoints",
+        "pass": true
+      },
+      {
+        "name": "Every check has fresh represented data or procedure prompt",
+        "pass": true
+      },
+      {
+        "name": "Builder classification exhaustive on a 3 by 3 grid, independent of order/turn",
+        "pass": true
+      },
+      {
+        "name": "Blank builder has square cells so displayed angles match coordinates",
+        "pass": true
+      },
+      {
+        "name": "Earlier files unchanged except seven explicit shared runtime/handoff files",
+        "pass": true
+      },
+      {
+        "name": "Six topics and all learners stay isolated; older writers remain usable",
+        "pass": true
+      },
+      {
+        "name": "Choice validation, full-width numbers and earlier numeric bounds",
+        "pass": true
+      },
+      {
+        "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity; every field filled",
+        "pass": true
+      }
+    ]
+  },
+  "initialFailures": [
+    {
+      "gate": "Independent task oracle",
+      "item": "p3-qcheck-2",
+      "problem": "second line lost first line rise",
+      "fix": "Corrected second endpoint"
+    },
+    {
+      "gate": "Rendered geometry",
+      "problem": "exact cross-product comparison on floating-point SVG pixels",
+      "fix": "Tolerance only for rendered pixels; integer source remains exact"
+    },
+    {
+      "gate": "Visual inspection",
+      "problem": "builder cells had unequal width/height",
+      "fix": "Square cells and new explicit static gate"
+    },
+    {
+      "gate": "Initial browser suite",
+      "count": 91,
+      "passed": 90,
+      "failed": [
+        {
+          "name": "Model and practical zh builder",
+          "error": "duplicate rejected"
+        }
+      ],
+      "fix": "zh-HK uses Chinese message via locale-prefix check"
+    }
+  ],
+  "unchangedInheritedFiles": 839,
+  "local": {
+    "distinctCases": 545,
+    "suites": [
+      {
+        "topic": "quads",
+        "done": true,
+        "count": 91,
+        "originalFailures": [
+          {
+            "name": "Topic and learner isolation through UI reset",
+            "error": "Navigation timeout {\"stage\":\"learn\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Topic and learner isolation through UI reset",
+            "pass": true
+          }
+        ],
+        "verified": 91
+      },
+      {
+        "topic": "fractions",
+        "done": true,
+        "count": 81,
+        "originalFailures": [],
+        "exactReruns": [],
+        "verified": 81
+      },
+      {
+        "topic": "division",
+        "done": true,
+        "count": 91,
+        "originalFailures": [
+          {
+            "name": "Layout zh 320 p3-estimatedivision",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-estimatedivision\",\"stage\":\"learn\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Layout zh 320 p3-estimatedivision",
+            "pass_": true
+          }
+        ],
+        "verified": 91
+      },
+      {
+        "topic": "length",
+        "done": true,
+        "count": 81,
+        "originalFailures": [],
+        "exactReruns": [],
+        "verified": 81
+      },
+      {
+        "topic": "multiply",
+        "done": true,
+        "count": 91,
+        "originalFailures": [
+          {
+            "name": "Stale tab retains draft and refuses overwrite",
+            "error": "Navigation timeout {\"stage\":\"together\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Stale tab retains draft and refuses overwrite",
+            "pass_": true
+          }
+        ],
+        "verified": 91
+      },
+      {
+        "topic": "numbers",
+        "done": true,
+        "count": 110,
+        "originalFailures": [
+          {
+            "name": "Existing grade entry en index.html",
+            "error": "Navigation timeout lang=en"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Existing grade entry en index.html",
+            "pass_": true
+          }
+        ],
+        "verified": 110
+      }
+    ],
+    "native": {
+      "viewportWidth": 320,
+      "language": "zh-HK",
+      "blankBuilder": true,
+      "constructedNonRightParallelogram": true,
+      "modelsLeaveStorageUntouched": true,
+      "fullWidthAnswer": "７ → 7",
+      "enterSubmission": true,
+      "focusAfterSubmit": "p3-status",
+      "overflow": false,
+      "testKeyRemoved": true,
+      "screenshot": "browser-screenshots/screenshot-2026-11-22T07-27-47-328Z-208620f8.png"
+    },
+    "focusedRerunAfterFocusFix": {
+      "count": 91,
+      "verified": 91
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-learn-store.js": "266b20f9be572cf2782623b7440e3455ab51dd214bc06a8888708679c8016412",
+    "p3-learn-topics.js": "8e388385ff6fbe6c32cd15232e7766d0703db7bd16ad2e602b0f452aef01ca3b",
+    "p3-learn.css": "bbdc956720ed4f2dceca20434503d95e93245747fd7fe372bfe6bdb583e2686c",
+    "p3-learn.html": "f38de85ccb70427aeb2d670adc1874fd72bfcf19f407d47288052c22275e87d2",
+    "p3-learn.js": "5750153c25dec39de6f2309c96ca112f9b25809bf03681f9207df6f0f00c5774",
+    "p3-quads-data.js": "837b7e6ee3149b0a0f2f95e5b4bf626d89a05f63b8421c23610e7669623f96b4",
+    "p3-quads-models.js": "8a7d38e570674983eab58c86d87c534a75a8dd31d29184ff9c223a88ce04c1f4",
+    "tests/p3-quads-blocked.html": "c93e986475620e3cea29b07b5469308d944ac99fa3626d6b9cd3d4fedfd599f7",
+    "tests/p3-quads-browser.js": "19784a7f8555f26d9064d7a6545bd9a1a33c2d8d0f1f62ac70a2f8a6961d1ca4",
+    "tests/p3-quads-static.cjs": "59c689d2f0cddfe042c7558351c336adde94c4d953c4dcdb5258a2392365a7ad",
+    "tests/p3-quads.html": "e7b6a137d88c770d07969293b8bfae2c7a16fff8a2e35bb6de9391f0dcf03674"
+  },
+  "limits": [
+    "Classroom, independent translation, screen-reader listening, physical printing and actual practical performance pending.",
+    "Only P3 browser suites rerun; inherited resources compared unchanged."
+  ]
+}
