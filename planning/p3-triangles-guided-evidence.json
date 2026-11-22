@@ -1,0 +1,191 @@
+{
+  "date": "2026-11-22",
+  "baseline": "1a5e080c1fb9ead240302dbea5cd53bc1cce2309",
+  "inventory": {
+    "lessons": 5,
+    "practice": 45,
+    "guided": 10,
+    "checks": 10,
+    "P3Topics": 7,
+    "P3Lessons": 38,
+    "P3Practice": 342
+  },
+  "guidedObjectives": [
+    "3S2.1",
+    "3S2.2",
+    "3S2.3",
+    "3S2.4"
+  ],
+  "static": {
+    "cases": [
+      {
+        "name": "Five bilingual lessons,45 practice,10 guided,10 checks; all four objectives",
+        "pass": true
+      },
+      {
+        "name": "Independent membership and strict feasibility answer oracle",
+        "pass": true
+      },
+      {
+        "name": "Every named category and its converses use the correct membership vector",
+        "pass": true
+      },
+      {
+        "name": "SVG geometry, equal-side ticks and right-angle markers match independent lengths",
+        "pass": true
+      },
+      {
+        "name": "All 8000 positive integer triples, strict equality boundary and generated sides",
+        "pass": true
+      },
+      {
+        "name": "Fresh check represented data and blank builder",
+        "pass": true
+      },
+      {
+        "name": "Earlier files unchanged except seven explicit shared runtime/handoff files",
+        "pass": true
+      },
+      {
+        "name": "Seven topics and all learners stay isolated; older writers remain usable",
+        "pass": true
+      },
+      {
+        "name": "Choice validation and old numeric bounds preserved",
+        "pass": true
+      },
+      {
+        "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity; every field filled",
+        "pass": true
+      }
+    ]
+  },
+  "preliminary": {
+    "browserCases": 81,
+    "passed": 81,
+    "staticGates": 12,
+    "refinements": [
+      "New rendered check orientations and contextual prompts, not source-scale-only freshness",
+      "English a/an articles corrected"
+    ]
+  },
+  "unchangedInheritedFiles": 847,
+  "local": {
+    "distinctCases": 626,
+    "suites": [
+      {
+        "topic": "triangles",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [],
+        "exactReruns": []
+      },
+      {
+        "topic": "quads",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [],
+        "exactReruns": []
+      },
+      {
+        "topic": "fractions",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [],
+        "exactReruns": []
+      },
+      {
+        "topic": "division",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [],
+        "exactReruns": []
+      },
+      {
+        "topic": "length",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [],
+        "exactReruns": []
+      },
+      {
+        "topic": "multiply",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [],
+        "exactReruns": []
+      },
+      {
+        "topic": "numbers",
+        "done": true,
+        "count": 110,
+        "verified": 110,
+        "originalFailures": [
+          {
+            "name": "Existing grade entry en index.html",
+            "error": "Navigation timeout lang=en"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Existing grade entry en index.html",
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "native": {
+      "viewport": 320,
+      "language": "zh-HK",
+      "fullWidthBuilderInput": [
+        "３",
+        "４",
+        "５"
+      ],
+      "buildViaEnter": true,
+      "rightAngleMarkers": 1,
+      "modelFocus": "tri-build",
+      "unscoredStorageUntouched": true,
+      "choiceSubmitViaEnter": true,
+      "savedChoice": "yes",
+      "feedbackFocus": "p3-status",
+      "overflow": false,
+      "testKeyRemoved": true,
+      "screenshot": "browser-screenshots/screenshot-2026-11-22T09-32-06-733Z-a827e20e.png"
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-learn-store.js": "6d595943b6de6ff951e5f0b1f8db0d2b33c1906c6e78646334d0b2c885d124de",
+    "p3-learn-topics.js": "8f206cc2f26b0cff9c96ace89c852400dcde4cf3160818b02848782029cba89e",
+    "p3-learn.css": "b8f1e3ac27a4842e93019357376965af6e8ecfe2cc8cf531b763d383594ed585",
+    "p3-learn.html": "f34a724963d61bfa28e61de6f6460d74d7dee86a5e83dcbba866e6146abae396",
+    "p3-learn.js": "bd21c378d3364d3f49e1035a63ddaa2c1fb51afa8ee5215e6ec661e42097595e",
+    "p3-triangles-data.js": "259f08dd9246f4b33d8fc4b49734bd0a2020f9535954468f46f5ef17a4fa4d1c",
+    "p3-triangles-models.js": "450460d29d72d4a28efa27e062f7ee9417cbd59a0ead16ccc510cbad6b3f0f9e",
+    "tests/p3-triangles-blocked.html": "6ee857f278f42ae9c6cd2aaaf2a397825a5404a6f45bb57a716625a4e3e98861",
+    "tests/p3-triangles-guided-browser.js": "438d6dde78c40dfb5650e325fa265140ee04d444d7642d0a4a5e9cf2f181183d",
+    "tests/p3-triangles-guided-static.cjs": "d451deb23f921a072799ea8fe12d07aa154965c8de507ad744ce296233d751dd",
+    "tests/p3-triangles-guided.html": "b7c988ae7259c9f8ac39c6bc7ce97f234ec4d39e537d4f4fc11eee619e150e6d"
+  },
+  "limits": [
+    "Classroom, independent translation, screen-reader listening, physical printing and actual practical performance pending.",
+    "Only P3 browser suites rerun; inherited resources compared unchanged."
+  ]
+}

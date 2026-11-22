@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 parallel lines and quadrilaterals is implemented.** [Open the pathway](p3-learn.html?path=quads): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve fresh sample checks. It covers all six **3S1 objectives**, with parallel-line extension and tool demonstrations, both opposite-side pairs, square/rectangle inclusion, trapezium bases and a blank construction grid.
+**22 November 2026: P3 triangles is implemented.** [Open the pathway](p3-learn.html?path=triangles): five bilingual lessons, 45 practice tasks, ten guided examples and ten fresh sample checks. Guided resources cover **3S2.1–4**: five named categories, overlapping names, strict side-length feasibility and separate drawing/making activities. The blank length builder checks feasibility before drawing; equal-side ticks and right-angle marks show the checked properties.
 
-The six P3 guided topics contain **33 lessons and 297 practice tasks**. First answers, supported retries, practical notes and original inquiry predictions remain separate per topic and learner. Models are temporary and unscored. Actual drawing, making and instrument handling need separate observations; a screen choice does not certify those actions. Earlier progress and practice-bank rules are preserved.
+The seven P3 guided topics contain **38 lessons and 342 practice tasks**. First answers, supported retries, practical notes and original investigation predictions remain separate by topic and learner. Models are temporary and unscored. Earlier progress and practice-bank rules are preserved.
 
-**Next unfinished step in the release queue:** **P3 triangle concepts, relationships and construction**. Fraction comparison and pictured operations (3N5.3–4), mixed calculations and later measure/time/data topics remain explicitly queued in the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step in the release queue:** **P3 capacity**, beginning with comparisons and improvised units before litres/millilitres and real measuring tools. Weight, time, bar charts, mixed calculations and fraction comparison/operations remain queued in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Quadrilateral release](planning/p3-quads-guided-release.md) · [Evidence](planning/p3-quads-guided-evidence.json). All **545 distinct local and public P3 browser cases verified**, with fixes and exact timeout reruns retained; twelve static gates passed and all fifteen published files matched. All 839 inherited files outside seven explicit shared changes remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and actual instrument/manipulative performance remain pending.
+[Triangle release](planning/p3-triangles-guided-release.md) · [Evidence](planning/p3-triangles-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and actual drawing/making remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
