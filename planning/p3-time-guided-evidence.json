@@ -166,7 +166,188 @@
     "notes": "Initial focused suite passed; added explicit stopwatch draft/evidence-preservation assertions and reran 91 cases successfully without inflating distinct count."
   },
   "public": {
-    "status": "pending"
+    "distinctVerified": 899,
+    "suites": [
+      {
+        "name": "time",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-secondsense normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-secondsense\",\"stage\":\"normal\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "weight",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-weightunits together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-weightunits\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "capacity",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-capacityunits together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-capacityunits\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "triangles",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-trianglefeasibility easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-trianglefeasibility\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "quads",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-parallelogramproperties together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-parallelogramproperties\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "fractions",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-setfractions difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-setfractions\",\"stage\":\"difficult\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "division",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-divisionremainders together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-divisionremainders\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "length",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-measuremm easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "multiply",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-threeproduct easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-threeproduct\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Tasks en p3-comparefive difficult",
+            "error": "Navigation timeout lang=en&lesson=p3-comparefive&stage=difficult",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "time",
+        "name": "Tasks zh p3-secondsense normal",
+        "pass": true
+      },
+      {
+        "suite": "weight",
+        "name": "Tasks zh p3-weightunits together",
+        "pass": true
+      },
+      {
+        "suite": "capacity",
+        "name": "Tasks zh p3-capacityunits together",
+        "pass": true
+      },
+      {
+        "suite": "triangles",
+        "name": "Tasks zh p3-trianglefeasibility easy",
+        "pass": true
+      },
+      {
+        "suite": "quads",
+        "name": "Tasks zh p3-parallelogramproperties together",
+        "pass": true
+      },
+      {
+        "suite": "fractions",
+        "name": "Tasks zh p3-setfractions difficult",
+        "pass": true
+      },
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-divisionremainders together",
+        "pass": true
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-measuremm easy",
+        "pass": true
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-threeproduct easy",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks en p3-comparefive difficult",
+        "pass": true
+      }
+    ],
+    "native": {
+      "width": 320,
+      "language": "zh",
+      "fullWidthAnswer": "5",
+      "feedbackFocus": "p3-status",
+      "stopwatchStopped": "3.1 s",
+      "stopFocus": "time-watch-stop",
+      "stopwatchReset": "0.0 s",
+      "resetFocus": "time-watch-reset",
+      "stopwatchSavedRecord": null,
+      "hiddenClocks": 1,
+      "revealedClocks": 2,
+      "explanation": "上午8時35分 + 35 分鐘 = 上午9時10分; 倒數後再向前核對。",
+      "modelFocus": "time-reveal",
+      "overflow": false,
+      "ownedTestKeyRemoved": true
+    }
   },
   "runtimeSha256": {
     "p3-learn-store.js": "ee13ee14e9a6b31ebe8b8516b2c4ccb0397bc0c45ff522b30eed1090958b2fa7",
@@ -185,5 +366,113 @@
     "Only P3 browser suites rerun; inherited resources compared unchanged.",
     "Stopwatch display resolution is not guaranteed/calibrated accuracy.",
     "Conceptual checks revisit core properties; not a readiness certificate."
+  ],
+  "runtimeDeployment": {
+    "commit": "e310c1b34b099f45ec8af469e04bddb72559db4a",
+    "run": 45019489165,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "4ca61fb235b0d861ea482975cc5a14dd970689a56a0f132d15faaaed681e3242"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "ee13ee14e9a6b31ebe8b8516b2c4ccb0397bc0c45ff522b30eed1090958b2fa7"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "c0c89dd1261ae0c05be1db0d3fdfa2d5d42a91e4e00053ac60fd064835e97796"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "a9de8b2390de951e696052b32bb8cf3ede527ac4cc42749989dcdb3d0cffcdae"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "6d17d43b6526011f5301bf84ef92e604d329e936bc70aedbd203f9d07faa40de"
+    },
+    {
+      "path": "p3-time-data.js",
+      "match": true,
+      "sha256": "7b95255573c34812614ba31d8164747dc1fa733f8f67722d2e714c715c39adbd"
+    },
+    {
+      "path": "p3-time-models.js",
+      "match": true,
+      "sha256": "9a0d2a85bf7c2269acf1be0ea9cfcc7b1d4eeec12e760dde1fe4e62302e790f5"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "1e99f065ba4daceff355cc43866a7c80bcaa913c00e080ac221a3b0f2869ac08"
+    },
+    {
+      "path": "planning/p3-time-guided-evidence.json",
+      "match": true,
+      "sha256": "2ea6dc8d694a00c9521b200be9e2c4e534395a73575dccf3d3295b1ab33812ce"
+    },
+    {
+      "path": "planning/p3-time-guided-release.md",
+      "match": true,
+      "sha256": "eee24c0c2e0fe81effda5f50fed0bcfac7649143f593a7eddfc68502a79f446c"
+    },
+    {
+      "path": "tests/p3-time-blocked.html",
+      "match": true,
+      "sha256": "fa00a81cdfb1bebb4eb936f0af331bfa0c9f2afc5a5cbdcca1755f910d978293"
+    },
+    {
+      "path": "tests/p3-time-guided-browser.js",
+      "match": true,
+      "sha256": "5dba9b194da92270cc667f61d3b919eb0a3d921baa9b8bd2d03dc588d7687722"
+    },
+    {
+      "path": "tests/p3-time-guided-static.cjs",
+      "match": true,
+      "sha256": "0a7a1555b8f0e810a5ee6c40008f708bc19b28a59ee0e428b5237b20fa3ab4e5"
+    },
+    {
+      "path": "tests/p3-time-guided.html",
+      "match": true,
+      "sha256": "44185075bb672bf0476b6abccd7660a0665efe697a6fc998ebab38da0aa214d9"
+    }
+  ],
+  "runtimeGithubReadbacks": [
+    "p3-time-data.js",
+    "p3-time-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
+  ],
+  "browserNotes": "Browser wrapper waits may expire while a suite continues. Completed results and exact failing-case reruns are retained separately; no repeated case inflates the distinct total.",
+  "publicReadbackReruns": [
+    {
+      "original": {
+        "path": "p3-time-models.js",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>"
+      },
+      "rerun": {
+        "path": "p3-time-models.js",
+        "match": true,
+        "sha256": "9a0d2a85bf7c2269acf1be0ea9cfcc7b1d4eeec12e760dde1fe4e62302e790f5"
+      }
+    },
+    {
+      "original": {
+        "path": "tests/p3-time-blocked.html",
+        "error": "<urlopen error [WinError 10054] An existing connection was forcibly closed by the remote host>"
+      },
+      "rerun": {
+        "path": "tests/p3-time-blocked.html",
+        "match": true,
+        "sha256": "fa00a81cdfb1bebb4eb936f0af331bfa0c9f2afc5a5cbdcca1755f910d978293"
+      }
+    }
   ]
 }
