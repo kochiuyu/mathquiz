@@ -143,7 +143,7 @@
         "exactReruns": [
           {
             "name": "Layout zh 320 p3-estimatedivision",
-            "pass_": true
+            "pass": true
           }
         ],
         "verified": 91
@@ -169,7 +169,7 @@
         "exactReruns": [
           {
             "name": "Stale tab retains draft and refuses overwrite",
-            "pass_": true
+            "pass": true
           }
         ],
         "verified": 91
@@ -187,7 +187,7 @@
         "exactReruns": [
           {
             "name": "Existing grade entry en index.html",
-            "pass_": true
+            "pass": true
           }
         ],
         "verified": 110
@@ -212,7 +212,166 @@
     }
   },
   "public": {
-    "status": "pending"
+    "distinctVerified": 545,
+    "suites": [
+      {
+        "topic": "quads",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-parallellines normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-parallellines\",\"stage\":\"normal\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-parallellines normal",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "fractions",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-setfractions difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-setfractions\",\"stage\":\"difficult\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-setfractions difficult",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "division",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-exchangequotient difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-exchangequotient\",\"stage\":\"difficult\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-exchangequotient difficult",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "length",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-measuremm together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"together\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-measuremm together",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "multiply",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-threeproduct easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-threeproduct\",\"stage\":\"easy\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-threeproduct easy",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "numbers",
+        "done": true,
+        "count": 110,
+        "verified": 110,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-crossfive normal",
+            "error": "Navigation timeout lang=zh&lesson=p3-crossfive&stage=normal"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-crossfive normal",
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "failures": [
+      {
+        "topic": "quads",
+        "name": "Tasks zh p3-parallellines normal",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-parallellines\",\"stage\":\"normal\"}"
+      },
+      {
+        "topic": "fractions",
+        "name": "Tasks zh p3-setfractions difficult",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-setfractions\",\"stage\":\"difficult\"}"
+      },
+      {
+        "topic": "division",
+        "name": "Tasks zh p3-exchangequotient difficult",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-exchangequotient\",\"stage\":\"difficult\"}"
+      },
+      {
+        "topic": "length",
+        "name": "Tasks zh p3-measuremm together",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"together\"}"
+      },
+      {
+        "topic": "multiply",
+        "name": "Tasks zh p3-threeproduct easy",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-threeproduct\",\"stage\":\"easy\"}"
+      },
+      {
+        "topic": "numbers",
+        "name": "Tasks zh p3-crossfive normal",
+        "error": "Navigation timeout lang=zh&lesson=p3-crossfive&stage=normal"
+      }
+    ],
+    "native": {
+      "viewport": 320,
+      "language": "zh-HK",
+      "fullWidthAnswer": "７ → 7",
+      "enterSubmission": true,
+      "feedbackFocus": "p3-status",
+      "overflow": false,
+      "testKeyRemoved": true,
+      "propertyPairsVisuallyInspected": true,
+      "constructedNonRightParallelogram": true,
+      "focusAfterLastCorner": "quad-undo",
+      "modelsLeaveStorageUntouched": true,
+      "screenshots": [
+        "browser-screenshots/screenshot-2026-11-22T07-39-40-634Z-f0cc7cb1.png",
+        "browser-screenshots/screenshot-2026-11-22T07-39-56-953Z-ffd5948c.png"
+      ]
+    }
   },
   "runtimeSha256": {
     "p3-learn-store.js": "266b20f9be572cf2782623b7440e3455ab51dd214bc06a8888708679c8016412",
@@ -230,5 +389,95 @@
   "limits": [
     "Classroom, independent translation, screen-reader listening, physical printing and actual practical performance pending.",
     "Only P3 browser suites rerun; inherited resources compared unchanged."
+  ],
+  "runtimeDeployment": {
+    "commit": "22d5519e601044b6c0351cf7e3d57e839efe6a26",
+    "run": 44998509393,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "4eb737a659c188d19b55416de4761c1c5de52f3f54d9b5328c0964077c740678"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "266b20f9be572cf2782623b7440e3455ab51dd214bc06a8888708679c8016412"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "8e388385ff6fbe6c32cd15232e7766d0703db7bd16ad2e602b0f452aef01ca3b"
+    },
+    {
+      "path": "p3-learn.css",
+      "match": true,
+      "sha256": "bbdc956720ed4f2dceca20434503d95e93245747fd7fe372bfe6bdb583e2686c"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "f38de85ccb70427aeb2d670adc1874fd72bfcf19f407d47288052c22275e87d2"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "5750153c25dec39de6f2309c96ca112f9b25809bf03681f9207df6f0f00c5774"
+    },
+    {
+      "path": "p3-quads-data.js",
+      "match": true,
+      "sha256": "837b7e6ee3149b0a0f2f95e5b4bf626d89a05f63b8421c23610e7669623f96b4"
+    },
+    {
+      "path": "p3-quads-models.js",
+      "match": true,
+      "sha256": "8a7d38e570674983eab58c86d87c534a75a8dd31d29184ff9c223a88ce04c1f4"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "6bffc8a211fd678dad9d85f04fe6a36f7368d115371c8542d84523af8c687da3"
+    },
+    {
+      "path": "planning/p3-quads-guided-evidence.json",
+      "match": true,
+      "sha256": "fc0863e03535ed8a29472c4be19d3630ee894023efed986686b1e6a1002675b5"
+    },
+    {
+      "path": "planning/p3-quads-guided-release.md",
+      "match": true,
+      "sha256": "ec86651a86df57ffc2a4e50e844156e189d34c873c2361b7fe6a5678a198d422"
+    },
+    {
+      "path": "tests/p3-quads-blocked.html",
+      "match": true,
+      "sha256": "c93e986475620e3cea29b07b5469308d944ac99fa3626d6b9cd3d4fedfd599f7"
+    },
+    {
+      "path": "tests/p3-quads-browser.js",
+      "match": true,
+      "sha256": "19784a7f8555f26d9064d7a6545bd9a1a33c2d8d0f1f62ac70a2f8a6961d1ca4"
+    },
+    {
+      "path": "tests/p3-quads-static.cjs",
+      "match": true,
+      "sha256": "59c689d2f0cddfe042c7558351c336adde94c4d953c4dcdb5258a2392365a7ad"
+    },
+    {
+      "path": "tests/p3-quads.html",
+      "match": true,
+      "sha256": "e7b6a137d88c770d07969293b8bfae2c7a16fff8a2e35bb6de9391f0dcf03674"
+    }
+  ],
+  "relativeLinksChecked": 232,
+  "browserTransportNotes": "Wrapper navigation/wait timeouts did not interrupt suites; running results were polled. Exact individual case failures and reruns are retained separately.",
+  "runtimeGithubReadbacks": [
+    "p3-quads-data.js",
+    "p3-quads-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
   ]
 }

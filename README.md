@@ -8,7 +8,7 @@ The six P3 guided topics contain **33 lessons and 297 practice tasks**. First an
 
 **Next unfinished step in the release queue:** **P3 triangle concepts, relationships and construction**. Fraction comparison and pictured operations (3N5.3–4), mixed calculations and later measure/time/data topics remain explicitly queued in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Quadrilateral release](planning/p3-quads-guided-release.md) · [Evidence](planning/p3-quads-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and actual instrument/manipulative performance remain pending.
+[Quadrilateral release](planning/p3-quads-guided-release.md) · [Evidence](planning/p3-quads-guided-evidence.json). All **545 distinct local and public P3 browser cases verified**, with fixes and exact timeout reruns retained; twelve static gates passed and all fifteen published files matched. All 839 inherited files outside seven explicit shared changes remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and actual instrument/manipulative performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
