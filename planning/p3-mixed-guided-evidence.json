@@ -1,0 +1,315 @@
+{
+  "date": "2026-11-22",
+  "baseline": "9907c5774f6520cb0c0af7b112c02f7b30ddcf63",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "P3Topics": 13,
+    "P3Lessons": 73,
+    "P3Practice": 657
+  },
+  "objectives": [
+    "3N4.1",
+    "3N4.2",
+    "3N4.3",
+    "3N4.4"
+  ],
+  "static": [
+    {
+      "suite": "mixed",
+      "cases": [
+        {
+          "name": "Six bilingual lessons, 78 unique tasks, complete marking",
+          "pass": true
+        },
+        {
+          "name": "Independent arithmetic, intermediate fields, stories and source bounds",
+          "pass": true
+        },
+        {
+          "name": "Four addition subtraction patterns and four concrete relation forms",
+          "pass": true
+        },
+        {
+          "name": "Actual counter diagrams keep correct counts in both languages",
+          "pass": true
+        },
+        {
+          "name": "Fresh checks differ from worked and practice tuples",
+          "pass": true
+        },
+        {
+          "name": "Numeric fields reject role reversal, malformed and excessive inputs",
+          "pass": true
+        },
+        {
+          "name": "Estimate original, exact reveal and reflection are separate and immutable",
+          "pass": true
+        },
+        {
+          "name": "Thirteen topics and all three learners remain isolated",
+          "pass": true
+        },
+        {
+          "name": "First/retry and inquiry preserve original evidence",
+          "pass": true
+        },
+        {
+          "name": "Stale, damaged, future, oversized and unavailable storage",
+          "pass": true
+        },
+        {
+          "name": "Full record survives cleaning and capacity",
+          "pass": true
+        },
+        {
+          "name": "No corrupted translations or undefined rendered estimate headings",
+          "pass": true
+        },
+        {
+          "name": "Earlier files preserved against latest release",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "suite": "bars",
+      "cases": [
+        {
+          "name": "Six bilingual lessons and complete task IDs",
+          "pass": true
+        },
+        {
+          "name": "Independent reading, comparison, tally and scale oracle",
+          "pass": true
+        },
+        {
+          "name": "SVG endpoints, equal widths and spacing, ticks in both languages",
+          "pass": true
+        },
+        {
+          "name": "All six orientation/scale combinations, zero, maximum and tie",
+          "pass": true
+        },
+        {
+          "name": "Source responses and exact fractional bar endpoint, no rounding",
+          "pass": true
+        },
+        {
+          "name": "Check prompts and interpretation/tally tuples differ from practice",
+          "pass": true
+        },
+        {
+          "name": "Earlier files preserved against current baseline",
+          "pass": true
+        },
+        {
+          "name": "Twelve topics and all learners stay isolated; older writers remain usable",
+          "pass": true
+        },
+        {
+          "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+          "pass": true
+        },
+        {
+          "name": "Stale, damaged, future, oversized and blocked storage",
+          "pass": true
+        },
+        {
+          "name": "Full record survives cleaning within capacity; every field filled",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "suite": "numbers",
+      "cases": [
+        {
+          "name": "Inventory and stable unique IDs",
+          "pass": true
+        },
+        {
+          "name": "Independent mathematical oracle for all 65 tasks",
+          "pass": true
+        },
+        {
+          "name": "English, Traditional Chinese and objective mapping",
+          "pass": true
+        },
+        {
+          "name": "Fresh check prompts and numerical contexts versus teaching, guided, practice and activity",
+          "pass": true
+        },
+        {
+          "name": "Numeric normalization, bounds and invalid forms",
+          "pass": true
+        },
+        {
+          "name": "First response immutable, one supported retry and separate score fields",
+          "pass": true
+        },
+        {
+          "name": "All tasks, all notes and full inquiry fit below record cap",
+          "pass": true
+        },
+        {
+          "name": "Learner, grade, production and test isolation with scoped reset",
+          "pass": true
+        },
+        {
+          "name": "Stale writes and deletion/recreation conflict",
+          "pass": true
+        },
+        {
+          "name": "Malformed, future and oversized records protected",
+          "pass": true
+        },
+        {
+          "name": "Blocked storage and failed writes remain honestly volatile",
+          "pass": true
+        },
+        {
+          "name": "Inquiry prediction is locked and separate from attempts",
+          "pass": true
+        },
+        {
+          "name": "Observations require task/date; notes do not award marks",
+          "pass": true
+        },
+        {
+          "name": "Earlier bank payload and lower-grade input limits unchanged",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "initialBrowser": {
+    "cases": 113,
+    "failures": [
+      {
+        "name": "Stale tab retains draft and refuses overwrite",
+        "error": "Cannot read properties of null (reading 'value')"
+      },
+      {
+        "name": "Numeric validation and draft preservation",
+        "error": "other draft"
+      }
+    ],
+    "cause": "Test helper used a single answer selector for a fields task and an invalid numeric choice for a select. Both corrected before full rerun."
+  },
+  "unchangedInheritedFiles": 895,
+  "relativeLinksChecked": 254,
+  "local": {
+    "distinctVerified": 331,
+    "suites": [
+      {
+        "name": "mixed",
+        "cases": 113,
+        "failures": [
+          {
+            "name": "Model and practical en priority",
+            "error": "Navigation timeout {\"lang\":\"en\",\"stage\":\"learn\",\"lesson\":\"p3-mixedpriority\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "bars",
+        "cases": 108,
+        "failures": [
+          {
+            "name": "Check separation zh",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"stage\":\"check\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Layout zh 768 map",
+            "error": "Navigation timeout lang=zh&stage=map&lesson=p3-readfive",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "mixed",
+        "name": "Model and practical en priority",
+        "pass": true
+      },
+      {
+        "suite": "bars",
+        "name": "Check separation zh",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Layout zh 768 map",
+        "pass": true
+      }
+    ],
+    "intermediate": {
+      "cases": 113,
+      "failures": [
+        {
+          "name": "Check separation zh",
+          "error": "Navigation timeout {\"lang\":\"zh\",\"stage\":\"check\"}"
+        }
+      ],
+      "exactRerunPassed": true,
+      "note": "After two initial test repairs, before final text/model-heading repair and stronger render gate. Not counted twice."
+    },
+    "native": {
+      "language": "zh",
+      "width": 320,
+      "model": "columns",
+      "step": 3,
+      "columns": [
+        3,
+        9,
+        14,
+        12
+      ],
+      "value": 4052,
+      "focus": "mixed-next",
+      "overflow": false,
+      "savedRecord": null,
+      "screenshot": "browser-screenshots/screenshot-2026-11-22T14-06-25-286Z-a4e71339.png"
+    },
+    "wrapperTimeouts": "Navigation or wait wrappers timed out while harness continued. Fresh reads confirmed completed cases before exact reruns; those wrapper events are not additional distinct cases."
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-learn-store.js": "74b37224b322fc9fb1e043de1bf6b35f837253c1532cec29fb775f2140f486d5",
+    "p3-learn-topics.js": "48ccc2729e3661e54aeab456aef45eac3971e9c186cc7815cbc53559857a7a9c",
+    "p3-learn.html": "4075594257f0afab3896282627c0ca6580a6c19832b1e9bf44ba40ed0a49b444",
+    "p3-learn.js": "907339dc48af9ff29691156de5a37dacc48cde7a71c6e7bbfade19b6349b5b2b",
+    "p3-mixed-data.js": "e92889db0f607ae4ddf2b176d97455ebf9a57f1e18f29ce48fbe6bd4c1ba3587",
+    "p3-mixed-models.js": "9644492b169102aeda6cd2c2576cd1c5cbb9979010c4049e63da629077d9013c",
+    "tests/p3-bars-guided-browser.js": "3b58bf784b359c387c28c3dd060238b43047f0d11c49f9b501dc3435cc7619b8",
+    "tests/p3-mixed-blocked.html": "244debe981287c41aca405c1415c2382e998ec06a8cf3c5cc1d4ca1948474cb9",
+    "tests/p3-mixed-guided-browser.js": "f37003dcfcfa7b6a5ced1ee6657e088cd622b3ddde61f187ab6dfe508cce4e79",
+    "tests/p3-mixed-guided-static.cjs": "b3affae14408311e3e9b2588a4182d7abee8af2c5f8dd7db1b9e1c5750b727d8",
+    "tests/p3-mixed-guided.html": "f6f1f49ca7c419e0a44128cdbaa182c129af322bb6ceb0f99a6467f2e60cafbe"
+  },
+  "repairs": [
+    "Explicit UTF-8 file read after first build encoding error.",
+    "Initial test-helper failures corrected; full focused rerun.",
+    "Text transfer corruption and undefined estimate headings repaired; new bilingual render gate.",
+    "Wrong static filename replaced with actual p3-numbers-static.cjs; initial failure retained in workspace.",
+    "One initial GitHub list_commits fetch failed; exact retry succeeded. Built-in server cannot be tested with test_mcp_server."
+  ],
+  "limits": [
+    "Classroom and independent manual validation pending.",
+    "Focused, bars and numbers browser suites rerun; shared navigation across all thirteen topics checked."
+  ]
+}
