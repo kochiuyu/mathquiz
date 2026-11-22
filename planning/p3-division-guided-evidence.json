@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-22",
+  "baseline": "8bf4cf6a06ef9af9c953c53a37371f1fd9cf4a38",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "estimates": 3,
+    "P3Lessons": 22,
+    "P3Practice": 198
+  },
+  "static": {
+    "cases": [
+      {
+        "name": "Six bilingual lessons, 54 practice, 12 guided and 12 check tasks",
+        "pass": true
+      },
+      {
+        "name": "Repeated subtraction oracle and minimal seating capacity",
+        "pass": true
+      },
+      {
+        "name": "Fresh check tuples and prompts differ from practice and worked models",
+        "pass": true
+      },
+      {
+        "name": "All column dividends 10 through 999 with divisors 1 through 9",
+        "pass": true
+      },
+      {
+        "name": "Earlier resources unchanged except seven shared runtime and handoff files",
+        "pass": true
+      },
+      {
+        "name": "Four topics and three learners stay isolated including older writers",
+        "pass": true
+      },
+      {
+        "name": "All fields required; full-width and leading zeros; first/retry immutable",
+        "pass": true
+      },
+      {
+        "name": "Estimates and observation do not award marks or replace predictions",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity",
+        "pass": true
+      }
+    ]
+  },
+  "unchangedInheritedFiles": 823,
+  "local": {
+    "division": 91,
+    "length": 81,
+    "multiply": 91,
+    "numbers": 110,
+    "distinctVerified": 373,
+    "failures": [
+      {
+        "suite": "numbers",
+        "name": "Existing grade entry en index.html",
+        "error": "Navigation timeout lang=en"
+      }
+    ],
+    "exactReruns": [
+      {
+        "suite": "numbers",
+        "name": "Existing grade entry en index.html",
+        "passResult": true
+      }
+    ],
+    "divisionFinalRerun": {
+      "count": 91,
+      "failures": []
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-division-data.js": "ef7922220da33a9b4400698e1dd269e8e9db854247ed8c300d2e9de6a0bbf498",
+    "p3-division-models.js": "c8d5d5a32f9b12a2426122b42b9cc0068d1de84f3e2bc68ccf405ac1985380f0",
+    "p3-learn-store.js": "024e66f73d16de5b45edc46c79bca8d5c41f3cae94df2831e2628137f7b20393",
+    "p3-learn-topics.js": "a34b31508f06f758851dbbf775a82a241ddfdb753c7db705383aa88007e1e8ba",
+    "p3-learn.css": "7a70090f0661cdd83532dffcc4cf9a99de6f6d29b921f45382615afd55d98bc9",
+    "p3-learn.html": "f39b98b793f7e0be8982b2ee691fd0731665ea5af6b7def1f5b2ccaead15709a",
+    "p3-learn.js": "f23967992e71c1630e3fc64fd8262fd61b28be3e1e161fb45e868fb714a829a2",
+    "tests/p3-division-blocked.html": "1e762070fd8ed84ba00d1d0080a48cae068cc3f9d21d988ce36943cd81838995",
+    "tests/p3-division-browser.js": "6b4830e3e355748b737824dd9e7e301a274bd1ca267bde66b1388ec8d200302d",
+    "tests/p3-division-static.cjs": "2c15fedb945c5ded393193f09d2bf2aa7d342e222d546230024aa22fbaa27c67",
+    "tests/p3-division.html": "0494f6dd77861206403bd12e999db28087707a3117c6dff9738e714b44424395"
+  },
+  "limits": [
+    "Classroom trials, independent translation, screen-reader listening, physical printing and observed column work pending.",
+    "Only current P3 suites run; other resources compared unchanged."
+  ]
+}

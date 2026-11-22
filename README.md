@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 kilometres and millimetres is implemented.** [Open the pathway](p3-learn.html?path=length): five bilingual lessons, 45 practice tasks, ten guided examples and a ten-item sample check. Familiar kilometre references and comparisons lead into millimetre intervals, real ruler use, suitable records and estimation after measurement experience.
+**22 November 2026: P3 division by one digit is implemented.** [Open the pathway](p3-learn.html?path=division): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve fresh sample-check items. Place-value sharing leads into exchanges, quotient zeros, remainders, left-to-right division, meaningful leftovers and estimation after exact work.
 
-The three P3 guided topics contain **16 lessons and 144 practice tasks**. Each topic and pupil has separate progress. The measurement notebook retains reference details and original estimates for a new strip and dot-pair before accepting actual results and reflections. These are unscored self-reports; an adult records observed tool use separately. Diagrams are explicitly not calibrated rulers. Earlier P1/P2/P3 work and question banks are preserved.
+The four P3 guided topics contain **22 lessons and 198 practice tasks**. Division answers label quotient/remainder or intermediate/final quantities separately. First responses and supported retries remain separate; original estimates precede exact reveals. Practical columns, explanations and a prediction-led grouping investigation have separate records for each pupil. Earlier progress and question banks are preserved.
 
-**Next unfinished step:** implement **P3 division by one digit**, including zero quotient places and remainders. The fraction-foundation branch may develop in parallel, as set out in the [P3 guided plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step:** implement **P3 fraction foundations**, starting with equal parts of one object and one set, identifying the whole, zero and one, and model-based equivalence. Follow the [P3 guided plan](planning/p3-guided-learning-plan.md); the fractions branch has no division-score lock.
 
-[Measurement release and verification](planning/p3-length-guided-release.md) · [Evidence](planning/p3-length-guided-evidence.json). All **282 distinct local and public P3 browser cases verified**, with exact timeout reruns recorded; eight static gates passed. All 816 inherited resources outside the explicit shared changes remain unchanged. Classroom trials, independent translation/accessibility reviews, physical printing and observed practical performance remain pending.
+[Division release and verification](planning/p3-division-guided-release.md) · [Evidence](planning/p3-division-guided-evidence.json). Local checks are complete; public verification is recorded in those documents after deployment. Classroom trials, independent translation/accessibility review, physical printing and observed practical performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

@@ -1,1 +1,1 @@
-(()=>{const p=new URLSearchParams(location.search),data={multiply:window.MathQuizP3MultiplyData,length:window.MathQuizP3LengthData};if(data[p.get('path')])window.MathQuizP3Data=data[p.get('path')];})();
+(()=>{const p=new URLSearchParams(location.search),data={division:window.MathQuizP3DivisionData,multiply:window.MathQuizP3MultiplyData,length:window.MathQuizP3LengthData};if(data[p.get('path')])window.MathQuizP3Data=data[p.get('path')];})();
