@@ -8,7 +8,7 @@ The nine P3 guided topics contain **50 lessons and 450 practice tasks**. First a
 
 **Next unfinished step in the release queue: P3 Time (III)** — experience seconds and work with starting, finishing and elapsed times within its scope. Time (IV), bar charts, mixed calculations and fraction comparison/operations follow in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Weight release](planning/p3-weight-guided-release.md) · [Evidence](planning/p3-weight-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and observed pupil weighing remain pending.
+[Weight release](planning/p3-weight-guided-release.md) · [Evidence](planning/p3-weight-guided-evidence.json). All **808 distinct local and public P3 cases verified**, with exact timeout reruns retained; twelve static gates passed, all fourteen published files matched and 864 inherited files remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and observed pupil weighing remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

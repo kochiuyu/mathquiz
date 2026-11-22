@@ -161,7 +161,167 @@
     "preliminary": "Weight suite passed 91 cases before an explicit g-and-kg practical prompt refinement; final 91 cases passed again. Counts not inflated by this repeat."
   },
   "public": {
-    "status": "pending"
+    "distinctVerified": 808,
+    "suites": [
+      {
+        "name": "weight",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-weightmeaning difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-weightmeaning\",\"stage\":\"difficult\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "capacity",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-capacityunits difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-capacityunits\",\"stage\":\"difficult\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "triangles",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-triangleright normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-triangleright\",\"stage\":\"normal\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "quads",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-parallelogramproperties normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-parallelogramproperties\",\"stage\":\"normal\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "fractions",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-fractionbounds easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-fractionbounds\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "division",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-divisionremainders normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-divisionremainders\",\"stage\":\"normal\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "length",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-measuremm easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "multiply",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-groupfactors together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-groupfactors\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Tasks zh p3-oddevenfive together",
+            "error": "Navigation timeout lang=zh&lesson=p3-oddevenfive&stage=together",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "weight",
+        "name": "Tasks zh p3-weightmeaning difficult",
+        "pass": true
+      },
+      {
+        "suite": "capacity",
+        "name": "Tasks zh p3-capacityunits difficult",
+        "pass": true
+      },
+      {
+        "suite": "triangles",
+        "name": "Tasks zh p3-triangleright normal",
+        "pass": true
+      },
+      {
+        "suite": "quads",
+        "name": "Tasks zh p3-parallelogramproperties normal",
+        "pass": true
+      },
+      {
+        "suite": "fractions",
+        "name": "Tasks zh p3-fractionbounds easy",
+        "pass": true
+      },
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-divisionremainders normal",
+        "pass": true
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-measuremm easy",
+        "pass": true
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-groupfactors together",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-oddevenfive together",
+        "pass": true
+      }
+    ],
+    "native": {
+      "width": 320,
+      "language": "zh",
+      "fullWidthAnswer": "20",
+      "feedbackFocus": "p3-status",
+      "swappedBalanceConclusion": "A較重，不論放在哪一邊。",
+      "panA": 175,
+      "panB": 135,
+      "modelFocus": "weight-swap",
+      "overflow": false,
+      "ownedTestKeyRemoved": true
+    }
   },
   "runtimeSha256": {
     "p3-learn-store.js": "a02ff8d4e6c42be40f0f78c16ebe3b5b5d89cd8def462ccf0f7654d83329a9bc",
@@ -179,5 +339,95 @@
     "Classroom, independent translation, screen-reader listening, physical printing and observed practical performance pending.",
     "Only P3 browser suites rerun; inherited resources compared unchanged.",
     "Conceptual checks revisit core properties; not a readiness certificate."
+  ],
+  "runtimeDeployment": {
+    "commit": "b283895f17d8a8c12253a1b703ac219d492bb665",
+    "run": 45015872749,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "68783f3cc2e9acf36149b9a7476ac97e0191e8b0fdaf5265dfc468a3c23f6942"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "a02ff8d4e6c42be40f0f78c16ebe3b5b5d89cd8def462ccf0f7654d83329a9bc"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "d1b9d65be2baf26abe5960f4d66ae0434576dd85efe1bd52b3635e50b4177617"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "8ff56450c55731324d5db7828f98410a6278f157798c90da697fba3f02b64ad0"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "28d76c3a54870f0e0b46509e94e5459c276d00514ce704aac2c3baab984fe5bb"
+    },
+    {
+      "path": "p3-weight-data.js",
+      "match": true,
+      "sha256": "30084d5ddaf278202d9c6e08243bcbc1817881ffb7b1815cddfcf32d3f7da50e"
+    },
+    {
+      "path": "p3-weight-models.js",
+      "match": true,
+      "sha256": "011c83558e99cc7d55b4cc0fbac8e26ddce4cebb9d57f5d23cade00fc7a9cec8"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "ae173e962ea57173b86c47c0dd3f3536707713a0ae45c54642a992fcf3b6a12c"
+    },
+    {
+      "path": "planning/p3-weight-guided-evidence.json",
+      "match": true,
+      "sha256": "424a6fb5795ae5a73a614662ab701f31b5cb02786ce79f308e5fb839df6688c0"
+    },
+    {
+      "path": "planning/p3-weight-guided-release.md",
+      "match": true,
+      "sha256": "c4893c56b169dda74bac0e8a0941946907ad654ded2fa1b78a75306b85c25e20"
+    },
+    {
+      "path": "tests/p3-weight-blocked.html",
+      "match": true,
+      "sha256": "b17f3e5c8e2911040d19865daf51bd246e27fd144ed27cd9d05dcac342eed63f"
+    },
+    {
+      "path": "tests/p3-weight-guided-browser.js",
+      "match": true,
+      "sha256": "3a6f873b0054f2f889bd3429f2965fde77f53aa15a0da794ff5afae28a1e47ed"
+    },
+    {
+      "path": "tests/p3-weight-guided-static.cjs",
+      "match": true,
+      "sha256": "abc201062744679ac9be154a60a770172f64fed19a19795f28a021721d03f5a6"
+    },
+    {
+      "path": "tests/p3-weight-guided.html",
+      "match": true,
+      "sha256": "7ac9b6c017c8534aa06e0909c01206bf6fea39a46fb59e226680e07fe6dd88a1"
+    }
+  ],
+  "runtimeGithubReadbacks": [
+    "p3-weight-data.js",
+    "p3-weight-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
+  ],
+  "processNotes": [
+    "One GitHub head read returned fetch failed; exact retry confirmed the baseline before publication. Generic test_mcp_server cannot test built-in GitHub.",
+    "Existing official PDF pages reread; no fresh network source download claimed.",
+    "A duplicated capacity checkpoint in the inherited plan was retained once.",
+    "Practical wording was refined to explicitly require real g and kg readings; focused 91-case suite passed again.",
+    "Browser wrapper waits can time out while suites continue. Polled to completion, then exact failing cases rerun and retained separately."
   ]
 }
