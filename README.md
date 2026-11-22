@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 Time (IV) is implemented.** [Open the pathway](p3-learn.html?path=clock24): five bilingual lessons, 45 practice tasks, ten guided examples and ten sample checks for **3M4.1–2**. Pupils distinguish day context, read/write hour–minute pairs, relate 12/24-hour notation and explain noon and named-day midnight boundaries. No elapsed-time arithmetic in 24-hour notation is required.
+**22 November 2026: P3 Bar charts (I) is implemented.** [Open the pathway](p3-learn.html?path=bars): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve sample checks for **3D1.1–3**. Pupils bridge from pictograms, read scales 1/2/5 in both orientations, compare data, tally responses and construct charts.
 
-The eleven P3 guided topics contain **61 lessons and 549 practice tasks**. Written HH:MM answers preserve leading zeros and accept full-width digits/colon. First responses, supported retries, observed reading/writing and inquiry predictions remain separate. Earlier progress and question banks are preserved.
+The twelve P3 guided topics contain **67 lessons and 603 practice tasks**. Horizontal and vertical builders start blank, use supplied sample tables and retain exact frequencies between grid lines. Smaller and larger samples allow construction at all three scales. Actual data collection and original paper charts require separate observation; screen matches do not certify these skills. Earlier progress and question banks are preserved.
 
-**Next unfinished step: P3 bar charts.** Mixed calculations and remaining fraction comparison/operations follow in the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step: P3 mixed calculations**, then remaining fraction comparison and pictured operations in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Time IV release](planning/p3-clock24-guided-release.md) · [Evidence](planning/p3-clock24-guided-evidence.json). **291 distinct local and public browser cases verified**, with exact reruns retained; eleven static suites passed after a preservation-fixture correction. All fifteen runtime files matched; 879 inherited files remain unchanged. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+[Bar-chart release](planning/p3-bars-guided-release.md) · [Evidence](planning/p3-bars-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

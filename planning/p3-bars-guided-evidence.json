@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-22",
+  "baseline": "1bd644fc94054bedc1bdfa8e57c8990847a60cf4",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "P3Topics": 12,
+    "P3Lessons": 67,
+    "P3Practice": 603
+  },
+  "objectives": [
+    "3D1.1",
+    "3D1.2",
+    "3D1.3"
+  ],
+  "static": [
+    {
+      "suite": "bars-guided",
+      "exit": 0
+    },
+    {
+      "suite": "clock24-guided",
+      "exit": 0
+    },
+    {
+      "suite": "numbers",
+      "exit": 0
+    }
+  ],
+  "focusedStatic": {
+    "cases": [
+      {
+        "name": "Six bilingual lessons and complete task IDs",
+        "pass": true
+      },
+      {
+        "name": "Independent reading, comparison, tally and scale oracle",
+        "pass": true
+      },
+      {
+        "name": "SVG endpoints, equal widths and spacing, ticks in both languages",
+        "pass": true
+      },
+      {
+        "name": "All six orientation/scale combinations, zero, maximum and tie",
+        "pass": true
+      },
+      {
+        "name": "Source responses and exact fractional bar endpoint, no rounding",
+        "pass": true
+      },
+      {
+        "name": "Check prompts and interpretation/tally tuples differ from practice",
+        "pass": true
+      },
+      {
+        "name": "Earlier files preserved against current baseline",
+        "pass": true
+      },
+      {
+        "name": "Twelve topics and all learners stay isolated; older writers remain usable",
+        "pass": true
+      },
+      {
+        "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity; every field filled",
+        "pass": true
+      }
+    ]
+  },
+  "initialBrowser": {
+    "cases": 105,
+    "failures": [
+      {
+        "name": "Model and practical en parts",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical en one",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical en scales",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical en compare",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical en build",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout en 320 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout en 375 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout en 768 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout en 1280 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Model and practical zh parts",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical zh one",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical zh scales",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical zh compare",
+        "error": "Invalid CSS selector [data-tick=12]",
+        "pass": false
+      },
+      {
+        "name": "Model and practical zh build",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout zh 320 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout zh 375 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout zh 768 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      },
+      {
+        "name": "Layout zh 1280 p3-barbuild",
+        "error": "pristine",
+        "pass": false
+      }
+    ],
+    "corrections": [
+      "Explicit selected state for empty builder options makes untouched forms pristine.",
+      "Quoted numeric attribute values in test selectors."
+    ],
+    "rerun": "Corrected 105-case run verified with one exact timeout rerun; extended final 107-case run also verified with one exact timeout rerun."
+  },
+  "unchangedInheritedFiles": 887,
+  "relativeLinksChecked": 251,
+  "local": {
+    "distinctVerified": 308,
+    "suites": [
+      {
+        "name": "bars",
+        "cases": 107,
+        "failures": [
+          {
+            "name": "Model and practical en parts",
+            "error": "Navigation timeout {\"lang\":\"en\",\"stage\":\"learn\",\"lesson\":\"p3-barparts\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "clock24",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Topic and learner isolation through UI reset",
+            "error": "Navigation timeout {\"stage\":\"learn\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Layout zh 320 map",
+            "error": "Navigation timeout lang=zh&stage=map&lesson=p3-readfive",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "bars",
+        "name": "Model and practical en parts",
+        "pass": true
+      },
+      {
+        "suite": "clock24",
+        "name": "Topic and learner isolation through UI reset",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Layout zh 320 map",
+        "pass": true
+      }
+    ],
+    "intermediate": {
+      "cases": 105,
+      "failures": [
+        {
+          "name": "Tasks zh p3-barbuild easy",
+          "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-barbuild\",\"stage\":\"easy\"}"
+        }
+      ],
+      "exactRerunPassed": true,
+      "note": "Corrected suite before adding two scale-one construction cases; not counted again."
+    },
+    "native": {
+      "language": "zh",
+      "width": 320,
+      "fullWidthCount": "４",
+      "normalized": "4",
+      "heights": [
+        24,
+        48,
+        60
+      ],
+      "widths": [
+        36,
+        36,
+        36
+      ],
+      "scale": 5,
+      "focus": "bar-builder-status",
+      "status": "次數與提供表相符，請成人審閱標題、單位與解釋，不計分。",
+      "overflow": false,
+      "savedRecord": null
+    }
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-bars-data.js": "7e34737e68f6ea7dfee8415faacf26f87e9953aa29d5a75d47a0010174a7861b",
+    "p3-bars-models.js": "514cdafb5718b91cc226bab1f3cde36a5f7a99d85b4df479bdd0b8bf732cf33a",
+    "p3-learn-store.js": "afdf9529b52308940f7a725e9e0426c8ba1085d241beda30e6d9fe72af322ea1",
+    "p3-learn-topics.js": "c1e2771da1922583ac14d560749bd1d4efa62dc11d3ab7594302c81c9f6c3fbf",
+    "p3-learn.html": "34430f906a66472213c3577118dbbf35583c65c611d3fd95cbfc57ee8c20ff72",
+    "p3-learn.js": "7292d3c2a211badd71090d9daec5abe2dd200f4c74cb6abc77a40b3cd6e43e61",
+    "tests/p3-bars-blocked.html": "9a94044ee4127624f2459d0aa1ef0525da5e87b7168b391596d9cd8b5bea5805",
+    "tests/p3-bars-guided-browser.js": "70b67ef50ff05e1208c8648f8a773f60fb5c5f80ed0262f864c518042716db17",
+    "tests/p3-bars-guided-static.cjs": "73ee2fd0646aadc9225787dfcd09abad425647f85fdbfb422796bf5f44b08160",
+    "tests/p3-bars-guided.html": "13319a79d06a1c9bd4ed56b25bd6b280c4b1ba0b69ae36806adfe41c765bff2e",
+    "tests/p3-clock24-guided-browser.js": "9f1223782f59f255f441e3104cd89ef5eaa58265b68906e67df4929acc361a94"
+  },
+  "limits": [
+    "Classroom and independent manual validation pending.",
+    "Only focused, Time IV and numbers browser suites fully rerun; shared navigation across all twelve topics checked."
+  ]
+}
