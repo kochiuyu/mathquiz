@@ -1,0 +1,11 @@
+((root)=>{'use strict';const fields=['question','prediction','plan','trials','notice','explanation','extension','support'],first=fields.slice(0,3),MAX=65536;
+const cleanText=s=>typeof s==='string'?s.replace(/\r\n?/g,'\n').replace(/[\u0000-\u0008\u000b-\u001f\u007f]/g,'').replace(/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?<![\uD800-\uDBFF])[\uDC00-\uDFFF]/g,'').slice(0,800):'';
+const empty=()=>({version:1,locked:false,tried:false,...Object.fromEntries(fields.map(k=>[k,'']))});
+function clean(v){if(!v||v.version!==1||Array.isArray(v))throw Error('format');const s=empty();for(const k of fields)s[k]=cleanText(v[k]);s.locked=v.locked===true&&first.every(k=>s[k].trim());s.locked=!!s.locked;s.tried=s.locked&&v.tried===true;return s;}
+function create(storage,path,slot=0,test=false){if(!/^[a-z]+$/.test(path)||![0,1,2].includes(slot))throw Error('key');const key='mathquiz-p2-inquiry-'+(test?'test-':'')+'v1-'+path+'-'+slot;let state=empty(),notice='',invalid=false,unavailable=false;
+ function read(){let raw;try{raw=storage.getItem(key);}catch(e){unavailable=true;notice='read';return state;}try{if(raw&&raw.length>MAX)throw Error('size');state=raw?clean(JSON.parse(raw)):empty();invalid=false;unavailable=false;notice='';}catch(e){invalid=true;notice='read';}return state;}
+ function commit(fn){if(!unavailable)read();if(invalid)return false;if(fn(state)===false)return false;try{storage.setItem(key,JSON.stringify(state));unavailable=false;notice='';return true;}catch(e){unavailable=true;notice='write';return false;}}
+ read();return{key,get state(){return state;},get notice(){return notice;},get invalid(){return invalid;},read,set(k,v){return commit(s=>{if(k==='tried'){if(!s.locked)return false;s.tried=v===true;return;}if(!fields.includes(k)||s.locked&&first.includes(k)||!s.locked&&!first.includes(k))return false;s[k]=cleanText(v);});},lock(){return commit(s=>{if(s.locked||!first.every(k=>s[k].trim()))return false;s.locked=true;});},reset(){state=empty();invalid=false;try{storage.setItem(key,JSON.stringify(state));unavailable=false;notice='';return true;}catch(e){unavailable=true;notice='write';return false;}}};
+}
+root.MathQuizP2InquiryStore={create,empty,clean,cleanText,fields,maxLength:MAX};if(typeof module!=='undefined')module.exports=root.MathQuizP2InquiryStore;
+})(typeof window!=='undefined'?window:globalThis);
