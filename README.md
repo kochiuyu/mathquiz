@@ -58,7 +58,11 @@ Earlier progress is preserved. A collapsible topic chooser keeps phone lesson he
 
 Earlier progress is preserved. A separate notebook holds two self-reported real timing trials per learner; these do not award quiz marks. The interactive clock advances displayed time instantly and is explicitly not a real timer. All **1,756 distinct local and public browser cases verified**, with the mobile clock-layout repair and exact reruns recorded. All 33 static suites passed and twenty-four deployed runtime/test files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** complete guided **Time (II), 2M2 objectives 5–10: times of day and calendars**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Compass directions and integrated inquiry remain planned. This handoff supersedes historical next-step notes below.
+**22 November 2026: the fifteenth P2 guided topic is implemented.** [Times of day and calendars](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=calendar) adds six bilingual lessons, 54 practice tasks, 12 guided tasks and a 12-item sample check for **2M2 objectives 5–10**. Pupils connect morning/noon/midnight, read all month lengths, compare common/leap years and find event day counts or missing dates. With the minutes topic, guided materials now cover all ten Time (II) objectives. P2 now has **15 topics, 85 lessons and 765 practice tasks**. [Release report](planning/p2-calendar-guided-release.md) and [evidence](planning/p2-calendar-guided-evidence.json).
+
+Earlier progress is preserved. Interactive calendars keep temporary marks separate from saved explanations and quiz scores. All **1,864 distinct local and public browser cases verified**, including the documented test repair, complete focused rerun and exact timeout reruns. All 34 static suites passed and twenty-five deployed files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** implement guided **Directions and positions (II), 2S3**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Integrated inquiry and a whole-P2 coverage/readiness review remain planned. This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
