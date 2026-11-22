@@ -55,12 +55,24 @@
         "failure": "Stale tab refuses and retains draft — navigation timeout",
         "exactRerun": "passed"
       }
-    ]
+    ],
+    "finalVersionedRun": {
+      "distinct": 122,
+      "initialPasses": 121,
+      "failure": {
+        "name": "Bad record {\"version\":2",
+        "error": "Navigation timeout"
+      },
+      "exactRerun": {
+        "name": "Bad record {\"version\":2",
+        "pass": true
+      }
+    }
   },
   "public": {
     "done": true,
     "distinct": 122,
-    "runtimeCommit": "ce2b836c49f64a7f43a0de3292ac7090af90cebc",
+    "runtimeCommit": "f81a97a03ad417fb4db550cf681787d63cacc605",
     "runs": [
       {
         "commit": "4e31cfdaac70eac9e1658bb00c20ea290c064341",
@@ -96,6 +108,25 @@
           }
         ],
         "includes": "Final tick spacing and bar quantity assertions"
+      },
+      {
+        "commit": "f81a97a03ad417fb4db550cf681787d63cacc605",
+        "assets": "p3-review-r2",
+        "distinct": 122,
+        "initialPasses": 121,
+        "failures": [
+          {
+            "name": "Practical en fraction",
+            "error": "Navigation timeout lang=en&station=fraction"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Practical en fraction",
+            "pass": true
+          }
+        ],
+        "includes": "Final tick spacing, bar quantities and versioned renderer/harness"
       }
     ]
   },
@@ -105,7 +136,8 @@
     "Final local browser run retained one timeout failure and successful exact rerun.",
     "Live visual inspection found crowded chart tick labels. Widened plot scale; tests now verify tick bounding boxes do not overlap and bar lengths represent 18/10/14 on scale 2.",
     "First exact-byte readback reported CRLF versus LF differences in 15 local artifacts. Normalised only the changed local artifacts to published LF; all 18 then matched.",
-    "GitHub fetch failed on initial status and first chart-patch push. Confirmed branch unchanged, then retried successfully; no permission or authentication bypass."
+    "GitHub fetch failed on initial status and first chart-patch push. Confirmed branch unchanged, then retried successfully; no permission or authentication bypass.",
+    "A live revisit exposed cached unversioned chart/test scripts. Added versioned review and harness asset URLs plus a release query on iframe pages. Re-ran all 122 local and 122 public cases using r2 assets, and directly verified live script URL and tick positions 100,130,...,400. Earlier runs are retained as intermediate evidence, not extra distinct cases."
   ],
   "visualReview": [
     "Chinese mobile layout and fraction strips inspected at 360 CSS px; no horizontal overflow.",
@@ -157,7 +189,7 @@
     {
       "file": "p3-review.html",
       "match": true,
-      "sha256": "918309f51c901fa992805bda678aaf507682fcecf05adccb263d4298a21c22a1"
+      "sha256": "f30cc2641dcf18376a09be13db8b5dca3ac1bb92085634159a31d4b40ee4d7e8"
     },
     {
       "file": "p3-review.js",
@@ -167,7 +199,7 @@
     {
       "file": "README.md",
       "match": true,
-      "sha256": "d24f95ebde5f15e9424e6ae72f5efe56948cde9d697f45e4b3742eaa5c2abaad"
+      "sha256": "0c84775d423db183ead27f69f12f95f263a2e19306601653af1d3bcd2039ba8f"
     },
     {
       "file": "planning/p3-coverage-review.md",
@@ -177,12 +209,12 @@
     {
       "file": "planning/p3-guided-learning-plan.md",
       "match": true,
-      "sha256": "93e710cd826c7c105558b243b339a0c17702c7127995fcccde9bd2f687941d4f"
+      "sha256": "4f139cfcaea272f2a4f5741eea83b804560912f42400b3cb850645b457995b47"
     },
     {
       "file": "planning/p3-review-evidence.json",
       "match": true,
-      "sha256": "53a2e84802f8cb9e44f446f89fd31b269849576a136d618d7f0926b956d05793"
+      "sha256": "73d92520df1673bdca0163d9195ad1180f7362c8d65a18867b1dbcd9844d676a"
     },
     {
       "file": "planning/p3-review-novelty.json",
@@ -192,17 +224,17 @@
     {
       "file": "planning/p3-review-release.md",
       "match": true,
-      "sha256": "8f4eadcc699138b4198d6952155329ee5da77e1652b6dd986e6e76ef39dd1ea9"
+      "sha256": "60b3d603d9bd2f43d88b57897c8c238620f6aab518724dc91f1d9abd73c19eb9"
     },
     {
       "file": "tests/p3-review-blocked.html",
       "match": true,
-      "sha256": "c01bb6088f4d30f3e1fa1c25be90b5575044a7aec51e623a622fecf5a63c85cf"
+      "sha256": "7fd1b0489305b4f8e15aded91723ce37d773171da0b63e0bd85fffd33eba2177"
     },
     {
       "file": "tests/p3-review-browser.js",
       "match": true,
-      "sha256": "7ad6db45231aa1ee0e0b6b11327280086f6ece3653f23a947c01beb178082e04"
+      "sha256": "a6e890638620aedb6cf965cd5c3977fb9c09c19598a1e2229e8d707772d45f36"
     },
     {
       "file": "tests/p3-review-novelty.cjs",
@@ -217,7 +249,7 @@
     {
       "file": "tests/p3-review.html",
       "match": true,
-      "sha256": "ec1d3149f0d549712669e152e61a3846d9b964c507b0b6774d4db4beabdcf7e2"
+      "sha256": "590aed0841ea26f9ea4cdbbfe27bee8538d40d8ea134a21ceb29db427844101e"
     }
   ],
   "runtimeDeployments": [
@@ -238,6 +270,16 @@
         "status": "completed",
         "conclusion": "success",
         "html_url": "https://github.com/kochiuyu/mathquiz/actions/runs/45044977874",
+        "name": "pages build and deployment"
+      }
+    ],
+    [
+      {
+        "id": 45045325021,
+        "head_sha": "f81a97a03ad417fb4db550cf681787d63cacc605",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/kochiuyu/mathquiz/actions/runs/45045325021",
         "name": "pages build and deployment"
       }
     ]
