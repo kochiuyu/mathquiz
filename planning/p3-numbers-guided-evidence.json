@@ -56,7 +56,45 @@
     }
   },
   "public": {
-    "status": "pending"
+    "p3": {
+      "distinct": 110,
+      "fullPassed": 109,
+      "failures": [
+        {
+          "name": "Tasks zh p3-readfive easy",
+          "error": "Navigation timeout lang=zh&lesson=p3-readfive&stage=easy"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Tasks zh p3-readfive easy",
+          "pass": true
+        }
+      ]
+    },
+    "p2Review": {
+      "distinct": 81,
+      "fullPassed": 80,
+      "failures": [
+        {
+          "name": "Observation zh inquiry",
+          "error": "Navigation timeout lang=zh&station=inquiry"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Observation zh inquiry",
+          "pass": true,
+          "method": "Exact original observation fields and saved-help assertion repeated on the specific station; original test record restored."
+        }
+      ]
+    },
+    "distinctVerified": 191,
+    "runtimeAndInitialDocsReadback": {
+      "matched": 20,
+      "normalization": "Evidence JSON local CRLF was normalized to the LF submitted payload; the fetched SHA-256 then matched. All other files matched directly."
+    },
+    "outerNavigationTimeouts": "P3/P2 runner navigation calls timed out while their frames continued; polled existing runs without restart."
   },
   "static": {
     "cases": [
@@ -119,7 +157,7 @@
     ]
   },
   "earlierFilesUnchanged": 793,
-  "relativeLinksChecked": 219,
+  "relativeLinksChecked": 222,
   "runtimeSha256": {
     "index.html": "ad8aad018003e0f8397a9abf34ab86a7305596ad15e3ab10748f3b097424d964",
     "learn.html": "cf0ff35908061fc4d4c2a2b8d55a9edbadea8c17f58424a5253192ccd3905436",
@@ -169,7 +207,13 @@
     "width": 320,
     "keyboard": "Full-width ６１０４２ entered with keyboard Enter; recorded 61042, focus p3-status, no overflow. Exact test-key original restored.",
     "visual": "Five places and controls readable at 320px; no overflow.",
-    "screenshot": "screenshot-2026-11-22T03-34-42-801Z-ab00d23c.png"
+    "screenshot": "screenshot-2026-11-22T03-34-42-801Z-ab00d23c.png",
+    "publicMap": {
+      "fiveLessonLinks": true,
+      "overflow": false,
+      "pristine": true,
+      "screenshot": "screenshot-2026-11-22T03-44-43-869Z-396601d4.png"
+    }
   },
   "limits": [
     "No new full historical whole-site regression claim; selected shared navigation/storage regressions and unchanged-file comparison used.",
@@ -187,5 +231,15 @@
       "tests/p3-numbers-static.cjs"
     ],
     "allExactRetriesMatched": true
+  },
+  "runtimeCommit": "ef1698fd596323127dc779ddd37eef4ee01da7ed",
+  "runtimeDeployment": {
+    "url": "https://github.com/kochiuyu/mathquiz/actions/runs/44981674138",
+    "status": "Success",
+    "durationSeconds": 38
+  },
+  "correctionGitHubReadbacks": {
+    "matched": 5,
+    "failures": []
   }
 }

@@ -8,7 +8,7 @@ First responses remain separate from one supported retry. A new P3 record is iso
 
 **Next unfinished step:** implement **P3 multiplication by one digit**, beginning with meaningful partial products and carrying into written columns. Then open the parallel kilometre/millimetre route as a separate verified release. Fractions, shapes, measures/time and data keep the open branches in the [P3 guided plan](planning/p3-guided-learning-plan.md); no pass score gates access.
 
-[Release report](planning/p3-numbers-guided-release.md) · [Evidence](planning/p3-numbers-guided-evidence.json). Local verification is complete; public deployment checks are recorded in the release evidence when finished. The optional [P2 review](p2-review.html) remains available. Classroom trials, independent translation/accessibility review, physical printing and observed practical skills remain pending.
+[Release report](planning/p3-numbers-guided-release.md) · [Evidence](planning/p3-numbers-guided-evidence.json). All **191 distinct local and public browser cases are verified**, including documented exact timeout reruns. Fourteen static gates passed; 793 inherited files remain unchanged. Runtime deployment and twenty initial file readbacks matched. The optional [P2 review](p2-review.html) remains available. Classroom trials, independent translation/accessibility review, physical printing and observed practical skills remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
