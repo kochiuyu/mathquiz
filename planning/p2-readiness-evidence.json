@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-22",
+  "localBrowser": {
+    "distinct": 81,
+    "passed": 81,
+    "failed": 0
+  },
+  "staticGates": {
+    "review": 9,
+    "existingCalendar": 8
+  },
+  "publicBrowser": "pending",
+  "runtimeChanges": [
+    "separate review",
+    "map entry and branch links",
+    "calendar practical 29-day category"
+  ],
+  "sourceBase": "195393a8f551f1d936794c817b7ab0ee3497caf1",
+  "manualChecks": [
+    "Traditional Chinese keyboard/Enter at 320px, focus retained, no overflow",
+    "source comparison and teacher keys"
+  ],
+  "limits": [
+    "No full historical 2036-case rerun",
+    "No pupil/translation/screen-reader/physical-print validation"
+  ],
+  "hashes": {
+    "p2-calendar-data.js": "4fd617c56bbade84fe194302f9538f28636e72a8373db4ca82266d6e0979e34f",
+    "p2-learn.html": "e1452ba2bf13e993d041739c8f8e37fe4b095543df02b5ceddd9b721d170d321",
+    "p2-learn.js": "357d717c3d270cd3ca1870b4c30a3787367add8c3d7aaa7f036f607b8650c36a",
+    "p2-review-data.js": "d1c2099bafd2339eb513d172f08cd793cedbe019bc6b1eeb3f20c32a267b7a5b",
+    "p2-review-store.js": "4288788ba1ac4bc22ce6f60d098679acec0ef23250ac970886b9d3cf461dd0d2",
+    "p2-review.css": "97ff557f48d31784809455cb7178a156b05d71790e535b089b95016efd22bfee",
+    "p2-review.html": "500f88cca24157154a067ac278ae8be46bc0a4ae465f7b160f5a66d4d539685e",
+    "p2-review.js": "7e170483a44c262744bfed7da25003debbcc8b265d30422199be717c151f18e9",
+    "README.md": "92f32ec48d66600b2389b94a5e5997ab2d84390667398bdb3ca6ff5773466ea0",
+    "planning/p2-coverage-review.md": "9c6a6db362145c41a26d8774be511588cf5a098f531fab8bd79e8c921a723221",
+    "planning/p2-guided-learning-plan.md": "da90b9c48db762cc9ae488d120a30ac9c7152add1cb6e18a3b31de0e7f5d58f3",
+    "planning/p2-readiness-release.md": "84eaa060fe4513fc59151698a9cab08e42bebe1ffbf5a3224424e09d5712e550",
+    "tests/p2-review-blocked.html": "ed15b8d468779ac70c863f701e861f92c264bd640462f5e6b84e97bd813e3f7d",
+    "tests/p2-review-browser.js": "1957cbbfc30645c68876df5493fecd761b861116715dbfe102ea290c42c47136",
+    "tests/p2-review-static.cjs": "efad95a33a65aabcaf016fdda99ce668dc4a2dd8055f318984e1d4cb550c4cc3",
+    "tests/p2-review.html": "98068f7a3fa3ff705242df5d457fc38e8df17ab4a5642a7356c30705d77f13d6"
+  }
+}

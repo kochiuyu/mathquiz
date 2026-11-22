@@ -2,15 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: whole-P2 review complete.** The [coverage and readiness review](planning/p2-coverage-review.md) maps all **59 numbered objectives plus inquiry** to existing teaching. P2 has 16 topics, 90 lessons and 16 investigations. Keep the open branches and the current shape sequence; angles precede square/rectangle properties.
+**22 November 2026: P2 application review implemented.** [Seven short bilingual sessions](p2-review.html) offer 14 tasks with first attempts and a separate supported retry. Eight practical/oral stations retain observations separately. Earlier lesson/check results and investigations are preserved. The P2 map has clearer number-branch links, and the real-calendar prompt now includes leap-year February.
 
-**Readiness gap:** 86 of 178 topic-check items exactly repeat guided/practice items (all properties except ID). They support revisits, not an independent P3 readiness decision. Practical/oral evidence remains unobserved. [Reproducible audit](planning/p2-coverage-evidence.json).
+[Release details and limits](planning/p2-readiness-release.md) · [Verification evidence](planning/p2-readiness-evidence.json) · [Whole-P2 coverage review](planning/p2-coverage-review.md).
 
-**Next unfinished step:** implement the separate bilingual **P2 application/readiness review** specified in the [review contract](planning/p2-coverage-review.md#next-implementation-contract-p2-application-and-readiness-review), with fresh situations, first attempts, separate practical observations, targeted revisits and clearer branch links. Preserve earlier scores and records. Complete that release before guided P3 expansion; classroom and independent manual validation remain pending.
+**Next unfinished step: P3 planning.** Audit official P3 objectives, existing practice and prerequisites before adding guided lessons. The P2 review is not a pass mark or P3 gate. Classroom trials, independent translation/accessibility review and physical observations remain pending; they should inform revisions.
 
-This checkpoint changes documentation and an audit script only. It adds no lessons or new live-browser test claims. Historical release notes below record earlier results and next steps; this handoff supersedes them.
-
-Include the review's small calendar correction in that next release: the real-year month-sorting prompt must allow 29-day February in leap years. Its current 28/30/31 list fits 2027 only.
+Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
 ## Guided release history
 

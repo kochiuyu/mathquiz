@@ -1,5 +1,7 @@
 # Whole-P2 coverage, sequence and readiness review
 
+**Implementation follow-up, 22 November 2026:** the contract below is now implemented in the [P2 application review](../p2-review.html). The 29-day practical instruction is corrected. See [release details](p2-readiness-release.md) for sampling, storage, verification and remaining validation limits. The audit below records its original findings.
+
 22 November 2026. Reviewed published baseline `b5d8f51cb1b234d21350eb962063bb5e8622c7a1`.
 
 ## Decision
