@@ -273,7 +273,92 @@
     "previewStartup": "Initial navigation before server startup refused; subsequent navigation succeeded."
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "suites": [
+      {
+        "name": "fractionops",
+        "total": 94,
+        "passedInitially": 92,
+        "failures": [
+          {
+            "name": "Tasks en p3-threefractions difficult",
+            "error": "Navigation timeout {\"lang\":\"en\",\"lesson\":\"p3-threefractions\",\"stage\":\"difficult\"}"
+          },
+          {
+            "name": "Model and practical zh three",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"stage\":\"learn\",\"lesson\":\"p3-threefractions\"}"
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "total": 81,
+        "passedInitially": 80,
+        "failures": [
+          {
+            "name": "Tasks zh p3-equalparts difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-equalparts\",\"stage\":\"difficult\"}"
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "total": 110,
+        "passedInitially": 109,
+        "failures": [
+          {
+            "name": "Tasks zh p3-readfive difficult",
+            "error": "Navigation timeout lang=zh&lesson=p3-readfive&stage=difficult"
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "fractionops",
+        "name": "Tasks en p3-threefractions difficult",
+        "pass": true
+      },
+      {
+        "suite": "fractionops",
+        "name": "Model and practical zh three",
+        "pass": true
+      },
+      {
+        "suite": "foundations",
+        "name": "Tasks zh p3-equalparts difficult",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-readfive difficult",
+        "pass": true
+      }
+    ],
+    "wrapperTimeouts": "Navigation and wait wrappers timed out while the harness continued. One evaluate wrapper also timed out; a fresh snapshot confirmed ongoing progress. Only completed harness outcomes count, with exact failing-case reruns retained.",
+    "distinctVerified": 285,
+    "nativePhone": {
+      "width": 320,
+      "height": 800,
+      "language": "en",
+      "lesson": "p3-threefractions",
+      "unacknowledgedRevealBlocked": true,
+      "refusalFocus": "fops-status",
+      "addition": "1/6 + 2/6 + 2/6 = 5/6",
+      "acknowledgementRetained": true,
+      "newPictureResetsAcknowledgementAndEquation": true,
+      "subtraction": "7/8 − 2/8 − 3/8 = 2/8",
+      "partitionCount": 8,
+      "removedCount": 5,
+      "remainingCount": 2,
+      "revealFocus": "fops-equation",
+      "horizontalOverflow": false,
+      "testLearnerRecord": null,
+      "additionParts": 6,
+      "additionMarked": 5,
+      "source": "live native controls",
+      "screenshot": "screenshot-2026-11-22T15-11-50-826Z-d0299a8e.png"
+    }
   },
   "runtimeSha256": {
     "p3-fractionops-data.js": "230cddcd07038b5909ae8e02252433f61775c7a476922c70b6b93c204aeb2308",
@@ -291,5 +376,173 @@
   "limits": [
     "Classroom and independent manual validation pending.",
     "Focused, foundations and numbers browser suites run; fourteen-topic shared navigation checked."
-  ]
+  ],
+  "runtimeDeployment": {
+    "commit": "249ea1da67d4f6d8fd669c9151e5105251fd8d19",
+    "run": 45036380545,
+    "conclusion": "success"
+  },
+  "runtimeReadbacks": [
+    {
+      "path": "README.md",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "70a651133aae6201828e4d61c707ab44f42155837c47c7c9a9c24f4180faa0d1"
+        }
+      ]
+    },
+    {
+      "path": "p3-fractionops-data.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "230cddcd07038b5909ae8e02252433f61775c7a476922c70b6b93c204aeb2308"
+        }
+      ]
+    },
+    {
+      "path": "p3-fractionops-models.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "9417faa299df3a7aa3620b7530b3bbae26588626b363fae5985d6278f7060a18"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "16e1454d2691ecf311b2ae56786ab7302f60b71f67d2ea6b1bd3183884bb287b"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "ba2b1277a31cb94b254ea36eec6b997a6714f3ea9d172fb7fc113e080dff4de8"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "4bdf53cf5fcc37d0432714d41ce1b02a9d62b413a361774f28cec4a45c049109"
+        }
+      ]
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "313eee1f1b80a6532aafa140f3446906a9800d8a288a57d2f683b2221459a4b1"
+        }
+      ]
+    },
+    {
+      "path": "planning/p3-fractionops-guided-evidence.json",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "38a3e3934152f5286750f28479c9f5f53c4daa9ceb72e194a1f6b0b308745c24"
+        }
+      ]
+    },
+    {
+      "path": "planning/p3-fractionops-guided-release.md",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "89f80a14ce8030f790f976d7818017a90fde21bb89118764fdbdfa3f80ba860e"
+        }
+      ]
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "0a6987bcf711eb1569e4d54bf1d47ae0b5856a427729de2ac6c196fb75fe8e93"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-fractionops-blocked.html",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "b337e9e7e8735e4ff2bca034c44777493995aa0e0583487594d1cbfab6a32696"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-fractionops-browser.js",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "866c76d8e6aa19951c8337bc652a7812a80d71a0b6da05857388339df5dcd055"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-fractionops-static.cjs",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "1d2715f9df84dc22cd75a3c3f34bc72049d2f31ade3451c290c0308bfb2caac8"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-fractionops.html",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "ce601f434dc491c5955ead0aa2949015e3616414a4780e5c1ecb91ec840310b0"
+        }
+      ]
+    },
+    {
+      "path": "tests/p3-fractions-static.cjs",
+      "match": true,
+      "attempts": [
+        {
+          "match": true,
+          "sha256": "4a8e780b8d83717bf43a78ef9448d9cd386f81e7dbd1d0b0ff4f872dfc154d79"
+        }
+      ]
+    }
+  ],
+  "githubRuntimeReadbacks": [
+    "p3-fractionops-data.js",
+    "p3-fractionops-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
+  ],
+  "publicationTransport": {
+    "primary": "OpenBot GitHub MCP returned fetch failed twice on the final master read. Built-in server test reported it could not test this bundled connection.",
+    "fallback": "The available GitHub connector read the current master, created the tree and commit, then advanced master with an expected-head check and no force. Four exact repository reads matched.",
+    "shell": "git executable unavailable; no shell git write was attempted."
+  }
 }

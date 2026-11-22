@@ -8,7 +8,7 @@ The fourteen P3 guided topics contain **78 lessons and 702 practice tasks**. The
 
 **Next unfinished step: whole-P3 coverage, inquiry and readiness review**, including fresh application and practical evidence, before P4. See the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Release](planning/p3-fractionops-guided-release.md) · [Evidence](planning/p3-fractionops-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+[Release](planning/p3-fractionops-guided-release.md) · [Evidence](planning/p3-fractionops-guided-evidence.json). **285 distinct browser cases verified in each local/public environment**, with exact reruns and the historical-baseline test correction retained. Three static suites passed 35 gates; all fifteen runtime files matched. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
