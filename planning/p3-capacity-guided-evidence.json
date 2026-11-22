@@ -141,7 +141,149 @@
     ]
   },
   "public": {
-    "status": "pending"
+    "distinctVerified": 717,
+    "suites": [
+      {
+        "name": "capacity",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-capacitymeaning easy",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-capacitymeaning\",\"stage\":\"easy\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "triangles",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-trianglefeasibility together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-trianglefeasibility\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "quads",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-makeparallels normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-makeparallels\",\"stage\":\"normal\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "fractions",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-fractionbounds together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-fractionbounds\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "division",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-divisionremainders normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-divisionremainders\",\"stage\":\"normal\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "length",
+        "cases": 81,
+        "failures": [
+          {
+            "name": "Tasks zh p3-measuremm together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "multiply",
+        "cases": 91,
+        "failures": [
+          {
+            "name": "Tasks zh p3-threeproduct together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-threeproduct\",\"stage\":\"together\"}",
+            "pass": false
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Tasks zh p3-oddevenfive together",
+            "error": "Navigation timeout lang=zh&lesson=p3-oddevenfive&stage=together",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "capacity",
+        "name": "Tasks zh p3-capacitymeaning easy",
+        "pass": true
+      },
+      {
+        "suite": "triangles",
+        "name": "Tasks zh p3-trianglefeasibility together",
+        "pass": true
+      },
+      {
+        "suite": "quads",
+        "name": "Tasks zh p3-makeparallels normal",
+        "pass": true
+      },
+      {
+        "suite": "fractions",
+        "name": "Tasks zh p3-fractionbounds together",
+        "pass": true
+      },
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-divisionremainders normal",
+        "pass": true
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-measuremm together",
+        "pass": true
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-threeproduct together",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-oddevenfive together",
+        "pass": true
+      }
+    ],
+    "native": {
+      "width": 320,
+      "language": "zh",
+      "fullWidthAnswer": "400",
+      "feedbackFocus": "p3-status",
+      "scaleReading": "150 mL",
+      "scaleFocus": "cap-read",
+      "overflow": false,
+      "ownedTestKeyRemoved": true
+    }
   },
   "runtimeSha256": {
     "p3-capacity-data.js": "041d605886d05f6de7f971d877188f3b27b0724a364dfcfc3e252dc6fc13756d",
@@ -159,5 +301,159 @@
     "Classroom, independent translation, screen-reader listening, physical printing and observed practical performance pending.",
     "Only P3 browser suites rerun; inherited resources compared unchanged.",
     "Conceptual checks revisit core properties; not a readiness certificate."
+  ],
+  "runtimeDeployment": {
+    "commit": "581a5d3b43ee4d81ba290056e5c3fe4e865c0e4f",
+    "run": 45013773467,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "0e447edbd5ab229ac42924e581f219d1b189af4250c6bb5b547c1d7a3f78142f"
+    },
+    {
+      "path": "p3-capacity-data.js",
+      "match": true,
+      "sha256": "041d605886d05f6de7f971d877188f3b27b0724a364dfcfc3e252dc6fc13756d"
+    },
+    {
+      "path": "p3-capacity-models.js",
+      "match": true,
+      "sha256": "8cc8dcbfa84a1521121c973eb85cc190956133c71cbadc5b6cb79f6612153029"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "d869ad51e39659beb398767fd24ce076b2d8a85dceacadfe28c243dbd5a9f869"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "009c990e468200db01925de9254023dc61998948db4d7b0530f5284360b1d7bf"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "f1f9557986a42e331f8d3743c513527cbea326f6d33354929ec7e93a4b49a51b"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "cfd569abb19bafc6edcdbb809f207e49b7b47c1b00dc734f8edc0f1b7c30e5dc"
+    },
+    {
+      "path": "planning/p3-capacity-guided-evidence.json",
+      "match": true,
+      "sha256": "6a5a24f3f033b1dcdc87be2bdaa58ab8c177394180937db35f138bd531a5efe0"
+    },
+    {
+      "path": "planning/p3-capacity-guided-release.md",
+      "match": true,
+      "sha256": "a4034373c7de7b6887bab2136c572514b105c1e10b481332fc4ac28d919b21fa"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "65baaa4e4c9e5f9f57e94f56f2e9605d8ad4acf8c61d9f9e71c6d09195522a61"
+    },
+    {
+      "path": "tests/p3-capacity-blocked.html",
+      "match": true,
+      "sha256": "7c87073593ff447939b170650b0aecdd239d1f9cea608e760f00bc1c53531629"
+    },
+    {
+      "path": "tests/p3-capacity-guided-browser.js",
+      "match": true,
+      "sha256": "d06c0dfaf06a1665757e9f6fcdb21f2c397d200b53a16a1451df7a2f443aae09"
+    },
+    {
+      "path": "tests/p3-capacity-guided-static.cjs",
+      "match": true,
+      "sha256": "af5fe2419bf1a4f1a8290ae9466b5c17345087a842faf91092a6a75947208e71"
+    },
+    {
+      "path": "tests/p3-capacity-guided.html",
+      "match": true,
+      "sha256": "0064997908b36099c1fb3531b6368aaaa4949449f05a941934c968f212529c95"
+    }
+  ],
+  "runtimeGithubReadbacks": [
+    "p3-capacity-data.js",
+    "p3-capacity-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
+  ],
+  "processNotes": [
+    "Initial GitHub fetch failure recovered on retry; built-in GitHub cannot be tested with test_mcp_server.",
+    "Official network PDF timed out; previously downloaded official pages reread.",
+    "First preview navigation preceded server startup; retried after startup.",
+    "Package link validation initially ran before creating the new evidence file. Created evidence and reran successfully.",
+    "Browser navigation/wait wrapper timeouts do not terminate suites. Polled to completion; exact failing cases rerun separately."
+  ],
+  "preDeploymentReadback": [
+    {
+      "path": "README.md",
+      "match": false,
+      "sha256": "0e447edbd5ab229ac42924e581f219d1b189af4250c6bb5b547c1d7a3f78142f"
+    },
+    {
+      "path": "p3-capacity-data.js",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "p3-capacity-models.js",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": false,
+      "sha256": "d869ad51e39659beb398767fd24ce076b2d8a85dceacadfe28c243dbd5a9f869"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "009c990e468200db01925de9254023dc61998948db4d7b0530f5284360b1d7bf"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": false,
+      "sha256": "f1f9557986a42e331f8d3743c513527cbea326f6d33354929ec7e93a4b49a51b"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": false,
+      "sha256": "cfd569abb19bafc6edcdbb809f207e49b7b47c1b00dc734f8edc0f1b7c30e5dc"
+    },
+    {
+      "path": "planning/p3-capacity-guided-evidence.json",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "planning/p3-capacity-guided-release.md",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": false,
+      "sha256": "65baaa4e4c9e5f9f57e94f56f2e9605d8ad4acf8c61d9f9e71c6d09195522a61"
+    },
+    {
+      "path": "tests/p3-capacity-blocked.html",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "tests/p3-capacity-guided-browser.js",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "tests/p3-capacity-guided-static.cjs",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "path": "tests/p3-capacity-guided.html",
+      "error": "HTTP Error 404: Not Found"
+    }
   ]
 }
