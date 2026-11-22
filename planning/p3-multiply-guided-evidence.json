@@ -100,7 +100,46 @@
     "distinctVerified": 201
   },
   "public": {
-    "status": "pending"
+    "multiplication": {
+      "distinct": 91,
+      "fullPassed": 90,
+      "failures": [
+        {
+          "name": "Tasks zh p3-splitproduct together",
+          "error": "Navigation timeout lang=zh lesson=p3-splitproduct stage=together"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Tasks zh p3-splitproduct together",
+          "pass": true
+        }
+      ]
+    },
+    "numbers": {
+      "distinct": 110,
+      "fullPassed": 109,
+      "failures": [
+        {
+          "name": "Tasks zh p3-crossfive easy",
+          "error": "Navigation timeout lang=zh lesson=p3-crossfive stage=easy"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Tasks zh p3-crossfive easy",
+          "pass": true
+        }
+      ]
+    },
+    "distinctVerified": 201,
+    "deployedFilesMatched": 15,
+    "publicMap": {
+      "sixLessons": true,
+      "pristine": true,
+      "overflow": false,
+      "screenshot": "screenshot-2026-11-22T04-55-24-005Z-8d2f47c5.png"
+    }
   },
   "runtimeSha256": {
     "p3-learn-store.js": "353a98b45f14141de8d9b9af225ec5ee70254dfa9b697b577812d2b123a4736f",
@@ -127,5 +166,20 @@
     "First-response matches do not grade explanations, column writing or practical handling.",
     "Independent translation, screen-reader listening, physical printing, classroom trials and observed practical performance pending."
   ],
-  "next": "P3 kilometre/millimetre pathway, as a parallel measures route."
+  "next": "P3 kilometre/millimetre pathway, as a parallel measures route.",
+  "runtimeCommit": "92a854ac9ab963e0a259d8e5b5bf3a766959c1a7",
+  "runtimeDeployment": {
+    "url": "https://github.com/kochiuyu/mathquiz/actions/runs/44986773139",
+    "status": "Success",
+    "durationSeconds": 46
+  },
+  "githubReadback": {
+    "matched": 15,
+    "initialUnconfirmed": [
+      "p3-learn.js",
+      "p3-multiply-models.js",
+      "planning/p3-guided-learning-plan.md"
+    ],
+    "exactRetriesMatched": true
+  }
 }

@@ -8,7 +8,7 @@ The two P3 topics now contain **11 lessons and 99 practice tasks**. Multiplicati
 
 **Next unfinished step:** implement the parallel **P3 kilometre/millimetre pathway**, using physical references and real ruler measurements before estimates and records. It does not require completing every arithmetic topic. Later releases follow the open branches in the [P3 guided plan](planning/p3-guided-learning-plan.md).
 
-[Multiplication release](planning/p3-multiply-guided-release.md) · [Evidence](planning/p3-multiply-guided-evidence.json). Local and public verification outcomes are recorded in the evidence. Classroom trials, independent translation/accessibility review, physical printing and observed practical work remain pending.
+[Multiplication release](planning/p3-multiply-guided-release.md) · [Evidence](planning/p3-multiply-guided-evidence.json). All **201 distinct local and public browser cases are verified**, including recorded exact timeout reruns; ten static gates passed. All 15 deployed files matched, and 807 inherited files remain unchanged. Classroom trials, independent translation/accessibility review, physical printing and observed practical work remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
