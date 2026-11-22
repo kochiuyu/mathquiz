@@ -1,0 +1,1361 @@
+{
+  "date": "2026-11-22",
+  "baseline": "df1b011406c91e0adc6349202fa7454519034162",
+  "type": "Source/content review; no fresh full browser regression",
+  "totals": {
+    "topics": 14,
+    "lessons": 78,
+    "practice": 702,
+    "guided": 156,
+    "checks": 156,
+    "exactPayloadRepeats": 0,
+    "visibleResponseRepeats": 0,
+    "labelOnlyRepeats": 11
+  },
+  "objectives": [
+    {
+      "objective": "3N1.1",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p3-readfive",
+          "title": "Read, write and keep zero places",
+          "url": "../p3-learn.html?path=numbers&lesson=p3-readfive&stage=learn"
+        },
+        {
+          "topic": "numbers",
+          "id": "p3-crossfive",
+          "title": "Count across ten thousand",
+          "url": "../p3-learn.html?path=numbers&lesson=p3-crossfive&stage=learn"
+        },
+        {
+          "topic": "numbers",
+          "id": "p3-oddevenfive",
+          "title": "Use ones to decide odd or even",
+          "url": "../p3-learn.html?path=numbers&lesson=p3-oddevenfive&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N1.2",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p3-tenthousand",
+          "title": "Build ten thousand",
+          "url": "../p3-learn.html?path=numbers&lesson=p3-tenthousand&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N1.3",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p3-comparefive",
+          "title": "Compare from the highest place",
+          "url": "../p3-learn.html?path=numbers&lesson=p3-comparefive&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N2.1",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p3-splitproduct",
+          "title": "Split into tens and ones",
+          "url": "../p3-learn.html?path=multiply&lesson=p3-splitproduct&stage=learn"
+        },
+        {
+          "topic": "multiply",
+          "id": "p3-carryproduct",
+          "title": "Exchange while multiplying",
+          "url": "../p3-learn.html?path=multiply&lesson=p3-carryproduct&stage=learn"
+        },
+        {
+          "topic": "multiply",
+          "id": "p3-threeproduct",
+          "title": "Three digits, zeros and new places",
+          "url": "../p3-learn.html?path=multiply&lesson=p3-threeproduct&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N2.2",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p3-groupfactors",
+          "title": "Choose a helpful grouping",
+          "url": "../p3-learn.html?path=multiply&lesson=p3-groupfactors&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N2.3",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p3-productstories",
+          "title": "Choose a calculation for the story",
+          "url": "../p3-learn.html?path=multiply&lesson=p3-productstories&stage=learn"
+        },
+        {
+          "topic": "multiply",
+          "id": "p3-estimateproducts",
+          "title": "Estimate, calculate and explain",
+          "url": "../p3-learn.html?path=multiply&lesson=p3-estimateproducts&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N3.1",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p3-shareplaces",
+          "title": "Share tens and ones",
+          "url": "../p3-learn.html?path=division&lesson=p3-shareplaces&stage=learn"
+        },
+        {
+          "topic": "division",
+          "id": "p3-exchangequotient",
+          "title": "Exchange and keep zero places",
+          "url": "../p3-learn.html?path=division&lesson=p3-exchangequotient&stage=learn"
+        },
+        {
+          "topic": "division",
+          "id": "p3-divisionremainders",
+          "title": "Remainders and a check",
+          "url": "../p3-learn.html?path=division&lesson=p3-divisionremainders&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N3.2",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p3-divisionchain",
+          "title": "Divide from left to right",
+          "url": "../p3-learn.html?path=division&lesson=p3-divisionchain&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N3.3",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p3-divisionstories",
+          "title": "What happens to the leftovers?",
+          "url": "../p3-learn.html?path=division&lesson=p3-divisionstories&stage=learn"
+        },
+        {
+          "topic": "division",
+          "id": "p3-estimatedivision",
+          "title": "Estimate after exact division",
+          "url": "../p3-learn.html?path=division&lesson=p3-estimatedivision&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N4.1",
+      "lessons": [
+        {
+          "topic": "mixed",
+          "id": "p3-brackets",
+          "title": "Use brackets to say what comes first",
+          "url": "../p3-learn.html?path=mixed&lesson=p3-brackets&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N4.2",
+      "lessons": [
+        {
+          "topic": "mixed",
+          "id": "p3-fouradd",
+          "title": "Add and subtract through four digits",
+          "url": "../p3-learn.html?path=mixed&lesson=p3-fouradd&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N4.3",
+      "lessons": [
+        {
+          "topic": "mixed",
+          "id": "p3-mixedpriority",
+          "title": "Multiply before adding or subtracting",
+          "url": "../p3-learn.html?path=mixed&lesson=p3-mixedpriority&stage=learn"
+        },
+        {
+          "topic": "mixed",
+          "id": "p3-concreterelations",
+          "title": "See equal totals in real groups",
+          "url": "../p3-learn.html?path=mixed&lesson=p3-concreterelations&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N4.4",
+      "lessons": [
+        {
+          "topic": "mixed",
+          "id": "p3-comparetotals",
+          "title": "Find the other amount, then altogether",
+          "url": "../p3-learn.html?path=mixed&lesson=p3-comparetotals&stage=learn"
+        },
+        {
+          "topic": "mixed",
+          "id": "p3-estimatemixed",
+          "title": "Estimate after learning exact methods",
+          "url": "../p3-learn.html?path=mixed&lesson=p3-estimatemixed&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N5.1",
+      "lessons": [
+        {
+          "topic": "fractions",
+          "id": "p3-equalparts",
+          "title": "Name the whole and equal parts",
+          "url": "../p3-learn.html?path=fractions&lesson=p3-equalparts&stage=learn"
+        },
+        {
+          "topic": "fractions",
+          "id": "p3-objectfractions",
+          "title": "Read and write parts of one object",
+          "url": "../p3-learn.html?path=fractions&lesson=p3-objectfractions&stage=learn"
+        },
+        {
+          "topic": "fractions",
+          "id": "p3-setfractions",
+          "title": "One whole can be a set",
+          "url": "../p3-learn.html?path=fractions&lesson=p3-setfractions&stage=learn"
+        },
+        {
+          "topic": "fractions",
+          "id": "p3-fractionbounds",
+          "title": "None and all: zero and one",
+          "url": "../p3-learn.html?path=fractions&lesson=p3-fractionbounds&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N5.2",
+      "lessons": [
+        {
+          "topic": "fractions",
+          "id": "p3-modelequivalence",
+          "title": "Different partitions, same fraction",
+          "url": "../p3-learn.html?path=fractions&lesson=p3-modelequivalence&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N5.3",
+      "lessons": [
+        {
+          "topic": "fractionops",
+          "id": "p3-samedenominator",
+          "title": "Compare equal-sized parts",
+          "url": "../p3-learn.html?path=fractionops&lesson=p3-samedenominator&stage=learn"
+        },
+        {
+          "topic": "fractionops",
+          "id": "p3-samenumerator",
+          "title": "Compare the same number of parts",
+          "url": "../p3-learn.html?path=fractionops&lesson=p3-samenumerator&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3N5.4",
+      "lessons": [
+        {
+          "topic": "fractionops",
+          "id": "p3-pictureadd",
+          "title": "Join pictured shares",
+          "url": "../p3-learn.html?path=fractionops&lesson=p3-pictureadd&stage=learn"
+        },
+        {
+          "topic": "fractionops",
+          "id": "p3-picturesubtract",
+          "title": "Remove pictured shares",
+          "url": "../p3-learn.html?path=fractionops&lesson=p3-picturesubtract&stage=learn"
+        },
+        {
+          "topic": "fractionops",
+          "id": "p3-threefractions",
+          "title": "Explain three pictured shares",
+          "url": "../p3-learn.html?path=fractionops&lesson=p3-threefractions&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M1.1",
+      "lessons": [
+        {
+          "topic": "length",
+          "id": "p3-kilometre",
+          "title": "Kilometres: a longer unit",
+          "url": "../p3-learn.html?path=length&lesson=p3-kilometre&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M1.2",
+      "lessons": [
+        {
+          "topic": "length",
+          "id": "p3-comparekm",
+          "title": "Compare lengths and distances",
+          "url": "../p3-learn.html?path=length&lesson=p3-comparekm&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M1.3",
+      "lessons": [
+        {
+          "topic": "length",
+          "id": "p3-millimetre",
+          "title": "Meet the millimetre",
+          "url": "../p3-learn.html?path=length&lesson=p3-millimetre&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M1.4",
+      "lessons": [
+        {
+          "topic": "length",
+          "id": "p3-measuremm",
+          "title": "Measure from the starting mark",
+          "url": "../p3-learn.html?path=length&lesson=p3-measuremm&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M1.5",
+      "lessons": [
+        {
+          "topic": "length",
+          "id": "p3-lengthrecords",
+          "title": "Choose units, estimate, then check",
+          "url": "../p3-learn.html?path=length&lesson=p3-lengthrecords&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M2.1",
+      "lessons": [
+        {
+          "topic": "time",
+          "id": "p3-secondsense",
+          "title": "Feel a second",
+          "url": "../p3-learn.html?path=time&lesson=p3-secondsense&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M2.2",
+      "lessons": [
+        {
+          "topic": "time",
+          "id": "p3-realtiming",
+          "title": "Estimate and time real activities",
+          "url": "../p3-learn.html?path=time&lesson=p3-realtiming&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M2.3",
+      "lessons": [
+        {
+          "topic": "time",
+          "id": "p3-finishtime",
+          "title": "Find the finishing time",
+          "url": "../p3-learn.html?path=time&lesson=p3-finishtime&stage=learn"
+        },
+        {
+          "topic": "time",
+          "id": "p3-elapsedtime",
+          "title": "Find the elapsed minutes",
+          "url": "../p3-learn.html?path=time&lesson=p3-elapsedtime&stage=learn"
+        },
+        {
+          "topic": "time",
+          "id": "p3-starttime",
+          "title": "Work back to the starting time",
+          "url": "../p3-learn.html?path=time&lesson=p3-starttime&stage=learn"
+        },
+        {
+          "topic": "time",
+          "id": "p3-hourproblems",
+          "title": "Choose the unknown: whole hours",
+          "url": "../p3-learn.html?path=time&lesson=p3-hourproblems&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.1",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacitymeaning",
+          "title": "Capacity: how much can it hold?",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacitymeaning&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.2",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacitymeaning",
+          "title": "Capacity: how much can it hold?",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacitymeaning&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.3",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacitypour",
+          "title": "Compare by pouring",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacitypour&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.4",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacityunits",
+          "title": "Measure with equal cupfuls",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacityunits&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.5",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacitylitres",
+          "title": "Litres and millilitres",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacitylitres&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.6",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacityscales",
+          "title": "Read, measure and compare",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacityscales&stage=learn"
+        },
+        {
+          "topic": "capacity",
+          "id": "p3-capacityrecords",
+          "title": "Estimate, measure and record",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacityrecords&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M3.7",
+      "lessons": [
+        {
+          "topic": "capacity",
+          "id": "p3-capacityrecords",
+          "title": "Estimate, measure and record",
+          "url": "../p3-learn.html?path=capacity&lesson=p3-capacityrecords&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M4.1",
+      "lessons": [
+        {
+          "topic": "clock24",
+          "id": "p3-daycontext",
+          "title": "Why name the part of the day?",
+          "url": "../p3-learn.html?path=clock24&lesson=p3-daycontext&stage=learn"
+        },
+        {
+          "topic": "clock24",
+          "id": "p3-hourminutepairs",
+          "title": "Read and write the digit pairs",
+          "url": "../p3-learn.html?path=clock24&lesson=p3-hourminutepairs&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M4.2",
+      "lessons": [
+        {
+          "topic": "clock24",
+          "id": "p3-twelve24",
+          "title": "From day parts to 24-hour time",
+          "url": "../p3-learn.html?path=clock24&lesson=p3-twelve24&stage=learn"
+        },
+        {
+          "topic": "clock24",
+          "id": "p3-twentyfour12",
+          "title": "Read 24-hour times aloud",
+          "url": "../p3-learn.html?path=clock24&lesson=p3-twentyfour12&stage=learn"
+        },
+        {
+          "topic": "clock24",
+          "id": "p3-dayends",
+          "title": "Noon and named-day boundaries",
+          "url": "../p3-learn.html?path=clock24&lesson=p3-dayends&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.1",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightmeaning",
+          "title": "Heavier and lighter",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightmeaning&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.2",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightmeaning",
+          "title": "Heavier and lighter",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightmeaning&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.3",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightbalance",
+          "title": "Compare on a beam balance",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightbalance&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.4",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightunits",
+          "title": "Compare with equal-weight units",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightunits&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.5",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightgrams",
+          "title": "Grams and kilograms",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightgrams&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.6",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightscales",
+          "title": "Choose and read weighing scales",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightscales&stage=learn"
+        },
+        {
+          "topic": "weight",
+          "id": "p3-weightrecords",
+          "title": "Estimate, weigh and record",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightrecords&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3M5.7",
+      "lessons": [
+        {
+          "topic": "weight",
+          "id": "p3-weightrecords",
+          "title": "Estimate, weigh and record",
+          "url": "../p3-learn.html?path=weight&lesson=p3-weightrecords&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S1.1",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p3-parallellines",
+          "title": "Parallel lines keep the same distance",
+          "url": "../p3-learn.html?path=quads&lesson=p3-parallellines&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S1.2",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p3-makeparallels",
+          "title": "Draw and make parallel lines",
+          "url": "../p3-learn.html?path=quads&lesson=p3-makeparallels&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S1.3",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p3-parallelogramproperties",
+          "title": "Two parallel pairs and equal opposite sides",
+          "url": "../p3-learn.html?path=quads&lesson=p3-parallelogramproperties&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S1.4",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p3-inclusivenames",
+          "title": "Squares and rectangles are parallelograms",
+          "url": "../p3-learn.html?path=quads&lesson=p3-inclusivenames&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S1.5",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p3-trapeziumbases",
+          "title": "Exactly one parallel pair: trapeziums",
+          "url": "../p3-learn.html?path=quads&lesson=p3-trapeziumbases&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S1.6",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p3-constructquads",
+          "title": "Draw, make and check quadrilaterals",
+          "url": "../p3-learn.html?path=quads&lesson=p3-constructquads&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S2.1",
+      "lessons": [
+        {
+          "topic": "triangles",
+          "id": "p3-trianglesides",
+          "title": "Equal sides and different sides",
+          "url": "../p3-learn.html?path=triangles&lesson=p3-trianglesides&stage=learn"
+        },
+        {
+          "topic": "triangles",
+          "id": "p3-triangleright",
+          "title": "Right angles and equal sides together",
+          "url": "../p3-learn.html?path=triangles&lesson=p3-triangleright&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S2.2",
+      "lessons": [
+        {
+          "topic": "triangles",
+          "id": "p3-trianglenames",
+          "title": "Keep every applicable name",
+          "url": "../p3-learn.html?path=triangles&lesson=p3-trianglenames&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S2.3",
+      "lessons": [
+        {
+          "topic": "triangles",
+          "id": "p3-trianglefeasibility",
+          "title": "Can three lengths close?",
+          "url": "../p3-learn.html?path=triangles&lesson=p3-trianglefeasibility&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3S2.4",
+      "lessons": [
+        {
+          "topic": "triangles",
+          "id": "p3-maketriangles",
+          "title": "Draw, make and check triangles",
+          "url": "../p3-learn.html?path=triangles&lesson=p3-maketriangles&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3D1.1",
+      "lessons": [
+        {
+          "topic": "bars",
+          "id": "p3-barparts",
+          "title": "From pictures to bars",
+          "url": "../p3-learn.html?path=bars&lesson=p3-barparts&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3D1.2",
+      "lessons": [
+        {
+          "topic": "bars",
+          "id": "p3-barone",
+          "title": "Read one unit per interval",
+          "url": "../p3-learn.html?path=bars&lesson=p3-barone&stage=learn"
+        },
+        {
+          "topic": "bars",
+          "id": "p3-barscales",
+          "title": "Read scales of two and five",
+          "url": "../p3-learn.html?path=bars&lesson=p3-barscales&stage=learn"
+        },
+        {
+          "topic": "bars",
+          "id": "p3-barcompare",
+          "title": "Compare the data",
+          "url": "../p3-learn.html?path=bars&lesson=p3-barcompare&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    },
+    {
+      "objective": "3D1.3",
+      "lessons": [
+        {
+          "topic": "bars",
+          "id": "p3-bartally",
+          "title": "Collect, tally and make a table",
+          "url": "../p3-learn.html?path=bars&lesson=p3-bartally&stage=learn"
+        },
+        {
+          "topic": "bars",
+          "id": "p3-barbuild",
+          "title": "Choose a scale and construct",
+          "url": "../p3-learn.html?path=bars&lesson=p3-barbuild&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil application unobserved"
+    }
+  ],
+  "inquiry": [
+    {
+      "topic": "numbers",
+      "title": "Investigate: move a digit card",
+      "prompt": "Move five digit cards 0, 2, 4, 6, 8; choose what changes and stays the same.",
+      "url": "../p3-learn.html?path=numbers&stage=investigate"
+    },
+    {
+      "topic": "multiply",
+      "title": "Investigate: regroup the same collection",
+      "prompt": "Use 2 trays, 3 cups per tray and 5 counters per cup. Ask which grouping is easier to count and why. Predict before moving objects. Then change one quantity (keep factors small), test both routes and explain intermediate units. You may choose a different question.",
+      "url": "../p3-learn.html?path=multiply&stage=investigate"
+    },
+    {
+      "topic": "division",
+      "title": "Investigate: change the grouping",
+      "prompt": "Choose 24, 36 or 48 counters. Predict whether dividing first into 6 groups then splitting each in 2 gives the same amount as first finding 6 ÷ 2 and then sharing into that many groups. Keep a prediction, try both, and explain who receives each share. Extend to another total.",
+      "url": "../p3-learn.html?path=division&stage=investigate"
+    },
+    {
+      "topic": "mixed",
+      "title": "Investigate: can brackets change a total?",
+      "prompt": "Choose three small number cards and +, − or × cards. Predict how placing one pair of brackets could change the result, then test at least two placements. Keep nonnegative results, unsuccessful predictions and a case that stays equal. Explain each grouping with a drawing or objects. Do not nest brackets.",
+      "url": "../p3-learn.html?path=mixed&stage=investigate"
+    },
+    {
+      "topic": "fractions",
+      "title": "Investigate: keep the marked amount",
+      "prompt": "Use equal-sized strips. Choose a marked fraction and predict whether extra equal folds can change its counts while keeping the marked amount. Record a plan before trying. Overlay to check, include a non-matching example, explain the fixed whole and try a new fraction.",
+      "url": "../p3-learn.html?path=fractions&stage=investigate"
+    },
+    {
+      "topic": "fractionops",
+      "title": "Investigate: different shares, same total",
+      "prompt": "Divide a whole strip into eight equal parts. Predict which two non-overlapping shares can cover six parts altogether. Try several pairs, including zero, and explain what changes and what stays fixed. Then try three shares or a subtraction picture. Keep the original prediction and unsuccessful trials; do not mix addition and subtraction in one equation.",
+      "url": "../p3-learn.html?path=fractionops&stage=investigate"
+    },
+    {
+      "topic": "length",
+      "title": "Investigate: a reference helps?",
+      "prompt": "After measuring reference strips, choose a question: does using a known strip help you estimate NEW strips or dot-pair distances? Predict, plan a fair comparison, keep every first estimate, then measure with a real ruler. Change your reference or question and test again. Do not measure the screen.",
+      "url": "../p3-learn.html?path=length&stage=investigate"
+    },
+    {
+      "topic": "time",
+      "title": "Investigate: how close are our time estimates?",
+      "prompt": "Choose a safe seated activity. Agree start/finish actions and a tool. Save a prediction and plan before timing. Keep actual readings, display precision and any late starts; repeat fairly and explain differences without erasing your original estimate. No running, breath-holding or speed competition.",
+      "url": "../p3-learn.html?path=time&stage=investigate"
+    },
+    {
+      "topic": "capacity",
+      "title": "Investigate: does the taller container always hold more?",
+      "prompt": "Choose two clean unbreakable containers. Record your prediction and fair comparison plan before testing with cool water over a tray. Record capacity, not just current water. Keep spills and repeat invalid trials. Try another pair and explain whether height alone decides. Adult supervision; never use hot water, glass, medicines or chemicals.",
+      "url": "../p3-learn.html?path=capacity&stage=investigate"
+    },
+    {
+      "topic": "clock24",
+      "title": "Investigate: which labels prevent confusion?",
+      "prompt": "Predict which timetable labels a partner will read without asking for clarification. Make paired 12/24-hour cards with dates, noon and adjacent-day midnight. Keep the prediction, record actual readings and corrections, then explain which missing labels caused confusion. Do not calculate elapsed time.",
+      "url": "../p3-learn.html?path=clock24&stage=investigate"
+    },
+    {
+      "topic": "weight",
+      "title": "Investigate: is the bigger object always heavier?",
+      "prompt": "Choose two safe light objects. Record your prediction and a fair balance plan before testing. Check zero, centre the objects, wait and swap sides. Keep unsuccessful or invalid trials. Try another pair and explain whether size alone decides. An adult checks tool limits; no heavy lifting, people or pets.",
+      "url": "../p3-learn.html?path=weight&stage=investigate"
+    },
+    {
+      "topic": "quads",
+      "title": "Investigate: keep the parallel pairs",
+      "prompt": "Predict which changes to a four-corner model will keep two parallel pairs, and which will leave exactly one. Plan before trying. Draw or make several examples, turn them, check both pairs and record a counterexample. Explain what changed and test a new construction.",
+      "url": "../p3-learn.html?path=quads&stage=investigate"
+    },
+    {
+      "topic": "triangles",
+      "title": "Investigate: when can three strips close?",
+      "prompt": "Keep two strip lengths fixed and predict which third lengths can form a triangle. Record your plan before trying. Test shorter, equal-sum and longer cases; keep failures, explain the boundary and try a different fixed pair. Use real strips as well as the screen model.",
+      "url": "../p3-learn.html?path=triangles&stage=investigate"
+    },
+    {
+      "topic": "bars",
+      "title": "Investigate: which chart makes our data clear?",
+      "prompt": "Choose a familiar anonymous collection question and categories. Predict which scale/orientation will help a partner read the results. Keep raw responses, tallies and frequencies in your trials; label simulated fallback data clearly. Make both orientations from the same data, record your partner’s actual reading and revise the presentation without changing frequencies. Keep the first prediction and any help.",
+      "url": "../p3-learn.html?path=bars&stage=investigate"
+    }
+  ],
+  "reuse": [
+    {
+      "topic": "numbers",
+      "checks": 10,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "number": 6,
+        "choice": 3,
+        "order": 1
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "multiply",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "number": 11,
+        "choice": 1
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "division",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "fields": 9,
+        "number": 3
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "mixed",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "fields": 6,
+        "number": 5,
+        "choice": 1
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "fractions",
+      "checks": 10,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 6,
+        "fields": 4
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "fractionops",
+      "checks": 10,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 10
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "length",
+      "checks": 10,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "number": 7,
+        "choice": 3
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "time",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 9,
+        "number": 3
+      },
+      "labelOnlyRepeats": [
+        {
+          "check": "p3-timecheck-1",
+          "matches": [
+            {
+              "topic": "time",
+              "id": "p3-secondsense-easy-1"
+            },
+            {
+              "topic": "time",
+              "id": "p3-secondsense-normal-1"
+            },
+            {
+              "topic": "time",
+              "id": "p3-secondsense-difficult-1"
+            }
+          ]
+        },
+        {
+          "check": "p3-timecheck-2",
+          "matches": [
+            {
+              "topic": "time",
+              "id": "p3-secondsense-together-1"
+            },
+            {
+              "topic": "time",
+              "id": "p3-secondsense-easy-2"
+            },
+            {
+              "topic": "time",
+              "id": "p3-secondsense-normal-2"
+            },
+            {
+              "topic": "time",
+              "id": "p3-secondsense-difficult-2"
+            }
+          ]
+        },
+        {
+          "check": "p3-timecheck-4",
+          "matches": [
+            {
+              "topic": "time",
+              "id": "p3-realtiming-together-1"
+            },
+            {
+              "topic": "time",
+              "id": "p3-realtiming-easy-2"
+            },
+            {
+              "topic": "time",
+              "id": "p3-realtiming-normal-2"
+            },
+            {
+              "topic": "time",
+              "id": "p3-realtiming-difficult-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "capacity",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 6,
+        "number": 6
+      },
+      "labelOnlyRepeats": [
+        {
+          "check": "p3-ccheck-1",
+          "matches": [
+            {
+              "topic": "capacity",
+              "id": "p3-capacitymeaning-together-2"
+            },
+            {
+              "topic": "capacity",
+              "id": "p3-capacitymeaning-easy-2"
+            },
+            {
+              "topic": "capacity",
+              "id": "p3-capacitymeaning-normal-1"
+            },
+            {
+              "topic": "capacity",
+              "id": "p3-capacitymeaning-normal-3"
+            },
+            {
+              "topic": "capacity",
+              "id": "p3-capacitymeaning-difficult-2"
+            }
+          ]
+        },
+        {
+          "check": "p3-ccheck-3",
+          "matches": [
+            {
+              "topic": "capacity",
+              "id": "p3-capacitypour-normal-1"
+            }
+          ]
+        },
+        {
+          "check": "p3-ccheck-4",
+          "matches": [
+            {
+              "topic": "capacity",
+              "id": "p3-capacitypour-together-1"
+            },
+            {
+              "topic": "capacity",
+              "id": "p3-capacitypour-normal-2"
+            }
+          ]
+        },
+        {
+          "check": "p3-ccheck-12",
+          "matches": [
+            {
+              "topic": "capacity",
+              "id": "p3-capacityrecords-together-1"
+            },
+            {
+              "topic": "capacity",
+              "id": "p3-capacityrecords-normal-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "clock24",
+      "checks": 10,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 4,
+        "clock24": 6
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "weight",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 7,
+        "number": 5
+      },
+      "labelOnlyRepeats": [
+        {
+          "check": "p3-wcheck-2",
+          "matches": [
+            {
+              "topic": "weight",
+              "id": "p3-weightmeaning-together-1"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightmeaning-easy-2"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightmeaning-normal-2"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightmeaning-difficult-2"
+            }
+          ]
+        },
+        {
+          "check": "p3-wcheck-3",
+          "matches": [
+            {
+              "topic": "weight",
+              "id": "p3-weightbalance-together-2"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightbalance-normal-1"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightbalance-difficult-2"
+            }
+          ]
+        },
+        {
+          "check": "p3-wcheck-4",
+          "matches": [
+            {
+              "topic": "weight",
+              "id": "p3-weightbalance-easy-1"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightbalance-normal-2"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightbalance-difficult-3"
+            }
+          ]
+        },
+        {
+          "check": "p3-wcheck-12",
+          "matches": [
+            {
+              "topic": "weight",
+              "id": "p3-weightrecords-together-1"
+            },
+            {
+              "topic": "weight",
+              "id": "p3-weightrecords-normal-2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "quads",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 12
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "triangles",
+      "checks": 10,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 10
+      },
+      "labelOnlyRepeats": []
+    },
+    {
+      "topic": "bars",
+      "checks": 12,
+      "exactPayloadRepeats": [],
+      "visibleResponseRepeats": [],
+      "responseTypes": {
+        "choice": 4,
+        "number": 8
+      },
+      "labelOnlyRepeats": []
+    }
+  ],
+  "methods": {
+    "mapping": "Lesson objective tags expanded, then teaching and practical prompts reviewed against the official notes; tags alone do not establish attainment.",
+    "exactPayload": "Canonical full question payload excluding id, lesson and objective, compared with all P3 guided/practice items across topics.",
+    "visibleResponse": "Canonical type, bilingual prompt, answer, options, field labels and all twelve visual/raw-data inputs used by question(); ignores feedback and internal kind/args.",
+    "limits": "These methods do not detect all paraphrases, repeated worked examples, similar numerical tuples, activity sheets or practice-bank exposure. Distinct items are not independent transfer.",
+    "visualKeys": [
+      "visual",
+      "fractionVisual",
+      "quadVisual",
+      "triangleVisual",
+      "capacityVisual",
+      "weightVisual",
+      "barVisual",
+      "fractionCompare",
+      "operationVisual",
+      "relationVisual",
+      "rawCards",
+      "ruler"
+    ],
+    "labelOnly": "Same visible/response comparison after removing only the enumerated initial English/Chinese Example, Trial, New record, New investigation record and New application number labels. Mathematical quantities, diagrams, answers and options remain unchanged."
+  },
+  "sources": [
+    {
+      "file": "p3-learn-data.js",
+      "sha256": "0881c4b0faafde6ec64b0a460fd6ce4e70d512ef6d809a3597f47e838d754f15"
+    },
+    {
+      "file": "p3-multiply-data.js",
+      "sha256": "874bd5338f13c8d84a88bd40b70e4d8eced3c00fc0baaaa5434bef211711f46a"
+    },
+    {
+      "file": "p3-division-data.js",
+      "sha256": "ef7922220da33a9b4400698e1dd269e8e9db854247ed8c300d2e9de6a0bbf498"
+    },
+    {
+      "file": "p3-mixed-data.js",
+      "sha256": "e92889db0f607ae4ddf2b176d97455ebf9a57f1e18f29ce48fbe6bd4c1ba3587"
+    },
+    {
+      "file": "p3-fractions-data.js",
+      "sha256": "a0d355782b2009ff1c2f4659c14e431038b60b64e0c4554ca03129baa9228123"
+    },
+    {
+      "file": "p3-fractionops-data.js",
+      "sha256": "230cddcd07038b5909ae8e02252433f61775c7a476922c70b6b93c204aeb2308"
+    },
+    {
+      "file": "p3-length-data.js",
+      "sha256": "538d08df1a046ee8e7f746099186d5b72ec161e0838138cc4f0dcb4a350c8466"
+    },
+    {
+      "file": "p3-time-data.js",
+      "sha256": "7b95255573c34812614ba31d8164747dc1fa733f8f67722d2e714c715c39adbd"
+    },
+    {
+      "file": "p3-capacity-data.js",
+      "sha256": "041d605886d05f6de7f971d877188f3b27b0724a364dfcfc3e252dc6fc13756d"
+    },
+    {
+      "file": "p3-clock24-data.js",
+      "sha256": "0a7c6cab50df7a8c505447fdb179d6c82d8ff7ed70e3f7824bb12110cad279ba"
+    },
+    {
+      "file": "p3-weight-data.js",
+      "sha256": "30084d5ddaf278202d9c6e08243bcbc1817881ffb7b1815cddfcf32d3f7da50e"
+    },
+    {
+      "file": "p3-quads-data.js",
+      "sha256": "837b7e6ee3149b0a0f2f95e5b4bf626d89a05f63b8421c23610e7669623f96b4"
+    },
+    {
+      "file": "p3-triangles-data.js",
+      "sha256": "259f08dd9246f4b33d8fc4b49734bd0a2020f9535954468f46f5ef17a4fa4d1c"
+    },
+    {
+      "file": "p3-bars-data.js",
+      "sha256": "7e34737e68f6ea7dfee8415faacf26f87e9953aa29d5a75d47a0010174a7861b"
+    },
+    {
+      "file": "p3-learn.js",
+      "sha256": "313eee1f1b80a6532aafa140f3446906a9800d8a288a57d2f683b2221459a4b1"
+    },
+    {
+      "file": "p3-learn-store.js",
+      "sha256": "16e1454d2691ecf311b2ae56786ab7302f60b71f67d2ea6b1bd3183884bb287b"
+    },
+    {
+      "file": "activities/p3-inquiry.html",
+      "sha256": "20b0ffc435704afab4d387d6f955a579215761d10b0f7b5e1092810a19fafe88"
+    }
+  ],
+  "limits": [
+    "No pupil data accessed or assessed.",
+    "No full regression, physical tool use, printing, screen-reader listening or independent translation review.",
+    "Prior release test counts are historical, not new results."
+  ],
+  "auditRepairs": "An initial draft omitted topic-specific visual fields and falsely flagged 19 matches, then one after a partial repair. The final twelve-input list was checked against question() and the audit rerun before publication. Preliminary counts are invalid, not findings."
+}

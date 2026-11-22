@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 fraction comparison and pictured operations are implemented.** [Open the pathway](p3-learn.html?path=fractionops): five bilingual lessons, 45 practice tasks, ten guided examples and ten sample checks for **3N5.3–4**. Equal-sized wholes support same-denominator and same-numerator comparisons. Pictures precede oral explanations and horizontal addition/subtraction equations.
+**22 November 2026: whole-P3 coverage, inquiry and readiness review completed.** [Read the review](planning/p3-coverage-review.md) · [Evidence and repeat pairs](planning/p3-coverage-evidence.json).
 
-The fourteen P3 guided topics contain **78 lessons and 702 practice tasks**. The earlier [fraction foundations](p3-learn.html?path=fractions) supply 3N5.1–2; their IDs, pictured-count marking and saved records are unchanged. The new linked pathway has separate learner records. No simplest-form rule, unlike-denominator operations, mixed addition/subtraction expression or result above one is required.
+All **54 numbered objectives plus integrated inquiry** have teaching resources. P3 has **14 guided routes, 78 lessons, 702 practice tasks, 156 guided examples and 156 sample checks**. Keep the open learning branches. Fourteen topic investigations and the existing two paper investigations already provide integrated inquiry opportunities.
 
-**Next unfinished step: whole-P3 coverage, inquiry and readiness review**, including fresh application and practical evidence, before P4. See the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step: implement the separate P3 application review before P4**, following the [review contract](planning/p3-coverage-review.md#next-implementation-contract-separate-p3-application-review): 16 fresh screen tasks across eight sessions, nine practical stations and inquiry evidence review. Also clarify the guided sample-check wording: **11 of 156 checks repeat earlier tasks after introductory labels are removed**. Existing first responses and all earlier progress must remain unchanged. No sampled score certifies readiness.
 
-[Release](planning/p3-fractionops-guided-release.md) · [Evidence](planning/p3-fractionops-guided-evidence.json). **285 distinct browser cases verified in each local/public environment**, with exact reruns and the historical-baseline test correction retained. Three static suites passed 35 gates; all fifteen runtime files matched. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+This review changes documentation and adds a reproducible source audit only. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending. The separate application review is specified, not yet implemented.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
