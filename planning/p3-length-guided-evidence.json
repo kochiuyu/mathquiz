@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-22",
+  "baseline": "13579e7c14a48024f4b856826a7ae8e2f16f22ac",
+  "scope": "3M1.1–5 and measurement-before-estimation remarks",
+  "inventory": {
+    "lessons": 5,
+    "practice": 45,
+    "guided": 10,
+    "checks": 10
+  },
+  "static": {
+    "gates": 8,
+    "passed": 8
+  },
+  "local": {
+    "length": {
+      "total": 81,
+      "preliminaryPassed": 81,
+      "finalPassedInitial": 80,
+      "failures": [
+        {
+          "name": "Layout zh 1280 p3-lengthrecords",
+          "reason": "Navigation timeout",
+          "exactRerunPassed": true
+        }
+      ]
+    },
+    "multiply": {
+      "total": 91,
+      "passedInitial": 90,
+      "failures": [
+        {
+          "name": "Model and practical zh carry",
+          "reason": "Navigation timeout",
+          "exactRerunPassed": true
+        }
+      ]
+    },
+    "numbers": {
+      "total": 110,
+      "passedInitial": 109,
+      "failures": [
+        {
+          "name": "Layout zh 320 check",
+          "reason": "Navigation timeout",
+          "exactRerunPassed": true
+        }
+      ]
+    },
+    "distinctVerified": 282,
+    "nativeKeyboard": {
+      "width": 320,
+      "lang": "zh",
+      "input": "１８",
+      "saved": "18",
+      "focus": "p3-status",
+      "overflow": false,
+      "testKeyRestored": true
+    }
+  },
+  "public": "pending",
+  "manualPending": [
+    "pupil trials",
+    "independent translation",
+    "screen-reader listening",
+    "physical printing",
+    "actual tool-use observations"
+  ],
+  "inheritedUnchanged": 816,
+  "relativeMarkdownLinks": 226
+}

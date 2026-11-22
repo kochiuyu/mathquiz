@@ -1,6 +1,6 @@
 # P3 guided learning plan
 
-Prepared 22 November 2026 from the published P2 readiness handoff (`2a3e7123647dccd55749d57bbafb0b06734c9ad5`). **Updated after the first implementation:** the [five-digit pathway](../p3-learn.html?path=numbers) now supplies the five lessons specified below. The remaining P3 units are planned, not implemented guided teaching. Multiplication by one digit is also now implemented as [six guided lessons](../p3-learn.html?path=multiply), with [separate evidence](p3-multiply-guided-evidence.json). Next release: the parallel kilometre/millimetre route. [Release evidence](p3-numbers-guided-evidence.json).
+Prepared 22 November 2026 from the published P2 readiness handoff (`2a3e7123647dccd55749d57bbafb0b06734c9ad5`). **Updated after the first implementation:** the [five-digit pathway](../p3-learn.html?path=numbers) now supplies the five lessons specified below. Other P3 units remain planned unless explicitly recorded as implemented below. Multiplication by one digit is also now implemented as [six guided lessons](../p3-learn.html?path=multiply), with [separate evidence](p3-multiply-guided-evidence.json). The parallel [kilometre/millimetre route](../p3-learn.html?path=length) is now implemented as five lessons with [separate evidence](p3-length-guided-evidence.json). Next release: division by one digit; fraction foundations remain a parallel branch. [Release evidence](p3-numbers-guided-evidence.json).
 
 ## Decision and source basis
 
@@ -187,3 +187,7 @@ Inputs, label text, diagrams and phone layouts must support five places without 
 ## Verification of this planning release
 
 The original planning evidence records objective/unit counts, source inventory, relative links and runtime preservation for that documentation-only checkpoint. The separate first-pathway release report now records implementation checks. Neither evidence file claims pupil results or teaching delivery. Historical test totals are not new execution results.
+
+## Kilometre/millimetre implementation checkpoint — 22 November 2026
+
+Five lessons implement 3M1.1–5 as guided materials: kilometre reference, compare km, millimetre intervals, measure mm, and suitable records/estimation. Real reference measurement precedes estimates of new specimens. The notebook preserves original estimates separately from later measurements and observations. Existing activity sheets supply actual strip and dot-pair work. Model-scale reading is not actual measurement evidence. Compound-to-single cm/mm conversion is included; reverse conversion and decimal notation are not required. No kilometre walk or scale-map calculation is required. See the [release report](p3-length-guided-release.md) for checks and remaining manual limits.

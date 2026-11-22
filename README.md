@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 multiplication is implemented.** [Multiply, exchange and explain](p3-learn.html?path=multiply) adds six bilingual lessons, 54 practice tasks, 12 guided examples and a 12-item sample check. Split values and carrying lead into three-digit columns (including zeros and four-digit products), helpful three-factor grouping, stories and then estimation after exact work.
+**22 November 2026: P3 kilometres and millimetres is implemented.** [Open the pathway](p3-learn.html?path=length): five bilingual lessons, 45 practice tasks, ten guided examples and a ten-item sample check. Familiar kilometre references and comparisons lead into millimetre intervals, real ruler use, suitable records and estimation after measurement experience.
 
-The two P3 topics now contain **11 lessons and 99 practice tasks**. Multiplication has an independent Continue route and learner record. Original estimates, predictions, first answers and supported retries remain distinct; physical work and written-column explanations need separate observation. Earlier P1/P2 and P3 number work and practice-bank results are preserved.
+The three P3 guided topics contain **16 lessons and 144 practice tasks**. Each topic and pupil has separate progress. The measurement notebook retains reference details and original estimates for a new strip and dot-pair before accepting actual results and reflections. These are unscored self-reports; an adult records observed tool use separately. Diagrams are explicitly not calibrated rulers. Earlier P1/P2/P3 work and question banks are preserved.
 
-**Next unfinished step:** implement the parallel **P3 kilometre/millimetre pathway**, using physical references and real ruler measurements before estimates and records. It does not require completing every arithmetic topic. Later releases follow the open branches in the [P3 guided plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step:** implement **P3 division by one digit**, including zero quotient places and remainders. The fraction-foundation branch may develop in parallel, as set out in the [P3 guided plan](planning/p3-guided-learning-plan.md).
 
-[Multiplication release](planning/p3-multiply-guided-release.md) · [Evidence](planning/p3-multiply-guided-evidence.json). All **201 distinct local and public browser cases are verified**, including recorded exact timeout reruns; ten static gates passed. All 15 deployed files matched, and 807 inherited files remain unchanged. Classroom trials, independent translation/accessibility review, physical printing and observed practical work remain pending.
+[Measurement release and verification](planning/p3-length-guided-release.md) · [Evidence](planning/p3-length-guided-evidence.json). Verification status is recorded in those documents. Classroom trials, independent translation/accessibility reviews, physical printing and observed practical performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
