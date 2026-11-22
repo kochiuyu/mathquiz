@@ -34,7 +34,19 @@ The shared engine has one new selector, model renderer and optional ruler questi
 
 Eight static gates passed: inventory/bilingual coverage; independently counted intervals and repeated-addition arithmetic; fresh check prompts; inherited-file comparison; three-topic/pupil isolation; first-answer/estimate separation; stale/damaged/blocked storage; maximum record capacity and numeric boundaries.
 
-Browser results and publication status are recorded in [machine-readable evidence](p3-length-guided-evidence.json). Local length suite: 81/81. Earlier multiplication: 90/91 initially, with the exact `Model and practical zh carry` navigation-timeout case passing on rerun. The outer browser navigation also timed out while that runner continued; it was polled rather than restarted. Earlier numbers: 109/110 initially; the exact `Layout zh 320 check` navigation-timeout rerun passed. All 282 distinct local cases are verified. The small-screen ruler was subsequently widened and its labels enlarged; the final length run passed 80/81, and its exact `Layout zh 1280 p3-lengthrecords` navigation-timeout rerun passed. A native 320px Chinese keyboard check accepted full-width １８ plus Enter as 18, focused feedback and did not overflow; its test key was restored. All 226 relative Markdown links resolved. Public verification is pending at this candidate checkpoint.
+Browser results are recorded in [machine-readable evidence](p3-length-guided-evidence.json). **All 282 distinct cases verified locally and publicly**: 81 length, 91 multiplication and 110 numbers. This is the current P3 regression set, not a new full-site run.
+
+Local: preliminary length 81/81; final length 80/81 after widening the mobile ruler and enlarging labels, with exact `Layout zh 1280 p3-lengthrecords` timeout rerun passing. Multiplication 90/91 with exact `Model and practical zh carry` timeout rerun passing. Numbers 109/110 with exact `Layout zh 320 check` timeout rerun passing.
+
+Public length: 80/81 initially. Exact timeout reruns passed: `Tasks zh p3-kilometre together`. 
+
+Public multiply: 90/91 initially. Exact timeout reruns passed: `Tasks zh p3-carryproduct difficult`. 
+
+Public numbers: 109/110 initially. Exact timeout reruns passed: `Tasks zh p3-crossfive normal`. 
+
+Outer navigation timeouts occurred while runners continued; results were polled without restarting. No failed case was silently dropped. Test-owned keys were restored. A native 320px Chinese keyboard check accepted full-width １８ plus Enter as 18, focused feedback and did not overflow. The test key was restored. Mobile and live model screenshots were inspected; this is not comprehensive accessibility review.
+
+Runtime commit `5e0aa303595822584722bf46e7c5cbc07b3b91d3`; [Pages deployment 44992481500](https://github.com/kochiuyu/mathquiz/actions/runs/44992481500) succeeded in 45 seconds. All 14 GitHub payload readbacks matched. All ten runtime/test public hashes matched. All 226 relative Markdown links resolved. Final documentation publication/readback is completed separately and recorded in the attached release-completion note.
 
 Independent translation review, screen-reader listening, physical printing, real-tool calibration, pupil trials and adult observations have not been performed. Automated layout and marking checks do not establish those results.
 

@@ -8,7 +8,7 @@ The three P3 guided topics contain **16 lessons and 144 practice tasks**. Each t
 
 **Next unfinished step:** implement **P3 division by one digit**, including zero quotient places and remainders. The fraction-foundation branch may develop in parallel, as set out in the [P3 guided plan](planning/p3-guided-learning-plan.md).
 
-[Measurement release and verification](planning/p3-length-guided-release.md) · [Evidence](planning/p3-length-guided-evidence.json). Verification status is recorded in those documents. Classroom trials, independent translation/accessibility reviews, physical printing and observed practical performance remain pending.
+[Measurement release and verification](planning/p3-length-guided-release.md) · [Evidence](planning/p3-length-guided-evidence.json). All **282 distinct local and public P3 browser cases verified**, with exact timeout reruns recorded; eight static gates passed. All 816 inherited resources outside the explicit shared changes remain unchanged. Classroom trials, independent translation/accessibility reviews, physical printing and observed practical performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

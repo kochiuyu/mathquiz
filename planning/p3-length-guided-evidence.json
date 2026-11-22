@@ -58,7 +58,42 @@
       "testKeyRestored": true
     }
   },
-  "public": "pending",
+  "public": {
+    "length": {
+      "total": 81,
+      "passedInitial": 80,
+      "failures": [
+        {
+          "name": "Tasks zh p3-kilometre together",
+          "reason": "Navigation timeout",
+          "exactRerunPassed": true
+        }
+      ]
+    },
+    "multiply": {
+      "total": 91,
+      "passedInitial": 90,
+      "failures": [
+        {
+          "name": "Tasks zh p3-carryproduct difficult",
+          "reason": "Navigation timeout",
+          "exactRerunPassed": true
+        }
+      ]
+    },
+    "numbers": {
+      "total": 110,
+      "passedInitial": 109,
+      "failures": [
+        {
+          "name": "Tasks zh p3-crossfive normal",
+          "reason": "Navigation timeout",
+          "exactRerunPassed": true
+        }
+      ]
+    },
+    "distinctVerified": 282
+  },
   "manualPending": [
     "pupil trials",
     "independent translation",
@@ -67,5 +102,27 @@
     "actual tool-use observations"
   ],
   "inheritedUnchanged": 816,
-  "relativeMarkdownLinks": 226
+  "relativeMarkdownLinks": 226,
+  "runtimeCommit": "5e0aa303595822584722bf46e7c5cbc07b3b91d3",
+  "runtimeDeployment": {
+    "run": "44992481500",
+    "status": "Success",
+    "seconds": 45
+  },
+  "githubRuntimeReadbacks": {
+    "files": 14,
+    "matched": 14
+  },
+  "runtimeHashes": {
+    "p3-learn-store.js": "8a9a8fce978fed747d1451bbfb5fb2cbd5c29ccda077c2f1fa18fca6ebf89961",
+    "p3-learn-topics.js": "5e47843adb19f520f83c0611eaf29cd50733966ea865d673b36b26886c439433",
+    "p3-learn.html": "dbbda1c73132c9d83230631bf1342f1f8287cf5f68a3ab57448423132867fe9d",
+    "p3-learn.js": "ff342c98d54835d6c0e4c5fd9c1ced538dcf9921f0252a6892adb5e0bccfb288",
+    "p3-length-data.js": "538d08df1a046ee8e7f746099186d5b72ec161e0838138cc4f0dcb4a350c8466",
+    "p3-length-models.js": "a4aa8d9ec07719c6f1c4f5b316a0cf9a5a45c9cba896348c337b1f7963d51a33",
+    "tests/p3-length-blocked.html": "e501f24060f046d4c8c6fa6cac3d6ecf5554d5d39ca2c9e7505a0ba547e73399",
+    "tests/p3-length-browser.js": "63b23ec099671b23f3327edd0cad2288a5f8928bbe06875cb18ab0c4ad43e774",
+    "tests/p3-length-static.cjs": "ddd4806df97ef31d1116a3abfb56d28456a9ab1a83edb70dde523e5e3179dfea",
+    "tests/p3-length.html": "7e683b543f7baf2b781bf1ad17d16248d1e6c9e15934e3b6ba64372dd6ad1ab9"
+  }
 }
