@@ -1,0 +1,295 @@
+{
+  "date": "2026-11-22",
+  "baseline": "38b4655664864ae870443fea179bff604c16a18b",
+  "inventory": {
+    "lessons": 5,
+    "practice": 45,
+    "guided": 10,
+    "checks": 10,
+    "P3Topics": 14,
+    "P3Lessons": 78,
+    "P3Practice": 702
+  },
+  "objectives": [
+    "3N5.3",
+    "3N5.4"
+  ],
+  "static": [
+    {
+      "suite": "fractionops",
+      "cases": [
+        {
+          "name": "Five bilingual lessons, 65 unique tasks and objectives 3/4",
+          "pass": true
+        },
+        {
+          "name": "Independent common-cell comparison and bounded operation oracle",
+          "pass": true
+        },
+        {
+          "name": "Actual SVG marks encode starting, joining and removed shares",
+          "pass": true
+        },
+        {
+          "name": "Same-sized comparison wholes and boundary coverage",
+          "pass": true
+        },
+        {
+          "name": "Fresh check tuples and no simplest-form requirement",
+          "pass": true
+        },
+        {
+          "name": "Foundation data and strict pictured-count contract unchanged",
+          "pass": true
+        },
+        {
+          "name": "Fourteen topics and all learners stay isolated",
+          "pass": true
+        },
+        {
+          "name": "First/retry, observation and inquiry remain distinct",
+          "pass": true
+        },
+        {
+          "name": "Stale, damaged, future, oversized and blocked storage",
+          "pass": true
+        },
+        {
+          "name": "Full record survives cleaning",
+          "pass": true
+        },
+        {
+          "name": "Earlier files preserved against current baseline",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "suite": "foundations",
+      "cases": [
+        {
+          "name": "Five bilingual lessons, 45 practice, ten guided and ten checks; only objectives 1 and 2",
+          "pass": true
+        },
+        {
+          "name": "Independent common-cell coverage and pictured count oracle",
+          "pass": true
+        },
+        {
+          "name": "SVG matches every task count and equal whole width; X marks independent of colour",
+          "pass": true
+        },
+        {
+          "name": "Checks use fresh prompts or represented data, including no tuple repeats",
+          "pass": true
+        },
+        {
+          "name": "Earlier files unchanged except seven explicit shared runtime/handoff files",
+          "pass": true
+        },
+        {
+          "name": "Five topics and all learners stay isolated; older writers remain usable",
+          "pass": true
+        },
+        {
+          "name": "Picture counts are strict while amount equivalence is explicitly assessed separately",
+          "pass": true
+        },
+        {
+          "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+          "pass": true
+        },
+        {
+          "name": "Stale, damaged, future, oversized and blocked storage",
+          "pass": true
+        },
+        {
+          "name": "Full record survives cleaning within capacity; every field filled",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "suite": "numbers",
+      "cases": [
+        {
+          "name": "Inventory and stable unique IDs",
+          "pass": true
+        },
+        {
+          "name": "Independent mathematical oracle for all 65 tasks",
+          "pass": true
+        },
+        {
+          "name": "English, Traditional Chinese and objective mapping",
+          "pass": true
+        },
+        {
+          "name": "Fresh check prompts and numerical contexts versus teaching, guided, practice and activity",
+          "pass": true
+        },
+        {
+          "name": "Numeric normalization, bounds and invalid forms",
+          "pass": true
+        },
+        {
+          "name": "First response immutable, one supported retry and separate score fields",
+          "pass": true
+        },
+        {
+          "name": "All tasks, all notes and full inquiry fit below record cap",
+          "pass": true
+        },
+        {
+          "name": "Learner, grade, production and test isolation with scoped reset",
+          "pass": true
+        },
+        {
+          "name": "Stale writes and deletion/recreation conflict",
+          "pass": true
+        },
+        {
+          "name": "Malformed, future and oversized records protected",
+          "pass": true
+        },
+        {
+          "name": "Blocked storage and failed writes remain honestly volatile",
+          "pass": true
+        },
+        {
+          "name": "Inquiry prediction is locked and separate from attempts",
+          "pass": true
+        },
+        {
+          "name": "Observations require task/date; notes do not award marks",
+          "pass": true
+        },
+        {
+          "name": "Earlier bank payload and lower-grade input limits unchanged",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "initialStatic": [
+    {
+      "suite": "p3-fractionops-static.cjs",
+      "exit": 0,
+      "output": "{\n  \"cases\": [\n    {\n      \"name\": \"Five bilingual lessons, 65 unique tasks and objectives 3/4\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Independent common-cell comparison and bounded operation oracle\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Actual SVG marks encode starting, joining and removed shares\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Same-sized comparison wholes and boundary coverage\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Fresh check tuples and no simplest-form requirement\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Foundation data and strict pictured-count contract unchanged\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Fourteen topics and all learners stay isolated\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"First/retry, observation and inquiry remain distinct\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Stale, damaged, future, oversized and blocked storage\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Full record survives cleaning\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Earlier files preserved against current baseline\",\n      \"pass\": true\n    }\n  ]\n}\n",
+      "error": ""
+    },
+    {
+      "suite": "p3-fractions-static.cjs",
+      "exit": 1,
+      "output": "{\n  \"cases\": [\n    {\n      \"name\": \"Five bilingual lessons, 45 practice, ten guided and ten checks; only objectives 1 and 2\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Independent common-cell coverage and pictured count oracle\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"SVG matches every task count and equal whole width; X marks independent of colour\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Checks use fresh prompts or represented data, including no tuple repeats\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Earlier files unchanged except seven explicit shared runtime/handoff files\",\n      \"pass\": false,\n      \"error\": \"tests/p3-length-static.cjs\\n+ actual - expected\\n\\n  \\\"const A=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),D=require('../p3-length-data.js'),B=require('../p3-learn-store.js'),S=B.forPath('length'),R=[];\\\\n\\\" +\\n    \\\"const tasks=D.lessons.flatMap(l=>['together','easy','normal','difficult'].flatMap(s=>l[s])).concat(D.checks),mem=()=>{const m=new Map;return{getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)}};\\\\n\\\" +\\n    'function test(name,fn){try{fn();R.push({name,pass:true})}catch(e){R.push({name,pass:false,error:e.message})}}\\\\n' +\\n    \\\"test('Inventory and bilingual scope',()=>{A.equal(tasks.length,65);A.equal(D.lessons.length,5);A.equal(new Set(tasks.map(q=>q.id)).size,65);for(const q of tasks){A(q.prompt.every(x=>x.length>5));A(/[\\\\\\\\u3400-\\\\\\\\u9fff]/.test(q.prompt[1]));A(q.feedback.length===2);A(S.correct(q,q.answer));}A.equal(new Set(tasks.map(q=>q.objective)).size,5)});\\\\n\\\" +\\n    \\\"test('Independent interval and repeated addition answers',()=>{for(const q of tasks){const[a,b,c,u]=q.args;let v;switch(q.kind){case'km':v=Array(a).fill(1000).reduce((a,b)=>a+b,0);break;case'sections':v=Array(a).fill(b).reduce((a,b)=>a+b,0);break;case'cm':v=Array(a).fill(10).reduce((a,b)=>a+b,b);break;case'ruler':v=Array.from({length:41},(_,i)=>i).filter(i=>i>a&&i<=b).length;A(a>=0&&b<=40&&b>a);break;case'compare':v=a<b?'<':a>b?'>':'=';break;case'unit':v={detail:'mm',book:'cm',room:'m',route:'km'}[b];break;default:throw Error(q.kind)}A.equal(String(v),q.answer,q.id)}});\\\\n\\\" +\\n    \\\"test('Check prompts are fresh; familiar formats',()=>{const practice=tasks.filter(x=>!x.id.startsWith('p3-lcheck'));for(const q of D.checks)A(!practice.some(x=>x.prompt[0]===q.prompt[0]),q.id)});\\\\n\\\" +\\n+   \\\"test('All prior files unchanged except explicit shared runtime and handoff',()=>{const root=path.resolve(__dirname,'..'),base=process.env.MATHQUIZ_BASELINE_DIR?path.resolve(process.env.MATHQUIZ_BASELINE_DIR):path.resolve(root,'../p3-multiply-release'),allow=new Set(['tests/p3-length-static.cjs','README.md','planning/p3-guided-learning-plan.md','p3-learn.js','p3-learn-store.js','p3-learn-topics.js','p3-learn.html']);let count=0;function walk(dir,pre=''){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const n=pre+e.name;if(e.isDirectory())walk(path.join(dir,e.name),n+'/');else if(!allow.has(n)){A.equal(fs.readFileSync(path.join(root,n),'utf8').replace(/\\\\\\\\r\\\\\\\\n/g,'\\\\\\\\n'),fs.readFileSync(path.join(base,n),'utf8').replace(/\\\\\\\\r\\\\\\\\n/g,'\\\\\\\\n'),n);count++}}}walk(base);A(count>800);R.preserved=count;});\\\\n\\\" +\\n-   \\\"test('All prior files unchanged except explicit shared runtime and handoff',()=>{const root=path.resolve(__dirname,'..'),base=path.resolve(root,'../p3-multiply-release'),allow=new Set(['README.md','planning/p3-guided-learning-plan.md','p3-learn.js','p3-learn-store.js','p3-learn-topics.js','p3-learn.html']);let count=0;function walk(dir,pre=''){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const n=pre+e.name;if(e.isDirectory())walk(path.join(dir,e.name),n+'/');else if(!allow.has(n)){A.equal(fs.readFileSync(path.join(root,n),'utf8').replace(/\\\\\\\\r\\\\\\\\n/g,'\\\\\\\\n'),fs.readFileSync(path.join(base,n),'utf8').replace(/\\\\\\\\r\\\\\\\\n/g,'\\\\\\\\n'),n);count++}}}walk(base);A(count>800);R.preserved=count;});\\\\n\\\" +\\n    \\\"test('Three topics, learners and older tabs stay separate',()=>{const m=mem(),s=S.create(m),n=B.create(m),mul=B.forPath('multiply').create(m),s2=S.create(m,2);n.mark(B.ids[0]);mul.mark('p3-splitproduct');s2.mark(S.ids[1]);const saved=[n,mul,s2].map(x=>m.getItem(x.key));s.mark(S.ids[0]);s.reset();A.deepEqual([n,mul,s2].map(x=>m.getItem(x.key)),saved);A(n.mark(B.ids[1]));A(!s.mark(B.ids[0]));A(!n.attempt('p3-lcheck-1','first',{answer:'1'}));});\\\\n\\\" +\\n    \\\"test('First answers, estimates and observations are separate',()=>{const s=S.create(mem()),id=D.checks[0].id;s.attempt(id,'first',{answer:'1'});A(!s.attempt(id,'first',{answer:'2'}));A(s.attempt(id,'retry',{answer:'2000'}));A(!s.attempt(id,'retry',{answer:'1'}));A(!s.measureResult('strip',{tool:'ruler',result:'30 mm',reflection:'ok'}));A(!s.measurePredict('strip',{reference:'',target:'strip',guess:'40 mm'}));A(s.measurePredict('strip',{reference:'real 50 mm ruler',target:'new strip',guess:'40 mm'}));A(!s.measurePredict('strip',{reference:'x',target:'x',guess:'50 mm'}));A(s.measureResult('strip',{tool:'ruler',result:'43 mm',reflection:'3 mm longer'}));A.equal(s.state.measurements.strip.guess,'40 mm');A.equal(Object.keys(s.state.attempts).length,1);A(!s.observe(S.ids[0],{status:'independent',task:'x'}));});\\\\n\\\" +\\n    \\\"test('Stale, damaged, future, oversized and blocked storage',()=>{const m=mem(),s=S.create(m),t=S.create(m);s.mark(S.ids[0]);A(!t.mark(S.ids[1]));A.equal(t.notice,'conflict');for(const raw of ['{',JSON.stringify({version:2}),'x'.repeat(S.MAX+1)]){m.setItem(s.key,raw);const z=S.create(m);A(z.invalid);A(!z.mark(S.ids[0]));A.equal(m.getItem(s.key),raw);z.reset();A(!z.invalid)}const z=S.create({getItem(){throw Error()},setItem(){throw Error()}});A(z.volatile);A(z.mark(S.ids[0]));});\\\\n\\\" +\\n    \\\"test('Full record capacity, numeric validation and cleaning',()=>{const m=mem(),s=S.create(m),v='字'.repeat(800);for(const q of tasks)for(const k of ['first','retry'])A(s.attempt(q.id,k,{answer:q.answer,reason:v,help:v}));for(const id of S.ids)A(s.observe(id,{status:'prompted',date:'2026-11-22',task:v,words:v,help:v}));s.predict({question:v,prediction:v,plan:v});s.investigate({trials:v,notice:v,explanation:v,change:v,help:v});for(const id of ['strip','dots']){s.measurePredict(id,{reference:v,target:v,guess:v});s.measureResult(id,{tool:v,result:v,reflection:v,help:v})}A(!s.volatile);A(m.getItem(s.key).length<S.MAX);A.equal(S.create(m).state.measurements.dots.guess,v);for(const raw of ['10000','-1','1.5','1e3','1,000'])A.equal(S.canonical({type:'number'},raw),null);A.equal(S.canonical({type:'number'},'９０００'),'9000');A.equal(B.canonical({type:'number'},'99999'),'99999');});\\\\n\\\" +\\n    'console.log(JSON.stringify({cases:R},null,2));if(R.some(x=>!x.pass))process.exitCode=1;\\\\n'\\n\"\n    },\n    {\n      \"name\": \"Five topics and all learners stay isolated; older writers remain usable\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Picture counts are strict while amount equivalence is explicitly assessed separately\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"First/retry, observations and inquiry keep distinct immutable evidence\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Stale, damaged, future, oversized and blocked storage\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Full record survives cleaning within capacity; every field filled\",\n      \"pass\": true\n    }\n  ]\n}\n",
+      "error": ""
+    },
+    {
+      "suite": "p3-numbers-static.cjs",
+      "exit": 0,
+      "output": "{\n  \"cases\": [\n    {\n      \"name\": \"Inventory and stable unique IDs\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Independent mathematical oracle for all 65 tasks\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"English, Traditional Chinese and objective mapping\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Fresh check prompts and numerical contexts versus teaching, guided, practice and activity\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Numeric normalization, bounds and invalid forms\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"First response immutable, one supported retry and separate score fields\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"All tasks, all notes and full inquiry fit below record cap\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Learner, grade, production and test isolation with scoped reset\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Stale writes and deletion/recreation conflict\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Malformed, future and oversized records protected\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Blocked storage and failed writes remain honestly volatile\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Inquiry prediction is locked and separate from attempts\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Observations require task/date; notes do not award marks\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Earlier bank payload and lower-grade input limits unchanged\",\n      \"pass\": true\n    }\n  ]\n}\n",
+      "error": ""
+    }
+  ],
+  "unchangedInheritedFiles": 903,
+  "relativeLinksChecked": 258,
+  "local": {
+    "distinctVerified": 285,
+    "suites": [
+      {
+        "name": "fractionops",
+        "total": 94,
+        "passedInitially": 93,
+        "failures": [
+          {
+            "name": "Check separation zh",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"stage\":\"check\"}"
+          }
+        ]
+      },
+      {
+        "name": "foundations",
+        "total": 81,
+        "passedInitially": 80,
+        "failures": [
+          {
+            "name": "Model and practical en equal",
+            "error": "Navigation timeout {\"lang\":\"en\",\"stage\":\"learn\",\"lesson\":\"p3-equalparts\"}"
+          }
+        ]
+      },
+      {
+        "name": "numbers",
+        "total": 110,
+        "passedInitially": 109,
+        "failures": [
+          {
+            "name": "Model and practical record zh compare",
+            "error": "Navigation timeout lang=zh&lesson=p3-comparefive&stage=learn"
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "fractionops",
+        "name": "Check separation zh",
+        "pass": true
+      },
+      {
+        "suite": "foundations",
+        "name": "Model and practical en equal",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Model and practical record zh compare",
+        "pass": true
+      }
+    ],
+    "earlierFocusedRun": {
+      "total": 94,
+      "passed": 94,
+      "note": "Before acknowledgement-retention refinement; excluded from distinct total."
+    },
+    "nativePhone": {
+      "width": 320,
+      "height": 800,
+      "language": "zh",
+      "lesson": "p3-threefractions",
+      "unacknowledgedRevealBlocked": true,
+      "refusalFocus": "fops-status",
+      "addition": "1/6 + 2/6 + 2/6 = 5/6",
+      "acknowledgementRetained": true,
+      "newPictureResetsAcknowledgementAndEquation": true,
+      "subtraction": "7/8 − 2/8 − 3/8 = 2/8",
+      "partitionCount": 8,
+      "removedCount": 5,
+      "remainingCount": 2,
+      "revealFocus": "fops-equation",
+      "horizontalOverflow": false,
+      "testLearnerRecord": null
+    },
+    "previewStartup": "Initial navigation before server startup refused; subsequent navigation succeeded."
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-fractionops-data.js": "230cddcd07038b5909ae8e02252433f61775c7a476922c70b6b93c204aeb2308",
+    "p3-fractionops-models.js": "9417faa299df3a7aa3620b7530b3bbae26588626b363fae5985d6278f7060a18",
+    "p3-learn-store.js": "16e1454d2691ecf311b2ae56786ab7302f60b71f67d2ea6b1bd3183884bb287b",
+    "p3-learn-topics.js": "ba2b1277a31cb94b254ea36eec6b997a6714f3ea9d172fb7fc113e080dff4de8",
+    "p3-learn.html": "4bdf53cf5fcc37d0432714d41ce1b02a9d62b413a361774f28cec4a45c049109",
+    "p3-learn.js": "313eee1f1b80a6532aafa140f3446906a9800d8a288a57d2f683b2221459a4b1",
+    "tests/p3-fractionops-blocked.html": "b337e9e7e8735e4ff2bca034c44777493995aa0e0583487594d1cbfab6a32696",
+    "tests/p3-fractionops-browser.js": "866c76d8e6aa19951c8337bc652a7812a80d71a0b6da05857388339df5dcd055",
+    "tests/p3-fractionops-static.cjs": "1d2715f9df84dc22cd75a3c3f34bc72049d2f31ade3451c290c0308bfb2caac8",
+    "tests/p3-fractionops.html": "ce601f434dc491c5955ead0aa2949015e3616414a4780e5c1ecb91ec840310b0",
+    "tests/p3-fractions-static.cjs": "4a8e780b8d83717bf43a78ef9448d9cd386f81e7dbd1d0b0ff4f872dfc154d79"
+  },
+  "limits": [
+    "Classroom and independent manual validation pending.",
+    "Focused, foundations and numbers browser suites run; fourteen-topic shared navigation checked."
+  ]
+}

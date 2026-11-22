@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 mixed calculations is implemented.** [Open the pathway](p3-learn.html?path=mixed): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve sample checks for **3N4.1–4**. Four-digit addition/subtraction leads into brackets, multiplication order, four concrete equality patterns, comparison-plus-total stories and estimation.
+**22 November 2026: P3 fraction comparison and pictured operations are implemented.** [Open the pathway](p3-learn.html?path=fractionops): five bilingual lessons, 45 practice tasks, ten guided examples and ten sample checks for **3N5.3–4**. Equal-sized wholes support same-denominator and same-numerator comparisons. Pictures precede oral explanations and horizontal addition/subtraction equations.
 
-The thirteen P3 guided topics contain **73 lessons and 657 practice tasks**. Intermediate and final answers keep their roles. Original estimates, exact-answer reveals and reflections are saved separately, as are observations of actual columns, counter handling and drawings. Earlier progress and banks are preserved. All lessons are open; P2 addition/subtraction and P3 multiplication are useful-first links.
+The fourteen P3 guided topics contain **78 lessons and 702 practice tasks**. The earlier [fraction foundations](p3-learn.html?path=fractions) supply 3N5.1–2; their IDs, pictured-count marking and saved records are unchanged. The new linked pathway has separate learner records. No simplest-form rule, unlike-denominator operations, mixed addition/subtraction expression or result above one is required.
 
-**Next unfinished step: fraction comparison and pictured like-denominator operations**, completing 3N5.3–4 in the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step: whole-P3 coverage, inquiry and readiness review**, including fresh application and practical evidence, before P4. See the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Mixed-calculation release](planning/p3-mixed-guided-release.md) · [Evidence](planning/p3-mixed-guided-evidence.json). **331 distinct browser cases verified in each local/public environment**, with original failures, text/test repairs and exact timeout reruns retained. Three static suites passed 38 gates; fifteen runtime files matched. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+[Release](planning/p3-fractionops-guided-release.md) · [Evidence](planning/p3-fractionops-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
