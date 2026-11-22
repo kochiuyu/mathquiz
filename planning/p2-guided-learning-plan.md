@@ -1,6 +1,6 @@
 # P2 guided learning plan
 
-Updated 22 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5, 2N6, 2S2 and 2S4, plus all ten 2M2 objectives, are implemented across fifteen topics and 85 lessons. Directions/positions and integrated inquiry remain planned.** See the [times/calendar release](p2-calendar-guided-release.md) and [minutes/clock release](p2-minutes-guided-release.md) and [square/rectangle release](p2-quads-guided-release.md) and [angles release](p2-angles-guided-release.md) and [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
+Updated 22 November 2026. **Guided materials for 2N1, 2N2, 2S1, 2N3, 2M1, 2D1, 2N4, 2M3, 2N5, 2N6, 2S2 and 2S4, plus all ten 2M2 objectives and 2S3, are implemented across sixteen topics and 90 lessons. Integrated inquiry and the whole-P2 review remain planned.** See the [compass-direction release](p2-directions-guided-release.md) and [times/calendar release](p2-calendar-guided-release.md) and [minutes/clock release](p2-minutes-guided-release.md) and [square/rectangle release](p2-quads-guided-release.md) and [angles release](p2-angles-guided-release.md) and [division release](p2-division-guided-release.md) and [subtraction/change release](p2-change-guided-release.md) and [Money II release](p2-money-guided-release.md) and [four-digit release](p2-thousands-guided-release.md) and [pictogram release](p2-pictograms-guided-release.md) and [metres release](p2-metres-guided-release.md) and [multiplication release](p2-facts-guided-release.md). See the [arithmetic release](p2-arithmetic-guided-release.md). See the [first release and evidence](p2-number-guided-release.md). Start with three-digit number sense, while making shape, practical measurement and data routes available independently. Build explanations and experiences around the existing resources rather than treating a question bank as a teaching course.
 
 ## Starting point
 
@@ -41,7 +41,7 @@ Arrows recommend useful preparation; they do not lock topics. Metres also benefi
 
 ## Coverage and proposed teaching blocks
 
-Each row is a delivery scope, not a promise of three lessons. Split lessons whenever one explanation would introduce several new ideas. Objective numbers refer to the linked unit brief; all rows have resources; **2N1 and 2N2 now have guided teaching, while the other rows remain planned**.
+Each row is a delivery scope, not a promise of three lessons. Split lessons whenever one explanation would introduce several new ideas. Objective numbers refer to the linked unit brief; all rows have resources; **all fourteen numbered-objective units now have guided materials; integrated inquiry and whole-P2 validation remain unfinished**.
 
 | Unit and objectives | Proposed teaching progression | Practical evidence and existing resource |
 | --- | --- | --- |
@@ -138,8 +138,9 @@ Classroom trials, difficulty calibration, independent translation, screen-reader
 - [x] Deliver 2S4 segments, adjacent/opposite sides, square/rectangle properties and practical drawing/making.
 - [x] Deliver Time (II), 2M2 objectives 1–4: minute clocks, real timing records, finishing times and elapsed minutes.
 - [x] Deliver Time (II), 2M2 objectives 5–10: times of day, month/year lengths and calendar events.
-- [ ] Next: Directions and positions (II), 2S3.
-- [ ] Deliver the remaining branches with objective-level teaching evidence.
+- [x] Deliver Directions and positions (II), 2S3, with real-compass and walking prompts.
+- [ ] Next: integrate P2 investigations across the topics, then audit coverage, learning sequence and readiness.
+- [x] Deliver the numbered-objective branches with source-to-lesson teaching maps (practical attainment remains unverified).
 - [ ] Conduct pupil/manual validation and revise from observations.
 
 The first implementation adds five lessons, 45 practice tasks, 10 guided tasks and a 10-question check, with separate P2 progress. Existing P1 content and P2 practice banks remain as released. Verification details and remaining manual limits are recorded in the first release report.
@@ -261,3 +262,12 @@ Six bilingual lessons provide guided materials for **2M2 objectives 5–10**. Th
 Together with the minutes topic, guided materials now address all ten Time (II) objectives. This does not certify classroom delivery or practical achievement. P2 has fifteen topics, 85 lessons and 765 practice tasks. [Release report](p2-calendar-guided-release.md) · [1,864-case local/public evidence](p2-calendar-guided-evidence.json).
 
 Next: **Directions and positions (II), 2S3**, then integrated inquiry and a whole-P2 coverage/readiness review. Classroom and independent manual validation remain pending.
+
+
+## Sixteenth guided checkpoint · 22 November 2026
+
+Five bilingual 2S3 lessons add 45 practice tasks, ten guided tasks and a ten-item sample check. Direction names precede north-arrow orientation and relative-position sentences, followed by actual compass measurement and turning/walking. Rotated maps and reversed references avoid equating page up with north. A temporary facing model keeps compass directions fixed. Physical instrument use, spoken explanations and movement need separate observations.
+
+All fourteen units with numbered P2 objectives now have guided materials across sixteen topics, 90 lessons and 810 practice tasks. This is not yet a whole-course validation or a P3 readiness claim. [Release report](p2-directions-guided-release.md) · [1,957-case local/public evidence](p2-directions-guided-evidence.json).
+
+Next: **integrated P2 inquiry activities connected to the existing topics**, then a **whole-P2 coverage, learning-path and readiness review**. Classroom and independent manual validation remain pending.

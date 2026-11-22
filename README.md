@@ -62,7 +62,11 @@ Earlier progress is preserved. A separate notebook holds two self-reported real 
 
 Earlier progress is preserved. Interactive calendars keep temporary marks separate from saved explanations and quiz scores. All **1,864 distinct local and public browser cases verified**, including the documented test repair, complete focused rerun and exact timeout reruns. All 34 static suites passed and twenty-five deployed files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** implement guided **Directions and positions (II), 2S3**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). Integrated inquiry and a whole-P2 coverage/readiness review remain planned. This handoff supersedes historical next-step notes below.
+**22 November 2026: the sixteenth P2 guided topic is implemented.** [Compass directions and positions](https://kochiuyu.github.io/mathquiz/p2-learn.html?path=directions) adds five bilingual lessons, 45 practice tasks, ten guided tasks and a ten-item sample check for **2S3**. It covers N/E/S/W, turned north-arrow maps, reversed reference objects, real-compass procedures and turning/walking. P2 now has **16 topics, 90 lessons and 810 practice tasks**. [Release report](planning/p2-directions-guided-release.md) and [evidence](planning/p2-directions-guided-evidence.json).
+
+Earlier progress is preserved. Temporary turning models award no marks; actual compass use and walking require separate observation. All **1,957 distinct local and public browser cases verified**, with exact reruns recorded. All 35 static suites passed and twenty-five deployed files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** integrate **P2 inquiry activities across the existing topics**, then conduct a **whole-P2 coverage, learning-path and readiness review**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
