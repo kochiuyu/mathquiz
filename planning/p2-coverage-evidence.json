@@ -1,0 +1,1760 @@
+{
+  "date": "2026-11-22",
+  "baseline": "b5d8f51cb1b234d21350eb962063bb5e8622c7a1",
+  "type": "Source/content review; no fresh full browser regression",
+  "totals": {
+    "topics": 16,
+    "lessons": 90,
+    "practice": 810,
+    "guided": 180,
+    "checkItems": 178,
+    "exactReusedChecks": 86
+  },
+  "inquiryOpportunities": 16,
+  "objectives": [
+    {
+      "objective": "2N1.1",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p2-hundred",
+          "title": "Build a hundred",
+          "url": "../p2-learn.html?path=numbers&lesson=p2-hundred&stage=learn"
+        },
+        {
+          "topic": "numbers",
+          "id": "p2-sequence",
+          "title": "Read, count and notice",
+          "url": "../p2-learn.html?path=numbers&lesson=p2-sequence&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N1.2",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p2-hundred",
+          "title": "Build a hundred",
+          "url": "../p2-learn.html?path=numbers&lesson=p2-hundred&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N1.3",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p2-compare",
+          "title": "Compare and order",
+          "url": "../p2-learn.html?path=numbers&lesson=p2-compare&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N1.4",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p2-groups",
+          "title": "Count bigger groups",
+          "url": "../p2-learn.html?path=numbers&lesson=p2-groups&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N1.5",
+      "lessons": [
+        {
+          "topic": "numbers",
+          "id": "p2-estimate",
+          "title": "Estimate then check",
+          "url": "../p2-learn.html?path=numbers&lesson=p2-estimate&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N2.1",
+      "lessons": [
+        {
+          "topic": "arithmetic",
+          "id": "p2-carry",
+          "title": "Add with exchanges",
+          "url": "../p2-learn.html?path=arithmetic&lesson=p2-carry&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N2.2",
+      "lessons": [
+        {
+          "topic": "arithmetic",
+          "id": "p2-smartadd",
+          "title": "Choose helpful addition pairs",
+          "url": "../p2-learn.html?path=arithmetic&lesson=p2-smartadd&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N2.3",
+      "lessons": [
+        {
+          "topic": "arithmetic",
+          "id": "p2-borrow",
+          "title": "Exchange a ten to subtract",
+          "url": "../p2-learn.html?path=arithmetic&lesson=p2-borrow&stage=learn"
+        },
+        {
+          "topic": "arithmetic",
+          "id": "p2-substeps",
+          "title": "Subtract in the stated order",
+          "url": "../p2-learn.html?path=arithmetic&lesson=p2-substeps&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N2.4",
+      "lessons": [
+        {
+          "topic": "arithmetic",
+          "id": "p2-stories",
+          "title": "Choose a calculation and explain",
+          "url": "../p2-learn.html?path=arithmetic&lesson=p2-stories&stage=learn"
+        },
+        {
+          "topic": "arithmetic",
+          "id": "p2-roughcheck",
+          "title": "Estimate and check results",
+          "url": "../p2-learn.html?path=arithmetic&lesson=p2-roughcheck&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N3.1",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p2-equalgroups",
+          "title": "Look for equal groups",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-equalgroups&stage=learn"
+        },
+        {
+          "topic": "multiply",
+          "id": "p2-repeated",
+          "title": "From repeated addition to ×",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-repeated&stage=learn"
+        },
+        {
+          "topic": "multiply",
+          "id": "p2-arrays",
+          "title": "Turn rows and columns",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-arrays&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N3.2",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p2-firstfacts",
+          "title": "Build facts with 2, 5 and 10",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-firstfacts&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-facts34",
+          "title": "Build the 3 and 4 facts",
+          "url": "../p2-learn.html?path=facts&lesson=p2-facts34&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-facts68",
+          "title": "Double to build 6 and 8 facts",
+          "url": "../p2-learn.html?path=facts&lesson=p2-facts68&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-facts79",
+          "title": "Use nearby facts for 7 and 9",
+          "url": "../p2-learn.html?path=facts&lesson=p2-facts79&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-facttable",
+          "title": "Build the 2–10 table in sessions",
+          "url": "../p2-learn.html?path=facts&lesson=p2-facttable&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-timesone",
+          "title": "One group and one in each",
+          "url": "../p2-learn.html?path=facts&lesson=p2-timesone&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-timeszero",
+          "title": "Empty groups and no groups",
+          "url": "../p2-learn.html?path=facts&lesson=p2-timeszero&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N3.3",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p2-repeated",
+          "title": "From repeated addition to ×",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-repeated&stage=learn"
+        },
+        {
+          "topic": "multiply",
+          "id": "p2-firstfacts",
+          "title": "Build facts with 2, 5 and 10",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-firstfacts&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-factuse",
+          "title": "Choose, explain and revisit facts",
+          "url": "../p2-learn.html?path=facts&lesson=p2-factuse&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N3.4",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p2-arrays",
+          "title": "Turn rows and columns",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-arrays&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-facts34",
+          "title": "Build the 3 and 4 facts",
+          "url": "../p2-learn.html?path=facts&lesson=p2-facts34&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N3.5",
+      "lessons": [
+        {
+          "topic": "multiply",
+          "id": "p2-multstories",
+          "title": "Explain equal-group stories",
+          "url": "../p2-learn.html?path=multiply&lesson=p2-multstories&stage=learn"
+        },
+        {
+          "topic": "facts",
+          "id": "p2-factuse",
+          "title": "Choose, explain and revisit facts",
+          "url": "../p2-learn.html?path=facts&lesson=p2-factuse&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N4.1",
+      "lessons": [
+        {
+          "topic": "thousands",
+          "id": "p2-thousand",
+          "title": "Ten hundreds make a thousand",
+          "url": "../p2-learn.html?path=thousands&lesson=p2-thousand&stage=learn"
+        },
+        {
+          "topic": "thousands",
+          "id": "p2-readfour",
+          "title": "Read and write four-digit numbers",
+          "url": "../p2-learn.html?path=thousands&lesson=p2-readfour&stage=learn"
+        },
+        {
+          "topic": "thousands",
+          "id": "p2-crossfour",
+          "title": "Cross 1000 and notice odd or even",
+          "url": "../p2-learn.html?path=thousands&lesson=p2-crossfour&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N4.2",
+      "lessons": [
+        {
+          "topic": "thousands",
+          "id": "p2-thousand",
+          "title": "Ten hundreds make a thousand",
+          "url": "../p2-learn.html?path=thousands&lesson=p2-thousand&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N4.3",
+      "lessons": [
+        {
+          "topic": "thousands",
+          "id": "p2-largegroups",
+          "title": "Count in larger groups",
+          "url": "../p2-learn.html?path=thousands&lesson=p2-largegroups&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N4.4",
+      "lessons": [
+        {
+          "topic": "thousands",
+          "id": "p2-comparefour",
+          "title": "Compare and order four-digit numbers",
+          "url": "../p2-learn.html?path=thousands&lesson=p2-comparefour&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N5.1",
+      "lessons": [
+        {
+          "topic": "change",
+          "id": "p2-subhundreds",
+          "title": "Exchange hundreds, tens and ones",
+          "url": "../p2-learn.html?path=change&lesson=p2-subhundreds&stage=learn"
+        },
+        {
+          "topic": "change",
+          "id": "p2-subzeros",
+          "title": "Exchange across a zero",
+          "url": "../p2-learn.html?path=change&lesson=p2-subzeros&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N5.2",
+      "lessons": [
+        {
+          "topic": "change",
+          "id": "p2-mixedsteps",
+          "title": "Work from left to right",
+          "url": "../p2-learn.html?path=change&lesson=p2-mixedsteps&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N5.3",
+      "lessons": [
+        {
+          "topic": "change",
+          "id": "p2-eventstories",
+          "title": "Explain two changes",
+          "url": "../p2-learn.html?path=change&lesson=p2-eventstories&stage=learn"
+        },
+        {
+          "topic": "change",
+          "id": "p2-moneychange",
+          "title": "Give change in dollars and cents",
+          "url": "../p2-learn.html?path=change&lesson=p2-moneychange&stage=learn"
+        },
+        {
+          "topic": "change",
+          "id": "p2-estimatechanges",
+          "title": "Estimate, calculate and compare",
+          "url": "../p2-learn.html?path=change&lesson=p2-estimatechanges&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N6.1",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p2-share",
+          "title": "Share equally: how many in each?",
+          "url": "../p2-learn.html?path=division&lesson=p2-share&stage=learn"
+        },
+        {
+          "topic": "division",
+          "id": "p2-group",
+          "title": "Make groups: how many groups?",
+          "url": "../p2-learn.html?path=division&lesson=p2-group&stage=learn"
+        },
+        {
+          "topic": "division",
+          "id": "p2-remainders",
+          "title": "Name the quotient and remainder",
+          "url": "../p2-learn.html?path=division&lesson=p2-remainders&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N6.2",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p2-remainders",
+          "title": "Name the quotient and remainder",
+          "url": "../p2-learn.html?path=division&lesson=p2-remainders&stage=learn"
+        },
+        {
+          "topic": "division",
+          "id": "p2-divzeroone",
+          "title": "Divide with zero and one",
+          "url": "../p2-learn.html?path=division&lesson=p2-divzeroone&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N6.3",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p2-divcheck",
+          "title": "Use multiplication to check",
+          "url": "../p2-learn.html?path=division&lesson=p2-divcheck&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2N6.4",
+      "lessons": [
+        {
+          "topic": "division",
+          "id": "p2-divstories",
+          "title": "What do the leftovers mean?",
+          "url": "../p2-learn.html?path=division&lesson=p2-divstories&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M1.1",
+      "lessons": [
+        {
+          "topic": "metres",
+          "id": "p2-onemetre",
+          "title": "Build and recognise one metre",
+          "url": "../p2-learn.html?path=metres&lesson=p2-onemetre&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M1.2",
+      "lessons": [
+        {
+          "topic": "metres",
+          "id": "p2-measuretools",
+          "title": "Choose tools and measure carefully",
+          "url": "../p2-learn.html?path=metres&lesson=p2-measuretools&stage=learn"
+        },
+        {
+          "topic": "metres",
+          "id": "p2-lengthdistance",
+          "title": "Read and compare lengths and distances",
+          "url": "../p2-learn.html?path=metres&lesson=p2-lengthdistance&stage=learn"
+        },
+        {
+          "topic": "metres",
+          "id": "p2-metreestimate",
+          "title": "Estimate first, then measure",
+          "url": "../p2-learn.html?path=metres&lesson=p2-metreestimate&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M1.3",
+      "lessons": [
+        {
+          "topic": "metres",
+          "id": "p2-metrescm",
+          "title": "Record metres and centimetres",
+          "url": "../p2-learn.html?path=metres&lesson=p2-metrescm&stage=learn"
+        },
+        {
+          "topic": "metres",
+          "id": "p2-lengthdistance",
+          "title": "Read and compare lengths and distances",
+          "url": "../p2-learn.html?path=metres&lesson=p2-lengthdistance&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M1.4",
+      "lessons": [
+        {
+          "topic": "metres",
+          "id": "p2-bodyruler",
+          "title": "Measure a personal reference",
+          "url": "../p2-learn.html?path=metres&lesson=p2-bodyruler&stage=learn"
+        },
+        {
+          "topic": "metres",
+          "id": "p2-metreestimate",
+          "title": "Estimate first, then measure",
+          "url": "../p2-learn.html?path=metres&lesson=p2-metreestimate&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.1",
+      "lessons": [
+        {
+          "topic": "minutes",
+          "id": "p2-readminutes",
+          "title": "Read every minute on a clock",
+          "url": "../p2-learn.html?path=minutes&lesson=p2-readminutes&stage=learn"
+        },
+        {
+          "topic": "minutes",
+          "id": "p2-digitaltime",
+          "title": "Digital clocks, earlier and later",
+          "url": "../p2-learn.html?path=minutes&lesson=p2-digitaltime&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.2",
+      "lessons": [
+        {
+          "topic": "minutes",
+          "id": "p2-oneminute",
+          "title": "Experience a minute",
+          "url": "../p2-learn.html?path=minutes&lesson=p2-oneminute&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.3",
+      "lessons": [
+        {
+          "topic": "minutes",
+          "id": "p2-measureminutes",
+          "title": "Measure and compare minutes",
+          "url": "../p2-learn.html?path=minutes&lesson=p2-measureminutes&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.4",
+      "lessons": [
+        {
+          "topic": "minutes",
+          "id": "p2-finishingtime",
+          "title": "Find the finishing time",
+          "url": "../p2-learn.html?path=minutes&lesson=p2-finishingtime&stage=learn"
+        },
+        {
+          "topic": "minutes",
+          "id": "p2-elapsedminutes",
+          "title": "Find how many minutes passed",
+          "url": "../p2-learn.html?path=minutes&lesson=p2-elapsedminutes&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.5",
+      "lessons": [
+        {
+          "topic": "calendar",
+          "id": "p2-dayparts",
+          "title": "A whole day, morning and afternoon",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-dayparts&stage=learn"
+        },
+        {
+          "topic": "calendar",
+          "id": "p2-dayboundary",
+          "title": "Noon, midnight and the next day",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-dayboundary&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.6",
+      "lessons": [
+        {
+          "topic": "calendar",
+          "id": "p2-dayparts",
+          "title": "A whole day, morning and afternoon",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-dayparts&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.7",
+      "lessons": [
+        {
+          "topic": "calendar",
+          "id": "p2-dayparts",
+          "title": "A whole day, morning and afternoon",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-dayparts&stage=learn"
+        },
+        {
+          "topic": "calendar",
+          "id": "p2-dayboundary",
+          "title": "Noon, midnight and the next day",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-dayboundary&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.8",
+      "lessons": [
+        {
+          "topic": "calendar",
+          "id": "p2-monthlengths",
+          "title": "Read all twelve month lengths",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-monthlengths&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.9",
+      "lessons": [
+        {
+          "topic": "calendar",
+          "id": "p2-commonleap",
+          "title": "Common years and leap years",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-commonleap&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M2.10",
+      "lessons": [
+        {
+          "topic": "calendar",
+          "id": "p2-eventdays",
+          "title": "Count the days of an event",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-eventdays&stage=learn"
+        },
+        {
+          "topic": "calendar",
+          "id": "p2-eventdates",
+          "title": "Find the first or last date",
+          "url": "../p2-learn.html?path=calendar&lesson=p2-eventdates&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M3.1",
+      "lessons": [
+        {
+          "topic": "money",
+          "id": "p2-notes",
+          "title": "Meet Hong Kong notes",
+          "url": "../p2-learn.html?path=money&lesson=p2-notes&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M3.2",
+      "lessons": [
+        {
+          "topic": "money",
+          "id": "p2-prices",
+          "title": "Read higher prices",
+          "url": "../p2-learn.html?path=money&lesson=p2-prices&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2M3.3",
+      "lessons": [
+        {
+          "topic": "money",
+          "id": "p2-countmoney",
+          "title": "Count notes and coins",
+          "url": "../p2-learn.html?path=money&lesson=p2-countmoney&stage=learn"
+        },
+        {
+          "topic": "money",
+          "id": "p2-smallexchange",
+          "title": "Exchange $10, $20, $50 and $100 notes",
+          "url": "../p2-learn.html?path=money&lesson=p2-smallexchange&stage=learn"
+        },
+        {
+          "topic": "money",
+          "id": "p2-largemoney",
+          "title": "Larger exchanges and exact payment",
+          "url": "../p2-learn.html?path=money&lesson=p2-largemoney&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S1.1",
+      "lessons": [
+        {
+          "topic": "faces",
+          "id": "p2-surfaces",
+          "title": "Touch flat and curved surfaces",
+          "url": "../p2-learn.html?path=faces&lesson=p2-surfaces&stage=learn"
+        },
+        {
+          "topic": "faces",
+          "id": "p2-prismfaces",
+          "title": "Find a prism’s bases and lateral faces",
+          "url": "../p2-learn.html?path=faces&lesson=p2-prismfaces&stage=learn"
+        },
+        {
+          "topic": "faces",
+          "id": "p2-pyramidfaces",
+          "title": "Find a pyramid’s base and lateral faces",
+          "url": "../p2-learn.html?path=faces&lesson=p2-pyramidfaces&stage=learn"
+        },
+        {
+          "topic": "faces",
+          "id": "p2-turnsolids",
+          "title": "Turn, compare and explain",
+          "url": "../p2-learn.html?path=faces&lesson=p2-turnsolids&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S1.2",
+      "lessons": [
+        {
+          "topic": "faces",
+          "id": "p2-basenames",
+          "title": "Name solids from their bases",
+          "url": "../p2-learn.html?path=faces&lesson=p2-basenames&stage=learn"
+        },
+        {
+          "topic": "faces",
+          "id": "p2-turnsolids",
+          "title": "Turn, compare and explain",
+          "url": "../p2-learn.html?path=faces&lesson=p2-turnsolids&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S2.1",
+      "lessons": [
+        {
+          "topic": "angles",
+          "id": "p2-opening",
+          "title": "An angle is an opening",
+          "url": "../p2-learn.html?path=angles&lesson=p2-opening&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S2.2",
+      "lessons": [
+        {
+          "topic": "angles",
+          "id": "p2-compareangles",
+          "title": "Compare openings, not side lengths",
+          "url": "../p2-learn.html?path=angles&lesson=p2-compareangles&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S2.3",
+      "lessons": [
+        {
+          "topic": "angles",
+          "id": "p2-rightangles",
+          "title": "Check a right angle",
+          "url": "../p2-learn.html?path=angles&lesson=p2-rightangles&stage=learn"
+        },
+        {
+          "topic": "angles",
+          "id": "p2-perpendicular",
+          "title": "Make and draw perpendicular lines",
+          "url": "../p2-learn.html?path=angles&lesson=p2-perpendicular&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S2.4",
+      "lessons": [
+        {
+          "topic": "angles",
+          "id": "p2-perpendicular",
+          "title": "Make and draw perpendicular lines",
+          "url": "../p2-learn.html?path=angles&lesson=p2-perpendicular&stage=learn"
+        },
+        {
+          "topic": "angles",
+          "id": "p2-linedistance",
+          "title": "The shortest connection to a line",
+          "url": "../p2-learn.html?path=angles&lesson=p2-linedistance&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S2.5",
+      "lessons": [
+        {
+          "topic": "angles",
+          "id": "p2-anglekinds",
+          "title": "Make acute, right and obtuse angles",
+          "url": "../p2-learn.html?path=angles&lesson=p2-anglekinds&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S2.6",
+      "lessons": [
+        {
+          "topic": "angles",
+          "id": "p2-opening",
+          "title": "An angle is an opening",
+          "url": "../p2-learn.html?path=angles&lesson=p2-opening&stage=learn"
+        },
+        {
+          "topic": "angles",
+          "id": "p2-anglekinds",
+          "title": "Make acute, right and obtuse angles",
+          "url": "../p2-learn.html?path=angles&lesson=p2-anglekinds&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S3.1",
+      "lessons": [
+        {
+          "topic": "directions",
+          "id": "p2-cardinal",
+          "title": "Four directions and their short forms",
+          "url": "../p2-learn.html?path=directions&lesson=p2-cardinal&stage=learn"
+        },
+        {
+          "topic": "directions",
+          "id": "p2-northarrow",
+          "title": "Find north before reading a map",
+          "url": "../p2-learn.html?path=directions&lesson=p2-northarrow&stage=learn"
+        },
+        {
+          "topic": "directions",
+          "id": "p2-relativecompass",
+          "title": "Say where one object is from another",
+          "url": "../p2-learn.html?path=directions&lesson=p2-relativecompass&stage=learn"
+        },
+        {
+          "topic": "directions",
+          "id": "p2-turnwalk",
+          "title": "Turn, check and follow a direction",
+          "url": "../p2-learn.html?path=directions&lesson=p2-turnwalk&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S3.2",
+      "lessons": [
+        {
+          "topic": "directions",
+          "id": "p2-realcompass",
+          "title": "Measure with a real compass",
+          "url": "../p2-learn.html?path=directions&lesson=p2-realcompass&stage=learn"
+        },
+        {
+          "topic": "directions",
+          "id": "p2-turnwalk",
+          "title": "Turn, check and follow a direction",
+          "url": "../p2-learn.html?path=directions&lesson=p2-turnwalk&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S4.1",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p2-segments",
+          "title": "Line segments join two points",
+          "url": "../p2-learn.html?path=quads&lesson=p2-segments&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S4.2",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p2-quadsides",
+          "title": "Four sides: adjacent and opposite",
+          "url": "../p2-learn.html?path=quads&lesson=p2-quadsides&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S4.3",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p2-square",
+          "title": "Check square properties",
+          "url": "../p2-learn.html?path=quads&lesson=p2-square&stage=learn"
+        },
+        {
+          "topic": "quads",
+          "id": "p2-rectangle",
+          "title": "Check rectangle properties",
+          "url": "../p2-learn.html?path=quads&lesson=p2-rectangle&stage=learn"
+        },
+        {
+          "topic": "quads",
+          "id": "p2-makequads",
+          "title": "Make, test and repair shapes",
+          "url": "../p2-learn.html?path=quads&lesson=p2-makequads&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2S4.4",
+      "lessons": [
+        {
+          "topic": "quads",
+          "id": "p2-drawquads",
+          "title": "Draw with a ruler and set square",
+          "url": "../p2-learn.html?path=quads&lesson=p2-drawquads&stage=learn"
+        },
+        {
+          "topic": "quads",
+          "id": "p2-makequads",
+          "title": "Make, test and repair shapes",
+          "url": "../p2-learn.html?path=quads&lesson=p2-makequads&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2D1.1",
+      "lessons": [
+        {
+          "topic": "pictograms",
+          "id": "p2-sortdata",
+          "title": "Organise a collection",
+          "url": "../p2-learn.html?path=pictograms&lesson=p2-sortdata&stage=learn"
+        },
+        {
+          "topic": "pictograms",
+          "id": "p2-chartparts",
+          "title": "Title, categories and key",
+          "url": "../p2-learn.html?path=pictograms&lesson=p2-chartparts&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2D1.2",
+      "lessons": [
+        {
+          "topic": "pictograms",
+          "id": "p2-readrows",
+          "title": "Read horizontal pictograms",
+          "url": "../p2-learn.html?path=pictograms&lesson=p2-readrows&stage=learn"
+        },
+        {
+          "topic": "pictograms",
+          "id": "p2-readcolumns",
+          "title": "Read vertical pictograms",
+          "url": "../p2-learn.html?path=pictograms&lesson=p2-readcolumns&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    },
+    {
+      "objective": "2D1.3",
+      "lessons": [
+        {
+          "topic": "pictograms",
+          "id": "p2-buildcharts",
+          "title": "Build and check both forms",
+          "url": "../p2-learn.html?path=pictograms&lesson=p2-buildcharts&stage=learn"
+        }
+      ],
+      "status": "Teaching and practical opportunity present; pupil evidence not observed"
+    }
+  ],
+  "reuseMethod": "Canonical deep equality of every question property except id, within the same topic; includes prompt, answer, hints, options, visuals and metadata. Conservative exact-repeat count, not a measurement of transfer or how many pupils saw an item.",
+  "reuse": [
+    {
+      "topic": "numbers",
+      "file": "p2-learn-data.js",
+      "checkCount": 10,
+      "reused": []
+    },
+    {
+      "topic": "arithmetic",
+      "file": "p2-arithmetic-data.js",
+      "checkCount": 12,
+      "reused": []
+    },
+    {
+      "topic": "multiply",
+      "file": "p2-multiply-data.js",
+      "checkCount": 10,
+      "reused": [
+        {
+          "check": "mc-2",
+          "practice": [
+            "eg-n1"
+          ]
+        },
+        {
+          "check": "mc-5",
+          "practice": [
+            "ar-n1"
+          ]
+        },
+        {
+          "check": "mc-6",
+          "practice": [
+            "ar-g2",
+            "ar-d1"
+          ]
+        },
+        {
+          "check": "mc-10",
+          "practice": [
+            "eg-d1",
+            "ms-d1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "facts",
+      "file": "p2-facts-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "fc-1",
+          "practice": [
+            "f34-n1"
+          ]
+        },
+        {
+          "check": "fc-8",
+          "practice": [
+            "one-n2"
+          ]
+        },
+        {
+          "check": "fc-10",
+          "practice": [
+            "zero-e3"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "thousands",
+      "file": "p2-thousands-data.js",
+      "checkCount": 10,
+      "reused": [
+        {
+          "check": "tc-3",
+          "practice": [
+            "rw-e3"
+          ]
+        },
+        {
+          "check": "tc-4",
+          "practice": [
+            "cr-g1"
+          ]
+        },
+        {
+          "check": "tc-5",
+          "practice": [
+            "cr-g2"
+          ]
+        },
+        {
+          "check": "tc-7",
+          "practice": [
+            "lg-g2"
+          ]
+        },
+        {
+          "check": "tc-8",
+          "practice": [
+            "lg-d1"
+          ]
+        },
+        {
+          "check": "tc-9",
+          "practice": [
+            "cf-n1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "change",
+      "file": "p2-change-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "cq-9",
+          "practice": [
+            "ch-g1"
+          ]
+        },
+        {
+          "check": "cq-10",
+          "practice": [
+            "ch-g2",
+            "ch-d1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "division",
+      "file": "p2-division-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "dq-1",
+          "practice": [
+            "ds-g2"
+          ]
+        },
+        {
+          "check": "dq-2",
+          "practice": [
+            "ds-n2"
+          ]
+        },
+        {
+          "check": "dq-3",
+          "practice": [
+            "dg-g2"
+          ]
+        },
+        {
+          "check": "dq-4",
+          "practice": [
+            "dg-n2"
+          ]
+        },
+        {
+          "check": "dq-5",
+          "practice": [
+            "dr-d1"
+          ]
+        },
+        {
+          "check": "dq-12",
+          "practice": [
+            "dt-g2"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "metres",
+      "file": "p2-metres-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "mtc-1",
+          "practice": [
+            "met-g1",
+            "met-e2"
+          ]
+        },
+        {
+          "check": "mtc-3",
+          "practice": [
+            "tools-e3",
+            "tools-d1"
+          ]
+        },
+        {
+          "check": "mtc-4",
+          "practice": [
+            "met-n3",
+            "tools-e2",
+            "tools-n3"
+          ]
+        },
+        {
+          "check": "mtc-5",
+          "practice": [
+            "ld-g1"
+          ]
+        },
+        {
+          "check": "mtc-6",
+          "practice": [
+            "ld-e2"
+          ]
+        },
+        {
+          "check": "mtc-8",
+          "practice": [
+            "mcm-g2"
+          ]
+        },
+        {
+          "check": "mtc-10",
+          "practice": [
+            "body-g1",
+            "body-e1"
+          ]
+        },
+        {
+          "check": "mtc-11",
+          "practice": [
+            "body-g2",
+            "body-e2"
+          ]
+        },
+        {
+          "check": "mtc-12",
+          "practice": [
+            "est-g1",
+            "est-e1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "minutes",
+      "file": "p2-minutes-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "mt-1",
+          "practice": [
+            "mi-g1"
+          ]
+        },
+        {
+          "check": "mt-2",
+          "practice": [
+            "mi-d1"
+          ]
+        },
+        {
+          "check": "mt-3",
+          "practice": [
+            "mr-n2"
+          ]
+        },
+        {
+          "check": "mt-4",
+          "practice": [
+            "mr-n3"
+          ]
+        },
+        {
+          "check": "mt-5",
+          "practice": [
+            "md-g1"
+          ]
+        },
+        {
+          "check": "mt-6",
+          "practice": [
+            "md-n2"
+          ]
+        },
+        {
+          "check": "mt-9",
+          "practice": [
+            "mf-g2"
+          ]
+        },
+        {
+          "check": "mt-10",
+          "practice": [
+            "mf-d1"
+          ]
+        },
+        {
+          "check": "mt-11",
+          "practice": [
+            "me-g2"
+          ]
+        },
+        {
+          "check": "mt-12",
+          "practice": [
+            "me-d2"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "calendar",
+      "file": "p2-calendar-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "ct-1",
+          "practice": [
+            "cb-g0"
+          ]
+        },
+        {
+          "check": "ct-2",
+          "practice": [
+            "cp-g0"
+          ]
+        },
+        {
+          "check": "ct-3",
+          "practice": [
+            "cb-g1"
+          ]
+        },
+        {
+          "check": "ct-4",
+          "practice": [
+            "cb-e0"
+          ]
+        },
+        {
+          "check": "ct-7",
+          "practice": [
+            "cy-g0"
+          ]
+        },
+        {
+          "check": "ct-8",
+          "practice": [
+            "cy-g1"
+          ]
+        },
+        {
+          "check": "ct-9",
+          "practice": [
+            "ce-g1"
+          ]
+        },
+        {
+          "check": "ct-11",
+          "practice": [
+            "cf-g0"
+          ]
+        },
+        {
+          "check": "ct-12",
+          "practice": [
+            "cf-d1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "money",
+      "file": "p2-money-data.js",
+      "checkCount": 10,
+      "reused": [
+        {
+          "check": "mq-5",
+          "practice": [
+            "mc-g2"
+          ]
+        },
+        {
+          "check": "mq-6",
+          "practice": [
+            "mc-d1"
+          ]
+        },
+        {
+          "check": "mq-7",
+          "practice": [
+            "ms-d2"
+          ]
+        },
+        {
+          "check": "mq-8",
+          "practice": [
+            "ms-n3"
+          ]
+        },
+        {
+          "check": "mq-9",
+          "practice": [
+            "ml-n1"
+          ]
+        },
+        {
+          "check": "mq-10",
+          "practice": [
+            "ml-d2"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "faces",
+      "file": "p2-faces-data.js",
+      "checkCount": 10,
+      "reused": [
+        {
+          "check": "fc-1",
+          "practice": [
+            "f-e1"
+          ]
+        },
+        {
+          "check": "fc-2",
+          "practice": [
+            "f-n3"
+          ]
+        },
+        {
+          "check": "fc-4",
+          "practice": [
+            "p-g2"
+          ]
+        },
+        {
+          "check": "fc-5",
+          "practice": [
+            "y-e3"
+          ]
+        },
+        {
+          "check": "fc-7",
+          "practice": [
+            "p-d3",
+            "t-d2"
+          ]
+        },
+        {
+          "check": "fc-8",
+          "practice": [
+            "n-g2"
+          ]
+        },
+        {
+          "check": "fc-9",
+          "practice": [
+            "p-d1",
+            "t-n1"
+          ]
+        },
+        {
+          "check": "fc-10",
+          "practice": [
+            "y-d1",
+            "t-g2",
+            "t-d1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "angles",
+      "file": "p2-angles-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "aq-1",
+          "practice": [
+            "ao-g1"
+          ]
+        },
+        {
+          "check": "aq-2",
+          "practice": [
+            "ao-g2"
+          ]
+        },
+        {
+          "check": "aq-11",
+          "practice": [
+            "ad-e3"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "directions",
+      "file": "p2-directions-data.js",
+      "checkCount": 10,
+      "reused": [
+        {
+          "check": "dk-1",
+          "practice": [
+            "dn-n0"
+          ]
+        },
+        {
+          "check": "dk-2",
+          "practice": [
+            "dn-n2"
+          ]
+        },
+        {
+          "check": "dk-4",
+          "practice": [
+            "da-d2",
+            "dr-n2"
+          ]
+        },
+        {
+          "check": "dk-5",
+          "practice": [
+            "dr-n1"
+          ]
+        },
+        {
+          "check": "dk-6",
+          "practice": [
+            "dr-d0"
+          ]
+        },
+        {
+          "check": "dk-7",
+          "practice": [
+            "dc-g1"
+          ]
+        },
+        {
+          "check": "dk-8",
+          "practice": [
+            "dc-d2"
+          ]
+        },
+        {
+          "check": "dk-9",
+          "practice": [
+            "dt-g1"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "quads",
+      "file": "p2-quads-data.js",
+      "checkCount": 12,
+      "reused": [
+        {
+          "check": "qk-2",
+          "practice": [
+            "qs-g2"
+          ]
+        },
+        {
+          "check": "qk-5",
+          "practice": [
+            "qq-n1"
+          ]
+        },
+        {
+          "check": "qk-6",
+          "practice": [
+            "qq-e3"
+          ]
+        },
+        {
+          "check": "qk-9",
+          "practice": [
+            "qd-g2"
+          ]
+        },
+        {
+          "check": "qk-10",
+          "practice": [
+            "qd-n2"
+          ]
+        }
+      ]
+    },
+    {
+      "topic": "pictograms",
+      "file": "p2-pictograms-data.js",
+      "checkCount": 10,
+      "reused": [
+        {
+          "check": "pc-1",
+          "practice": [
+            "sort-g1",
+            "parts-8",
+            "build-7"
+          ]
+        },
+        {
+          "check": "pc-2",
+          "practice": [
+            "parts-g1",
+            "parts-0",
+            "build-0"
+          ]
+        },
+        {
+          "check": "pc-3",
+          "practice": [
+            "parts-g2",
+            "parts-1",
+            "build-8"
+          ]
+        },
+        {
+          "check": "pc-6",
+          "practice": [
+            "cols-0"
+          ]
+        },
+        {
+          "check": "pc-8",
+          "practice": [
+            "parts-6",
+            "cols-g2",
+            "build-6"
+          ]
+        },
+        {
+          "check": "pc-9",
+          "practice": [
+            "parts-7",
+            "build-g2",
+            "build-3"
+          ]
+        },
+        {
+          "check": "pc-10",
+          "practice": [
+            "parts-5",
+            "build-g1",
+            "build-5"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "file": "p2-learn-data.js",
+      "sha256": "ad7ac84b5b126cd613b2116d23bbdc47e1d0f3b87e29707fe91082ef376f4e32"
+    },
+    {
+      "file": "p2-arithmetic-data.js",
+      "sha256": "9e54e329fd2f175713c7a8daa4043595df7c38c06d9d4e295a0337260565e9ba"
+    },
+    {
+      "file": "p2-multiply-data.js",
+      "sha256": "f2c4ef1c1461d53061d49f11532c6a2ff8f52e18019f131932c6bfdab0a31ad5"
+    },
+    {
+      "file": "p2-facts-data.js",
+      "sha256": "d8c47543c98bd387002bd7306df9692cb6ffb75b6efeb6d46b936e3dd4332e2e"
+    },
+    {
+      "file": "p2-thousands-data.js",
+      "sha256": "cb130787dd1df49ef4e1d7903c213344caa8f2b4115b934a63ebd4f2b2eae812"
+    },
+    {
+      "file": "p2-change-data.js",
+      "sha256": "89a91247996d342510d63b9b34e7a0abe9626fbe2a88899e594e6eb38871b709"
+    },
+    {
+      "file": "p2-division-data.js",
+      "sha256": "c8bd9e616dccbf72ccb3910a3aac151c82755960290c7656a067fbbf4c22bcba"
+    },
+    {
+      "file": "p2-metres-data.js",
+      "sha256": "525516501a48aa362e737b2285a403e4beeae1dc2952bda20288ca13f7c25596"
+    },
+    {
+      "file": "p2-minutes-data.js",
+      "sha256": "1bc365efcd67e3dc518a3f749998b791686d5cd9437f8514a749f99bb9162fd4"
+    },
+    {
+      "file": "p2-calendar-data.js",
+      "sha256": "ab44e1416448aebbd461f4d112e410707033290343aa5879f0d1787333c63b1b"
+    },
+    {
+      "file": "p2-money-data.js",
+      "sha256": "a346df760db960b08eb84d99b1eff0335df0f056961ccb7c55d07523634c3528"
+    },
+    {
+      "file": "p2-faces-data.js",
+      "sha256": "1275d04d560f1e4e569aa51426cc398ef3fe86e6ee9554dc269c9b2772797fb5"
+    },
+    {
+      "file": "p2-angles-data.js",
+      "sha256": "40a833f491b3bc84ecc2e8d1136e4d252a76e481e8c03df4b9198db8ebf85288"
+    },
+    {
+      "file": "p2-directions-data.js",
+      "sha256": "b849a2c480b524e044d84bd17d059eb6b89c8af3015264f873194a981c028af5"
+    },
+    {
+      "file": "p2-quads-data.js",
+      "sha256": "ec3a0e8c44a98396fef0bccafaa4d6e57a2e3d393eec37df50531afe0e4902cd"
+    },
+    {
+      "file": "p2-pictograms-data.js",
+      "sha256": "3f59d62ef157bbbc007e96bfe3c9705757933a95258cad2c0fa993899a8c38f0"
+    },
+    {
+      "file": "p2-learn.js",
+      "sha256": "d711c19ee3cf48ed006ecb4c12c99fd72e208e1f2d425d924171b408adc4bde7"
+    },
+    {
+      "file": "p2-inquiry-data.js",
+      "sha256": "ce70c86a7b6c662c15f6ad945f1cc87f2a7cf01c2491cad83363e353884b7726"
+    }
+  ],
+  "limits": [
+    "Objective mapping is an authored content judgement, not proof of attainment",
+    "No pupil performance or independent translation review",
+    "No physical tool, printing or screen-reader validation",
+    "Previous 2036-case browser result belongs to inquiry release, not a new run"
+  ]
+}

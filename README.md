@@ -2,6 +2,16 @@
 
 ## Current guided learning handoff
 
+**22 November 2026: whole-P2 review complete.** The [coverage and readiness review](planning/p2-coverage-review.md) maps all **59 numbered objectives plus inquiry** to existing teaching. P2 has 16 topics, 90 lessons and 16 investigations. Keep the open branches and the current shape sequence; angles precede square/rectangle properties.
+
+**Readiness gap:** 86 of 178 topic-check items exactly repeat guided/practice items (all properties except ID). They support revisits, not an independent P3 readiness decision. Practical/oral evidence remains unobserved. [Reproducible audit](planning/p2-coverage-evidence.json).
+
+**Next unfinished step:** implement the separate bilingual **P2 application/readiness review** specified in the [review contract](planning/p2-coverage-review.md#next-implementation-contract-p2-application-and-readiness-review), with fresh situations, first attempts, separate practical observations, targeted revisits and clearer branch links. Preserve earlier scores and records. Complete that release before guided P3 expansion; classroom and independent manual validation remain pending.
+
+This checkpoint changes documentation and an audit script only. It adds no lessons or new live-browser test claims. Historical release notes below record earlier results and next steps; this handoff supersedes them.
+
+## Guided release history
+
 **21 November 2026: the first P2 guided pathway is implemented.** [Hundreds and numbers to 999](https://kochiuyu.github.io/mathquiz/p2-learn.html) has five bilingual lessons, 45 practice tasks, 10 guided tasks and a separate 10-question check. Pupils build hundreds, count across boundaries, compare/order, count groups and estimate before revealing a total. Practical prompts and observations accompany every lesson.
 
 P1/P2 navigation keeps separate Continue routes and saved work for each learner. P2 accepts larger and ordered answers, keeps original estimates, and separates practical notes and practice-bank results from its check. [Release report](planning/p2-number-guided-release.md) and [verification evidence](planning/p2-number-guided-evidence.json). P1's 45 lessons and existing practice banks are preserved. All **385 local and 385 public browser cases verified**; the public run needed no retries. The 19 inherited static suites and 11 new static gates passed. Manual and classroom validation remain pending.
@@ -69,8 +79,6 @@ Earlier progress is preserved. Temporary turning models award no marks; actual c
 **22 November 2026: integrated P2 investigations are implemented.** [Choose, predict, try and explain](https://kochiuyu.github.io/mathquiz/p2-investigate.html?path=division) provides **16 bilingual investigations**, linked from every guided topic map and lesson/check screen. Pupils choose a question or criterion, keep a first prediction and plan, then record evidence, corrections, explanations, transfer and adult observations. The existing **16 topics, 90 lessons and 810 practice tasks** remain unchanged. [Release report](planning/p2-inquiry-guided-release.md) and [evidence](planning/p2-inquiry-guided-evidence.json).
 
 Inquiry records are separate by topic and learner; they do not affect marks or certify inquiry hours. Earlier progress is preserved. All **2,036 distinct local and public browser cases verified**, with test repairs and exact reruns documented. All 36 static suites passed and thirteen deployed files matched. Classroom and independent manual reviews remain pending.
-
-**Next unfinished step:** conduct a **whole-P2 coverage, learning-path, unfamiliar-application and readiness review** before expanding guided teaching into P3, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
