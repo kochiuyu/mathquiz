@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 triangles is implemented.** [Open the pathway](p3-learn.html?path=triangles): five bilingual lessons, 45 practice tasks, ten guided examples and ten fresh sample checks. Guided resources cover **3S2.1–4**: five named categories, overlapping names, strict side-length feasibility and separate drawing/making activities. The blank length builder checks feasibility before drawing; equal-side ticks and right-angle marks show the checked properties.
+**22 November 2026: P3 capacity is implemented.** [Open the pathway](p3-learn.html?path=capacity): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve sample checks. Guided resources cover **3M3.1–7**: capacity versus current contents, intuitive/direct/improvised comparison, L/mL, scale reading, real measuring, estimation and appropriate records.
 
-The seven P3 guided topics contain **38 lessons and 342 practice tasks**. First answers, supported retries, practical notes and original investigation predictions remain separate by topic and learner. Models are temporary and unscored. Earlier progress and practice-bank rules are preserved.
+The eight P3 guided topics contain **44 lessons and 396 practice tasks**. First answers, supported retries, practical observations and investigation predictions stay separate. A real-capacity notebook preserves original estimates before measured results are added. Models are temporary and unscored; earlier progress and practice-bank rules remain intact.
 
-**Next unfinished step in the release queue:** **P3 capacity**, beginning with comparisons and improvised units before litres/millilitres and real measuring tools. Weight, time, bar charts, mixed calculations and fraction comparison/operations remain queued in the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step in the release queue: P3 weight.** Then time, bar charts, mixed calculations and fraction comparison/operations as set out in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Triangle release](planning/p3-triangles-guided-release.md) · [Evidence](planning/p3-triangles-guided-evidence.json). All **626 distinct local and public P3 cases verified**, with exact timeout reruns retained; twelve static gates passed and all fifteen published files matched. All 847 inherited files outside seven explicit shared changes remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and actual drawing/making remain pending.
+[Capacity release](planning/p3-capacity-guided-release.md) · [Evidence](planning/p3-capacity-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and observed pupil measuring remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

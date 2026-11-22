@@ -1,0 +1,163 @@
+{
+  "date": "2026-11-22",
+  "baseline": "d8a44fc67cbc8d6f7bd73235509d937b0a958bc7",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "P3Topics": 8,
+    "P3Lessons": 44,
+    "P3Practice": 396
+  },
+  "guidedObjectives": [
+    "3M3.1",
+    "3M3.2",
+    "3M3.3",
+    "3M3.4",
+    "3M3.5",
+    "3M3.6",
+    "3M3.7"
+  ],
+  "static": {
+    "cases": [
+      {
+        "name": "Six bilingual lessons,54 practice,12 guided,12 checks; seven objectives",
+        "pass": true
+      },
+      {
+        "name": "Independent capacity, fair comparison, units, scales and conversion oracle",
+        "pass": true
+      },
+      {
+        "name": "Scale levels, interval geometry and accessible descriptions",
+        "pass": true
+      },
+      {
+        "name": "Fresh check prompts and numeric/scale data",
+        "pass": true
+      },
+      {
+        "name": "Notebook blank, both containers and estimates immutable",
+        "pass": true
+      },
+      {
+        "name": "Length notebooks stay compatible",
+        "pass": true
+      },
+      {
+        "name": "Earlier files unchanged except seven explicit shared runtime/handoff files",
+        "pass": true
+      },
+      {
+        "name": "Eight topics and all learners stay isolated; older writers remain usable",
+        "pass": true
+      },
+      {
+        "name": "Choice validation and old numeric bounds preserved",
+        "pass": true
+      },
+      {
+        "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity; every field filled",
+        "pass": true
+      }
+    ]
+  },
+  "unchangedInheritedFiles": 856,
+  "relativeLinksChecked": 242,
+  "local": {
+    "distinctVerified": 717,
+    "native": {
+      "width": 320,
+      "overflow": false,
+      "feedbackFocus": "p3-status",
+      "ownedTestKeyRemoved": true,
+      "fullWidthAnswer": "400",
+      "language": "zh",
+      "scaleFocus": "cap-read",
+      "scaleReading": "150 mL"
+    },
+    "reruns": [
+      {
+        "suite": "numbers",
+        "pass": true,
+        "name": "Existing grade entry en index.html"
+      }
+    ],
+    "suites": [
+      {
+        "name": "capacity",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "triangles",
+        "cases": 81,
+        "failures": []
+      },
+      {
+        "name": "quads",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "fractions",
+        "cases": 81,
+        "failures": []
+      },
+      {
+        "name": "division",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "length",
+        "cases": 81,
+        "failures": []
+      },
+      {
+        "name": "multiply",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "error": "Navigation timeout lang=en",
+            "name": "Existing grade entry en index.html"
+          }
+        ]
+      }
+    ]
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-capacity-data.js": "041d605886d05f6de7f971d877188f3b27b0724a364dfcfc3e252dc6fc13756d",
+    "p3-capacity-models.js": "8cc8dcbfa84a1521121c973eb85cc190956133c71cbadc5b6cb79f6612153029",
+    "p3-learn-store.js": "d869ad51e39659beb398767fd24ce076b2d8a85dceacadfe28c243dbd5a9f869",
+    "p3-learn-topics.js": "009c990e468200db01925de9254023dc61998948db4d7b0530f5284360b1d7bf",
+    "p3-learn.html": "f1f9557986a42e331f8d3743c513527cbea326f6d33354929ec7e93a4b49a51b",
+    "p3-learn.js": "cfd569abb19bafc6edcdbb809f207e49b7b47c1b00dc734f8edc0f1b7c30e5dc",
+    "tests/p3-capacity-blocked.html": "7c87073593ff447939b170650b0aecdd239d1f9cea608e760f00bc1c53531629",
+    "tests/p3-capacity-guided-browser.js": "d06c0dfaf06a1665757e9f6fcdb21f2c397d200b53a16a1451df7a2f443aae09",
+    "tests/p3-capacity-guided-static.cjs": "af5fe2419bf1a4f1a8290ae9466b5c17345087a842faf91092a6a75947208e71",
+    "tests/p3-capacity-guided.html": "0064997908b36099c1fb3531b6368aaaa4949449f05a941934c968f212529c95"
+  },
+  "limits": [
+    "Classroom, independent translation, screen-reader listening, physical printing and observed practical performance pending.",
+    "Only P3 browser suites rerun; inherited resources compared unchanged.",
+    "Conceptual checks revisit core properties; not a readiness certificate."
+  ]
+}
