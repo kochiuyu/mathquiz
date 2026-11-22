@@ -1,0 +1,189 @@
+{
+  "date": "2026-11-22",
+  "baseline": "52a69028c7930acaf9a7dcd67ff1c75bbac79672",
+  "inventory": {
+    "lessons": 6,
+    "practice": 54,
+    "guided": 12,
+    "checks": 12,
+    "P3Topics": 10,
+    "P3Lessons": 56,
+    "P3Practice": 504
+  },
+  "guidedObjectives": [
+    "3M2.1",
+    "3M2.2",
+    "3M2.3"
+  ],
+  "static": {
+    "cases": [
+      {
+        "name": "Six bilingual lessons,54 practice,12 guided,12 checks; three objectives",
+        "pass": true
+      },
+      {
+        "name": "Independent time stepping oracle and word-problem scope",
+        "pass": true
+      },
+      {
+        "name": "Clock labels and actual minute/hour hand coordinates",
+        "pass": true
+      },
+      {
+        "name": "Stopwatch elapsed clock, gaps beyond a minute and pause/resume",
+        "pass": true
+      },
+      {
+        "name": "Fresh check prompts and clock-problem data",
+        "pass": true
+      },
+      {
+        "name": "Real timing records preserve estimates, precision and earlier notebooks",
+        "pass": true
+      },
+      {
+        "name": "Earlier files unchanged except seven explicit shared runtime/handoff files",
+        "pass": true
+      },
+      {
+        "name": "Ten topics and all learners stay isolated; older writers remain usable",
+        "pass": true
+      },
+      {
+        "name": "Choice validation and old numeric bounds preserved",
+        "pass": true
+      },
+      {
+        "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity; every field filled",
+        "pass": true
+      }
+    ]
+  },
+  "preliminary": {
+    "staticPassed": 11,
+    "staticFailed": [
+      {
+        "name": "Fresh check prompts and clock-problem data",
+        "error": "p3-timecheck-11"
+      }
+    ],
+    "correction": "Replaced repeated whole-hour checks with new tuples; all twelve gates passed on rerun."
+  },
+  "unchangedInheritedFiles": 872,
+  "relativeLinksChecked": 245,
+  "local": {
+    "distinctVerified": 899,
+    "suites": [
+      {
+        "name": "time",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "weight",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "capacity",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "triangles",
+        "cases": 81,
+        "failures": []
+      },
+      {
+        "name": "quads",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "fractions",
+        "cases": 81,
+        "failures": []
+      },
+      {
+        "name": "division",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "length",
+        "cases": 81,
+        "failures": []
+      },
+      {
+        "name": "multiply",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Existing grade entry zh p2-learn.html",
+            "error": "Navigation timeout lang=zh",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "numbers",
+        "name": "Existing grade entry zh p2-learn.html",
+        "pass": true
+      }
+    ],
+    "native": {
+      "width": 320,
+      "language": "zh",
+      "fullWidthAnswer": "5",
+      "feedbackFocus": "p3-status",
+      "stopwatchStopped": "3.1 s",
+      "stopFocus": "time-watch-stop",
+      "stopwatchReset": "0.0 s",
+      "resetFocus": "time-watch-reset",
+      "stopwatchSavedRecord": null,
+      "hiddenClocks": 1,
+      "revealedClocks": 2,
+      "explanation": "上午8時35分 + 35 分鐘 = 上午9時10分; 倒數後再向前核對。",
+      "modelFocus": "time-reveal",
+      "overflow": false,
+      "ownedTestKeyRemoved": true
+    },
+    "notes": "Initial focused suite passed; added explicit stopwatch draft/evidence-preservation assertions and reran 91 cases successfully without inflating distinct count."
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-learn-store.js": "ee13ee14e9a6b31ebe8b8516b2c4ccb0397bc0c45ff522b30eed1090958b2fa7",
+    "p3-learn-topics.js": "c0c89dd1261ae0c05be1db0d3fdfa2d5d42a91e4e00053ac60fd064835e97796",
+    "p3-learn.html": "a9de8b2390de951e696052b32bb8cf3ede527ac4cc42749989dcdb3d0cffcdae",
+    "p3-learn.js": "6d17d43b6526011f5301bf84ef92e604d329e936bc70aedbd203f9d07faa40de",
+    "p3-time-data.js": "7b95255573c34812614ba31d8164747dc1fa733f8f67722d2e714c715c39adbd",
+    "p3-time-models.js": "9a0d2a85bf7c2269acf1be0ea9cfcc7b1d4eeec12e760dde1fe4e62302e790f5",
+    "tests/p3-time-blocked.html": "fa00a81cdfb1bebb4eb936f0af331bfa0c9f2afc5a5cbdcca1755f910d978293",
+    "tests/p3-time-guided-browser.js": "5dba9b194da92270cc667f61d3b919eb0a3d921baa9b8bd2d03dc588d7687722",
+    "tests/p3-time-guided-static.cjs": "0a7a1555b8f0e810a5ee6c40008f708bc19b28a59ee0e428b5237b20fa3ab4e5",
+    "tests/p3-time-guided.html": "44185075bb672bf0476b6abccd7660a0665efe697a6fc998ebab38da0aa214d9"
+  },
+  "limits": [
+    "Classroom, independent translation, screen-reader listening, physical printing and observed practical performance pending.",
+    "Only P3 browser suites rerun; inherited resources compared unchanged.",
+    "Stopwatch display resolution is not guaranteed/calibrated accuracy.",
+    "Conceptual checks revisit core properties; not a readiness certificate."
+  ]
+}
