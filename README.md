@@ -2,13 +2,15 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 division by one digit is implemented.** [Open the pathway](p3-learn.html?path=division): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve fresh sample-check items. Place-value sharing leads into exchanges, quotient zeros, remainders, left-to-right division, meaningful leftovers and estimation after exact work.
+**22 November 2026: P3 fraction foundations is implemented.** [Open the pathway](p3-learn.html?path=fractions): five bilingual lessons, 45 practice tasks, ten guided examples and ten fresh sample checks. Equal parts and a named whole lead into object/set fractions, numerator/denominator/line, zero and one, and model-based equivalence.
 
-The four P3 guided topics contain **22 lessons and 198 practice tasks**. Division answers label quotient/remainder or intermediate/final quantities separately. First responses and supported retries remain separate; original estimates precede exact reveals. Practical columns, explanations and a prediction-led grouping investigation have separate records for each pupil. Earlier progress and question banks are preserved.
+This release covers **3N5.1–2**, not the whole fraction unit. **3N5.3 comparison and 3N5.4 pictured addition/subtraction remain unfinished guided work**, queued later in the [P3 plan](planning/p3-guided-learning-plan.md). No division-score lock or simplest-form requirement is introduced. Picture-count questions explicitly request shown counts; equivalent amounts are acknowledged separately. Earlier practice-bank scoring is unchanged.
 
-**Next unfinished step:** implement **P3 fraction foundations**, starting with equal parts of one object and one set, identifying the whole, zero and one, and model-based equivalence. Follow the [P3 guided plan](planning/p3-guided-learning-plan.md); the fractions branch has no division-score lock.
+The five P3 guided topics contain **27 lessons and 243 practice tasks**. First answers, supported retries, practical notes and original investigation predictions remain separate per topic and learner. Earlier progress is preserved.
 
-[Division release and verification](planning/p3-division-guided-release.md) · [Evidence](planning/p3-division-guided-evidence.json). All **373 distinct local and public browser cases verified**, with exact timeout reruns retained; ten static gates passed and all fifteen runtime-release files matched publicly. All 823 inherited files outside the seven explicit shared changes remain unchanged. Classroom trials, independent translation/accessibility review, physical printing and observed practical performance remain pending.
+**Next unfinished step in the release queue:** **P3 parallel lines and quadrilateral properties**, beginning with recognising, making and drawing parallel lines. Fraction comparisons and operations remain explicitly queued, not complete.
+
+[Fraction-foundation release](planning/p3-fractions-guided-release.md) · [Evidence](planning/p3-fractions-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and actual folding/manipulative performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
