@@ -17,6 +17,28 @@
   "scopeSource": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf#page=49",
   "local": {
     "p3": {
+      "distinct": 110,
+      "fullPassed": 109,
+      "failures": [
+        {
+          "name": "Learner isolation, explicit route and continue",
+          "error": "Navigation timeout stage=map"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Learner isolation, explicit route and continue",
+          "pass": true
+        }
+      ]
+    },
+    "p2Review": {
+      "distinct": 81,
+      "passed": 81,
+      "failures": []
+    },
+    "distinctVerified": 191,
+    "previousP3Run": {
       "distinct": 109,
       "fullPassed": 108,
       "failures": [
@@ -31,13 +53,7 @@
           "pass": true
         }
       ]
-    },
-    "p2Review": {
-      "distinct": 81,
-      "passed": 81,
-      "failures": []
-    },
-    "distinctVerified": 190
+    }
   },
   "public": {
     "status": "pending"
@@ -113,12 +129,12 @@
     "p3-learn-data.js": "0881c4b0faafde6ec64b0a460fd6ce4e70d512ef6d809a3597f47e838d754f15",
     "p3-learn-store.js": "9f59ec9b680fe978803ddbf6a8790da42a0418d790807e8093c9fa7576ef3faf",
     "p3-learn.css": "a994d610e22a02cfcfa4003e41f3ce44f65f95837aebe9a752ce4461db8f461b",
-    "p3-learn.html": "a2ad46b189e76aed27fa2120f9cae346de172faa41f6de962eecfa6198a00718",
-    "p3-learn.js": "efb4bdf76930abe672f1d04216d7d055a8b1bfbbfd5eef386b9aad8657272b7a",
+    "p3-learn.html": "54468e49f378f9217b8b61b8c4eed34f55526a89a685bc6ad28d5973eadf0281",
+    "p3-learn.js": "5df35fcaf0284e030517305680dffcbbd9f60fe2aac487353c453f1fa40033a7",
     "p3-skill-levels.html": "4d0b06c66058aac24e0ec518d7c74f04efb737cd732cd9ff7ed2b3339088c6c4",
     "p3-skill-levels.js": "5a983a386eb8754b6b4e89dc6a117cc5efa8480cf815cac6d0ec0727f52cab85",
     "tests/p3-numbers-blocked.html": "efc2a73ee58768a58c5b1e66a22785d5c6dcfc118b87db89a2c16726ef5964e8",
-    "tests/p3-numbers-browser.js": "a2e965e30d434c976c79f661de238c2d463911411a065d2a8c9f8ba5bf9d2b90",
+    "tests/p3-numbers-browser.js": "123b2992b78530aaa9c345e96db6bac100b79506706bcfaa1ba3550d537547a0",
     "tests/p3-numbers-static.cjs": "fa731af5377ff15624ddfb86bac87c8bcbea71a4610cd45a7b3ce7eaf3791a83",
     "tests/p3-numbers.html": "8a181d4b1b9eeae37085e41b74fac71f9df7e21aabc286aeae780834db1c81f4"
   },
@@ -138,6 +154,14 @@
     {
       "kind": "outer navigation timeout",
       "detail": "Final local runner continued; polled existing run instead of restarting. The one case timeout is separately listed."
+    },
+    {
+      "kind": "native navigation finding",
+      "detail": "Untouched select controls lacked an explicit default selection and triggered an unsaved-work warning. Corrected observation/answer defaults, added a 110th browser case, repeated full P3 suite; native Chinese lesson-to-map click then passed without a warning."
+    },
+    {
+      "kind": "packaging helper correction",
+      "detail": "Initial link check ran before evidence JSON was created. Corrected generated-file ordering; relative-link check completed."
     }
   ],
   "manualSample": {
@@ -152,5 +176,16 @@
     "New check numbers with familiar response formats, not proof of wholly unfamiliar transfer.",
     "Pupil trials, independent translation, screen-reader listening, physical printing and observed practical activity pending."
   ],
-  "next": "P3 multiplication by one digit, then a separate parallel kilometre/millimetre route."
+  "next": "P3 multiplication by one digit, then a separate parallel kilometre/millimetre route.",
+  "initialRuntimeCommit": "df2e49c501e4d6ea92c6a0c922bfdbc9f2c0f09b",
+  "initialGitHubReadbacks": {
+    "matched": 20,
+    "transientFetchFailures": [
+      "learn.html",
+      "p3-learn.css",
+      "p3-skill-levels.js",
+      "tests/p3-numbers-static.cjs"
+    ],
+    "allExactRetriesMatched": true
+  }
 }
