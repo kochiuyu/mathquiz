@@ -66,7 +66,11 @@ Earlier progress is preserved. Interactive calendars keep temporary marks separa
 
 Earlier progress is preserved. Temporary turning models award no marks; actual compass use and walking require separate observation. All **1,957 distinct local and public browser cases verified**, with exact reruns recorded. All 35 static suites passed and twenty-five deployed files matched. Classroom and independent manual reviews remain pending.
 
-**Next unfinished step:** integrate **P2 inquiry activities across the existing topics**, then conduct a **whole-P2 coverage, learning-path and readiness review**, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). This handoff supersedes historical next-step notes below.
+**22 November 2026: integrated P2 investigations are implemented.** [Choose, predict, try and explain](https://kochiuyu.github.io/mathquiz/p2-investigate.html?path=division) provides **16 bilingual investigations**, linked from every guided topic map and lesson/check screen. Pupils choose a question or criterion, keep a first prediction and plan, then record evidence, corrections, explanations, transfer and adult observations. The existing **16 topics, 90 lessons and 810 practice tasks** remain unchanged. [Release report](planning/p2-inquiry-guided-release.md) and [evidence](planning/p2-inquiry-guided-evidence.json).
+
+Inquiry records are separate by topic and learner; they do not affect marks or certify inquiry hours. Earlier progress is preserved. All **2,036 distinct local and public browser cases verified**, with test repairs and exact reruns documented. All 36 static suites passed and thirteen deployed files matched. Classroom and independent manual reviews remain pending.
+
+**Next unfinished step:** conduct a **whole-P2 coverage, learning-path, unfamiliar-application and readiness review** before expanding guided teaching into P3, following the [P2 guided learning plan](planning/p2-guided-learning-plan.md). This handoff supersedes historical next-step notes below.
 
 ## Curriculum, assessment references and extensions
 
