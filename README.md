@@ -8,7 +8,7 @@ The thirteen P3 guided topics contain **73 lessons and 657 practice tasks**. Int
 
 **Next unfinished step: fraction comparison and pictured like-denominator operations**, completing 3N5.3–4 in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Mixed-calculation release](planning/p3-mixed-guided-release.md) · [Evidence](planning/p3-mixed-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
+[Mixed-calculation release](planning/p3-mixed-guided-release.md) · [Evidence](planning/p3-mixed-guided-evidence.json). **331 distinct browser cases verified in each local/public environment**, with original failures, text/test repairs and exact timeout reruns retained. Three static suites passed 38 gates; fifteen runtime files matched. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
