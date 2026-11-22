@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 Time (III) is implemented.** [Open the pathway](p3-learn.html?path=time): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve sample checks. Guided resources cover **3M2.1–3**: seconds, real timing/comparison, and missing start/finish/duration. Clock problems use whole minutes up to 60 or whole hours up to 12; actual seconds measurements have no fixed curricular maximum.
+**22 November 2026: P3 Time (IV) is implemented.** [Open the pathway](p3-learn.html?path=clock24): five bilingual lessons, 45 practice tasks, ten guided examples and ten sample checks for **3M4.1–2**. Pupils distinguish day context, read/write hour–minute pairs, relate 12/24-hour notation and explain noon and named-day midnight boundaries. No elapsed-time arithmetic in 24-hour notation is required.
 
-The ten P3 guided topics contain **56 lessons and 504 practice tasks**. Original timing estimates remain separate from actual readings, tool precision and observations. The optional stopwatch does not automatically save measurements or award marks. Earlier progress and practice-bank rules remain intact.
+The eleven P3 guided topics contain **61 lessons and 549 practice tasks**. Written HH:MM answers preserve leading zeros and accept full-width digits/colon. First responses, supported retries, observed reading/writing and inquiry predictions remain separate. Earlier progress and question banks are preserved.
 
-**Next unfinished step in the release queue: P3 Time (IV)** — twenty-four-hour notation. Bar charts, mixed calculations and fraction comparison/operations follow in the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step: P3 bar charts.** Mixed calculations and remaining fraction comparison/operations follow in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Time III release](planning/p3-time-guided-release.md) · [Evidence](planning/p3-time-guided-evidence.json). All **899 distinct local and public P3 cases verified**, with the check-item correction and exact timeout reruns retained; twelve final static gates passed, all fourteen published files matched and 872 inherited files remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and observed pupil timing remain pending.
+[Time IV release](planning/p3-clock24-guided-release.md) · [Evidence](planning/p3-clock24-guided-evidence.json). Verification and exact reruns are recorded there. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

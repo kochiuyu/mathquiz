@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-22",
+  "baseline": "62bff26258c1ba42df28a0e2d8a366f08328deb2",
+  "inventory": {
+    "lessons": 5,
+    "practice": 45,
+    "guided": 10,
+    "checks": 10,
+    "P3Topics": 11,
+    "P3Lessons": 61,
+    "P3Practice": 549
+  },
+  "objectives": [
+    "3M4.1",
+    "3M4.2"
+  ],
+  "static": [
+    {
+      "suite": "numbers",
+      "exit": 0
+    },
+    {
+      "suite": "multiply",
+      "exit": 0
+    },
+    {
+      "suite": "length",
+      "exit": 1
+    },
+    {
+      "suite": "division",
+      "exit": 0
+    },
+    {
+      "suite": "fractions",
+      "exit": 0
+    },
+    {
+      "suite": "quads",
+      "exit": 0
+    },
+    {
+      "suite": "triangles-guided",
+      "exit": 0
+    },
+    {
+      "suite": "capacity-guided",
+      "exit": 0
+    },
+    {
+      "suite": "weight-guided",
+      "exit": 0
+    },
+    {
+      "suite": "time-guided",
+      "exit": 0
+    },
+    {
+      "suite": "clock24-guided",
+      "exit": 0
+    }
+  ],
+  "focusedStatic": {
+    "cases": [
+      {
+        "name": "Bilingual inventory and valid IDs",
+        "pass": true
+      },
+      {
+        "name": "Independent hours/minutes oracle and unique correct choices",
+        "pass": true
+      },
+      {
+        "name": "All 1441 valid representations and malformed inputs",
+        "pass": true
+      },
+      {
+        "name": "Fresh check wording and conversion tuples",
+        "pass": true
+      },
+      {
+        "name": "Explicit day endpoints and no elapsed arithmetic scope",
+        "pass": true
+      },
+      {
+        "name": "Eleven topics and all learners stay isolated; older writers remain usable",
+        "pass": true
+      },
+      {
+        "name": "First/retry, observations and inquiry keep distinct immutable evidence",
+        "pass": true
+      },
+      {
+        "name": "Stale, damaged, future, oversized and blocked storage",
+        "pass": true
+      },
+      {
+        "name": "Full record survives cleaning within capacity; every field filled",
+        "pass": true
+      }
+    ]
+  },
+  "unchangedInheritedFiles": 879,
+  "relativeLinksChecked": 248,
+  "local": {
+    "distinctVerified": 291,
+    "suites": [
+      {
+        "name": "clock24",
+        "cases": 90,
+        "failures": []
+      },
+      {
+        "name": "time",
+        "cases": 91,
+        "failures": []
+      },
+      {
+        "name": "numbers",
+        "cases": 110,
+        "failures": [
+          {
+            "name": "Layout zh 320 investigate",
+            "error": "Navigation timeout lang=zh&stage=investigate&lesson=p3-readfive",
+            "pass": false
+          }
+        ]
+      }
+    ],
+    "reruns": [
+      {
+        "suite": "numbers",
+        "name": "Layout zh 320 investigate",
+        "pass": true
+      }
+    ],
+    "native": {
+      "width": 320,
+      "invalid": "24:05",
+      "invalidRefused": true,
+      "fullWidth": "０７：０５",
+      "saved": "07:05",
+      "feedbackFocus": "p3-status",
+      "modelDayEnd": "星期一 24:00 — 星期一結束＝星期二00:00開始",
+      "clockLabel": "午夜12時",
+      "modelFocus": "clock24-reveal",
+      "overflow": false,
+      "ownedTestKeyRemoved": true
+    },
+    "toolRecovery": [
+      "ControlOrMeta+A shortcut unsupported; CTRL+A worked.",
+      "Native selectOption ended at 20:09 instead of 24:00; fresh read and keyboard End reached 24:00. No application change."
+    ]
+  },
+  "public": {
+    "status": "pending"
+  },
+  "runtimeSha256": {
+    "p3-clock24-data.js": "5a1cc5f7330f43a0d74b5d600387f61aa0ff5819b65881c03aa6c7502e8a9d64",
+    "p3-clock24-models.js": "217e58907943e80b8ef1e6216a013a71c5fc3b24964e2f24a1aff6a6449b68f2",
+    "p3-learn-store.js": "99cd5fc128b949f0e4c3510f99fbb3caa7ae894eb8d015111a3f2e8d13d2ff80",
+    "p3-learn-topics.js": "9b6af1a291cb33ccce95f1d4928757cdc31736dff12795bfab4d0eaf7d7645e0",
+    "p3-learn.html": "3e4287e5e7b5efd1fb847b261d5a67e446edf71fb6577ea070374fc6272a286b",
+    "p3-learn.js": "55628dbe663e9bfdf15ee664fd8c54f4e0c924cf0710c7f9b06711459479fe78",
+    "tests/p3-clock24-blocked.html": "4c2e84d0bb3a56aa89ed31357b1ada32094d39bfd154172142bb5734bfc52840",
+    "tests/p3-clock24-guided-browser.js": "26dde6e743b777f60be28ada44ed76b632224805127f67bfe67e2d5be3c0cba1",
+    "tests/p3-clock24-guided-static.cjs": "5d8f0ae440a098b8d492c3832c88f9bf0b206ce8167393f6078673f7ff1c46d1",
+    "tests/p3-clock24-guided.html": "2508b56f707fbf2f2eb849aedcdae2c48e986b0fb33b4927d74dce6b76e0bc26",
+    "tests/p3-length-static.cjs": "3842e554272a5fc1508f7a84d2002709b09ed5a26ac89101a02aeaca94e1515f"
+  },
+  "limits": [
+    "Classroom and independent manual validation pending.",
+    "Only focused, Time III and numbers browser suites rerun; all eleven topic static suites and shared topic navigation checked."
+  ],
+  "staticRerun": {
+    "suite": "length",
+    "reason": "Original preservation gate used historical multiplication baseline, flagging CSS from later published releases. Added optional MATHQUIZ_BASELINE_DIR and allowed this test-file change; exact suite rerun against Time III baseline passed.",
+    "result": {
+      "cases": [
+        {
+          "name": "Inventory and bilingual scope",
+          "pass": true
+        },
+        {
+          "name": "Independent interval and repeated addition answers",
+          "pass": true
+        },
+        {
+          "name": "Check prompts are fresh; familiar formats",
+          "pass": true
+        },
+        {
+          "name": "All prior files unchanged except explicit shared runtime and handoff",
+          "pass": true
+        },
+        {
+          "name": "Three topics, learners and older tabs stay separate",
+          "pass": true
+        },
+        {
+          "name": "First answers, estimates and observations are separate",
+          "pass": true
+        },
+        {
+          "name": "Stale, damaged, future, oversized and blocked storage",
+          "pass": true
+        },
+        {
+          "name": "Full record capacity, numeric validation and cleaning",
+          "pass": true
+        }
+      ]
+    }
+  }
+}
