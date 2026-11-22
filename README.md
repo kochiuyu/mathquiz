@@ -10,7 +10,7 @@ The five P3 guided topics contain **27 lessons and 243 practice tasks**. First a
 
 **Next unfinished step in the release queue:** **P3 parallel lines and quadrilateral properties**, beginning with recognising, making and drawing parallel lines. Fraction comparisons and operations remain explicitly queued, not complete.
 
-[Fraction-foundation release](planning/p3-fractions-guided-release.md) · [Evidence](planning/p3-fractions-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and actual folding/manipulative performance remain pending.
+[Fraction-foundation release](planning/p3-fractions-guided-release.md) · [Evidence](planning/p3-fractions-guided-evidence.json). All **454 distinct local and public P3 browser cases verified**, with exact timeout reruns retained; ten static gates passed and all fifteen published files matched. All 831 inherited files outside seven explicit shared changes remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and actual folding/manipulative performance remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

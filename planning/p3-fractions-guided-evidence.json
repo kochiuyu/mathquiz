@@ -143,7 +143,72 @@
     }
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "fractions": 81,
+    "division": 91,
+    "length": 81,
+    "multiply": 91,
+    "numbers": 110,
+    "distinctVerified": 454,
+    "failures": [
+      {
+        "suite": "fractions",
+        "name": "Tasks zh p3-equalparts normal",
+        "error": "Navigation timeout lang=zh lesson=p3-equalparts stage=normal"
+      },
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-divisionremainders together",
+        "error": "Navigation timeout lang=zh lesson=p3-divisionremainders stage=together"
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-millimetre normal",
+        "error": "Navigation timeout lang=zh lesson=p3-millimetre stage=normal"
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-threeproduct together",
+        "error": "Navigation timeout lang=zh lesson=p3-threeproduct stage=together"
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-oddevenfive together",
+        "error": "Navigation timeout lang=zh&lesson=p3-oddevenfive&stage=together"
+      }
+    ],
+    "exactReruns": [
+      {
+        "suite": "fractions",
+        "name": "Tasks zh p3-equalparts normal",
+        "pass": true
+      },
+      {
+        "suite": "division",
+        "name": "Tasks zh p3-divisionremainders together",
+        "pass": true
+      },
+      {
+        "suite": "length",
+        "name": "Tasks zh p3-millimetre normal",
+        "pass": true
+      },
+      {
+        "suite": "multiply",
+        "name": "Tasks zh p3-threeproduct together",
+        "pass": true
+      },
+      {
+        "suite": "numbers",
+        "name": "Tasks zh p3-oddevenfive together",
+        "pass": true
+      }
+    ],
+    "manual": {
+      "keyboard": "At 320px outer viewport, Chinese full-width ３ and ４ plus Enter stored 3,4, focused p3-status and had no horizontal overflow. Owned test record removed afterward.",
+      "visual": "Public set model retained 3 selected counters after rearrangement and changing whole to 6. Outline, X marks, stacked fraction and Chinese labels readable.",
+      "screenshot": "screenshot-2026-11-22T07-04-43-552Z-267d922f.png"
+    }
   },
   "runtimeSha256": {
     "p3-fractions-data.js": "a0d355782b2009ff1c2f4659c14e431038b60b64e0c4554ca03129baa9228123",
@@ -161,5 +226,89 @@
   "limits": [
     "Classroom, independent translation, screen-reader listening, physical printing and actual practical performance pending.",
     "Only P3 browser suites rerun; inherited resources compared unchanged."
-  ]
+  ],
+  "runtimeDeployment": {
+    "commit": "65a36da105ff1e1f52d9168e74f39bb4ec4ecdcc",
+    "run": 44996076728,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "a6e1ee42fa47408811af96a5c34c2eeec0a4f846b19cc079a91161f5eae9f2ba"
+    },
+    {
+      "path": "p3-fractions-data.js",
+      "match": true,
+      "sha256": "a0d355782b2009ff1c2f4659c14e431038b60b64e0c4554ca03129baa9228123"
+    },
+    {
+      "path": "p3-fractions-models.js",
+      "match": true,
+      "sha256": "8bf46ea8217952181bd19a0804163bbc69f07c5709e9f81e17dd17a6ac05a15c"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "a4a991e053797effce87f12f8dcc4d87326fb55cbcdbdacae5be3acff782317f"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "aa03d777bb894c81bbe596c17ed12aec003d4fe32c364011f57180b38c515faf"
+    },
+    {
+      "path": "p3-learn.css",
+      "match": true,
+      "sha256": "65a6482c304e8908d7e76f16bec013f4baf38a8f75e611a716f49cd5bc169e44"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "70212f8d833169be5205d5729e2f2a5eb460cda99565c91a49d0868ddbffc0df"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "7b87a08caa291252d23a0f9cc416d75428c7ae7b05319c1033ef97f918d8fbb1"
+    },
+    {
+      "path": "planning/p3-fractions-guided-evidence.json",
+      "match": true,
+      "sha256": "5c35fccdeab2752f12c813d8a156353772dfd1a09caebad68495465b550e63b1"
+    },
+    {
+      "path": "planning/p3-fractions-guided-release.md",
+      "match": true,
+      "sha256": "11b971507f12b386817b84e9cea8dbce98adbd98b3ef642e33c2c370df840799"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "cc6e5e9dc67ff50b00fa4c4790fae4643adf2ed099eccdb7654b19e8e72ff97a"
+    },
+    {
+      "path": "tests/p3-fractions-blocked.html",
+      "match": true,
+      "sha256": "e0c25b8b47b34d3ceff35b09638dfc8fc2b616daba4fa1b816b71c0562488e37"
+    },
+    {
+      "path": "tests/p3-fractions-browser.js",
+      "match": true,
+      "sha256": "96cc29d656346e059a9b7dd2b26dc65986c3ff85862b992a5bf40ce433d99362"
+    },
+    {
+      "path": "tests/p3-fractions-static.cjs",
+      "match": true,
+      "sha256": "0d021a8ed30d3c27ad797296fed6631aabd844e13713cf7d73758ef35dfced48"
+    },
+    {
+      "path": "tests/p3-fractions.html",
+      "match": true,
+      "sha256": "504a0770d675951337c80511d08966818e555703c95d6e379c4d1fdc719ec4a7"
+    }
+  ],
+  "relativeLinksChecked": 229,
+  "browserTransportNotes": "Wrapper navigation/wait timeouts did not interrupt suites; running results were polled. Exact individual case failures and reruns are retained separately."
 }
