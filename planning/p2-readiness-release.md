@@ -46,7 +46,7 @@ Local focused browser suite: **81/81 passed** on the final files. It covers both
 
 Native keyboard entry and Enter submission were checked in Traditional Chinese at a 320px requested viewport; focus moved to the retained response, with no horizontal overflow. The saved screenshot documents this check. The first harness run paused on its own dirty-frame navigation warning after 75 passing cases. The harness was corrected to settle its test drafts before navigating and cleaning up; the complete final 81 passed. No product failure was hidden as a retry.
 
-Public verification and exact deployed hashes are recorded in the final evidence/completion file. Classroom trials, independent translation review, screen-reader listening, physical printing and practical pupil observations remain pending. These tasks do not determine an individual pupil's P3 readiness.
+Public focused suite: 80 of 81 passed on the first run; the exact `Observation en measure` navigation-timeout case passed on rerun, so all 81 distinct cases are verified locally and live. The outer browser navigation also timed out while the suite continued; it was observed to completion without restarting. All 17 initial repository readbacks and 17 public file hashes matched; 419 relative documentation links resolved. Runtime commit `a14ac685db92d7793d5c57d535fd7d8396d8c351` deployed successfully in [run 44977731254](https://github.com/kochiuyu/mathquiz/actions/runs/44977731254) (40 seconds). Exact hashes are in the evidence. Classroom trials, independent translation review, screen-reader listening, physical printing and practical pupil observations remain pending. These tasks do not determine an individual pupil's P3 readiness.
 
 ## Next step
 

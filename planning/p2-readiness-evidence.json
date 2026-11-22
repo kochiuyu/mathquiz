@@ -9,7 +9,24 @@
     "review": 9,
     "existingCalendar": 8
   },
-  "publicBrowser": "pending",
+  "publicBrowser": {
+    "distinct": 81,
+    "firstRunPassed": 80,
+    "firstRunFailed": 1,
+    "originalFailures": [
+      {
+        "name": "Observation en measure",
+        "error": "Navigation timeout lang=en&station=measure"
+      }
+    ],
+    "exactReruns": [
+      {
+        "name": "Observation en measure",
+        "pass": true
+      }
+    ],
+    "allDistinctVerified": true
+  },
   "runtimeChanges": [
     "separate review",
     "map entry and branch links",
@@ -36,10 +53,115 @@
     "README.md": "92f32ec48d66600b2389b94a5e5997ab2d84390667398bdb3ca6ff5773466ea0",
     "planning/p2-coverage-review.md": "9c6a6db362145c41a26d8774be511588cf5a098f531fab8bd79e8c921a723221",
     "planning/p2-guided-learning-plan.md": "da90b9c48db762cc9ae488d120a30ac9c7152add1cb6e18a3b31de0e7f5d58f3",
-    "planning/p2-readiness-release.md": "84eaa060fe4513fc59151698a9cab08e42bebe1ffbf5a3224424e09d5712e550",
+    "planning/p2-readiness-release.md": "f1d1fa40be3379b5ae578d1e2ee7b7319afd9052d45f070c696531dca087e54e",
     "tests/p2-review-blocked.html": "ed15b8d468779ac70c863f701e861f92c264bd640462f5e6b84e97bd813e3f7d",
     "tests/p2-review-browser.js": "1957cbbfc30645c68876df5493fecd761b861116715dbfe102ea290c42c47136",
     "tests/p2-review-static.cjs": "efad95a33a65aabcaf016fdda99ce668dc4a2dd8055f318984e1d4cb550c4cc3",
     "tests/p2-review.html": "98068f7a3fa3ff705242df5d457fc38e8df17ab4a5642a7356c30705d77f13d6"
-  }
+  },
+  "runtimeCommit": "a14ac685db92d7793d5c57d535fd7d8396d8c351",
+  "runtimeDeployment": {
+    "run": 44977731254,
+    "status": "Success",
+    "seconds": 40
+  },
+  "repositoryReadbacks": {
+    "files": 17,
+    "matched": 17
+  },
+  "initialPublicFiles": [
+    {
+      "path": "p2-calendar-data.js",
+      "match": true,
+      "sha256": "4fd617c56bbade84fe194302f9538f28636e72a8373db4ca82266d6e0979e34f"
+    },
+    {
+      "path": "p2-learn.html",
+      "match": true,
+      "sha256": "e1452ba2bf13e993d041739c8f8e37fe4b095543df02b5ceddd9b721d170d321"
+    },
+    {
+      "path": "p2-learn.js",
+      "match": true,
+      "sha256": "357d717c3d270cd3ca1870b4c30a3787367add8c3d7aaa7f036f607b8650c36a"
+    },
+    {
+      "path": "p2-review-data.js",
+      "match": true,
+      "sha256": "d1c2099bafd2339eb513d172f08cd793cedbe019bc6b1eeb3f20c32a267b7a5b"
+    },
+    {
+      "path": "p2-review-store.js",
+      "match": true,
+      "sha256": "4288788ba1ac4bc22ce6f60d098679acec0ef23250ac970886b9d3cf461dd0d2"
+    },
+    {
+      "path": "p2-review.css",
+      "match": true,
+      "sha256": "97ff557f48d31784809455cb7178a156b05d71790e535b089b95016efd22bfee"
+    },
+    {
+      "path": "p2-review.html",
+      "match": true,
+      "sha256": "500f88cca24157154a067ac278ae8be46bc0a4ae465f7b160f5a66d4d539685e"
+    },
+    {
+      "path": "p2-review.js",
+      "match": true,
+      "sha256": "7e170483a44c262744bfed7da25003debbcc8b265d30422199be717c151f18e9"
+    },
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "92f32ec48d66600b2389b94a5e5997ab2d84390667398bdb3ca6ff5773466ea0"
+    },
+    {
+      "path": "planning/p2-coverage-review.md",
+      "match": true,
+      "sha256": "9c6a6db362145c41a26d8774be511588cf5a098f531fab8bd79e8c921a723221"
+    },
+    {
+      "path": "planning/p2-guided-learning-plan.md",
+      "match": true,
+      "sha256": "da90b9c48db762cc9ae488d120a30ac9c7152add1cb6e18a3b31de0e7f5d58f3"
+    },
+    {
+      "path": "planning/p2-readiness-release.md",
+      "match": true,
+      "sha256": "84eaa060fe4513fc59151698a9cab08e42bebe1ffbf5a3224424e09d5712e550"
+    },
+    {
+      "path": "tests/p2-review-blocked.html",
+      "match": true,
+      "sha256": "ed15b8d468779ac70c863f701e861f92c264bd640462f5e6b84e97bd813e3f7d"
+    },
+    {
+      "path": "tests/p2-review-browser.js",
+      "match": true,
+      "sha256": "1957cbbfc30645c68876df5493fecd761b861116715dbfe102ea290c42c47136"
+    },
+    {
+      "path": "tests/p2-review-static.cjs",
+      "match": true,
+      "sha256": "efad95a33a65aabcaf016fdda99ce668dc4a2dd8055f318984e1d4cb550c4cc3"
+    },
+    {
+      "path": "tests/p2-review.html",
+      "match": true,
+      "sha256": "98068f7a3fa3ff705242df5d457fc38e8df17ab4a5642a7356c30705d77f13d6"
+    },
+    {
+      "path": "planning/p2-readiness-evidence.json",
+      "match": true,
+      "sha256": "8bbcab568d77a1fd70f10e3aa0fb98606437955ae3805bee0ab84e800daf111b"
+    }
+  ],
+  "documentationLinks": {
+    "checked": 419,
+    "broken": 0
+  },
+  "harnessNotes": [
+    "Initial local navigation paused on a dirty-frame warning after 75 passing cases; settled test drafts and reran final suite 81/81.",
+    "Public outer navigation timeout did not restart suite. One case navigation timeout passed exact rerun."
+  ]
 }
