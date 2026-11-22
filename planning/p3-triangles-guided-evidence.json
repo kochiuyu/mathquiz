@@ -169,7 +169,193 @@
     }
   },
   "public": {
-    "status": "pending"
+    "distinctVerified": 626,
+    "suites": [
+      {
+        "topic": "triangles",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-triangleright normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-triangleright\",\"stage\":\"normal\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-triangleright normal",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "quads",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-parallelogramproperties difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-parallelogramproperties\",\"stage\":\"difficult\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-parallelogramproperties difficult",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "fractions",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-fractionbounds normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-fractionbounds\",\"stage\":\"normal\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-fractionbounds normal",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "division",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-divisionchain together",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-divisionchain\",\"stage\":\"together\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-divisionchain together",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "length",
+        "done": true,
+        "count": 81,
+        "verified": 81,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-measuremm difficult",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"difficult\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-measuremm difficult",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "multiply",
+        "done": true,
+        "count": 91,
+        "verified": 91,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-threeproduct normal",
+            "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-threeproduct\",\"stage\":\"normal\"}"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-threeproduct normal",
+            "pass": true
+          }
+        ]
+      },
+      {
+        "topic": "numbers",
+        "done": true,
+        "count": 110,
+        "verified": 110,
+        "originalFailures": [
+          {
+            "name": "Tasks zh p3-oddevenfive easy",
+            "error": "Navigation timeout lang=zh&lesson=p3-oddevenfive&stage=easy"
+          }
+        ],
+        "exactReruns": [
+          {
+            "name": "Tasks zh p3-oddevenfive easy",
+            "pass": true
+          }
+        ]
+      }
+    ],
+    "failures": [
+      {
+        "topic": "triangles",
+        "name": "Tasks zh p3-triangleright normal",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-triangleright\",\"stage\":\"normal\"}"
+      },
+      {
+        "topic": "quads",
+        "name": "Tasks zh p3-parallelogramproperties difficult",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-parallelogramproperties\",\"stage\":\"difficult\"}"
+      },
+      {
+        "topic": "fractions",
+        "name": "Tasks zh p3-fractionbounds normal",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-fractionbounds\",\"stage\":\"normal\"}"
+      },
+      {
+        "topic": "division",
+        "name": "Tasks zh p3-divisionchain together",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-divisionchain\",\"stage\":\"together\"}"
+      },
+      {
+        "topic": "length",
+        "name": "Tasks zh p3-measuremm difficult",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-measuremm\",\"stage\":\"difficult\"}"
+      },
+      {
+        "topic": "multiply",
+        "name": "Tasks zh p3-threeproduct normal",
+        "error": "Navigation timeout {\"lang\":\"zh\",\"lesson\":\"p3-threeproduct\",\"stage\":\"normal\"}"
+      },
+      {
+        "topic": "numbers",
+        "name": "Tasks zh p3-oddevenfive easy",
+        "error": "Navigation timeout lang=zh&lesson=p3-oddevenfive&stage=easy"
+      }
+    ],
+    "native": {
+      "viewport": 320,
+      "language": "zh-HK",
+      "fullWidthBuilderInput": [
+        "３",
+        "４",
+        "５"
+      ],
+      "buildViaEnter": true,
+      "rightAngleMarkers": 1,
+      "modelFocus": "tri-build",
+      "unscoredStorageUntouched": true,
+      "choiceSubmitViaEnter": true,
+      "savedChoice": "yes",
+      "feedbackFocus": "p3-status",
+      "overflow": false,
+      "testKeyRemoved": true,
+      "rotatedInclusiveNames": "等腰 / 直角 / 等腰直角",
+      "sideMarks": 2,
+      "screenshot": "browser-screenshots/screenshot-2026-11-22T09-44-24-147Z-40491612.png"
+    }
   },
   "runtimeSha256": {
     "p3-learn-store.js": "6d595943b6de6ff951e5f0b1f8db0d2b33c1906c6e78646334d0b2c885d124de",
@@ -187,5 +373,95 @@
   "limits": [
     "Classroom, independent translation, screen-reader listening, physical printing and actual practical performance pending.",
     "Only P3 browser suites rerun; inherited resources compared unchanged."
-  ]
+  ],
+  "runtimeDeployment": {
+    "commit": "7248c2adfee6c6875d9f76e55ee07ed9ca1f783f",
+    "run": 45008102671,
+    "conclusion": "success"
+  },
+  "publishedFiles": [
+    {
+      "path": "README.md",
+      "match": true,
+      "sha256": "c7be5af0171a422d6b5b54f747df83d841aa670502a81a6d264c26f5733159d7"
+    },
+    {
+      "path": "p3-learn-store.js",
+      "match": true,
+      "sha256": "6d595943b6de6ff951e5f0b1f8db0d2b33c1906c6e78646334d0b2c885d124de"
+    },
+    {
+      "path": "p3-learn-topics.js",
+      "match": true,
+      "sha256": "8f206cc2f26b0cff9c96ace89c852400dcde4cf3160818b02848782029cba89e"
+    },
+    {
+      "path": "p3-learn.css",
+      "match": true,
+      "sha256": "b8f1e3ac27a4842e93019357376965af6e8ecfe2cc8cf531b763d383594ed585"
+    },
+    {
+      "path": "p3-learn.html",
+      "match": true,
+      "sha256": "f34a724963d61bfa28e61de6f6460d74d7dee86a5e83dcbba866e6146abae396"
+    },
+    {
+      "path": "p3-learn.js",
+      "match": true,
+      "sha256": "bd21c378d3364d3f49e1035a63ddaa2c1fb51afa8ee5215e6ec661e42097595e"
+    },
+    {
+      "path": "p3-triangles-data.js",
+      "match": true,
+      "sha256": "259f08dd9246f4b33d8fc4b49734bd0a2020f9535954468f46f5ef17a4fa4d1c"
+    },
+    {
+      "path": "p3-triangles-models.js",
+      "match": true,
+      "sha256": "450460d29d72d4a28efa27e062f7ee9417cbd59a0ead16ccc510cbad6b3f0f9e"
+    },
+    {
+      "path": "planning/p3-guided-learning-plan.md",
+      "match": true,
+      "sha256": "3fbd53c9188b476150424cfa59255c4fd4fd29eaec50e10e13be82ab1b129bba"
+    },
+    {
+      "path": "planning/p3-triangles-guided-evidence.json",
+      "match": true,
+      "sha256": "e71a2f5c5c12312eb045010a5689f460b970cbfc5c77f42e2d4b25cfc09c7d35"
+    },
+    {
+      "path": "planning/p3-triangles-guided-release.md",
+      "match": true,
+      "sha256": "800fb85326715a864f3b4ee76847f484b50ceae133c8dee483849bd33f226a5a"
+    },
+    {
+      "path": "tests/p3-triangles-blocked.html",
+      "match": true,
+      "sha256": "6ee857f278f42ae9c6cd2aaaf2a397825a5404a6f45bb57a716625a4e3e98861"
+    },
+    {
+      "path": "tests/p3-triangles-guided-browser.js",
+      "match": true,
+      "sha256": "438d6dde78c40dfb5650e325fa265140ee04d444d7642d0a4a5e9cf2f181183d"
+    },
+    {
+      "path": "tests/p3-triangles-guided-static.cjs",
+      "match": true,
+      "sha256": "d451deb23f921a072799ea8fe12d07aa154965c8de507ad744ce296233d751dd"
+    },
+    {
+      "path": "tests/p3-triangles-guided.html",
+      "match": true,
+      "sha256": "b7c988ae7259c9f8ac39c6bc7ce97f234ec4d39e537d4f4fc11eee619e150e6d"
+    }
+  ],
+  "relativeLinksChecked": 235,
+  "runtimeGithubReadbacks": [
+    "p3-triangles-data.js",
+    "p3-triangles-models.js",
+    "p3-learn-store.js",
+    "planning/p3-guided-learning-plan.md"
+  ],
+  "browserTransportNotes": "Navigation/wait wrapper timeouts did not stop running suites. Cases were polled to completion; exact failed cases were rerun and retained separately."
 }

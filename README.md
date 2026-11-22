@@ -8,7 +8,7 @@ The seven P3 guided topics contain **38 lessons and 342 practice tasks**. First 
 
 **Next unfinished step in the release queue:** **P3 capacity**, beginning with comparisons and improvised units before litres/millilitres and real measuring tools. Weight, time, bar charts, mixed calculations and fraction comparison/operations remain queued in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Triangle release](planning/p3-triangles-guided-release.md) · [Evidence](planning/p3-triangles-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and actual drawing/making remain pending.
+[Triangle release](planning/p3-triangles-guided-release.md) · [Evidence](planning/p3-triangles-guided-evidence.json). All **626 distinct local and public P3 cases verified**, with exact timeout reruns retained; twelve static gates passed and all fifteen published files matched. All 847 inherited files outside seven explicit shared changes remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and actual drawing/making remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
