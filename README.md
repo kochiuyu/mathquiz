@@ -2,11 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P2 application review implemented.** [Seven short bilingual sessions](p2-review.html) offer 14 tasks with first attempts and a separate supported retry. Eight practical/oral stations retain observations separately. Earlier lesson/check results and investigations are preserved. The P2 map has clearer number-branch links, and the real-calendar prompt now includes leap-year February.
+**22 November 2026: P3 guided planning complete.** The [P3 plan](planning/p3-guided-learning-plan.md) maps 54 numbered objectives across 13 content units plus integrated inquiry. It keeps open number, fraction, shape, measurement/time and data branches. Existing P3 practice (50 skills / 1,800 tasks, including TSA-informed additions) remains separate from new guided teaching.
 
-[Release details and limits](planning/p2-readiness-release.md) · [Verification evidence](planning/p2-readiness-evidence.json) · [Whole-P2 coverage review](planning/p2-coverage-review.md).
+**Next unfinished step:** implement the plan's **five-lesson five-digit-number pathway**. Add explicit five-digit input support and separate P3 guided progress, preserving every earlier learner record. Include practical work, a prediction-led investigation and fresh check contexts from the first release. [First-release contract](planning/p3-guided-learning-plan.md#first-implementation-contract-five-digit-numbers).
 
-**Next unfinished step: P3 planning.** Audit official P3 objectives, existing practice and prerequisites before adding guided lessons. The P2 review is not a pass mark or P3 gate. Classroom trials, independent translation/accessibility review and physical observations remain pending; they should inform revisions.
+The [P2 application review](p2-review.html) is published and remains optional, with no P3 pass gate. Classroom trials, independent translation/accessibility review, physical printing and observed practical skills remain pending. This checkpoint changes documents only; no P3 guided lesson code has been released yet.
+
+[Planning evidence](planning/p3-guided-planning-evidence.json) · [P2 release and limits](planning/p2-readiness-release.md).
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 

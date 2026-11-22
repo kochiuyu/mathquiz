@@ -1,0 +1,417 @@
+{
+  "date": "2026-11-22",
+  "baseCommit": "2a3e7123647dccd55749d57bbafb0b06734c9ad5",
+  "numberedUnits": 13,
+  "curriculumUnitsIncludingInquiry": 14,
+  "numberedObjectives": 54,
+  "inquiry": "3F1",
+  "objectives": [
+    {
+      "id": "3N1.1",
+      "focus": "Read, write and count five-digit quantities",
+      "unit": "3N1",
+      "activity": "activities/p3-5digit-numbers.html",
+      "notesPdfPage": 49
+    },
+    {
+      "id": "3N1.2",
+      "focus": "Explain the ten-thousands place",
+      "unit": "3N1",
+      "activity": "activities/p3-5digit-numbers.html",
+      "notesPdfPage": 49
+    },
+    {
+      "id": "3N1.3",
+      "focus": "Compare values",
+      "unit": "3N1",
+      "activity": "activities/p3-5digit-numbers.html",
+      "notesPdfPage": 49
+    },
+    {
+      "id": "3N2.1",
+      "focus": "Multiply by one digit",
+      "unit": "3N2",
+      "activity": "activities/p3-multiplication-i.html",
+      "notesPdfPage": 50
+    },
+    {
+      "id": "3N2.2",
+      "focus": "Group three factors",
+      "unit": "3N2",
+      "activity": "activities/p3-multiplication-i.html",
+      "notesPdfPage": 50
+    },
+    {
+      "id": "3N2.3",
+      "focus": "Solve multiplication situations",
+      "unit": "3N2",
+      "activity": "activities/p3-multiplication-i.html",
+      "notesPdfPage": 50
+    },
+    {
+      "id": "3N3.1",
+      "focus": "Divide by one digit",
+      "unit": "3N3",
+      "activity": "activities/p3-division-i.html",
+      "notesPdfPage": 51
+    },
+    {
+      "id": "3N3.2",
+      "focus": "Divide successively",
+      "unit": "3N3",
+      "activity": "activities/p3-division-i.html",
+      "notesPdfPage": 51
+    },
+    {
+      "id": "3N3.3",
+      "focus": "Solve division situations",
+      "unit": "3N3",
+      "activity": "activities/p3-division-i.html",
+      "notesPdfPage": 51
+    },
+    {
+      "id": "3N4.1",
+      "focus": "Use brackets to show intended order",
+      "unit": "3N4",
+      "activity": "activities/p3-four-operations-i.html",
+      "notesPdfPage": 52
+    },
+    {
+      "id": "3N4.2",
+      "focus": "Combine three addition/subtraction terms",
+      "unit": "3N4",
+      "activity": "activities/p3-four-operations-i.html",
+      "notesPdfPage": 52
+    },
+    {
+      "id": "3N4.3",
+      "focus": "Combine multiplication with addition or subtraction",
+      "unit": "3N4",
+      "activity": "activities/p3-four-operations-i.html",
+      "notesPdfPage": 52
+    },
+    {
+      "id": "3N4.4",
+      "focus": "Solve linked calculation situations",
+      "unit": "3N4",
+      "activity": "activities/p3-four-operations-i.html",
+      "notesPdfPage": 52
+    },
+    {
+      "id": "3N5.1",
+      "focus": "Describe part of an object or set",
+      "unit": "3N5",
+      "activity": "activities/p3-fractions-i.html",
+      "notesPdfPage": 54
+    },
+    {
+      "id": "3N5.2",
+      "focus": "Show equal fractional amounts",
+      "unit": "3N5",
+      "activity": "activities/p3-fractions-i.html",
+      "notesPdfPage": 54
+    },
+    {
+      "id": "3N5.3",
+      "focus": "Compare with a shared numerator or denominator",
+      "unit": "3N5",
+      "activity": "activities/p3-fractions-i.html",
+      "notesPdfPage": 54
+    },
+    {
+      "id": "3N5.4",
+      "focus": "Add or subtract like-denominator fractions",
+      "unit": "3N5",
+      "activity": "activities/p3-fractions-i.html",
+      "notesPdfPage": 54
+    },
+    {
+      "id": "3M1.1",
+      "focus": "Develop a kilometre reference",
+      "unit": "3M1",
+      "activity": "activities/p3-length-distance-iv.html",
+      "notesPdfPage": 56
+    },
+    {
+      "id": "3M1.2",
+      "focus": "Compare kilometre lengths/distances",
+      "unit": "3M1",
+      "activity": "activities/p3-length-distance-iv.html",
+      "notesPdfPage": 56
+    },
+    {
+      "id": "3M1.3",
+      "focus": "Develop a millimetre reference",
+      "unit": "3M1",
+      "activity": "activities/p3-length-distance-iv.html",
+      "notesPdfPage": 56
+    },
+    {
+      "id": "3M1.4",
+      "focus": "Measure and compare in millimetres",
+      "unit": "3M1",
+      "activity": "activities/p3-length-distance-iv.html",
+      "notesPdfPage": 56
+    },
+    {
+      "id": "3M1.5",
+      "focus": "Choose suitable length records",
+      "unit": "3M1",
+      "activity": "activities/p3-length-distance-iv.html",
+      "notesPdfPage": 56
+    },
+    {
+      "id": "3M2.1",
+      "focus": "Develop a sense of a second",
+      "unit": "3M2",
+      "activity": "activities/p3-time-iii.html",
+      "notesPdfPage": 58
+    },
+    {
+      "id": "3M2.2",
+      "focus": "Measure and compare in seconds",
+      "unit": "3M2",
+      "activity": "activities/p3-time-iii.html",
+      "notesPdfPage": 58
+    },
+    {
+      "id": "3M2.3",
+      "focus": "Find a missing start, finish or duration",
+      "unit": "3M2",
+      "activity": "activities/p3-time-iii.html",
+      "notesPdfPage": 58
+    },
+    {
+      "id": "3M3.1",
+      "focus": "Explain capacity",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M3.2",
+      "focus": "Predict clear capacity differences",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M3.3",
+      "focus": "Compare by direct transfer",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M3.4",
+      "focus": "Compare using a repeated nonstandard unit",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M3.5",
+      "focus": "Recognise L and mL",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M3.6",
+      "focus": "Measure and compare with standard units",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M3.7",
+      "focus": "Choose suitable capacity records",
+      "unit": "3M3",
+      "activity": "activities/p3-capacity.html",
+      "notesPdfPage": 59
+    },
+    {
+      "id": "3M4.1",
+      "focus": "Explain why 24-hour notation is useful",
+      "unit": "3M4",
+      "activity": "activities/p3-time-iv.html",
+      "notesPdfPage": 61
+    },
+    {
+      "id": "3M4.2",
+      "focus": "Read and express 24-hour times",
+      "unit": "3M4",
+      "activity": "activities/p3-time-iv.html",
+      "notesPdfPage": 61
+    },
+    {
+      "id": "3M5.1",
+      "focus": "Explain heavier and lighter",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3M5.2",
+      "focus": "Predict clear weight differences",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3M5.3",
+      "focus": "Compare on a balance",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3M5.4",
+      "focus": "Compare using equal-weight units",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3M5.5",
+      "focus": "Recognise g and kg",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3M5.6",
+      "focus": "Measure and compare with scales",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3M5.7",
+      "focus": "Choose suitable weight records",
+      "unit": "3M5",
+      "activity": "activities/p3-weight.html",
+      "notesPdfPage": 62
+    },
+    {
+      "id": "3S1.1",
+      "focus": "Identify parallel lines",
+      "unit": "3S1",
+      "activity": "activities/p3-quadrilaterals-ii.html",
+      "notesPdfPage": 64
+    },
+    {
+      "id": "3S1.2",
+      "focus": "Construct parallel lines",
+      "unit": "3S1",
+      "activity": "activities/p3-quadrilaterals-ii.html",
+      "notesPdfPage": 64
+    },
+    {
+      "id": "3S1.3",
+      "focus": "Use parallelogram properties",
+      "unit": "3S1",
+      "activity": "activities/p3-quadrilaterals-ii.html",
+      "notesPdfPage": 64
+    },
+    {
+      "id": "3S1.4",
+      "focus": "Include squares and rectangles as parallelograms",
+      "unit": "3S1",
+      "activity": "activities/p3-quadrilaterals-ii.html",
+      "notesPdfPage": 64
+    },
+    {
+      "id": "3S1.5",
+      "focus": "Identify trapeziums",
+      "unit": "3S1",
+      "activity": "activities/p3-quadrilaterals-ii.html",
+      "notesPdfPage": 64
+    },
+    {
+      "id": "3S1.6",
+      "focus": "Draw and make the quadrilaterals",
+      "unit": "3S1",
+      "activity": "activities/p3-quadrilaterals-ii.html",
+      "notesPdfPage": 64
+    },
+    {
+      "id": "3S2.1",
+      "focus": "Recognise the five specified triangle categories",
+      "unit": "3S2",
+      "activity": "activities/p3-triangles.html",
+      "notesPdfPage": 66
+    },
+    {
+      "id": "3S2.2",
+      "focus": "Reason about overlapping categories",
+      "unit": "3S2",
+      "activity": "activities/p3-triangles.html",
+      "notesPdfPage": 66
+    },
+    {
+      "id": "3S2.3",
+      "focus": "Test whether side lengths can form a triangle",
+      "unit": "3S2",
+      "activity": "activities/p3-triangles.html",
+      "notesPdfPage": 66
+    },
+    {
+      "id": "3S2.4",
+      "focus": "Draw and make triangles",
+      "unit": "3S2",
+      "activity": "activities/p3-triangles.html",
+      "notesPdfPage": 66
+    },
+    {
+      "id": "3D1.1",
+      "focus": "Explain a bar chart representation",
+      "unit": "3D1",
+      "activity": "activities/p3-bar-charts-i.html",
+      "notesPdfPage": 68
+    },
+    {
+      "id": "3D1.2",
+      "focus": "Read and compare bar-chart data",
+      "unit": "3D1",
+      "activity": "activities/p3-bar-charts-i.html",
+      "notesPdfPage": 68
+    },
+    {
+      "id": "3D1.3",
+      "focus": "Collect, organise and chart data",
+      "unit": "3D1",
+      "activity": "activities/p3-bar-charts-i.html",
+      "notesPdfPage": 68
+    }
+  ],
+  "runtimeChanges": 0,
+  "newBrowserTestClaims": 0,
+  "inventory": {
+    "skills": 50,
+    "tasks": 1800,
+    "originalCurriculumSkills": 35,
+    "originalTasks": 1260,
+    "TSAAdditionalSkills": 15,
+    "TSAAdditionalTasks": 540,
+    "reviewGrouping": "3R1 is not an EDB unit"
+  },
+  "officialNotes": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS1_e.pdf",
+  "sourceRetrieval": "Official P3 explanatory notes rechecked; supplement initially opened but repeat targeted extraction timed out. Detailed supplement cross-references retained from existing unit audits.",
+  "next": "Five guided lessons on five-digit numbers",
+  "verification": {
+    "relativeLinks": 216,
+    "brokenLinks": 0,
+    "unchangedFiles": 799,
+    "changedFiles": [
+      "README.md",
+      "planning/p3-guided-learning-plan.md",
+      "planning/p3-guided-planning-evidence.json"
+    ],
+    "practicePayloadSha256": "73139ba4b4bb89c0033c7e5925426af449f53065910bb63b9b0e90dd31cffcb2",
+    "practiceSourceSha256": "5fd0e59e980bc0c8b3721511b555c50174af654a66421bad8b2da4a8769c757f",
+    "planSha256": "eb7163a9f5a910f21b1f600c8d8d6bd6389d7ce6ebd080fbe14fee7868a1f930",
+    "readmeSha256": "a7b7b532e880eac48b1570bd151366f4207bbefd9c3704fd0a1eaccf54205a75",
+    "noRuntimeChange": true
+  }
+}
