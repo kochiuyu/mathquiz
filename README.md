@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: P3 capacity is implemented.** [Open the pathway](p3-learn.html?path=capacity): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve sample checks. Guided resources cover **3M3.1–7**: capacity versus current contents, intuitive/direct/improvised comparison, L/mL, scale reading, real measuring, estimation and appropriate records.
+**22 November 2026: P3 weight is implemented.** [Open the pathway](p3-learn.html?path=weight): six bilingual lessons, 54 practice tasks, twelve guided examples and twelve sample checks. Guided resources cover **3M5.1–7**: heavier/lighter, intuitive and beam-balance comparison, equal-weight improvised units, g/kg, scale reading, real weighing, estimates and suitable records.
 
-The eight P3 guided topics contain **44 lessons and 396 practice tasks**. First answers, supported retries, practical observations and investigation predictions stay separate. A real-capacity notebook preserves original estimates before measured results are added. Models are temporary and unscored; earlier progress and practice-bank rules remain intact.
+The nine P3 guided topics contain **50 lessons and 450 practice tasks**. First answers, supported retries, practical observations and inquiry predictions stay separate. A two-object weighing notebook preserves original estimates before measured results are added. Models are temporary and unscored; earlier progress and practice-bank rules remain intact.
 
-**Next unfinished step in the release queue: P3 weight.** Then time, bar charts, mixed calculations and fraction comparison/operations as set out in the [P3 plan](planning/p3-guided-learning-plan.md).
+**Next unfinished step in the release queue: P3 Time (III)** — experience seconds and work with starting, finishing and elapsed times within its scope. Time (IV), bar charts, mixed calculations and fraction comparison/operations follow in the [P3 plan](planning/p3-guided-learning-plan.md).
 
-[Capacity release](planning/p3-capacity-guided-release.md) · [Evidence](planning/p3-capacity-guided-evidence.json). All **717 distinct local and public P3 cases verified**, with exact timeout reruns retained; twelve static gates passed, all fourteen published files matched and 856 inherited files remain unchanged. Classroom trials, independent translation, screen-reader listening, physical printing and observed pupil measuring remain pending.
+[Weight release](planning/p3-weight-guided-release.md) · [Evidence](planning/p3-weight-guided-evidence.json). Verification status is recorded there. Classroom trials, independent translation, screen-reader listening, physical printing and observed pupil weighing remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
