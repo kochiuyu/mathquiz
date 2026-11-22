@@ -1,5 +1,7 @@
 # P3 coverage, inquiry and readiness review
 
+**23 November update:** the separate application review specified below is now [implemented](../p3-review.html); see its [release, sampling map and limits](p3-review-release.md). This dated coverage audit remains a record of the pre-implementation findings.
+
 22 November 2026 · baseline `df1b011406c91e0adc6349202fa7454519034162`. [Evidence and repeat pairs](p3-coverage-evidence.json) · [Reproducible source audit](../tests/p3-coverage-audit.cjs) · [Learning plan](p3-guided-learning-plan.md).
 
 ## Decision

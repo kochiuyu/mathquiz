@@ -1,0 +1,407 @@
+{
+  "method": "Bilingual stems after introductory-label removal compared with all guided/practice/check/bank string fields and stripped activity text. Ordered represented numeric arrays compared with every stored numeric array. Activity files containing all tuple numerals are candidates, not matches.",
+  "counts": {
+    "guidedPracticeAndChecks": 1014,
+    "bank": 1800,
+    "activityFiles": 14
+  },
+  "items": [
+    {
+      "id": "n1",
+      "objectives": [
+        "3N1.1",
+        "3N1.2"
+      ],
+      "representedTuple": [
+        7,
+        3,
+        0,
+        0,
+        8
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    },
+    {
+      "id": "n2",
+      "objectives": [
+        "3N1.1",
+        "3N1.3"
+      ],
+      "representedTuple": [
+        9987,
+        10,
+        3
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "m1",
+      "objectives": [
+        "3N2.1",
+        "3N2.3"
+      ],
+      "representedTuple": [
+        139,
+        6
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "m2",
+      "objectives": [
+        "3N2.2"
+      ],
+      "representedTuple": [
+        3,
+        7,
+        4
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    },
+    {
+      "id": "d1",
+      "objectives": [
+        "3N3.1",
+        "3N3.3"
+      ],
+      "representedTuple": [
+        197,
+        8
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "d2",
+      "objectives": [
+        "3N3.2"
+      ],
+      "representedTuple": [
+        144,
+        8,
+        2
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-multiplication-i.html"
+      ]
+    },
+    {
+      "id": "l1",
+      "objectives": [
+        "3N4.1",
+        "3N4.3",
+        "3N4.4"
+      ],
+      "representedTuple": [
+        4,
+        18,
+        7
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    },
+    {
+      "id": "l2",
+      "objectives": [
+        "3N4.2",
+        "3N4.4"
+      ],
+      "representedTuple": [
+        286,
+        47
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "f1",
+      "objectives": [
+        "3N5.1",
+        "3N5.2"
+      ],
+      "representedTuple": [
+        5,
+        6,
+        10,
+        12
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    },
+    {
+      "id": "f2",
+      "objectives": [
+        "3N5.4"
+      ],
+      "representedTuple": [
+        10,
+        7,
+        2
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    },
+    {
+      "id": "e1",
+      "objectives": [
+        "3M1.4",
+        "3M1.5"
+      ],
+      "representedTuple": [
+        23,
+        61
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-division-i.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html"
+      ]
+    },
+    {
+      "id": "e2",
+      "objectives": [
+        "3M3.3",
+        "3M3.4",
+        "3M5.3"
+      ],
+      "representedTuple": "qualitative comparison protocols",
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "t1",
+      "objectives": [
+        "3M2.3"
+      ],
+      "representedTuple": [
+        4,
+        12,
+        38
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "t2",
+      "objectives": [
+        "3M4.1",
+        "3M4.2"
+      ],
+      "representedTuple": [
+        2029,
+        5,
+        6,
+        0,
+        0
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": []
+    },
+    {
+      "id": "s1",
+      "objectives": [
+        "3S1.3",
+        "3S1.4",
+        "3S1.5"
+      ],
+      "representedTuple": [
+        9,
+        5
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    },
+    {
+      "id": "s2",
+      "objectives": [
+        "3D1.1",
+        "3D1.2"
+      ],
+      "representedTuple": [
+        18,
+        10,
+        14,
+        2
+      ],
+      "promptMatches": [],
+      "activityPromptMatches": [],
+      "numericArrayMatches": [],
+      "activityNumberCandidates": [
+        "activities/p3-5digit-numbers.html",
+        "activities/p3-bar-charts-i.html",
+        "activities/p3-capacity.html",
+        "activities/p3-division-i.html",
+        "activities/p3-four-operations-i.html",
+        "activities/p3-fractions-i.html",
+        "activities/p3-inquiry.html",
+        "activities/p3-length-distance-iv.html",
+        "activities/p3-multiplication-i.html",
+        "activities/p3-quadrilaterals-ii.html",
+        "activities/p3-time-iii.html",
+        "activities/p3-time-iv.html",
+        "activities/p3-triangles.html",
+        "activities/p3-weight.html"
+      ]
+    }
+  ],
+  "sourceHashes": {
+    "p3-learn-data.js": "0881c4b0faafde6ec64b0a460fd6ce4e70d512ef6d809a3597f47e838d754f15",
+    "p3-multiply-data.js": "874bd5338f13c8d84a88bd40b70e4d8eced3c00fc0baaaa5434bef211711f46a",
+    "p3-division-data.js": "ef7922220da33a9b4400698e1dd269e8e9db854247ed8c300d2e9de6a0bbf498",
+    "p3-mixed-data.js": "e92889db0f607ae4ddf2b176d97455ebf9a57f1e18f29ce48fbe6bd4c1ba3587",
+    "p3-fractions-data.js": "a0d355782b2009ff1c2f4659c14e431038b60b64e0c4554ca03129baa9228123",
+    "p3-fractionops-data.js": "230cddcd07038b5909ae8e02252433f61775c7a476922c70b6b93c204aeb2308",
+    "p3-length-data.js": "538d08df1a046ee8e7f746099186d5b72ec161e0838138cc4f0dcb4a350c8466",
+    "p3-time-data.js": "7b95255573c34812614ba31d8164747dc1fa733f8f67722d2e714c715c39adbd",
+    "p3-capacity-data.js": "041d605886d05f6de7f971d877188f3b27b0724a364dfcfc3e252dc6fc13756d",
+    "p3-clock24-data.js": "0a7c6cab50df7a8c505447fdb179d6c82d8ff7ed70e3f7824bb12110cad279ba",
+    "p3-weight-data.js": "30084d5ddaf278202d9c6e08243bcbc1817881ffb7b1815cddfcf32d3f7da50e",
+    "p3-quads-data.js": "837b7e6ee3149b0a0f2f95e5b4bf626d89a05f63b8421c23610e7669623f96b4",
+    "p3-triangles-data.js": "259f08dd9246f4b33d8fc4b49734bd0a2020f9535954468f46f5ef17a4fa4d1c",
+    "p3-bars-data.js": "7e34737e68f6ea7dfee8415faacf26f87e9953aa29d5a75d47a0010174a7861b",
+    "p3-skill-data.js": "5fd0e59e980bc0c8b3721511b555c50174af654a66421bad8b2da4a8769c757f",
+    "p3-skill-seeds.js": "43efe54ea0d3afced518e4b84330fcf15b354c6b44bb3084c99127abd2163b72",
+    "p3-tsa.js": "1dcf1c1d3937ad969309716ec1d363c363a564e324d1ae25e5c196b02778d84e",
+    "activities/p3-5digit-numbers.html": "7c06b1d07c94a9ecc8ecf279a29980dd51ae232337db6a747b8241449e0659c6",
+    "activities/p3-bar-charts-i.html": "1f5780b0a723b10abefae6b1bdbc1f6e0d9d8ec5a3629abf0df4eaea457c021b",
+    "activities/p3-capacity.html": "3dba29b375c1619aa36e3d72d501c2c7a9c7125e4fdc6ed88d2d0be692d9a00d",
+    "activities/p3-division-i.html": "35a80c623c579024392179df7cf5e4a00e0fe7cc8612be3a04487a2c4ce51e19",
+    "activities/p3-four-operations-i.html": "f21659d9a2b3a23c6f0799334afcbcc7fd60f0148cb686285bec70eceaa0167a",
+    "activities/p3-fractions-i.html": "212deac4e7660a417a0f58e85e8bed5afe936f8bd581eb82483ec3af5ae00ea3",
+    "activities/p3-inquiry.html": "20b0ffc435704afab4d387d6f955a579215761d10b0f7b5e1092810a19fafe88",
+    "activities/p3-length-distance-iv.html": "010e80dcd663a635849b45f51d2dabc8b82f914276a42d552e7bee50503ccd67",
+    "activities/p3-multiplication-i.html": "cff89c21296ff3f8395b3bd287fa184b01a22653cf6e7a5e0b1643810aaa45a6",
+    "activities/p3-quadrilaterals-ii.html": "41d04778eafd2c084b21f3a9c6622d0ad3cf441dca654254983f54e299915b35",
+    "activities/p3-time-iii.html": "db8fea25c06e55277fa7995cac3b04b10f81e1f8486cf23e7477552b3b88c2cd",
+    "activities/p3-time-iv.html": "289c4c90bb27d6eb733f9004dbf0c6044162d573217a4839014ccf8308524334",
+    "activities/p3-triangles.html": "8a08bee1514e2bfac040d9373163875ef4e3f3ddc307b366c0b2492cde54ba1d",
+    "activities/p3-weight.html": "a34d97715ecbe221c636af5a763e3f01b511cbb2007141616d97af55755d2c4a"
+  },
+  "limits": "Does not equate differently structured numeric objects, render raw SVG into geometry, or prove absence of paraphrases. Rendered review diagrams and response contracts need content review. Familiar concepts and small-number facts recur; no claim of unseen exposure for an individual."
+}

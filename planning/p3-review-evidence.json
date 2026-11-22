@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-23",
+  "baseline": "6b535f855e7ba96bef3f3e2c9d6e6cd7cd2d15cf",
+  "static": {
+    "gates": 33,
+    "suites": [
+      {
+        "file": "p3-review-static.cjs",
+        "exit": 0,
+        "output": "PASS 16 bilingual tasks, eight pairs, valid lesson/objective maps\nPASS Independent numeric answers\nPASS Equivalent amounts, invalid fractions, dates and manual marking\nPASS Blank and duplicate refusal; first/retry and returned state immutable\nPASS Original estimates and oral accounts precede answers and cannot change\nPASS Stale tabs refuse attempts, originals, observations and predictions\nPASS Observations require date task help and original; independent has no score link\nPASS Inquiry retains original prediction and validates observed evidence\nPASS Learner isolation, reload and scoped reset preserve older keys\nPASS Malformed future oversized and invalid nested records protected\nPASS Unavailable and quota-failed storage keep volatile work with warning\nPASS Bounded records refuse overflow without losing last saved record\nPASS Runtime syntax and guided-check wording preserved narrowly\n13 static gates passed\n",
+        "error": ""
+      },
+      {
+        "file": "p3-fractionops-static.cjs",
+        "exit": 0,
+        "output": "{\n  \"cases\": [\n    {\n      \"name\": \"Five bilingual lessons, 65 unique tasks and objectives 3/4\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Independent common-cell comparison and bounded operation oracle\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Actual SVG marks encode starting, joining and removed shares\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Same-sized comparison wholes and boundary coverage\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Fresh check tuples and no simplest-form requirement\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Foundation data and strict pictured-count contract unchanged\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Fourteen topics and all learners stay isolated\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"First/retry, observation and inquiry remain distinct\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Stale, damaged, future, oversized and blocked storage\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Full record survives cleaning\",\n      \"pass\": true\n    },\n    {\n      \"name\": \"Earlier files preserved against current baseline\",\n      \"pass\": true\n    }\n  ]\n}\n",
+        "error": ""
+      },
+      {
+        "file": "p2-review-static.cjs",
+        "exit": 0,
+        "output": "PASS 14 bilingual tasks, 7 pairs, 8 stations and valid lesson routes\nPASS Independent numeric and geometric results\nPASS First and one supported retry immutable across stale tabs\nPASS Observations, learner isolation and explicit targeted reset\nPASS Future malformed oversized records cannot be overwritten\nPASS Blocked storage supports volatile work without claiming persistence\nPASS Write failure does not lose the next volatile edit\nPASS Review prompts are not exact earlier strings; bilingual leap instruction\nPASS Bounded text and script syntax\n9 review static gates passed\n",
+        "error": ""
+      }
+    ]
+  },
+  "local": {
+    "done": true,
+    "distinct": 122,
+    "initialFinalRunPasses": 121,
+    "failures": [
+      {
+        "name": "Map link zh multiply",
+        "error": "Navigation timeout lang=zh&path=multiply"
+      }
+    ],
+    "exactReruns": [
+      {
+        "name": "Map link zh multiply",
+        "pass": true
+      }
+    ],
+    "navigationToolTimeout": "Initial navigate call timed out while the harness was still running; completion was read separately."
+  },
+  "public": {
+    "status": "pending"
+  },
+  "repairs": [
+    "Corrected missing station geometry tags; static mapping now covers all 54 objectives.",
+    "Changed m1 137×6 to 139×6, d1 173÷8 to 197÷8 and f1 3/4=6/8 to 5/6=10/12 after detecting prior tuples.",
+    "Final local browser run retained one timeout failure and successful exact rerun."
+  ],
+  "visualReview": [
+    "Chinese mobile layout and fraction strips inspected at 360 CSS px; no horizontal overflow.",
+    "Keyboard Tab reached the skip link; programmatic browser cases verify submission focus, labels and 320/375/768/1280 layouts."
+  ],
+  "limits": [
+    "No observed pupil performance or readiness claim.",
+    "Independent bilingual review, screen-reader listening, printing and actual tools/materials remain pending.",
+    "Novelty audit is conservative and cannot establish unseen exposure for an individual."
+  ]
+}

@@ -2,13 +2,11 @@
 
 ## Current guided learning handoff
 
-**22 November 2026: whole-P3 coverage, inquiry and readiness review completed.** [Read the review](planning/p3-coverage-review.md) · [Evidence and repeat pairs](planning/p3-coverage-evidence.json).
+**23 November 2026: separate P3 application review implemented.** [Open the review](p3-review.html) · [Release and 54-objective map](planning/p3-review-release.md) · [Evidence](planning/p3-review-evidence.json).
 
-All **54 numbered objectives plus integrated inquiry** have teaching resources. P3 has **14 guided routes, 78 lessons, 702 practice tasks, 156 guided examples and 156 sample checks**. Keep the open learning branches. Fourteen topic investigations and the existing two paper investigations already provide integrated inquiry opportunities.
+**16 bilingual tasks in eight freely chosen sessions, nine practical stations and inquiry evidence review.** First responses and supported retries stay separate; original estimates, oral accounts and predictions are retained. Practical observations do not turn into screen scores. All earlier progress remains unchanged. Guided sample checks now explicitly allow familiar tasks.
 
-**Next unfinished step: implement the separate P3 application review before P4**, following the [review contract](planning/p3-coverage-review.md#next-implementation-contract-separate-p3-application-review): 16 fresh screen tasks across eight sessions, nine practical stations and inquiry evidence review. Also clarify the guided sample-check wording: **11 of 156 checks repeat earlier tasks after introductory labels are removed**. Existing first responses and all earlier progress must remain unchanged. No sampled score certifies readiness.
-
-This review changes documentation and adds a reproducible source audit only. Classroom, independent translation, screen-reader listening, physical printing and observed pupil performance remain pending. The separate application review is specified, not yet implemented.
+**Next unfinished step: P4 planning.** Audit official objectives and existing resources, map P3 prerequisites and set the first implementation contract. No automatic readiness score or access gate. The [whole-P3 review](planning/p3-coverage-review.md) and application record provide resources for discussion, not a pupil readiness certificate. Classroom and independent manual reviews remain pending.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
