@@ -10,6 +10,8 @@
 
 This checkpoint changes documentation and an audit script only. It adds no lessons or new live-browser test claims. Historical release notes below record earlier results and next steps; this handoff supersedes them.
 
+Include the review's small calendar correction in that next release: the real-year month-sorting prompt must allow 29-day February in leap years. Its current 28/30/31 list fits 2027 only.
+
 ## Guided release history
 
 **21 November 2026: the first P2 guided pathway is implemented.** [Hundreds and numbers to 999](https://kochiuyu.github.io/mathquiz/p2-learn.html) has five bilingual lessons, 45 practice tasks, 10 guided tasks and a separate 10-question check. Pupils build hundreds, count across boundaries, compare/order, count groups and estimate before revealing a total. Practical prompts and observations accompany every lesson.

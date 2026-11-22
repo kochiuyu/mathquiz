@@ -291,3 +291,5 @@ The [coverage review](p2-coverage-review.md) locates teaching/practical opportun
 The reproducible audit finds 86 of 178 check items exactly repeat within-topic guided/practice items, comparing every property except ID. Keep these checks and their saved scores unchanged. They do not establish unfamiliar transfer or individual P3 readiness. Classroom and independent manual validation remain pending.
 
 **Next:** implement the [separate P2 application/readiness review contract](p2-coverage-review.md#next-implementation-contract-p2-application-and-readiness-review) before guided P3 expansion. This supersedes historical checkpoint next-step notes. No runtime changes or new full-browser regression claims accompany this documentation review.
+
+Also correct the `p2-monthlengths` real-calendar practical prompt to allow 29 days in leap years; the present 28/30/31 list fits the 2027 teaching example but not every real year. Verify both languages against 2028. The leap-year lesson already supplies the underlying concept.

@@ -165,6 +165,8 @@ For each observed action record **independent / prompted / not yet demonstrated 
 
 Build a separate bilingual review, linked from the P2 map, in short selectable sessions rather than one long examination. It is a diagnostic conversation and revisit guide, **not a pass mark or locked entry to P3**.
 
+**Small content correction to include:** the practical prompt in `p2-monthlengths` asks pupils to use a real year calendar but lists only 28/30/31-day categories. This fits its 2027 teaching example, but not an arbitrary leap-year calendar. Change the prompt to include 29 days when applicable, in both languages, and verify it with a 2028 calendar. The following lesson correctly teaches leap years; this is a practical-instruction mismatch, not an absent objective. It remains unfixed in this documentation-only release.
+
 1. Include fresh examples sampling number representation, operation choice/exchanges, multiplication/division meanings, money, measurement/time/calendar, shape/position and data. Record a concept-to-item map. Include changed contexts, explaining/correcting a model and choosing a method; do not claim every objective can be measured by a small check.
 2. Check proposed items against all guided, practice and existing check payloads, and manually compare them with worked examples and activity-sheet answers. Record remaining scaffolded features. Novelty is a design claim requiring this review, not a score-derived fact.
 3. Collect first attempts before feedback, allow an explicit supported retry, and keep them distinguishable. Keep reasons, notes and practical observations separate from automatically marked responses. Give precise lesson revisits per finding; never report an unobserved skill as failed or mastered.
