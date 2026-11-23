@@ -8,3 +8,7 @@ body.mqui{--mq-ink:#203c42;--mq-primary:#17685a;--mq-line:#c7d8d8;--mq-wash:#f2f
 @media(max-width:600px){.mqui .mqui-header{padding:12px 16px}.mqui-top{gap:10px}.mqui-grades a{padding:7px 12px}.mqui-language{font-size:.8rem}.mqui-person-note{width:100%}.mqui main,.mqui #review-app{padding:16px!important}.mqui-topic-grid{grid-template-columns:1fr}.mqui-context{display:block}.mqui-context span{display:block;font-size:.8rem}.mqui-modes{gap:3px}.mqui-modes a{font-size:.85rem;padding:9px}.mqui-steps{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px!important}.mqui-steps a{text-align:center;padding:10px 5px;font-size:.85rem}.mqui .learn-question,.mqui .learn-teaching,.mqui #review-app>section:not(.mqui-workspace){padding:16px}}
 @media print{.mqui-header,.mqui-workspace{display:none!important}.mqui main{max-width:none!important}}
 .mqui .mqui-levels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:430px}.mqui-levels span{grid-column:1/-1}.mqui-levels a{text-align:center}.mqui-flow{margin-bottom:24px}
+
+.mqui .pupil-extra,.mqui .adult-record{border:1px solid var(--mq-line);border-radius:10px;padding:10px 14px;margin:16px 0;background:white}.mqui .pupil-extra summary,.mqui .adult-record summary{cursor:pointer;font-weight:600}.mqui .adult-record .mqui-person-note{display:block}.mqui .adult-record p{font-size:.9rem}.mqui .mqui-workspace{margin-bottom:16px!important}.mqui .mqui-flow{margin-bottom:16px}
+
+.mqui [hidden]{display:none!important}
