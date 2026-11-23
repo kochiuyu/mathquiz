@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-23",
+  "baseCommit": "2597de530db3c48c6102ab452cde9dacb639f6fa",
+  "runtimeCommit": "1f6c7c2401d4aa81ccbed463108402580e42b4de",
+  "scope": "P1-P3 bilingual instructions, labels, optional writing and adult notes; question data and storage unchanged",
+  "local": {
+    "distinctCases": 178,
+    "finalFullRun": {
+      "passed": 177,
+      "failed": [
+        {
+          "name": "Topic en P1 partstart",
+          "error": "Navigation timeout",
+          "exactRerun": "passed"
+        }
+      ]
+    },
+    "earlierRuns": [
+      {
+        "cases": 176,
+        "passed": 173,
+        "failures": [
+          "Topic en P1 partstart: navigation timeout",
+          "Short P3 question with optional notes zh: reused completed English retry",
+          "P2 explanation remains editable zh: reused saved English note reopened as designed"
+        ]
+      },
+      {
+        "cases": 178,
+        "passed": 177,
+        "failure": "Topic en P1 partstart: navigation timeout; exact rerun passed"
+      }
+    ],
+    "fixtureRepair": "Reset isolated test records between languages; always restore pre-run test records. Normal records unchanged.",
+    "postLayoutChecks": "Both-language P3 note/retry checks and P2/P3 review cases passed after placing Check before optional writing; the full 178-case suite was then repeated."
+  },
+  "static": {
+    "passedSuites": [
+      "learner-ui-static",
+      "student-static",
+      "transfer-static",
+      "p2-learn-static",
+      "p2-review-static",
+      "p3-review-static"
+    ],
+    "preservedFiles": 82,
+    "sharedInterfaceGates": 6
+  },
+  "runtimeHashes": {
+    "index.html": "0d6dd4d3f1275b76826d758f72a4c85d2036b363e4bb89469d097e3c902a071b",
+    "learn-review.js": "c850439ebb11cde2706555a67031818c09be13daa2c942c8160f475403bd6468",
+    "learn.html": "da865c184aecc14a3729733c9757c2b4ba88140ab73bd3392403448861baf890",
+    "learn.js": "7f927ad49e1b1e5a93fe62d41b4f4449b61fe32cabfe9933723fa90e3dc12ba4",
+    "learner-ui.css": "f2189712cf9054c8a210ee58a99c385d7fcb1f81fb0d2f287d2400e887ce0204",
+    "learner-ui.js": "b577a9e5b6b700f6901b67984c966e8f0601ecccf8602c6eb3409ad29ac100ca",
+    "p1-levels.html": "80b642c6f582d9b8ef9cf48b8c425cf71377b7977829229ae6118635566f4d0c",
+    "p1-review.html": "7055fdcb04d27e1596e5729bd1532a1cf1713bbe83b41a7fca01addf072a2814",
+    "p2-investigate.html": "d73c688402c3ad19dbbefdb5c411220588698074fcfb47f2b8d1b932f3b13344",
+    "p2-learn.html": "3c5c4238d3e77a30d1d362477b828cb464a242b3fa79794c33e24349098ffb05",
+    "p2-learn.js": "4e80132d9d8f045bd7b5134544ddd4bd351d76007883df92a427db4ec220fe0a",
+    "p2-review.html": "c2d97320ce94801329d17b0d8bb72060ee85c9ceb54adef4f6470c319deeff5e",
+    "p2-review.js": "6b08e89eb3cf2f0b7fe8fddb8b92f5478875e45963bcc196ac40f658e7be1e47",
+    "p2-skill-levels.html": "b2e1567737300175f0ba642ad95ed37023d54b53d635872d1515aa1acd268656",
+    "p3-learn.html": "b2fa33702bc97075025834d0461636c50d71124a6db2c3f16872cd7d9f18356f",
+    "p3-learn.js": "b8e6f066b376b9f1036eb356ad7c4f95f91f1a3cc025d013bd3130a20d993457",
+    "p3-review.html": "b23591e2d8ee4bfc394f68561be3b01a835a7c09574c7db18d9b66c0469f938b",
+    "p3-review.js": "44b99271bf0a7b08ce988a8b8c44632b8114f7ec1a4b784eda04c994a7641b16",
+    "p3-skill-levels.html": "7cb3412c1136b0f3b93a0e9671bfcaf854e03ae41a3c705dd9f40723a10ab0f9",
+    "tests/learner-ui-static.cjs": "ad33d18e5318d54596c9c4ed64b56a74ac87f0ac95c5e0f763b397e2d25529e4",
+    "tests/learner-wording-browser.js": "14e2e50807d42a45e740b71f265994749a6d1054fc0afdbacd31c04a980aad88",
+    "tests/learner-wording.html": "af699372af1dc617a2e8bc1fd7e6dc4dc2a08dd2fda774ba76a0b41a54bf0140"
+  },
+  "public": {
+    "status": "verified",
+    "cases": 178,
+    "passed": 178,
+    "failed": [],
+    "runtimeDeployment": "https://github.com/kochiuyu/mathquiz/actions/runs/45128757331",
+    "deploymentConclusion": "success",
+    "repositoryFilesMatched": 22,
+    "publicFilesMatched": 22,
+    "exactVersionedAssetURLsMatchedInitially": 9,
+    "finalCacheFix": "P2 review originally had an unversioned script URL. The final documentation commit versions that URL and adds a static gate for all changed renderers. JavaScript content is unchanged."
+  },
+  "limits": [
+    "No new classroom usability result yet",
+    "No independent translation or screen-reader listening review",
+    "Questions, teaching explanations and word problems were not blanket-truncated"
+  ]
+}

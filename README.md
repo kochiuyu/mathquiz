@@ -2,15 +2,13 @@
 
 ## Current guided learning handoff
 
-**23 November 2026: P1–P3 learner interface aligned before P4.** [P1 lessons](learn.html) · [P2 lessons](p2-learn.html) · [P3 lessons](p3-learn.html) · [Interface release](planning/p1-p3-learner-ui-release.md) · [Evidence](planning/p1-p3-learner-ui-evidence.json).
+**23 November 2026: pupil wording shortened after classroom feedback.** [P1](learn.html) · [P2](p2-learn.html) · [P3](p3-learn.html) · [Changes and pupil-copy guidance](planning/learner-wording.md) · [Evidence](planning/learner-wording-evidence.json).
 
-Year, language and pupil selection now share one header. A searchable topic chooser covers **45 topics and 213 lessons**. Lessons use **Learn → Try together → Practise**, with separate Easy / Normal / Difficult choices. Lessons, application reviews and practice-bank menus share navigation and phone-friendly styling. Existing questions and saved work remain intact; P1 review now respects the pupil selected in its link. Older practice banks keep their separate result model.
+Instructions now say what to do next: **“Try an answer. Then check.”** Optional writing and adult assessment notes open separately. The question, picture, units and required answer controls stay visible. Review headings and buttons use shorter words. Saved work, questions and scoring remain unchanged. The shared interface still covers 45 topics and 213 lessons.
 
-**Verification:** all 166 focused browser cases passed locally and live; eight current static suites and 82 preserved-file hashes passed. Release evidence retains earlier failures, fixes and the historical whole-site audit limitation.
+**Verification:** 178 focused cases verified locally, including one exact timeout rerun; all 178 passed live. Six static suites passed and 82 content/storage/model files remained exact. Another pupil trial is needed to judge the effect on reading load and comprehension.
 
-The [P3 application review](p3-review.html) remains available: 16 tasks, nine practical stations and inquiry evidence. Its first responses, supported retries and observations remain separate.
-
-**Next unfinished step: P4 planning.** Audit official objectives and existing resources, map P3 prerequisites and set the first implementation contract. Use the common learner interface for new guided pages. No automatic readiness score or access gate. Classroom usability and independent manual reviews remain pending; the [whole-P3 review](planning/p3-coverage-review.md) and application record support discussion, not certification.
+**Next unfinished step: P4 planning.** Use the [short pupil-copy guidance](planning/learner-wording.md) and common learner interface. Keep adult interpretation separate from pupil instructions, retain necessary mathematical conditions, and refine from pupil feedback. The [P3 review](p3-review.html) and [coverage review](planning/p3-coverage-review.md) support discussion, not automatic readiness certification.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
