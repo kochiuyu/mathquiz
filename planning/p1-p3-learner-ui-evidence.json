@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-23",
+  "baseCommit": "5c24a56dfc3c43a8d2cac72ef6f73a8a1b4c0667",
+  "scope": {
+    "pages": 11,
+    "topics": 45,
+    "lessons": 213,
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "viewportWidths": [
+      320,
+      768,
+      1280
+    ]
+  },
+  "local": {
+    "final": {
+      "cases": 166,
+      "passed": 166,
+      "failed": []
+    },
+    "earlierRuns": [
+      {
+        "cases": 161,
+        "passed": 106,
+        "failed": 55,
+        "cause": "P2 numbers catalog title missing; one navigation timeout. Fixed metadata and added catalog label gate."
+      },
+      {
+        "cases": 161,
+        "passed": 160,
+        "failed": [
+          {
+            "name": "Topic en P2 faces",
+            "error": "Navigation timeout",
+            "exactRerun": "passed"
+          }
+        ]
+      }
+    ],
+    "testRepairs": [
+      "Preservation count corrected to explicit 82-file hash manifest.",
+      "P1/P2 answer isolation tests initially inspected forms immediately after switching, but native switches return to a map. Reopen the same lesson; both exact reruns passed.",
+      "P1 review isolation test strengthened with a retained profile-zero observation."
+    ]
+  },
+  "static": {
+    "passingSuites": [
+      "learner-ui-static",
+      "student-static",
+      "foundations-static",
+      "transfer-static",
+      "p2-learn-static",
+      "p2-review-static",
+      "p3-review-static",
+      "p3-inquiry-static"
+    ],
+    "sharedInterfaceGates": 5,
+    "preservedFileHashes": 82,
+    "historicalAudit": {
+      "suite": "p3-numbers-static",
+      "passed": 13,
+      "failed": 1,
+      "reason": "Historical whole-site equality audit flags intentional learn-review.js pupil-selection addition; current compatibility is covered by scoped preservation hashes and native answer/storage tests."
+    }
+  },
+  "visualSamples": [
+    "P1 English teaching on phone",
+    "P2 Traditional Chinese teaching on phone",
+    "P3 English practice on phone",
+    "P3 English topic map on desktop"
+  ],
+  "public": {
+    "status": "verified",
+    "cases": 166,
+    "passed": 166,
+    "failed": [],
+    "runtimeCommit": "ca48f0824ac87b0af31cf9265d6697918d65b143",
+    "deployment": "https://github.com/kochiuyu/mathquiz/actions/runs/45086623559",
+    "deploymentConclusion": "success",
+    "repositoryFilesMatched": 22,
+    "publicFilesMatched": 22,
+    "exactVersionedAssetURLsMatched": 8
+  },
+  "limitations": [
+    "No pupil usability trial",
+    "No independent translation review",
+    "No screen-reader listening",
+    "Generated quizzes, papers, print activities and teacher tools retain their existing interfaces"
+  ],
+  "runtimeHashes": {
+    "index.html": "4d1466925c12ab44f58f2eac32cd68b7c13dd98468d4cbd8315bb95d1d1bbee2",
+    "learn-review.js": "639d3fed6a526c06739b840f98171d3272319b12f950c5b43a5b5d48a66ce94b",
+    "learn.html": "e844d55ddd7bbada93880d4fbefe7ea6b8413f8b92062b57075d911c9ecd8742",
+    "learn.js": "96c75f84f08f9c82a87769598e018908fecbfa76675c2594c834d33dd9f8caca",
+    "learner-catalog.js": "bfe408fbe61c19295295acb88667847b87fef4351f1e77f7a72b2971419956f4",
+    "learner-ui.css": "db95f2f360df4d7e04fe697305ced46bd87adef8955ea893c8a09250e1d16473",
+    "learner-ui.js": "75df7649e42bda753198ccab4d4ce8eb66cadb2cd3d0fb088810d6cfb53e7707",
+    "p1-levels.html": "ce283fcd459f54c5f2b6096dc0bf212ae72bc0b9f4f536554d7594db6a65397d",
+    "p1-review.html": "60303f90ce349302f2d49d28a34f45ad06dd4ce9320996607607f0b429833d84",
+    "p2-investigate.html": "fddaa5c3d8d4f629d54ee1414d05e1dbff27539e11d3a7cc55f169974d952414",
+    "p2-learn.html": "b6a0f30666d5c7f6493a07a33686a9bbe2ffdd228ac127216529fe832a1b88bd",
+    "p2-learn.js": "3344fdba11879ad9b7c9da3a88638886bdadf28239f2c07eb35973f7b41573be",
+    "p2-review.html": "c01a3ec3d6b9d0accbbdc79d5b8f0f4025cea1a2c5b6507800718b7bb6299e1f",
+    "p2-skill-levels.html": "f6ed493b4971fdee7880560ef87ab36c22bb1e233f6326fc1ef9f161c23a49b6",
+    "p3-learn.html": "d2209b31dd9569f54074968aa0fdc7617f7e3fb6e76d42b7f317b260202a0a2a",
+    "p3-learn.js": "d7d2987bbb7d20a8d50b4b246d57d44393027df552aa2e8be3700a7f195c344d",
+    "p3-review.html": "ca50b561e542ede1091ce23af733a1db63c1eb70d329677e87ecf73fd1629594",
+    "p3-skill-levels.html": "f12c88099c6b48ee62a134be6a1b99b596bb7a0456d0d970005204e2d0ba94e0",
+    "tests/learner-ui-browser.js": "5046b19b801ff5173a85738587d67c3d1e3424e4394f77fa324e2cc50ea83daa",
+    "tests/learner-ui-preserved.json": "179bf7061be5f8367a06bd67f950534987b9e7e28333fda7d7d9280fb1172a5d",
+    "tests/learner-ui-static.cjs": "e5c483dc981f96a2925d3b3a9e549cc3c43ed56f22ea13dc08b94d1d0692faff",
+    "tests/learner-ui.html": "3ffbea58cdf0fd5a096fceccfe22a1ba65ea698f45705a072323f529c62d9fa2"
+  },
+  "publicationNotes": [
+    "Two initial combined pushes returned a connection failure; remote head remained unchanged. Retried the coherent 22-file runtime/test set successfully. Documentation followed after live verification."
+  ]
+}

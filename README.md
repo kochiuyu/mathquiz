@@ -2,11 +2,15 @@
 
 ## Current guided learning handoff
 
-**23 November 2026: separate P3 application review published and verified.** [Open the review](p3-review.html) · [Release and 54-objective map](planning/p3-review-release.md) · [Evidence](planning/p3-review-evidence.json).
+**23 November 2026: P1–P3 learner interface aligned before P4.** [P1 lessons](learn.html) · [P2 lessons](p2-learn.html) · [P3 lessons](p3-learn.html) · [Interface release](planning/p1-p3-learner-ui-release.md) · [Evidence](planning/p1-p3-learner-ui-evidence.json).
 
-**16 bilingual tasks in eight freely chosen sessions, nine practical stations and inquiry evidence review.** First responses and supported retries stay separate; original estimates, oral accounts and predictions are retained. Practical observations do not turn into screen scores. All earlier progress remains unchanged. Guided sample checks now explicitly allow familiar tasks.
+Year, language and pupil selection now share one header. A searchable topic chooser covers **45 topics and 213 lessons**. Lessons use **Learn → Try together → Practise**, with separate Easy / Normal / Difficult choices. Lessons, application reviews and practice-bank menus share navigation and phone-friendly styling. Existing questions and saved work remain intact; P1 review now respects the pupil selected in its link. Older practice banks keep their separate result model.
 
-**Next unfinished step: P4 planning.** Audit official objectives and existing resources, map P3 prerequisites and set the first implementation contract. No automatic readiness score or access gate. The [whole-P3 review](planning/p3-coverage-review.md) and application record provide resources for discussion, not a pupil readiness certificate. Classroom and independent manual reviews remain pending.
+**Verification:** all 166 focused browser cases passed locally and live; eight current static suites and 82 preserved-file hashes passed. Release evidence retains earlier failures, fixes and the historical whole-site audit limitation.
+
+The [P3 application review](p3-review.html) remains available: 16 tasks, nine practical stations and inquiry evidence. Its first responses, supported retries and observations remain separate.
+
+**Next unfinished step: P4 planning.** Audit official objectives and existing resources, map P3 prerequisites and set the first implementation contract. Use the common learner interface for new guided pages. No automatic readiness score or access gate. Classroom usability and independent manual reviews remain pending; the [whole-P3 review](planning/p3-coverage-review.md) and application record support discussion, not certification.
 
 Historical release notes below record earlier next steps and counts; this handoff supersedes them.
 
