@@ -3,6 +3,7 @@
 const D=window.MathQuizLearnData,X=window.MathQuizTransfer,S=window.MathQuizLearnStore,params=new URLSearchParams(location.search),lang=params.get('lang')==='zh'?'zh':'en',zh=lang==='zh',T=(a,b)=>zh?b:a,L=a=>a[zh?1:0],E=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let storage;try{storage=localStorage;}catch(e){storage={getItem(){throw e;},setItem(){throw e;},removeItem(){}};}
 const test=params.get('learnTest')==='1',store=S.create(storage,test?'mathquiz-learning-test-v1':S.key),app=document.getElementById('review-app');let external=false;
+if(/^[012]$/.test(params.get('learner')||'')&&store.state.active!==Number(params.get('learner')))store.select(Number(params.get('learner')));
 const href=id=>'learn.html?'+new URLSearchParams({lang,...(test?{learnTest:'1'}:{}),...(id?{lesson:id,stage:'learn'}:{})});
 const revisit=id=>`<a href="${href(id)}">${E(id==='estimate'?T('Estimate quantities','估計數量'):id==='estimatecm'?T('Estimate centimetres','估計厘米長度'):L(D.allLessons.find(l=>l.id===id).title))}</a>`;
 const record=()=>store.profile.review||{answers:[],submitted:false,notes:[]};
