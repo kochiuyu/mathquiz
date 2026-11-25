@@ -1,6 +1,6 @@
 # P4 guided learning plan
 
-25 November 2026. **Planning complete; guided P4 lessons are not yet implemented.** Start with multiplication by two digits. Continue guided teaching through P4, P5 and P6 before another general revision of P1–P3, as requested. Carry the shorter pupil wording into every new release.
+25 November 2026. [P5 and P6 plans are now complete](p4-p6-guided-sequence.md); the next implementation remains P4 multiplication. **Planning complete; guided P4 lessons are not yet implemented.** Start with multiplication by two digits. Continue guided teaching through P4, P5 and P6 before another general revision of P1–P3, as requested. Carry the shorter pupil wording into every new release.
 
 This plan assigns **53 numbered objectives across 14 content units**, with **4F1 inquiry integrated throughout**. It proposes teaching routes and a concrete first release. The existing [P4 practice bank](../p4-skill-levels.html) and practical sheets remain available; their resource-complete status does not mean that a guided course already exists.
 
@@ -323,7 +323,7 @@ Begin with “Which pair would you multiply first?” and let pupils test their 
 6. **Rhombuses, cut-and-build shapes, and eight directions:** separate releases with practical evidence.
 7. **Decimal meaning, then decimal calculations:** separate routes with different input and place limits.
 8. **Larger bar charts, then mixed calculations:** finish chart construction and unitary problems.
-9. **Whole-P4 coverage and application review:** audit all objectives and inquiry, check repeats across teaching/practice/checks, and add fresh application and practical stations where needed. Then begin P5 planning, followed by P6 after P5 coverage/review. General P1–P3 refinement remains deferred.
+9. **Whole-P4 coverage and application review:** audit all objectives and inquiry, check repeats across teaching/practice/checks, and add fresh application and practical stations where needed. Then implement the [P5 plan](p5-guided-learning-plan.md), followed by the [P6 plan](p6-guided-learning-plan.md) after P5 coverage/review. General P1–P3 refinement remains deferred.
 
 This is an authoring queue. Pupil access stays open across branches. Later classroom findings may change lesson groupings without invalidating earlier records.
 

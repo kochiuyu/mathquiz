@@ -2,15 +2,15 @@
 
 ## Current guided learning handoff
 
-**25 November 2026: P4 guided planning is complete.** [P4 lesson plan](planning/p4-guided-learning-plan.md) · [Planning evidence](planning/p4-guided-planning-evidence.json) · [Existing P4 practice](p4-skill-levels.html).
+**25 November 2026: P4–P6 guided planning is complete.** [P4 plan](planning/p4-guided-learning-plan.md) · [P5 plan](planning/p5-guided-learning-plan.md) · [P6 plan](planning/p6-guided-learning-plan.md) · [Cross-year sequence](planning/p4-p6-guided-sequence.md) · [P5/P6 planning evidence](planning/p5-p6-guided-planning-evidence.json).
 
-The plan maps **53 numbered objectives across 14 content units plus integrated inquiry**, with open learning branches and a six-lesson first-release contract. Existing P4 banks and practical activities remain available; guided P4 lessons are not yet implemented.
+The plans map **139 numbered objectives** (P4: 53, P5: 43, P6: 43), with inquiry integrated in each year. They connect prerequisites, proposed lesson sequences, practical evidence and curriculum boundaries. Existing banks and activity sheets remain available; guided P4–P6 lessons have not yet been implemented.
 
-**Next unfinished step: implement P4 multiplication by two digits (4N1)**, including the new P4 learner entry, place-value models, concise bilingual tasks and independent progress. Then follow the P4 queue, review P4 coverage/application, and continue to P5 and P6 before another general P1–P3 revision.
+**Next unfinished step: implement P4 multiplication by two digits (4N1)** under its six-lesson contract. Complete P4 and its application review, then follow the P5 and P6 queues. Individual questions and detailed lesson scripts will be written during implementation. Further general P1–P3 revision stays deferred.
 
-Use the [short pupil-copy guidance](planning/learner-wording.md) and common learner interface. Keep one immediate action visible, optional help on demand and adult interpretation separate. The [P3 review](p3-review.html) supports selected revisits, not an automatic entry gate. Existing questions and saved work are unchanged by this documentation release.
+Use the [short pupil-copy guidance](planning/learner-wording.md): one immediate action, visible required conditions and answer controls, help on demand, and adult interpretation separate. Keep existing questions and saved work intact. Earlier-year reviews support selected revisits rather than automatic entry gates.
 
-Historical release notes below record earlier next steps and counts; this handoff supersedes them. The 23 November wording release remains documented in its [report](planning/learner-wording.md) and [evidence](planning/learner-wording-evidence.json); no new pupil trial is claimed.
+Historical release notes below record earlier next steps and counts; this handoff supersedes them. This is a documentation release, not new lesson delivery or a pupil-validation claim.
 
 ## Guided release history
 

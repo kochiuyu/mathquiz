@@ -1,0 +1,417 @@
+{
+  "date": "2026-11-25",
+  "stage": "guided planning only; no new learner runtime",
+  "sourceRevision": "1e341b0424f0b0d9380b678c133e7c7b66bafaa7",
+  "sources": [
+    {
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf",
+      "p5PdfPages": "30–49",
+      "p6PdfPages": "50–69",
+      "downloadSha256": "eb9f4d12b508874f2b4d9224bab734570e6ba33f67336b48c35bb1d67c5a39df"
+    },
+    {
+      "url": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/pmc2017_e.pdf",
+      "p5PdfPages": "77–94",
+      "p6PdfPages": "96–112",
+      "downloadSha256": "47305a994dfb0b43442f477f6bdad6cb7b3e4531a03bd2cdd7ce968f38cc4efd"
+    }
+  ],
+  "objectiveCounts": {
+    "5": {
+      "5N1": 4,
+      "5N2": 4,
+      "5N3": 2,
+      "5N4": 4,
+      "5N5": 4,
+      "5A1": 2,
+      "5A2": 3,
+      "5M1": 3,
+      "5M2": 6,
+      "5S1": 2,
+      "5S2": 6,
+      "5D1": 3
+    },
+    "6": {
+      "6N1": 5,
+      "6N2": 2,
+      "6N3": 3,
+      "6N4": 1,
+      "6A1": 2,
+      "6M1": 3,
+      "6M2": 2,
+      "6M3": 2,
+      "6M4": 9,
+      "6M5": 2,
+      "6S1": 2,
+      "6D1": 3,
+      "6D2": 3,
+      "6D3": 2,
+      "6D4": 2
+    }
+  },
+  "objectiveLedgers": {
+    "5": [
+      "5N1.1",
+      "5N1.2",
+      "5N1.3",
+      "5N1.4",
+      "5N2.1",
+      "5N2.2",
+      "5N2.3",
+      "5N2.4",
+      "5N3.1",
+      "5N3.2",
+      "5N4.1",
+      "5N4.2",
+      "5N4.3",
+      "5N4.4",
+      "5N5.1",
+      "5N5.2",
+      "5N5.3",
+      "5N5.4",
+      "5A1.1",
+      "5A1.2",
+      "5A2.1",
+      "5A2.2",
+      "5A2.3",
+      "5M1.1",
+      "5M1.2",
+      "5M1.3",
+      "5M2.1",
+      "5M2.2",
+      "5M2.3",
+      "5M2.4",
+      "5M2.5",
+      "5M2.6",
+      "5S1.1",
+      "5S1.2",
+      "5S2.1",
+      "5S2.2",
+      "5S2.3",
+      "5S2.4",
+      "5S2.5",
+      "5S2.6",
+      "5D1.1",
+      "5D1.2",
+      "5D1.3"
+    ],
+    "6": [
+      "6N1.1",
+      "6N1.2",
+      "6N1.3",
+      "6N1.4",
+      "6N1.5",
+      "6N2.1",
+      "6N2.2",
+      "6N3.1",
+      "6N3.2",
+      "6N3.3",
+      "6N4.1",
+      "6A1.1",
+      "6A1.2",
+      "6M1.1",
+      "6M1.2",
+      "6M1.3",
+      "6M2.1",
+      "6M2.2",
+      "6M3.1",
+      "6M3.2",
+      "6M4.1",
+      "6M4.2",
+      "6M4.3",
+      "6M4.4",
+      "6M4.5",
+      "6M4.6",
+      "6M4.7",
+      "6M4.8",
+      "6M4.9",
+      "6M5.1",
+      "6M5.2",
+      "6S1.1",
+      "6S1.2",
+      "6D1.1",
+      "6D1.2",
+      "6D1.3",
+      "6D2.1",
+      "6D2.2",
+      "6D2.3",
+      "6D3.1",
+      "6D3.2",
+      "6D4.1",
+      "6D4.2"
+    ]
+  },
+  "objectiveLessonMappings": {
+    "5N1": {
+      "5N1.1": "L1–L3",
+      "5N1.2": "L3",
+      "5N1.3": "L4",
+      "5N1.4": "L5–L6"
+    },
+    "5N2": {
+      "5N2.1": "L1–L2",
+      "5N2.2": "L3–L5",
+      "5N2.3": "L5",
+      "5N2.4": "L6"
+    },
+    "5N3": {
+      "5N3.1": "L1–L4",
+      "5N3.2": "L5"
+    },
+    "5N4": {
+      "5N4.1": "L1",
+      "5N4.2": "L2",
+      "5N4.3": "L3–L5",
+      "5N4.4": "L6"
+    },
+    "5N5": {
+      "5N5.1": "L1",
+      "5N5.2": "L2–L5",
+      "5N5.3": "L6",
+      "5N5.4": "L7"
+    },
+    "5A1": {
+      "5A1.1": "L1",
+      "5A1.2": "L2–L4"
+    },
+    "5A2": {
+      "5A2.1": "L1",
+      "5A2.2": "L2–L4",
+      "5A2.3": "L5–L6"
+    },
+    "5M1": {
+      "5M1.1": "L1",
+      "5M1.2": "L2–L4",
+      "5M1.3": "L5–L6"
+    },
+    "5M2": {
+      "5M2.1": "L1",
+      "5M2.2": "L2",
+      "5M2.3": "L3",
+      "5M2.4": "L3–L4",
+      "5M2.5": "L5",
+      "5M2.6": "L6–L7"
+    },
+    "5S1": {
+      "5S1.1": "L1–L3",
+      "5S1.2": "L4"
+    },
+    "5S2": {
+      "5S2.1": "L1",
+      "5S2.2": "L2",
+      "5S2.3": "L3",
+      "5S2.4": "L4–L5",
+      "5S2.5": "L6",
+      "5S2.6": "L7"
+    },
+    "5D1": {
+      "5D1.1": "L1",
+      "5D1.2": "L2–L3",
+      "5D1.3": "L4–L5"
+    },
+    "6N1": {
+      "6N1.1": "L1",
+      "6N1.2": "L2",
+      "6N1.3": "L3–L5",
+      "6N1.4": "L6",
+      "6N1.5": "L7"
+    },
+    "6N2": {
+      "6N2.1": "L1–L4",
+      "6N2.2": "L5"
+    },
+    "6N3": {
+      "6N3.1": "L1–L2",
+      "6N3.2": "L3",
+      "6N3.3": "L4–L5"
+    },
+    "6N4": {
+      "6N4.1": "L1–L5"
+    },
+    "6A1": {
+      "6A1.1": "L1–L4",
+      "6A1.2": "L5–L7"
+    },
+    "6M1": {
+      "6M1.1": "L1",
+      "6M1.2": "L2–L5",
+      "6M1.3": "L6"
+    },
+    "6M2": {
+      "6M2.1": "L1–L2",
+      "6M2.2": "L3–L6"
+    },
+    "6M3": {
+      "6M3.1": "L1–L3",
+      "6M3.2": "L3–L6"
+    },
+    "6M4": {
+      "6M4.1": "L1",
+      "6M4.2": "L2",
+      "6M4.3": "L3",
+      "6M4.4": "L4",
+      "6M4.5": "L5",
+      "6M4.6": "L6",
+      "6M4.7": "L7",
+      "6M4.8": "L8",
+      "6M4.9": "L9"
+    },
+    "6M5": {
+      "6M5.1": "L1–L2",
+      "6M5.2": "L3–L5"
+    },
+    "6S1": {
+      "6S1.1": "L1–L3",
+      "6S1.2": "L4–L5"
+    },
+    "6D1": {
+      "6D1.1": "L1–L2",
+      "6D1.2": "L3",
+      "6D1.3": "L4–L5"
+    },
+    "6D2": {
+      "6D2.1": "L1",
+      "6D2.2": "L2–L3",
+      "6D2.3": "L4–L5"
+    },
+    "6D3": {
+      "6D3.1": "L1",
+      "6D3.2": "L2–L5"
+    },
+    "6D4": {
+      "6D4.1": "L1–L2",
+      "6D4.2": "L3–L5"
+    }
+  },
+  "crossYearCounts": {
+    "numberedObjectives": 139,
+    "contentUnits": 41,
+    "inquiryStatements": 3
+  },
+  "resourceInventories": {
+    "5": {
+      "coreSkills": 53,
+      "sampledContexts": 636,
+      "levelledTasks": 1908,
+      "activities": [
+        "p5-3d-shapes-iii.html",
+        "p5-area-ii.html",
+        "p5-bar-charts-iii.html",
+        "p5-circles.html",
+        "p5-decimals-iii.html",
+        "p5-elementary-algebra.html",
+        "p5-fractions-iii.html",
+        "p5-fractions-iv.html",
+        "p5-fractions-v.html",
+        "p5-inquiry.html",
+        "p5-multi-digit-numbers.html",
+        "p5-simple-equations-i.html",
+        "p5-volume-i.html"
+      ]
+    },
+    "6": {
+      "coreSkills": 52,
+      "sampledContexts": 624,
+      "levelledTasks": 1872,
+      "activities": [
+        "p6-angle-degree.html",
+        "p6-area-iii.html",
+        "p6-averages.html",
+        "p6-broken-line-graphs.html",
+        "p6-decimals-iv.html",
+        "p6-decimals-v.html",
+        "p6-inquiry.html",
+        "p6-percentages-i.html",
+        "p6-percentages-ii.html",
+        "p6-perimeter-ii.html",
+        "p6-pie-charts.html",
+        "p6-simple-equations-ii.html",
+        "p6-speed.html",
+        "p6-statistics.html",
+        "p6-symmetry.html",
+        "p6-volume-ii.html"
+      ],
+      "tsaAdditions": {
+        "types": 15,
+        "contexts": 180,
+        "levelledTasks": 540,
+        "ids": [
+          "tsaselect6a",
+          "tsaorder6a",
+          "tsaestimate6a",
+          "tsagrid6a",
+          "tsacomposite6a",
+          "tsacubes6a",
+          "tsadisplace6a",
+          "tsacircles6a",
+          "tsamap6a",
+          "tsamodel6a",
+          "tsapie6a",
+          "tsaline6a",
+          "tsabar6a",
+          "tsasolids6a",
+          "tsasymmetry6a"
+        ],
+        "localReviewGroup": "6R1"
+      },
+      "combined": {
+        "types": 67,
+        "levelledTasks": 2412
+      }
+    }
+  },
+  "inventoryMethod": "Parsed released seed JSON and inspected three-level generation plus P6 extension definitions; no runtime test claim.",
+  "checks": {
+    "all86NewObjectiveRowsMapped": true,
+    "allProposedLessonsMapped": true,
+    "relativeLinksChecked": 115,
+    "markdownAnchorsChecked": [
+      [
+        "planning/p5-guided-learning-plan.md",
+        "p4-guided-learning-plan.md#first-implementation-contract"
+      ],
+      [
+        "planning/p6-guided-learning-plan.md",
+        "p4-guided-learning-plan.md#first-implementation-contract"
+      ],
+      [
+        "planning/p4-p6-guided-sequence.md",
+        "p4-guided-learning-plan.md#first-implementation-contract"
+      ],
+      [
+        "planning/p4-p6-guided-sequence.md",
+        "p5-guided-learning-plan.md#delivery-order"
+      ],
+      [
+        "planning/p4-p6-guided-sequence.md",
+        "p6-guided-learning-plan.md#delivery-order"
+      ]
+    ],
+    "modifiedInheritedFiles": [
+      "README.md",
+      "planning/full-curriculum-plan.md",
+      "planning/p4-guided-learning-plan.md"
+    ],
+    "newFiles": [
+      "planning/p5-guided-learning-plan.md",
+      "planning/p6-guided-learning-plan.md",
+      "planning/p4-p6-guided-sequence.md",
+      "planning/p5-p6-guided-planning-evidence.json"
+    ],
+    "unchangedInheritedFiles": 946,
+    "preservedManifestSha256": "d2e346d7de6895921990f384962a8cfcc2cb85fa36da9962dbc6390b3557851c"
+  },
+  "reviewDecisions": [
+    "Circles before P5 solids; cube/cuboid recognition before volume formulae.",
+    "P6 line-graph reading before travel graphs; percentage meaning before percentage pie questions.",
+    "Original fractional/percentage amounts routed to equations.",
+    "Scope exclusions retained; no new required TSA unit.",
+    "Detailed scripts and individual questions deferred to implementation."
+  ],
+  "limits": [
+    "Documentation validation only; software regression suites were not rerun.",
+    "No new P4–P6 guided lessons or pupil results.",
+    "Classroom calibration, independent translation, screen-reader and practical-observation validation remain pending."
+  ],
+  "next": "Implement P4 multiplication by two digits, then follow the P4, P5 and P6 queues."
+}
