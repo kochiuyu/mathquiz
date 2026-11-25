@@ -2,15 +2,15 @@
 
 ## Current guided learning handoff
 
-**23 November 2026: pupil wording shortened after classroom feedback.** [P1](learn.html) · [P2](p2-learn.html) · [P3](p3-learn.html) · [Changes and pupil-copy guidance](planning/learner-wording.md) · [Evidence](planning/learner-wording-evidence.json).
+**25 November 2026: P4 guided planning is complete.** [P4 lesson plan](planning/p4-guided-learning-plan.md) · [Planning evidence](planning/p4-guided-planning-evidence.json) · [Existing P4 practice](p4-skill-levels.html).
 
-Instructions now say what to do next: **“Try an answer. Then check.”** Optional writing and adult assessment notes open separately. The question, picture, units and required answer controls stay visible. Review headings and buttons use shorter words. Saved work, questions and scoring remain unchanged. The shared interface still covers 45 topics and 213 lessons.
+The plan maps **53 numbered objectives across 14 content units plus integrated inquiry**, with open learning branches and a six-lesson first-release contract. Existing P4 banks and practical activities remain available; guided P4 lessons are not yet implemented.
 
-**Verification:** 178 focused cases verified locally, including one exact timeout rerun; all 178 passed live. Six static suites passed and 82 content/storage/model files remained exact. Another pupil trial is needed to judge the effect on reading load and comprehension.
+**Next unfinished step: implement P4 multiplication by two digits (4N1)**, including the new P4 learner entry, place-value models, concise bilingual tasks and independent progress. Then follow the P4 queue, review P4 coverage/application, and continue to P5 and P6 before another general P1–P3 revision.
 
-**Next unfinished step: P4 planning.** Use the [short pupil-copy guidance](planning/learner-wording.md) and common learner interface. Keep adult interpretation separate from pupil instructions, retain necessary mathematical conditions, and refine from pupil feedback. The [P3 review](p3-review.html) and [coverage review](planning/p3-coverage-review.md) support discussion, not automatic readiness certification.
+Use the [short pupil-copy guidance](planning/learner-wording.md) and common learner interface. Keep one immediate action visible, optional help on demand and adult interpretation separate. The [P3 review](p3-review.html) supports selected revisits, not an automatic entry gate. Existing questions and saved work are unchanged by this documentation release.
 
-Historical release notes below record earlier next steps and counts; this handoff supersedes them.
+Historical release notes below record earlier next steps and counts; this handoff supersedes them. The 23 November wording release remains documented in its [report](planning/learner-wording.md) and [evidence](planning/learner-wording-evidence.json); no new pupil trial is claimed.
 
 ## Guided release history
 
