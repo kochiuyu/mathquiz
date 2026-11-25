@@ -100,7 +100,66 @@
     "preservedFiles": 942
   },
   "public": {
-    "status": "pending"
+    "codeCommit": "37f57f5f3cd2bbbcf7c561ea0a0ba87cf409ae94",
+    "deployment": {
+      "id": 45582013821,
+      "conclusion": "success"
+    },
+    "divisionCore": {
+      "passed": 115,
+      "total": 115
+    },
+    "multiplicationCore": {
+      "passed": 99,
+      "total": 99
+    },
+    "divisionInterface": {
+      "passedInitial": 82,
+      "total": 83,
+      "failures": [
+        {
+          "name": "en p4-tests2510 normal",
+          "error": "navigation timeout"
+        }
+      ],
+      "exactRerun": {
+        "name": "en p4-tests2510 normal",
+        "pass": true
+      }
+    },
+    "multiplicationInterface": {
+      "passedInitial": 66,
+      "total": 67,
+      "failures": [
+        {
+          "name": "en p4-threeproduct normal",
+          "error": "load timeout"
+        }
+      ],
+      "exactRerun": {
+        "name": "en p4-threeproduct normal",
+        "pass": true
+      }
+    },
+    "sharedWording": {
+      "passedInitial": 181,
+      "total": 182,
+      "verified": 182,
+      "failures": [
+        {
+          "name": "Topic en P2 numbers",
+          "error": "Navigation timeout p2-learn.html"
+        }
+      ],
+      "exactRerun": {
+        "name": "Topic en P2 numbers",
+        "pass": true
+      }
+    },
+    "distinctVerified": 546,
+    "exactRepositoryReadbacks": 31,
+    "exactPublicFiles": 31,
+    "exactVersionedAssets": 11
   },
   "limitations": [
     "Classroom trials",
@@ -115,5 +174,7 @@
   },
   "verificationCorrections": [
     "An early link check ran before the evidence draft existed; after writing the evidence all 71 links resolve."
-  ]
+  ],
+  "totalDistinctLocalPublic": 1092,
+  "visualInspection": "Chinese borrowing model at phone width; trial-digit controls exercised through browser input. Automated P4 320px route checks and existing P1-P3 layout checks. No screen-reader listening claim."
 }

@@ -40,7 +40,7 @@ The shared catalogue adds division. Existing HTML edits refresh catalogue cache 
 
 ## Verification and limits
 
-Local checkpoint: 546 distinct selected cases verified (115 division core, 99 multiplication core, 83 division interface, 67 multiplication interface and 182 shared wording/navigation). Two navigation timeouts passed their exact reruns. Sixteen static gates and 71 relative links pass; 942 inherited files are byte-unchanged. Public verification is recorded separately in the evidence.
+Local checkpoint: 546 distinct selected cases verified (115 division core, 99 multiplication core, 83 division interface, 67 multiplication interface and 182 shared wording/navigation). Two navigation timeouts passed their exact reruns. Sixteen static gates and 71 relative links pass; 942 inherited files are byte-unchanged. The same 546 cases are verified publicly: **1092 distinct local/public cases**, with original navigation timeouts and exact passing reruns retained in the evidence. All 31 runtime-release repository/public files and eleven exact versioned asset URLs matched. The runtime deployment succeeded; final documentation deployment/readbacks are recorded in the completion report.
 
 [Evidence](p4-division-guided-evidence.json) separates local/public cases, original failures, exact reruns, static arithmetic checks and deployment readbacks. Independent repeated subtraction verifies every authored response; division traces are swept across the supported ranges and all four divisibility criteria across 0–9999. Existing multiplication and shared P1–P3 navigation/wording suites are retained.
 

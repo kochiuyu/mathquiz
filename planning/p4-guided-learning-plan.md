@@ -315,8 +315,8 @@ Begin with “Which pair would you multiply first?” and let pupils test their 
 
 ## Delivery queue
 
-1. **Multiplication by two digits:** implement the P4 entry and six lessons specified below.
-2. **Division by two digits:** establish columns, divisibility and context-sensitive remainders.
+1. **Multiplication by two digits — implemented:** six guided lessons; retain the original contract below.
+2. **Division by two digits — implemented:** seven guided lessons covering columns, divisibility and context-sensitive remainders.
 3. **Multiples and factors, then common multiples and factors:** complete lists, sieve and both methods.
 4. **Fractions beyond one:** publish forms/regrouping/equivalence/comparison first (4N6.1–4); calculations and stories follow as a separate topic (4N6.5–7). Keep partial-unit status explicit until both exist.
 5. **Perimeter and area:** separate releases with real measurement records and cross-links.

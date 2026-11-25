@@ -4,6 +4,8 @@
 
 **25 November 2026: P4 division by two digits is implemented.** [Open division](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=division) · [Release report](planning/p4-division-guided-release.md) · [Evidence](planning/p4-division-guided-evidence.json).
 
+**1092 selected local/live cases verified**, with exact navigation-timeout reruns documented.
+
 Seven bilingual lessons provide **14 guided examples, 63 practice tasks and 16 separate sample checks** for 4N2.1–3. Stepwise models cover trial quotient digits, borrowing, zero quotient digits, remainder bounds and divisibility by 2, 3, 5 and 10. Separate contexts distinguish full packs from capacity needed for everyone. Original estimates, first attempts, retries, practical notes and inquiry predictions are retained separately.
 
 P4 now has **13 guided lessons in two topics**, with independent Continue and records for each topic and pupil. [Multiplication](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=multiply) and earlier saved work are preserved. Existing practice banks remain separate.
