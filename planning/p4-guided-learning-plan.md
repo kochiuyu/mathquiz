@@ -1,6 +1,6 @@
 # P4 guided learning plan
 
-25 November 2026. [P5 and P6 plans are now complete](p4-p6-guided-sequence.md); **P4 multiplication is implemented** in [six guided lessons](../p4-learn.html?path=multiply). [Release and evidence](p4-multiply-guided-release.md). Next: division by two digits. The remaining topics below are planned. Continue guided teaching through P4, P5 and P6 before another general revision of P1–P3, as requested. Carry the shorter pupil wording into every new release.
+25 November 2026. [P5 and P6 plans are now complete](p4-p6-guided-sequence.md); **P4 multiplication is implemented** in [six guided lessons](../p4-learn.html?path=multiply). [Release and evidence](p4-multiply-guided-release.md). [Division now adds seven guided lessons](p4-division-guided-release.md), making thirteen P4 lessons. Next: multiples and factors. The remaining topics below are planned. Continue guided teaching through P4, P5 and P6 before another general revision of P1–P3, as requested. Carry the shorter pupil wording into every new release.
 
 This plan assigns **53 numbered objectives across 14 content units**, with **4F1 inquiry integrated throughout**. It proposes teaching routes and a concrete first release. The existing [P4 practice bank](../p4-skill-levels.html) and practical sheets remain available; their resource-complete status does not mean that a guided course already exists.
 
@@ -366,4 +366,4 @@ Reuse the shared learner controls and concise labels; add the P4 catalogue/entry
 
 ## Planning verification
 
-The [planning evidence](p4-guided-planning-evidence.json) records the source revision, objective ledger, resource inventory, local links, proposed-ID checks and preservation hashes. That planning checkpoint changed documentation only. The subsequent [multiplication release](p4-multiply-guided-release.md) implements the first contract. Next: P4 division by two digits.
+The [planning evidence](p4-guided-planning-evidence.json) records the source revision, objective ledger, resource inventory, local links, proposed-ID checks and preservation hashes. That planning checkpoint changed documentation only. The subsequent [multiplication release](p4-multiply-guided-release.md) implements the first contract. [Division is now implemented](p4-division-guided-release.md). Next: P4 multiples and factors.

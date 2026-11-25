@@ -1952,6 +1952,64 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "division",
+      "title": [
+        "Division by two digits",
+        "兩位數除法"
+      ],
+      "lessons": [
+        {
+          "id": "p4-trialquotient",
+          "title": [
+            "Choose a trial digit",
+            "試商"
+          ]
+        },
+        {
+          "id": "p4-dividecolumns",
+          "title": [
+            "Divide in columns",
+            "用直式除"
+          ]
+        },
+        {
+          "id": "p4-quotientzero",
+          "title": [
+            "Keep zeros and leftovers",
+            "保留零及餘數"
+          ]
+        },
+        {
+          "id": "p4-tests2510",
+          "title": [
+            "Divide exactly by 2, 5 or 10",
+            "被2、5或10整除"
+          ]
+        },
+        {
+          "id": "p4-testthree",
+          "title": [
+            "Divide exactly by 3",
+            "被3整除"
+          ]
+        },
+        {
+          "id": "p4-fullpacks",
+          "title": [
+            "Full packs and leftovers",
+            "整包及餘下數量"
+          ]
+        },
+        {
+          "id": "p4-capacitydivision",
+          "title": [
+            "Enough for everyone",
+            "足夠容納所有人"
+          ]
+        }
+      ]
     }
   ]
 };

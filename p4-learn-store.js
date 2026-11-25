@@ -1,8 +1,8 @@
 ((root)=>{'use strict';
-function forPath(topic='multiply'){if(topic!=='multiply')throw Error('topic');
-const MAX=524288,ids=["p4-tensproduct", "p4-splitproduct", "p4-carryproduct", "p4-threeproduct", "p4-groupfactors", "p4-productstories"],stages=['map','learn','together','easy','normal','difficult','check','investigate'],statuses=['unobserved','independent','prompted','notyet'];
+function forPath(topic='multiply'){if(!['multiply','division'].includes(topic))throw Error('topic');
+const MAX=524288,ids=topic==='division'?["p4-trialquotient", "p4-dividecolumns", "p4-quotientzero", "p4-tests2510", "p4-testthree", "p4-fullpacks", "p4-capacitydivision"]:["p4-tensproduct", "p4-splitproduct", "p4-carryproduct", "p4-threeproduct", "p4-groupfactors", "p4-productstories"],stages=['map','learn','together','easy','normal','difficult','check','investigate'],statuses=['unobserved','independent','prompted','notyet'];
 const text=x=>typeof x==='string'?x.replace(/[\u0000-\u0008\u000b-\u001f\u007f]/g,'').slice(0,800):'',obj=x=>x&&typeof x==='object'&&!Array.isArray(x),empty=()=>({version:1,revision:0,cursor:{lesson:ids[0],stage:'learn'},seen:{},attempts:{},notes:{},inquiry:{},...(['length','capacity','weight','time'].includes(topic)?{measurements:{}}:{}),...(['multiply','division','mixed'].includes(topic)?{estimates:{}}:{})});
-const taskID=k=>/^p4-mcheck-([1-9]|1[012])$/.test(k)||ids.some(id=>new RegExp('^'+id+'-(together-[12]|(easy|normal|difficult)-[123])$').test(k));
+const taskID=k=>(topic==='division'?/^p4-dcheck-([1-9]|1[0-6])$/:/^p4-mcheck-([1-9]|1[012])$/).test(k)||ids.some(id=>new RegExp('^'+id+'-(together-[12]|(easy|normal|difficult)-[123])$').test(k));
 function clean(x){if(!obj(x)||x.version!==1||!Number.isSafeInteger(x.revision)||x.revision<0||!obj(x.seen)||!obj(x.attempts)||!obj(x.notes)||!obj(x.inquiry)||!obj(x.cursor))throw Error('format');const s=empty();s.revision=x.revision;if(ids.includes(x.cursor.lesson)&&stages.includes(x.cursor.stage))s.cursor={lesson:x.cursor.lesson,stage:x.cursor.stage};
 for(const id of ids){if(x.seen[id]===true)s.seen[id]=true;const n=x.notes[id];if(n&&statuses.includes(n.status))s.notes[id]={status:n.status,date:text(n.date),task:text(n.task),words:text(n.words),help:text(n.help)};}
 for(const[k,v]of Object.entries(x.attempts)){if(!taskID(k)||!obj(v)||!v.first?.answer)continue;const a=y=>({answer:text(y.answer),reason:text(y.reason),help:text(y.help)});s.attempts[k]={first:a(v.first),...(v.retry?.answer?{retry:a(v.retry)}:{})};}
@@ -25,8 +25,8 @@ measurePredict(id,v){if(!['length','capacity','weight','time'].includes(topic)||
 measureResult(id,v){if(!['length','capacity','weight','time'].includes(topic)||!['tool','result','reflection'].every(k=>text(v[k]).trim()))return false;return change(s=>{if(!s.measurements[id])return false;for(const k of ['tool','result','reflection','help'])s.measurements[id][k]=text(v[k]);});},
 reset(){state=empty();state.revision=Date.now();invalid=false;volatile=false;return write(state);}};}
 const normalize=s=>String(s).replace(/[０-９]/g,c=>String(c.charCodeAt(0)-65296)).trim();
-function canonical(q,raw){const n=v=>{v=normalize(v);return /^\d{1,7}$/.test(v)&&Number(v)<=(q.maxAnswer||99999)?String(Number(v)):null;};if(q.type==='fields'){const a=Array.isArray(raw)?raw:String(raw).split(',');const b=a.map(n);return b.length===q.fields.length&&b.every(x=>x!==null)?b.join(','):null;}return n(raw);}
+function canonical(q,raw){if(q.type==='choice')return q.options.some(o=>o[0]===raw)?raw:null;const n=v=>{v=normalize(v);return /^\d{1,7}$/.test(v)&&Number(v)<=(q.maxAnswer||99999)?String(Number(v)):null;};if(q.type==='fields'){const a=Array.isArray(raw)?raw:String(raw).split(',');const b=a.map(n);return b.length===q.fields.length&&b.every(x=>x!==null)?b.join(','):null;}return n(raw);}
 const correct=(q,a)=>{const c=canonical(q,a);return c!==null&&(q.accepted||[q.answer]).includes(c);};
-return {create,clean,empty,text,MAX,ids,stages,statuses,canonical,correct,maxAnswer:1000000};}
+return {create,clean,empty,text,MAX,ids,stages,statuses,canonical,correct,maxAnswer:topic==='division'?999:1000000};}
 root.MathQuizP4Store={...forPath('multiply'),forPath};if(typeof module!=='undefined')module.exports=root.MathQuizP4Store;
 })(typeof window!=='undefined'?window:globalThis);

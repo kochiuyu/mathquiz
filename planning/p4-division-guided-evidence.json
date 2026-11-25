@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-25",
+  "base": "6b75473ede3177c756569bc68668e5b40c621b00",
+  "scope": "P4 4N2.1-3 and integrated inquiry",
+  "inventory": {
+    "lessons": 7,
+    "guided": 14,
+    "practice": 63,
+    "checks": 16,
+    "totalP4Lessons": 13
+  },
+  "local": {
+    "divisionCore": {
+      "passed": 115,
+      "total": 115
+    },
+    "multiplicationCore": {
+      "passed": 99,
+      "total": 99
+    },
+    "divisionInterface": {
+      "passedInitial": 82,
+      "total": 83,
+      "failures": [
+        {
+          "name": "en p4-tests2510 normal",
+          "error": "navigation timeout"
+        }
+      ],
+      "exactRerun": {
+        "name": "en p4-tests2510 normal",
+        "pass": true
+      }
+    },
+    "multiplicationInterface": {
+      "passed": 67,
+      "total": 67
+    },
+    "sharedWording": {
+      "passedInitial": 181,
+      "total": 182,
+      "failures": [
+        {
+          "name": "Topic en P2 numbers",
+          "error": "Navigation timeout p2-learn.html"
+        }
+      ],
+      "exactRerun": {
+        "name": "Topic en P2 numbers",
+        "pass": true
+      }
+    },
+    "distinctVerified": 546
+  },
+  "static": {
+    "gates": [
+      "inventory",
+      "IDs unique",
+      "93 repeated-subtraction answers and numeric bounds",
+      "all objectives",
+      "check includes all divisibility tests",
+      "zero whole-number boundaries",
+      "capacity exact and nonexact",
+      "packs exact and nonexact",
+      "trailing quotient zero",
+      "fresh numerical division checks",
+      "distinct checks",
+      "estimate number situation is fresh",
+      "checks differ from all guided/practice number situations",
+      "multiplication data and models untouched",
+      "older grades and bank stores unchanged",
+      "division schema isolated"
+    ],
+    "passed": 16,
+    "changedExisting": [
+      "README.md",
+      "index.html",
+      "learn.html",
+      "learner-catalog.js",
+      "p1-levels.html",
+      "p1-review.html",
+      "p2-investigate.html",
+      "p2-learn.html",
+      "p2-review.html",
+      "p2-skill-levels.html",
+      "p3-learn.html",
+      "p3-review.html",
+      "p3-skill-levels.html",
+      "p4-learn-store.js",
+      "p4-learn.css",
+      "p4-learn.html",
+      "p4-learn.js",
+      "planning/full-curriculum-plan.md",
+      "planning/p4-guided-learning-plan.md",
+      "planning/p4-p6-guided-sequence.md",
+      "tests/learner-ui.html",
+      "tests/learner-wording.html",
+      "tests/p4-multiply-guided.html"
+    ],
+    "preservedFiles": 942
+  },
+  "public": {
+    "status": "pending"
+  },
+  "limitations": [
+    "Classroom trials",
+    "Independent translation review",
+    "Screen-reader listening",
+    "Observed paper and practical work"
+  ],
+  "testRecords": "Harness-owned keys restored and normal records checked unchanged.",
+  "links": {
+    "relativeLinks": 71,
+    "missing": []
+  },
+  "verificationCorrections": [
+    "An early link check ran before the evidence draft existed; after writing the evidence all 71 links resolve."
+  ]
+}
