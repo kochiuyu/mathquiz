@@ -1,6 +1,6 @@
 # P4 to P6 guided teaching sequence
 
-25 November 2026. **All three year plans are complete; guided P4–P6 lessons are still to be implemented.** Build P4 next, beginning with multiplication by two digits. Finish each year's coverage and application review before moving the implementation queue into the next year. Pupil access remains open; this is not a pass-score system.
+25 November 2026. **All three year plans are complete. P4 multiplication now has six guided lessons; the remaining guided topics are still to be implemented.** [Multiplication release](p4-multiply-guided-release.md). Build P4 division by two digits next. Finish each year's coverage and application review before moving the implementation queue into the next year. Pupil access remains open; this is not a pass-score system.
 
 ## Plans and coverage
 

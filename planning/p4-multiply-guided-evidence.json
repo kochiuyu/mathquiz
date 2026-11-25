@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-25",
+  "base": "1a58afed6942af2fe9cac1627f3612438ef85122",
+  "scope": "P4 4N1.1-3 multiplication; integrated inquiry",
+  "inventory": {
+    "lessons": 6,
+    "guided": 12,
+    "practice": 54,
+    "checks": 12
+  },
+  "local": {
+    "core": {
+      "passed": 99,
+      "total": 99
+    },
+    "interface": {
+      "passedInitialFinalSource": 66,
+      "total": 67,
+      "failures": [
+        {
+          "name": "en p4-threeproduct easy",
+          "error": "load timeout"
+        }
+      ],
+      "exactRerun": {
+        "name": "en p4-threeproduct easy",
+        "pass": true
+      }
+    },
+    "sharedWordingNavigation": {
+      "passed": 180,
+      "total": 180
+    },
+    "distinctVerified": 346
+  },
+  "earlierLocalRun": {
+    "interface": {
+      "passed": 66,
+      "total": 67,
+      "failure": "en p4-threeproduct together: load timeout",
+      "exactRerunPassed": true
+    },
+    "waitConditionTimeout": "Harness continued; final state read separately. Not counted as a passed case."
+  },
+  "public": {
+    "status": "pending"
+  },
+  "limitations": [
+    "Classroom trials",
+    "Independent translation review",
+    "Screen-reader listening",
+    "Observed physical/written work"
+  ],
+  "testData": "Harness-owned test data restored; normal records unchanged. Ad hoc new P4 test slot 0 will be removed on teardown.",
+  "static": {
+    "gates": [
+      "inventory",
+      "unique task IDs",
+      "78 independent products/partials/groupings and bilingual fields",
+      "fresh check number situations vs teaching/models/activity keys",
+      "fresh check number situations within sample",
+      "objective coverage",
+      "upper product",
+      "three-factor limit independent",
+      "no P3 globals in P4 runtime",
+      "separate key",
+      "difficulty inventory",
+      "existing records and banks unchanged",
+      "only intended shared runtime edits",
+      "prior HTML changes are cache tokens only"
+    ],
+    "passed": 14,
+    "changedExisting": [
+      "README.md",
+      "index.html",
+      "learn.html",
+      "learner-catalog.js",
+      "learner-ui.js",
+      "p1-levels.html",
+      "p1-review.html",
+      "p2-investigate.html",
+      "p2-learn.html",
+      "p2-review.html",
+      "p2-skill-levels.html",
+      "p3-learn.html",
+      "p3-review.html",
+      "p3-skill-levels.html",
+      "planning/full-curriculum-plan.md",
+      "planning/p4-guided-learning-plan.md",
+      "planning/p4-p6-guided-sequence.md",
+      "tests/learner-ui-browser.js",
+      "tests/learner-ui.html",
+      "tests/learner-wording-browser.js",
+      "tests/learner-wording.html"
+    ],
+    "preservedCount": 932
+  }
+}

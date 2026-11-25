@@ -1900,5 +1900,58 @@ window.MathQuizLearnerCatalog={
         }
       ]
     }
+  ],
+  "4": [
+    {
+      "id": "multiply",
+      "title": [
+        "Multiplication by two digits",
+        "兩位數乘法"
+      ],
+      "lessons": [
+        {
+          "id": "p4-tensproduct",
+          "title": [
+            "Multiply by tens",
+            "乘整十數"
+          ]
+        },
+        {
+          "id": "p4-splitproduct",
+          "title": [
+            "Split and multiply",
+            "拆開再乘"
+          ]
+        },
+        {
+          "id": "p4-carryproduct",
+          "title": [
+            "Carry carefully",
+            "小心進位"
+          ]
+        },
+        {
+          "id": "p4-threeproduct",
+          "title": [
+            "Multiply a larger number",
+            "乘較大的數"
+          ]
+        },
+        {
+          "id": "p4-groupfactors",
+          "title": [
+            "Choose a useful pair",
+            "選方便的一對"
+          ]
+        },
+        {
+          "id": "p4-productstories",
+          "title": [
+            "Solve and check",
+            "解題與核對"
+          ]
+        }
+      ]
+    }
   ]
 };

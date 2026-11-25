@@ -2,15 +2,15 @@
 
 ## Current guided learning handoff
 
-**25 November 2026: P4–P6 guided planning is complete.** [P4 plan](planning/p4-guided-learning-plan.md) · [P5 plan](planning/p5-guided-learning-plan.md) · [P6 plan](planning/p6-guided-learning-plan.md) · [Cross-year sequence](planning/p4-p6-guided-sequence.md) · [P5/P6 planning evidence](planning/p5-p6-guided-planning-evidence.json).
+**25 November 2026: P4 multiplication by two digits is implemented.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=multiply) · [Release report](planning/p4-multiply-guided-release.md) · [Evidence](planning/p4-multiply-guided-evidence.json).
 
-The plans map **139 numbered objectives** (P4: 53, P5: 43, P6: 43), with inquiry integrated in each year. They connect prerequisites, proposed lesson sequences, practical evidence and curriculum boundaries. Existing banks and activity sheets remain available; guided P4–P6 lessons have not yet been implemented.
+Six bilingual lessons provide **12 guided examples, 54 practice tasks and 12 separate sample checks** for 4N1.1–3. Stepwise partial-product models show place values and carries; grouping accepts any valid first pair. Original estimates, first responses, supported retries, practical observations and inquiry predictions stay separate. P4 uses its own three-pupil records; existing bank and P1–P3 saved work are preserved.
 
-**Next unfinished step: implement P4 multiplication by two digits (4N1)** under its six-lesson contract. Complete P4 and its application review, then follow the P5 and P6 queues. Individual questions and detailed lesson scripts will be written during implementation. Further general P1–P3 revision stays deferred.
+**Next unfinished step: P4 division by two digits (4N2).** Complete P4 and its application review, then implement the [P5 plan](planning/p5-guided-learning-plan.md) and [P6 plan](planning/p6-guided-learning-plan.md). [P4 plan](planning/p4-guided-learning-plan.md) · [Cross-year sequence](planning/p4-p6-guided-sequence.md). Planning covers 139 numbered objectives across P4–P6; the remaining guided lessons are still to be built.
 
-Use the [short pupil-copy guidance](planning/learner-wording.md): one immediate action, visible required conditions and answer controls, help on demand, and adult interpretation separate. Keep existing questions and saved work intact. Earlier-year reviews support selected revisits rather than automatic entry gates.
+Use short English/Traditional Chinese pupil instructions, visible required conditions and inputs, optional hints and separate adult notes. General P1–P3 refinement remains deferred. Classroom trials, independent translation review, screen-reader listening and observed practical work remain pending. Software checks do not establish pupil mastery.
 
-Historical release notes below record earlier next steps and counts; this handoff supersedes them. This is a documentation release, not new lesson delivery or a pupil-validation claim.
+Historical release notes below retain their original next steps and counts; this handoff supersedes them.
 
 ## Guided release history
 
