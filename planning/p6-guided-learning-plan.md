@@ -15,6 +15,7 @@ The [P6 practice bank](../p6-skill-levels.html) has **52 core skills / 624 sampl
 Use the shared year, language and pupil controls and **Learn → Try together → Practise**. Follow the [short pupil-copy guidance](learner-wording.md): show the immediate action, model or question, then the answer control. Teach one idea at a time. Keep required conditions and units visible, hints on demand, and adult interpretation separate. Do not turn this adult planning document into a pupil introduction.
 
 | Moment | English | Traditional Chinese |
+| --- | --- | --- |
 | Percentage | Which amount is 100%? | 哪個數量是100%？ |
 | Angles | Put the centre on the vertex. | 把量角器中心放在頂點上。 |
 | Graphs | What does this axis show? | 這條軸表示甚麼？ |
