@@ -26,9 +26,9 @@ P4 has its own versioned grade/topic/pupil namespace, `mathquiz-p4-guided-v1-mul
 
 ## Verification
 
-See [machine-readable evidence](p4-multiply-guided-evidence.json). Focused arithmetic/storage/model tests, bilingual interface cases and the updated shared P1–P3 wording/navigation suite are exercised locally and publicly. Test harnesses restore prior test data and verify normal saved records are unchanged. Earlier HTML changes only refresh shared script cache tokens. Existing assessment banks, activity keys and grade stores are unchanged.
+**692 distinct local/public cases verified** (346 per environment), with navigation timeout cases passing exact reruns. Fourteen static gates and 66 relative links passed; 932 inherited files are byte-unchanged. All 33 runtime-release repository/public readbacks matched and the deployment succeeded. See [machine-readable evidence](p4-multiply-guided-evidence.json). Focused arithmetic/storage/model tests, bilingual interface cases and the updated shared P1–P3 wording/navigation suite are exercised locally and publicly. Test harnesses restore prior test data and verify normal saved records are unchanged. Earlier HTML changes only refresh shared script cache tokens. Existing assessment banks, activity keys and grade stores are unchanged.
 
-One initial local iframe navigation timed out; its exact case passed on rerun. A later final-source full run is recorded separately. A harness wait can time out while cases continue; that is not counted as a passed case or a second test. Original outcomes and reruns remain in evidence.
+One initial local iframe navigation timed out; its exact case passed on rerun. The final-source run had one different navigation timeout, also passed on its exact rerun. Public P4 and shared suites each had one navigation timeout; both exact cases passed on rerun. A harness wait can time out while cases continue; that is not counted as a passed case or a second test. Original outcomes and reruns remain in evidence.
 
 Classroom trials, independent Chinese review, screen-reader listening, physical paper work and learner understanding remain unverified. Phone/browser inspection and automated checks do not substitute for those observations.
 

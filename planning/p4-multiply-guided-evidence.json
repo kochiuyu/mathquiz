@@ -43,7 +43,46 @@
     "waitConditionTimeout": "Harness continued; final state read separately. Not counted as a passed case."
   },
   "public": {
-    "status": "pending"
+    "codeCommit": "8bad54e0b425aa3cbf890b4aa9cc9389abf183bb",
+    "deployment": {
+      "id": 45564708072,
+      "conclusion": "success"
+    },
+    "core": {
+      "passed": 99,
+      "total": 99
+    },
+    "interface": {
+      "passedInitial": 66,
+      "total": 67,
+      "failures": [
+        {
+          "name": "en p4-threeproduct learn",
+          "error": "load timeout"
+        }
+      ],
+      "exactRerun": {
+        "name": "en p4-threeproduct learn",
+        "pass": true
+      }
+    },
+    "sharedWordingNavigation": {
+      "passedInitial": 179,
+      "total": 180,
+      "failures": [
+        {
+          "name": "Topic en P1 numberstart",
+          "error": "Navigation timeout learn.html"
+        }
+      ],
+      "exactRerun": {
+        "name": "Topic en P1 numberstart",
+        "pass": true
+      }
+    },
+    "distinctVerified": 346,
+    "exactRepositoryReadbacks": 33,
+    "exactPublicFiles": 33
   },
   "limitations": [
     "Classroom trials",
@@ -51,7 +90,7 @@
     "Screen-reader listening",
     "Observed physical/written work"
   ],
-  "testData": "Harness-owned test data restored; normal records unchanged. Ad hoc new P4 test slot 0 will be removed on teardown.",
+  "testData": "Harness test data restored and normal records unchanged locally/publicly. Owned ad hoc local P4 slot 0 removed; local slot 2 verified absent.",
   "static": {
     "gates": [
       "inventory",
@@ -94,5 +133,11 @@
       "tests/learner-wording.html"
     ],
     "preservedCount": 932
-  }
+  },
+  "links": {
+    "relativeLinks": 66,
+    "missing": []
+  },
+  "totalDistinctLocalAndPublic": 692,
+  "visualInspection": "360/375 phone view of Chinese partial-product model and practical prompts; automated 320px P4 route checks and P1-P3 320/768/1280px layouts. Keyboard-targeted Check and retry controls exercised; no screen-reader listening claim."
 }
