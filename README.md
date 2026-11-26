@@ -2,9 +2,11 @@
 
 ## Current guided learning handoff
 
-**26 November 2026: P4 multiples and factors is implemented.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=factors) · [Release report](planning/p4-factors-guided-release.md) · [Evidence](planning/p4-factors-guided-evidence.json).
+**26 November 2026: P4 multiples and factors is published and verified.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=factors) · [Release report](planning/p4-factors-guided-release.md) · [Evidence](planning/p4-factors-guided-evidence.json).
 
-Six bilingual lessons provide **12 guided examples, 54 practice tasks and 12 sample checks** for 4N3.1–4. Pupils generate positive multiples, build factor pairs, enter complete factor lists without a supplied count, connect factor/multiple statements, classify prime/composite/neither and construct a sieve from 1 to 100. First and corrected charts are saved separately from the working chart.
+Six bilingual lessons provide **12 guided examples, 54 practice tasks and 12 sample checks** for 4N3.1–4. Pupils generate positive multiples, build factor pairs, enter complete factor lists without a supplied count, connect factor/multiple statements, classify prime/composite/neither and construct a sieve from 1 to 100. First and corrected charts are saved separately from the working chart and can be compared under Saved charts.
+
+**566 local and 566 public browser cases verified**, with exact timeout reruns and a saved-chart test-selector correction retained in the evidence. Twelve static gates passed; classroom and independent reviews remain pending.
 
 P4 now has **19 guided lessons across three topics**, with independent Continue and records for each topic and pupil. Multiplication, division, earlier grades and bank scores are preserved. Short pupil instructions, optional hints and separate adult notes continue throughout.
 

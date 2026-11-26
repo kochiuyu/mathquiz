@@ -43,7 +43,40 @@
     "distinctVerified": 566
   },
   "public": {
-    "status": "pending"
+    "status": "verified",
+    "runtimeCommit": "59ffa26b05eba97bc18952bf9ab1937125c73675",
+    "savedChartCommit": "b955a2291e97912773a17715d0986b357d7911b0",
+    "factorsCore": {
+      "passed": 93,
+      "total": 93
+    },
+    "divisionCore": {
+      "passed": 115,
+      "total": 115
+    },
+    "multiplyCore": {
+      "passed": 99,
+      "total": 99
+    },
+    "interface": {
+      "passedInitial": 74,
+      "total": 75,
+      "failure": {
+        "name": "en p4-factorrelations learn",
+        "error": "navigation timeout"
+      },
+      "exactRerunPassed": true
+    },
+    "shared": {
+      "passedInitial": 183,
+      "total": 184,
+      "failure": {
+        "name": "Topic en P2 numbers",
+        "error": "navigation timeout"
+      },
+      "exactRerunPassed": true
+    },
+    "distinctVerified": 566
   },
   "limits": [
     "Classroom trials",
@@ -103,5 +136,266 @@
     "relativeLinks": 75,
     "missing": []
   },
-  "scope": "307 core cases (93 new plus 214 existing P4), 75 interface cases including eight prior-topic cases, 184 shared wording/navigation. Not all historical suites rerun."
+  "scope": "307 core cases (93 new plus 214 existing P4), 75 interface cases including eight prior-topic cases, 184 shared wording/navigation. Not all historical suites rerun.",
+  "savedChartViewer": {
+    "change": "Collapsed read-only first/corrected chart summaries, including help notes. No record-schema change.",
+    "fixtureFailure": {
+      "selector": "[data-saved-mark=1]",
+      "error": "Numeric CSS attribute value required quotes"
+    },
+    "fixtureCorrected": true,
+    "case": "sieve draft first and corrected retry through UI",
+    "finalLocalPassed": true,
+    "finalPublicPassed": true,
+    "normalRecordsUnchanged": true,
+    "countedAsRerun": true,
+    "publicInitialFailure": {
+      "error": "Saved-chart element missing",
+      "cause": "Exact lesson URL served cached HTML referencing factors-r1; confirmed from iframe script URLs.",
+      "correction": "Refreshed the two exact lesson HTML URLs with cache reload, confirmed factors-r2, then reran the same case successfully."
+    }
+  },
+  "totalDistinctLocalPublic": 1132,
+  "runtimeReadback": {
+    "sha": "b955a2291e97912773a17715d0986b357d7911b0",
+    "deployments": [
+      {
+        "id": 45797609599,
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kochiuyu/mathquiz/actions/runs/45797609599"
+      }
+    ],
+    "files": [
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "0c8a82386b765c5adeca60a6494ecfeb1d1e464dbcd156a15e35e7d7c8e427be"
+      },
+      {
+        "path": "learn.html",
+        "match": true,
+        "sha256": "fc0cdeb55bbba4a2dc8ce70201278328e45f6845629c0eb08412242284e2a0f2"
+      },
+      {
+        "path": "learner-catalog.js",
+        "match": true,
+        "sha256": "9373e2bd7d8a0bc1e52355661ef207ba7bfdddaec1f4b0ad3309990b663f6e23"
+      },
+      {
+        "path": "p1-levels.html",
+        "match": true,
+        "sha256": "bbd92428ece9cb111e92c92261bbf4f7bdf54879b32eab3fed6d9d89921f6e18"
+      },
+      {
+        "path": "p1-review.html",
+        "match": true,
+        "sha256": "ae079273a5f4a130c233a5756f7506074bfd2d64128051c2d4a36019791ca143"
+      },
+      {
+        "path": "p2-investigate.html",
+        "match": true,
+        "sha256": "37db86d8c85204e7d8ed5d3dfea544b77cb25083689f75d93a28986fcbd605e1"
+      },
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "9a7d1ac84147bb82a5bbb6a93e4bd1f388c321ba14fd30da20cd07bf44f20fdf"
+      },
+      {
+        "path": "p2-review.html",
+        "match": true,
+        "sha256": "30c7c153fac1daa483abdbc47446e61caaf6602ae68c0c2ca3ecb0f459c2d412"
+      },
+      {
+        "path": "p2-skill-levels.html",
+        "match": true,
+        "sha256": "f99d69d5f08e52b8c0785cdbe04e9ca42645b6c248f50510c4d58cbf917c2d53"
+      },
+      {
+        "path": "p3-learn.html",
+        "match": true,
+        "sha256": "6a333d88fa570b3d6f4b7a332f973a86df2c0bb69313c87028cb1d97b222f6a2"
+      },
+      {
+        "path": "p3-review.html",
+        "match": true,
+        "sha256": "63dbf8fabfe8e1abccc3eb24ee5816aba3a3abe838b0a02eacbbd18825b96b31"
+      },
+      {
+        "path": "p3-skill-levels.html",
+        "match": true,
+        "sha256": "58562de5fc5826636bc92163705e4043d4f05bb284bea8c294ff818242aa7b52"
+      },
+      {
+        "path": "p4-factors-data.js",
+        "match": true,
+        "sha256": "e0674f8f3edc9871c5b2b7a883e9d22e46f72b3e188e3173f7eef5589fabbbcd"
+      },
+      {
+        "path": "p4-factors-models.js",
+        "match": true,
+        "sha256": "8caee7c7b98b5f93ea8bf1375f64906a8da3434bede99db811c797006e96028d"
+      },
+      {
+        "path": "p4-learn-store.js",
+        "match": true,
+        "sha256": "dce86f93bb0e90f65b41ee910a4da16de70e4f17cef95bad4da1418837937dec"
+      },
+      {
+        "path": "p4-learn.css",
+        "match": true,
+        "sha256": "d82c69aa7f7d979df8ca06d88e3ce2da645466cd69d9c70faba178b6db811fe0"
+      },
+      {
+        "path": "p4-learn.html",
+        "match": true,
+        "sha256": "354d3af99711e764b19f26db42eb3567f6cb7b349de589aa9a0c9f2872438099"
+      },
+      {
+        "path": "p4-learn.js",
+        "match": true,
+        "sha256": "45a7bfc485dc1592443f11bb4c2b90c8e444d79eb05dbcb28fdf7eb3918b71df"
+      },
+      {
+        "path": "README.md",
+        "match": true,
+        "sha256": "b453bae3e58fe11a29ba2de7d853e0d9d88bf4ab397a95777ad4c4afe2ae5491"
+      },
+      {
+        "path": "planning/full-curriculum-plan.md",
+        "match": true,
+        "sha256": "25ad0ab86bcc07b7ecd3cacdada3cbad9c0e6b9e7087e829da5707923a12ca88"
+      },
+      {
+        "path": "planning/p4-factors-guided-evidence.json",
+        "match": true,
+        "sha256": "13bd3587512efb9a9fbb428debda9b834c0157e0eca042aa53197f920ca81da5"
+      },
+      {
+        "path": "planning/p4-factors-guided-release.md",
+        "match": true,
+        "sha256": "f21fbaf53ae01b51ee8a3c6fcffd46fd7c837eb35909f65a8f74812c30252799"
+      },
+      {
+        "path": "planning/p4-guided-learning-plan.md",
+        "match": true,
+        "sha256": "f0a1e65d4696054683439a906f68d82cfb700584c048249b1679e8a814defaac"
+      },
+      {
+        "path": "planning/p4-p6-guided-sequence.md",
+        "match": true,
+        "sha256": "23f3347a4d7a96673adb3143bcc24c4865be73ae86911ae716aef1fba0ca598f"
+      },
+      {
+        "path": "tests/learner-ui.html",
+        "match": true,
+        "sha256": "0449d16159d9dde86ab9a503cabae3aec583ed50b9e858a7b658d0846f341b11"
+      },
+      {
+        "path": "tests/learner-wording.html",
+        "match": true,
+        "sha256": "174effb04b2ad47fdda92e12ce819817b473eb0e0bd8fd1c624fbe9b193a3be0"
+      },
+      {
+        "path": "tests/p4-division-guided.html",
+        "match": true,
+        "sha256": "b462ddf4b814842ca4292ce1a41620dfb7c40ae2ca97af9b2c5a8f3237b99681"
+      },
+      {
+        "path": "tests/p4-division-interface.html",
+        "match": true,
+        "sha256": "3ba48af8531f533cd4c7d9c07818fa6faff1e304f43bb668e1c3de8f8386169b"
+      },
+      {
+        "path": "tests/p4-division-interface.js",
+        "match": true,
+        "sha256": "81e3e1d87301aedccaa091bc461286b031cc89f2fa07cf8d4d74d156191e7309"
+      },
+      {
+        "path": "tests/p4-factors-guided.html",
+        "match": true,
+        "sha256": "7eb2c5b5edaf6c97b85d1e760283f9c52935b47b8844041ee375301bed16536f"
+      },
+      {
+        "path": "tests/p4-factors-guided.js",
+        "match": true,
+        "sha256": "54abe0cf7376e338e81a05f6e75bd33715fbb19382ef949b328c510d97a10071"
+      },
+      {
+        "path": "tests/p4-factors-interface.html",
+        "match": true,
+        "sha256": "f3fe884c42da316135e4ad7fdf18b120880ada5c259cd1951142746dfa2f8844"
+      },
+      {
+        "path": "tests/p4-factors-interface.js",
+        "match": true,
+        "sha256": "adad4487b63b2e4a737f259d59302abe0d5717629645b2f6d586fa404e10f9dc"
+      },
+      {
+        "path": "tests/p4-multiply-guided.html",
+        "match": true,
+        "sha256": "efa0e89eb929e9d48dbbab98adc6b185a8cd47d11281f214663e7cff02630b93"
+      }
+    ],
+    "versionedAssets": [
+      {
+        "url": "p3-learn.css?v=6",
+        "match": true
+      },
+      {
+        "url": "learner-ui.css?v=wording-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.css?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-data.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-data.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-models.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-data.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-models.js?v=factors-r2",
+        "match": true
+      },
+      {
+        "url": "p4-learn-store.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-multiply-models.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "learner-catalog.js?v=p4-factors-r1",
+        "match": true
+      },
+      {
+        "url": "learner-ui.js?v=p4-multiply-r1",
+        "match": true
+      }
+    ]
+  },
+  "repositoryReadback": {
+    "initialFilesMatched": 34,
+    "savedChartFilesMatched": 5
+  },
+  "finalDocumentation": "Final documentation commit/deployment and exact public readback are reported in the attached completion report, outside this self-referential evidence file."
 }
