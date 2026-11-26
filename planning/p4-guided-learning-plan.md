@@ -1,6 +1,6 @@
 # P4 guided learning plan
 
-25 November 2026. [P5 and P6 plans are now complete](p4-p6-guided-sequence.md); **P4 multiplication is implemented** in [six guided lessons](../p4-learn.html?path=multiply). [Release and evidence](p4-multiply-guided-release.md). [Division now adds seven guided lessons](p4-division-guided-release.md), making thirteen P4 lessons. Next: multiples and factors. The remaining topics below are planned. Continue guided teaching through P4, P5 and P6 before another general revision of P1–P3, as requested. Carry the shorter pupil wording into every new release.
+25 November 2026. [P5 and P6 plans are now complete](p4-p6-guided-sequence.md); **P4 multiplication is implemented** in [six guided lessons](../p4-learn.html?path=multiply). [Release and evidence](p4-multiply-guided-release.md). [Division now adds seven guided lessons](p4-division-guided-release.md), making thirteen P4 lessons. [Multiples and factors now adds six lessons](p4-factors-guided-release.md), making nineteen P4 lessons. Next: common multiples and factors. The remaining topics below are planned. Continue guided teaching through P4, P5 and P6 before another general revision of P1–P3, as requested. Carry the shorter pupil wording into every new release.
 
 This plan assigns **53 numbered objectives across 14 content units**, with **4F1 inquiry integrated throughout**. It proposes teaching routes and a concrete first release. The existing [P4 practice bank](../p4-skill-levels.html) and practical sheets remain available; their resource-complete status does not mean that a guided course already exists.
 
@@ -317,7 +317,7 @@ Begin with “Which pair would you multiply first?” and let pupils test their 
 
 1. **Multiplication by two digits — implemented:** six guided lessons; retain the original contract below.
 2. **Division by two digits — implemented:** seven guided lessons covering columns, divisibility and context-sensitive remainders.
-3. **Multiples and factors, then common multiples and factors:** complete lists, sieve and both methods.
+3. **Multiples and factors — implemented:** complete lists and sieve. **Next: common multiples and factors**, including both listing and short division methods.
 4. **Fractions beyond one:** publish forms/regrouping/equivalence/comparison first (4N6.1–4); calculations and stories follow as a separate topic (4N6.5–7). Keep partial-unit status explicit until both exist.
 5. **Perimeter and area:** separate releases with real measurement records and cross-links.
 6. **Rhombuses, cut-and-build shapes, and eight directions:** separate releases with practical evidence.
@@ -366,4 +366,4 @@ Reuse the shared learner controls and concise labels; add the P4 catalogue/entry
 
 ## Planning verification
 
-The [planning evidence](p4-guided-planning-evidence.json) records the source revision, objective ledger, resource inventory, local links, proposed-ID checks and preservation hashes. That planning checkpoint changed documentation only. The subsequent [multiplication release](p4-multiply-guided-release.md) implements the first contract. [Division is now implemented](p4-division-guided-release.md). Next: P4 multiples and factors.
+The [planning evidence](p4-guided-planning-evidence.json) records the source revision, objective ledger, resource inventory, local links, proposed-ID checks and preservation hashes. That planning checkpoint changed documentation only. The subsequent [multiplication release](p4-multiply-guided-release.md) implements the first contract. [Division is now implemented](p4-division-guided-release.md). Next: P4 common multiples and factors.

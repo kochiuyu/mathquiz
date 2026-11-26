@@ -2010,6 +2010,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "factors",
+      "title": [
+        "Multiples and factors",
+        "倍數與因數"
+      ],
+      "lessons": [
+        {
+          "id": "p4-positivemultiples",
+          "title": [
+            "Make multiples",
+            "找倍數"
+          ]
+        },
+        {
+          "id": "p4-factorpairs",
+          "title": [
+            "Find factor pairs",
+            "找因數對"
+          ]
+        },
+        {
+          "id": "p4-allfactors",
+          "title": [
+            "Find every factor",
+            "找齊所有因數"
+          ]
+        },
+        {
+          "id": "p4-factorrelations",
+          "title": [
+            "Factors and multiples",
+            "因數與倍數"
+          ]
+        },
+        {
+          "id": "p4-primecomposite",
+          "title": [
+            "Prime, composite or neither",
+            "質數、合成數或兩者皆非"
+          ]
+        },
+        {
+          "id": "p4-sievehundred",
+          "title": [
+            "Make a sieve to 100",
+            "製作100以內的篩法表"
+          ]
+        }
+      ]
     }
   ]
 };

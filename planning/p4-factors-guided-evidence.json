@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-26",
+  "base": "78c45df2c9bd5ce26bada986f41d74822ca05884",
+  "inventory": {
+    "lessons": 6,
+    "guided": 12,
+    "practice": 54,
+    "checks": 12,
+    "P4Lessons": 19
+  },
+  "local": {
+    "factorsCore": {
+      "passed": 93,
+      "total": 93
+    },
+    "divisionCore": {
+      "passed": 115,
+      "total": 115
+    },
+    "multiplyCore": {
+      "passed": 99,
+      "total": 99
+    },
+    "interface": {
+      "passedInitial": 74,
+      "total": 75,
+      "failure": {
+        "name": "en p4-primecomposite together",
+        "error": "navigation timeout"
+      },
+      "exactRerunPassed": true,
+      "fixtureCorrection": "Prior-topic form selector narrowed to the target question; eight prior-topic cases passed exact reruns."
+    },
+    "shared": {
+      "passedInitial": 183,
+      "total": 184,
+      "failure": {
+        "name": "Topic en P2 numbers",
+        "error": "navigation timeout"
+      },
+      "exactRerunPassed": true
+    },
+    "distinctVerified": 566
+  },
+  "public": {
+    "status": "pending"
+  },
+  "limits": [
+    "Classroom trials",
+    "Independent translation review",
+    "Screen-reader listening",
+    "Observed paper/practical work"
+  ],
+  "freshness": "Prime/composite check numbers are familiar from the sieve; check is not wholly unseen.",
+  "static": {
+    "gates": [
+      "six lessons / 66 guided-practice / 12 checks",
+      "unique IDs",
+      "78 independent answers and bilingual relationship semantics",
+      "all four objectives",
+      "1 neither / 2 prime / odd composite",
+      "factor squares and complete 100 list",
+      "25 primes through 100",
+      "check situations differ from practice",
+      "check situations unique",
+      "prior P4 data and models unchanged",
+      "earlier grade stores unchanged",
+      "sieve contract present"
+    ],
+    "passed": 12,
+    "preservedFiles": 947,
+    "changedExisting": [
+      "README.md",
+      "index.html",
+      "learn.html",
+      "learner-catalog.js",
+      "p1-levels.html",
+      "p1-review.html",
+      "p2-investigate.html",
+      "p2-learn.html",
+      "p2-review.html",
+      "p2-skill-levels.html",
+      "p3-learn.html",
+      "p3-review.html",
+      "p3-skill-levels.html",
+      "p4-learn-store.js",
+      "p4-learn.css",
+      "p4-learn.html",
+      "p4-learn.js",
+      "planning/full-curriculum-plan.md",
+      "planning/p4-guided-learning-plan.md",
+      "planning/p4-p6-guided-sequence.md",
+      "tests/learner-ui.html",
+      "tests/learner-wording.html",
+      "tests/p4-division-guided.html",
+      "tests/p4-division-interface.html",
+      "tests/p4-division-interface.js",
+      "tests/p4-multiply-guided.html"
+    ],
+    "freshnessLimit": "Prime/composite checks use familiar sieve-range numbers; not all checks are unseen. Numeric situations differ from authored guided/practice items, but the bank is not audited as wholly novel."
+  },
+  "links": {
+    "relativeLinks": 75,
+    "missing": []
+  },
+  "scope": "307 core cases (93 new plus 214 existing P4), 75 interface cases including eight prior-topic cases, 184 shared wording/navigation. Not all historical suites rerun."
+}

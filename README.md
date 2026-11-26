@@ -2,17 +2,15 @@
 
 ## Current guided learning handoff
 
-**25 November 2026: P4 division by two digits is implemented.** [Open division](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=division) · [Release report](planning/p4-division-guided-release.md) · [Evidence](planning/p4-division-guided-evidence.json).
+**26 November 2026: P4 multiples and factors is implemented.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=factors) · [Release report](planning/p4-factors-guided-release.md) · [Evidence](planning/p4-factors-guided-evidence.json).
 
-**1092 selected local/live cases verified**, with exact navigation-timeout reruns documented.
+Six bilingual lessons provide **12 guided examples, 54 practice tasks and 12 sample checks** for 4N3.1–4. Pupils generate positive multiples, build factor pairs, enter complete factor lists without a supplied count, connect factor/multiple statements, classify prime/composite/neither and construct a sieve from 1 to 100. First and corrected charts are saved separately from the working chart.
 
-Seven bilingual lessons provide **14 guided examples, 63 practice tasks and 16 separate sample checks** for 4N2.1–3. Stepwise models cover trial quotient digits, borrowing, zero quotient digits, remainder bounds and divisibility by 2, 3, 5 and 10. Separate contexts distinguish full packs from capacity needed for everyone. Original estimates, first attempts, retries, practical notes and inquiry predictions are retained separately.
+P4 now has **19 guided lessons across three topics**, with independent Continue and records for each topic and pupil. Multiplication, division, earlier grades and bank scores are preserved. Short pupil instructions, optional hints and separate adult notes continue throughout.
 
-P4 now has **13 guided lessons in two topics**, with independent Continue and records for each topic and pupil. [Multiplication](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=multiply) and earlier saved work are preserved. Existing practice banks remain separate.
+**Next unfinished step: P4 common multiples and factors (4N4)**, including HCF/LCM and both listing and short division. Complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [P4 plan](planning/p4-guided-learning-plan.md) · [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 
-**Next unfinished step: P4 multiples and factors (4N3), then common multiples and factors (4N4).** Complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [P4 plan](planning/p4-guided-learning-plan.md) · [Cross-year sequence](planning/p4-p6-guided-sequence.md).
-
-Keep pupil instructions short, required conditions/answers visible, hints optional and adult notes separate. Further general P1–P3 revision remains deferred. Classroom trials, independent translation, screen-reader listening and observed paper work remain pending. Software checks do not establish pupil mastery.
+Further general P1–P3 revision remains deferred. Classroom trials, independent translation, screen-reader listening and observed paper work remain pending. Software checks and correct charts do not establish pupil mastery. Prime/composite check numbers are familiar from the sieve range; the check is not wholly unseen.
 
 Historical release notes below retain their original scope and next steps; this handoff supersedes them.
 
