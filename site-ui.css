@@ -17,3 +17,9 @@
  @media(max-width:359px){.mq-header .site-nav a{font-size:13px}.home-page .hero h1{font-size:34px!important}.grade-grid small{font-size:12px!important}.level-picker .level-option b{font-size:12px}}
 }
 @media print{.mq-header .site-nav,.paper-view-switch,.export-options,.practice-options,.source-guide{display:none!important}.question-reference{border:0;margin:2mm 0;font-size:9pt}.question-reference>summary{display:none!important}.question-reference .tsa-source-note{font-size:9pt;padding:0;background:none;border:0}.question-id-reference{display:none!important}.math-fraction{break-inside:avoid}.question-reference .question-id{font-size:8pt}}
+
+a.mqui-badges{display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;min-width:44px;padding:8px 12px;border-radius:10px;font-weight:700;text-decoration:none;color:#14382f;background:#e7f3ec}
+.skill-score-saved{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:8px 0 12px;color:#20392f}
+.skill-score-saved label{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+.skill-score-saved select{min-height:44px;font:inherit;color:#20392f;background:#fffefa;border:1px solid #789080;border-radius:7px;padding:8px 10px}
+.skill-score-saved p{margin:0;flex-basis:100%}

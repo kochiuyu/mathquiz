@@ -4,6 +4,21 @@
  const browse=(extra={})=>root+'?'+new URLSearchParams({lang,view:'browse',...extra});
  const grade=p.get('p')||(location.pathname.match(/p([1-6])-skill-levels\.html$/)||[])[1]||'',practice=/p[1-6]-skill-levels\.html$|smart-practice\.html$/.test(location.pathname),directory=/\/skill-levels\.html$/.test(location.pathname),activity=location.pathname.includes('/activities/');
  document.body.classList.add('site-refreshed');if(practice)document.body.classList.add('focused-practice');
+ function ensureBadges(){
+  if(document.body.classList.contains('student-home')||location.pathname.includes('/activities/'))return;
+  if(/\/(?:learn|p[1-4]-learn|p[1-4]-review|p2-investigate|progress)\.html$/.test(location.pathname))return;
+  if(window.MathQuizLearnerUI&&document.querySelector('header a.mqui-badges'))return;
+  const header=document.querySelector('header');if(!header)return;
+  let a=header.querySelector('a.mqui-badges');
+  if(!a){a=document.createElement('a');a.className='mqui-badges';header.append(a);}
+  const q=new URLSearchParams({lang:lang});
+  const learner=p.get('learner');
+  if(learner==='0'||learner==='1'||learner==='2')q.set('learner',learner);
+  if(p.get('learnTest')==='1')q.set('learnTest','1');
+  if(p.get('badgeTest')==='1')q.set('badgeTest','1');
+  a.href=root+'progress.html?'+q.toString();
+  a.textContent=t('My badges','我的徽章');
+ }
  function navigation(){
   if(document.body.classList.contains('student-home'))return;
   const header=document.querySelector('header');if(!header||header.dataset.sharedNav)return;header.dataset.sharedNav='true';header.classList.add('mq-header');
@@ -17,6 +32,7 @@
   const details=document.createElement('details');details.className='question-reference';const summary=document.createElement('summary');summary.textContent=t('HKEAA TSA reference · MathQuiz ','考評局TSA參考 · MathQuiz')+(/extension/.test(note.dataset.sourceScope||'')?t('extension','延伸'):t('adaptation','改編'));note.before(details);details.append(summary,note);
  }
  function refresh(){
+  ensureBadges();
   navigation();
   document.querySelectorAll('.tsa-source-note').forEach(reference);
   document.querySelectorAll('.question-id').forEach(id=>{if(id.closest('.question-reference'))return;const parent=id.closest('[data-question]'),ref=parent?.querySelector('.question-reference');if(ref){ref.append(id);return;}const d=document.createElement('details');d.className='question-reference question-id-reference';const s=document.createElement('summary');s.textContent=t('Question reference','題目編號');id.before(d);d.append(s,id);});
