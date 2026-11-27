@@ -47,4 +47,4 @@
 @media(max-width:480px){.review-page main{padding:14px}.review-page .learn-question{padding:14px}.review-page h1{font-size:1.4rem}.review-page .learn-top{font-size:.8rem}}
 @media print{.review-page header,.review-page .learn-top,.review-page .learn-skip,.review-page button,.review-page #review-save,.review-page .learn-eyebrow a{display:none!important}.review-page main{max-width:none;padding:0}.review-page textarea{display:none}.review-page .review-print-note{display:block;white-space:pre-wrap}.review-page .learn-question{break-inside:avoid;border:1px solid #777;box-shadow:none}.review-page .review-observe{display:none}.review-page a{color:#000;text-decoration:underline}.review-page input{border:0;background:none}.review-page *{color:#000!important}}
 
-@media(max-width:700px){.learn-path h3 a,.learn-path-choices a,.learn-stages a,.learn-levels a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}}
+.learn-path a,.learn-path-choices a,.learn-stages a,.learn-levels a,.foundation-route a,.learn-readiness a,.learn-inquiry a{display:inline-flex;align-items:center;box-sizing:border-box;min-height:44px;min-width:44px}

@@ -7,7 +7,7 @@ const params=new URLSearchParams(location.search),testMode=params.get('learnTest
 if(/^[012]$/.test(params.get('learner')||'')&&store.state.active!==Number(params.get('learner')))store.select(Number(params.get('learner')));
 const names=[T('Fox','狐狸'),T('Owl','貓頭鷹'),T('Otter','水獺')],symbols=['🦊','🦉','🦦'];let app,mode='home',lesson,stage,level='easy',feedback=null,external=false,path=D.paths[0];
 const url=(id,st,lv,pa=path.id)=>'learn.html?'+new URLSearchParams({lang,path:id?D.pathFor(id).id:pa,...(testMode?{learnTest:'1'}:{}),...(id?{lesson:id,stage:st||'learn',...(st==='practice'?{level:lv||pendingLevel(store.profile.lessons[id])}:{})}:{})});
-const link=(href,text,cls='')=>`<a class="${cls}" href="${E(href)}">${text}</a>`;
+const link=(href,text,cls='')=>{const name=String(text??'').replace(/<[^>]*>/g,'').replace(/&(?:amp|lt|gt|quot|#39);/g,c=>({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&#39;':"'"}[c])).trim();return `<a class="${cls}" href="${E(href)}"${name?` aria-label="${E(name)}"`:''}>${text}</a>`;};
 const levelName=l=>({easy:T('Easy','容易'),normal:T('Normal','一般'),difficult:T('Difficult','困難')})[l];
 const pendingLevel=l=>D.levels.find(v=>!l?.levels?.[v]?.done)||'difficult';
 const practiceQs=()=>stage==='together'?[0,1].map(i=>D.question(lesson.id,i)):D.practice(lesson.id,level);
