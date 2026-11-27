@@ -1,6 +1,6 @@
 # P4 common multiples and factors — guided release
 
-27 November 2026. [Open the topic](../p4-learn.html?path=common). Six new English/Traditional Chinese lessons implement the four 4N4 objectives. P4 now has 25 lessons across four topics. Runtime and local checks are complete; public deployment and verification are pending in this initial report. [Evidence](p4-common-guided-evidence.json).
+27 November 2026. [Open the topic](../p4-learn.html?path=common). Six new English/Traditional Chinese lessons implement the four 4N4 objectives. P4 now has 25 lessons across four topics. Published and verified locally and on the public site. [Evidence](p4-common-guided-evidence.json).
 
 ## Curriculum and sequence
 
@@ -34,7 +34,9 @@ New records use the existing versioned P4 topic/pupil store with a separate `com
 
 Local core checks: 444/444, including 137 new cases and 307 inherited multiplication/division/factors cases. An independent arithmetic oracle checks all 78 new answers; all 1–36 number pairs are compared against independent lists and method checks. The new interface has 80 cases; the prior factor interface has 75. One navigation timeout in each suite passed an exact rerun, with originals retained in the evidence. All 186 shared navigation/wording cases are verified; the P2 English numbers map timed out once and passed its exact rerun. Overall, 785 distinct local browser cases are verified; reruns are not extra cases. The Chinese short-division model was visually inspected at phone width, with blank notebook fields and no horizontal overflow.
 
-Ten new static gates and two inherited bank/resource suites pass. Earlier lesson data, models and grade stores remain byte-for-byte unchanged. Tests use isolated test keys and restore prior test records; normal-record preservation is checked. Public results, exact file readbacks and deployment completion will be added after publication.
+Ten new static gates and two inherited bank/resource suites pass. Earlier lesson data, models and grade stores remain byte-for-byte unchanged. Tests use isolated test keys and restore prior test records; normal-record preservation is checked. All 785 distinct public browser cases are verified, giving 1,570 selected local/public cases. Public reruns are recorded below and in the evidence. The runtime deployment succeeded (`47b49cfcd338b243fb4a2413009af7ec665022cd`). All 36 public files and 15 exact versioned asset URLs matched; six repository readbacks matched. All 70 relative handoff/report links resolved; 952 inherited files stayed byte-for-byte unchanged.
+
+Public verification: one prior-factor navigation timeout passed its exact rerun. The initial shared run had one navigation timeout and an order-sensitive storage assertion failure. A diagnostic with 128 temporary test keys reproduced the old assertion failing while every non-test record value stayed identical; all temporary keys were removed. The assertion now compares exact values by key and catches additions/removals without relying on enumeration order. The full corrected shared suite passed 186/186 locally and against live pages; its source hash matched the candidate to be published. Original failures are retained, and reruns do not add to the distinct-case count.
 
 ## Limits and next step
 

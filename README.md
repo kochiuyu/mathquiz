@@ -2,9 +2,11 @@
 
 ## Current guided learning handoff
 
-**27 November 2026: P4 common multiples and factors is implemented and locally checked; public verification is pending.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=common) · [Release report](planning/p4-common-guided-release.md) · [Evidence](planning/p4-common-guided-evidence.json).
+**27 November 2026: P4 common multiples and factors is published and verified.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=common) · [Release report](planning/p4-common-guided-release.md) · [Evidence](planning/p4-common-guided-evidence.json).
 
 Six bilingual lessons add **12 guided examples, 54 practice tasks and 12 sample checks** for 4N4. Pupils find common values, distinguish H.C.F. (highest common factor) from L.C.M. (least common multiple), and use both listing and short division. Blank method notebooks retain original lists and ladders separately from one correction and the working draft. Short teaching steps and optional hints follow the pupil wording feedback.
+
+**785 local and 785 public browser cases verified**, with exact timeout reruns retained. Ten new static gates and two inherited resource suites passed. Classroom trials and independent reviews remain pending.
 
 P4 now has **25 guided lessons across four topics**, with separate Continue and saved records for each topic and pupil. Earlier lessons and practice-bank results are preserved. Numerical answers and method matches do not establish independent mastery.
 
