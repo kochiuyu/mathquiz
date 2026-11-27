@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-27",
+  "baseline": "1e1db228f14755a863bf4c383cd765d5a746d5c3",
+  "scope": {
+    "newLessons": 6,
+    "guidedExamples": 12,
+    "practiceTasks": 54,
+    "sampleChecks": 12,
+    "p4Lessons": 25,
+    "p4Topics": 4,
+    "notebooks": 36
+  },
+  "source": "https://www.edb.gov.hk/attachment/en/curriculum-development/kla/ma/curr/EN_KS2_e.pdf#page=13",
+  "local": {
+    "core": {
+      "multiply": 99,
+      "division": 115,
+      "factors": 93,
+      "common": 137,
+      "passed": 444,
+      "total": 444
+    },
+    "interface": {
+      "initialPassed": 79,
+      "total": 80,
+      "reruns": [
+        {
+          "name": "en p4-listhcf difficult",
+          "originalError": "navigation timeout",
+          "pass": true
+        }
+      ]
+    },
+    "priorFactorsInterface": {
+      "initialPassed": 74,
+      "total": 75,
+      "reruns": [
+        {
+          "name": "en p4-factorrelations difficult",
+          "originalError": "navigation timeout",
+          "pass": true
+        }
+      ]
+    },
+    "shared": {
+      "initialPassed": 185,
+      "total": 186,
+      "reruns": [
+        {
+          "name": "Topic en P2 numbers",
+          "originalError": "navigation timeout",
+          "pass": true
+        }
+      ]
+    },
+    "distinctVerified": 785,
+    "visual": {
+      "viewport": 375,
+      "language": "zh",
+      "lesson": "shortdivision",
+      "noHorizontalOverflow": true,
+      "notebookInitiallyBlank": true,
+      "screenshot": "screenshot-2026-11-27T10-42-45-086Z-36642570.png"
+    }
+  },
+  "static": {
+    "gates": [
+      "six lessons 66 guided/practice tasks and 12 checks",
+      "all task IDs unique",
+      "78 independent answers and bilingual numeric conditions",
+      "four numbered objectives covered",
+      "LCM first HCF second in short-division answers",
+      "equal coprime multiple and one pairs included",
+      "checks use pairs absent from authored practice",
+      "check pairs all distinct",
+      "single short bilingual teaching instruction and practical task per lesson",
+      "earlier grade stores and data unchanged"
+    ],
+    "passed": 10,
+    "preservedFiles": 956,
+    "changedExisting": [
+      "index.html",
+      "learn.html",
+      "learner-catalog.js",
+      "p1-levels.html",
+      "p1-review.html",
+      "p2-investigate.html",
+      "p2-learn.html",
+      "p2-review.html",
+      "p2-skill-levels.html",
+      "p3-learn.html",
+      "p3-review.html",
+      "p3-skill-levels.html",
+      "p4-learn-store.js",
+      "p4-learn.css",
+      "p4-learn.html",
+      "p4-learn.js",
+      "tests/learner-ui.html",
+      "tests/learner-wording.html",
+      "tests/p4-division-guided.html",
+      "tests/p4-division-interface.html",
+      "tests/p4-division-interface.js",
+      "tests/p4-factors-guided.html",
+      "tests/p4-factors-interface.html",
+      "tests/p4-factors-interface.js",
+      "tests/p4-multiply-guided.html"
+    ]
+  },
+  "inheritedStatic": [
+    "p4-common-factors-static.cjs passed",
+    "p4-factors-static.cjs passed"
+  ],
+  "public": {
+    "status": "pending"
+  },
+  "limitations": [
+    "Classroom trials, independent translation, screen-reader listening and observed paper work remain pending.",
+    "Check number pairs differ from authored tasks in this topic; no claim of whole-site novelty or independent mastery.",
+    "Only stated regression suites rerun."
+  ],
+  "developmentNotes": [
+    "Node was not on PATH; syntax and static checks ran through the existing Cursor Node runtime.",
+    "Three local page-load timeouts passed exact case reruns. The first browser wait ended before the new interface suite completed; it was allowed to finish and inspected."
+  ]
+}

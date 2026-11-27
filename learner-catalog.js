@@ -2061,6 +2061,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "common",
+      "title": [
+        "Common multiples and factors",
+        "公倍數與公因數"
+      ],
+      "lessons": [
+        {
+          "id": "p4-commonmultiples",
+          "title": [
+            "Find common multiples",
+            "找公倍數"
+          ]
+        },
+        {
+          "id": "p4-commonfactors",
+          "title": [
+            "Find common factors",
+            "找公因數"
+          ]
+        },
+        {
+          "id": "p4-listlcm",
+          "title": [
+            "List to find the L.C.M.",
+            "列舉求最小公倍數"
+          ]
+        },
+        {
+          "id": "p4-listhcf",
+          "title": [
+            "List to find the H.C.F.",
+            "列舉求最大公因數"
+          ]
+        },
+        {
+          "id": "p4-shortdivision",
+          "title": [
+            "Use short division",
+            "用短除法"
+          ]
+        },
+        {
+          "id": "p4-comparecommon",
+          "title": [
+            "Choose and compare",
+            "選擇和比較"
+          ]
+        }
+      ]
     }
   ]
 };
