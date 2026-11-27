@@ -32,7 +32,8 @@
 .badge-card.is-earned .badge-state{color:#0f5132}
 .badge-card.is-locked .badge-state{color:#14382f}
 .badge-go,.badge-continue a,.mqui-badges{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:700}
-.badge-go,.badge-continue a{background:#14685a;color:#fff;text-align:center}
+.badges-page a.badge-go,.badges-page a.badge-go:hover,.badges-page a.badge-go:focus,.badges-page a.badge-go:focus-visible,.badges-page a.badge-go:visited,.badges-page a.badge-go:active,.badges-page .badge-continue a,.badges-page .badge-continue a:hover,.badges-page .badge-continue a:focus,.badges-page .badge-continue a:focus-visible,.badges-page .badge-continue a:visited,.badges-page .badge-continue a:active,.badge-toast a,.badge-toast a:hover,.badge-toast a:focus,.badge-toast a:focus-visible,.badge-toast a:visited,.badge-toast a:active{background:#14685a;color:#fff;text-decoration:none}
+.badge-card a.badge-go{display:flex;width:100%;margin-top:auto;box-sizing:border-box;line-height:1.3;padding:10px 12px;text-align:center}
 .badge-continue{grid-template-columns:1fr 1fr}
 .badge-reset{margin:24px 0;padding:12px 14px;background:#fff;border:1px solid #c5d5cc;border-radius:12px}
 .badge-reset summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:700}

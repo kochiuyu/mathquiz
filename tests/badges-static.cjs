@@ -15,7 +15,10 @@ const lesson=(year,topic,id,extra)=>({year,topic,id,practice:false,together:fals
 test('Sixteen guided badges, bilingual copy, no mastery wording',()=>{
   assert.equal(Data.ids.length,16);
   assert.equal(new Set(Data.ids).size,16);
-  for(const b of Data.badges){for(const key of ['name','earned','hint','go']){assert.equal(b[key].length,2);assert.ok(b[key][0].trim()&&b[key][1].trim());}assert.ok(!/mastery|掌握/.test(b.name.concat(b.earned,b.hint,b.go).join(' ')));assert.ok(Data.LINKS[b.id]);}
+  for(const b of Data.badges){for(const key of ['name','earned','hint','go']){assert.equal(b[key].length,2);assert.ok(b[key][0].trim()&&b[key][1].trim());}assert.ok(!/mastery|掌握/.test(b.name.concat(b.earned,b.hint,b.go).join(' ')));assert.ok(Data.LINKS[b.id]);assert.ok(b.go[0].length<=16&&b.go[1].length<=6,'short action '+b.id);}
+  assert.equal(Data.formatDate('2026-11-27','en'),'27 Nov 2026');
+  assert.equal(Data.formatDate('2026-11-27','zh'),'2026年11月27日');
+  assert.equal(Data.formatDate('2026-11-27','en')!=='2026-11-27',true);
 });
 test('Rules follow the approved thresholds',()=>{
   const one=lesson(1,'first','count',{levels:{easy:true,normal:false,difficult:false}});
@@ -147,6 +150,9 @@ test('Badge files make no network calls and the pages keep the old script order'
   assert.ok(page.includes("get('lang')==='zh'"));
   const css=read('badges.css');
   assert.ok(css.includes('grid-template-columns:1fr 1fr')&&css.includes('prefers-reduced-motion')&&css.includes('min-height:44px'));
+  for(const sel of ['.badges-page a.badge-go:hover','.badges-page a.badge-go:focus','.badges-page a.badge-go:visited','.badges-page a.badge-go:active'])assert.ok(css.includes(sel),sel);
+  assert.ok(css.includes('.badge-card a.badge-go{display:flex;width:100%'));
+  assert.ok(read('badges-ui.js').includes('Lessons with all three levels done')&&read('badges-ui.js').includes('三個級別都完成的課')&&read('badges-ui.js').includes('formatDate'));
   assert.ok(read('badges-ui.js').includes("setAttribute('aria-live','polite')"));
   for(const [ink,paper] of [['#14382f','#f6f8f3'],['#14382f','#ffffff'],['#14382f','#fbfaf6'],['#0f5132','#f3faf6'],['#ffffff','#14685a']])assert.ok(contrast(ink,paper)>=4.5,ink+' on '+paper+' '+contrast(ink,paper).toFixed(2));
 });

@@ -29,7 +29,11 @@ await test('Progress page in both languages at phone, tablet and desktop',async(
     A(d.getElementById('progress-main'),'main');
     A(d.documentElement.lang===(lang==='zh'?'zh-HK':'en'),'html lang');
     const text=d.body.textContent;
-    A(lang==='zh'?text.includes('我的徽章')&&text.includes('已獲得')&&text.includes('尚未獲得')&&text.includes('第一步'):text.includes('My badges')&&text.includes('Earned')&&text.includes('Not yet')&&text.includes('First steps'),'bilingual state '+lang);
+    A(lang==='zh'?text.includes('我的徽章')&&text.includes('已獲得')&&text.includes('尚未獲得')&&text.includes('第一步')&&text.includes('三個級別都完成的課'):text.includes('My badges')&&text.includes('Earned')&&text.includes('Not yet')&&text.includes('First steps')&&text.includes('Lessons with all three levels done'),'bilingual state '+lang);
+    const time=d.querySelector('[data-badge="first-steps"] time');
+    A(/^\d{4}-\d{2}-\d{2}$/.test(time.getAttribute('datetime')),'stored date');
+    A(time.textContent!==time.getAttribute('datetime'),'display date');
+    A(lang==='zh'?/^\d{4}年\d{1,2}月\d{1,2}日$/.test(time.textContent):/^\d{1,2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{4}$/.test(time.textContent),'formatted date '+time.textContent);
     A(d.querySelector('[data-badge="first-steps"].is-earned'),'earned seal');
     A(d.querySelector('.badge-card.is-locked .badge-state'),'locked has words');
     A(d.documentElement.scrollWidth<=w.innerWidth+1,'overflow '+lang+' '+width);
@@ -49,6 +53,35 @@ await test('Reset keeps lesson progress and blocks the same souvenir',async()=>{
   A(w.MathQuizLearnStore.create(localStorage,'mathquiz-learning-test-v1').state.profiles[1].lessons.count.levels.easy.done,'lesson remains');
   const again=w.MathQuizBadgeStore.create(localStorage,true).evaluate(1,{recordDay:false});
   A(!again.awarded.includes('first-steps')&&again.profile.waived.includes('first-steps'),'stays waived');
+});
+function rgb(c){const m=String(c).match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);if(!m)throw Error('colour '+c);return [+m[1],+m[2],+m[3]];}
+function lum(ch){const f=v=>{v/=255;return v<=0.03928?v/12.92:((v+0.055)/1.055)**2.4;};const [R,G,B]=ch.map(f);return 0.2126*R+0.7152*G+0.0722*B;}
+function ratio(fg,bg){const [h,l]=[lum(rgb(fg)),lum(rgb(bg))].sort((a,b)=>b-a);return (h+0.05)/(l+0.05);}
+await test('Locked actions stay white on the green button',async()=>{
+  let lowest=99;
+  for(const lang of ['en','zh']){
+    const [w,d]=await load('progress.html?'+new URLSearchParams({learnTest:'1',badgeTest:'1',learner:'2',lang}),390);
+    const links=[...d.querySelectorAll('a.badge-go')];
+    A(links.length===16,'sixteen actions '+lang);
+    const declared={hover:'',focus:'',visited:''};
+    for(const sheet of [...d.styleSheets]){let rules;try{rules=[...sheet.cssRules];}catch(e){continue;}
+      const walk=list=>{for(const rule of list){if(rule.cssRules)walk([...rule.cssRules]);const color=rule.style&&rule.style.color;for(const part of String(rule.selectorText||'').split(',')){const one=part.trim();if(!one.includes('a.badge-go'))continue;if(one.endsWith(':hover'))declared.hover=color;if(one.endsWith(':focus'))declared.focus=color;if(one.endsWith(':visited'))declared.visited=color;}}};
+      walk(rules);
+    }
+    A(declared.hover==='rgb(255, 255, 255)'&&declared.focus==='rgb(255, 255, 255)'&&declared.visited==='rgb(255, 255, 255)','state colours '+JSON.stringify(declared));
+    for(const el of links){
+      const rest=ratio(getComputedStyle(el).color,getComputedStyle(el).backgroundColor);
+      el.focus();
+      const focused=ratio(getComputedStyle(el).color,getComputedStyle(el).backgroundColor);
+      lowest=Math.min(lowest,rest,focused);
+      A(rest>=4.5,'rest contrast '+rest.toFixed(2)+' '+el.textContent);
+      A(focused>=4.5,'focus contrast '+focused.toFixed(2));
+      const card=el.closest('.badge-card');
+      A(el.getBoundingClientRect().width>=card.getBoundingClientRect().width-32,'full width '+el.textContent);
+      A(el.getBoundingClientRect().height>=44,'target '+el.textContent);
+    }
+  }
+  R.ctaContrast=Math.round(lowest*100)/100;
 });
 await test('Unavailable storage is explained and does not block the page',async()=>{
   const [w,d]=await load('progress.html?'+new URLSearchParams({learnTest:'1',badgeTest:'1',badgeStorage:'off',learner:'0',lang:'zh'}),390);
