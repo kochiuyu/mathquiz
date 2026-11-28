@@ -2432,6 +2432,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "directions",
+      "title": [
+        "Eight directions",
+        "八個方向"
+      ],
+      "lessons": [
+        {
+          "id": "p4-eightpoints",
+          "title": [
+            "Find eight directions",
+            "找出八個方向"
+          ]
+        },
+        {
+          "id": "p4-fromaplace",
+          "title": [
+            "Start from a named place",
+            "由指定地點出發"
+          ]
+        },
+        {
+          "id": "p4-reversedirection",
+          "title": [
+            "Swap the reference place",
+            "交換參照地點"
+          ]
+        },
+        {
+          "id": "p4-turnthemap",
+          "title": [
+            "Turn the map",
+            "轉動地圖"
+          ]
+        },
+        {
+          "id": "p4-usecompass",
+          "title": [
+            "Use a compass",
+            "使用指南針"
+          ]
+        },
+        {
+          "id": "p4-followdirectionroute",
+          "title": [
+            "Turn and follow a route",
+            "轉向及沿路走"
+          ]
+        }
+      ]
     }
   ]
 };
