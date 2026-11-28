@@ -27,11 +27,12 @@ const CHECKS={
   '4:area':{prefix:'p4-archeck-',n:16},
   '4:shapes':{prefix:'p4-shcheck-',n:12},
   '4:cutbuild':{prefix:'p4-cbcheck-',n:12},
-  '4:directions':{prefix:'p4-dircheck-',n:12}
+  '4:directions':{prefix:'p4-dircheck-',n:12},
+  '4:decimals':{prefix:'p4-decheck-',n:12}
 };
 const P2=[{topic:'numbers',key:'mathquiz-p2-learning-v1',global:'MathQuizP2Data'},{topic:'arithmetic',key:'mathquiz-p2-arithmetic-v1',global:'MathQuizP2Arithmetic'},{topic:'faces',key:'mathquiz-p2-faces-v1',global:'MathQuizP2Faces'},{topic:'multiply',key:'mathquiz-p2-multiply-v1',global:'MathQuizP2Multiply'},{topic:'facts',key:'mathquiz-p2-facts-v1',global:'MathQuizP2Facts'},{topic:'metres',key:'mathquiz-p2-metres-v1',global:'MathQuizP2Metres'},{topic:'pictograms',key:'mathquiz-p2-pictograms-v1',global:'MathQuizP2Pictograms'},{topic:'thousands',key:'mathquiz-p2-thousands-v1',global:'MathQuizP2Thousands'},{topic:'money',key:'mathquiz-p2-money-v1',global:'MathQuizP2Money'},{topic:'change',key:'mathquiz-p2-change-v1',global:'MathQuizP2Change'},{topic:'division',key:'mathquiz-p2-division-v1',global:'MathQuizP2Division'},{topic:'angles',key:'mathquiz-p2-angles-v1',global:'MathQuizP2Angles'},{topic:'quads',key:'mathquiz-p2-quads-v1',global:'MathQuizP2Quads'},{topic:'minutes',key:'mathquiz-p2-minutes-v1',global:'MathQuizP2Minutes'},{topic:'calendar',key:'mathquiz-p2-calendar-v1',global:'MathQuizP2Calendar'},{topic:'directions',key:'mathquiz-p2-directions-v1',global:'MathQuizP2Directions'}];
 const P3GLOBAL={numbers:'MathQuizP3Data',multiply:'MathQuizP3MultiplyData',length:'MathQuizP3LengthData',division:'MathQuizP3DivisionData',fractions:'MathQuizP3FractionsData',fractionops:'MathQuizP3FractionopsData',quads:'MathQuizP3QuadsData',triangles:'MathQuizP3TrianglesData',capacity:'MathQuizP3CapacityData',weight:'MathQuizP3WeightData',time:'MathQuizP3TimeData',clock24:'MathQuizP3Clock24Data',bars:'MathQuizP3BarsData',mixed:'MathQuizP3MixedData'};
-const P4GLOBAL={multiply:'MathQuizP4Data',division:'MathQuizP4DivisionData',factors:'MathQuizP4FactorsData',common:'MathQuizP4CommonData',fractions:'MathQuizP4FractionsData',fractionops:'MathQuizP4FractionOpsData',perimeter:'MathQuizP4PerimeterData',area:'MathQuizP4AreaData',shapes:'MathQuizP4ShapesData',cutbuild:'MathQuizP4CutbuildData',directions:'MathQuizP4DirectionsData'};
+const P4GLOBAL={multiply:'MathQuizP4Data',division:'MathQuizP4DivisionData',factors:'MathQuizP4FactorsData',common:'MathQuizP4CommonData',fractions:'MathQuizP4FractionsData',fractionops:'MathQuizP4FractionOpsData',perimeter:'MathQuizP4PerimeterData',area:'MathQuizP4AreaData',shapes:'MathQuizP4ShapesData',cutbuild:'MathQuizP4CutbuildData',directions:'MathQuizP4DirectionsData',decimals:'MathQuizP4DecimalsData'};
 const GROUPS={
   'addition-explorer':[[1,'first'],[1,'calculate']],
   'subtraction-explorer':[[1,'subtract']],

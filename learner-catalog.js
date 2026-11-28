@@ -2483,6 +2483,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "decimals",
+      "title": [
+        "Decimal meaning",
+        "小數的意義"
+      ],
+      "lessons": [
+        {
+          "id": "p4-tenths",
+          "title": [
+            "Meet tenths",
+            "認識十分之一"
+          ]
+        },
+        {
+          "id": "p4-hundredths",
+          "title": [
+            "Meet hundredths",
+            "認識百分之一"
+          ]
+        },
+        {
+          "id": "p4-fourdecimalplaces",
+          "title": [
+            "Read four decimal places",
+            "讀四個小數位"
+          ]
+        },
+        {
+          "id": "p4-decimalzeros",
+          "title": [
+            "Keep the zeros in place",
+            "看清零的位置"
+          ]
+        },
+        {
+          "id": "p4-comparedecimals",
+          "title": [
+            "Compare decimal amounts",
+            "比較小數大小"
+          ]
+        },
+        {
+          "id": "p4-dailydecimals",
+          "title": [
+            "Use decimals every day",
+            "日常生活的小數"
+          ]
+        }
+      ]
     }
   ]
 };

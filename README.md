@@ -2,6 +2,20 @@
 
 ## Current guided learning handoff
 
+**29 November 2026: P4 decimal meaning is implemented; final verification is in progress.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=decimals) · [Release report](planning/p4-decimals-guided-release.md) · [Evidence](planning/p4-decimals-guided-evidence.json).
+
+Six bilingual lessons add **12 guided tasks, 54 practice tasks and 12 sample checks** for all four 4N7 objectives. Pupils connect fractions with decimals, read four decimal places, distinguish digit/value/written places, compare quantities and use daily units. Equal-whole grids and an exact place-value builder support short prompts.
+
+P4 now has **75 guided lessons across twelve topics**. Earlier saved work is preserved. First written answers, supported retries, actual oral-reading observations and measurement evidence stay separate. Local/public verification is recorded in the evidence; classroom trials and independent review remain pending.
+
+**Next unfinished step: P4 decimal addition and subtraction**, then larger bar charts and mixed calculations. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
+
+Further general P1–P3 revision remains deferred. Historical notes below retain their original scope and next steps; this handoff supersedes them.
+
+## Guided release history
+
+### P4 eight-directions completion
+
 **28 November 2026: P4 eight directions are published and verified.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=directions) · [Release report](planning/p4-directions-guided-release.md) · [Evidence](planning/p4-directions-guided-evidence.json).
 
 Six bilingual lessons add **12 guided tasks, 54 practice tasks and 12 sample checks** for both 4S3 objectives. Pupils identify eight directions, change the reference place, turn maps, align a compass model and follow facing-relative routes. A separate notebook retains original predictions and actual compass readings.
@@ -12,7 +26,7 @@ P4 now has **69 guided lessons across eleven topics**. Earlier saved work is pre
 
 Further general P1–P3 revision remains deferred. Historical notes below retain their original scope and next steps; this handoff supersedes them.
 
-## Guided release history
+
 
 ### P4 cut-and-build completion
 

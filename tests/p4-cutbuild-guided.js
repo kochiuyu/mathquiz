@@ -17,7 +17,7 @@ test('stale writes protected',()=>{const a=S.create(st,1,true),b=S.create(st,1,t
 test('scoped reset preserves shapes and other pupil',()=>{const a=S.create(st,2,true),b=S.create(st,1,true),old=window.MathQuizP4Store.forPath('shapes').create(st,2,true);old.mark('p4-spotrhombus');const x=st.getItem(b.key),y=st.getItem(old.key);a.reset();return !Object.keys(a.state.attempts).length&&st.getItem(b.key)===x&&st.getItem(old.key)===y});
 for(const[name,raw]of [['malformed','{'],['future',JSON.stringify({...S.empty(),version:2})],['oversized','x'.repeat(S.MAX+1)]])test(name+' record preserved',()=>{const m=memory();m.setItem('mathquiz-p4-guided-test-v1-cutbuild-0',raw);const s=S.create(m,0,true);return s.invalid&&!s.mark(D.lessons[0].id)&&m.getItem(s.key)===raw});
 test('blocked storage retains temporary work',()=>{const s=S.create({getItem(){throw Error('blocked')},setItem(){throw Error('blocked')}},0,true);return s.mark(D.lessons[0].id)&&s.volatile&&s.state.seen[D.lessons[0].id]});
-test('eleven P4 topics and 69 lessons',()=>window.MathQuizLearnerCatalog[4].length===11&&window.MathQuizLearnerCatalog[4].reduce((a,t)=>a+t.lessons.length,0)===69);
+test('twelve P4 topics and 75 lessons',()=>window.MathQuizLearnerCatalog[4].length===12&&window.MathQuizLearnerCatalog[4].reduce((a,t)=>a+t.lessons.length,0)===75);
 test('twelve checks counted in topic badge',()=>{const m=memory(),s=S.create(m,0,true);D.checks.forEach(q=>s.attempt(q.id,'first',{answer:q.answer}));return window.MathQuizBadgeStore.collect(m,0,true).checks.find(c=>c.topic==='cutbuild').correct===12});
 window.cutbuildResults={total:cases.length,passed:cases.filter(x=>x.pass).length,cases};document.getElementById('cutbuild-result').textContent=JSON.stringify(window.cutbuildResults,null,2);
 })();
