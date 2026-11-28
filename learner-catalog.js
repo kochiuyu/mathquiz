@@ -2330,6 +2330,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "shapes",
+      "title": [
+        "Rhombuses and shape families",
+        "菱形及圖形家族"
+      ],
+      "lessons": [
+        {
+          "id": "p4-spotrhombus",
+          "title": [
+            "Spot a rhombus",
+            "找出菱形"
+          ]
+        },
+        {
+          "id": "p4-rhombusproperties",
+          "title": [
+            "Check its properties",
+            "檢查圖形特性"
+          ]
+        },
+        {
+          "id": "p4-drawrhombus",
+          "title": [
+            "Draw different rhombuses",
+            "畫不同的菱形"
+          ]
+        },
+        {
+          "id": "p4-makerhombus",
+          "title": [
+            "Make a rhombus",
+            "製作菱形"
+          ]
+        },
+        {
+          "id": "p4-allshapenames",
+          "title": [
+            "Choose every shape name",
+            "選出所有適用名稱"
+          ]
+        },
+        {
+          "id": "p4-shapeclaims",
+          "title": [
+            "Test a shape claim",
+            "檢驗圖形說法"
+          ]
+        }
+      ]
     }
   ]
 };

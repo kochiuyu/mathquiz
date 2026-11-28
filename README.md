@@ -2,6 +2,20 @@
 
 ## Current guided learning handoff
 
+**28 November 2026: P4 rhombuses and shape families are implemented; final verification is in progress.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=shapes) · [Release report](planning/p4-shapes-guided-release.md) · [Evidence](planning/p4-shapes-guided-evidence.json).
+
+Six bilingual lessons add **12 guided tasks, 54 practice tasks and 12 sample checks** for all three 4S1 objectives. Pupils identify, draw and make rhombuses, select every applicable shape name and test claims with counterexamples. Blank dot drawing and movable equal-strip models support physical work.
+
+P4 now has **57 guided lessons across nine topics**. Earlier saved work is preserved. Drawing and making observations remain separate from screen scores. Local/public verification is recorded in the evidence; classroom trials and independent review remain pending.
+
+**Next unfinished step: P4 cut-and-build shapes**, then eight directions. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
+
+Further general P1–P3 revision remains deferred. Historical notes below retain their original scope and next steps; this handoff supersedes them.
+
+## Guided release history
+
+### P4 area completion
+
 **28 November 2026: P4 area is published and verified.** [Open area](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=area) · [Release report](planning/p4-area-guided-release.md) · [Evidence](planning/p4-area-guided-evidence.json).
 
 Eight bilingual lessons add **16 guided tasks, 72 practice tasks and 16 sample checks** for all **seven 4M2 objectives**. Pupils compare surfaces, overlay, tile, use square units, measure and derive area formulas. Blank covering models, retained estimates and explicit area/perimeter comparisons support the work.
@@ -14,7 +28,7 @@ P4 now has **51 guided lessons across eight topics**. Earlier saved work and bad
 
 Further general P1–P3 revision remains deferred. Historical notes below retain their original scope and next steps; this handoff supersedes them.
 
-## Guided release history
+
 
 **21 November 2026: the first P2 guided pathway is implemented.** [Hundreds and numbers to 999](https://kochiuyu.github.io/mathquiz/p2-learn.html) has five bilingual lessons, 45 practice tasks, 10 guided tasks and a separate 10-question check. Pupils build hundreds, count across boundaries, compare/order, count groups and estimate before revealing a total. Practical prompts and observations accompany every lesson.
 
