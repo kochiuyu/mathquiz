@@ -2381,6 +2381,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "cutbuild",
+      "title": [
+        "Cut and build shapes",
+        "分割與拼合圖形"
+      ],
+      "lessons": [
+        {
+          "id": "p4-tracepolygon",
+          "title": [
+            "Trace the outside",
+            "沿外邊走"
+          ]
+        },
+        {
+          "id": "p4-cutcorners",
+          "title": [
+            "Cut corner to corner",
+            "由頂點剪到對角頂點"
+          ]
+        },
+        {
+          "id": "p4-choosecuts",
+          "title": [
+            "Plan different cuts",
+            "設計不同剪法"
+          ]
+        },
+        {
+          "id": "p4-jointriangles",
+          "title": [
+            "Join triangle pieces",
+            "拼合三角形"
+          ]
+        },
+        {
+          "id": "p4-jointrapeziums",
+          "title": [
+            "Join trapezium pieces",
+            "拼合梯形"
+          ]
+        },
+        {
+          "id": "p4-repairfitting",
+          "title": [
+            "Check the fit",
+            "檢查拼合"
+          ]
+        }
+      ]
     }
   ]
 };
