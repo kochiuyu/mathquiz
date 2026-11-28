@@ -2163,6 +2163,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "fractionops",
+      "title": [
+        "Fraction calculations and stories",
+        "分數計算與應用題"
+      ],
+      "lessons": [
+        {
+          "id": "p4-addlikeparts",
+          "title": [
+            "Add equal-sized parts",
+            "同分母分數加法"
+          ]
+        },
+        {
+          "id": "p4-subtractlikeparts",
+          "title": [
+            "Subtract equal-sized parts",
+            "同分母分數減法"
+          ]
+        },
+        {
+          "id": "p4-regroupwholeparts",
+          "title": [
+            "Regroup a whole",
+            "把整體重新分組"
+          ]
+        },
+        {
+          "id": "p4-mixfractionsteps",
+          "title": [
+            "Add and subtract in order",
+            "依次加減"
+          ]
+        },
+        {
+          "id": "p4-fractiononestory",
+          "title": [
+            "Solve one-step fraction stories",
+            "選擇故事算式"
+          ]
+        },
+        {
+          "id": "p4-fractiontwostory",
+          "title": [
+            "Solve two-step fraction stories",
+            "解兩步分數應用題"
+          ]
+        }
+      ]
     }
   ]
 };

@@ -2,17 +2,15 @@
 
 ## Current guided learning handoff
 
-**28 November 2026: P4 fractions beyond one is published and verified.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=fractions) · [Release report](planning/p4-fractions-guided-release.md) · [Evidence](planning/p4-fractions-guided-evidence.json).
+**28 November 2026: P4 fraction calculations and stories is implemented and locally checked; public verification is pending.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=fractionops) · [Release report](planning/p4-fractionops-guided-release.md) · [Evidence](planning/p4-fractionops-guided-evidence.json).
 
-Six bilingual lessons add **12 guided examples, 54 practice tasks and 12 sample checks** for **4N6.1–4**: written forms, conversion, expansion/reduction and same-denominator comparison. Equal-whole bars and a number line reveal one step at a time. Questions stay short; first answers, retries, practical observations and inquiry predictions stay separate.
+Six bilingual lessons add **12 guided examples, 54 practice tasks and 12 sample checks** for **4N6.5–7**: addition/subtraction, whole regrouping, three-term mixed operations and stories. Short questions, step-by-step diagrams and visible units support the work. Three estimation records keep original guesses before exact answers are revealed.
 
-**823 local and 823 public browser cases verified**, with original failures and exact reruns retained. Fourteen new static gates, eleven badge gates and three inherited fraction suites passed. Classroom trials and independent reviews remain pending.
+P4 now has **37 guided lessons across six topics**. Together with fractions beyond one, guided resources cover **all seven 4N6 objectives**. Earlier saved work and badges are preserved. Resource coverage and screen scores do not establish independent mastery.
 
-P4 now has **31 guided lessons across five topics**. Earlier saved work and the newly merged 16-badge feature are preserved. Fractions count toward existing badges; the badge reader now also accepts valid long guided records.
+**Next unfinished step: P4 perimeter**, then area as a separate release. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 
-**Next unfinished step: P4 fraction calculations and stories (4N6.5–7).** The guided 4N6 unit remains partial until that release. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
-
-Further general P1–P3 revision remains deferred. Classroom trials, independent translation, screen-reader listening and observed paper work remain pending. Numerical answers do not establish independent mastery. Historical release notes below retain their original scope and next steps; this handoff supersedes them.
+Further general P1–P3 revision remains deferred. Classroom trials, independent translation, screen-reader listening and observed paper work remain pending. Historical notes below retain their original scope and next steps; this handoff supersedes them.
 
 ## Guided release history
 
