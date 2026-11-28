@@ -35,7 +35,7 @@ Topic/pupil/test namespaces stay independent. Existing safeguards protect stale,
 
 ## Verification
 
-**1,708 selected local browser cases verified**, including exact reruns of two navigation-timeout cases. Public checks and deployment readback remain pending.
+**1,708 local and 1,708 public selected browser cases verified — 3,416 distinct cases across both origins.** Each origin covers 1,387 core, 110 interface, 204 wording/navigation and seven badge cases. Original failures and exact timeout reruns are retained in the evidence; repeated confirmation cases are not counted twice. Runtime deployment succeeded, all 70 changed/new public files and 39 exact versioned assets matched, and six repository source readbacks matched. There are 102 checked relative report/handoff links and 999 unchanged inherited files, with none deleted. Final documentation deployment/readback is checked in the completion report.
 
 Seventeen new static gates independently derive all 78 answers using rational arithmetic, check unique choice answers and sample contexts, curriculum limits, bilingual copy, 133 protected source files, exact catalogue extension and badge-rule preservation. Eleven inherited badge gates, the existing independent decimal-meaning suite and the decimal-operation suite also pass. The latter independently checks 48 fixtures and 10,201 arithmetic properties. Browser checks cover all thirteen core suites, both languages and all six lesson stages, each teaching example/step, all checks, original/retry records, estimates, written-column revisions, draft/conflict protection, blocked storage, phone/tablet layouts, prerequisite links, all earlier topics, shared wording/navigation and badges.
 
