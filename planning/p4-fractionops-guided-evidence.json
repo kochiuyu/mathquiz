@@ -1,7 +1,7 @@
 {
   "date": "2026-11-28",
   "baseline": "0429d0845706f9af36e86324c9bca0d5e9c429f1",
-  "status": "local verification; public pending",
+  "status": "Published and verified locally/publicly; final documentation deployment checked in completion artifact.",
   "scope": {
     "objectives": [
       "4N6.5",
@@ -2745,7 +2745,47 @@
     "Source fixture for 21/5 was accidentally labelled whole; build assertion stopped before generating files. Corrected to mixed form."
   ],
   "public": {
-    "status": "pending"
+    "core": {
+      "total": 647,
+      "passed": 647
+    },
+    "interface": {
+      "total": 83,
+      "initialPassed": 82,
+      "reruns": [
+        {
+          "name": "en p4-regroupwholeparts normal",
+          "originalError": "navigation timeout",
+          "pass": true
+        }
+      ]
+    },
+    "badges": {
+      "total": 7,
+      "passed": 7,
+      "minimumMeasuredActionContrast": 6.65
+    },
+    "shared": {
+      "total": 190,
+      "initialPassed": 189,
+      "reruns": [
+        {
+          "name": "Topic en P1 numberstart",
+          "originalError": "Navigation timeout",
+          "pass": true
+        }
+      ]
+    },
+    "distinctVerified": 927,
+    "note": "Public interface and shared navigation each had one timeout (en p4-regroupwholeparts normal; Topic en P1 numberstart). Both passed exact case reruns.",
+    "visual": {
+      "viewport": 375,
+      "language": "zh",
+      "lesson": "p4-regroupwholeparts",
+      "removedParts": 3,
+      "noHorizontalOverflow": true,
+      "screenshot": "screenshot-2026-11-28T10-22-57-864Z-4bc87be0.png"
+    }
   },
   "manualPending": [
     "classroom trials",
@@ -3057,5 +3097,358 @@
   "preservation": {
     "unchangedInheritedFiles": 968,
     "deletedInheritedFiles": []
-  }
+  },
+  "runtimeDeployment": {
+    "sha": "8548603c3896edf320fd056b25c22cab2c110636",
+    "deployments": [
+      {
+        "id": 46134526631,
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kochiuyu/mathquiz/actions/runs/46134526631"
+      }
+    ],
+    "files": [
+      {
+        "path": "badges-data.js",
+        "match": true,
+        "sha256": "da8aaec099b48b709e810b1ad3245cc166394c77bf6f2a87eeb4a0428752e7d6"
+      },
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "905f36e03c40c09c951a339f70ba6f88a36fd8ac594942b776d7250c6ef8ae0e"
+      },
+      {
+        "path": "learn.html",
+        "match": true,
+        "sha256": "01a7ca95806e80eb123adf9d48ef2385d8ba51d6c042bb2c64a2c04e0dbf5bf0"
+      },
+      {
+        "path": "learner-catalog.js",
+        "match": true,
+        "sha256": "1c53b68d035d733634bb531129e0a028029be93a546239a6ca4731169b3dc18d"
+      },
+      {
+        "path": "p1-levels.html",
+        "match": true,
+        "sha256": "387cbb40ce19ffc4528ac0ee8f97164ad703a376fd3f7f558c56a7b2768ed891"
+      },
+      {
+        "path": "p1-review.html",
+        "match": true,
+        "sha256": "5bdfedb192c980dd66f95114975b9df96f7fb8c48af3fb38e8bcc96235c6efb4"
+      },
+      {
+        "path": "p2-investigate.html",
+        "match": true,
+        "sha256": "ba28715c1e3ed57be1304b5a372990c691dc2da901b23f098d3690388d8efa69"
+      },
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "0d4edc931f9c0e092b4f013fa7a67f2a44754122791cc803cf3d96f69d62b4af"
+      },
+      {
+        "path": "p2-review.html",
+        "match": true,
+        "sha256": "29ed50d816da668c6717ffe874b1a80ba641628f94fffa53d507163055c96630"
+      },
+      {
+        "path": "p2-skill-levels.html",
+        "match": true,
+        "sha256": "85fa99355abae9376e39124a9014106ec34a17c99757cd364089199237af5915"
+      },
+      {
+        "path": "p3-learn.html",
+        "match": true,
+        "sha256": "4f3fd16cf3fc12ea32b7ba063f0f4d41056546781db4dcae7439da80bced4e2d"
+      },
+      {
+        "path": "p3-review.html",
+        "match": true,
+        "sha256": "fb44637418602f67ef87b42ff126aaf28299e09b1f5bcec71d03fdafe32728f6"
+      },
+      {
+        "path": "p3-skill-levels.html",
+        "match": true,
+        "sha256": "6630eeb63e43adbbe35e2e038bf59a22affd627ac36dfec4c1b7ccd8ec2b9b1b"
+      },
+      {
+        "path": "p4-fractionops-data.js",
+        "match": true,
+        "sha256": "1b497b04fa615ff5d72523084e12ab371a13cabdcc760b4aeab556371380f89b"
+      },
+      {
+        "path": "p4-fractionops-models.js",
+        "match": true,
+        "sha256": "fdfc10227c3a7d1acb83f8e27c6b160adc0d6c6865e4f182e2515e99c986c807"
+      },
+      {
+        "path": "p4-learn-store.js",
+        "match": true,
+        "sha256": "97db1bd656a474e36556b8137e285c0749c59c61a377a6fe7de015851f5a604d"
+      },
+      {
+        "path": "p4-learn.css",
+        "match": true,
+        "sha256": "af73dc4dd573b615dc8c2698f032f24a09097f8f8ebbb8c65d9ca2c584b4e9f5"
+      },
+      {
+        "path": "p4-learn.html",
+        "match": true,
+        "sha256": "c3828a5bab9dceb11e2d081a6c1919ca96ca369b12808d4109ff29e09e0ece3d"
+      },
+      {
+        "path": "p4-learn.js",
+        "match": true,
+        "sha256": "2bbbc88ed7061f8f6cdcc690a5d06ec1f40b436fb680806cc2e0103dabe99411"
+      },
+      {
+        "path": "progress.html",
+        "match": true,
+        "sha256": "e922e50006556fe2c7e2908a60df21a130e8e98636ba54fc2ce368e6c6269c7b"
+      },
+      {
+        "path": "README.md",
+        "match": true,
+        "sha256": "ce1073ed0078d689bdb7801f15b1a910c3c6fcc9c9f38b31c5dd8d1a8fc89874"
+      },
+      {
+        "path": "planning/p4-fractionops-guided-evidence.json",
+        "match": true,
+        "sha256": "f2ea547b9fb975fffef5b02ab9ea3fba544e040c7aa4899ded82162ae6ff5b31"
+      },
+      {
+        "path": "planning/p4-fractionops-guided-release.md",
+        "match": true,
+        "sha256": "54ebeeadd34b16f83cc9ce976d19b3e98b496988d81cfea2dbc21d52f8e5ac0b"
+      },
+      {
+        "path": "planning/p4-guided-learning-plan.md",
+        "match": true,
+        "sha256": "cb99d8c1a2759f1447fe1d693aa9c44fb26f5d23930c7658414c7ddefa11ec05"
+      },
+      {
+        "path": "planning/p4-p6-guided-sequence.md",
+        "match": true,
+        "sha256": "f6a6b7c8d202d1086caa8f01910b9195c91097429f164fdc7477103d50f28902"
+      },
+      {
+        "path": "tests/badges-static.cjs",
+        "match": true,
+        "sha256": "61dbdcf41363a5e9090d099e5d799bd2a544d15d1009230879b47a4745ca4cbc"
+      },
+      {
+        "path": "tests/learner-ui.html",
+        "match": true,
+        "sha256": "b159eceb05719055e623dfa0d05ea5e35446020300da1527225f6eea0e2f996f"
+      },
+      {
+        "path": "tests/learner-wording.html",
+        "match": true,
+        "sha256": "54d95f446117744f0f9e641691ef268dc1000167afe56e2eca611b50c0d40d9d"
+      },
+      {
+        "path": "tests/p4-common-guided.html",
+        "match": true,
+        "sha256": "5d7326c22addf8f3fa0db08f2684be09c51123750a47f9a1ccf2a55921007ee6"
+      },
+      {
+        "path": "tests/p4-common-interface.html",
+        "match": true,
+        "sha256": "b5574259b3494c6db73e55fa5e9a42e3fc0a39eae1add8c8038f5db29d480ecf"
+      },
+      {
+        "path": "tests/p4-common-interface.js",
+        "match": true,
+        "sha256": "f0f8d2f227629e2836f87b542e161fe9d318d253be579fa9d5b073bfd03178e3"
+      },
+      {
+        "path": "tests/p4-division-guided.html",
+        "match": true,
+        "sha256": "54da486322383be61cbf336534f0641e535cae8124b7280ed31b8e095d19208f"
+      },
+      {
+        "path": "tests/p4-division-interface.html",
+        "match": true,
+        "sha256": "3ecb98f43c7ad0ad14dd0f1a73524c620cf14f34a90a87fcda153fe11f86c6ad"
+      },
+      {
+        "path": "tests/p4-division-interface.js",
+        "match": true,
+        "sha256": "863f279692465029b1ac131108766135051b54fb2f8eafb4721fcc34cd5f100b"
+      },
+      {
+        "path": "tests/p4-factors-guided.html",
+        "match": true,
+        "sha256": "7ce42e80ded1207b2ecd6745027c81aa2b893a9f0a9ba1be8682e42cea58b12c"
+      },
+      {
+        "path": "tests/p4-factors-interface.html",
+        "match": true,
+        "sha256": "49fff118a00fb86e183dc8d32855df528e8174f7231067053dcc6000d7a15c43"
+      },
+      {
+        "path": "tests/p4-factors-interface.js",
+        "match": true,
+        "sha256": "100b1683ac8cb5722d40d46a7a13083f171f385971852e1e87d704a25a505f55"
+      },
+      {
+        "path": "tests/p4-fractionops-guided.html",
+        "match": true,
+        "sha256": "2a1bd3aefad5eaa24895ea75320a3b8c8ffc1bda4b733ccf1b185c836d389a07"
+      },
+      {
+        "path": "tests/p4-fractionops-guided.js",
+        "match": true,
+        "sha256": "f95cb76211063aba5a9252b1a4476b3ad898279a450a0538292b776628c3b25b"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.html",
+        "match": true,
+        "sha256": "388980e05757716ea8be07f9789d3394a73f78154ae4ffce743136ed0c114b2e"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.js",
+        "match": true,
+        "sha256": "5c02442a3cb1e281f40ea06b7248f9941d6bb7fa3c4842097b2b3d631fa73253"
+      },
+      {
+        "path": "tests/p4-fractions-guided.html",
+        "match": true,
+        "sha256": "bf410d2239aef1177a741fd591f2801ecef2c423e29d32a4050511a515af4337"
+      },
+      {
+        "path": "tests/p4-fractions-interface.html",
+        "match": true,
+        "sha256": "df3fa71f136a447cb389f5efbb63c18be6b65ebbd892cdfd8d3aae013d72e3bb"
+      },
+      {
+        "path": "tests/p4-fractions-interface.js",
+        "match": true,
+        "sha256": "6f2e535d6c11e39154afc45ba4dda6aeb1c17ab32e27a25f3ca2f1729240e9c7"
+      },
+      {
+        "path": "tests/p4-multiply-guided.html",
+        "match": true,
+        "sha256": "e1dc1e58f48b14538c5a5d3c8e8b7859d2ca9ec0ad63bcff59f62637be722b1c"
+      }
+    ],
+    "versionedAssets": [
+      {
+        "url": "p3-learn.css?v=6",
+        "match": true
+      },
+      {
+        "url": "learner-ui.css?v=wording-r1",
+        "match": true
+      },
+      {
+        "url": "badges.css?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.css?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-data.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-data.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-models.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-data.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-models.js?v=factors-r2",
+        "match": true
+      },
+      {
+        "url": "p4-common-data.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "p4-common-models.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "marking.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "fractions4.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-data.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-models.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-data.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-models.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-store.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-multiply-models.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "learner-catalog.js?v=p4-fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "badges-data.js?v=p4-fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "badges-store.js?v=p4-fractions-r1",
+        "match": true
+      },
+      {
+        "url": "badges-ui.js?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "learner-ui.js?v=p4-multiply-r1",
+        "match": true
+      }
+    ]
+  },
+  "repositoryReadbacks": {
+    "total": 6,
+    "matched": 6,
+    "paths": [
+      "p4-fractionops-data.js",
+      "p4-fractionops-models.js",
+      "p4-learn-store.js",
+      "p4-learn.js",
+      "badges-data.js",
+      "README.md"
+    ]
+  },
+  "totalDistinctBrowserCases": 1854
 }

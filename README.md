@@ -2,9 +2,11 @@
 
 ## Current guided learning handoff
 
-**28 November 2026: P4 fraction calculations and stories is implemented and locally checked; public verification is pending.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=fractionops) · [Release report](planning/p4-fractionops-guided-release.md) · [Evidence](planning/p4-fractionops-guided-evidence.json).
+**28 November 2026: P4 fraction calculations and stories is published and verified.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=fractionops) · [Release report](planning/p4-fractionops-guided-release.md) · [Evidence](planning/p4-fractionops-guided-evidence.json).
 
 Six bilingual lessons add **12 guided examples, 54 practice tasks and 12 sample checks** for **4N6.5–7**: addition/subtraction, whole regrouping, three-term mixed operations and stories. Short questions, step-by-step diagrams and visible units support the work. Three estimation records keep original guesses before exact answers are revealed.
+
+**927 local and 927 public browser cases verified**, with original outcomes and exact reruns retained. Fourteen new static gates, eleven badge gates and three inherited fraction suites passed. Classroom trials and independent reviews remain pending.
 
 P4 now has **37 guided lessons across six topics**. Together with fractions beyond one, guided resources cover **all seven 4N6 objectives**. Earlier saved work and badges are preserved. Resource coverage and screen scores do not establish independent mastery.
 

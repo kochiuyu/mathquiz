@@ -1,6 +1,6 @@
 # P4 fraction calculations and stories — guided release
 
-28 November 2026. Implementation and focused local checks are complete; public deployment and verification are pending in this initial report.
+28 November 2026. Published and verified locally and on the public site.
 
 [Open lessons](../p4-learn.html?path=fractionops) · [Evidence](p4-fractionops-guided-evidence.json) · [P4 plan](p4-guided-learning-plan.md)
 
@@ -39,13 +39,15 @@ The twelve sample prompts differ from this topic's teaching and practice prompts
 
 ## Verification
 
-Focused browser checks cover 647 core cases across all six P4 topics, 83 new interface cases, seven badge cases, and the shared learner wording/navigation suite. The Node runner repeats the same core cases; these are not added to browser totals. Exact reruns and original outcomes are retained in the evidence.
+Focused browser checks cover 647 core cases across all six P4 topics, 83 new interface cases, seven badge cases, and 190 shared learner wording/navigation cases. The Node runner repeats the same core cases; these are not added to browser totals. Exact reruns and original outcomes are retained in the evidence.
 
 Fourteen new static gates independently recompute all 78 answers with rational arithmetic, check nonnegative intermediates, same displayed denominators, operation limits, bilingual numbers/units, concise prompts, topic counts and unchanged protected files. Eleven inherited badge gates and three inherited fraction suites passed. Generated arithmetic/geometry fixtures are grouped assertions, not extra browser cases.
 
 An authoring assertion initially caught one mixed quantity incorrectly labelled as a whole in the source fixture; it was fixed before generating the lesson data. The local interface had one navigation timeout (`en p4-mixfractionsteps learn`) that passed its exact rerun. No failed check is silently discarded.
 
-Public verification, deployment and final readbacks will be recorded after publication. Classroom trials, independent content/translation review, screen-reader listening and observed practical work remain pending.
+All **927 local and 927 public cases** are verified (1,854 selected cases); reruns are not extra cases. The local shared suite had one navigation timeout (`Topic en P2 numbers`), which passed its exact rerun. Public interface and shared navigation each had one timeout (en p4-regroupwholeparts normal; Topic en P1 numberstart). Both passed exact case reruns.
+
+Runtime deployment succeeded. All 45 changed public files and 25 exact versioned assets matched; six repository readbacks matched. All 74 relative handoff/report links resolved. 968 inherited files remained byte-identical, with none deleted. Mobile diagrams were visually inspected locally and live, including equal whole widths, removed-part markings and no horizontal overflow. Classroom trials, independent content/translation review, screen-reader listening and observed practical work remain pending.
 
 ## Next
 
