@@ -3,6 +3,7 @@ const R=window.badgeResult={done:false,passed:0,failed:0,cases:[]},f=document.ge
 const isTest=k=>k.startsWith('mathquiz')&&k.includes('test'),prior=Object.fromEntries(Object.keys(localStorage).filter(isTest).map(k=>[k,localStorage.getItem(k)])),normal=Object.fromEntries(Object.keys(localStorage).filter(k=>!isTest(k)).map(k=>[k,localStorage.getItem(k)]));
 async function load(path,width=390){f.width=width;const target=new URL('../'+path,location.href).href;await new Promise((resolve,reject)=>{const t=setTimeout(()=>reject(Error('Navigation timeout '+path)),30000);f.onload=()=>{if(f.contentWindow.location.href!==target)return;clearTimeout(t);resolve();};f.src=target;});return [f.contentWindow,f.contentDocument];}
 async function test(name,fn){try{await fn();R.passed++;R.cases.push({name,pass:true});}catch(e){R.failed++;R.cases.push({name,pass:false,error:e.message});}const li=document.createElement('li');li.className=R.cases.at(-1).pass?'pass':'fail';li.textContent=name+': '+(R.cases.at(-1).pass?'PASS':R.cases.at(-1).error);document.getElementById('results').append(li);document.getElementById('summary').textContent=R.passed+' passed; '+R.failed+' failed';}
+const previousToast=sessionStorage.getItem('mathquiz-badges-toast-test-v1');
 const q=(extra)=>'learn.html?'+new URLSearchParams({learnTest:'1',badgeTest:'1',learner:'1',lang:'en',path:'first',lesson:'count',stage:'practice',level:'easy',...extra});
 try{
 for(const k of Object.keys(localStorage).filter(isTest))localStorage.removeItem(k);
@@ -21,7 +22,7 @@ await test('Practice awards a toast without touching other records',async()=>{
   A(toast.textContent.includes('New badge')&&toast.textContent.includes('First steps'),'toast names the badge');
   A(toast.querySelector('button').getBoundingClientRect().height>=44,'close target');
   A(localStorage.getItem('mathquiz-badges-test-v1').includes('first-steps'),'test record');
-  A(!Object.keys(localStorage).some(k=>k.startsWith('mathquiz-badges-v1')&&!k.includes('test')),'production badge key untouched');
+  A(localStorage.getItem('mathquiz-badges-v1')===(normal['mathquiz-badges-v1']??null),'production badge key untouched');
 });
 await test('Progress page in both languages at phone, tablet and desktop',async()=>{
   for(const [lang,width] of [['en',390],['zh',390],['en',768],['zh',768],['en',1280],['zh',1280]]){
@@ -99,12 +100,13 @@ await test('Learner link and toast copy follow the language',async()=>{
 });
 await test('Normal records unchanged',async()=>{
   const now=Object.fromEntries(Object.keys(localStorage).filter(k=>!isTest(k)).map(k=>[k,localStorage.getItem(k)]));
-  A(JSON.stringify(now)===JSON.stringify(normal),'normal storage');
+  A(Object.keys(now).length===Object.keys(normal).length&&Object.entries(normal).every(([k,v])=>now[k]===v),'normal storage');
 });
 }finally{
   f.src='about:blank';
   for(const k of Object.keys(localStorage).filter(isTest))if(!(k in prior))localStorage.removeItem(k);
   for(const [k,v] of Object.entries(prior))localStorage.setItem(k,v);
+  if(previousToast===null)sessionStorage.removeItem('mathquiz-badges-toast-test-v1');else sessionStorage.setItem('mathquiz-badges-toast-test-v1',previousToast);
   R.done=true;
   document.getElementById('summary').textContent=R.passed+' passed; '+R.failed+' failed; done';
 }

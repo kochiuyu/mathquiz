@@ -2112,6 +2112,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "fractions",
+      "title": [
+        "Fractions beyond one",
+        "大於1的分數"
+      ],
+      "lessons": [
+        {
+          "id": "p4-fractionforms",
+          "title": [
+            "Fractions and mixed numbers",
+            "分數與帶分數"
+          ]
+        },
+        {
+          "id": "p4-fractionregroup",
+          "title": [
+            "Group parts into wholes",
+            "把小份合成整體"
+          ]
+        },
+        {
+          "id": "p4-fractionimproper",
+          "title": [
+            "Write an improper fraction",
+            "寫成假分數"
+          ]
+        },
+        {
+          "id": "p4-fractionexpand",
+          "title": [
+            "Split into smaller parts",
+            "再分成小份"
+          ]
+        },
+        {
+          "id": "p4-fractionreduce",
+          "title": [
+            "Reduce to lowest terms",
+            "約成最簡分數"
+          ]
+        },
+        {
+          "id": "p4-fractioncompare",
+          "title": [
+            "Compare equal-sized parts",
+            "比較同樣大小的份"
+          ]
+        }
+      ]
     }
   ]
 };

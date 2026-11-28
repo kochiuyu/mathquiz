@@ -1,6 +1,6 @@
 # P4 to P6 guided teaching sequence
 
-25 November 2026. **All three year plans are complete. P4 has twenty-five guided lessons across multiplication, division, multiples/factors and common multiples/factors; the remaining guided topics are still to be implemented.** [Multiplication release](p4-multiply-guided-release.md). [Division release](p4-division-guided-release.md). [Multiples/factors release](p4-factors-guided-release.md). [Common multiples/factors release](p4-common-guided-release.md). Build P4 fractions beyond one (4N6.1–4) next. Finish each year's coverage and application review before moving the implementation queue into the next year. Pupil access remains open; this is not a pass-score system.
+25 November 2026. **All three year plans are complete. P4 has thirty-one guided lessons across multiplication, division, multiples/factors, common multiples/factors and fractions beyond one; the remaining guided topics are still to be implemented.** [Multiplication release](p4-multiply-guided-release.md). [Division release](p4-division-guided-release.md). [Multiples/factors release](p4-factors-guided-release.md). [Common multiples/factors release](p4-common-guided-release.md). [Fractions beyond one (4N6.1–4) is implemented](p4-fractions-guided-release.md). Build fraction calculations and stories (4N6.5–7) next; guided 4N6 remains partial. Finish each year's coverage and application review before moving the implementation queue into the next year. Pupil access remains open; this is not a pass-score system.
 
 ## Plans and coverage
 
