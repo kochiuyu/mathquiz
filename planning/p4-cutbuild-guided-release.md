@@ -31,7 +31,7 @@ The new topic has its own records for each of the existing three pupils. First a
 
 ## Verification
 
-**1,388 distinct local browser cases verified**: 1,085 core, 98 interface, seven badge and 198 shared wording/navigation cases. One interface navigation timeout and one shared navigation timeout passed exact reruns; originals remain in the evidence. Public verification and deployment are pending.
+**1,388 distinct local browser cases verified**: 1,085 core, 98 interface, seven badge and 198 shared wording/navigation cases. One interface navigation timeout and one shared navigation timeout passed exact reruns; originals remain in the evidence. **All 1,388 corresponding public cases are also verified**, with original outcomes and exact reruns in the evidence. Runtime deployment succeeded; all 59 public files, 33 exact versioned asset URLs and six repository source readbacks matched. All 986 other inherited files remain byte-identical, with none deleted. All 86 relative report/handoff links resolve.
 
 Sixteen static gates independently check 64 valid partitions using exact rational clipping and cancellation of internal boundaries, plus 320 rejected missing/duplicate/shifted/stretched mutations. Component side lengths, right angles, congruent trapeziums and four resulting outline types are independently checked. The browser core exercises every new answer, both model languages, rigid turns, cut validation, exact fitting, storage and badges, alongside all nine earlier topic suites. Sweeps count as aggregate checks, not extra pupil tasks.
 

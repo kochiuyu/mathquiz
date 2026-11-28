@@ -2,11 +2,11 @@
 
 ## Current guided learning handoff
 
-**28 November 2026: P4 cut-and-build shapes are implemented; final verification is in progress.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=cutbuild) · [Release report](planning/p4-cutbuild-guided-release.md) · [Evidence](planning/p4-cutbuild-guided-evidence.json).
+**28 November 2026: P4 cut-and-build shapes are published and verified.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=cutbuild) · [Release report](planning/p4-cutbuild-guided-release.md) · [Evidence](planning/p4-cutbuild-guided-evidence.json).
 
 Six bilingual lessons add **12 guided tasks, 54 practice tasks and 12 sample checks** for both 4S2 objectives. Pupils trace polygons, predict cuts, reason about pieces, form polygons and repair gaps/overlaps. A prediction-before-cut model and movable triangle/trapezium pieces support paper work.
 
-P4 now has **63 guided lessons across ten topics**. Earlier saved work is preserved. Cutting and forming observations stay separate from screen scores. Local/public verification is recorded in the evidence; classroom trials and independent review remain pending.
+P4 now has **63 guided lessons across ten topics**. Earlier saved work is preserved. Cutting and forming observations stay separate from screen scores. **1,388 local and 1,388 public browser cases verified**, with original outcomes and exact reruns documented. Classroom trials, independent content/translation review and observed paper work remain pending.
 
 **Next unfinished step: P4 eight directions**, then decimal meaning and decimal calculations. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 

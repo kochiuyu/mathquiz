@@ -4553,7 +4553,66 @@
       "screenshot": "browser-screenshots/screenshot-2026-11-28T12-42-29-694Z-bcd8fe4d.png"
     }
   },
-  "public": null,
+  "public": {
+    "core": {
+      "total": 1085,
+      "passed": 1085,
+      "verified": 1085
+    },
+    "interface": {
+      "total": 98,
+      "passedFull": 97,
+      "verified": 98,
+      "failures": [
+        {
+          "name": "en p4-choosecuts together",
+          "error": "navigation timeout"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "en p4-choosecuts together",
+          "passed": 2,
+          "total": 2,
+          "note": "Includes repeated normal-record preservation check; one distinct failed case resolved."
+        }
+      ]
+    },
+    "badges": {
+      "total": 7,
+      "passed": 7,
+      "verified": 7,
+      "ctaContrast": 6.65
+    },
+    "wording": {
+      "total": 198,
+      "passedFull": 197,
+      "verified": 198,
+      "failures": [
+        {
+          "name": "Topic en P1 numberstart",
+          "error": "Navigation timeout learn.html {\"lang\":\"en\",\"path\":\"numberstart\"}"
+        }
+      ],
+      "exactReruns": [
+        {
+          "name": "Topic en P1 numberstart",
+          "passed": 1,
+          "total": 1
+        }
+      ]
+    },
+    "phoneInspection": {
+      "language": "zh",
+      "lesson": "p4-jointrapeziums",
+      "kit": "1",
+      "overflow": false,
+      "status": "剛好拼合：每塊用一次，沒有空隙或重疊。",
+      "attempts": 0,
+      "screenshot": "browser-screenshots/screenshot-2026-11-28T12-49-13-853Z-a7a57641.png"
+    },
+    "distinctVerified": 1388
+  },
   "corrections": [
     "Trapezium lesson defaults to the trapezium kit; both kits remain selectable.",
     "Inherited dissection Python child process now explicitly decodes UTF-8 on Windows.",
@@ -4919,5 +4978,460 @@
   "preservation": {
     "unchangedInheritedFiles": 986,
     "deletedInheritedFiles": []
+  },
+  "selectedBrowserCasesVerified": 2776,
+  "runtimeCommit": "a44aa722f7248866a1d5372f5f96b27cf25edae8",
+  "runtimeReadback": {
+    "sha": "a44aa722f7248866a1d5372f5f96b27cf25edae8",
+    "deployments": [
+      {
+        "id": 46146135787,
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kochiuyu/mathquiz/actions/runs/46146135787"
+      }
+    ],
+    "files": [
+      {
+        "path": "badges-data.js",
+        "match": true,
+        "sha256": "cf85c47bb09711fa8bf6e70ce325069ea21f3eb169b248d6a4179eacf9406998"
+      },
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "d356cfc7e90d09a8b94d12dea32ad0b6e5c7fbc75772e8526b9025984b33d1ad"
+      },
+      {
+        "path": "learn.html",
+        "match": true,
+        "sha256": "09ba441cd05c880239530f4e260cee358038d769e3e7da0d2dda5283e0388607"
+      },
+      {
+        "path": "learner-catalog.js",
+        "match": true,
+        "sha256": "0030fd719c4db3e05c8bd07ff27bc703ec3ecf401f50709819e2abcdcf4380f3"
+      },
+      {
+        "path": "p1-levels.html",
+        "match": true,
+        "sha256": "e782d47c4ee1466aa2a59e5a7b60c9896263ff363ae6af6877273db3051838f0"
+      },
+      {
+        "path": "p1-review.html",
+        "match": true,
+        "sha256": "7cc0e10638be5d3fccc664365a2716e139853aef4acc090dde9b2ddba3792916"
+      },
+      {
+        "path": "p2-investigate.html",
+        "match": true,
+        "sha256": "c0c0ffb026c69163b59988e3076c1b43c59a69270adef36e396c9570575bd7b8"
+      },
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "663c89f55759d4818528c878eb594a7e3b5c126de78f5fc1758d1ce44628c603"
+      },
+      {
+        "path": "p2-review.html",
+        "match": true,
+        "sha256": "044e5d2b03e13046c3cf08a4ced9904bdb32e25368b9d6201916004b72e141bc"
+      },
+      {
+        "path": "p2-skill-levels.html",
+        "match": true,
+        "sha256": "4902f915e2689f0208deaafcd2667b26a9920011aba1c840559f77f3b9ea4141"
+      },
+      {
+        "path": "p3-learn.html",
+        "match": true,
+        "sha256": "d8bae11d68df6a8c0d386fcf85b76b13f8ab0b27b7f3206adcce1bf0b9d6a5fa"
+      },
+      {
+        "path": "p3-review.html",
+        "match": true,
+        "sha256": "fd40331c1d0e187c9c452c7a6a57611d8bd2dfdc95f14d4d8651dbcd6b3bb51f"
+      },
+      {
+        "path": "p3-skill-levels.html",
+        "match": true,
+        "sha256": "ad8c90cc0c4f345be634012cf305a25c981efe8615536e02e976e57985832bf6"
+      },
+      {
+        "path": "p4-cutbuild-data.js",
+        "match": true,
+        "sha256": "314f41d713e8748b54679bcb9b58c118650fd92a871f77642f7cdfd60c8d32b4"
+      },
+      {
+        "path": "p4-cutbuild-models.js",
+        "match": true,
+        "sha256": "13913f177ee446673359996e8fd39913e0675bfce935767d9fa90c9614efb6fc"
+      },
+      {
+        "path": "p4-learn-store.js",
+        "match": true,
+        "sha256": "51dcacbb4dbd9b846ebda5b1ca845ba91aec99125c18af00389c98cfce4a7a6c"
+      },
+      {
+        "path": "p4-learn.css",
+        "match": true,
+        "sha256": "31f9da7f01efe4107fe878c4f1e5f830c868815bf163d3634870726dbc34a6fd"
+      },
+      {
+        "path": "p4-learn.html",
+        "match": true,
+        "sha256": "f08589a7f92b8bb1148caca9dc1bce206f97a7ae4fa45bf4c83ebbac5a586c89"
+      },
+      {
+        "path": "p4-learn.js",
+        "match": true,
+        "sha256": "af2224a3232c4183d27e273d759f75e68ca9b972085bb67523e60f1398ca4d48"
+      },
+      {
+        "path": "progress.html",
+        "match": true,
+        "sha256": "7e15bc8b9c098afa7306fd4090a953b7e06f37d69f846d250fb800239993684c"
+      },
+      {
+        "path": "README.md",
+        "match": true,
+        "sha256": "32198757c4cf0e6de2dc4159b37440186e335c4cde631d4e26b41e2f7d6e1869"
+      },
+      {
+        "path": "planning/p4-cutbuild-guided-evidence.json",
+        "match": true,
+        "sha256": "f4f510319df12b70f7c717587b904b6ea37cf94932e9af02bbfe2ceec38acf5d"
+      },
+      {
+        "path": "planning/p4-cutbuild-guided-release.md",
+        "match": true,
+        "sha256": "868f7d684faaa62233d37ed2cc973c048b07d166c0e06a9870803ad822afb6c0"
+      },
+      {
+        "path": "planning/p4-guided-learning-plan.md",
+        "match": true,
+        "sha256": "455f383be53a3842337ed283463a2e91e1223ca1a945712b27a729e0a9e443d0"
+      },
+      {
+        "path": "planning/p4-p6-guided-sequence.md",
+        "match": true,
+        "sha256": "3c811e1290490a02350986172ba30e246a5e4e7b8f0e9170e93ece60851939d1"
+      },
+      {
+        "path": "tests/badges-static.cjs",
+        "match": true,
+        "sha256": "2954d569f55b6386d93f10fc58639f383b05c85016cb422f39b369b550bafc64"
+      },
+      {
+        "path": "tests/learner-ui.html",
+        "match": true,
+        "sha256": "159db07c44f807d699ebcff97c4923a197f41ad1a204fe922023575b3cfc5de6"
+      },
+      {
+        "path": "tests/learner-wording.html",
+        "match": true,
+        "sha256": "d7f7db100b5542448405f3c09b543ff50e95a2aa7d58e54d235f11833294bb5e"
+      },
+      {
+        "path": "tests/p4-area-guided.html",
+        "match": true,
+        "sha256": "c8e8b66836291da3f9498420a01b6e876999bbe371e9690f3e10ef85aefad7a7"
+      },
+      {
+        "path": "tests/p4-area-interface.html",
+        "match": true,
+        "sha256": "102d44f55ed352ede0a47acb3b627f6aa4b29042b9367f5b109c7b4add7c7164"
+      },
+      {
+        "path": "tests/p4-area-interface.js",
+        "match": true,
+        "sha256": "b19b549dae999bc60084a5f9483cad28611bb11e0b58bc60d676d9f00096b626"
+      },
+      {
+        "path": "tests/p4-common-guided.html",
+        "match": true,
+        "sha256": "9ba9b82b74174ecdf52585df4ea17d10b370ae7470c5cb75eda465e8885b1541"
+      },
+      {
+        "path": "tests/p4-common-interface.html",
+        "match": true,
+        "sha256": "4cbb7eb320e89c53bac5eabb17c2cf4ae9a259e1cce403948b6ca8152ba95adf"
+      },
+      {
+        "path": "tests/p4-common-interface.js",
+        "match": true,
+        "sha256": "b5fec65e9b3b21442e073a60f82fcd7dbc1253d3cfb6beac8be0eeecfc99c923"
+      },
+      {
+        "path": "tests/p4-cutbuild-guided.html",
+        "match": true,
+        "sha256": "d841b2ff161844b559143256b6dde2a1835d455dc076c693f60e680e682c7994"
+      },
+      {
+        "path": "tests/p4-cutbuild-guided.js",
+        "match": true,
+        "sha256": "ae8d6ed4202df3852c37dffd3827d32d9c7ba74cfc3cc5d96f1fa25718da98fd"
+      },
+      {
+        "path": "tests/p4-cutbuild-interface.html",
+        "match": true,
+        "sha256": "fd9fe5323d9010f43a55ffc4dfe7910bbee9cca79fd4747e6e1ff9ef884ba437"
+      },
+      {
+        "path": "tests/p4-cutbuild-interface.js",
+        "match": true,
+        "sha256": "b7aa42abc94cfe7a5beffa0a1ffca25f7d7855cd0adbe8437bf93a2c85ad7d80"
+      },
+      {
+        "path": "tests/p4-dissection-independent-static.cjs",
+        "match": true,
+        "sha256": "e9efc305fa8381a824c214a94615d0bd772719a8c8b6e87f3ce567c5b31b5c90"
+      },
+      {
+        "path": "tests/p4-division-guided.html",
+        "match": true,
+        "sha256": "774b9fb81a511d2d81149c63d411022167d29b906b6e5cde6789d1d5a5a8f566"
+      },
+      {
+        "path": "tests/p4-division-interface.html",
+        "match": true,
+        "sha256": "205f9fb7be547e4b7dce2b0e4b1635e99581ac7ddecb58b74a5f863179ae3b02"
+      },
+      {
+        "path": "tests/p4-division-interface.js",
+        "match": true,
+        "sha256": "df17b247ba88dab73ddfb0c3aea3f035423ee8fff0d730abc3e68ec5ffa9bf9e"
+      },
+      {
+        "path": "tests/p4-factors-guided.html",
+        "match": true,
+        "sha256": "fcc9fb37419f141435dd024af6f613643e4d0ec5884dbf288fed90534e8e721f"
+      },
+      {
+        "path": "tests/p4-factors-interface.html",
+        "match": true,
+        "sha256": "1165c6d32e76ab8ede35b628ae4622a58ef689a669f3208cf95e456fe8c78ed4"
+      },
+      {
+        "path": "tests/p4-factors-interface.js",
+        "match": true,
+        "sha256": "e07fbd16de4d3c76b31c02cacb6f14d8f827b03fc6a6d016c7c6f9866141244a"
+      },
+      {
+        "path": "tests/p4-fractionops-guided.html",
+        "match": true,
+        "sha256": "61ba8475f1b5bf009668c9d4456b0250784137f17a143132b2a13e55182dfd24"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.html",
+        "match": true,
+        "sha256": "57006fe2917947f300949db6721892041071526fa7fd09ae1dea8dfc4dae7056"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.js",
+        "match": true,
+        "sha256": "81ca6eb89b3924c9d6920ed23cefed964d924266437b277a79f5d3e92b9c4d98"
+      },
+      {
+        "path": "tests/p4-fractions-guided.html",
+        "match": true,
+        "sha256": "842f5cc6e06d484efea18e52d721daf7db203d6d3a30bbdcb101970ac71203d5"
+      },
+      {
+        "path": "tests/p4-fractions-interface.html",
+        "match": true,
+        "sha256": "7805b18fbb724eaf51e54d9f3e9049e7d841ca3c3b2d15fcf706baa1a9564b92"
+      },
+      {
+        "path": "tests/p4-fractions-interface.js",
+        "match": true,
+        "sha256": "b97dad7dfaffe5e0a51b44b998c5231d83e7e2c55d0af3a4c2bb94a626a61137"
+      },
+      {
+        "path": "tests/p4-multiply-guided.html",
+        "match": true,
+        "sha256": "a2dd5e8dd70d04b2f6e18dc4f1da358cdce4552ee53f258604a4eef358bc4461"
+      },
+      {
+        "path": "tests/p4-perimeter-guided.html",
+        "match": true,
+        "sha256": "da004ee52e7d83d7d3d0380db77f6f04d9c4bb22d979dccef16b39a84be66225"
+      },
+      {
+        "path": "tests/p4-perimeter-interface.html",
+        "match": true,
+        "sha256": "bdcbe96d0431aaa184796d2c1ceef0efb75c5debd8b4b0643436341813af5287"
+      },
+      {
+        "path": "tests/p4-perimeter-interface.js",
+        "match": true,
+        "sha256": "ac46d6b7d5882e2737e953006dfd3b6fbb458d104b9f0eeebefac6b5950ec4c1"
+      },
+      {
+        "path": "tests/p4-shapes-guided.html",
+        "match": true,
+        "sha256": "6dcc685fead4ac3f04709fe94b0a7141ace1f7571b3587199e89c4b4e1571620"
+      },
+      {
+        "path": "tests/p4-shapes-guided.js",
+        "match": true,
+        "sha256": "64be6b945768842fa9ed81464c8417fe80b5a8d1ae670bbd3bb4a8a80034fcc4"
+      },
+      {
+        "path": "tests/p4-shapes-interface.html",
+        "match": true,
+        "sha256": "881069061a7f45b20978ee4e26ba1e83746069be67e7f8ee693c2cbea3a8577e"
+      },
+      {
+        "path": "tests/p4-shapes-interface.js",
+        "match": true,
+        "sha256": "100dedf57eec9c6d4f9a3f53e1fd7cdfbbb9be728813b4b345a53639ae69da40"
+      }
+    ],
+    "versionedAssets": [
+      {
+        "url": "p3-learn.css?v=6",
+        "match": true
+      },
+      {
+        "url": "learner-ui.css?v=wording-r1",
+        "match": true
+      },
+      {
+        "url": "badges.css?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.css?v=cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-data.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-data.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-models.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-data.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-models.js?v=factors-r2",
+        "match": true
+      },
+      {
+        "url": "p4-common-data.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "p4-common-models.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "marking.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "fractions4.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-data.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-models.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-data.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-models.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-perimeter-data.js?v=perimeter-r2",
+        "match": true
+      },
+      {
+        "url": "p4-perimeter-models.js?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "p4-area-data.js?v=area-r2",
+        "match": true
+      },
+      {
+        "url": "p4-area-models.js?v=area-r2",
+        "match": true
+      },
+      {
+        "url": "p4-shapes-data.js?v=shapes-r1",
+        "match": true
+      },
+      {
+        "url": "p4-shapes-models.js?v=shapes-r1",
+        "match": true
+      },
+      {
+        "url": "p4-cutbuild-data.js?v=cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "p4-cutbuild-models.js?v=cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-store.js?v=cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "p4-multiply-models.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.js?v=cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "learner-catalog.js?v=p4-cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "badges-data.js?v=p4-cutbuild-r1",
+        "match": true
+      },
+      {
+        "url": "badges-store.js?v=p4-fractions-r1",
+        "match": true
+      },
+      {
+        "url": "badges-ui.js?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "learner-ui.js?v=p4-multiply-r1",
+        "match": true
+      }
+    ]
+  },
+  "repositoryReadback": {
+    "matched": 6,
+    "files": [
+      "p4-cutbuild-data.js",
+      "p4-cutbuild-models.js",
+      "p4-learn-store.js",
+      "p4-learn.js",
+      "learner-catalog.js",
+      "badges-data.js"
+    ]
   }
 }
