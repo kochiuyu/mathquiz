@@ -37,7 +37,9 @@ Local verification is recorded in the evidence. Public verification and deployme
 
 The core suite checks all 78 answers using separate edge calculations and tests the family implications over an independent bounded lattice enumeration. It covers every complete name set, rejected inputs, construction choices, transformed figures, storage protection, separate practical records and badges. Generated sweeps count as aggregate checks, not additional pupil tasks. Browser cases cover both languages, stages, all teaching examples and label bounds, actual checkboxes, retries, drawing/strip controls, observations, inquiry, reset and the eight earlier P4 routes.
 
-Fourteen new static gates and eleven badge gates passed. Both inherited quadrilateral suites passed after correcting a stale homepage script-version expectation: the unchanged baseline failed the same old assertion, while the homepage already used the verified examples release. The correction retains exact version checking and does not change any old assessment content. An initial browser harness omitted the new core script because the inherited HTML had no closing body tag; explicit inclusion was added and all nine suites were then checked in the browser.
+Fifteen new static gates and eleven badge gates passed. Both inherited quadrilateral suites passed after correcting a stale homepage script-version expectation: the unchanged baseline failed the same old assertion, while the homepage already used the verified examples release. The correction retains exact version checking and does not change any old assessment content. An initial browser harness omitted the new core script because the inherited HTML had no closing body tag; explicit inclusion was added and all nine suites were then checked in the browser.
+
+The prerequisite link was corrected to the existing P3 quadrilateral route after a late link audit. A dedicated browser case opens that destination and checks its topic and heading. Its first assertion incorrectly expected an uppercase heading; the corrected test passed.
 
 ## Next
 
