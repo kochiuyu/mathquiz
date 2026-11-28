@@ -2,13 +2,13 @@
 
 ## Current guided learning handoff
 
-**28 November 2026: P4 perimeter is implemented; release verification is in progress.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=perimeter) · [Release report](planning/p4-perimeter-guided-release.md) · [Evidence](planning/p4-perimeter-guided-evidence.json).
+**28 November 2026: P4 perimeter is published and verified.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=perimeter) · [Release report](planning/p4-perimeter-guided-release.md) · [Evidence](planning/p4-perimeter-guided-evidence.json).
 
 Six bilingual lessons add **12 guided examples, 54 practice tasks and 12 sample checks** for all **three 4M1 objectives**. Pupils trace complete boundaries, compare perimeters, derive square/rectangle rules and solve joined-shape and everyday problems. Two practical records preserve original estimates before measured results.
 
 P4 now has **43 guided lessons across seven topics**. Earlier saved work and badges are preserved. Screen scores and self-reported measurements do not establish independent mastery.
 
-Local/public verification is recorded in the release evidence. Classroom trials, independent translation/content review, screen-reader listening and observed paper work remain pending.
+**1,032 local and 1,032 public browser cases verified**, with original failures and exact reruns retained. Twelve new static gates, eleven badge gates and both inherited perimeter suites passed. Classroom trials, independent translation/content review, screen-reader listening and observed paper work remain pending.
 
 **Next unfinished step: P4 area.** Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 

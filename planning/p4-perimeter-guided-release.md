@@ -31,13 +31,15 @@ Measurement and formula discovery require paper, thread and a real ruler. Option
 
 ## Verification
 
-**1,032 distinct local browser cases verified**: 746 core, 87 perimeter interface, seven badge and 192 shared wording/navigation cases. The final interface and shared runs each needed one successful exact navigation-timeout rerun. Public verification and deployment are pending.
+**1,032 distinct local browser cases verified**: 746 core, 87 perimeter interface, seven badge and 192 shared wording/navigation cases. The final interface and shared runs each needed one successful exact navigation-timeout rerun. **1,032 public cases are also verified**, including 746 core, 87 perimeter interface, seven badge and 192 shared wording/navigation cases. The runtime deployment succeeded. All 48 changed public files and 27 exact versioned assets matched the pushed runtime manifest; six repository source readbacks matched. Original outcomes and any exact reruns are retained in the evidence.
 
 The new core suite independently checks all 78 task answers using vertex distances and exposed unit-cell edges. It also checks model steps, hidden labels, same-scale comparison, measurement sequencing, immutable originals, separate retries, pupil/topic isolation, stale writes, malformed/future/oversized records, temporary storage and badge integration. Generated geometry checks are aggregate gates, not additional pupil tasks.
 
 Twelve new static gates, eleven inherited badge gates and both inherited perimeter suites passed. The original comparison generator omitted an equal-perimeter choice: the coverage gate caught it, and the set was corrected to include A-longer, B-longer and equal cases. The first local interface run had one navigation timeout (English rectangle normal); final verification and exact reruns are recorded in the evidence. A phone visual check also caught overlapping notch labels; these were separated and a browser overlap assertion was added. No failed run is relabelled as a full-run pass.
 
 The twelve sample checks assess the same concepts with related diagrams; they are not twelve independent practical-transfer tasks. Further fresh applications belong in the whole-P4 review.
+
+A readback initially compared the published evidence with a newer local documentation draft. The verifier was corrected to use the exact pushed manifest, and all 48 files matched. All 973 other inherited files are byte-identical; none was deleted. Seventy-seven relative report/handoff links resolve.
 
 Classroom trials, independent translation/content review, screen-reader listening, paper/print scale checks and observed tool use remain pending.
 

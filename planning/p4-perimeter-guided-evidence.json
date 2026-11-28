@@ -3171,7 +3171,48 @@
       "horizontalOverflow": false
     }
   },
-  "public": null,
+  "public": {
+    "core": {
+      "total": 746,
+      "passed": 746
+    },
+    "interface": {
+      "total": 87,
+      "passed": 87,
+      "failures": []
+    },
+    "badges": {
+      "total": 7,
+      "passed": 7,
+      "ctaContrast": 6.65
+    },
+    "wording": {
+      "total": 192,
+      "passed": 191,
+      "failures": [
+        {
+          "name": "Topic en P1 numberstart",
+          "error": "Navigation timeout"
+        }
+      ],
+      "reruns": [
+        {
+          "name": "Topic en P1 numberstart",
+          "passed": true
+        }
+      ],
+      "verified": 192
+    },
+    "visual": {
+      "language": "zh",
+      "width": 375,
+      "horizontalOverflow": false,
+      "p4Lessons": 43,
+      "topic": "perimeter",
+      "screenshot": "browser-screenshots/screenshot-2026-11-28T10-57-22-367Z-5289261b.png"
+    },
+    "distinctVerified": 1032
+  },
   "corrections": [
     "Independent coverage gate caught missing equal-perimeter comparisons; revised set includes A, B and equal outcomes.",
     "Phone visual check found colliding labels inside a narrow notch. Moved vertical notch labels into the adjacent solid regions and added browser bounding-box overlap assertions."
@@ -3499,5 +3540,390 @@
   "preservation": {
     "unchangedInheritedFiles": 973,
     "deletedInheritedFiles": []
-  }
+  },
+  "runtimeCommit": "2e731d1e3a96419cc33061ff5b63f89e0dd489d1",
+  "repositoryRuntimeReadback": {
+    "matched": 6,
+    "files": [
+      "p4-perimeter-data.js",
+      "p4-perimeter-models.js",
+      "p4-learn-store.js",
+      "p4-learn.js",
+      "learner-catalog.js",
+      "badges-data.js"
+    ]
+  },
+  "runtimeReadback": {
+    "sha": "2e731d1e3a96419cc33061ff5b63f89e0dd489d1",
+    "deployments": [
+      {
+        "id": 46137220175,
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kochiuyu/mathquiz/actions/runs/46137220175"
+      }
+    ],
+    "files": [
+      {
+        "path": "badges-data.js",
+        "match": true,
+        "sha256": "e761650fdf7ad308cceb0fc66127a1a552749a0e90b141b43db9ec40cf57dcc1"
+      },
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "599fb16adef5945be5cf261c239ef0e8d15b853bce49170bb1e5c730215c9d02"
+      },
+      {
+        "path": "learn.html",
+        "match": true,
+        "sha256": "d43a6837d8fb724965bc700e9d9d9370df31e7756ee7543bbc024b1fc3619f50"
+      },
+      {
+        "path": "learner-catalog.js",
+        "match": true,
+        "sha256": "5814f0855d07fa96c2c5ccdc4612cbd40d7474d5785a218f6bdcd381b10e67b9"
+      },
+      {
+        "path": "p1-levels.html",
+        "match": true,
+        "sha256": "f5611c5a703a67ebcebfcdae313f53f45fec142ffc0cff98bfd50d97f73bd3fb"
+      },
+      {
+        "path": "p1-review.html",
+        "match": true,
+        "sha256": "c3fb931eddabcb897ddcbe149ce8cf4d8c85ebed80fc0f87b064badf05bf987b"
+      },
+      {
+        "path": "p2-investigate.html",
+        "match": true,
+        "sha256": "1205ec11b92029a2b369fc659c057adb3666dae70322cd636003e5b41dc9c6a3"
+      },
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "f3ef198eb49aee30b3b58745f692b43fd5236cca5367753e1a4cbd4722dd947a"
+      },
+      {
+        "path": "p2-review.html",
+        "match": true,
+        "sha256": "b764625b86b664063f7baf79daba0ce97a5e549ee3a736471e1d46967aeb29e8"
+      },
+      {
+        "path": "p2-skill-levels.html",
+        "match": true,
+        "sha256": "d5891752f638b0117e12b3549ddf8a54179d4fcb6f1ff2f2e4254f82ce20828b"
+      },
+      {
+        "path": "p3-learn.html",
+        "match": true,
+        "sha256": "df59b6ba02f0f0663c7f73f7c58d0af641c0e2713e99e3820f5fdd6c57d1e523"
+      },
+      {
+        "path": "p3-review.html",
+        "match": true,
+        "sha256": "abf77c30cc9bbd0c065502d1b7cdcb93baec85a5e1f6e89b7ede395efa8567de"
+      },
+      {
+        "path": "p3-skill-levels.html",
+        "match": true,
+        "sha256": "60a8b97859ef65caebb6233e028eb61cc7cd55d5cbd22759cef7357cc25cf951"
+      },
+      {
+        "path": "p4-learn-store.js",
+        "match": true,
+        "sha256": "45d703e4ed8a10c6389c60b52655e2fd3e0421ce7be49ba2196818eb6ca7a42e"
+      },
+      {
+        "path": "p4-learn.css",
+        "match": true,
+        "sha256": "2d55e7481cd136d22663c01dc3c53316024ce2e356a7eb66f4c2d9a149eb558c"
+      },
+      {
+        "path": "p4-learn.html",
+        "match": true,
+        "sha256": "24a4edfd3ed235332b37f9f214821128f3b89d9ec5ed2f1b20b207dd9d8a9256"
+      },
+      {
+        "path": "p4-learn.js",
+        "match": true,
+        "sha256": "2a9a0a3eddb536bd5c7d5784cc4b0be5798650627d543847c0c04257a6c51f3b"
+      },
+      {
+        "path": "p4-perimeter-data.js",
+        "match": true,
+        "sha256": "879020a69663e4fd4f3c833b63a92118173d4ec1e102eb3fecd78b4d63bbfd72"
+      },
+      {
+        "path": "p4-perimeter-models.js",
+        "match": true,
+        "sha256": "3f3826b6d2c60c75d73d0e8c65c5f29f2d3c352d6985fbbf24dfddd422a349b4"
+      },
+      {
+        "path": "progress.html",
+        "match": true,
+        "sha256": "604db1cd7b5c0d99cbd21e8749798db536d901eeb4986dc12713095146838ee3"
+      },
+      {
+        "path": "README.md",
+        "match": true,
+        "sha256": "38af2e30f62affb4fc8f1b5968669b4a95f074fc9f939de53b1c520d5f3ac998"
+      },
+      {
+        "path": "planning/p4-guided-learning-plan.md",
+        "match": true,
+        "sha256": "5c91f2c3ffde55abea7197c4427fff752f7a9aff32ad1b3d338308b2f0662ef2"
+      },
+      {
+        "path": "planning/p4-p6-guided-sequence.md",
+        "match": true,
+        "sha256": "0cbbcde04c5009233362df0c7c5d306b0ad521e1d0db32b621422e9271496d01"
+      },
+      {
+        "path": "planning/p4-perimeter-guided-evidence.json",
+        "match": true,
+        "sha256": "ee3229ad317ee7c6552dc67bd086f21d0a3ca6f08c44ad78844357c6f2aa57c4"
+      },
+      {
+        "path": "planning/p4-perimeter-guided-release.md",
+        "match": true,
+        "sha256": "fd59a1f2698c5209c1e52b0ba303b603710aeb73d770a22c55e9dde6efff6440"
+      },
+      {
+        "path": "tests/badges-static.cjs",
+        "match": true,
+        "sha256": "36c626d5f52348278185818423bc81042477485e2d2c6c49d99fda81a52caa4f"
+      },
+      {
+        "path": "tests/learner-ui.html",
+        "match": true,
+        "sha256": "e8ae18e435d444a66c806c375d3df5a33f1d8a0e57b9f88544a0a96b28a883db"
+      },
+      {
+        "path": "tests/learner-wording.html",
+        "match": true,
+        "sha256": "336acdfeb758fa0eceae25bbf2e65d334280bbe90917dc1803b8aa60763fb6de"
+      },
+      {
+        "path": "tests/p4-common-guided.html",
+        "match": true,
+        "sha256": "8afdd5848a30832292a435e709aedd4f78a299f2e480d3a9cb5d2498b9580e76"
+      },
+      {
+        "path": "tests/p4-common-interface.html",
+        "match": true,
+        "sha256": "a1bde7b86abe900f7c017ce5a0b49917b0b1c069c37274e8b44c6474a7d0b502"
+      },
+      {
+        "path": "tests/p4-common-interface.js",
+        "match": true,
+        "sha256": "c4a2b9c05f4caa27b1742bc9d74aae70f56dc2b75db6db086d08ab8244d54ce2"
+      },
+      {
+        "path": "tests/p4-division-guided.html",
+        "match": true,
+        "sha256": "f03d221bf279f91b63f03c7e0ea58dab800715581347b00961038cb162afcd91"
+      },
+      {
+        "path": "tests/p4-division-interface.html",
+        "match": true,
+        "sha256": "9f8ff230c807c3fceb9896f8608f5c3651187e185c43a131cb338c0ff83ced2c"
+      },
+      {
+        "path": "tests/p4-division-interface.js",
+        "match": true,
+        "sha256": "339e88ad2b042fb868826fd8e55bdde1eaa99138eae4e0f19f88c1a2011e3c46"
+      },
+      {
+        "path": "tests/p4-factors-guided.html",
+        "match": true,
+        "sha256": "b633d330a305976e5ea4eb0c96d06b0a3bbac036c129a53aab41bb5c38eec8ce"
+      },
+      {
+        "path": "tests/p4-factors-interface.html",
+        "match": true,
+        "sha256": "86fddf2019de2f7cae3b64ead7c259c48b0d9fecde206b30f60efdaf23093e77"
+      },
+      {
+        "path": "tests/p4-factors-interface.js",
+        "match": true,
+        "sha256": "573a803dc7f37ea20f97c54fd4deda65862b4680f8299c0c567791622ef07af0"
+      },
+      {
+        "path": "tests/p4-fractionops-guided.html",
+        "match": true,
+        "sha256": "4be658432be5428189417403bf49e7b110fa9310fd3cd1f43d0dde1d29f73926"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.html",
+        "match": true,
+        "sha256": "7832843e26fc328d2d37e131b9fb14539c88e5212339133d4177d5d4b4af310f"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.js",
+        "match": true,
+        "sha256": "fbc425597e9ba8885b793ebeaaf4563621893e5ffd5ed2996c8e52ac154d2acf"
+      },
+      {
+        "path": "tests/p4-fractions-guided.html",
+        "match": true,
+        "sha256": "887a9ce54d6dc31215e8d16e94312c8ad15ff59bb2c82dd8cd37b12c2e7322c8"
+      },
+      {
+        "path": "tests/p4-fractions-interface.html",
+        "match": true,
+        "sha256": "77646aa4f78bbe9676f11f10511278a8340efd846f7fa3f05a91442f6d63bc2f"
+      },
+      {
+        "path": "tests/p4-fractions-interface.js",
+        "match": true,
+        "sha256": "83de7d620a50151079b5fdada3ed75bd1327021c2de230064554d1a085a0141f"
+      },
+      {
+        "path": "tests/p4-multiply-guided.html",
+        "match": true,
+        "sha256": "c89615fcb7035716289a7727f62dec5b4616ac0e3d99032dbce1eb97986b42e6"
+      },
+      {
+        "path": "tests/p4-perimeter-guided.html",
+        "match": true,
+        "sha256": "4d878b4ce90622f54611f5569c2826d617a0c048e200e9c5b3e7359b967e763b"
+      },
+      {
+        "path": "tests/p4-perimeter-guided.js",
+        "match": true,
+        "sha256": "8b0e92546fbe0477241025a097529fed2d162f79ec1f232540f9cca3ad6bba15"
+      },
+      {
+        "path": "tests/p4-perimeter-interface.html",
+        "match": true,
+        "sha256": "3023aaf45a613614100ab032ab190ab13e2abf5c3bf44dba0c5f78aadda659e9"
+      },
+      {
+        "path": "tests/p4-perimeter-interface.js",
+        "match": true,
+        "sha256": "be5d8a20fe88c4d40ecf71ae8ccf6d888c65bdaa8ebbd2567a2e3c87d919b93a"
+      }
+    ],
+    "versionedAssets": [
+      {
+        "url": "p3-learn.css?v=6",
+        "match": true
+      },
+      {
+        "url": "learner-ui.css?v=wording-r1",
+        "match": true
+      },
+      {
+        "url": "badges.css?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.css?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-data.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-data.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-models.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-data.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-models.js?v=factors-r2",
+        "match": true
+      },
+      {
+        "url": "p4-common-data.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "p4-common-models.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "marking.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "fractions4.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-data.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-models.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-data.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-models.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-perimeter-data.js?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "p4-perimeter-models.js?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-store.js?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "p4-multiply-models.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.js?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "learner-catalog.js?v=p4-perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "badges-data.js?v=p4-perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "badges-store.js?v=p4-fractions-r1",
+        "match": true
+      },
+      {
+        "url": "badges-ui.js?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "learner-ui.js?v=p4-multiply-r1",
+        "match": true
+      }
+    ]
+  },
+  "verificationCorrection": {
+    "initialFileMatches": 47,
+    "files": 48,
+    "file": "planning/p4-perimeter-guided-evidence.json",
+    "cause": "The local final evidence draft had advanced beyond the runtime commit. Initial verifier compared to that draft.",
+    "fix": "Compare public file hashes with the exact pushed runtime manifest instead.",
+    "rerunFileMatches": 48,
+    "versionedAssetsMatched": 27
+  },
+  "selectedBrowserCasesVerified": 2064
 }
