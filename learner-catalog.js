@@ -2534,6 +2534,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "decimalops",
+      "title": [
+        "Decimal addition and subtraction",
+        "小數加減法"
+      ],
+      "lessons": [
+        {
+          "id": "p4-aligndecimals",
+          "title": [
+            "Line up decimals",
+            "對齊小數點"
+          ]
+        },
+        {
+          "id": "p4-adddecimals",
+          "title": [
+            "Add and exchange",
+            "小數加法與進位"
+          ]
+        },
+        {
+          "id": "p4-subtractdecimals",
+          "title": [
+            "Subtract and exchange",
+            "小數減法與退位"
+          ]
+        },
+        {
+          "id": "p4-groupdecimaladd",
+          "title": [
+            "Add three amounts",
+            "三個小數相加"
+          ]
+        },
+        {
+          "id": "p4-mixeddecimalsteps",
+          "title": [
+            "Follow the two steps",
+            "依次計算兩步"
+          ]
+        },
+        {
+          "id": "p4-decimalstories",
+          "title": [
+            "Choose, estimate and solve",
+            "選方法、估計、解題"
+          ]
+        }
+      ]
     }
   ]
 };
