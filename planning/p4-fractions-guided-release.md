@@ -1,6 +1,6 @@
 # P4 fractions beyond one — guided release
 
-28 November 2026. Runtime and local verification are complete; public deployment and verification are pending in this initial report.
+28 November 2026. Published and verified locally and on the public site.
 
 [Open lessons](../p4-learn.html?path=fractions) · [Evidence](p4-fractions-guided-evidence.json) · [P4 plan](p4-guided-learning-plan.md)
 
@@ -45,7 +45,9 @@ Fourteen new static gates independently recompute all 78 answers with Python rat
 
 Development findings: a geometry test initially matched the SVG stroke-width attribute instead of its width; the test selector was corrected. The long-record badge failure required the size-limit repair described above. Two earlier-topic interface tests initially requested a notebook on the introductory common-multiples lesson; they were corrected to target the short-division lesson and passed exact reruns. Badge tests now compare normal records by key/value rather than object insertion order, retain pre-existing production badge records, and restore their test-only session toast state.
 
-Public checks and final readbacks will be added after deployment. Classroom trials, independent translation/content review, screen-reader listening and observed practical work remain pending.
+All **823 local and 823 public cases** are verified (1,646 selected cases); reruns are not counted again. The public fraction interface had one navigation timeout (`en p4-fractionimproper normal`) and passed its exact rerun. The public shared suite had one navigation timeout (`Topic en P1 numberstart`) and passed its exact rerun. The local shared suite had one navigation timeout (`Topic en P1 partstart`) and passed its exact rerun.
+
+Runtime deployment succeeded. All 45 changed public files and 23 exact versioned asset URLs matched; six repository readbacks matched. All 69 relative handoff/report links resolved. 960 inherited files remain byte-identical, with none deleted. Both local and public phone inspection checked the Chinese expansion model, equal whole widths and no horizontal overflow. Classroom trials, independent translation/content review, screen-reader listening and observed practical work remain pending.
 
 ## Next
 
