@@ -1086,7 +1086,7 @@ window.MathQuizP4PerimeterData={
           ],
           "feedback": [
             "A: 14 cm. B: 14 cm. Difference: 0 cm.",
-            "A?14???B?14?????0???"
+            "A：14厘米，B：14厘米，相差0厘米。"
           ],
           "hint": [
             "Trace each outside edge once. Check the unit.",
@@ -1289,7 +1289,7 @@ window.MathQuizP4PerimeterData={
           "answerLabel": [
             "Answer (cm)",
             "答案（厘米）"
-          ]
+ ]
         },
         {
           "type": "choice",
@@ -1399,7 +1399,7 @@ window.MathQuizP4PerimeterData={
           ],
           "feedback": [
             "A: 26 cm. B: 20 cm. Difference: 6 cm.",
-            "A?26???B?20?????6???"
+            "A：26厘米，B：20厘米，相差6厘米。"
           ],
           "hint": [
             "Trace each outside edge once. Check the unit.",
@@ -2025,7 +2025,7 @@ window.MathQuizP4PerimeterData={
           ],
           "feedback": [
             "A: 32 cm. B: 32 cm. Difference: 0 cm.",
-            "A?32???B?32?????0???"
+            "A：32厘米，B：32厘米，相差0厘米。"
           ],
           "hint": [
             "Trace each outside edge once. Check the unit.",
@@ -5360,7 +5360,7 @@ window.MathQuizP4PerimeterData={
       ],
       "feedback": [
         "A: 44 cm. B: 38 cm. Difference: 6 cm.",
-        "A?44???B?38?????6???"
+        "A：44厘米，B：38厘米，相差6厘米。"
       ],
       "hint": [
         "Trace each outside edge once. Check the unit.",

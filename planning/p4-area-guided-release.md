@@ -37,11 +37,13 @@ The inquiry asks pupils to make rectangles with a 24 cm boundary, predict their 
 
 ## Verification
 
-**1,188 distinct local browser cases verified**: 876 core, 111 area interface, seven badge and 194 shared wording/navigation cases. The final interface and shared runs each needed one successful exact navigation-timeout rerun. Public verification and deployments are pending.
+The first local/browser release checks are retained in the evidence. Final checks cover 878 core, 113 area interface, seven badge and 194 shared wording/navigation cases per environment. Public verification and deployments are pending.
 
 The new core suite independently checks all 104 task answers with cell inclusion, a separate shoelace calculation, exposed-edge counting and logical assignment enumeration. It checks unique tile defects, exact rectangle partitions, hidden dimensions, shared scales, distinct units, storage protection, original estimates, isolated resets and badges. Generated sweeps count as aggregate gates, not additional pupil tasks.
 
-Thirteen new static gates, eleven inherited badge gates and both inherited area suites passed. Before verification, content review removed an ambiguous overlap example that also left a gap and balanced grid comparisons across A-larger, B-larger and equal. The teaching selector was expanded so all four overlay and tile cases, both square-unit references and a notched decomposition can be demonstrated. Original run outcomes and any exact reruns remain in the evidence.
+Fifteen new static gates, eleven inherited badge gates and both inherited area suites passed. Before verification, content review removed an ambiguous overlap example that also left a gap and balanced grid comparisons across A-larger, B-larger and equal. The teaching selector was expanded so all four overlay and tile cases, both square-unit references and a notched decomposition can be demonstrated. Original run outcomes and any exact reruns remain in the evidence.
+
+A late encoding check found question marks replacing four area comparison feedback lines and four inherited perimeter Chinese feedback lines. These exact lines were restored with UTF-8-safe file edits; new checks assert actual displayed Chinese and square-unit symbols. No earlier task prompts, answers or geometry changed. The square model now states “area = side × side” explicitly in both languages.
 
 Phone previews of partial overlay and three-part notch decomposition were inspected. Classroom trials, independent content/translation review, screen-reader listening, actual printed scale and observed covering/measurement remain pending.
 

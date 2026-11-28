@@ -5414,8 +5414,8 @@ window.MathQuizP4AreaData={
             "哪個圖形的面積較大？"
           ],
           "feedback": [
-            "A: 18 m?. B: 18 m?.",
-            "A?18????B?18????"
+            "A: 18 m². B: 18 m².",
+            "A：18平方米，B：18平方米。"
           ],
           "hint": [
             "Look at the covered surface and the stated units.",
@@ -5669,8 +5669,8 @@ window.MathQuizP4AreaData={
             "哪個圖形的面積較大？"
           ],
           "feedback": [
-            "A: 10 cm?. B: 12 cm?.",
-            "A?10?????B?12?????"
+            "A: 10 cm². B: 12 cm².",
+            "A：10平方厘米，B：12平方厘米。"
           ],
           "hint": [
             "Look at the covered surface and the stated units.",
@@ -5924,8 +5924,8 @@ window.MathQuizP4AreaData={
             "哪個圖形的面積較大？"
           ],
           "feedback": [
-            "A: 21 m?. B: 16 m?.",
-            "A?21????B?16????"
+            "A: 21 m². B: 16 m².",
+            "A：21平方米，B：16平方米。"
           ],
           "hint": [
             "Look at the covered surface and the stated units.",
@@ -6859,7 +6859,7 @@ window.MathQuizP4AreaData={
             "Look at the covered surface and the stated units.",
             "留意覆蓋的表面及指定單位。"
           ],
-          "answerLabel": [
+  "answerLabel": [
             "Area (cm²)",
             "面積（平方厘米）"
           ]
@@ -8551,8 +8551,8 @@ window.MathQuizP4AreaData={
         "哪個圖形的面積較大？"
       ],
       "feedback": [
-        "A: 15 cm?. B: 15 cm?.",
-        "A?15?????B?15?????"
+        "A: 15 cm². B: 15 cm².",
+        "A：15平方厘米，B：15平方厘米。"
       ],
       "hint": [
         "Look at the covered surface and the stated units.",

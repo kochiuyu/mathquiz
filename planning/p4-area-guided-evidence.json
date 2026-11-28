@@ -20,7 +20,7 @@
     "p4Topics": 8
   },
   "static": {
-    "passed": 13,
+    "passed": 15,
     "gates": [
       "eight lessons sixteen together seventy-two practice sixteen checks",
       "104 stable distinct task IDs",
@@ -33,6 +33,8 @@
       "area versus perimeter uses distinct units and same-boundary counterexamples",
       "eight routes fifty-one P4 lessons",
       "earlier lessons banks graders stores and badges preserved",
+      "only four earlier perimeter Chinese feedback lines repaired",
+      "Chinese feedback and square-unit glyphs preserved",
       "sixteen badge rules unchanged",
       "area data loaded by both learning and progress"
     ],
@@ -43,7 +45,6 @@
       "marking.js": "625361f4c2e9e1101eb3ed7e8233cfa06573ed458242a78fe1145947f301ba2e",
       "area4.js": "780fcf032312e7b5be242f99c336deac28736c21dc25df4368cb88b291d0d161",
       "perimeter4.js": "c5705367c430b986f02418cbe74f4f7e2c46552b99e0e4204aa35d4a8c5b2ce4",
-      "p4-perimeter-data.js": "879020a69663e4fd4f3c833b63a92118173d4ec1e102eb3fecd78b4d63bbfd72",
       "p4-perimeter-models.js": "3f3826b6d2c60c75d73d0e8c65c5f29f2d3c352d6985fbbf24dfddd422a349b4",
       "p4-fractions-data.js": "74052161af7ab5ca2d149dc62e5681466cb304e7e7a692e7a61ffebbb7712496",
       "p4-fractions-models.js": "4d63892760e7f7aa57f18735c57647324fd0aa91b6ea415682fd9800cec153d6",
@@ -66,6 +67,3996 @@
     "baseline": "5dc0f239ce88b17ed812e9a42291a709dd4e94d3"
   },
   "core": [
+    {
+      "name": "p4Results",
+      "total": 99,
+      "passed": 99,
+      "results": [
+        {
+          "name": "blank/sign/decimal/exponent/overflow rejection",
+          "pass": true
+        },
+        {
+          "name": "full width and leading zero normalization",
+          "pass": true
+        },
+        {
+          "name": "upper product and grouping bound",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-together-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-together-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-easy-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-easy-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-easy-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-normal-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-normal-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-normal-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-difficult-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-difficult-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-tensproduct-difficult-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-together-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-together-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-easy-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-easy-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-easy-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-normal-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-normal-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-normal-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-difficult-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-difficult-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-splitproduct-difficult-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-together-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-together-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-easy-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-easy-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-easy-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-normal-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-normal-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-normal-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-difficult-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-difficult-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-carryproduct-difficult-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-together-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-together-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-easy-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-easy-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-easy-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-normal-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-normal-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-normal-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-difficult-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-difficult-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-threeproduct-difficult-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-together-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-together-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-easy-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-easy-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-easy-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-normal-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-normal-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-normal-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-difficult-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-difficult-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-groupfactors-difficult-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-together-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-together-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-easy-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-easy-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-easy-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-normal-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-normal-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-normal-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-difficult-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-difficult-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-productstories-difficult-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-1 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-2 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-3 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-4 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-5 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-6 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-7 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-8 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-9 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-10 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-11 answer contract",
+          "pass": true
+        },
+        {
+          "name": "p4-mcheck-12 answer contract",
+          "pass": true
+        },
+        {
+          "name": "field role order enforced",
+          "pass": true
+        },
+        {
+          "name": "first immutable / one retry / reload",
+          "pass": true
+        },
+        {
+          "name": "slot and test namespace isolation / scoped reset",
+          "pass": true
+        },
+        {
+          "name": "cursor / seen / practical observation roundtrip",
+          "pass": true
+        },
+        {
+          "name": "stale tab blocked until reread",
+          "pass": true
+        },
+        {
+          "name": "original estimate / 6 digits / comparison roundtrip",
+          "pass": true
+        },
+        {
+          "name": "original prediction before trials",
+          "pass": true
+        },
+        {
+          "name": "malformed protected",
+          "pass": true
+        },
+        {
+          "name": "future protected",
+          "pass": true
+        },
+        {
+          "name": "oversized protected",
+          "pass": true
+        },
+        {
+          "name": "unavailable storage remains temporary",
+          "pass": true
+        },
+        {
+          "name": "quota failure retains temporary work",
+          "pass": true
+        },
+        {
+          "name": "maximum valid bounded record roundtrip",
+          "pass": true
+        },
+        {
+          "name": "24x30 model rows",
+          "pass": true
+        },
+        {
+          "name": "46x28 model rows",
+          "pass": true
+        },
+        {
+          "name": "307x24 model rows",
+          "pass": true
+        },
+        {
+          "name": "999x99 model rows",
+          "pass": true
+        },
+        {
+          "name": "620x40 model rows",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "divisionResults",
+      "total": 115,
+      "passed": 115,
+      "cases": [
+        {
+          "name": "p4-trialquotient-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-trialquotient-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dividecolumns-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-quotientzero-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-tests2510-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-testthree-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-fullpacks-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-together-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-together-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-easy-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-easy-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-easy-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-normal-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-normal-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-normal-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-difficult-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-difficult-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-capacitydivision-difficult-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-1 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-2 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-3 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-4 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-5 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-6 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-7 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-8 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-9 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-10 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-11 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-12 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-13 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-14 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-15 response",
+          "pass": true
+        },
+        {
+          "name": "p4-dcheck-16 response",
+          "pass": true
+        },
+        {
+          "name": "divisibility 0–9999 by 2",
+          "pass": true
+        },
+        {
+          "name": "divisibility 0–9999 by 3",
+          "pass": true
+        },
+        {
+          "name": "divisibility 0–9999 by 5",
+          "pass": true
+        },
+        {
+          "name": "divisibility 0–9999 by 10",
+          "pass": true
+        },
+        {
+          "name": "invalid divisors refused",
+          "pass": true
+        },
+        {
+          "name": "division trace and borrowing independent sweep",
+          "pass": true
+        },
+        {
+          "name": "actual borrow 736/23 and chained borrow 825/24",
+          "pass": true
+        },
+        {
+          "name": "trailing zero and small dividend",
+          "pass": true
+        },
+        {
+          "name": "recomposition alone is not sufficient",
+          "pass": true
+        },
+        {
+          "name": "numeric forms and explicit zero remainder",
+          "pass": true
+        },
+        {
+          "name": "choice allowlist",
+          "pass": true
+        },
+        {
+          "name": "first plus single retry",
+          "pass": true
+        },
+        {
+          "name": "multiply records and cursor unchanged",
+          "pass": true
+        },
+        {
+          "name": "cross-topic IDs rejected",
+          "pass": true
+        },
+        {
+          "name": "three pupils isolated",
+          "pass": true
+        },
+        {
+          "name": "stale changes blocked",
+          "pass": true
+        },
+        {
+          "name": "estimate and inquiry originals survive",
+          "pass": true
+        },
+        {
+          "name": "malformed protected",
+          "pass": true
+        },
+        {
+          "name": "future protected",
+          "pass": true
+        },
+        {
+          "name": "oversized protected",
+          "pass": true
+        },
+        {
+          "name": "storage unavailable and quota",
+          "pass": true
+        },
+        {
+          "name": "maximum record restores",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "factorResults",
+      "total": 93,
+      "passed": 93,
+      "cases": [
+        {
+          "name": "p4-positivemultiples-together-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-together-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-easy-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-easy-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-easy-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-normal-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-normal-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-normal-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-difficult-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-difficult-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-positivemultiples-difficult-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-together-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-together-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-easy-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-easy-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-easy-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-normal-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-normal-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-normal-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-difficult-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-difficult-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorpairs-difficult-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-together-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-together-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-easy-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-easy-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-easy-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-normal-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-normal-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-normal-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-difficult-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-difficult-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-allfactors-difficult-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-together-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-together-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-easy-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-easy-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-easy-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-normal-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-normal-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-normal-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-difficult-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-difficult-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-factorrelations-difficult-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-together-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-together-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-easy-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-easy-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-easy-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-normal-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-normal-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-normal-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-difficult-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-difficult-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-primecomposite-difficult-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-together-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-together-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-easy-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-easy-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-easy-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-normal-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-normal-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-normal-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-difficult-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-difficult-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-sievehundred-difficult-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-1 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-2 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-3 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-4 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-5 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-6 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-7 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-8 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-9 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-10 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-11 oracle",
+          "pass": true
+        },
+        {
+          "name": "p4-fcheck-12 oracle",
+          "pass": true
+        },
+        {
+          "name": "all factor lists and sieve 1–100",
+          "pass": true
+        },
+        {
+          "name": "unordered/full-width list accepted",
+          "pass": true
+        },
+        {
+          "name": "duplicates/missing/zero/invalid tokens rejected",
+          "pass": true
+        },
+        {
+          "name": "prime boundaries",
+          "pass": true
+        },
+        {
+          "name": "first/retry and cursor",
+          "pass": true
+        },
+        {
+          "name": "saved sieve draft and immutable first/second",
+          "pass": true
+        },
+        {
+          "name": "invalid sieve arrays refused",
+          "pass": true
+        },
+        {
+          "name": "other topics/pupils remain unchanged",
+          "pass": true
+        },
+        {
+          "name": "cross-topic ID rejection",
+          "pass": true
+        },
+        {
+          "name": "stale sieve write blocked",
+          "pass": true
+        },
+        {
+          "name": "malformed protected",
+          "pass": true
+        },
+        {
+          "name": "future protected",
+          "pass": true
+        },
+        {
+          "name": "oversized protected",
+          "pass": true
+        },
+        {
+          "name": "unavailable/quota temporary",
+          "pass": true
+        },
+        {
+          "name": "maximum record roundtrip",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "commonResults",
+      "total": 137,
+      "passed": 137,
+      "cases": [
+        {
+          "name": "p4-commonmultiples-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonmultiples-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-commonfactors-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listlcm-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-listhcf-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-shortdivision-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-comparecommon-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-4 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-5 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-6 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-7 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-8 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-9 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-10 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-11 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-ccheck-12 independent answer",
+          "pass": true
+        },
+        {
+          "name": "all pairs 1–36 independent model and method agreement",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 12,18",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 12,18",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 12,18",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 4,6",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 4,6",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 4,6",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 6,8",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 6,8",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 6,8",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 8,12",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 8,12",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 8,12",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 9,12",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 9,12",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 9,12",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 15,20",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 15,20",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 15,20",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 6,15",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 6,15",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 6,15",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 7,9",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 7,9",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 7,9",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 5,8",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 5,8",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 5,8",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 4,12",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 4,12",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 4,12",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 1,8",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 1,8",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 1,8",
+          "pass": true
+        },
+        {
+          "name": "notebook multiples 6,6",
+          "pass": true
+        },
+        {
+          "name": "notebook factors 6,6",
+          "pass": true
+        },
+        {
+          "name": "notebook ladder 6,6",
+          "pass": true
+        },
+        {
+          "name": "multi-row and composite shared divisors both accepted",
+          "pass": true
+        },
+        {
+          "name": "full width rows and lists accepted",
+          "pass": true
+        },
+        {
+          "name": "wrong divisor and wrong quotient preserved as incorrect",
+          "pass": true
+        },
+        {
+          "name": "unfinished ladder cannot pass with correct final answers",
+          "pass": true
+        },
+        {
+          "name": "blank ladder valid only for coprime pair",
+          "pass": true
+        },
+        {
+          "name": "HCF / LCM swapped refused",
+          "pass": true
+        },
+        {
+          "name": "malformed zero decimal duplicate lists do not save",
+          "pass": true
+        },
+        {
+          "name": "missing factor and extra common factor fail",
+          "pass": true
+        },
+        {
+          "name": "multiple lists may reach second common value",
+          "pass": true
+        },
+        {
+          "name": "skipped multiples unequal endpoints and zero fail",
+          "pass": true
+        },
+        {
+          "name": "wrong extrema never pass a correct method",
+          "pass": true
+        },
+        {
+          "name": "answers first/retry/cursor immutable",
+          "pass": true
+        },
+        {
+          "name": "method drafts first and retry independent",
+          "pass": true
+        },
+        {
+          "name": "uncompleted methods cannot become attempts",
+          "pass": true
+        },
+        {
+          "name": "stale method writes blocked",
+          "pass": true
+        },
+        {
+          "name": "pupils topics and normal records isolated by reset",
+          "pass": true
+        },
+        {
+          "name": "unknown IDs and topics rejected",
+          "pass": true
+        },
+        {
+          "name": "malformed protected",
+          "pass": true
+        },
+        {
+          "name": "future protected",
+          "pass": true
+        },
+        {
+          "name": "oversized protected",
+          "pass": true
+        },
+        {
+          "name": "unavailable and quota keep temporary method",
+          "pass": true
+        },
+        {
+          "name": "maximum record including all 36 notebooks restores below cap",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "fractionResults",
+      "total": 102,
+      "passed": 102,
+      "cases": [
+        {
+          "name": "p4-fractionforms-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionforms-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionregroup-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionimproper-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionexpand-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractionreduce-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-together-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-together-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-easy-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-easy-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-easy-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-normal-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-normal-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-normal-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-difficult-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-difficult-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-fractioncompare-difficult-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-1 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-2 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-3 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-4 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-5 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-6 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-7 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-8 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-9 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-10 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-11 independent answer",
+          "pass": true
+        },
+        {
+          "name": "p4-frcheck-12 independent answer",
+          "pass": true
+        },
+        {
+          "name": "fraction normalization keeps the requested written form",
+          "pass": true
+        },
+        {
+          "name": "malformed ambiguous or unsafe fraction syntax rejected",
+          "pass": true
+        },
+        {
+          "name": "equal value wrong requested form is distinguished",
+          "pass": true
+        },
+        {
+          "name": "whole and improper forms with specified denominator",
+          "pass": true
+        },
+        {
+          "name": "equivalent unreduced response is not a wrong amount",
+          "pass": true
+        },
+        {
+          "name": "expansion can require an unreduced answer",
+          "pass": true
+        },
+        {
+          "name": "same-denominator comparison includes equal values and wholes",
+          "pass": true
+        },
+        {
+          "name": "proper improper mixed and whole written boundaries",
+          "pass": true
+        },
+        {
+          "name": "2400 equivalent-value and lowest-term cases",
+          "pass": true
+        },
+        {
+          "name": "large accepted components use exact rational arithmetic",
+          "pass": true
+        },
+        {
+          "name": "all model bars have equal whole size and exact shaded parts",
+          "pass": true
+        },
+        {
+          "name": "all teaching examples render three bounded bilingual steps",
+          "pass": true
+        },
+        {
+          "name": "number-line ticks respect equal parts and whole boundaries",
+          "pass": true
+        },
+        {
+          "name": "first retry and cursor stay separate",
+          "pass": true
+        },
+        {
+          "name": "earlier pupils topics and banks unaffected by reset",
+          "pass": true
+        },
+        {
+          "name": "cross-topic and stale writes blocked",
+          "pass": true
+        },
+        {
+          "name": "malformed record protected",
+          "pass": true
+        },
+        {
+          "name": "future record protected",
+          "pass": true
+        },
+        {
+          "name": "oversized record protected",
+          "pass": true
+        },
+        {
+          "name": "unavailable storage and quota retain temporary work",
+          "pass": true
+        },
+        {
+          "name": "maximum new record restores under existing cap",
+          "pass": true
+        },
+        {
+          "name": "fractions counted for generic badges without new badge rules",
+          "pass": true
+        },
+        {
+          "name": "fraction checks score with proper form for badges",
+          "pass": true
+        },
+        {
+          "name": "badge reader accepts valid lesson records over 64 KiB",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "fractionOpsResults",
+      "total": 101,
+      "passed": 101,
+      "cases": [
+        {
+          "name": "p4-addlikeparts-together-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-together-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-easy-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-easy-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-easy-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-normal-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-normal-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-normal-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-difficult-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-difficult-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-addlikeparts-difficult-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-together-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-together-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-easy-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-easy-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-easy-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-normal-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-normal-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-normal-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-difficult-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-difficult-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-subtractlikeparts-difficult-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-together-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-together-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-easy-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-easy-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-easy-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-normal-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-normal-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-normal-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-difficult-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-difficult-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-regroupwholeparts-difficult-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-together-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-together-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-easy-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-easy-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-easy-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-normal-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-normal-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-normal-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-difficult-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-difficult-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-mixfractionsteps-difficult-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-together-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-together-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-easy-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-easy-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-easy-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-normal-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-normal-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-normal-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-difficult-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-difficult-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiononestory-difficult-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-together-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-together-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-easy-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-easy-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-easy-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-normal-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-normal-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-normal-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-difficult-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-difficult-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-fractiontwostory-difficult-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-1 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-2 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-3 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-4 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-5 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-6 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-7 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-8 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-9 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-10 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-11 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "p4-focheck-12 independent arithmetic",
+          "pass": true
+        },
+        {
+          "name": "mixed operations have exactly three operands and both signs",
+          "pass": true
+        },
+        {
+          "name": "whole mixed improper zero and reduction boundaries present",
+          "pass": true
+        },
+        {
+          "name": "all story units are visible and bilingual",
+          "pass": true
+        },
+        {
+          "name": "sample prompts are new within this topic",
+          "pass": true
+        },
+        {
+          "name": "proper mixed and improper reduced answers accepted",
+          "pass": true
+        },
+        {
+          "name": "zero and whole outputs are exact",
+          "pass": true
+        },
+        {
+          "name": "unit suffix decimals signs and malformed mixed syntax rejected",
+          "pass": true
+        },
+        {
+          "name": "all model steps are bounded bilingual and nonnegative",
+          "pass": true
+        },
+        {
+          "name": "regrouping shows an equivalent whole plus extra parts",
+          "pass": true
+        },
+        {
+          "name": "operation bars preserve geometry and removed/added counts",
+          "pass": true
+        },
+        {
+          "name": "invalid or excessive model quantities fail safely",
+          "pass": true
+        },
+        {
+          "name": "first and retry stay separate after reload",
+          "pass": true
+        },
+        {
+          "name": "estimates must precede reveal and cannot be overwritten",
+          "pass": true
+        },
+        {
+          "name": "older numeric estimate validation is preserved",
+          "pass": true
+        },
+        {
+          "name": "inquiry keeps original prediction after trial",
+          "pass": true
+        },
+        {
+          "name": "reset isolates earlier fraction records pupils and banks",
+          "pass": true
+        },
+        {
+          "name": "stale and cross-topic writes rejected",
+          "pass": true
+        },
+        {
+          "name": "malformed saved record protected",
+          "pass": true
+        },
+        {
+          "name": "future saved record protected",
+          "pass": true
+        },
+        {
+          "name": "oversized saved record protected",
+          "pass": true
+        },
+        {
+          "name": "blocked storage retains temporary work",
+          "pass": true
+        },
+        {
+          "name": "maximum new record stays under existing cap and badges read it",
+          "pass": true
+        },
+        {
+          "name": "badge check table scores new fraction results",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "perimeterResults",
+      "total": 99,
+      "passed": 99,
+      "cases": [
+        {
+          "name": "p4-traceboundary-together-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-together-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-easy-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-easy-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-easy-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-normal-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-normal-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-normal-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-difficult-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-difficult-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-traceboundary-difficult-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-together-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-together-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-easy-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-easy-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-easy-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-normal-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-normal-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-normal-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-difficult-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-difficult-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-measureboundary-difficult-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-together-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-together-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-easy-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-easy-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-easy-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-normal-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-normal-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-normal-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-difficult-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-difficult-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-squareboundary-difficult-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-together-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-together-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-easy-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-easy-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-easy-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-normal-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-normal-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-normal-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-difficult-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-difficult-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-rectangleboundary-difficult-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-together-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-together-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-easy-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-easy-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-easy-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-normal-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-normal-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-normal-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-difficult-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-difficult-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedboundary-difficult-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-together-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-together-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-easy-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-easy-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-easy-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-normal-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-normal-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-normal-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-difficult-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-difficult-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-boundaryproblems-difficult-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-1 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-2 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-3 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-4 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-5 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-6 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-7 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-8 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-9 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-10 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-11 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "p4-pecheck-12 independent geometry and answer",
+          "pass": true
+        },
+        {
+          "name": "six lessons with three levels and separate checks",
+          "pass": true
+        },
+        {
+          "name": "only three numbered curriculum objectives",
+          "pass": true
+        },
+        {
+          "name": "notch perimeter exceeds bounding rectangle",
+          "pass": true
+        },
+        {
+          "name": "shared join not included in answer",
+          "pass": true
+        },
+        {
+          "name": "missing labels remain unknown in question diagrams",
+          "pass": true
+        },
+        {
+          "name": "paired figures retain common geometric scale",
+          "pass": true
+        },
+        {
+          "name": "all bilingual model pages bounded and valid",
+          "pass": true
+        },
+        {
+          "name": "fullwidth digits accepted without units or decimals",
+          "pass": true
+        },
+        {
+          "name": "first answer and retry immutable separately",
+          "pass": true
+        },
+        {
+          "name": "measurement estimate precedes result and is immutable",
+          "pass": true
+        },
+        {
+          "name": "measurement scope and required fields enforced",
+          "pass": true
+        },
+        {
+          "name": "measurement alone awards no practice check or inquiry marks",
+          "pass": true
+        },
+        {
+          "name": "stale tab protects original measurement",
+          "pass": true
+        },
+        {
+          "name": "reset isolates other pupils and topics",
+          "pass": true
+        },
+        {
+          "name": "inquiry prediction cannot be replaced by later trial",
+          "pass": true
+        },
+        {
+          "name": "corrupt record protected",
+          "pass": true
+        },
+        {
+          "name": "future record protected",
+          "pass": true
+        },
+        {
+          "name": "oversized record protected",
+          "pass": true
+        },
+        {
+          "name": "blocked storage retains explicitly temporary measurement",
+          "pass": true
+        },
+        {
+          "name": "new topic integrates into existing sixteen badge rules",
+          "pass": true
+        },
+        {
+          "name": "maximum records remain readable at real storage cap",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "areaResults",
+      "total": 132,
+      "passed": 132,
+      "cases": [
+        {
+          "name": "p4-coversurface-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-coversurface-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-overlapareas-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-equaltilearea-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-comparethroughthird-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-squareunits-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-measurearea-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-rectanglearea-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-together-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-together-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-easy-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-easy-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-easy-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-normal-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-normal-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-normal-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-difficult-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-difficult-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-joinedarea-difficult-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-1 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-2 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-3 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-4 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-5 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-6 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-7 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-8 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-9 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-10 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-11 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-12 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-13 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-14 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-15 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "p4-archeck-16 independent area and response",
+          "pass": true
+        },
+        {
+          "name": "eight lessons and all seven objectives",
+          "pass": true
+        },
+        {
+          "name": "intuitive pairs visibly differ by at least twofold",
+          "pass": true
+        },
+        {
+          "name": "overlay includes strict containment equality and partial overlap",
+          "pass": true
+        },
+        {
+          "name": "each invalid tiling has one unambiguous defect",
+          "pass": true
+        },
+        {
+          "name": "grid comparisons include larger smaller and equal",
+          "pass": true
+        },
+        {
+          "name": "compound rectangles cover exactly once",
+          "pass": true
+        },
+        {
+          "name": "same perimeter can give different areas",
+          "pass": true
+        },
+        {
+          "name": "square units never require cm2 to m2 conversion",
+          "pass": true
+        },
+        {
+          "name": "missing side questions retain length units and hidden width",
+          "pass": true
+        },
+        {
+          "name": "comparison diagrams have one scale per question",
+          "pass": true
+        },
+        {
+          "name": "models bilingual and bounded",
+          "pass": true
+        },
+        {
+          "name": "tile workshop has eighteen independent equal positions",
+          "pass": true
+        },
+        {
+          "name": "fullwidth digits accepted without units or decimals",
+          "pass": true
+        },
+        {
+          "name": "first answer and retry immutable separately",
+          "pass": true
+        },
+        {
+          "name": "measurement estimate precedes result and is immutable",
+          "pass": true
+        },
+        {
+          "name": "measurement scope and required fields enforced",
+          "pass": true
+        },
+        {
+          "name": "measurement alone awards no practice check or inquiry marks",
+          "pass": true
+        },
+        {
+          "name": "stale tab protects original measurement",
+          "pass": true
+        },
+        {
+          "name": "reset isolates other pupils and topics",
+          "pass": true
+        },
+        {
+          "name": "inquiry prediction cannot be replaced by later trial",
+          "pass": true
+        },
+        {
+          "name": "corrupt record protected",
+          "pass": true
+        },
+        {
+          "name": "future record protected",
+          "pass": true
+        },
+        {
+          "name": "oversized record protected",
+          "pass": true
+        },
+        {
+          "name": "blocked storage retains explicitly temporary measurement",
+          "pass": true
+        },
+        {
+          "name": "new topic integrates into existing sixteen badge rules",
+          "pass": true
+        },
+        {
+          "name": "maximum records remain readable at real storage cap",
+          "pass": true
+        },
+        {
+          "name": "square rule explicit in both languages",
+          "pass": true
+        },
+        {
+          "name": "area and perimeter feedback preserve Chinese and square-unit glyphs",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "local": {
+    "core": {
+      "total": 878,
+      "passed": 878,
+      "verified": 878
+    },
+    "initialInterface": {
+      "total": 111,
+      "passed": 111
+    },
+    "finalInterface": {
+      "total": 113,
+      "passed": 113,
+      "verified": 113
+    },
+    "badges": {
+      "total": 7,
+      "passed": 7,
+      "ctaContrast": 6.65
+    },
+    "visual": {
+      "width": 375,
+      "language": "zh",
+      "lessons": [
+        "p4-overlapareas",
+        "p4-joinedarea"
+      ],
+      "horizontalOverflow": false,
+      "screenshots": [
+        "browser-screenshots/screenshot-2026-11-28T11-12-39-763Z-343bafd1.png",
+        "browser-screenshots/screenshot-2026-11-28T11-13-10-853Z-13e8ce77.png"
+      ]
+    },
+    "wording": {
+      "total": 194,
+      "passed": 193,
+      "failures": [
+        {
+          "name": "Topic en P1 flat",
+          "error": "Navigation timeout"
+        }
+      ],
+      "reruns": [
+        {
+          "name": "Topic en P1 flat",
+          "passed": true
+        }
+      ]
+    },
+    "distinctVerified": 1192,
+    "preCorrectionCore": {
+      "total": 876,
+      "passed": 876
+    },
+    "preCorrectionInterface": {
+      "total": 111,
+      "passed": 110,
+      "failures": [
+        {
+          "name": "en p4-equaltilearea easy",
+          "error": "navigation timeout"
+        }
+      ],
+      "reruns": [
+        {
+          "name": "en p4-equaltilearea easy",
+          "passed": true
+        }
+      ],
+      "labelOverlapChecks": true
+    }
+  },
+  "public": null,
+  "contentReview": [
+    "Replaced overlapping tile that also left a gap with an extra overlapping tile over an otherwise complete covering.",
+    "Balanced grid comparisons across A-larger, B-larger and equal.",
+    "Expanded selectable teaching examples to include all overlay/tile cases, both square-unit references and U-shaped decomposition.",
+    "Made the square rule explicit as side times side in both languages.",
+    "PowerShell piped Python source had replaced Chinese feedback and square-unit glyphs with question marks in four area comparisons and Chinese feedback in four inherited perimeter comparisons. Rewrote the exact lines through UTF-8 files, versioned the changed assets, and added static, core and actual browser-feedback assertions. Perimeter prompts, answers, geometry and stored records are unchanged."
+  ],
+  "manualPending": [
+    "classroom trials",
+    "independent translation/content review",
+    "screen-reader listening",
+    "physical printing and scale",
+    "observed measurement and paper work"
+  ],
+  "relativeLinks": {
+    "verified": 81,
+    "links": [
+      {
+        "file": "planning/p4-area-guided-release.md",
+        "link": "../p4-learn.html?path=area"
+      },
+      {
+        "file": "planning/p4-area-guided-release.md",
+        "link": "p4-area-guided-evidence.json"
+      },
+      {
+        "file": "planning/p4-area-guided-release.md",
+        "link": "p4-area-i.md"
+      },
+      {
+        "file": "planning/p4-area-guided-release.md",
+        "link": "../activities/p4-area-i.html"
+      },
+      {
+        "file": "planning/p4-area-guided-release.md",
+        "link": "../p4-learn.html?path=perimeter"
+      },
+      {
+        "file": "planning/p4-area-guided-release.md",
+        "link": "p4-guided-learning-plan.md#delivery-queue"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-p6-guided-sequence.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../p4-learn.html?path=multiply"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-multiply-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-division-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-factors-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-common-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractions-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractionops-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-perimeter-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-area-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../p4-skill-levels.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../p3-review.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p3-coverage-review.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "learner-wording.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-multiplication-ii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-multiplication-ii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-division-ii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-division-ii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-multiples-factors.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-multiples-factors.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-common-multiples-factors.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-common-multiples-factors.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-four-operations-ii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-four-operations-ii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractions-ii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-fractions-ii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-decimals-i.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-decimals-i.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-decimals-ii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-decimals-ii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-perimeter-i.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-perimeter-i.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-area-i.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-area-i.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-quadrilaterals-iii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-quadrilaterals-iii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-dissecting-forming.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-dissecting-forming.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-directions-iii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-directions-iii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-bar-charts-ii.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-bar-charts-ii.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../activities/p4-inquiry.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-inquiry.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractions-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractionops-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-perimeter-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-area-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p5-guided-learning-plan.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p6-guided-learning-plan.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../p4-learn.html?path=multiply"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../p3-learn.html?path=multiply"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "../p3-review.html"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-guided-planning-evidence.json"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-multiply-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-division-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-common-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractions-guided-release.md"
+      },
+      {
+        "file": "planning/p4-guided-learning-plan.md",
+        "link": "p4-fractionops-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-multiply-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-division-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-factors-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-common-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-fractions-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-fractionops-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-perimeter-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-area-guided-release.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-guided-learning-plan.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p5-guided-learning-plan.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p6-guided-learning-plan.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "learner-wording.md"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p4-guided-learning-plan.md#first-implementation-contract"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p5-guided-learning-plan.md#delivery-order"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p6-guided-learning-plan.md#delivery-order"
+      },
+      {
+        "file": "planning/p4-p6-guided-sequence.md",
+        "link": "p5-p6-guided-planning-evidence.json"
+      }
+    ]
+  },
+  "preservation": {
+    "unchangedInheritedFiles": 977,
+    "deletedInheritedFiles": []
+  },
+  "initialCore": [
     {
       "name": "p4Results",
       "total": 99,
@@ -3627,412 +7618,394 @@
       ]
     }
   ],
-  "local": {
-    "core": {
-      "total": 876,
-      "passed": 876
-    },
-    "initialInterface": {
-      "total": 111,
-      "passed": 111
-    },
-    "finalInterface": {
-      "total": 111,
-      "passed": 110,
-      "failures": [
+  "firstRuntime": {
+    "commit": "0d93cd513c0658ea062f831fe08765d3627f037b",
+    "readback": {
+      "sha": "0d93cd513c0658ea062f831fe08765d3627f037b",
+      "deployments": [
         {
-          "name": "en p4-equaltilearea easy",
-          "error": "navigation timeout"
+          "id": 46139271581,
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/kochiuyu/mathquiz/actions/runs/46139271581"
         }
       ],
-      "reruns": [
+      "files": [
         {
-          "name": "en p4-equaltilearea easy",
-          "passed": true
+          "path": "badges-data.js",
+          "match": true,
+          "sha256": "75525240ac54392606aec849917a3bc4ab73b697050c26f7dad6d01d228ad3c5"
+        },
+        {
+          "path": "index.html",
+          "match": true,
+          "sha256": "2868654c4938e757c1c639f5aa726770343f7afe9af0368c7ce96db3c6478ae6"
+        },
+        {
+          "path": "learn.html",
+          "match": true,
+          "sha256": "c719c703293c53d6290b60b32fd175d3490802c64c96ce3116b9c0a1a014c6ef"
+        },
+        {
+          "path": "learner-catalog.js",
+          "match": true,
+          "sha256": "9d588224e7a8a0128dc92dc95a01a7bcaba028d9e86300fbe1c30f4249c39773"
+        },
+        {
+          "path": "p1-levels.html",
+          "match": true,
+          "sha256": "af02a9a7b8abebcda7dc6fe0c7407165beda7ddeea02e9d062df1a9de4d4694e"
+        },
+        {
+          "path": "p1-review.html",
+          "match": true,
+          "sha256": "19c434a79af4c931293d7a676c54b9f43c67c8e0dd5106ec46728c6144282793"
+        },
+        {
+          "path": "p2-investigate.html",
+          "match": true,
+          "sha256": "24ccb13e3f5b6bcc94fd82e8f09910727974efbd2173ae68a707b7babe4aa9ad"
+        },
+        {
+          "path": "p2-learn.html",
+          "match": true,
+          "sha256": "261e5f86b89352bfbc12e40947dc50012dbe028c50433bd2a9c094a1241dcb40"
+        },
+        {
+          "path": "p2-review.html",
+          "match": true,
+          "sha256": "c3b650285bc3db1580cbbb9df321d5de395416cd732360f6237054f03211b469"
+        },
+        {
+          "path": "p2-skill-levels.html",
+          "match": true,
+          "sha256": "f21352d4f729e3c79dcb744bd2e2ba471a10103e6d16dab79e9de5828166b8c6"
+        },
+        {
+          "path": "p3-learn.html",
+          "match": true,
+          "sha256": "8ccd4ef8f76a3e981b4954a1a70c12b82cd5fe6e6876547d1b13b841a992c80d"
+        },
+        {
+          "path": "p3-review.html",
+          "match": true,
+          "sha256": "26f49457b48305211fcdef002b0658d0b2d79e4d4e12797ff6f7f7d3d0679057"
+        },
+        {
+          "path": "p3-skill-levels.html",
+          "match": true,
+          "sha256": "0744a224f618fd064a3ab7c1476d0631dc4cb3a8b347f1c9825284b8a7a313b3"
+        },
+        {
+          "path": "p4-area-data.js",
+          "match": true,
+          "sha256": "dd5c5fa14df86746ba96f1f774a6551ec931e12ba8e81896ee87eea0ba43e5d8"
+        },
+        {
+          "path": "p4-area-models.js",
+          "match": true,
+          "sha256": "04f9399b36b9a82ac72d9a35736af8cdae55facf319879da5ed895be737f088c"
+        },
+        {
+          "path": "p4-learn-store.js",
+          "match": true,
+          "sha256": "ee11c6ebd2129b1dfb0bb53cc6914b6a80d26965a792e3a460bf65b6f9adadcd"
+        },
+        {
+          "path": "p4-learn.css",
+          "match": true,
+          "sha256": "3b70d73b85030fd99ab59b16a6ed2981cf5a1df49721a9c78d6309496f325ad7"
+        },
+        {
+          "path": "p4-learn.html",
+          "match": true,
+          "sha256": "829a4cbf37450b69b484d6dd33c3ab5304c16e933f0cc44540f3e52c6cada2c9"
+        },
+        {
+          "path": "p4-learn.js",
+          "match": true,
+          "sha256": "e5b642f4ad5038d8fc0cc27f63f91e3282a7f246ccc04abccf7aeb647e5d1895"
+        },
+        {
+          "path": "progress.html",
+          "match": true,
+          "sha256": "ce04c08abbd1613295db7e45f5e973ede505a419d82388f0e369d71d1fbc0e8f"
+        },
+        {
+          "path": "README.md",
+          "match": true,
+          "sha256": "5514a5bfff9a2c47a53387a8bfc9967e4812cce8157c8c33d3dc47f8f0662fd0"
+        },
+        {
+          "path": "planning/p4-area-guided-evidence.json",
+          "match": true,
+          "sha256": "31049b92c27f8ee2ca914e590869f8ad5867ac78b59e31e382db9e3b406844aa"
+        },
+        {
+          "path": "planning/p4-area-guided-release.md",
+          "match": true,
+          "sha256": "0b21b32a3248262431a8629de725ecd90b5f85d5ec00ecff6396ba526fdeef7b"
+        },
+        {
+          "path": "planning/p4-guided-learning-plan.md",
+          "match": true,
+          "sha256": "0a286f4d7aae864b545f11753de511c36fd16efbe68215e44a2b7d6f0ccc178e"
+        },
+        {
+          "path": "planning/p4-p6-guided-sequence.md",
+          "match": true,
+          "sha256": "cd6ffab44073954acf27aed9b2bd1702455c3b57ffd66459e1b6ce6ada4aea62"
+        },
+        {
+          "path": "tests/badges-static.cjs",
+          "match": true,
+          "sha256": "6c4abb38e4278659496d1d28117a4d0d35582af9cbe3627c3a572c11d0654837"
+        },
+        {
+          "path": "tests/learner-ui.html",
+          "match": true,
+          "sha256": "2156f3a029243854d69aec01f95895a0f7f9a01bc5e2bfe9c35ac65f23b5f072"
+        },
+        {
+          "path": "tests/learner-wording.html",
+          "match": true,
+          "sha256": "351c0acdece518ecc8720b18f1a253b54ae964590e0409050c17d39df8a61360"
+        },
+        {
+          "path": "tests/p4-area-guided.html",
+          "match": true,
+          "sha256": "ee74b23812a6149188aff4d951eca9d6d555afda82f1a0cc6d637b01da8c27da"
+        },
+        {
+          "path": "tests/p4-area-guided.js",
+          "match": true,
+          "sha256": "bc2d9d42e7a57dbc7ad50e3821e91d7c84872414c3c0806bc1aa1cc313e714e9"
+        },
+        {
+          "path": "tests/p4-area-interface.html",
+          "match": true,
+          "sha256": "4fadd2553c710aa2816fe1efe3a73815f1dfda366c3e5aa3fe666c5a8f6095a4"
+        },
+        {
+          "path": "tests/p4-area-interface.js",
+          "match": true,
+          "sha256": "9d7862b693ce8c02c05f9782ff71c6ac9fa03c144cf1ba46c52c8954ea5a4dbd"
+        },
+        {
+          "path": "tests/p4-common-guided.html",
+          "match": true,
+          "sha256": "c6b390b0c09853712cb02a7eb8b78c5fa9cf2e1eef63b93a89053a1137304b35"
+        },
+        {
+          "path": "tests/p4-common-interface.html",
+          "match": true,
+          "sha256": "2e767f61fd772cd8ec84ef8080054f250ff7549edc0b5a2268623f1d0ec93f13"
+        },
+        {
+          "path": "tests/p4-common-interface.js",
+          "match": true,
+          "sha256": "e91b7a040f983366f5fe5ceda56ab88e1039d705c519542abd22ef5718c29d2b"
+        },
+        {
+          "path": "tests/p4-division-guided.html",
+          "match": true,
+          "sha256": "6c0f1355ef4ea465c90d3bde951f9e58762183ef4d1ce5f612b84ca70c5b8311"
+        },
+        {
+          "path": "tests/p4-division-interface.html",
+          "match": true,
+          "sha256": "2c6aeb6fe79b08abe5f68388cc5d36ec81a2d0b5a94427d133746dd1ce770997"
+        },
+        {
+          "path": "tests/p4-division-interface.js",
+          "match": true,
+          "sha256": "4649c71bbce306f3ee1cf34be4f4bd5febc98db11d53d4f45e8f87a93d1383f7"
+        },
+        {
+          "path": "tests/p4-factors-guided.html",
+          "match": true,
+          "sha256": "a4ccfc4bf7e4d143cd3e676e5fb5d2e9e50b3bc1827b8a6f4a5fbe2fd707e4a2"
+        },
+        {
+          "path": "tests/p4-factors-interface.html",
+          "match": true,
+          "sha256": "be65d163c321932f440738670aaca5de9698c2d62bb71d348cfc99585ce64a78"
+        },
+        {
+          "path": "tests/p4-factors-interface.js",
+          "match": true,
+          "sha256": "a8316158ff8d80b47e90081a3f8faf5903295601f4c2af857a33806d057688e2"
+        },
+        {
+          "path": "tests/p4-fractionops-guided.html",
+          "match": true,
+          "sha256": "de0f879cff07b475d0b83b0ce1b574503a990ecd25ce22cb0f9e246aae86a4ad"
+        },
+        {
+          "path": "tests/p4-fractionops-interface.html",
+          "match": true,
+          "sha256": "9179e99969ca44f97ece56fc81391d86d4074bb4b11392d72b7400b45a56f998"
+        },
+        {
+          "path": "tests/p4-fractionops-interface.js",
+          "match": true,
+          "sha256": "89cc444881e335f4444fcda65f0b38a7dc8279616792e15a46f5db5002c29267"
+        },
+        {
+          "path": "tests/p4-fractions-guided.html",
+          "match": true,
+          "sha256": "4507f8e4faec2e53637562a2db364c0f28117f78cf6fa98a299eb616e0d552cd"
+        },
+        {
+          "path": "tests/p4-fractions-interface.html",
+          "match": true,
+          "sha256": "3a713601ac417204aedc40529c7345a6087a79a2926761395a7ae16542c38c41"
+        },
+        {
+          "path": "tests/p4-fractions-interface.js",
+          "match": true,
+          "sha256": "b6e558c15139e83e221aeeca49382d8d66bd604cc33b837d7c779b63e290ca7e"
+        },
+        {
+          "path": "tests/p4-multiply-guided.html",
+          "match": true,
+          "sha256": "74d2cc8fda7eb4827ec2017edabb21ffe20a58d1264ba5272f6d79bf9a467d5d"
+        },
+        {
+          "path": "tests/p4-perimeter-guided.html",
+          "match": true,
+          "sha256": "a6a98de405e71ff3b07951f5c69f7461b50bc4cc7657793eab9bb0f39c118798"
+        },
+        {
+          "path": "tests/p4-perimeter-interface.html",
+          "match": true,
+          "sha256": "3bd9105b2e4dd9b4789f6176a1c9d88337d5092ae20a2dbc6519ea3d67327fc1"
+        },
+        {
+          "path": "tests/p4-perimeter-interface.js",
+          "match": true,
+          "sha256": "835b6c9e56d0430a0c8ebf4f8d0683f38741b6e9cfc3d0c935cdb9cda1cf2a4f"
         }
       ],
-      "labelOverlapChecks": true
-    },
-    "badges": {
-      "total": 7,
-      "passed": 7,
-      "ctaContrast": 6.65
-    },
-    "visual": {
-      "width": 375,
-      "language": "zh",
-      "lessons": [
-        "p4-overlapareas",
-        "p4-joinedarea"
-      ],
-      "horizontalOverflow": false,
-      "screenshots": [
-        "browser-screenshots/screenshot-2026-11-28T11-12-39-763Z-343bafd1.png",
-        "browser-screenshots/screenshot-2026-11-28T11-13-10-853Z-13e8ce77.png"
+      "versionedAssets": [
+        {
+          "url": "p3-learn.css?v=6",
+          "match": true
+        },
+        {
+          "url": "learner-ui.css?v=wording-r1",
+          "match": true
+        },
+        {
+          "url": "badges.css?v=badges-v1",
+          "match": true
+        },
+        {
+          "url": "p4-learn.css?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "p4-learn-data.js?v=multiply-r1",
+          "match": true
+        },
+        {
+          "url": "p4-division-data.js?v=division-r1",
+          "match": true
+        },
+        {
+          "url": "p4-division-models.js?v=division-r1",
+          "match": true
+        },
+        {
+          "url": "p4-factors-data.js?v=factors-r1",
+          "match": true
+        },
+        {
+          "url": "p4-factors-models.js?v=factors-r2",
+          "match": true
+        },
+        {
+          "url": "p4-common-data.js?v=common-r1",
+          "match": true
+        },
+        {
+          "url": "p4-common-models.js?v=common-r1",
+          "match": true
+        },
+        {
+          "url": "marking.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "fractions4.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractions-data.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractions-models.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractionops-data.js?v=fractionops-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractionops-models.js?v=fractionops-r1",
+          "match": true
+        },
+        {
+          "url": "p4-perimeter-data.js?v=perimeter-r1",
+          "match": true
+        },
+        {
+          "url": "p4-perimeter-models.js?v=perimeter-r1",
+          "match": true
+        },
+        {
+          "url": "p4-area-data.js?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "p4-area-models.js?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "p4-learn-store.js?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "p4-multiply-models.js?v=multiply-r1",
+          "match": true
+        },
+        {
+          "url": "p4-learn.js?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "learner-catalog.js?v=p4-area-r1",
+          "match": true
+        },
+        {
+          "url": "badges-data.js?v=p4-area-r1",
+          "match": true
+        },
+        {
+          "url": "badges-store.js?v=p4-fractions-r1",
+          "match": true
+        },
+        {
+          "url": "badges-ui.js?v=badges-v1",
+          "match": true
+        },
+        {
+          "url": "learner-ui.js?v=p4-multiply-r1",
+          "match": true
+        }
       ]
     },
-    "wording": {
-      "total": 194,
-      "passed": 193,
-      "failures": [
-        {
-          "name": "Topic en P1 flat",
-          "error": "Navigation timeout"
-        }
-      ],
-      "reruns": [
-        {
-          "name": "Topic en P1 flat",
-          "passed": true
-        }
-      ]
-    },
-    "distinctVerified": 1188
-  },
-  "public": null,
-  "contentReview": [
-    "Replaced overlapping tile that also left a gap with an extra overlapping tile over an otherwise complete covering.",
-    "Balanced grid comparisons across A-larger, B-larger and equal.",
-    "Expanded selectable teaching examples to include all overlay/tile cases, both square-unit references and U-shaped decomposition."
-  ],
-  "manualPending": [
-    "classroom trials",
-    "independent translation/content review",
-    "screen-reader listening",
-    "physical printing and scale",
-    "observed measurement and paper work"
-  ],
-  "relativeLinks": {
-    "verified": 81,
-    "links": [
-      {
-        "file": "planning/p4-area-guided-release.md",
-        "link": "../p4-learn.html?path=area"
-      },
-      {
-        "file": "planning/p4-area-guided-release.md",
-        "link": "p4-area-guided-evidence.json"
-      },
-      {
-        "file": "planning/p4-area-guided-release.md",
-        "link": "p4-area-i.md"
-      },
-      {
-        "file": "planning/p4-area-guided-release.md",
-        "link": "../activities/p4-area-i.html"
-      },
-      {
-        "file": "planning/p4-area-guided-release.md",
-        "link": "../p4-learn.html?path=perimeter"
-      },
-      {
-        "file": "planning/p4-area-guided-release.md",
-        "link": "p4-guided-learning-plan.md#delivery-queue"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-p6-guided-sequence.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../p4-learn.html?path=multiply"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-multiply-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-division-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-factors-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-common-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractions-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractionops-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-perimeter-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-area-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../p4-skill-levels.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../p3-review.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p3-coverage-review.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "learner-wording.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-multiplication-ii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-multiplication-ii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-division-ii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-division-ii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-multiples-factors.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-multiples-factors.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-common-multiples-factors.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-common-multiples-factors.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-four-operations-ii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-four-operations-ii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractions-ii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-fractions-ii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-decimals-i.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-decimals-i.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-decimals-ii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-decimals-ii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-perimeter-i.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-perimeter-i.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-area-i.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-area-i.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-quadrilaterals-iii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-quadrilaterals-iii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-dissecting-forming.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-dissecting-forming.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-directions-iii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-directions-iii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-bar-charts-ii.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-bar-charts-ii.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../activities/p4-inquiry.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-inquiry.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractions-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractionops-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-perimeter-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-area-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p5-guided-learning-plan.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p6-guided-learning-plan.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../p4-learn.html?path=multiply"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../p3-learn.html?path=multiply"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "../p3-review.html"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-guided-planning-evidence.json"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-multiply-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-division-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-common-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractions-guided-release.md"
-      },
-      {
-        "file": "planning/p4-guided-learning-plan.md",
-        "link": "p4-fractionops-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-multiply-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-division-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-factors-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-common-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-fractions-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-fractionops-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-perimeter-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-area-guided-release.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-guided-learning-plan.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p5-guided-learning-plan.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p6-guided-learning-plan.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "learner-wording.md"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p4-guided-learning-plan.md#first-implementation-contract"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p5-guided-learning-plan.md#delivery-order"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p6-guided-learning-plan.md#delivery-order"
-      },
-      {
-        "file": "planning/p4-p6-guided-sequence.md",
-        "link": "p5-p6-guided-planning-evidence.json"
-      }
-    ]
-  },
-  "preservation": {
-    "unchangedInheritedFiles": 978,
-    "deletedInheritedFiles": []
+    "supersededReason": "Comparison feedback encoding and explicit square formula correction"
   }
 }
