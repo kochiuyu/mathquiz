@@ -35,7 +35,7 @@ No decimal addition/subtraction algorithm, complicated multi-unit conversion or 
 
 ## Verification
 
-**All 1,602 selected local browser cases are verified:** 1,286 core, 107 interface, seven badge and 202 shared wording/navigation cases. Final full runs had one interface navigation timeout and one shared-navigation timeout; both passed exact reruns. Earlier run outcomes are retained in the evidence. Public verification and deployment are pending.
+**All 1,602 selected local browser cases are verified:** 1,286 core, 107 interface, seven badge and 202 shared wording/navigation cases. Final full runs had one interface navigation timeout and one shared-navigation timeout; both passed exact reruns. Earlier run outcomes are retained in the evidence. **All 1,602 corresponding public browser cases are also verified**, with original outcomes and exact reruns in the evidence. Runtime deployment succeeded; all 66 public files, 37 exact versioned asset URLs and six repository source readbacks matched. All 995 other inherited files remain byte-identical, with none deleted. All 98 relative report/handoff links resolve.
 
 Phone preview prompted removal of a height cap that made two-whole labels too small; the final labels measured 18.5 pixels. Answer-box guidance now distinguishes whole-digit counts, values and requested written decimal places. Focused bilingual checks cover both refinements.
 

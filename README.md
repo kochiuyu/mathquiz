@@ -2,11 +2,11 @@
 
 ## Current guided learning handoff
 
-**29 November 2026: P4 decimal meaning is implemented; final verification is in progress.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=decimals) · [Release report](planning/p4-decimals-guided-release.md) · [Evidence](planning/p4-decimals-guided-evidence.json).
+**29 November 2026: P4 decimal meaning is published and verified.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=decimals) · [Release report](planning/p4-decimals-guided-release.md) · [Evidence](planning/p4-decimals-guided-evidence.json).
 
 Six bilingual lessons add **12 guided tasks, 54 practice tasks and 12 sample checks** for all four 4N7 objectives. Pupils connect fractions with decimals, read four decimal places, distinguish digit/value/written places, compare quantities and use daily units. Equal-whole grids and an exact place-value builder support short prompts.
 
-P4 now has **75 guided lessons across twelve topics**. Earlier saved work is preserved. First written answers, supported retries, actual oral-reading observations and measurement evidence stay separate. Local/public verification is recorded in the evidence; classroom trials and independent review remain pending.
+P4 now has **75 guided lessons across twelve topics**. Earlier saved work is preserved. First written answers, supported retries, actual oral-reading observations and measurement evidence stay separate. **1,602 local and 1,602 public browser cases verified**, with original outcomes and exact reruns documented. Classroom trials, independent content/translation review, actual oral reading and observed measurement remain pending.
 
 **Next unfinished step: P4 decimal addition and subtraction**, then larger bar charts and mixed calculations. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 
