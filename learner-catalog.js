@@ -2214,6 +2214,57 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "perimeter",
+      "title": [
+        "Perimeter",
+        "周界"
+      ],
+      "lessons": [
+        {
+          "id": "p4-traceboundary",
+          "title": [
+            "Trace the whole boundary",
+            "沿整條邊界走"
+          ]
+        },
+        {
+          "id": "p4-measureboundary",
+          "title": [
+            "Measure and compare",
+            "量度及比較"
+          ]
+        },
+        {
+          "id": "p4-squareboundary",
+          "title": [
+            "Find a square’s perimeter",
+            "求正方形周界"
+          ]
+        },
+        {
+          "id": "p4-rectangleboundary",
+          "title": [
+            "Find a rectangle’s perimeter",
+            "求長方形周界"
+          ]
+        },
+        {
+          "id": "p4-joinedboundary",
+          "title": [
+            "Trace joined shapes",
+            "沿組合圖形的邊界走"
+          ]
+        },
+        {
+          "id": "p4-boundaryproblems",
+          "title": [
+            "Solve perimeter stories",
+            "解周界應用題"
+          ]
+        }
+      ]
     }
   ]
 };
