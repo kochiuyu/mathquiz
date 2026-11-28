@@ -31,7 +31,7 @@ The new topic has separate records for each of the three existing pupils. First 
 
 ## Verification
 
-**All 1,500 selected local browser cases are verified:** 1,188 core, 105 interface, seven badge and 200 shared wording/navigation cases. One P1 navigation timeout passed its exact rerun; the original failure remains in the evidence. Public verification and deployment are pending.
+**All 1,500 selected local browser cases are verified:** 1,188 core, 105 interface, seven badge and 200 shared wording/navigation cases. One P1 navigation timeout passed its exact rerun; the original failure remains in the evidence. **All 1,500 corresponding public browser cases are also verified**, with original outcomes and exact reruns in the evidence. Runtime deployment succeeded; all 63 public files, 35 exact versioned asset URLs and six repository source readbacks matched. All 990 other inherited files remain byte-identical, with none deleted. All 95 relative report/handoff links resolve.
 
 Seventeen static gates include an independent Python oracle which derives all 78 answers from 156 actual bilingual SVG drawings and the route instructions. It checks reference reversal, four map orientations, facing-relative turns, unique road choices, compass sighting, all eight answers, readiness scenarios and preserved content. The core browser suite covers all eleven P4 topics. Rotation/turn sweeps count as aggregate checks, not extra pupil tasks.
 
