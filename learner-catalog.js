@@ -2265,6 +2265,71 @@ window.MathQuizLearnerCatalog={
           ]
         }
       ]
+    },
+    {
+      "id": "area",
+      "title": [
+        "Area",
+        "面積"
+      ],
+      "lessons": [
+        {
+          "id": "p4-coversurface",
+          "title": [
+            "See the covered surface",
+            "看覆蓋的表面"
+          ]
+        },
+        {
+          "id": "p4-overlapareas",
+          "title": [
+            "Compare by overlapping",
+            "用重疊法比較"
+          ]
+        },
+        {
+          "id": "p4-equaltilearea",
+          "title": [
+            "Cover with equal tiles",
+            "用相同大小的紙片覆蓋"
+          ]
+        },
+        {
+          "id": "p4-comparethroughthird",
+          "title": [
+            "Compare through another shape",
+            "透過另一圖形比較"
+          ]
+        },
+        {
+          "id": "p4-squareunits",
+          "title": [
+            "Build square units",
+            "認識平方單位"
+          ]
+        },
+        {
+          "id": "p4-measurearea",
+          "title": [
+            "Measure and estimate area",
+            "量度及估計面積"
+          ]
+        },
+        {
+          "id": "p4-rectanglearea",
+          "title": [
+            "Find square and rectangle areas",
+            "求正方形及長方形面積"
+          ]
+        },
+        {
+          "id": "p4-joinedarea",
+          "title": [
+            "Split and compare areas",
+            "分割及比較面積"
+          ]
+        }
+      ]
     }
   ]
 };

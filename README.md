@@ -2,15 +2,15 @@
 
 ## Current guided learning handoff
 
-**28 November 2026: P4 perimeter is published and verified.** [Open the lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=perimeter) · [Release report](planning/p4-perimeter-guided-release.md) · [Evidence](planning/p4-perimeter-guided-evidence.json).
+**28 November 2026: P4 area is implemented; release verification is in progress.** [Open area](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=area) · [Release report](planning/p4-area-guided-release.md) · [Evidence](planning/p4-area-guided-evidence.json).
 
-Six bilingual lessons add **12 guided examples, 54 practice tasks and 12 sample checks** for all **three 4M1 objectives**. Pupils trace complete boundaries, compare perimeters, derive square/rectangle rules and solve joined-shape and everyday problems. Two practical records preserve original estimates before measured results.
+Eight bilingual lessons add **16 guided tasks, 72 practice tasks and 16 sample checks** for all **seven 4M2 objectives**. Pupils compare surfaces, overlay, tile, use square units, measure and derive area formulas. Blank covering models, retained estimates and explicit area/perimeter comparisons support the work.
 
-P4 now has **43 guided lessons across seven topics**. Earlier saved work and badges are preserved. Screen scores and self-reported measurements do not establish independent mastery.
+P4 now has **51 guided lessons across eight topics**. Earlier saved work and badges are preserved. Screen scores and self-reported measurements do not establish independent mastery.
 
-**1,032 local and 1,032 public browser cases verified**, with original failures and exact reruns retained. Twelve new static gates, eleven badge gates and both inherited perimeter suites passed. Classroom trials, independent translation/content review, screen-reader listening and observed paper work remain pending.
+Local/public verification is recorded in the evidence. Classroom trials, independent content/translation review, screen-reader listening and observed paper work remain pending.
 
-**Next unfinished step: P4 area.** Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
+**Next unfinished step: P4 rhombuses and shape families.** Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 
 Further general P1–P3 revision remains deferred. Historical notes below retain their original scope and next steps; this handoff supersedes them.
 
