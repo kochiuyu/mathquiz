@@ -33,7 +33,7 @@ The sample checks repeat taught concepts and related figures; they do not consti
 
 ## Verification
 
-Local verification is recorded in the evidence. Public verification and deployment are pending.
+**1,276 local and 1,276 public browser cases verified**: 979 core, 94 shape interface, seven badge and 196 shared wording/navigation cases in each environment. Original failures and successful exact reruns are retained in the evidence. Fifteen new static gates, eleven badge gates and both inherited quadrilateral suites passed. Runtime deployment succeeded; all 55 public files, 31 exact versioned asset URLs and six repository readbacks matched. All 982 other inherited files remain byte-identical, with none deleted. All 83 relative report/handoff links resolve.
 
 The core suite checks all 78 answers using separate edge calculations and tests the family implications over an independent bounded lattice enumeration. It covers every complete name set, rejected inputs, construction choices, transformed figures, storage protection, separate practical records and badges. Generated sweeps count as aggregate checks, not additional pupil tasks. Browser cases cover both languages, stages, all teaching examples and label bounds, actual checkboxes, retries, drawing/strip controls, observations, inquiry, reset and the eight earlier P4 routes.
 

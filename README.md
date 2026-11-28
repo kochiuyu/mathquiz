@@ -2,11 +2,11 @@
 
 ## Current guided learning handoff
 
-**28 November 2026: P4 rhombuses and shape families are implemented; final verification is in progress.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=shapes) · [Release report](planning/p4-shapes-guided-release.md) · [Evidence](planning/p4-shapes-guided-evidence.json).
+**28 November 2026: P4 rhombuses and shape families are published and verified.** [Open lessons](https://kochiuyu.github.io/mathquiz/p4-learn.html?path=shapes) · [Release report](planning/p4-shapes-guided-release.md) · [Evidence](planning/p4-shapes-guided-evidence.json).
 
 Six bilingual lessons add **12 guided tasks, 54 practice tasks and 12 sample checks** for all three 4S1 objectives. Pupils identify, draw and make rhombuses, select every applicable shape name and test claims with counterexamples. Blank dot drawing and movable equal-strip models support physical work.
 
-P4 now has **57 guided lessons across nine topics**. Earlier saved work is preserved. Drawing and making observations remain separate from screen scores. Local/public verification is recorded in the evidence; classroom trials and independent review remain pending.
+P4 now has **57 guided lessons across nine topics**. Earlier saved work is preserved. Drawing and making observations remain separate from screen scores. **1,276 local and 1,276 public browser cases verified**, with original outcomes and exact reruns documented. Classroom trials, independent content/translation review and observed physical construction remain pending.
 
 **Next unfinished step: P4 cut-and-build shapes**, then eight directions. Follow the [P4 delivery queue](planning/p4-guided-learning-plan.md#delivery-queue), then complete P4 and its application review before implementing [P5](planning/p5-guided-learning-plan.md) and [P6](planning/p6-guided-learning-plan.md). [Cross-year sequence](planning/p4-p6-guided-sequence.md).
 
