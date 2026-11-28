@@ -37,7 +37,7 @@ The inquiry asks pupils to make rectangles with a 24 cm boundary, predict their 
 
 ## Verification
 
-The first local/browser release checks are retained in the evidence. Final checks cover 878 core, 113 area interface, seven badge and 194 shared wording/navigation cases per environment. Public verification and deployments are pending.
+**1,192 local and 1,192 public browser cases verified**: 878 core, 113 area interface, seven badge and 194 shared wording/navigation cases per environment. The corrected local interface run passed all 113 cases. The corrected public interface run passed 112 initially and its exact timeout rerun passed. Earlier interface runs and both shared wording runs also needed one successful exact navigation-timeout rerun; original outcomes are retained. The corrected runtime deployment succeeded; all 52 changed public files, 29 exact versioned assets and seven repository source readbacks matched. All 977 other inherited files remain byte-identical; none was deleted. Eighty-one relative report/handoff links resolve.
 
 The new core suite independently checks all 104 task answers with cell inclusion, a separate shoelace calculation, exposed-edge counting and logical assignment enumeration. It checks unique tile defects, exact rectangle partitions, hidden dimensions, shared scales, distinct units, storage protection, original estimates, isolated resets and badges. Generated sweeps count as aggregate gates, not additional pupil tasks.
 

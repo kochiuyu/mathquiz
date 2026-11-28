@@ -3708,7 +3708,89 @@
       "labelOverlapChecks": true
     }
   },
-  "public": null,
+  "public": {
+    "core": {
+      "total": 878,
+      "passed": 878,
+      "verified": 878
+    },
+    "interface": {
+      "total": 113,
+      "passed": 112,
+      "verified": 113,
+      "failures": [
+        {
+          "name": "en p4-equaltilearea normal",
+          "error": "navigation timeout"
+        }
+      ],
+      "exactRerun": {
+        "total": 2,
+        "passed": 2,
+        "names": [
+          "en p4-equaltilearea normal",
+          "normal records unchanged"
+        ]
+      }
+    },
+    "badges": {
+      "total": 7,
+      "passed": 7,
+      "verified": 7
+    },
+    "wording": {
+      "total": 194,
+      "passed": 193,
+      "verified": 194,
+      "failures": [
+        {
+          "name": "Topic en P1 time",
+          "error": "navigation timeout"
+        }
+      ],
+      "exactRerun": {
+        "cases": [
+          {
+            "name": "Topic en P1 time",
+            "pass": true
+          }
+        ],
+        "done": true
+      }
+    },
+    "initialInterface": {
+      "total": 111,
+      "passed": 110,
+      "verified": 111,
+      "failures": [
+        {
+          "name": "en p4-equaltilearea easy",
+          "error": "navigation timeout"
+        }
+      ],
+      "exactRerun": {
+        "passed": 2,
+        "total": 2,
+        "names": [
+          "en p4-equaltilearea easy",
+          "normal records unchanged"
+        ]
+      }
+    },
+    "preCorrectionCore": {
+      "total": 876,
+      "passed": 876
+    },
+    "distinctVerified": 1192,
+    "visual": {
+      "viewport": [
+        375,
+        900
+      ],
+      "squareFormulaChinese": "Visible side-times-side rule and square-unit glyph; no horizontal overflow",
+      "screenshot": "screenshot-2026-11-28T11-36-47-217Z-80903002.png"
+    }
+  },
   "contentReview": [
     "Replaced overlapping tile that also left a gap with an extra overlapping tile over an otherwise complete covering.",
     "Balanced grid comparisons across A-larger, B-larger and equal.",
@@ -8007,5 +8089,820 @@
       ]
     },
     "supersededReason": "Comparison feedback encoding and explicit square formula correction"
+  },
+  "selectedBrowserCasesVerified": 2384,
+  "runtimeCommit": "d21c8968402a1b54677b900a7f27d218c7a144bd",
+  "runtimeReadback": {
+    "sha": "d21c8968402a1b54677b900a7f27d218c7a144bd",
+    "deployments": [
+      {
+        "id": 46140367947,
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/kochiuyu/mathquiz/actions/runs/46140367947"
+      }
+    ],
+    "files": [
+      {
+        "path": "badges-data.js",
+        "match": true,
+        "sha256": "75525240ac54392606aec849917a3bc4ab73b697050c26f7dad6d01d228ad3c5"
+      },
+      {
+        "path": "index.html",
+        "match": true,
+        "sha256": "2868654c4938e757c1c639f5aa726770343f7afe9af0368c7ce96db3c6478ae6"
+      },
+      {
+        "path": "learn.html",
+        "match": true,
+        "sha256": "c719c703293c53d6290b60b32fd175d3490802c64c96ce3116b9c0a1a014c6ef"
+      },
+      {
+        "path": "learner-catalog.js",
+        "match": true,
+        "sha256": "9d588224e7a8a0128dc92dc95a01a7bcaba028d9e86300fbe1c30f4249c39773"
+      },
+      {
+        "path": "p1-levels.html",
+        "match": true,
+        "sha256": "af02a9a7b8abebcda7dc6fe0c7407165beda7ddeea02e9d062df1a9de4d4694e"
+      },
+      {
+        "path": "p1-review.html",
+        "match": true,
+        "sha256": "19c434a79af4c931293d7a676c54b9f43c67c8e0dd5106ec46728c6144282793"
+      },
+      {
+        "path": "p2-investigate.html",
+        "match": true,
+        "sha256": "24ccb13e3f5b6bcc94fd82e8f09910727974efbd2173ae68a707b7babe4aa9ad"
+      },
+      {
+        "path": "p2-learn.html",
+        "match": true,
+        "sha256": "261e5f86b89352bfbc12e40947dc50012dbe028c50433bd2a9c094a1241dcb40"
+      },
+      {
+        "path": "p2-review.html",
+        "match": true,
+        "sha256": "c3b650285bc3db1580cbbb9df321d5de395416cd732360f6237054f03211b469"
+      },
+      {
+        "path": "p2-skill-levels.html",
+        "match": true,
+        "sha256": "f21352d4f729e3c79dcb744bd2e2ba471a10103e6d16dab79e9de5828166b8c6"
+      },
+      {
+        "path": "p3-learn.html",
+        "match": true,
+        "sha256": "8ccd4ef8f76a3e981b4954a1a70c12b82cd5fe6e6876547d1b13b841a992c80d"
+      },
+      {
+        "path": "p3-review.html",
+        "match": true,
+        "sha256": "26f49457b48305211fcdef002b0658d0b2d79e4d4e12797ff6f7f7d3d0679057"
+      },
+      {
+        "path": "p3-skill-levels.html",
+        "match": true,
+        "sha256": "0744a224f618fd064a3ab7c1476d0631dc4cb3a8b347f1c9825284b8a7a313b3"
+      },
+      {
+        "path": "p4-area-data.js",
+        "match": true,
+        "sha256": "37d43e607b90c19c29867cde384f52a477170bd61f7d2905ee2f15f8693e21f0"
+      },
+      {
+        "path": "p4-area-models.js",
+        "match": true,
+        "sha256": "03ba77537faf9aacc8d1bcf83c827e94a9b0f70eaf04c7feca1fbe79a95e18f6"
+      },
+      {
+        "path": "p4-learn-store.js",
+        "match": true,
+        "sha256": "ee11c6ebd2129b1dfb0bb53cc6914b6a80d26965a792e3a460bf65b6f9adadcd"
+      },
+      {
+        "path": "p4-learn.css",
+        "match": true,
+        "sha256": "3b70d73b85030fd99ab59b16a6ed2981cf5a1df49721a9c78d6309496f325ad7"
+      },
+      {
+        "path": "p4-learn.html",
+        "match": true,
+        "sha256": "9d27dd80cc76f99521a5191b9f6cf5ce22312c23d01b4dfd598215327243e590"
+      },
+      {
+        "path": "p4-learn.js",
+        "match": true,
+        "sha256": "e5b642f4ad5038d8fc0cc27f63f91e3282a7f246ccc04abccf7aeb647e5d1895"
+      },
+      {
+        "path": "p4-perimeter-data.js",
+        "match": true,
+        "sha256": "1aaef99c066fef033bd41fa8331cf4176d1e8baeb93c03cb086ba60f641dbd4a"
+      },
+      {
+        "path": "progress.html",
+        "match": true,
+        "sha256": "882a6345c496f78fc2cec15a1a2880cc88df2f5033b8e6268d9cb4c3f826ece0"
+      },
+      {
+        "path": "README.md",
+        "match": true,
+        "sha256": "5514a5bfff9a2c47a53387a8bfc9967e4812cce8157c8c33d3dc47f8f0662fd0"
+      },
+      {
+        "path": "planning/p4-area-guided-evidence.json",
+        "match": true,
+        "sha256": "7c5104fafe70862c851364b9502406f11f648110adce9f75f07efde2eac8451e"
+      },
+      {
+        "path": "planning/p4-area-guided-release.md",
+        "match": true,
+        "sha256": "f5df998df8124096dd24866f1275cef0324b2fefa1b98ea60148f723ea2bc10e"
+      },
+      {
+        "path": "planning/p4-guided-learning-plan.md",
+        "match": true,
+        "sha256": "0a286f4d7aae864b545f11753de511c36fd16efbe68215e44a2b7d6f0ccc178e"
+      },
+      {
+        "path": "planning/p4-p6-guided-sequence.md",
+        "match": true,
+        "sha256": "cd6ffab44073954acf27aed9b2bd1702455c3b57ffd66459e1b6ce6ada4aea62"
+      },
+      {
+        "path": "tests/badges-static.cjs",
+        "match": true,
+        "sha256": "6c4abb38e4278659496d1d28117a4d0d35582af9cbe3627c3a572c11d0654837"
+      },
+      {
+        "path": "tests/learner-ui.html",
+        "match": true,
+        "sha256": "2156f3a029243854d69aec01f95895a0f7f9a01bc5e2bfe9c35ac65f23b5f072"
+      },
+      {
+        "path": "tests/learner-wording.html",
+        "match": true,
+        "sha256": "351c0acdece518ecc8720b18f1a253b54ae964590e0409050c17d39df8a61360"
+      },
+      {
+        "path": "tests/p4-area-guided.html",
+        "match": true,
+        "sha256": "01b397a4effe79cb22bc7c98a65cd5004129298c07b1f61cf6e2d39b6c54c36c"
+      },
+      {
+        "path": "tests/p4-area-guided.js",
+        "match": true,
+        "sha256": "14351bc965013f42be62bbe46be745d39bc796b7843833045a3676251cf35b12"
+      },
+      {
+        "path": "tests/p4-area-interface.html",
+        "match": true,
+        "sha256": "dad9e45734257023b8cacda06421997cdbd3534876a0f744500efc18fadcbfb2"
+      },
+      {
+        "path": "tests/p4-area-interface.js",
+        "match": true,
+        "sha256": "510edbc6a1162f7a76d66939c5e4151444981b66e57bddfdd6fbcfcc28e393da"
+      },
+      {
+        "path": "tests/p4-common-guided.html",
+        "match": true,
+        "sha256": "c6b390b0c09853712cb02a7eb8b78c5fa9cf2e1eef63b93a89053a1137304b35"
+      },
+      {
+        "path": "tests/p4-common-interface.html",
+        "match": true,
+        "sha256": "2e767f61fd772cd8ec84ef8080054f250ff7549edc0b5a2268623f1d0ec93f13"
+      },
+      {
+        "path": "tests/p4-common-interface.js",
+        "match": true,
+        "sha256": "e91b7a040f983366f5fe5ceda56ab88e1039d705c519542abd22ef5718c29d2b"
+      },
+      {
+        "path": "tests/p4-division-guided.html",
+        "match": true,
+        "sha256": "6c0f1355ef4ea465c90d3bde951f9e58762183ef4d1ce5f612b84ca70c5b8311"
+      },
+      {
+        "path": "tests/p4-division-interface.html",
+        "match": true,
+        "sha256": "2c6aeb6fe79b08abe5f68388cc5d36ec81a2d0b5a94427d133746dd1ce770997"
+      },
+      {
+        "path": "tests/p4-division-interface.js",
+        "match": true,
+        "sha256": "4649c71bbce306f3ee1cf34be4f4bd5febc98db11d53d4f45e8f87a93d1383f7"
+      },
+      {
+        "path": "tests/p4-factors-guided.html",
+        "match": true,
+        "sha256": "a4ccfc4bf7e4d143cd3e676e5fb5d2e9e50b3bc1827b8a6f4a5fbe2fd707e4a2"
+      },
+      {
+        "path": "tests/p4-factors-interface.html",
+        "match": true,
+        "sha256": "be65d163c321932f440738670aaca5de9698c2d62bb71d348cfc99585ce64a78"
+      },
+      {
+        "path": "tests/p4-factors-interface.js",
+        "match": true,
+        "sha256": "a8316158ff8d80b47e90081a3f8faf5903295601f4c2af857a33806d057688e2"
+      },
+      {
+        "path": "tests/p4-fractionops-guided.html",
+        "match": true,
+        "sha256": "de0f879cff07b475d0b83b0ce1b574503a990ecd25ce22cb0f9e246aae86a4ad"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.html",
+        "match": true,
+        "sha256": "9179e99969ca44f97ece56fc81391d86d4074bb4b11392d72b7400b45a56f998"
+      },
+      {
+        "path": "tests/p4-fractionops-interface.js",
+        "match": true,
+        "sha256": "89cc444881e335f4444fcda65f0b38a7dc8279616792e15a46f5db5002c29267"
+      },
+      {
+        "path": "tests/p4-fractions-guided.html",
+        "match": true,
+        "sha256": "4507f8e4faec2e53637562a2db364c0f28117f78cf6fa98a299eb616e0d552cd"
+      },
+      {
+        "path": "tests/p4-fractions-interface.html",
+        "match": true,
+        "sha256": "3a713601ac417204aedc40529c7345a6087a79a2926761395a7ae16542c38c41"
+      },
+      {
+        "path": "tests/p4-fractions-interface.js",
+        "match": true,
+        "sha256": "b6e558c15139e83e221aeeca49382d8d66bd604cc33b837d7c779b63e290ca7e"
+      },
+      {
+        "path": "tests/p4-multiply-guided.html",
+        "match": true,
+        "sha256": "74d2cc8fda7eb4827ec2017edabb21ffe20a58d1264ba5272f6d79bf9a467d5d"
+      },
+      {
+        "path": "tests/p4-perimeter-guided.html",
+        "match": true,
+        "sha256": "9c44f46c0e8afb68809b24dc38693aea5259fe3903867e40ae2923b08a48a676"
+      },
+      {
+        "path": "tests/p4-perimeter-interface.html",
+        "match": true,
+        "sha256": "3bd9105b2e4dd9b4789f6176a1c9d88337d5092ae20a2dbc6519ea3d67327fc1"
+      },
+      {
+        "path": "tests/p4-perimeter-interface.js",
+        "match": true,
+        "sha256": "835b6c9e56d0430a0c8ebf4f8d0683f38741b6e9cfc3d0c935cdb9cda1cf2a4f"
+      }
+    ],
+    "versionedAssets": [
+      {
+        "url": "p3-learn.css?v=6",
+        "match": true
+      },
+      {
+        "url": "learner-ui.css?v=wording-r1",
+        "match": true
+      },
+      {
+        "url": "badges.css?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.css?v=area-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn-data.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-data.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-division-models.js?v=division-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-data.js?v=factors-r1",
+        "match": true
+      },
+      {
+        "url": "p4-factors-models.js?v=factors-r2",
+        "match": true
+      },
+      {
+        "url": "p4-common-data.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "p4-common-models.js?v=common-r1",
+        "match": true
+      },
+      {
+        "url": "marking.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "fractions4.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-data.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractions-models.js?v=fractions-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-data.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-fractionops-models.js?v=fractionops-r1",
+        "match": true
+      },
+      {
+        "url": "p4-perimeter-data.js?v=perimeter-r2",
+        "match": true
+      },
+      {
+        "url": "p4-perimeter-models.js?v=perimeter-r1",
+        "match": true
+      },
+      {
+        "url": "p4-area-data.js?v=area-r2",
+        "match": true
+      },
+      {
+        "url": "p4-area-models.js?v=area-r2",
+        "match": true
+      },
+      {
+        "url": "p4-learn-store.js?v=area-r1",
+        "match": true
+      },
+      {
+        "url": "p4-multiply-models.js?v=multiply-r1",
+        "match": true
+      },
+      {
+        "url": "p4-learn.js?v=area-r1",
+        "match": true
+      },
+      {
+        "url": "learner-catalog.js?v=p4-area-r1",
+        "match": true
+      },
+      {
+        "url": "badges-data.js?v=p4-area-r1",
+        "match": true
+      },
+      {
+        "url": "badges-store.js?v=p4-fractions-r1",
+        "match": true
+      },
+      {
+        "url": "badges-ui.js?v=badges-v1",
+        "match": true
+      },
+      {
+        "url": "learner-ui.js?v=p4-multiply-r1",
+        "match": true
+      }
+    ]
+  },
+  "repositoryRuntimeReadback": {
+    "matched": 7,
+    "files": [
+      "p4-area-data.js",
+      "p4-area-models.js",
+      "p4-perimeter-data.js",
+      "p4-learn-store.js",
+      "p4-learn.js",
+      "learner-catalog.js",
+      "badges-data.js"
+    ]
+  },
+  "readbackFormatting": {
+    "initial": {
+      "sha": "d21c8968402a1b54677b900a7f27d218c7a144bd",
+      "deployments": [
+        {
+          "id": 46140367947,
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/kochiuyu/mathquiz/actions/runs/46140367947"
+        }
+      ],
+      "files": [
+        {
+          "path": "badges-data.js",
+          "match": true,
+          "sha256": "75525240ac54392606aec849917a3bc4ab73b697050c26f7dad6d01d228ad3c5"
+        },
+        {
+          "path": "index.html",
+          "match": true,
+          "sha256": "2868654c4938e757c1c639f5aa726770343f7afe9af0368c7ce96db3c6478ae6"
+        },
+        {
+          "path": "learn.html",
+          "match": true,
+          "sha256": "c719c703293c53d6290b60b32fd175d3490802c64c96ce3116b9c0a1a014c6ef"
+        },
+        {
+          "path": "learner-catalog.js",
+          "match": true,
+          "sha256": "9d588224e7a8a0128dc92dc95a01a7bcaba028d9e86300fbe1c30f4249c39773"
+        },
+        {
+          "path": "p1-levels.html",
+          "match": true,
+          "sha256": "af02a9a7b8abebcda7dc6fe0c7407165beda7ddeea02e9d062df1a9de4d4694e"
+        },
+        {
+          "path": "p1-review.html",
+          "match": true,
+          "sha256": "19c434a79af4c931293d7a676c54b9f43c67c8e0dd5106ec46728c6144282793"
+        },
+        {
+          "path": "p2-investigate.html",
+          "match": true,
+          "sha256": "24ccb13e3f5b6bcc94fd82e8f09910727974efbd2173ae68a707b7babe4aa9ad"
+        },
+        {
+          "path": "p2-learn.html",
+          "match": true,
+          "sha256": "261e5f86b89352bfbc12e40947dc50012dbe028c50433bd2a9c094a1241dcb40"
+        },
+        {
+          "path": "p2-review.html",
+          "match": true,
+          "sha256": "c3b650285bc3db1580cbbb9df321d5de395416cd732360f6237054f03211b469"
+        },
+        {
+          "path": "p2-skill-levels.html",
+          "match": true,
+          "sha256": "f21352d4f729e3c79dcb744bd2e2ba471a10103e6d16dab79e9de5828166b8c6"
+        },
+        {
+          "path": "p3-learn.html",
+          "match": true,
+          "sha256": "8ccd4ef8f76a3e981b4954a1a70c12b82cd5fe6e6876547d1b13b841a992c80d"
+        },
+        {
+          "path": "p3-review.html",
+          "match": true,
+          "sha256": "26f49457b48305211fcdef002b0658d0b2d79e4d4e12797ff6f7f7d3d0679057"
+        },
+        {
+          "path": "p3-skill-levels.html",
+          "match": true,
+          "sha256": "0744a224f618fd064a3ab7c1476d0631dc4cb3a8b347f1c9825284b8a7a313b3"
+        },
+        {
+          "path": "p4-area-data.js",
+          "match": false,
+          "sha256": "37d43e607b90c19c29867cde384f52a477170bd61f7d2905ee2f15f8693e21f0"
+        },
+        {
+          "path": "p4-area-models.js",
+          "match": true,
+          "sha256": "03ba77537faf9aacc8d1bcf83c827e94a9b0f70eaf04c7feca1fbe79a95e18f6"
+        },
+        {
+          "path": "p4-learn-store.js",
+          "match": true,
+          "sha256": "ee11c6ebd2129b1dfb0bb53cc6914b6a80d26965a792e3a460bf65b6f9adadcd"
+        },
+        {
+          "path": "p4-learn.css",
+          "match": true,
+          "sha256": "3b70d73b85030fd99ab59b16a6ed2981cf5a1df49721a9c78d6309496f325ad7"
+        },
+        {
+          "path": "p4-learn.html",
+          "match": true,
+          "sha256": "9d27dd80cc76f99521a5191b9f6cf5ce22312c23d01b4dfd598215327243e590"
+        },
+        {
+          "path": "p4-learn.js",
+          "match": true,
+          "sha256": "e5b642f4ad5038d8fc0cc27f63f91e3282a7f246ccc04abccf7aeb647e5d1895"
+        },
+        {
+          "path": "p4-perimeter-data.js",
+          "match": false,
+          "sha256": "1aaef99c066fef033bd41fa8331cf4176d1e8baeb93c03cb086ba60f641dbd4a"
+        },
+        {
+          "path": "progress.html",
+          "match": true,
+          "sha256": "882a6345c496f78fc2cec15a1a2880cc88df2f5033b8e6268d9cb4c3f826ece0"
+        },
+        {
+          "path": "README.md",
+          "match": true,
+          "sha256": "5514a5bfff9a2c47a53387a8bfc9967e4812cce8157c8c33d3dc47f8f0662fd0"
+        },
+        {
+          "path": "planning/p4-area-guided-evidence.json",
+          "match": true,
+          "sha256": "7c5104fafe70862c851364b9502406f11f648110adce9f75f07efde2eac8451e"
+        },
+        {
+          "path": "planning/p4-area-guided-release.md",
+          "match": true,
+          "sha256": "f5df998df8124096dd24866f1275cef0324b2fefa1b98ea60148f723ea2bc10e"
+        },
+        {
+          "path": "planning/p4-guided-learning-plan.md",
+          "match": true,
+          "sha256": "0a286f4d7aae864b545f11753de511c36fd16efbe68215e44a2b7d6f0ccc178e"
+        },
+        {
+          "path": "planning/p4-p6-guided-sequence.md",
+          "match": true,
+          "sha256": "cd6ffab44073954acf27aed9b2bd1702455c3b57ffd66459e1b6ce6ada4aea62"
+        },
+        {
+          "path": "tests/badges-static.cjs",
+          "match": true,
+          "sha256": "6c4abb38e4278659496d1d28117a4d0d35582af9cbe3627c3a572c11d0654837"
+        },
+        {
+          "path": "tests/learner-ui.html",
+          "match": true,
+          "sha256": "2156f3a029243854d69aec01f95895a0f7f9a01bc5e2bfe9c35ac65f23b5f072"
+        },
+        {
+          "path": "tests/learner-wording.html",
+          "match": true,
+          "sha256": "351c0acdece518ecc8720b18f1a253b54ae964590e0409050c17d39df8a61360"
+        },
+        {
+          "path": "tests/p4-area-guided.html",
+          "match": true,
+          "sha256": "01b397a4effe79cb22bc7c98a65cd5004129298c07b1f61cf6e2d39b6c54c36c"
+        },
+        {
+          "path": "tests/p4-area-guided.js",
+          "match": true,
+          "sha256": "14351bc965013f42be62bbe46be745d39bc796b7843833045a3676251cf35b12"
+        },
+        {
+          "path": "tests/p4-area-interface.html",
+          "match": true,
+          "sha256": "dad9e45734257023b8cacda06421997cdbd3534876a0f744500efc18fadcbfb2"
+        },
+        {
+          "path": "tests/p4-area-interface.js",
+          "match": true,
+          "sha256": "510edbc6a1162f7a76d66939c5e4151444981b66e57bddfdd6fbcfcc28e393da"
+        },
+        {
+          "path": "tests/p4-common-guided.html",
+          "match": true,
+          "sha256": "c6b390b0c09853712cb02a7eb8b78c5fa9cf2e1eef63b93a89053a1137304b35"
+        },
+        {
+          "path": "tests/p4-common-interface.html",
+          "match": true,
+          "sha256": "2e767f61fd772cd8ec84ef8080054f250ff7549edc0b5a2268623f1d0ec93f13"
+        },
+        {
+          "path": "tests/p4-common-interface.js",
+          "match": true,
+          "sha256": "e91b7a040f983366f5fe5ceda56ab88e1039d705c519542abd22ef5718c29d2b"
+        },
+        {
+          "path": "tests/p4-division-guided.html",
+          "match": true,
+          "sha256": "6c0f1355ef4ea465c90d3bde951f9e58762183ef4d1ce5f612b84ca70c5b8311"
+        },
+        {
+          "path": "tests/p4-division-interface.html",
+          "match": true,
+          "sha256": "2c6aeb6fe79b08abe5f68388cc5d36ec81a2d0b5a94427d133746dd1ce770997"
+        },
+        {
+          "path": "tests/p4-division-interface.js",
+          "match": true,
+          "sha256": "4649c71bbce306f3ee1cf34be4f4bd5febc98db11d53d4f45e8f87a93d1383f7"
+        },
+        {
+          "path": "tests/p4-factors-guided.html",
+          "match": true,
+          "sha256": "a4ccfc4bf7e4d143cd3e676e5fb5d2e9e50b3bc1827b8a6f4a5fbe2fd707e4a2"
+        },
+        {
+          "path": "tests/p4-factors-interface.html",
+          "match": true,
+          "sha256": "be65d163c321932f440738670aaca5de9698c2d62bb71d348cfc99585ce64a78"
+        },
+        {
+          "path": "tests/p4-factors-interface.js",
+          "match": true,
+          "sha256": "a8316158ff8d80b47e90081a3f8faf5903295601f4c2af857a33806d057688e2"
+        },
+        {
+          "path": "tests/p4-fractionops-guided.html",
+          "match": true,
+          "sha256": "de0f879cff07b475d0b83b0ce1b574503a990ecd25ce22cb0f9e246aae86a4ad"
+        },
+        {
+          "path": "tests/p4-fractionops-interface.html",
+          "match": true,
+          "sha256": "9179e99969ca44f97ece56fc81391d86d4074bb4b11392d72b7400b45a56f998"
+        },
+        {
+          "path": "tests/p4-fractionops-interface.js",
+          "match": true,
+          "sha256": "89cc444881e335f4444fcda65f0b38a7dc8279616792e15a46f5db5002c29267"
+        },
+        {
+          "path": "tests/p4-fractions-guided.html",
+          "match": true,
+          "sha256": "4507f8e4faec2e53637562a2db364c0f28117f78cf6fa98a299eb616e0d552cd"
+        },
+        {
+          "path": "tests/p4-fractions-interface.html",
+          "match": true,
+          "sha256": "3a713601ac417204aedc40529c7345a6087a79a2926761395a7ae16542c38c41"
+        },
+        {
+          "path": "tests/p4-fractions-interface.js",
+          "match": true,
+          "sha256": "b6e558c15139e83e221aeeca49382d8d66bd604cc33b837d7c779b63e290ca7e"
+        },
+        {
+          "path": "tests/p4-multiply-guided.html",
+          "match": true,
+          "sha256": "74d2cc8fda7eb4827ec2017edabb21ffe20a58d1264ba5272f6d79bf9a467d5d"
+        },
+        {
+          "path": "tests/p4-perimeter-guided.html",
+          "match": true,
+          "sha256": "9c44f46c0e8afb68809b24dc38693aea5259fe3903867e40ae2923b08a48a676"
+        },
+        {
+          "path": "tests/p4-perimeter-interface.html",
+          "match": true,
+          "sha256": "3bd9105b2e4dd9b4789f6176a1c9d88337d5092ae20a2dbc6519ea3d67327fc1"
+        },
+        {
+          "path": "tests/p4-perimeter-interface.js",
+          "match": true,
+          "sha256": "835b6c9e56d0430a0c8ebf4f8d0683f38741b6e9cfc3d0c935cdb9cda1cf2a4f"
+        }
+      ],
+      "versionedAssets": [
+        {
+          "url": "p3-learn.css?v=6",
+          "match": true
+        },
+        {
+          "url": "learner-ui.css?v=wording-r1",
+          "match": true
+        },
+        {
+          "url": "badges.css?v=badges-v1",
+          "match": true
+        },
+        {
+          "url": "p4-learn.css?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "p4-learn-data.js?v=multiply-r1",
+          "match": true
+        },
+        {
+          "url": "p4-division-data.js?v=division-r1",
+          "match": true
+        },
+        {
+          "url": "p4-division-models.js?v=division-r1",
+          "match": true
+        },
+        {
+          "url": "p4-factors-data.js?v=factors-r1",
+          "match": true
+        },
+        {
+          "url": "p4-factors-models.js?v=factors-r2",
+          "match": true
+        },
+        {
+          "url": "p4-common-data.js?v=common-r1",
+          "match": true
+        },
+        {
+          "url": "p4-common-models.js?v=common-r1",
+          "match": true
+        },
+        {
+          "url": "marking.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "fractions4.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractions-data.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractions-models.js?v=fractions-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractionops-data.js?v=fractionops-r1",
+          "match": true
+        },
+        {
+          "url": "p4-fractionops-models.js?v=fractionops-r1",
+          "match": true
+        },
+        {
+          "url": "p4-perimeter-data.js?v=perimeter-r2",
+          "match": false
+        },
+        {
+          "url": "p4-perimeter-models.js?v=perimeter-r1",
+          "match": true
+        },
+        {
+          "url": "p4-area-data.js?v=area-r2",
+          "match": false
+        },
+        {
+          "url": "p4-area-models.js?v=area-r2",
+          "match": true
+        },
+        {
+          "url": "p4-learn-store.js?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "p4-multiply-models.js?v=multiply-r1",
+          "match": true
+        },
+        {
+          "url": "p4-learn.js?v=area-r1",
+          "match": true
+        },
+        {
+          "url": "learner-catalog.js?v=p4-area-r1",
+          "match": true
+        },
+        {
+          "url": "badges-data.js?v=p4-area-r1",
+          "match": true
+        },
+        {
+          "url": "badges-store.js?v=p4-fractions-r1",
+          "match": true
+        },
+        {
+          "url": "badges-ui.js?v=badges-v1",
+          "match": true
+        },
+        {
+          "url": "learner-ui.js?v=p4-multiply-r1",
+          "match": true
+        }
+      ]
+    },
+    "diagnosis": [
+      {
+        "path": "p4-area-data.js",
+        "difference": "indentation only",
+        "removedSpaces": 8,
+        "parsedDataEqual": true,
+        "executableSuffixEqual": true
+      },
+      {
+        "path": "p4-perimeter-data.js",
+        "difference": "indentation only",
+        "removedSpaces": 9,
+        "parsedDataEqual": true,
+        "executableSuffixEqual": true
+      }
+    ],
+    "resolution": "Aligned the local candidate indentation to the connector-published bytes after independently proving parsed data and executable suffixes identical; all exact reads then repeated."
   }
 }
